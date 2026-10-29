@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>三维行图像 / 3D row picture</title><link rel="stylesheet" href="explorer.css"></head>
+<body><main>
+<h1>三维行图像 <span lang="en">3D row picture</span></h1>
+<label for="preset">选择方程组（choose a system）</label>
+<select id="preset">
+<option value="1">1 · 一个平面 / One plane</option>
+<option value="2">2 · 两平面的交线 / Two-plane intersection</option>
+<option value="3">3 · 加 z = 0 / Add z = 0</option>
+<option value="4">4 · 加 x + y + 2z = 3 / Add redundant plane</option>
+<option value="5">5 · 加 x + y + 2z = 4 / Add conflicting plane</option>
+<option value="0">0 · 无方程 / No equations</option>
+</select>
+<p class="guide">每次选择会替换全部当前方程（replaces the active system）。拖动或聚焦图形后按方向键旋转（drag or use arrow keys）。</p>
+<div id="equations" aria-live="polite"></div>
+<svg id="scene" viewBox="0 0 480 350" role="img" tabindex="0" aria-label="可旋转三维图形 / Rotatable 3D diagram"></svg>
+<div class="controls"><button id="left">左转 / Left</button><button id="right">右转 / Right</button><button id="up">上转 / Up</button><button id="down">下转 / Down</button><button id="reset">重置视角 / Reset view</button><button id="clear">清空方程 / Clear equations</button></div>
+<div id="result" role="status" aria-live="polite"></div>
+<p class="guide">式（3）蓝 / blue；式（4）橙 / orange；第三个约束按预设为式（5）、（6）或（7），紫 / purple。编号与行图像主题一致。粗实线 L：直线解集（solution line）；黑点 Q：唯一解（unique solution）；灰色虚线 L：仅前两平面交线（reference only）。片面代表无限平面（infinite planes）。旋转、重置只改变视角（view only）；清空方程则移除约束（removes constraints）。</p>
+<noscript>请启用 JavaScript 使用旋转功能；学生正文有全部静态图与解释。 / Static views and explanations are available in the lesson.</noscript>
+</main><script src="scene.js"></script><script src="explorer.js"></script></body></html>

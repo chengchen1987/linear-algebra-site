@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="title desc"><title id="title">向量的数乘与加法 / Vector Scaling and Addition</title><desc id="desc">固定原点；左图 a₂=(-1,2)，2a₂=(-2,4)，-a₂=(1,-2)，零倍在原点。右图 a₁=(2,-1)，2a₂=(-2,4)，a₁+2a₂=b=(0,3)，虚线表示平移后的辅助箭头。</desc>
+<defs><marker id="blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#22688b"/></marker><marker id="orange" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#b25327"/></marker><marker id="gray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#667681"/></marker><marker id="purple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#7956a0"/></marker></defs>
+<style>text{font-family:system-ui,"Droid Sans Fallback",sans-serif;font-size:17px;fill:#243746}.small{font-size:15px}.heading{font-size:20px;font-weight:600}</style><rect width="960" height="430" fill="white"/>
+<text x="26" y="32" class="heading">数乘 / Scaling</text>
+<text x="500" y="32" class="heading">向量加法 / Addition</text>
+<line x1="47.599999999999994" y1="260" x2="406.4" y2="260" stroke="#667681" stroke-width="2"/>
+<line x1="250" y1="365.8" x2="250" y2="53.0" stroke="#667681" stroke-width="2"/>
+<text x="406.4" y="253.1" class="">x</text>
+<text x="255.52" y="53.0" class="">y</text>
+<circle cx="250" cy="260" r="4" fill="#667681"/>
+<text x="257" y="280" class="">O</text>
+<line x1="250" y1="260" x2="158" y2="76" stroke="#22688b" stroke-width="3" marker-end="url(#blue)"/>
+<circle cx="204" cy="168" r="4" fill="#22688b"/>
+<line x1="250" y1="260" x2="296" y2="352" stroke="#b25327" stroke-width="3" marker-end="url(#orange)"/>
+<text x="26" y="65" class="">2a₂ = (−2, 4)</text>
+<text x="70" y="167" class="">a₂ = (−1, 2)</text>
+<text x="304" y="348" class="">−a₂ = (1, −2)</text>
+<text x="275" y="240" class="small">0a₂ = 0</text>
+<text x="30" y="387" class="small">负数反向；零倍留在固定原点。</text>
+<text x="30" y="411" class="small">Negative: reverse; zero: the origin.</text>
+<line x1="526.8" y1="280" x2="922.4" y2="280" stroke="#667681" stroke-width="2"/>
+<line x1="720" y1="346.7" x2="720" y2="59.20000000000002" stroke="#667681" stroke-width="2"/>
+<text x="922.4" y="273.1" class="">x</text>
+<text x="725.52" y="59.20000000000002" class="">y</text>
+<circle cx="720" cy="280" r="4" fill="#667681"/>
+<text x="727" y="300" class="">O</text>
+<line x1="720" y1="280" x2="812" y2="326" stroke="#22688b" stroke-width="3" marker-end="url(#blue)"/>
+<line x1="720" y1="280" x2="628" y2="96" stroke="#b25327" stroke-width="3" marker-end="url(#orange)"/>
+<line x1="720" y1="280" x2="720" y2="142" stroke="#7956a0" stroke-width="3" marker-end="url(#purple)"/>
+<line x1="812" y1="326" x2="720" y2="142" stroke="#667681" stroke-width="2" marker-end="url(#gray)" stroke-dasharray="6 5"/>
+<line x1="628" y1="96" x2="720" y2="142" stroke="#667681" stroke-width="2" marker-end="url(#gray)" stroke-dasharray="6 5"/>
+<text x="815" y="330" class="">a₁ = (2, −1)</text>
+<text x="515" y="78" class="">2a₂ = (−2, 4)</text>
+<text x="738" y="139" class="">b = (0, 3)</text>
+<text x="805" y="207" class="small">辅助 2a₂</text>
+<text x="500" y="387" class="small">虚线只辅助相加；坐标原点不移动。</text>
+<text x="500" y="411" class="small">Dashed: translated copies; O stays fixed.</text>
+</svg>

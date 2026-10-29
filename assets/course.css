@@ -1,0 +1,78 @@
+body{font-family:system-ui,"Droid Sans Fallback",sans-serif;color:#243746;line-height:1.85}h1,h2,h3{line-height:1.45;font-weight:600}h1.title{font-size:2rem}h2{margin-top:2.1rem;font-size:1.6rem}h3{font-size:1.22rem}p.subtitle{font-size:1.12rem;color:#526676}main{max-width:900px}figcaption{font-size:.92rem;color:#435967;line-height:1.7}figure{margin:1.7rem 0}table{font-size:.95rem}.callout{border-radius:2px;border-left:2px solid #8d9ea9;background:#fafbfc}.callout-note .callout-header{background:#f1f4f6!important}.callout-icon-container{display:none}.row-explorer{width:100%;height:1040px;border:1px solid #d0dbe2;border-radius:3px}math[display="block"]{padding:.35rem 0;overflow-x:auto}a{color:#1b6287}.lesson-link{font-size:1.35rem;font-weight:600}@media(max-width:600px){h1.title{font-size:1.55rem}h2{font-size:1.35rem}h3{font-size:1.1rem}body{font-size:16px}.row-explorer{height:1150px}table{font-size:.86rem}}
+
+details.review-answer{margin:.75rem 0;padding:.45rem 0;border-top:1px solid #d8e1e7}details.review-answer summary{cursor:pointer;color:#285773;font-weight:600}details.review-answer[open] summary{margin-bottom:.6rem}
+
+.figure-scroll{overflow-x:auto}.figure-scroll:focus-visible{outline:2px solid #186d99}@media(max-width:600px){#fig-anchor img{width:100%!important}.figure-scroll img{min-width:700px;max-width:none!important}.figure-scroll:before{content:"并排图可左右滑动 / Swipe to compare";font-size:.8rem;color:#526676;display:block}}
+
+/* Stable, equal-unit diagrams; panels stack on narrow displays. */
+.row-column-sync{border:1px solid #d0dbe2;padding:1rem;margin:1.5rem 0;background:#fafcfd}
+.sync-controls{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem}.sync-controls input{flex:1;min-width:120px;accent-color:#22688b}.sync-controls output{font-variant-numeric:tabular-nums}
+.sync-buttons{display:flex;flex-wrap:wrap;gap:.5rem;width:100%}.sync-buttons button{border:1px solid #7594a6;border-radius:3px;background:white;padding:.3rem .7rem;color:#243746}
+.sync-buttons button:focus-visible{outline:3px solid #22688b;outline-offset:2px}
+.sync-panels{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:1rem}.sync-panels svg{display:block;width:100%;height:auto}.sync-status,#sync-caption{font-size:.88rem;line-height:1.7;margin-bottom:.4rem}
+@media(max-width:700px){.sync-panels{grid-template-columns:1fr}.row-column-sync{padding:.5rem}}
+
+.augmented-table[data-rhs-columns="1"] > mtr > mtd:last-child,.augmented-table[data-rhs-columns="2"] > mtr > mtd:nth-last-child(2){border-left:1.5px dashed currentColor;padding-left:.45em}
+p.math-overflow:after{content:"长公式可左右滑动 / Scroll equation";display:block;font-size:.76rem;color:#526676;margin-top:.2rem}
+math[tabindex]:focus-visible{outline:2px solid #22688b;outline-offset:2px}
+
+.solution-explorer{padding:1rem;border:1px solid #cfdae1;margin:1.5rem 0;background:#fafcfd}
+.solution-explorer output{display:block;font-size:.9rem;margin-top:.6rem}
+.solution-picture svg{display:block;width:100%;height:auto}
+@media(max-width:700px){.solution-picture svg{min-width:850px}.solution-explorer{padding:.6rem}}
+
+/* Only arrays carrying an explicit horizontal rule get this class. */
+.block-table > mtr:nth-child(3) > mtd{border-top:1px solid currentColor;padding-top:.3em}
+.permutation-explorer{border:1px solid #c4d1d9;padding:1rem;margin:1rem 0}
+.permutation-explorer select{max-width:100%;padding:.3rem;margin:.3rem}
+.selection-matrix{width:auto;margin:.6rem auto;border-left:2px solid;border-right:2px solid}
+.selection-matrix td{text-align:center;border:2px solid transparent;padding:.4rem .65rem}
+.selection-matrix td.selected{border:2px solid #215f82;background:#e8f1f7;font-weight:bold}
+.selection-matrix small{display:block;font-size:.65rem;font-weight:normal}
+/* Bibliographic URLs remain usable on narrow screens. */
+#refs a{overflow-wrap:anywhere}
+
+.permutation-explorer .selection-matrix small{display:block}
+.permutation-table{overflow-x:auto;margin-top:1rem}
+.permutation-table table{min-width:650px}
+.permutation-table:focus-visible{outline:2px solid #215f82}
+@media(max-width:700px){.permutation-table:before{content:"六项表可左右滑动 / Scroll table";display:block;font-size:.8rem;color:#526676}}
+
+/* Compare systems at full math size; stack their conditions on narrow screens. */
+.system-comparison{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.system-panel{min-width:0}
+@media(max-width:600px){.system-comparison{grid-template-columns:1fr;gap:0}}
+
+/* HTML pivot glossary: leave room for explanations on both viewport sizes. */
+.pivot-terms col:first-child{width:26%!important}
+.pivot-terms col:last-child{width:74%!important}
+
+/* Theorem Reference only: readable bilingual headings, unchanged formula size. */
+.theorem-reference main h3 { margin-top: 2.5rem; padding-top: .65rem; border-top: 2px solid #d5e0e6; }
+.theorem-reference .theorem-en { display: block; margin-top: .35rem; font-size: 1rem; line-height: 1.5; font-weight: 500; color: #415566; }
+.theorem-reference .theorem-source { color: #425566; border-left: 3px solid #b7cbd8; padding: .4rem .8rem; margin: 1rem 0; background: #f4f7f9; }
+.theorem-reference .theorem-source p { margin-bottom: 0; }
+.theorem-reference main { overflow-wrap: anywhere; }
+.theorem-reference main math { overflow-wrap: normal; }
+.theorem-reference #TOC .theorem-en { font-size: inherit; display: inline; color: inherit; }
+
+/* Chapter 1 bilingual navigation and embedded statements retain normal math size. */
+.sidebar-item-text, .sidebar-item-text .chapter-title, #TOC a, .nav-page-text { white-space: normal; overflow-wrap: anywhere; }
+.chapter-one main h2, .chapter-one main h3 { line-height: 1.5; overflow-wrap: anywhere; }
+.course-theorem { margin: 1.3rem 0; padding: .85rem 1rem; border-left: 4px solid #386d87; background: #f2f7fa; }
+.course-theorem > p:first-child { line-height: 1.7; }
+.course-theorem > p:last-child { margin-bottom: 0; }
+.chapter-one .solution-picture { margin-top: 1rem; }
+@media(max-width:700px) { .course-theorem { padding: .7rem; } }
+.operation-table { overflow-x: auto; margin: 1rem 0; }
+.operation-table table { min-width: 660px; font-size: 1rem; }
+.operation-table:focus-visible { outline: 2px solid #22688b; }
+@media(max-width:700px) { .operation-table:before { content: "表格可左右滑动 / Scroll table"; display: block; color: #526676; } }
+
+/* Chapter 1: bilingual hierarchy; translations stay readable in body and navigation. */
+.chapter-one main h2 .heading-en, .chapter-one main h3 .heading-en { display:block; margin-top:.3rem; font-size:1rem; font-weight:500; line-height:1.5; color:#435967; }
+.chapter-one #TOC .heading-en { display:block; margin-top:.12rem; font-size:.85rem; line-height:1.4; }
+.chapter-one .sidebar-item-text .nav-en, .chapter-one .nav-page-text .nav-en { display:block; margin-top:.18rem; font-size:.85rem; line-height:1.45; color:#435967; }
+.chapter-one .sidebar-item { margin-top:.3rem; margin-bottom:.3rem; }
+.chapter-one #TOC .nav-link { padding-top:.3rem; padding-bottom:.3rem; }
+.chapter-one .nav-page-text { line-height:1.5; }

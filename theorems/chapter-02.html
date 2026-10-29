@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>矩阵代数 – 线性代数 · 学习与复习</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../theorems/chapter-03.html" rel="next">
+<link href="../theorems/chapter-01.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-59b0fd22973036f71b2f3b55428159e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+
+<body class="nav-sidebar floating theorem-reference quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../theorems/index.html">定理汇编 / Theorem Reference</a></li><li class="breadcrumb-item"><a href="../theorems/chapter-02.html"><span class="chapter-title">第2章 矩阵代数 / Matrix Algebra</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">线性代数 · 学习与复习</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">前言 / Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章总览：从方程组到线性变换 / Chapter 1: From Linear Systems to Linear Transformations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/linear-systems.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组与矩阵表示 / Linear Systems and Matrix Representation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/gaussian-elimination.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">高斯消元法 / Gaussian Elimination</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/row-picture.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组的行图像 / The Row Picture of Linear Systems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/column-picture.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组的列图像 / The Column Picture of Linear Systems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/vector-and-matrix-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">向量方程与矩阵方程 / Vector and Matrix Equations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/homogeneous-and-nonhomogeneous-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">齐次与非齐次方程组的解集 / Solution Sets of Homogeneous and Nonhomogeneous Linear Systems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/span-column-and-null-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">张成、列空间与零空间 / Span, Column Space and Null Space</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/05-independence.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性无关与表示的唯一性 / Linear Independence and Uniqueness of Representation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/06-transformations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性变换与矩阵表示 / Linear Transformations and Matrix Representations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/elementary-row-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">初等行变换对应的矩阵 / Matrices for Elementary Row Operations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章 · 知识与术语速查 / Chapter 1: Concepts and Terminology</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章综合复习：从一次消元读出整个结构 / Chapter 1 Review: Reading the Structure from Elimination</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章应用选读：力平衡与流量守恒 / Chapter 1 Applications: Force Balance and Flow Conservation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 矩阵代数总览</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">为什么矩阵这样相乘？</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/08-inverses.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">逆矩阵与初等矩阵</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/09-invertibility-blocks.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">可逆矩阵定理与分块运算</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">把消元保存为 LU 分解</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 知识与术语速查</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 综合复习</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章 · 行列式总览</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/11-determinants.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">行列式的定义与展开</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/12-determinants-properties.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">消元、性质与可逆性</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/13-cramer-adjugate.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">从解方程到古典伴随矩阵</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/14-determinants-geometry.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">几何意义与前三章贯通</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-other-definitions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">补充阅读 · 行列式的其他定义：排列、逆序数与基本性质</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章 · 知识与术语速查</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章与前三章 · 综合复习</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">中英术语表</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">定理汇编 / Theorem Reference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">汇编入口 / Reference contents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第1章 线性方程与变换 / Linear Equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-02.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">第2章 矩阵代数 / Matrix Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第3章 行列式 / Determinants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-04.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第4章 向量空间 / Vector Spaces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-05.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第5章 特征值与特征向量 / Eigenvalues</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-06.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第6章 正交性与最小二乘 / Orthogonality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-07.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第7章 对称矩阵与SVD / Symmetric Matrices and SVD</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录 / Contents</h2>
+   
+  <ul>
+  <li><a href="#sec-2-1" id="toc-sec-2-1" class="nav-link active" data-scroll-target="#sec-2-1">§2.1 矩阵运算 / Matrix Operations</a>
+  <ul class="collapse">
+  <li><a href="#lay6-ch02-thm01" id="toc-lay6-ch02-thm01" class="nav-link" data-scroll-target="#lay6-ch02-thm01">定理 1：矩阵加法与数乘运算律 <span class="theorem-en">Addition and Scalar Multiplication Laws</span></a></li>
+  <li><a href="#lay6-ch02-thm02" id="toc-lay6-ch02-thm02" class="nav-link" data-scroll-target="#lay6-ch02-thm02">定理 2：矩阵乘法运算律 <span class="theorem-en">Matrix Multiplication Laws</span></a></li>
+  <li><a href="#lay6-ch02-thm03" id="toc-lay6-ch02-thm03" class="nav-link" data-scroll-target="#lay6-ch02-thm03">定理 3：转置运算律 <span class="theorem-en">Transpose Laws</span></a></li>
+  </ul></li>
+  <li><a href="#sec-2-2" id="toc-sec-2-2" class="nav-link" data-scroll-target="#sec-2-2">§2.2 逆矩阵 / The Inverse of a Matrix</a>
+  <ul class="collapse">
+  <li><a href="#lay6-ch02-thm04" id="toc-lay6-ch02-thm04" class="nav-link" data-scroll-target="#lay6-ch02-thm04">定理 4：二阶矩阵的逆公式与奇异判据 <span class="theorem-en">The Inverse of a Two-by-Two Matrix</span></a></li>
+  <li><a href="#lay6-ch02-thm05" id="toc-lay6-ch02-thm05" class="nav-link" data-scroll-target="#lay6-ch02-thm05">定理 5：可逆系统的唯一解 <span class="theorem-en">Solving with an Inverse</span></a></li>
+  <li><a href="#lay6-ch02-thm06" id="toc-lay6-ch02-thm06" class="nav-link" data-scroll-target="#lay6-ch02-thm06">定理 6：逆矩阵运算律 <span class="theorem-en">Properties of Inverses</span></a></li>
+  <li><a href="#lay6-ch02-thm07" id="toc-lay6-ch02-thm07" class="nav-link" data-scroll-target="#lay6-ch02-thm07">定理 7：行消元求逆的充要条件 <span class="theorem-en">Row Reduction and Invertibility</span></a></li>
+  </ul></li>
+  <li><a href="#sec-2-3" id="toc-sec-2-3" class="nav-link" data-scroll-target="#sec-2-3">§2.3 可逆性刻画 / Characterizations of Invertibility</a>
+  <ul class="collapse">
+  <li><a href="#lay6-ch02-thm08" id="toc-lay6-ch02-thm08" class="nav-link" data-scroll-target="#lay6-ch02-thm08">定理 8：可逆矩阵定理：初始十二项 <span class="theorem-en">The Invertible Matrix Theorem</span></a></li>
+  <li><a href="#lay6-ch02-thm09" id="toc-lay6-ch02-thm09" class="nav-link" data-scroll-target="#lay6-ch02-thm09">定理 9：可逆变换与矩阵的逆 <span class="theorem-en">Invertible Linear Transformations</span></a></li>
+  </ul></li>
+  <li><a href="#sec-2-4" id="toc-sec-2-4" class="nav-link" data-scroll-target="#sec-2-4">§2.4 分块矩阵 / Partitioned Matrices</a>
+  <ul class="collapse">
+  <li><a href="#lay6-ch02-thm10" id="toc-lay6-ch02-thm10" class="nav-link" data-scroll-target="#lay6-ch02-thm10">定理 10：矩阵乘积的列行外积展开 <span class="theorem-en">Column–Row Expansion of AB</span></a></li>
+  </ul></li>
+  <li><a href="#sec-2-6" id="toc-sec-2-6" class="nav-link" data-scroll-target="#sec-2-6">§2.6 投入产出模型 / The Leontief Input–Output Model</a>
+  <ul class="collapse">
+  <li><a href="#lay6-ch02-thm11" id="toc-lay6-ch02-thm11" class="nav-link" data-scroll-target="#lay6-ch02-thm11">定理 11：投入产出模型的非负唯一解 <span class="theorem-en">Nonnegative Solutions of the Leontief Model</span></a></li>
+  </ul></li>
+  <li><a href="#sec-2-8" id="toc-sec-2-8" class="nav-link" data-scroll-target="#sec-2-8">§2.8 子空间与基 / Subspaces and Bases</a>
+  <ul class="collapse">
+  <li><a href="#lay6-ch02-thm12" id="toc-lay6-ch02-thm12" class="nav-link" data-scroll-target="#lay6-ch02-thm12">定理 12：零空间是子空间 <span class="theorem-en">The Null Space Is a Subspace</span></a></li>
+  <li><a href="#lay6-ch02-thm13" id="toc-lay6-ch02-thm13" class="nav-link" data-scroll-target="#lay6-ch02-thm13">定理 13：原矩阵主元列给出列空间基 <span class="theorem-en">A Basis for the Column Space</span></a></li>
+  </ul></li>
+  <li><a href="#sec-2-9" id="toc-sec-2-9" class="nav-link" data-scroll-target="#sec-2-9">§2.9 维数与秩 / Dimension and Rank</a>
+  <ul class="collapse">
+  <li><a href="#lay6-ch02-thm14" id="toc-lay6-ch02-thm14" class="nav-link" data-scroll-target="#lay6-ch02-thm14">定理 14：秩与零度定理 <span class="theorem-en">The Rank Theorem</span></a></li>
+  <li><a href="#lay6-ch02-thm15" id="toc-lay6-ch02-thm15" class="nav-link" data-scroll-target="#lay6-ch02-thm15">定理 15：子空间的基定理 <span class="theorem-en">The Basis Theorem</span></a></li>
+  <li><a href="#lay6-ch02-imt-sec29" id="toc-lay6-ch02-imt-sec29" class="nav-link" data-scroll-target="#lay6-ch02-imt-sec29">可逆矩阵定理续篇：基、秩与零空间扩展 <span class="theorem-en">The Invertible Matrix Theorem (continued)</span></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../theorems/index.html">定理汇编 / Theorem Reference</a></li><li class="breadcrumb-item"><a href="../theorems/chapter-02.html"><span class="chapter-title">第2章 矩阵代数 / Matrix Algebra</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">矩阵代数</span></h1>
+<p class="subtitle lead">Chapter 2 · Matrix Algebra</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a href="../theorems/index.html">汇编目录 / Reference contents</a> · 本页的矩阵和标量均为实数。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>n</mi></msub><annotation encoding="application/x-tex">I_n</annotation></semantics></math> 是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 阶单位矩阵，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mi>T</mi></msup><annotation encoding="application/x-tex">A^T</annotation></semantics></math> 是转置（transpose）。方阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆（invertible）指存在同阶矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math> 满足 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>=</mo><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mi>A</mi><mo>=</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">AA^{-1}=A^{-1}A=I</annotation></semantics></math>。 基、维数和秩的简要说明放在<a href="#sec-2-8">§2.8</a>与<a href="#sec-2-9">§2.9</a>，前面的可逆性判据不预用它们。</p>
+<section id="sec-2-1" class="level2">
+<h2 class="anchored" data-anchor-id="sec-2-1">§2.1 矩阵运算 / Matrix Operations</h2>
+<section id="lay6-ch02-thm01" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm01">定理 1：矩阵加法与数乘运算律 <span class="theorem-en">Addition and Scalar Multiplication Laws</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理1 / Chapter 2, Theorem 1；§2.1。中英文名为描述性名称。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A,B,C\in\mathbb R^{m\times n}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>,</mo><mi>s</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">r,s\in\mathbb R</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> 是同尺寸的零矩阵。则：</p>
+<ol type="a">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>+</mo><mi>B</mi><mo>=</mo><mi>B</mi><mo>+</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">A+B=B+A</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>+</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>C</mi><mo>=</mo><mi>A</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo>+</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(A+B)+C=A+(B+C)</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>+</mo><mn>0</mn><mo>=</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">A+0=A</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>+</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>r</mi><mi>A</mi><mo>+</mo><mi>r</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">r(A+B)=rA+rB</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo>+</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mi>A</mi><mo>=</mo><mi>r</mi><mi>A</mi><mo>+</mo><mi>s</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">(r+s)A=rA+sA</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">r(sA)=(rs)A</annotation></semantics></math>。</p></li>
+</ol>
+<p><strong>理解与回查。</strong> 加法和数乘逐元素进行，因此沿用实数运算律；相加矩阵必须同尺寸。<a href="../lessons/07-matrix-products.html#properties">运算性质</a>；教材逐项说明见 §2.1。</p>
+</section>
+<section id="lay6-ch02-thm02" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm02">定理 2：矩阵乘法运算律 <span class="theorem-en">Matrix Multiplication Laws</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理2 / Chapter 2, Theorem 2；§2.1。中英文名为描述性名称。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">r\in\mathbb R</annotation></semantics></math>。以下每条各自假设其中的加法和乘法有定义：</p>
+<ol type="a">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A(BC)=(AB)C</annotation></semantics></math>。例如 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> 为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">n\times p</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> 为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>×</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p\times q</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo>+</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>A</mi><mi>B</mi><mo>+</mo><mi>A</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">A(B+C)=AB+AC</annotation></semantics></math>，其中 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>,</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">B,C</annotation></semantics></math> 同为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">n\times p</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo>+</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mi>A</mi><mo>=</mo><mi>B</mi><mi>A</mi><mo>+</mo><mi>C</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">(B+C)A=BA+CA</annotation></semantics></math>，其中 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>,</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">B,C</annotation></semantics></math> 同为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>×</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">p\times m</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mi>B</mi><mo>=</mo><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">r(AB)=(rA)B=A(rB)</annotation></semantics></math>，其中 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> 为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">n\times p</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>m</mi></msub><mi>A</mi><mo>=</mo><mi>A</mi><mo>=</mo><mi>A</mi><msub><mi>I</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">I_mA=A=AI_n</annotation></semantics></math>。</p></li>
+</ol>
+<p><strong>理解与回查。</strong> 结合律允许改括号，不允许交换因子；不能把这些式子读成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi><mo>=</mo><mi>B</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">AB=BA</annotation></semantics></math>。<a href="../lessons/07-matrix-products.html#composition">复合与结合律</a>、<a href="../lessons/07-matrix-products.html#properties">性质表</a>；教材 §2.1，其他分项见 §2.1 Exercises 37–39。</p>
+</section>
+<section id="lay6-ch02-thm03" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm03">定理 3：转置运算律 <span class="theorem-en">Transpose Laws</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理3 / Chapter 2, Theorem 3；§2.1。中英文名为描述性名称。</p>
+</div>
+<p>对实矩阵及实数 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>，在各式尺寸相容时：</p>
+<ol type="a">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>A</mi><mi>T</mi></msup><msup><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msup><mo>=</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">(A^T)^T=A</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>+</mo><mi>B</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msup><mo>=</mo><msup><mi>A</mi><mi>T</mi></msup><mo>+</mo><msup><mi>B</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">(A+B)^T=A^T+B^T</annotation></semantics></math>（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A,B</annotation></semantics></math> 同尺寸）。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mi>A</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msup><mo>=</mo><mi>r</mi><msup><mi>A</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">(rA)^T=rA^T</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>B</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msup><mo>=</mo><msup><mi>B</mi><mi>T</mi></msup><msup><mi>A</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">(AB)^T=B^TA^T</annotation></semantics></math>（例如 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> 为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">n\times p</annotation></semantics></math>）。</p></li>
+</ol>
+<p><strong>理解与回查。</strong> 转置乘积时必须倒转次序，所得尺寸为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>×</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">p\times m</annotation></semantics></math>。<a href="../lessons/07-matrix-products.html#properties">转置与乘法</a>；教材 §2.1，(d)证明指向 §2.1 Exercise 41。</p>
+</section>
+</section>
+<section id="sec-2-2" class="level2">
+<h2 class="anchored" data-anchor-id="sec-2-2">§2.2 逆矩阵 / The Inverse of a Matrix</h2>
+<section id="lay6-ch02-thm04" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm04">定理 4：二阶矩阵的逆公式与奇异判据 <span class="theorem-en">The Inverse of a Two-by-Two Matrix</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理4 / Chapter 2, Theorem 4；§2.2。中英文名为描述性名称。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>a</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>b</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>c</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>d</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">A=\begin{bmatrix}a&amp;b\\c&amp;d\end{bmatrix}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">a,b,c,d\in\mathbb R</annotation></semantics></math>。</p>
+<ul>
+<li><p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>d</mi><mo>−</mo><mi>b</mi><mi>c</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">ad-bc\ne0</annotation></semantics></math>，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆，且</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>=</mo><mfrac><mn>1</mn><mrow><mi>a</mi><mi>d</mi><mo>−</mo><mi>b</mi><mi>c</mi></mrow></mfrac><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>d</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mi>b</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mi>c</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>a</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+A^{-1}=\frac1{ad-bc}\begin{bmatrix}d&amp;-b\\-c&amp;a\end{bmatrix}.
+</annotation></semantics></math></p></li>
+<li><p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>d</mi><mo>−</mo><mi>b</mi><mi>c</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">ad-bc=0</annotation></semantics></math>，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 不可逆。</p></li>
+</ul>
+<p><strong>理解与回查。</strong> 先检查分母，再使用公式；奇异分支不能用“分母为零时公式无意义”代替不可逆结论。教材把证明留在 §2.2 Exercises 35–36。<a href="../lessons/08-inverses.html#inverse-computation">已有增广求逆计算</a>可与一般公式对照。</p>
+</section>
+<section id="lay6-ch02-thm05" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm05">定理 5：可逆系统的唯一解 <span class="theorem-en">Solving with an Inverse</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理5 / Chapter 2, Theorem 5；§2.2。中英文名为描述性名称。</p>
+</div>
+<p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math> 可逆，则对每个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf b\in\mathbb R^n</annotation></semantics></math>，方程 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math> 有唯一解，且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">\mathbf x=A^{-1}\mathbf b</annotation></semantics></math>。</p>
+<p><strong>理解与回查。</strong> 代入验证存在，左乘 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math> 验证所有解都只能是这一向量。<a href="../lessons/08-inverses.html#meaning">存在与唯一的证明</a>；教材 §2.2。该表达式是理论结论，不要求计算时先显式求逆。</p>
+</section>
+<section id="lay6-ch02-thm06" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm06">定理 6：逆矩阵运算律 <span class="theorem-en">Properties of Inverses</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理6 / Chapter 2, Theorem 6；§2.2。中英文名为描述性名称。</p>
+</div>
+<ol type="a">
+<li><p>若实方阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math> 也可逆，且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>=</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">(A^{-1})^{-1}=A</annotation></semantics></math>。</p></li>
+<li><p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A,B\in\mathbb R^{n\times n}</annotation></semantics></math> 都可逆，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">AB</annotation></semantics></math> 可逆，且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>B</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>=</mo><msup><mi>B</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">(AB)^{-1}=B^{-1}A^{-1}</annotation></semantics></math>。</p></li>
+<li><p>若实方阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mi>T</mi></msup><annotation encoding="application/x-tex">A^T</annotation></semantics></math> 可逆，且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>A</mi><mi>T</mi></msup><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><msup><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">(A^T)^{-1}=(A^{-1})^T</annotation></semantics></math>。</p></li>
+</ol>
+<p><strong>理解与回查。</strong> 复合动作要按相反次序撤销；每个逆候选都要满足双侧乘积为单位矩阵。<a href="../lessons/08-inverses.html#inverse-product">双侧核对</a>；教材 §2.2。</p>
+</section>
+<section id="lay6-ch02-thm07" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm07">定理 7：行消元求逆的充要条件 <span class="theorem-en">Row Reduction and Invertibility</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理7 / Chapter 2, Theorem 7；§2.2。中英文名为描述性名称。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆当且仅当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 行等价于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>n</mi></msub><annotation encoding="application/x-tex">I_n</annotation></semantics></math>。此时，<strong>任何</strong>把 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 化成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>n</mi></msub><annotation encoding="application/x-tex">I_n</annotation></semantics></math> 的初等行操作序列，施加在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>n</mi></msub><annotation encoding="application/x-tex">I_n</annotation></semantics></math> 上都会得到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math>。</p>
+<p>因此在增广矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable class="augmented-table" data-rhs-columns="1" data-coefficient-columns="1"><mtr><mtd columnalign="center" style="text-align: center"><mi>A</mi></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>I</mi><mi>n</mi></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}{c|c}A&amp;I_n\end{array}\right]</annotation></semantics></math> 上同步操作，若左侧能化成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>n</mi></msub><annotation encoding="application/x-tex">I_n</annotation></semantics></math>，右侧即为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math>；若不能，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 不可逆。</p>
+<p><strong>理解与回查。</strong> 右侧记录同一串操作的作用。<a href="../lessons/08-inverses.html#elementary">初等矩阵解释</a>、<a href="../lessons/09-invertibility-blocks.html#reasoning">可逆性等价链</a>；教材证明与算法见 §2.2。</p>
+</section>
+</section>
+<section id="sec-2-3" class="level2">
+<h2 class="anchored" data-anchor-id="sec-2-3">§2.3 可逆性刻画 / Characterizations of Invertibility</h2>
+<section id="lay6-ch02-thm08" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm08">定理 8：可逆矩阵定理：初始十二项 <span class="theorem-en">The Invertible Matrix Theorem</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理8 / Chapter 2, Theorem 8；§2.3。教材原题名。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math>。以下十二项等价：其中任意一项成立时全部成立，任意一项不成立时全部不成立。</p>
+<p><strong>消元与齐次系统 / Elimination and homogeneous systems</strong></p>
+<ol type="a">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 行等价于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>n</mi></msub><annotation encoding="application/x-tex">I_n</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个主元位置。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf0</annotation></semantics></math> 只有平凡解。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的列向量线性无关。</p></li>
+<li><p>线性变换 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>↦</mo><mi>A</mi><mi>𝐱</mi></mrow><annotation encoding="application/x-tex">\mathbf x\mapsto A\mathbf x</annotation></semantics></math> 是单射。</p></li>
+</ol>
+<p><strong>所有右端与映射 / All right-hand sides and mappings</strong></p>
+<ol start="7" type="a">
+<li><p>对每个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf b\in\mathbb R^n</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math> 至少有一个解。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的列向量张成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math>。</p></li>
+<li><p>线性变换 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>↦</mo><mi>A</mi><mi>𝐱</mi></mrow><annotation encoding="application/x-tex">\mathbf x\mapsto A\mathbf x</annotation></semantics></math> 把 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 映满 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math>。</p></li>
+</ol>
+<p><strong>单侧逆与转置 / One-sided inverses and transpose</strong></p>
+<ol start="10" type="a">
+<li><p>存在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">C\in\mathbb R^{n\times n}</annotation></semantics></math>，使 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>A</mi><mo>=</mo><msub><mi>I</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">CA=I_n</annotation></semantics></math>。</p></li>
+<li><p>存在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">D\in\mathbb R^{n\times n}</annotation></semantics></math>，使 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>D</mi><mo>=</mo><msub><mi>I</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">AD=I_n</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mi>T</mi></msup><annotation encoding="application/x-tex">A^T</annotation></semantics></math> 可逆。</p></li>
+</ol>
+<p><strong>理解与回查。</strong> 方阵前提把“足够多的主元”和“没有自由变量”合在一起；矩形矩阵不能照搬全部等价项。<a href="../lessons/09-invertibility-blocks.html#reasoning">现有主元等价链</a>；教材 §2.3 给完整链。(l)的反向由 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>A</mi><mi>T</mi></msup><msup><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msup><mo>=</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">(A^T)^T=A</annotation></semantics></math> 和定理6(c)得到。</p>
+<p><strong>后续阶段 / Later stages：</strong> <a href="#lay6-ch02-imt-sec29">§2.9 基与秩 m–q</a> → <a href="../theorems/chapter-04.html#lay6-ch04-imt-sec45">§4.5 重述 m–q</a> → <a href="../theorems/chapter-05.html#lay6-ch05-imt-sec52">§5.2 特征值 r</a> → <a href="../theorems/chapter-07.html#lay6-ch07-imt-sec74">§7.4 正交补与奇异值 s–v</a>。各阶段使用的新概念在对应页面说明。</p>
+</section>
+<section id="lay6-ch02-thm09" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm09">定理 9：可逆变换与矩阵的逆 <span class="theorem-en">Invertible Linear Transformations</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理9 / Chapter 2, Theorem 9；§2.3。中英文名为描述性名称。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>:</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">T:\mathbb R^n\to\mathbb R^n</annotation></semantics></math> 线性，标准矩阵为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>。这里 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math> <strong>可逆</strong>指存在映射 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>:</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">S:\mathbb R^n\to\mathbb R^n</annotation></semantics></math>，使对所有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf x\in\mathbb R^n</annotation></semantics></math> 同时有</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>𝐱</mi><mo>,</mo><mspace width="2.0em"></mspace><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>𝐱</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">
+S(T(\mathbf x))=\mathbf x,\qquad T(S(\mathbf x))=\mathbf x.
+</annotation></semantics></math></p>
+<p>则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math> 可逆当且仅当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆；此时满足上述双侧关系的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math> 唯一，且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math> 是线性变换，其公式为</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mi>𝐱</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">S(\mathbf x)=A^{-1}\mathbf x.</annotation></semantics></math></p>
+<p><strong>理解与回查。</strong> 两侧恒等分别保证可恢复原输入和每个输出都可被恢复。教材 §2.3 给出双侧定义，并在定理框中陈述等价、线性与唯一性；唯一性证明另指本节 Exercise 47。<a href="../lessons/08-inverses.html#meaning">已有逆的解释</a>与<a href="../lessons/06-transformations.html#elimination-map">列关系中的可逆变换</a>可帮助理解，完整一般命题见本条。</p>
+</section>
+</section>
+<section id="sec-2-4" class="level2">
+<h2 class="anchored" data-anchor-id="sec-2-4">§2.4 分块矩阵 / Partitioned Matrices</h2>
+<section id="lay6-ch02-thm10" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm10">定理 10：矩阵乘积的列行外积展开 <span class="theorem-en">Column–Row Expansion of AB</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理10 / Chapter 2, Theorem 10；§2.4。教材原题名。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>p</mi></mrow></msup></mrow><annotation encoding="application/x-tex">B\in\mathbb R^{n\times p}</annotation></semantics></math>。用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">col</mi><mo>⁡</mo></mrow><mi>k</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{col}_k(A)</annotation></semantics></math> 表示 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> 列（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">m\times1</annotation></semantics></math>），<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">row</mi><mo>⁡</mo></mrow><mi>k</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{row}_k(B)</annotation></semantics></math> 表示 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> 的第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> 行（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>×</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">1\times p</annotation></semantics></math>）。则</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mrow><mi mathvariant="normal">col</mi><mo>⁡</mo></mrow><mi>k</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><msub><mrow><mi mathvariant="normal">row</mi><mo>⁡</mo></mrow><mi>k</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+AB=\sum_{k=1}^n\operatorname{col}_k(A)\operatorname{row}_k(B).
+</annotation></semantics></math></p>
+<p>每一项都是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">m\times p</annotation></semantics></math> 的外积（outer product），它们的和也是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">m\times p</annotation></semantics></math> 矩阵。</p>
+<p><strong>理解与回查。</strong> 行乘列算一个元素，列乘行产生整个矩阵；本定理把乘积拆成后者的和。第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(i,j)</annotation></semantics></math> 个元素都是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mi>k</mi></msub><msub><mi>a</mi><mrow><mi>i</mi><mi>k</mi></mrow></msub><msub><mi>b</mi><mrow><mi>k</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\sum_k a_{ik}b_{kj}</annotation></semantics></math>，给出逐元素证明。<a href="../lessons/09-invertibility-blocks.html#blocks">已有分块与外积例</a>；教材证明见 §2.4。</p>
+</section>
+</section>
+<section id="sec-2-6" class="level2">
+<h2 class="anchored" data-anchor-id="sec-2-6">§2.6 投入产出模型 / The Leontief Input–Output Model</h2>
+<section id="lay6-ch02-thm11" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm11">定理 11：投入产出模型的非负唯一解 <span class="theorem-en">Nonnegative Solutions of the Leontief Model</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理11 / Chapter 2, Theorem 11；§2.6。中英文名为描述性名称。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>c</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">C=(c_{ij})\in\mathbb R^{n\times n}</annotation></semantics></math> 为消耗矩阵（consumption matrix）：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>c</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">c_{ij}</annotation></semantics></math> 表示第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math> 部门生产一个单位产出需要第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> 部门的投入量；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐝</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf d\in\mathbb R^n</annotation></semantics></math> 为最终需求（final demand），<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐱</mi><annotation encoding="application/x-tex">\mathbf x</annotation></semantics></math> 为总产出。假设</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>≥</mo><mn>0</mn><mo>,</mo><mspace width="1.0em"></mspace><msub><mi>d</mi><mi>i</mi></msub><mo>≥</mo><mn>0</mn><mo>,</mo><mspace width="1.0em"></mspace><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>c</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>&lt;</mo><mn>1</mn><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>j</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+c_{ij}\ge0,\quad d_i\ge0,\quad
+\sum_{i=1}^n c_{ij}&lt;1\quad(j=1,\ldots,n).
+</annotation></semantics></math></p>
+<p>则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>n</mi></msub><mo>−</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">I_n-C</annotation></semantics></math> 可逆，且</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>I</mi><mi>n</mi></msub><mo>−</mo><mi>C</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>−</mi><mn>1</mn></mrow></msup><mi>𝐝</mi></mrow><annotation encoding="application/x-tex">\mathbf x=(I_n-C)^{-1}\mathbf d</annotation></semantics></math></p>
+<p>是方程 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><mi>C</mi><mi>𝐱</mi><mo>+</mo><mi>𝐝</mi></mrow><annotation encoding="application/x-tex">\mathbf x=C\mathbf x+\mathbf d</annotation></semantics></math> 的<strong>唯一</strong>解，并且各分量非负。</p>
+<p><strong>理解与回查。</strong> 每列和严格小于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> 是保证可行总产出的充分条件，不能反写为必要条件。教材 §2.6 用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>+</mo><mi>C</mi><mo>+</mo><msup><mi>C</mi><mn>2</mn></msup><mo>+</mo><mi>⋯</mi></mrow><annotation encoding="application/x-tex">I+C+C^2+\cdots</annotation></semantics></math> 说明逆矩阵为何非负；模型定义也在本节。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐝</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf d=\mathbf0</annotation></semantics></math> 时唯一解是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟎</mn><annotation encoding="application/x-tex">\mathbf0</annotation></semantics></math>，也在结论内。</p>
+</section>
+</section>
+<section id="sec-2-8" class="level2">
+<h2 class="anchored" data-anchor-id="sec-2-8">§2.8 子空间与基 / Subspaces and Bases</h2>
+<p>子空间（subspace）是含零且对加法、数乘封闭的子集。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Col}A</annotation></semantics></math> 是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的列张成的空间；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>𝐱</mi><mo>:</mo><mi>A</mi><mi>𝐱</mi><mo>=</mo><mn>𝟎</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A=\{\mathbf x:A\mathbf x=\mathbf0\}</annotation></semantics></math> 是零空间（null space）。子空间 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> 的基（basis）是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> 内既线性无关又张成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> 的一组向量。</p>
+<section id="lay6-ch02-thm12" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm12">定理 12：零空间是子空间 <span class="theorem-en">The Null Space Is a Subspace</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理12 / Chapter 2, Theorem 12；§2.8。中英文名为描述性名称。</p>
+</div>
+<p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A</annotation></semantics></math> 是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 的子空间。等价地，一个含 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个未知数的实齐次线性方程组的解集是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 的子空间。</p>
+<p><strong>理解与回查。</strong> 未知向量有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个分量，零空间因此在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 中，而不是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>m</mi></msup><annotation encoding="application/x-tex">\mathbb R^m</annotation></semantics></math> 中。<a href="../topics/span-column-and-null-spaces.html#null-space">零、加法与数乘检查</a>；教材证明见 §2.8；<a href="../theorems/chapter-04.html#lay6-ch04-thm02">第四章定理2</a>重述此结论。</p>
+</section>
+<section id="lay6-ch02-thm13" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm13">定理 13：原矩阵主元列给出列空间基 <span class="theorem-en">A Basis for the Column Space</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理13 / Chapter 2, Theorem 13；§2.8。中英文名为描述性名称。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>。由 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的阶梯形确定主元列的<strong>下标</strong>，再从原矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 中取出这些列，它们构成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Col}A</annotation></semantics></math> 的一组基。</p>
+<p><strong>理解与回查。</strong> 行化简保留列之间的线性关系，却通常改变列空间；不能直接取阶梯形矩阵的列充当原列空间的基。教材 §2.8 的例7–8说明理由；<a href="../theorems/chapter-04.html#lay6-ch04-thm06">第四章定理6</a>重述。零矩阵没有主元列，零子空间的空基约定见下段。</p>
+</section>
+</section>
+<section id="sec-2-9" class="level2">
+<h2 class="anchored" data-anchor-id="sec-2-9">§2.9 维数与秩 / Dimension and Rank</h2>
+<p>有限维空间的维数（dimension）是基中向量的个数，记作 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">dim</mi><mo>⁡</mo></mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">\dim H</annotation></semantics></math>；矩阵的秩（rank）定义为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">rank</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mrow><mi mathvariant="normal">dim</mi><mo>⁡</mo></mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{rank}A=\dim\operatorname{Col}A</annotation></semantics></math>，零度（nullity）是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">dim</mi><mo>⁡</mo></mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\dim\operatorname{Nul}A</annotation></semantics></math>。零子空间 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mn>𝟎</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{\mathbf0\}</annotation></semantics></math> 的维数是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>。</p>
+<p><strong>零子空间约定 / Zero-space convention。</strong> 教材 §2.9 脚注称零子空间“没有基”，并另定维数为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>；允许空集作基的另一常见约定则把空组作为它的基。本汇编在涉及空组时明确指出后一解释，不把两种措辞混用：零矩阵主元列为空，若允许空基，这个空组就是其零列空间的基；按教材措辞则将零子空间单列。两种约定的维数与秩计算相同。</p>
+<section id="lay6-ch02-thm14" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm14">定理 14：秩与零度定理 <span class="theorem-en">The Rank Theorem</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理14 / Chapter 2, Theorem 14；§2.9。教材原题名。</p>
+</div>
+<p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>，则</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">rank</mi><mo>⁡</mo></mrow><mi>A</mi><mo>+</mo><mrow><mi mathvariant="normal">dim</mi><mo>⁡</mo></mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mi>n</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\operatorname{rank}A+\dim\operatorname{Nul}A=n.</annotation></semantics></math></p>
+<p><strong>理解与回查。</strong> 主元列数与自由变量数合计为未知数个数 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>；不是行数 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>。零矩阵时为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>+</mo><mi>n</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">0+n=n</annotation></semantics></math>。教材 §2.9；更一般的讨论实际位于 <a href="../theorems/chapter-04.html#lay6-ch04-thm14">§4.5 定理14</a>，不是原书此处交叉引用所写的 §4.6。</p>
+</section>
+<section id="lay6-ch02-thm15" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-thm15">定理 15：子空间的基定理 <span class="theorem-en">The Basis Theorem</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 定理15 / Chapter 2, Theorem 15；§2.9。教材原题名。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> 是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 中维数为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> 的子空间。</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> 中任何恰含 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> 个向量的线性无关组，都是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> 的基。</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> 中任何恰含 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> 个向量、并且张成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> 的向量组，也都是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> 的基。</li>
+</ul>
+<p><strong>理解与回查。</strong> 数量等于维数时，只需检查“无关”或“张成”之一；向量首先必须属于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">p=0</annotation></semantics></math> 时按上面的零子空间约定解释。教材证明见 <a href="../theorems/chapter-04.html#lay6-ch04-thm13">§4.5 定理13</a>。</p>
+</section>
+<section id="lay6-ch02-imt-sec29" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch02-imt-sec29">可逆矩阵定理续篇：基、秩与零空间扩展 <span class="theorem-en">The Invertible Matrix Theorem (continued)</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第2章 / Chapter 2，§2.9，The Invertible Matrix Theorem (continued)。教材原题名。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math>。以下每一项都等价于“<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆”，也等价于 <a href="#lay6-ch02-thm08">§2.3 的(a)–(l)</a>：</p>
+<ol start="13" type="a">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的列向量构成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 的一组基。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\operatorname{Col}A=\mathbb R^n</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">rank</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">\operatorname{rank}A=n</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">dim</mi><mo>⁡</mo></mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\dim\operatorname{Nul}A=0</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>𝟎</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A=\{\mathbf0\}</annotation></semantics></math>。</p></li>
+</ol>
+<p><strong>理解与回查。</strong> 新概念是基、维数、秩和零空间；(m)把无关与张成合写，(o)–(q)把主元与自由变量语言改写为维数语言。教材论证 §2.9。本处新增五项，<a href="../theorems/chapter-04.html#lay6-ch04-imt-sec45">§4.5</a>再次陈述同一五项；随后有 <a href="../theorems/chapter-05.html#lay6-ch05-imt-sec52">r</a> 与 <a href="../theorems/chapter-07.html#lay6-ch07-imt-sec74">s–v</a>。</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../theorems/chapter-01.html" class="pagination-link" aria-label="第1章 线性方程与变换 / Linear Equations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">第1章 线性方程与变换 / Linear Equations</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../theorems/chapter-03.html" class="pagination-link" aria-label="第3章 行列式 / Determinants">
+        <span class="nav-page-text"><span class="chapter-title">第3章 行列式 / Determinants</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script src="../assets/math-layout.js"></script>
+
+
+
+
+</body></html>

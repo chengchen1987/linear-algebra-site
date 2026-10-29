@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>特征值与特征向量 – 线性代数 · 学习与复习</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../theorems/chapter-06.html" rel="next">
+<link href="../theorems/chapter-04.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-59b0fd22973036f71b2f3b55428159e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+
+<body class="nav-sidebar floating theorem-reference quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../theorems/index.html">定理汇编 / Theorem Reference</a></li><li class="breadcrumb-item"><a href="../theorems/chapter-05.html"><span class="chapter-title">第5章 特征值与特征向量 / Eigenvalues</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">线性代数 · 学习与复习</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">前言 / Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章总览：从方程组到线性变换 / Chapter 1: From Linear Systems to Linear Transformations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/linear-systems.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组与矩阵表示 / Linear Systems and Matrix Representation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/gaussian-elimination.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">高斯消元法 / Gaussian Elimination</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/row-picture.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组的行图像 / The Row Picture of Linear Systems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/column-picture.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组的列图像 / The Column Picture of Linear Systems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/vector-and-matrix-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">向量方程与矩阵方程 / Vector and Matrix Equations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/homogeneous-and-nonhomogeneous-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">齐次与非齐次方程组的解集 / Solution Sets of Homogeneous and Nonhomogeneous Linear Systems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/span-column-and-null-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">张成、列空间与零空间 / Span, Column Space and Null Space</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/05-independence.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性无关与表示的唯一性 / Linear Independence and Uniqueness of Representation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/06-transformations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性变换与矩阵表示 / Linear Transformations and Matrix Representations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/elementary-row-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">初等行变换对应的矩阵 / Matrices for Elementary Row Operations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章 · 知识与术语速查 / Chapter 1: Concepts and Terminology</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章综合复习：从一次消元读出整个结构 / Chapter 1 Review: Reading the Structure from Elimination</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章应用选读：力平衡与流量守恒 / Chapter 1 Applications: Force Balance and Flow Conservation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 矩阵代数总览</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">为什么矩阵这样相乘？</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/08-inverses.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">逆矩阵与初等矩阵</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/09-invertibility-blocks.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">可逆矩阵定理与分块运算</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">把消元保存为 LU 分解</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 知识与术语速查</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 综合复习</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章 · 行列式总览</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/11-determinants.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">行列式的定义与展开</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/12-determinants-properties.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">消元、性质与可逆性</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/13-cramer-adjugate.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">从解方程到古典伴随矩阵</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/14-determinants-geometry.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">几何意义与前三章贯通</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-other-definitions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">补充阅读 · 行列式的其他定义：排列、逆序数与基本性质</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章 · 知识与术语速查</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章与前三章 · 综合复习</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">中英术语表</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">定理汇编 / Theorem Reference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">汇编入口 / Reference contents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第1章 线性方程与变换 / Linear Equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第2章 矩阵代数 / Matrix Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第3章 行列式 / Determinants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-04.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第4章 向量空间 / Vector Spaces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-05.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">第5章 特征值与特征向量 / Eigenvalues</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-06.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第6章 正交性与最小二乘 / Orthogonality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-07.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第7章 对称矩阵与SVD / Symmetric Matrices and SVD</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录 / Contents</h2>
+   
+  <ul>
+  <li><a href="#terms" id="toc-terms" class="nav-link active" data-scroll-target="#terms">术语与记号 / Terms and Notation</a></li>
+  <li><a href="#sec-5-1" id="toc-sec-5-1" class="nav-link" data-scroll-target="#sec-5-1">§5.1 特征值与特征向量 / Eigenvalues and Eigenvectors</a>
+  <ul class="collapse">
+  <li><a href="#lay6-ch05-thm01" id="toc-lay6-ch05-thm01" class="nav-link" data-scroll-target="#lay6-ch05-thm01">定理 1：三角矩阵的特征值 <span class="theorem-en">Eigenvalues of a Triangular Matrix</span></a></li>
+  <li><a href="#lay6-ch05-thm02" id="toc-lay6-ch05-thm02" class="nav-link" data-scroll-target="#lay6-ch05-thm02">定理 2：不同特征值的特征向量无关 <span class="theorem-en">Eigenvectors for Distinct Eigenvalues</span></a></li>
+  </ul></li>
+  <li><a href="#sec-5-2" id="toc-sec-5-2" class="nav-link" data-scroll-target="#sec-5-2">§5.2 特征方程与相似 / The Characteristic Equation and Similarity</a>
+  <ul class="collapse">
+  <li><a href="#lay6-ch05-thm03" id="toc-lay6-ch05-thm03" class="nav-link" data-scroll-target="#lay6-ch05-thm03">定理 3：行列式性质集中重述 <span class="theorem-en">Properties of Determinants</span></a></li>
+  <li><a href="#lay6-ch05-imt-sec52" id="toc-lay6-ch05-imt-sec52" class="nav-link" data-scroll-target="#lay6-ch05-imt-sec52">可逆矩阵定理续篇：零不是特征值 <span class="theorem-en">The Invertible Matrix Theorem (continued)</span></a></li>
+  <li><a href="#lay6-ch05-thm04" id="toc-lay6-ch05-thm04" class="nav-link" data-scroll-target="#lay6-ch05-thm04">定理 4：相似矩阵的特征多项式相同 <span class="theorem-en">Similarity Preserves the Characteristic Polynomial</span></a></li>
+  </ul></li>
+  <li><a href="#sec-5-3" id="toc-sec-5-3" class="nav-link" data-scroll-target="#sec-5-3">§5.3 对角化 / Diagonalization</a>
+  <ul class="collapse">
+  <li><a href="#lay6-ch05-thm05" id="toc-lay6-ch05-thm05" class="nav-link" data-scroll-target="#lay6-ch05-thm05">定理 5：可对角化的充要条件 <span class="theorem-en">The Diagonalization Theorem</span></a></li>
+  <li><a href="#lay6-ch05-thm06" id="toc-lay6-ch05-thm06" class="nav-link" data-scroll-target="#lay6-ch05-thm06">定理 6：互异特征值保证可对角化 <span class="theorem-en">Distinct Eigenvalues and Diagonalizability</span></a></li>
+  <li><a href="#lay6-ch05-thm07" id="toc-lay6-ch05-thm07" class="nav-link" data-scroll-target="#lay6-ch05-thm07">定理 7：重特征值与可对角化 <span class="theorem-en">Eigenspace Dimensions and Diagonalizability</span></a></li>
+  </ul></li>
+  <li><a href="#sec-5-4" id="toc-sec-5-4" class="nav-link" data-scroll-target="#sec-5-4">§5.4 线性变换的矩阵 / Matrices of Linear Transformations</a>
+  <ul class="collapse">
+  <li><a href="#lay6-ch05-thm08" id="toc-lay6-ch05-thm08" class="nav-link" data-scroll-target="#lay6-ch05-thm08">定理 8：对角矩阵是特征基下的表示 <span class="theorem-en">Diagonal Matrix Representation</span></a></li>
+  </ul></li>
+  <li><a href="#sec-5-5" id="toc-sec-5-5" class="nav-link" data-scroll-target="#sec-5-5">§5.5 复特征值 / Complex Eigenvalues</a>
+  <ul class="collapse">
+  <li><a href="#lay6-ch05-thm09" id="toc-lay6-ch05-thm09" class="nav-link" data-scroll-target="#lay6-ch05-thm09">定理 9：复特征值的实二阶块 <span class="theorem-en">A Real Block for Complex Eigenvalues</span></a></li>
+  </ul></li>
+  <li><a href="#sec-5-9" id="toc-sec-5-9" class="nav-link" data-scroll-target="#sec-5-9">§5.9 马尔可夫链 / Markov Chains</a>
+  <ul class="collapse">
+  <li><a href="#lay6-ch05-thm10" id="toc-lay6-ch05-thm10" class="nav-link" data-scroll-target="#lay6-ch05-thm10">定理 10：随机矩阵具有特征值1 <span class="theorem-en">Stochastic Matrices</span></a></li>
+  <li><a href="#lay6-ch05-thm11" id="toc-lay6-ch05-thm11" class="nav-link" data-scroll-target="#lay6-ch05-thm11">定理 11：正则随机矩阵的稳态与收敛 <span class="theorem-en">Convergence of Regular Markov Chains</span></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../theorems/index.html">定理汇编 / Theorem Reference</a></li><li class="breadcrumb-item"><a href="../theorems/chapter-05.html"><span class="chapter-title">第5章 特征值与特征向量 / Eigenvalues</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">特征值与特征向量</span></h1>
+<p class="subtitle lead">Chapter 5 · Eigenvalues and Eigenvectors</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a href="../theorems/index.html">汇编目录 / Reference contents</a> · 除 §5.5 明确使用复数外，本页在实数域讨论矩阵、特征值与对角化。</p>
+<section id="terms" class="level2">
+<h2 class="anchored" data-anchor-id="terms">术语与记号 / Terms and Notation</h2>
+<p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐯</mi><mo>≠</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf v\ne\mathbf0</annotation></semantics></math> 且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐯</mi><mo>=</mo><mi>λ</mi><mi>𝐯</mi></mrow><annotation encoding="application/x-tex">A\mathbf v=\lambda\mathbf v</annotation></semantics></math>，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math> 为特征值（eigenvalue），<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐯</mi><annotation encoding="application/x-tex">\mathbf v</annotation></semantics></math> 为对应特征向量（eigenvector）。特征空间（eigenspace）<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>λ</mi></msub><mo>=</mo><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>−</mo><mi>λ</mi><msub><mi>I</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E_\lambda=\operatorname{Nul}(A-\lambda I_n)</annotation></semantics></math> <strong>包含零向量</strong>，但零向量不是特征向量。</p>
+<p>特征多项式（characteristic polynomial）为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>−</mo><mi>t</mi><msub><mi>I</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\det(A-tI_n)</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math> 是特征值当且仅当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>−</mo><mi>λ</mi><msub><mi>I</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\det(A-\lambda I_n)=0</annotation></semantics></math>（§5.2 的未编号结论，由非零核与行列式可逆判据得到）。根的重数称代数重数（algebraic multiplicity），<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">dim</mi><mo>⁡</mo></mrow><msub><mi>E</mi><mi>λ</mi></msub></mrow><annotation encoding="application/x-tex">\dim E_\lambda</annotation></semantics></math> 称几何重数（geometric multiplicity）。</p>
+<p>相似（similar）指 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><msup><mi>P</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mi>A</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">B=P^{-1}AP</annotation></semantics></math>，其中 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> 可逆；可对角化（diagonalizable）指存在同一数域内的可逆 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> 与对角矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>，使 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>P</mi><mi>D</mi><msup><mi>P</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">A=PDP^{-1}</annotation></semantics></math>。若改在复数域讨论，必须同时允许复特征向量和复 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>,</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">P,D</annotation></semantics></math>；“在实数域不可对角化”不自动排除复数域的对角化。教材定义见 §§5.1–5.3。</p>
+</section>
+<section id="sec-5-1" class="level2">
+<h2 class="anchored" data-anchor-id="sec-5-1">§5.1 特征值与特征向量 / Eigenvalues and Eigenvectors</h2>
+<section id="lay6-ch05-thm01" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch05-thm01">定理 1：三角矩阵的特征值 <span class="theorem-en">Eigenvalues of a Triangular Matrix</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第5章 定理1 / Chapter 5, Theorem 1；§5.1。中英文名为描述性名称。</p>
+</div>
+<p>实 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n\times n</annotation></semantics></math> 上三角或下三角矩阵的特征值恰为主对角线上出现的数。</p>
+<p><strong>理解与回查。</strong> 三角阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>−</mo><mi>λ</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">A-\lambda I</annotation></semantics></math> 何时缺少主元，只取决于某个对角元是否为零；重复对角元可给重复根，零对角元也允许。教材 §5.1 用上三角三阶式说明一般方法，下三角见 §5.1 Exercise 36。</p>
+</section>
+<section id="lay6-ch05-thm02" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch05-thm02">定理 2：不同特征值的特征向量无关 <span class="theorem-en">Eigenvectors for Distinct Eigenvalues</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第5章 定理2 / Chapter 5, Theorem 2；§5.1。中英文名为描述性名称。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>λ</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_1,\ldots,\lambda_r</annotation></semantics></math> 是互不相同的实特征值。若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐯</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>𝐯</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">\mathbf v_1,\ldots,\mathbf v_r</annotation></semantics></math> 是分别对应它们的特征向量，则这组向量线性无关。</p>
+<p><strong>理解与回查。</strong> 不同特征值提供独立方向；同一特征值下选到的多个向量并不自动无关。教材 §5.1 的证明用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 作用于最短相关式，再减去一个特征值倍数。</p>
+</section>
+</section>
+<section id="sec-5-2" class="level2">
+<h2 class="anchored" data-anchor-id="sec-5-2">§5.2 特征方程与相似 / The Characteristic Equation and Similarity</h2>
+<section id="lay6-ch05-thm03" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch05-thm03">定理 3：行列式性质集中重述 <span class="theorem-en">Properties of Determinants</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第5章 定理3 / Chapter 5, Theorem 3；§5.2。教材原题名。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A,B\in\mathbb R^{n\times n}</annotation></semantics></math>。以下为第三章性质的集中重述：</p>
+<ol type="a">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆当且仅当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><mi>A</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\det A\ne0</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\det(AB)=(\det A)(\det B)</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>A</mi><mi>T</mi></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\det(A^T)=\det A</annotation></semantics></math>。</p></li>
+<li><p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 为三角矩阵，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\det A</annotation></semantics></math> 等于主对角元乘积。</p></li>
+<li><p>对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 施行单次行替换，行列式不变；交换两行，行列式变号；一行乘标量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>，行列式也乘 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>。</p></li>
+</ol>
+<p><strong>理解与回查。</strong> 倍乘公式也包括 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">c=0</annotation></semantics></math>，可逆行操作才另要求非零。证明回查第三章的<a href="../theorems/chapter-03.html#lay6-ch03-thm02">三角阵</a>、<a href="../theorems/chapter-03.html#lay6-ch03-thm03">行操作</a>、<a href="../theorems/chapter-03.html#lay6-ch03-thm04">可逆性</a>、<a href="../theorems/chapter-03.html#lay6-ch03-thm05">转置</a>与<a href="../theorems/chapter-03.html#lay6-ch03-thm06">乘积</a>，已有主题<a href="../lessons/12-determinants-properties.html#properties">性质总览</a>。</p>
+</section>
+<section id="lay6-ch05-imt-sec52" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch05-imt-sec52">可逆矩阵定理续篇：零不是特征值 <span class="theorem-en">The Invertible Matrix Theorem (continued)</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第5章 / Chapter 5，§5.2，The Invertible Matrix Theorem (continued)。教材原题名。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆当且仅当：</p>
+<ol start="18" type="a">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> 不是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的特征值。</li>
+</ol>
+<p><strong>理解与回查。</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> 是特征值恰好表示 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf0</annotation></semantics></math> 有非零解，故与 <a href="../theorems/chapter-02.html#lay6-ch02-thm08">a–l</a>、<a href="../theorems/chapter-02.html#lay6-ch02-imt-sec29">m–q</a>及其<a href="../theorems/chapter-04.html#lay6-ch04-imt-sec45">§4.5重述</a>相连。教材 §5.2 的续篇只新增 r，下一续篇为 <a href="../theorems/chapter-07.html#lay6-ch07-imt-sec74">s–v</a>。</p>
+</section>
+<section id="lay6-ch05-thm04" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch05-thm04">定理 4：相似矩阵的特征多项式相同 <span class="theorem-en">Similarity Preserves the Characteristic Polynomial</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第5章 定理4 / Chapter 5, Theorem 4；§5.2。中英文名为描述性名称。</p>
+</div>
+<p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A,B\in\mathbb R^{n\times n}</annotation></semantics></math> 相似，即 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><msup><mi>P</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mi>A</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">B=P^{-1}AP</annotation></semantics></math> 且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> 为可逆实矩阵，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A,B</annotation></semantics></math> 的特征多项式相同，因而它们的特征值及各特征值的代数重数相同（也包括在复数中考察这些多项式的根）。</p>
+<p><strong>理解与回查。</strong> 由 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>−</mo><mi>t</mi><mi>I</mi><mo>=</mo><msup><mi>P</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>−</mo><mi>t</mi><mi>I</mi><mo stretchy="false" form="postfix">)</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">B-tI=P^{-1}(A-tI)P</annotation></semantics></math> 和行列式乘法得到，教材 §5.2 给出证明。反向不成立；相同特征值与重数并不保证相似，行等价也不保证特征值相同。</p>
+</section>
+</section>
+<section id="sec-5-3" class="level2">
+<h2 class="anchored" data-anchor-id="sec-5-3">§5.3 对角化 / Diagonalization</h2>
+<section id="lay6-ch05-thm05" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch05-thm05">定理 5：可对角化的充要条件 <span class="theorem-en">The Diagonalization Theorem</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第5章 定理5 / Chapter 5, Theorem 5；§5.3。教材原题名。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 在实数域可对角化，当且仅当它有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个线性无关的实特征向量。</p>
+<p>更具体地，若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mo stretchy="false" form="prefix">[</mo><msub><mi>𝐯</mi><mn>1</mn></msub><mspace width="0.222em"></mspace><mi>⋯</mi><mspace width="0.222em"></mspace><msub><mi>𝐯</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">P=[\mathbf v_1\ \cdots\ \mathbf v_n]</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mrow><mi mathvariant="normal">diag</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>λ</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">D=\operatorname{diag}(\lambda_1,\ldots,\lambda_n)</annotation></semantics></math>，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> 可逆且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>P</mi><mi>D</mi><msup><mi>P</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">A=PDP^{-1}</annotation></semantics></math>，当且仅当各 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐯</mi><mi>j</mi></msub><annotation encoding="application/x-tex">\mathbf v_j</annotation></semantics></math> 是对应 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>λ</mi><mi>j</mi></msub><annotation encoding="application/x-tex">\lambda_j</annotation></semantics></math> 的特征向量且彼此线性无关。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math> 上特征值的次序必须与 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> 的列次序相配。</p>
+<p><strong>理解与回查。</strong> 比较 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">AP</annotation></semantics></math> 和 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>D</mi></mrow><annotation encoding="application/x-tex">PD</annotation></semantics></math> 的第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math> 列即可看到等价关系；教材 §5.3 的完整证明。这里要求足够多的独立特征向量，不要求特征值互异。</p>
+</section>
+<section id="lay6-ch05-thm06" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch05-thm06">定理 6：互异特征值保证可对角化 <span class="theorem-en">Distinct Eigenvalues and Diagonalizability</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第5章 定理6 / Chapter 5, Theorem 6；§5.3。中英文名为描述性名称。</p>
+</div>
+<p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math> 有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个互不相同的实特征值，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 在实数域可对角化。</p>
+<p><strong>理解与回查。</strong> 由定理2获得 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个无关特征向量，再用定理5；教材 §5.3。此条件充分而非必要，例如重复特征值的对角矩阵仍可对角化。若在复数域使用本条，所有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个特征值、特征向量和对角化矩阵均须在该域理解。</p>
+</section>
+<section id="lay6-ch05-thm07" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch05-thm07">定理 7：重特征值与可对角化 <span class="theorem-en">Eigenspace Dimensions and Diagonalizability</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第5章 定理7 / Chapter 5, Theorem 7；§5.3。中英文名为描述性名称。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>λ</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_1,\ldots,\lambda_p</annotation></semantics></math> 为其互不相同的实特征值，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><msub><mi>λ</mi><mi>k</mi></msub></msub><annotation encoding="application/x-tex">E_{\lambda_k}</annotation></semantics></math> 为对应实特征空间。</p>
+<ol type="a">
+<li><p>对每个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">k=1,\ldots,p</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">dim</mi><mo>⁡</mo></mrow><msub><mi>E</mi><msub><mi>λ</mi><mi>k</mi></msub></msub></mrow><annotation encoding="application/x-tex">\dim E_{\lambda_k}</annotation></semantics></math> 不超过 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>λ</mi><mi>k</mi></msub><annotation encoding="application/x-tex">\lambda_k</annotation></semantics></math> 的代数重数。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 在实数域可对角化，当且仅当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>p</mi></msubsup><mrow><mi mathvariant="normal">dim</mi><mo>⁡</mo></mrow><msub><mi>E</mi><msub><mi>λ</mi><mi>k</mi></msub></msub><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">\sum_{k=1}^p\dim E_{\lambda_k}=n</annotation></semantics></math>。这又等价于以下两条<strong>同时</strong>成立：特征多项式在实数域完全分解为一次因子的乘积；每个特征值的几何重数等于其代数重数。</p></li>
+<li><p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可对角化，从每个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><msub><mi>λ</mi><mi>k</mi></msub></msub><annotation encoding="application/x-tex">E_{\lambda_k}</annotation></semantics></math> 任取一组基 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ℬ</mi><mi>k</mi></msub><annotation encoding="application/x-tex">\mathcal B_k</annotation></semantics></math>，把这些基合在一起，就得到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 的一组由特征向量组成的基。</p></li>
+</ol>
+<p><strong>理解与回查。</strong> 重根是否妨碍对角化，要看相应特征空间是否提供足够多的独立向量；不能只数不同特征值。本条采用本节实数语境，完全分裂条件不可省。教材 §5.3 陈述并指向外部教材证明，本汇编未收入该外部证明。</p>
+</section>
+</section>
+<section id="sec-5-4" class="level2">
+<h2 class="anchored" data-anchor-id="sec-5-4">§5.4 线性变换的矩阵 / Matrices of Linear Transformations</h2>
+<p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℬ</mi><annotation encoding="application/x-tex">\mathcal B</annotation></semantics></math> 是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> 的有序基，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>:</mo><mi>V</mi><mo>→</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">T:V\to V</annotation></semantics></math> 线性，基矩阵（matrix relative to a basis）<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>T</mi><msub><mo stretchy="false" form="postfix">]</mo><mi>ℬ</mi></msub></mrow><annotation encoding="application/x-tex">[T]_{\mathcal B}</annotation></semantics></math> 由 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo><msub><mo stretchy="false" form="postfix">]</mo><mi>ℬ</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">[</mo><mi>T</mi><msub><mo stretchy="false" form="postfix">]</mo><mi>ℬ</mi></msub><mo stretchy="false" form="prefix">[</mo><mi>𝐱</mi><msub><mo stretchy="false" form="postfix">]</mo><mi>ℬ</mi></msub></mrow><annotation encoding="application/x-tex">[T(\mathbf x)]_{\mathcal B}=[T]_{\mathcal B}[\mathbf x]_{\mathcal B}</annotation></semantics></math> 定义，其第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math> 列是第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math> 个基向量像的坐标。</p>
+<section id="lay6-ch05-thm08" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch05-thm08">定理 8：对角矩阵是特征基下的表示 <span class="theorem-en">Diagonal Matrix Representation</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第5章 定理8 / Chapter 5, Theorem 8；§5.4。教材原题名。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>P</mi><mi>D</mi><msup><mi>P</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">A=PDP^{-1}</annotation></semantics></math>，其中 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">D\in\mathbb R^{n\times n}</annotation></semantics></math> 为对角矩阵，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> 为可逆实矩阵。若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℬ</mi><annotation encoding="application/x-tex">\mathcal B</annotation></semantics></math> 是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> 的各列按次序构成的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 的基，则线性变换 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>A</mi><mi>𝐱</mi></mrow><annotation encoding="application/x-tex">T(\mathbf x)=A\mathbf x</annotation></semantics></math> 在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℬ</mi><annotation encoding="application/x-tex">\mathcal B</annotation></semantics></math> 下的矩阵就是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>。</p>
+<p><strong>理解与回查。</strong> 对角化是在特征基中描述同一个变换：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>T</mi><msub><mo stretchy="false" form="postfix">]</mo><mi>ℬ</mi></msub><mo>=</mo><msup><mi>P</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mi>A</mi><mi>P</mi><mo>=</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">[T]_{\mathcal B}=P^{-1}AP=D</annotation></semantics></math>。教材证明见 §5.4；坐标与换基见<a href="../theorems/chapter-04.html#lay6-ch04-thm15">第四章定理15</a>。</p>
+</section>
+</section>
+<section id="sec-5-5" class="level2">
+<h2 class="anchored" data-anchor-id="sec-5-5">§5.5 复特征值 / Complex Eigenvalues</h2>
+<p>本节 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>i</mi><mn>2</mn></msup><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">i^2=-1</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Re</mi><mo>⁡</mo></mrow><mi>𝐯</mi></mrow><annotation encoding="application/x-tex">\operatorname{Re}\mathbf v</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Im</mi><mo>⁡</mo></mrow><mi>𝐯</mi></mrow><annotation encoding="application/x-tex">\operatorname{Im}\mathbf v</annotation></semantics></math> 表示复向量逐分量的实部与虚部。矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 仍为实矩阵，但特征向量允许在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℂ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb C^2</annotation></semantics></math> 中。复数基础见教材附录B。</p>
+<section id="lay6-ch05-thm09" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch05-thm09">定理 9：复特征值的实二阶块 <span class="theorem-en">A Real Block for Complex Eigenvalues</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第5章 定理9 / Chapter 5, Theorem 9；§5.5。中英文名为描述性名称。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{2\times2}</annotation></semantics></math> 有非实特征值 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mi>a</mi><mo>−</mo><mi>b</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">\lambda=a-bi</annotation></semantics></math>，其中 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">a,b\in\mathbb R</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b\ne0</annotation></semantics></math>。令非零向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐯</mi><mo>∈</mo><msup><mi>ℂ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\mathbf v\in\mathbb C^2</annotation></semantics></math> 满足 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐯</mi><mo>=</mo><mi>λ</mi><mi>𝐯</mi></mrow><annotation encoding="application/x-tex">A\mathbf v=\lambda\mathbf v</annotation></semantics></math>。则</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mo stretchy="false" form="prefix">[</mo><mrow><mi mathvariant="normal">Re</mi><mo>⁡</mo></mrow><mi>𝐯</mi><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">Im</mi><mo>⁡</mo></mrow><mi>𝐯</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">P=[\operatorname{Re}\mathbf v\ \operatorname{Im}\mathbf v]</annotation></semantics></math></p>
+<p>为可逆实矩阵，并且</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>P</mi><mi>C</mi><msup><mi>P</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>,</mo><mspace width="2.0em"></mspace><mi>C</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>a</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mi>b</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>b</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>a</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">A=PCP^{-1},\qquad C=\begin{bmatrix}a&amp;-b\\b&amp;a\end{bmatrix}.</annotation></semantics></math></p>
+<p><strong>理解与回查。</strong> 复特征方向在实平面中表现为旋转与伸缩的二阶块。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> 的符号与 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mi>a</mi><mo>−</mo><mi>b</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">\lambda=a-bi</annotation></semantics></math> 的选择成对，改用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">a+bi</annotation></semantics></math> 时不能原样保留全部符号。教材 §5.5；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>P</mi><mo>=</mo><mi>P</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">AP=PC</annotation></semantics></math> 的核对见 §5.5 Exercise 30。</p>
+</section>
+</section>
+<section id="sec-5-9" class="level2">
+<h2 class="anchored" data-anchor-id="sec-5-9">§5.9 马尔可夫链 / Markov Chains</h2>
+<p>概率向量（probability vector）是分量非负、分量和为1的实列向量。这里随机矩阵（stochastic matrix）采用<strong>列和为1</strong>的约定：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">P\ge0</annotation></semantics></math>，每列是概率向量。马尔可夫链按 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐱</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>P</mi><msub><mi>𝐱</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">\mathbf x_{k+1}=P\mathbf x_k</annotation></semantics></math> 更新。稳态向量（steady-state vector）是满足 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>𝐪</mi><mo>=</mo><mi>𝐪</mi></mrow><annotation encoding="application/x-tex">P\mathbf q=\mathbf q</annotation></semantics></math> 的概率向量。</p>
+<section id="lay6-ch05-thm10" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch05-thm10">定理 10：随机矩阵具有特征值1 <span class="theorem-en">Stochastic Matrices</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第5章 定理10 / Chapter 5, Theorem 10；§5.9。教材原题名。</p>
+</div>
+<p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">P\in\mathbb R^{n\times n}</annotation></semantics></math> 是列随机矩阵，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> 是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> 的特征值。</p>
+<p><strong>理解与回查。</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>P</mi><mi>T</mi></msup><annotation encoding="application/x-tex">P^T</annotation></semantics></math> 作用于全1向量得到它自身，且转置保持特征多项式；教材 §5.9 给出证明。这一结论本身尚未保证稳态唯一或每个初始状态都收敛。</p>
+</section>
+<section id="lay6-ch05-thm11" class="level3">
+<h3 class="anchored" data-anchor-id="lay6-ch05-thm11">定理 11：正则随机矩阵的稳态与收敛 <span class="theorem-en">Convergence of Regular Markov Chains</span></h3>
+<div class="theorem-source">
+<p>来源 / Source：第5章 定理11 / Chapter 5, Theorem 11；§5.9。中英文名为描述性名称。</p>
+</div>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">P\in\mathbb R^{n\times n}</annotation></semantics></math> 是正则随机矩阵（regular stochastic matrix）：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> 列随机，且存在正整数 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math> 使 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>P</mi><mi>r</mi></msup><annotation encoding="application/x-tex">P^r</annotation></semantics></math> 的所有元素严格为正。则存在唯一的稳态概率向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐪</mi><annotation encoding="application/x-tex">\mathbf q</annotation></semantics></math>。对任意初始概率向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐱</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\mathbf x_0</annotation></semantics></math>，若</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐱</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>P</mi><msub><mi>𝐱</mi><mi>k</mi></msub><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi>…</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathbf x_{k+1}=P\mathbf x_k\quad(k=0,1,2,\ldots),</annotation></semantics></math></p>
+<p>就有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐱</mi><mi>k</mi></msub><mo>=</mo><msup><mi>P</mi><mi>k</mi></msup><msub><mi>𝐱</mi><mn>0</mn></msub><mo>→</mo><mi>𝐪</mi></mrow><annotation encoding="application/x-tex">\mathbf x_k=P^k\mathbf x_0\to\mathbf q</annotation></semantics></math>。</p>
+<p><strong>理解与回查。</strong> 唯一性包含概率归一化，不能说特征值1的任意特征向量都数值唯一。正则性是这条收敛保证的条件，不能把它删成“所有随机矩阵”。教材 §5.9 陈述并转介马尔可夫链教材证明，本条没有冒充完整收敛证明。</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../theorems/chapter-04.html" class="pagination-link" aria-label="第4章 向量空间 / Vector Spaces">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">第4章 向量空间 / Vector Spaces</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../theorems/chapter-06.html" class="pagination-link" aria-label="第6章 正交性与最小二乘 / Orthogonality">
+        <span class="nav-page-text"><span class="chapter-title">第6章 正交性与最小二乘 / Orthogonality</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script src="../assets/math-layout.js"></script>
+
+
+
+
+</body></html>

@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>齐次与非齐次方程组的解集 – 线性代数 · 学习与复习</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../topics/span-column-and-null-spaces.html" rel="next">
+<link href="../topics/vector-and-matrix-equations.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-59b0fd22973036f71b2f3b55428159e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+
+<body class="nav-sidebar floating chapter-one quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../topics/homogeneous-and-nonhomogeneous-equations.html"><span class="chapter-title">齐次与非齐次方程组的解集 / Solution Sets of Homogeneous and Nonhomogeneous Linear Systems</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">线性代数 · 学习与复习</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">前言 / Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章总览：从方程组到线性变换 / Chapter 1: From Linear Systems to Linear Transformations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/linear-systems.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组与矩阵表示 / Linear Systems and Matrix Representation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/gaussian-elimination.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">高斯消元法 / Gaussian Elimination</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/row-picture.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组的行图像 / The Row Picture of Linear Systems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/column-picture.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组的列图像 / The Column Picture of Linear Systems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/vector-and-matrix-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">向量方程与矩阵方程 / Vector and Matrix Equations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/homogeneous-and-nonhomogeneous-equations.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">齐次与非齐次方程组的解集 / Solution Sets of Homogeneous and Nonhomogeneous Linear Systems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/span-column-and-null-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">张成、列空间与零空间 / Span, Column Space and Null Space</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/05-independence.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性无关与表示的唯一性 / Linear Independence and Uniqueness of Representation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/06-transformations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性变换与矩阵表示 / Linear Transformations and Matrix Representations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/elementary-row-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">初等行变换对应的矩阵 / Matrices for Elementary Row Operations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章 · 知识与术语速查 / Chapter 1: Concepts and Terminology</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章综合复习：从一次消元读出整个结构 / Chapter 1 Review: Reading the Structure from Elimination</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章应用选读：力平衡与流量守恒 / Chapter 1 Applications: Force Balance and Flow Conservation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 矩阵代数总览</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">为什么矩阵这样相乘？</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/08-inverses.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">逆矩阵与初等矩阵</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/09-invertibility-blocks.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">可逆矩阵定理与分块运算</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">把消元保存为 LU 分解</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 知识与术语速查</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 综合复习</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章 · 行列式总览</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/11-determinants.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">行列式的定义与展开</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/12-determinants-properties.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">消元、性质与可逆性</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/13-cramer-adjugate.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">从解方程到古典伴随矩阵</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/14-determinants-geometry.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">几何意义与前三章贯通</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-other-definitions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">补充阅读 · 行列式的其他定义：排列、逆序数与基本性质</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章 · 知识与术语速查</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章与前三章 · 综合复习</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">中英术语表</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">定理汇编 / Theorem Reference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">汇编入口 / Reference contents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第1章 线性方程与变换 / Linear Equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第2章 矩阵代数 / Matrix Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第3章 行列式 / Determinants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-04.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第4章 向量空间 / Vector Spaces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-05.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第5章 特征值与特征向量 / Eigenvalues</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-06.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第6章 正交性与最小二乘 / Orthogonality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-07.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第7章 对称矩阵与SVD / Symmetric Matrices and SVD</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录 / Contents</h2>
+   
+  <ul>
+  <li><a href="#homogeneous" id="toc-homogeneous" class="nav-link active" data-scroll-target="#homogeneous">右端为零有什么特殊之处？ <span class="heading-en">What Is Special about a Zero Right-Hand Side?</span></a></li>
+  <li><a href="#main-example" id="toc-main-example" class="nav-link" data-scroll-target="#main-example">同一 A 的配对系统 <span class="heading-en">Paired Systems with the Same A</span></a>
+  <ul class="collapse">
+  <li><a href="#legacy-review" id="toc-legacy-review" class="nav-link" data-scroll-target="#legacy-review">动笔核对：固定项与方向 <span class="heading-en">Check the Fixed Term and the Directions</span></a></li>
+  </ul></li>
+  <li><a href="#free-variables" id="toc-free-variables" class="nav-link" data-scroll-target="#free-variables">自由变量与非零解 <span class="heading-en">Free Variables and Nonzero Solutions</span></a></li>
+  <li><a href="#particular-solution" id="toc-particular-solution" class="nav-link" data-scroll-target="#particular-solution">从一个特解得到全部解 <span class="heading-en">From One Particular Solution to All Solutions</span></a>
+  <ul class="collapse">
+  <li><a href="#all-solutions" id="toc-all-solutions" class="nav-link" data-scroll-target="#all-solutions">特解加齐次解，为什么恰好是全部解？ <span class="heading-en">Why Does This Describe Exactly All Solutions?</span></a></li>
+  </ul></li>
+  <li><a href="#choice" id="toc-choice" class="nav-link" data-scroll-target="#choice">两个解相减，换一个特解 <span class="heading-en">Subtracting Solutions and Choosing Another Particular Solution</span></a>
+  <ul class="collapse">
+  <li><a href="#change-particular" id="toc-change-particular" class="nav-link" data-scroll-target="#change-particular">换特解的计算 <span class="heading-en">Calculating with Another Particular Solution</span></a></li>
+  </ul></li>
+  <li><a href="#geometry" id="toc-geometry" class="nav-link" data-scroll-target="#geometry">低维参照：解直线的平移 <span class="heading-en">A Low-Dimensional View: Translating Solution Lines</span></a></li>
+  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">独立计算：两个自由参数 <span class="heading-en">Independent Calculation: Two Free Parameters</span></a></li>
+  <li><a href="#small-review" id="toc-small-review" class="nav-link" data-scroll-target="#small-review">三未知数的齐次计算 <span class="heading-en">Homogeneous Calculation with Three Unknowns</span></a></li>
+  <li><a href="#exit" id="toc-exit" class="nav-link" data-scroll-target="#exit">结束检查 <span class="heading-en">Check Your Understanding</span></a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">知识与术语回查 <span class="heading-en">Concepts and Terminology</span></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">齐次与非齐次方程组的解集</span></h1>
+<p class="subtitle lead">Solution Sets of Homogeneous and Nonhomogeneous Linear Systems</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>已知道怎样计算矩阵向量乘积，现在比较不同输入怎样产生同一输出。固定同一个矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>，只改变常数向量（下文也简称右端），会得到怎样的解集？先在已经求过的五未知数例中比较，再独立算一题。本页所有向量的分量及参数均取实数。由具体解的固定项与可变方向，逐步说明相容系统的全部解怎样组成。</p>
+<section id="homogeneous" class="level2">
+<h2 class="anchored" data-anchor-id="homogeneous">右端为零有什么特殊之处？ <span class="heading-en">What Is Special about a Zero Right-Hand Side?</span></h2>
+<p>齐次方程组（homogeneous linear system）是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf0</annotation></semantics></math>；当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>≠</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf b\ne\mathbf0</annotation></semantics></math> 时，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math> 叫非齐次方程组（nonhomogeneous linear system）。一般讨论“<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math>”时允许 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf b=\mathbf0</annotation></semantics></math>，这个通用写法本身不意味着非齐次。</p>
+<p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math>，输入 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐱</mi><annotation encoding="application/x-tex">\mathbf x</annotation></semantics></math> 在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math>，右端在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>m</mi></msup><annotation encoding="application/x-tex">\mathbb R^m</annotation></semantics></math>。齐次系统总有零解（zero solution）<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><mn>𝟎</mn><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf x=\mathbf0\in\mathbb R^n</annotation></semantics></math>，因为全零系数的列组合为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>𝟎</mn><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf0\in\mathbb R^m</annotation></semantics></math>；两个零向量的分量数未必相同。因此齐次系统总是相容的（consistent）。非零解（nonzero solution）指输入向量不全为零，并非每个分量都非零。</p>
+</section>
+<section id="main-example" class="level2">
+<h2 class="anchored" data-anchor-id="main-example">同一 A 的配对系统 <span class="heading-en">Paired Systems with the Same A</span></h2>
+<p>先分清固定项和可变方向。<a href="../topics/gaussian-elimination.html#main-example">高斯消元例</a>的系数矩阵与右端为 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>6</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>6</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>4</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>7</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>8</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>5</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>8</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>9</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>12</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>9</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>6</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>𝐛</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>5</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>9</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>15</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">A=\begin{bmatrix}0&amp;3&amp;-6&amp;6&amp;4\\3&amp;-7&amp;8&amp;-5&amp;8\\3&amp;-9&amp;12&amp;-9&amp;6\end{bmatrix},\qquad
+\mathbf b=\begin{bmatrix}-5\\9\\15\end{bmatrix}.</annotation></semantics></math> <a href="../topics/gaussian-elimination.html#main-example">完整向前、向后消元</a>给出以下结果： <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">[</mo><mtable class="augmented-table" data-rhs-columns="1" data-coefficient-columns="1"><mtr><mtd columnalign="center" style="text-align: center"><mi>A</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>𝐛</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>∼</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable class="augmented-table" data-rhs-columns="1" data-coefficient-columns="5"><mtr><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mi>−</mi><mn>2</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>3</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mi>−</mi><mn>24</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mi>−</mi><mn>2</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>2</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mi>−</mi><mn>7</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>4</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">\left[\begin{array}{c|c}A&amp;\mathbf b\end{array}\right]\sim
+\left[\begin{array}{rrrrr|r}1&amp;0&amp;-2&amp;3&amp;0&amp;-24\\0&amp;1&amp;-2&amp;2&amp;0&amp;-7\\0&amp;0&amp;0&amp;0&amp;1&amp;4\end{array}\right].</annotation></semantics></math> 将原右端改成零，沿用同一串行操作： <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">[</mo><mtable class="augmented-table" data-rhs-columns="1" data-coefficient-columns="1"><mtr><mtd columnalign="center" style="text-align: center"><mi>A</mi></mtd><mtd columnalign="center" style="text-align: center"><mn>𝟎</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>∼</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable class="augmented-table" data-rhs-columns="1" data-coefficient-columns="5"><mtr><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mi>−</mi><mn>2</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>3</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mi>−</mi><mn>2</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>2</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">\left[\begin{array}{c|c}A&amp;\mathbf0\end{array}\right]\sim
+\left[\begin{array}{rrrrr|r}1&amp;0&amp;-2&amp;3&amp;0&amp;0\\0&amp;1&amp;-2&amp;2&amp;0&amp;0\\0&amp;0&amp;0&amp;0&amp;1&amp;0\end{array}\right].</annotation></semantics></math> 系数部分相同，零右端在每步中仍为零，主元列都是1、2、5，自由变量都是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>3</mn></msub><mo>,</mo><msub><mi>x</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">x_3,x_4</annotation></semantics></math>。这不是对原方程做了一次等价行变换：<strong>固定 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 改右端是在比较不同系统</strong>。</p>
+<p>取 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>3</mn></msub><mo>=</mo><mi>s</mi><mo>,</mo><msub><mi>x</mi><mn>4</mn></msub><mo>=</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">x_3=s,x_4=t</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>,</mo><mi>t</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">s,t\in\mathbb R</annotation></semantics></math>。非齐次系统给 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>−</mi><mn>24</mn><mo>+</mo><mn>2</mn><mi>s</mi><mo>−</mo><mn>3</mn><mi>t</mi><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>x</mi><mn>2</mn></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>−</mi><mn>7</mn><mo>+</mo><mn>2</mn><mi>s</mi><mo>−</mo><mn>2</mn><mi>t</mi><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>x</mi><mn>3</mn></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>s</mi><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>x</mi><mn>4</mn></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>t</mi><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>x</mi><mn>5</mn></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>4</mn><mo>;</mo></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\left\{\begin{aligned}
+x_1&amp;=-24+2s-3t,\\
+x_2&amp;=-7+2s-2t,\\
+x_3&amp;=s,\\
+x_4&amp;=t,\\
+x_5&amp;=4;
+\end{aligned}\right.</annotation></semantics></math> 齐次系统给 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>2</mn><mi>s</mi><mo>−</mo><mn>3</mn><mi>t</mi><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>x</mi><mn>2</mn></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>2</mn><mi>s</mi><mo>−</mo><mn>2</mn><mi>t</mi><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>x</mi><mn>3</mn></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>s</mi><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>x</mi><mn>4</mn></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>t</mi><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>x</mi><mn>5</mn></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>0</mn><mi>.</mi></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\left\{\begin{aligned}
+x_1&amp;=2s-3t,\\
+x_2&amp;=2s-2t,\\
+x_3&amp;=s,\\
+x_4&amp;=t,\\
+x_5&amp;=0.
+\end{aligned}\right.</annotation></semantics></math></p>
+<p>定义三个五分量列向量 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐱</mi><mi>p</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>24</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>7</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>4</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>𝐮</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>𝐯</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>3</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf x_p=\begin{bmatrix}-24\\-7\\0\\0\\4\end{bmatrix},\qquad
+\mathbf u=\begin{bmatrix}2\\2\\1\\0\\0\end{bmatrix},\qquad
+\mathbf v=\begin{bmatrix}-3\\-2\\0\\1\\0\end{bmatrix}.</annotation></semantics></math> 两套解的参数向量形式（parametric vector form）分别为 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mi>s</mi><mi>𝐮</mi><mo>+</mo><mi>t</mi><mi>𝐯</mi><mspace width="1.0em"></mspace><mtext mathvariant="normal">（非齐次）</mtext><mo>,</mo><mspace width="2.0em"></mspace><mi>𝐱</mi><mo>=</mo><mi>s</mi><mi>𝐮</mi><mo>+</mo><mi>t</mi><mi>𝐯</mi><mspace width="1.0em"></mspace><mtext mathvariant="normal">（齐次）</mtext><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf x=\mathbf x_p+s\mathbf u+t\mathbf v\quad\text{（非齐次）},\qquad
+\mathbf x=s\mathbf u+t\mathbf v\quad\text{（齐次）}.</annotation></semantics></math> 固定向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐱</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\mathbf x_p</annotation></semantics></math> 已是一个解，称为特解（particular solution）；后两项表示可变化的方向。每个解都取 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><msub><mi>x</mi><mn>3</mn></msub><mo>,</mo><mi>t</mi><mo>=</mo><msub><mi>x</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">s=x_3,t=x_4</annotation></semantics></math>，所以以上形式不漏解；任意实参数代回简化系统成立，可逆消元又保证它满足原系统。</p>
+<section id="legacy-review" class="level3">
+<h3 class="anchored" data-anchor-id="legacy-review">动笔核对：固定项与方向 <span class="heading-en">Check the Fixed Term and the Directions</span></h3>
+<p>直接用本页原矩阵检查 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>𝐱</mi><mi>p</mi></msub><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x_p=\mathbf b</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐮</mi><mo>=</mo><mi>A</mi><mi>𝐯</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">A\mathbf u=A\mathbf v=\mathbf0</annotation></semantics></math>，并说明删去固定项会怎样。</p>
+<details class="review-answer"><summary>计算答案与反馈</summary>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>𝐱</mi><mi>p</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>21</mn><mo>+</mo><mn>16</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>72</mn><mo>+</mo><mn>49</mn><mo>+</mo><mn>32</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>72</mn><mo>+</mo><mn>63</mn><mo>+</mo><mn>24</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>5</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>9</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>15</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>;</mo></mrow><annotation encoding="application/x-tex">A\mathbf x_p=\begin{bmatrix}-21+16\\-72+49+32\\-72+63+24\end{bmatrix}
+=\begin{bmatrix}-5\\9\\15\end{bmatrix};</annotation></semantics></math> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐮</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>6</mn><mo>−</mo><mn>6</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>6</mn><mo>−</mo><mn>14</mn><mo>+</mo><mn>8</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>6</mn><mo>−</mo><mn>18</mn><mo>+</mo><mn>12</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mn>𝟎</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>A</mi><mi>𝐯</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>6</mn><mo>+</mo><mn>6</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>9</mn><mo>+</mo><mn>14</mn><mo>−</mo><mn>5</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>9</mn><mo>+</mo><mn>18</mn><mo>−</mo><mn>9</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mn>𝟎</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">A\mathbf u=\begin{bmatrix}6-6\\6-14+8\\6-18+12\end{bmatrix}=\mathbf0,\qquad
+A\mathbf v=\begin{bmatrix}-6+6\\-9+14-5\\-9+18-9\end{bmatrix}=\mathbf0.</annotation></semantics></math> 任意 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>,</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">s,t</annotation></semantics></math> 的方向组合输出为零；删掉 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐱</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\mathbf x_p</annotation></semantics></math> 后不能得到非零的原右端。取 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s=t=0</annotation></semantics></math> 得非齐次的特解、齐次的零解。输入在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>5</mn></msup><annotation encoding="application/x-tex">\mathbb R^5</annotation></semantics></math>，输出在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb R^3</annotation></semantics></math>。</p>
+</details>
+</section>
+</section>
+<section id="free-variables" class="level2">
+<h2 class="anchored" data-anchor-id="free-variables">自由变量与非零解 <span class="heading-en">Free Variables and Nonzero Solutions</span></h2>
+<p>齐次系统有非零解，当且仅当消元后有自由变量。若没有自由变量，逐行回代只能得到全零；若有，令一个自由变量为1、其余自由变量为0再回代，所得解至少有一个分量非零。</p>
+<p>对于一般 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math>，须<strong>先判相容</strong>，再讨论自由变量。相容且无自由变量时唯一；相容且有自由变量时有无穷多解；不相容时即使系数部分有自由变量，也没有解。五未知数例相容，不能据此推断所有矩阵和右端都相容。</p>
+</section>
+<section id="particular-solution" class="level2">
+<h2 class="anchored" data-anchor-id="particular-solution">从一个特解得到全部解 <span class="heading-en">From One Particular Solution to All Solutions</span></h2>
+<div id="lay6-ch01-thm06" class="course-theorem">
+<p><strong>教材§1.5，定理6：非齐次解集是齐次解集的平移 / A Particular Solution Plus Homogeneous Solutions</strong></p>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf b\in\mathbb R^m</annotation></semantics></math>，且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math> 相容。固定任意一个特解（particular solution）<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐩</mi><annotation encoding="application/x-tex">\mathbf p</annotation></semantics></math>，即 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐩</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf p=\mathbf b</annotation></semantics></math>。则全部解恰为</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi>𝐩</mi><mo>+</mo><msub><mi>𝐯</mi><mi>h</mi></msub><mo>:</mo><mspace width="0.222em"></mspace><msub><mi>𝐯</mi><mi>h</mi></msub><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>,</mo><mspace width="0.222em"></mspace><mi>A</mi><msub><mi>𝐯</mi><mi>h</mi></msub><mo>=</mo><mn>𝟎</mn><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\{\mathbf p+\mathbf v_h:\ \mathbf v_h\in\mathbb R^n,\ A\mathbf v_h=\mathbf0\}.
+</annotation></semantics></math></p>
+<p>也就是说，每个齐次解都能加到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐩</mi><annotation encoding="application/x-tex">\mathbf p</annotation></semantics></math> 上得到原方程的解，原方程的任意解减去 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐩</mi><annotation encoding="application/x-tex">\mathbf p</annotation></semantics></math> 又必是齐次解。</p>
+<p><a href="../theorems/chapter-01.html#lay6-ch01-thm06">定理汇编 / Theorem Reference</a></p>
+</div>
+<p>下文将定理中的特解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐩</mi><annotation encoding="application/x-tex">\mathbf p</annotation></semantics></math> 记作 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐱</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\mathbf x_p</annotation></semantics></math>，齐次解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐯</mi><mi>h</mi></msub><annotation encoding="application/x-tex">\mathbf v_h</annotation></semantics></math> 记作 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐡</mi><annotation encoding="application/x-tex">\mathbf h</annotation></semantics></math>。下标 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> 表示选定，并不表示唯一或最优。</p>
+<p>前面的<a href="../topics/vector-and-matrix-equations.html#linearity">列组合定义与线性性</a>允许我们把乘法对加减分配。下面两个方向各自解决不同问题，缺一不可。</p>
+<section id="all-solutions" class="level3">
+<h3 class="anchored" data-anchor-id="all-solutions">特解加齐次解，为什么恰好是全部解？ <span class="heading-en">Why Does This Describe Exactly All Solutions?</span></h3>
+<p><strong>正向：所构造的向量确实是解。</strong> 对任意齐次解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐡</mi><annotation encoding="application/x-tex">\mathbf h</annotation></semantics></math>， <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mi>𝐡</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>A</mi><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mi>A</mi><mi>𝐡</mi><mo>=</mo><mi>𝐛</mi><mo>+</mo><mn>𝟎</mn><mo>=</mo><mi>𝐛</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">A(\mathbf x_p+\mathbf h)=A\mathbf x_p+A\mathbf h=\mathbf b+\mathbf0=\mathbf b.</annotation></semantics></math> 所以加上任何齐次解都不会改变右端。因此，构造出的每个向量都是原方程组的解。</p>
+<p><strong>反向：每一个解都被包含。</strong> 若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐱</mi><annotation encoding="application/x-tex">\mathbf x</annotation></semantics></math> 是原系统的任意解， <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo>−</mo><msub><mi>𝐱</mi><mi>p</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>A</mi><mi>𝐱</mi><mo>−</mo><mi>A</mi><msub><mi>𝐱</mi><mi>p</mi></msub><mo>=</mo><mi>𝐛</mi><mo>−</mo><mi>𝐛</mi><mo>=</mo><mn>𝟎</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">A(\mathbf x-\mathbf x_p)=A\mathbf x-A\mathbf x_p=\mathbf b-\mathbf b=\mathbf0.</annotation></semantics></math> 于是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐡</mi><mo>=</mo><mi>𝐱</mi><mo>−</mo><msub><mi>𝐱</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\mathbf h=\mathbf x-\mathbf x_p</annotation></semantics></math> 是齐次解，而且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mi>𝐡</mi></mrow><annotation encoding="application/x-tex">\mathbf x=\mathbf x_p+\mathbf h</annotation></semantics></math>。反过来，原方程组的每个解都能写成这种形式。</p>
+<p>结论是：<strong>非空解集等于一个特解加全部齐次解</strong>。 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo stretchy="false" form="prefix">{</mo><mi>𝐱</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>:</mo><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi><mo stretchy="false" form="postfix">}</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mspace width="1.0em"></mspace><mo>=</mo><mo stretchy="false" form="prefix">{</mo><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><msub><mi>𝐱</mi><mi>h</mi></msub><mo>:</mo><mi>A</mi><msub><mi>𝐱</mi><mi>h</mi></msub><mo>=</mo><mn>𝟎</mn><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+&amp;\{\mathbf x\in\mathbb R^n:A\mathbf x=\mathbf b\}\\
+&amp;\quad=\{\mathbf x_p+\mathbf x_h:A\mathbf x_h=\mathbf0\}.
+\end{aligned}</annotation></semantics></math> 这里 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐱</mi><mi>h</mi></msub><annotation encoding="application/x-tex">\mathbf x_h</annotation></semantics></math> 与上文 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐡</mi><annotation encoding="application/x-tex">\mathbf h</annotation></semantics></math> 都表示任意齐次解，不是只挑某一个方向。等式两边是集合；其中的向量都在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math>。结论对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf b=\mathbf0</annotation></semantics></math> 也成立；说“非齐次”时则要求 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>≠</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf b\ne\mathbf0</annotation></semantics></math>。</p>
+<p><strong>相容前提不可删。</strong> 若原系统不相容，就不存在特解，上述表示也不适用。<a href="#practice">右端由6改7的例子</a>正是这种情况。</p>
+</section>
+</section>
+<section id="choice" class="level2">
+<h2 class="anchored" data-anchor-id="choice">两个解相减，换一个特解 <span class="heading-en">Subtracting Solutions and Choosing Another Particular Solution</span></h2>
+<p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐱</mi><mn>1</mn></msub><mo>,</mo><msub><mi>𝐱</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\mathbf x_1,\mathbf x_2</annotation></semantics></math> 对应同一右端，则 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐱</mi><mn>2</mn></msub><mo>−</mo><msub><mi>𝐱</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>𝐛</mi><mo>−</mo><mi>𝐛</mi><mo>=</mo><mn>𝟎</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">A(\mathbf x_2-\mathbf x_1)=\mathbf b-\mathbf b=\mathbf0.</annotation></semantics></math> 所以两个解之差总是齐次解；其和在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>≠</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf b\ne\mathbf0</annotation></semantics></math> 时不是同一系统的解，因为输出为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">2\mathbf b</annotation></semantics></math>。</p>
+<p>若改选特解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>𝐱</mi><mi>p</mi><mo>′</mo></msubsup><annotation encoding="application/x-tex">\mathbf x'_p</annotation></semantics></math>，其与原特解之差 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐤</mi><mo>=</mo><msubsup><mi>𝐱</mi><mi>p</mi><mo>′</mo></msubsup><mo>−</mo><msub><mi>𝐱</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\mathbf k=\mathbf x'_p-\mathbf x_p</annotation></semantics></math> 齐次。对任意齐次解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐡</mi><annotation encoding="application/x-tex">\mathbf h</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐤</mi><mo>+</mo><mi>𝐡</mi></mrow><annotation encoding="application/x-tex">\mathbf k+\mathbf h</annotation></semantics></math> 仍齐次，所以 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>𝐱</mi><mi>p</mi><mo>′</mo></msubsup><mo>+</mo><mi>𝐡</mi><mo>=</mo><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>𝐤</mi><mo>+</mo><mi>𝐡</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf x'_p+\mathbf h=\mathbf x_p+(\mathbf k+\mathbf h)</annotation></semantics></math>。反过来减去 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐤</mi><annotation encoding="application/x-tex">\mathbf k</annotation></semantics></math> 也得到齐次解。因此更换特解只改变解集的参数表示，<strong>不改变整个解集，也不改变坐标原点</strong>。</p>
+<p><strong>相容时，唯一解当且仅当齐次系统只有零解。</strong> 若齐次系统只有零解，任意两个解的差只能是零，所以两解相同；存在性来自相容。反过来，若已有唯一解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐱</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\mathbf x_p</annotation></semantics></math>，对任何齐次解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐡</mi><annotation encoding="application/x-tex">\mathbf h</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mi>𝐡</mi></mrow><annotation encoding="application/x-tex">\mathbf x_p+\mathbf h</annotation></semantics></math> 仍是解，只能等于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐱</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\mathbf x_p</annotation></semantics></math>，所以 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐡</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf h=\mathbf0</annotation></semantics></math>。若右端不可达，则仍然无解，不能省略相容前提。</p>
+<section id="change-particular" class="level3">
+<h3 class="anchored" data-anchor-id="change-particular">换特解的计算 <span class="heading-en">Calculating with Another Particular Solution</span></h3>
+<p><strong>动笔。</strong> 改选 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>𝐱</mi><mi>p</mi><mo>′</mo></msubsup><mo>=</mo><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mi>𝐮</mi></mrow><annotation encoding="application/x-tex">\mathbf x'_p=\mathbf x_p+\mathbf u</annotation></semantics></math>。写出这个特解，并把 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>𝐱</mi><mi>p</mi><mo>′</mo></msubsup><mo>+</mo><msup><mi>s</mi><mo>′</mo></msup><mi>𝐮</mi><mo>+</mo><msup><mi>t</mi><mo>′</mo></msup><mi>𝐯</mi></mrow><annotation encoding="application/x-tex">\mathbf x'_p+s'\mathbf u+t'\mathbf v</annotation></semantics></math> 改写为原参数式。</p>
+<details class="review-answer"><summary>答案与反馈</summary>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>𝐱</mi><mi>p</mi><mo>′</mo></msubsup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>22</mn><mo>,</mo><mi>−</mi><mn>5</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>4</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf x'_p=(-22,-5,1,0,4)^{\mathsf T}</annotation></semantics></math>，其输出仍为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐛</mi><annotation encoding="application/x-tex">\mathbf b</annotation></semantics></math>。新式等于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><msup><mi>s</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo><mi>𝐮</mi><mo>+</mo><msup><mi>t</mi><mo>′</mo></msup><mi>𝐯</mi></mrow><annotation encoding="application/x-tex">\mathbf x_p+(1+s')\mathbf u+t'\mathbf v</annotation></semantics></math>；令 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mn>1</mn><mo>+</mo><msup><mi>s</mi><mo>′</mo></msup><mo>,</mo><mi>t</mi><mo>=</mo><msup><mi>t</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">s=1+s',t=t'</annotation></semantics></math>。新旧参数均遍历全部实数，故集合相同。</p>
+</details>
+</section>
+</section>
+<section id="geometry" class="level2">
+<h2 class="anchored" data-anchor-id="geometry">低维参照：解直线的平移 <span class="heading-en">A Low-Dimensional View: Translating Solution Lines</span></h2>
+<p>为看清平移（translation），本节单独考察较小的矩阵 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>𝐛</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>5</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">B=\begin{bmatrix}1&amp;1&amp;1\\2&amp;3&amp;1\end{bmatrix},\qquad\mathbf b=\begin{bmatrix}2\\5\end{bmatrix}.</annotation></semantics></math> 这里的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> 有三个未知数，与上面的五未知数矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 区分；<a href="#small-review">小例消元</a>给出 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐱</mi><mi>h</mi></msub><mo>=</mo><mi>t</mi><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>𝐱</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mi>t</mi><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="1.0em"></mspace><mi>t</mi><mo>∈</mo><mi>ℝ</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf x_h=t\begin{bmatrix}-2\\1\\1\end{bmatrix},\qquad
+\mathbf x=\begin{bmatrix}1\\1\\0\end{bmatrix}+t\begin{bmatrix}-2\\1\\1\end{bmatrix},\quad t\in\mathbb R.</annotation></semantics></math> 记 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐱</mi><mi>p</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf x_p=(1,1,0)^{\mathsf T}</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐮</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf u=(-2,1,1)^{\mathsf T}</annotation></semantics></math>。直接计算得 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><msub><mi>𝐱</mi><mi>p</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>5</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mi>𝐛</mi><mo>,</mo><mspace width="2.0em"></mspace><mi>B</mi><mi>𝐮</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">B\mathbf x_p=\begin{bmatrix}2\\5\end{bmatrix}=\mathbf b,\qquad
+B\mathbf u=\begin{bmatrix}0\\0\end{bmatrix}.</annotation></semantics></math> 因此对任意实数 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mi>𝐮</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">B(t\mathbf u)=\mathbf0</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mi>t</mi><mi>𝐮</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">B(\mathbf x_p+t\mathbf u)=\mathbf b</annotation></semantics></math>。由上述消元及定理6， <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>0</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>t</mi><mi>𝐮</mi><mo>:</mo><mi>t</mi><mo>∈</mo><mi>ℝ</mi><mo stretchy="false" form="postfix">}</mo><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>S</mi><mi>b</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">{</mo><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mi>t</mi><mi>𝐮</mi><mo>:</mo><mi>t</mi><mo>∈</mo><mi>ℝ</mi><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">S_0=\{t\mathbf u:t\in\mathbb R\},\qquad
+S_b=\{\mathbf x_p+t\mathbf u:t\in\mathbb R\}.</annotation></semantics></math> 这两条解直线都在<strong>输入空间 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb R^3</annotation></semantics></math></strong>，方向相同，所以平行。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mn>0</mn></msub><annotation encoding="application/x-tex">S_0</annotation></semantics></math> 过原点；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>b</mi></msub><annotation encoding="application/x-tex">S_b</annotation></semantics></math> 不过原点，因为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mn>𝟎</mn><mo>=</mo><mn>𝟎</mn><mo>≠</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">B\mathbf0=\mathbf0\ne\mathbf b</annotation></semantics></math>。坐标轴和原点始终固定；这张低维示意图不是五未知数主例在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>5</mn></msup><annotation encoding="application/x-tex">\mathbb R^5</annotation></semantics></math> 中的完整图像。</p>
+<p>沿用<a href="../topics/column-picture.html#vector-geometry">列图像的点与位置箭头约定</a>：解直线表示解点集，选定解的位置箭头从固定原点 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>O</mi><annotation encoding="application/x-tex">O</annotation></semantics></math> 出发。这里新增的是<strong>平移的位移箭头</strong>：灰虚箭头从 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>𝐮</mi></mrow><annotation encoding="application/x-tex">t\mathbf u</annotation></semantics></math> 指向 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mi>t</mi><mi>𝐮</mi></mrow><annotation encoding="application/x-tex">\mathbf x_p+t\mathbf u</annotation></semantics></math>，表示加上 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐱</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\mathbf x_p</annotation></semantics></math>，不是表示解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐱</mi><annotation encoding="application/x-tex">\mathbf x</annotation></semantics></math> 的位置箭头。因此非齐次解点集不过原点，与解向量的箭头从原点出发并不矛盾；箭头沿途的点不因此成为解。</p>
+<p>当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t=0</annotation></semantics></math> 时，齐次解为零向量，图中只标原点，不画有任意方向的零箭头；非齐次解点与特解重合，此时位移与橙色位置箭头重合，图中省去灰色辅助箭头。图中有限线段只代表无限直线的一部分；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math> 的数学范围是全体实数。输入三维空间采用二维投影，不能从图中长度或夹角作结论。右侧输出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb R^2</annotation></semantics></math> 单列，映射箭头只表示对应，不能和输入空间的位置箭头混为一谈。</p>
+<p><strong>平移不是此处的线性变换。</strong> 当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐱</mi><mi>p</mi></msub><mo>≠</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf x_p\ne\mathbf0</annotation></semantics></math> 时，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐡</mi><mo>↦</mo><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mi>𝐡</mi></mrow><annotation encoding="application/x-tex">\mathbf h\mapsto\mathbf x_p+\mathbf h</annotation></semantics></math> 将零送到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐱</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\mathbf x_p</annotation></semantics></math>，故不线性；后面的<a href="../lessons/06-transformations.html#linearity">线性变换主题</a>会进一步解释。它与行消元对所有列及右端施加的规则不同。</p>
+<p><strong>动笔。</strong> 求 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">t=0,1</annotation></semantics></math> 时的两个非齐次解，计算它们的差并验证齐次。再写出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">t=-1</annotation></semantics></math> 时的解。</p>
+<details class="review-answer"><summary>答案与反馈（answer and feedback）</summary>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">t=0,1</annotation></semantics></math> 给 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,1,0)^{\mathsf T}</annotation></semantics></math> 与 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(-1,2,1)^{\mathsf T}</annotation></semantics></math>，后者减前者为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(-2,1,1)^{\mathsf T}</annotation></semantics></math>，输出为零。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">t=-1</annotation></semantics></math> 给 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi>−</mi><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(3,0,-1)^{\mathsf T}</annotation></semantics></math>，代回得 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>5</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(2,5)^{\mathsf T}</annotation></semantics></math>。三个点只是解集中的三个成员，参数 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math> 遍历所有实数才给出整条解直线。</p>
+</details>
+<div class="figure-scroll" tabindex="0" aria-label="输入解直线与输出目标的对应，可横向滚动">
+<div id="fig-solutions" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-solutions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/chapter-01/solution-lines-b.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-solutions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 / Figure&nbsp;1: 蓝、橙直线分别表示齐次与非齐次解点集。t=0.5 时，两支位置箭头从固定 O 出发，灰虚箭头表示加特解的位移；独立的右面板显示两个输出。
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="solution-label-scope" data-matrix-label="B">
+<div class="solution-explorer">
+<p>
+<strong>沿解直线移动 / Move Along the Solution Lines.</strong> 拖动 t 或用按钮比较解点；位置箭头从固定 O 出发，灰虚箭头表示加上 xₚ 的位移。t=0 时重合的灰箭头省去。<a href="../topics/homogeneous-and-nonhomogeneous-equations.html#geometry">图示约定 / Diagram conventions</a>。
+</p>
+<div class="sync-controls">
+<label>参数 / Parameter t <input aria-label="解直线参数 / Solution parameter t" type="range" min="-1" max="1" step="0.05" value="0.5"></label>
+<div class="sync-buttons">
+<button type="button" data-t="-1">
+负参数 / Negative t=−1
+</button>
+<button type="button" data-t="0">
+特解 / Particular t=0
+</button>
+<button type="button" data-t="1">
+另一解 / Another t=1
+</button>
+<button type="button" data-t="0.5">
+重置 / Reset
+</button>
+</div>
+</div>
+<div class="solution-picture figure-scroll" tabindex="0" aria-label="解点与位置向量，可横向滚动 / Solution points and position vectors, horizontally scrollable">
+
+</div>
+<p>
+左侧为输入 R³ 的投影，右侧为输出 R²。滑块仅取样 −1≤t≤1，完整解的参数仍取遍全体实数。
+</p>
+<output aria-live="polite">
+</output>
+<noscript>
+交互需要 JavaScript；可读<a href="../topics/homogeneous-and-nonhomogeneous-equations.html#geometry">解集平移的静态图及参数公式 / Static solution-set diagram</a>。
+</noscript>
+</div>
+<script src="../assets/chapter-01/solution-model.js"></script>
+<script src="../assets/chapter-01/solution-explorer.js"></script>
+</div>
+<p>要区分三个对象：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐱</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\mathbf{x}_p</annotation></semantics></math> 是<strong>一个解</strong>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mi>t</mi><mi>𝐮</mi></mrow><annotation encoding="application/x-tex">\mathbf{x}_p+t\mathbf{u}</annotation></semantics></math> 是随参数变化的<strong>表达式</strong>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mi>t</mi><mi>𝐮</mi><mo>:</mo><mi>t</mi><mo>∈</mo><mi>ℝ</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{\mathbf{x}_p+t\mathbf{u}:t\in\mathbb{R}\}</annotation></semantics></math> 才是<strong>整个解集</strong>。这一点也解释了为何换特解只改变表示。</p>
+</section>
+<section id="practice" class="level2">
+<h2 class="anchored" data-anchor-id="practice">独立计算：两个自由参数 <span class="heading-en">Independent Calculation: Two Free Parameters</span></h2>
+<p>求下面系统及同一系数矩阵的齐次系统的全部解，写出消元过程，标出一个特解和两个方向，并回代： <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>−</mo><mi>z</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>3</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>2</mn><mi>x</mi><mo>+</mo><mn>4</mn><mi>y</mi><mo>−</mo><mn>2</mn><mi>z</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>6</mn><mi>.</mi></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\left\{\begin{aligned}
+x+2y-z&amp;=3,\\
+2x+4y-2z&amp;=6.
+\end{aligned}\right.</annotation></semantics></math> 再判断仅把第二式右端6改成7会怎样。</p>
+<details class="review-answer"><summary>提示</summary>
+<p>用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>←</mo><msub><mi>R</mi><mn>2</mn></msub><mo>−</mo><mn>2</mn><msub><mi>R</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">R_2\leftarrow R_2-2R_1</annotation></semantics></math>；自由变量可取 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>s</mi><mo>,</mo><mi>z</mi><mo>=</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">y=s,z=t</annotation></semantics></math>。齐次解的所有输出必须为零。</p>
+</details>
+<details class="review-answer"><summary>完整答案与反馈</summary>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">[</mo><mtable class="augmented-table" data-rhs-columns="1" data-coefficient-columns="3"><mtr><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>2</mn></mtd><mtd columnalign="right" style="text-align: right"><mi>−</mi><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>3</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mn>2</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>4</mn></mtd><mtd columnalign="right" style="text-align: right"><mi>−</mi><mn>2</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>6</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mover><mo>→</mo><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>←</mo><msub><mi>R</mi><mn>2</mn></msub><mo>−</mo><mn>2</mn><msub><mi>R</mi><mn>1</mn></msub></mrow></mover><mrow><mo stretchy="true" form="prefix">[</mo><mtable class="augmented-table" data-rhs-columns="1" data-coefficient-columns="3"><mtr><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>2</mn></mtd><mtd columnalign="right" style="text-align: right"><mi>−</mi><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>3</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">\left[\begin{array}{rrr|r}1&amp;2&amp;-1&amp;3\\2&amp;4&amp;-2&amp;6\end{array}\right]
+\xrightarrow{R_2\leftarrow R_2-2R_1}
+\left[\begin{array}{rrr|r}1&amp;2&amp;-1&amp;3\\0&amp;0&amp;0&amp;0\end{array}\right].</annotation></semantics></math> 令 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>s</mi><mo>,</mo><mi>z</mi><mo>=</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">y=s,z=t</annotation></semantics></math>，非齐次全部解为 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mi>s</mi><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mi>t</mi><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>s</mi><mo>,</mo><mi>t</mi><mo>∈</mo><mi>ℝ</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf x=\begin{bmatrix}3\\0\\0\end{bmatrix}
++s\begin{bmatrix}-2\\1\\0\end{bmatrix}+t\begin{bmatrix}1\\0\\1\end{bmatrix},\qquad s,t\in\mathbb R.</annotation></semantics></math> 齐次全部解是后两项之和，零解取 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s=t=0</annotation></semantics></math>，非零解例如 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(-2,1,0)^{\mathsf T}</annotation></semantics></math>。特解输出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>6</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(3,6)^{\mathsf T}</annotation></semantics></math>；两个方向分别给 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn><mo>+</mo><mn>2</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">-2+2=0</annotation></semantics></math> 和 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mn>1</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">1-1=0</annotation></semantics></math>，第二式均为两倍。 任意参数的第一式是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>−</mo><mn>2</mn><mi>s</mi><mo>+</mo><mi>t</mi><mo>+</mo><mn>2</mn><mi>s</mi><mo>−</mo><mi>t</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3-2s+t+2s-t=3</annotation></semantics></math>；任意解取 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>y</mi><mo>,</mo><mi>t</mi><mo>=</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">s=y,t=z</annotation></semantics></math>，故没有漏解。解都在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb R^3</annotation></semantics></math>，不是输出所在的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb R^2</annotation></semantics></math>。</p>
+<p>把右端6改为7时，同一步操作给第二行 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable class="augmented-table" data-rhs-columns="1" data-coefficient-columns="3"><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}{ccc|c}0&amp;0&amp;0&amp;1\end{array}\right]</annotation></semantics></math>，即 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0=1</annotation></semantics></math>，系统不相容。同一个系数矩阵的齐次系统仍有解。</p>
+</details>
+</section>
+<section id="small-review" class="level2">
+<h2 class="anchored" data-anchor-id="small-review">三未知数的齐次计算 <span class="heading-en">Homogeneous Calculation with Three Unknowns</span></h2>
+<p>对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">B=\begin{bmatrix}1&amp;1&amp;1\\2&amp;3&amp;1\end{bmatrix}</annotation></semantics></math> 独立求 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mi>𝐱</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">B\mathbf x=\mathbf0</annotation></semantics></math>，指出自由变量、给一个非零解。非齐次 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mi>𝐱</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>5</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">B\mathbf x=(2,5)^{\mathsf T}</annotation></semantics></math> 的参数式见<a href="../topics/vector-and-matrix-equations.html#practice">前一主题</a>。</p>
+<details class="review-answer"><summary>完整齐次计算</summary>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">[</mo><mtable class="augmented-table" data-rhs-columns="1" data-coefficient-columns="3"><mtr><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mn>2</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>3</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mover><mo>→</mo><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>←</mo><msub><mi>R</mi><mn>2</mn></msub><mo>−</mo><mn>2</mn><msub><mi>R</mi><mn>1</mn></msub></mrow></mover><mrow><mo stretchy="true" form="prefix">[</mo><mtable class="augmented-table" data-rhs-columns="1" data-coefficient-columns="3"><mtr><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mi>−</mi><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mover><mo>→</mo><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>←</mo><msub><mi>R</mi><mn>1</mn></msub><mo>−</mo><msub><mi>R</mi><mn>2</mn></msub></mrow></mover><mrow><mo stretchy="true" form="prefix">[</mo><mtable class="augmented-table" data-rhs-columns="1" data-coefficient-columns="3"><mtr><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>2</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mi>−</mi><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">\left[\begin{array}{rrr|r}1&amp;1&amp;1&amp;0\\2&amp;3&amp;1&amp;0\end{array}\right]
+\xrightarrow{R_2\leftarrow R_2-2R_1}
+\left[\begin{array}{rrr|r}1&amp;1&amp;1&amp;0\\0&amp;1&amp;-1&amp;0\end{array}\right]
+\xrightarrow{R_1\leftarrow R_1-R_2}
+\left[\begin{array}{rrr|r}1&amp;0&amp;2&amp;0\\0&amp;1&amp;-1&amp;0\end{array}\right].</annotation></semantics></math> 自由变量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">z=t</annotation></semantics></math>，故齐次解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">t(-2,1,1)^{\mathsf T}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">t\in\mathbb R</annotation></semantics></math>；取 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">t=1</annotation></semantics></math> 得非零解。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">-2+1+1=0</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>4</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">-4+3+1=0</annotation></semantics></math>。非齐次解比它多固定项 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,1,0)^{\mathsf T}</annotation></semantics></math>。</p>
+</details>
+</section>
+<section id="exit" class="level2">
+<h2 class="anchored" data-anchor-id="exit">结束检查 <span class="heading-en">Check Your Understanding</span></h2>
+<p>解释以下三件事：两个方向各保证什么；不相容时为什么不能写成特解加齐次解；两个非齐次解的差与和有何区别。</p>
+<details class="review-answer"><summary>检查答案</summary>
+<p>正向保证构造有效，反向保证穷尽全部解。不相容时无法选取特解。两个同右端解的差输出为零；其和输出为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">2\mathbf b</annotation></semantics></math>，在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>≠</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf b\ne\mathbf0</annotation></semantics></math> 时不是原系统的解。</p>
+</details>
+</section>
+<section id="reference" class="level2">
+<h2 class="anchored" data-anchor-id="reference">知识与术语回查 <span class="heading-en">Concepts and Terminology</span></h2>
+<ul>
+<li><a href="#homogeneous">齐次与非齐次</a>：分别对应零右端与非零右端；“零解”指输入。</li>
+<li><a href="#main-example">配对例</a>与<a href="#free-variables">自由变量判据</a>：齐次总相容；非齐次先查相容性。</li>
+<li><a href="#all-solutions">全部解的两个方向</a>：存在特解时，全部解恰为特解加任意齐次解。</li>
+<li><a href="#choice">换特解与唯一性</a>：同右端两解之差齐次；相容时，唯一解等价于齐次仅零解。</li>
+<li><a href="#geometry">低维平移图</a>：参数表达式与解集不同，参数遍历全部实数才给出全体。</li>
+<li><a href="#practice">两参数练习</a> · <a href="#small-review">三未知数齐次计算</a> · <a href="../glossary.html">共享术语</a>。教材主题对应§1.5。</li>
+</ul>
+<p>解集已经可以写成一个特解加全部齐次解。还有两个相关问题：哪些常数向量能由列组合得到？齐次解集合在加法和数乘下有什么共同结构？下一主题用张成、列空间与零空间描述它们。</p>
+<p><a href="../topics/vector-and-matrix-equations.html">上一主题：向量方程与矩阵方程 / Previous: Vector and Matrix Equations</a> · <a href="../topics/span-column-and-null-spaces.html">下一主题：张成、列空间与零空间 / Next: Span, Column Space and Null Space</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../topics/vector-and-matrix-equations.html" class="pagination-link" aria-label="向量方程与矩阵方程 / Vector and Matrix Equations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">向量方程与矩阵方程 / Vector and Matrix Equations</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../topics/span-column-and-null-spaces.html" class="pagination-link" aria-label="张成、列空间与零空间 / Span, Column Space and Null Space">
+        <span class="nav-page-text"><span class="chapter-title">张成、列空间与零空间 / Span, Column Space and Null Space</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script src="../assets/math-layout.js"></script>
+
+
+
+
+</body></html>

@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>线性变换与矩阵表示 – 线性代数 · 学习与复习</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../topics/elementary-row-matrices.html" rel="next">
+<link href="../lessons/05-independence.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-59b0fd22973036f71b2f3b55428159e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+
+<body class="nav-sidebar floating chapter-one quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/06-transformations.html"><span class="chapter-title">线性变换与矩阵表示 / Linear Transformations and Matrix Representations</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">线性代数 · 学习与复习</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">前言 / Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章总览：从方程组到线性变换 / Chapter 1: From Linear Systems to Linear Transformations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/linear-systems.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组与矩阵表示 / Linear Systems and Matrix Representation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/gaussian-elimination.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">高斯消元法 / Gaussian Elimination</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/row-picture.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组的行图像 / The Row Picture of Linear Systems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/column-picture.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组的列图像 / The Column Picture of Linear Systems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/vector-and-matrix-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">向量方程与矩阵方程 / Vector and Matrix Equations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/homogeneous-and-nonhomogeneous-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">齐次与非齐次方程组的解集 / Solution Sets of Homogeneous and Nonhomogeneous Linear Systems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/span-column-and-null-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">张成、列空间与零空间 / Span, Column Space and Null Space</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/05-independence.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性无关与表示的唯一性 / Linear Independence and Uniqueness of Representation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/06-transformations.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">线性变换与矩阵表示 / Linear Transformations and Matrix Representations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/elementary-row-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">初等行变换对应的矩阵 / Matrices for Elementary Row Operations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章 · 知识与术语速查 / Chapter 1: Concepts and Terminology</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章综合复习：从一次消元读出整个结构 / Chapter 1 Review: Reading the Structure from Elimination</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章应用选读：力平衡与流量守恒 / Chapter 1 Applications: Force Balance and Flow Conservation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 矩阵代数总览</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">为什么矩阵这样相乘？</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/08-inverses.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">逆矩阵与初等矩阵</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/09-invertibility-blocks.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">可逆矩阵定理与分块运算</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">把消元保存为 LU 分解</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 知识与术语速查</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 综合复习</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章 · 行列式总览</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/11-determinants.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">行列式的定义与展开</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/12-determinants-properties.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">消元、性质与可逆性</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/13-cramer-adjugate.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">从解方程到古典伴随矩阵</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/14-determinants-geometry.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">几何意义与前三章贯通</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-other-definitions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">补充阅读 · 行列式的其他定义：排列、逆序数与基本性质</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章 · 知识与术语速查</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章与前三章 · 综合复习</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">中英术语表</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">定理汇编 / Theorem Reference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">汇编入口 / Reference contents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第1章 线性方程与变换 / Linear Equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第2章 矩阵代数 / Matrix Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第3章 行列式 / Determinants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-04.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第4章 向量空间 / Vector Spaces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-05.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第5章 特征值与特征向量 / Eigenvalues</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-06.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第6章 正交性与最小二乘 / Orthogonality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-07.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第7章 对称矩阵与SVD / Symmetric Matrices and SVD</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录 / Contents</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">从方程到输入与输出 <span class="heading-en">From Equations to Inputs and Outputs</span></a></li>
+  <li><a href="#linearity" id="toc-linearity" class="nav-link" data-scroll-target="#linearity">线性要求保持加法和数乘 <span class="heading-en">Linearity Preserves Addition and Scaling</span></a>
+  <ul class="collapse">
+  <li><a href="#superposition" id="toc-superposition" class="nav-link" data-scroll-target="#superposition">叠加原理 <span class="heading-en">Superposition Principle</span></a></li>
+  <li><a href="#零输入给零输出必要而不充分" id="toc-零输入给零输出必要而不充分" class="nav-link" data-scroll-target="#零输入给零输出必要而不充分">零输入给零输出：必要而不充分 <span class="heading-en">Zero Maps to Zero: Necessary but Not Sufficient</span></a></li>
+  </ul></li>
+  <li><a href="#standard-matrix" id="toc-standard-matrix" class="nav-link" data-scroll-target="#standard-matrix">标准单位向量的像决定矩阵 <span class="heading-en">Images of Standard Unit Vectors Determine the Matrix</span></a></li>
+  <li><a href="#geometric-transformations" id="toc-geometric-transformations" class="nav-link" data-scroll-target="#geometric-transformations">常见几何线性变换 <span class="heading-en">Common Geometric Linear Transformations</span></a>
+  <ul class="collapse">
+  <li><a href="#general-rotation" id="toc-general-rotation" class="nav-link" data-scroll-target="#general-rotation">一般角度的平面旋转 <span class="heading-en">Planar Rotation through a General Angle</span></a></li>
+  <li><a href="#geometry-table" id="toc-geometry-table" class="nav-link" data-scroll-target="#geometry-table">几何规则与矩阵对照 <span class="heading-en">Geometric Rules and Their Matrices</span></a></li>
+  <li><a href="#rotation" id="toc-rotation" class="nav-link" data-scroll-target="#rotation">动笔核对：逆时针旋转90度 <span class="heading-en">Check by Calculation: A 90-Degree Counterclockwise Rotation</span></a></li>
+  <li><a href="#独立练习矩形标准矩阵" id="toc-独立练习矩形标准矩阵" class="nav-link" data-scroll-target="#独立练习矩形标准矩阵">独立练习：矩形标准矩阵 <span class="heading-en">Independent Practice: A Rectangular Standard Matrix</span></a></li>
+  </ul></li>
+  <li><a href="#injective-surjective" id="toc-injective-surjective" class="nav-link" data-scroll-target="#injective-surjective">单射与满射分别回答什么？ <span class="heading-en">What Do Injectivity and Surjectivity Tell Us?</span></a>
+  <ul class="collapse">
+  <li><a href="#两个熟悉的矩形矩阵" id="toc-两个熟悉的矩形矩阵" class="nav-link" data-scroll-target="#两个熟悉的矩形矩阵">两个熟悉的矩形矩阵 <span class="heading-en">Two Familiar Rectangular Matrices</span></a></li>
+  <li><a href="#injective-proof" id="toc-injective-proof" class="nav-link" data-scroll-target="#injective-proof">单射为什么只需检查零输出？ <span class="heading-en">Why Does Injectivity Reduce to the Zero Output?</span></a></li>
+  <li><a href="#条件与判据的理由" id="toc-条件与判据的理由" class="nav-link" data-scroll-target="#条件与判据的理由">条件与判据的理由 <span class="heading-en">Reasons for the Criteria</span></a></li>
+  </ul></li>
+  <li><a href="#elimination-map" id="toc-elimination-map" class="nav-link" data-scroll-target="#elimination-map">最后回看消元：变换规则与它的矩阵 <span class="heading-en">Revisiting Elimination: A Rule and Its Matrix</span></a>
+  <ul class="collapse">
+  <li><a href="#elimination-equivalence" id="toc-elimination-equivalence" class="nav-link" data-scroll-target="#elimination-equivalence">线性保留组合关系，可逆性保证反向 <span class="heading-en">Linearity Preserves Combinations; Reversibility Gives Equivalence</span></a></li>
+  <li><a href="#用矩阵表示这一步行操作" id="toc-用矩阵表示这一步行操作" class="nav-link" data-scroll-target="#用矩阵表示这一步行操作">用矩阵表示这一步行操作 <span class="heading-en">Representing This Row Operation by a Matrix</span></a></li>
+  </ul></li>
+  <li><a href="#exit" id="toc-exit" class="nav-link" data-scroll-target="#exit">结束检查与后续主题 <span class="heading-en">Check Your Understanding and Continue</span></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">线性变换与矩阵表示</span></h1>
+<p class="subtitle lead">Linear Transformations and Matrix Representations</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a href="../chapter-01-reference.html#standard">知识与术语速查</a> · <a href="../chapter-01-overview.html">本章学习路线</a></p>
+<p><strong>教材对应：</strong> §1.8（线性变换简介）、§1.9（线性变换的矩阵）。 对应范围见<a href="../chapter-01-overview.html#textbook-map">章节总览</a>。</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">从方程到输入与输出 <span class="heading-en">From Equations to Inputs and Outputs</span></h2>
+<p>矩阵方程 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf{x}=\mathbf{b}</annotation></semantics></math> 既可以问“给定 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐛</mi><annotation encoding="application/x-tex">\mathbf{b}</annotation></semantics></math>，求输入 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐱</mi><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>”，也可以先固定规则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>↦</mo><mi>A</mi><mi>𝐱</mi></mrow><annotation encoding="application/x-tex">\mathbf{x}\mapsto A\mathbf{x}</annotation></semantics></math>，观察每个输入的输出。线性变换把前面的几个问题联系起来：哪些目标能到达、是否可能有多个输入到达同一目标、怎样描述那些输入。</p>
+<p>前页讨论了一个可表示向量的系数是否唯一。现在固定整个规则，考察所有输入与输出。本页先解释映射与线性，再由单位向量的像构造矩阵、理解几何作用，最后用单射与满射统一唯一性与存在性。</p>
+<p><strong>映射（mapping）</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>:</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">T:\mathbb{R}^n\to\mathbb{R}^m</annotation></semantics></math> 为每个输入 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐱</mi><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> 指定唯一输出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(\mathbf{x})</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^n</annotation></semantics></math> 是<strong>定义域（domain）</strong>，指定的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>m</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^m</annotation></semantics></math> 是<strong>目标空间（codomain）</strong>，所有实际输出组成<strong>值域（range）</strong>。值域可以只是目标空间的一部分。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(\mathbf{x})</annotation></semantics></math> 叫输入的<strong>像（image）</strong>。</p>
+<p>每个输入必须有一个确定输出；这与“每个输出是否只来自一个输入”是两个问题。</p>
+</section>
+<section id="linearity" class="level2">
+<h2 class="anchored" data-anchor-id="linearity">线性要求保持加法和数乘 <span class="heading-en">Linearity Preserves Addition and Scaling</span></h2>
+<p>映射 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>:</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">T:\mathbb{R}^n\to\mathbb{R}^m</annotation></semantics></math> 是<strong>线性变换（linear transformation）</strong>，指对<strong>任意</strong>输入 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐮</mi><mo>,</mo><mi>𝐯</mi></mrow><annotation encoding="application/x-tex">\mathbf{u},\mathbf{v}</annotation></semantics></math> 和实数 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>，</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐮</mi><mo>+</mo><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐮</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="2.0em"></mspace><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mi>𝐮</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>c</mi><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐮</mi><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">T(\mathbf{u}+\mathbf{v})=T(\mathbf{u})+T(\mathbf{v}),\qquad
+T(c\mathbf{u})=cT(\mathbf{u}).</annotation></semantics></math></p>
+<p>这两条合起来给 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>α</mi><mi>𝐮</mi><mo>+</mo><mi>β</mi><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>α</mi><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐮</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>β</mi><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(\alpha\mathbf{u}+\beta\mathbf{v})=\alpha T(\mathbf{u})+\beta T(\mathbf{v})</annotation></semantics></math>，并能反复用于有限个向量的组合。少量数值测试不能证明“任意”成立，但一个失败例子就能否定线性。</p>
+<p>矩阵映射 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>A</mi><mi>𝐱</mi></mrow><annotation encoding="application/x-tex">T(\mathbf{x})=A\mathbf{x}</annotation></semantics></math> 满足两性质：按<a href="../topics/vector-and-matrix-equations.html#linearity">矩阵向量乘法的列组合定义</a>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>u</mi><mi>j</mi></msub><mo>+</mo><msub><mi>v</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">)</mo><msub><mi>𝐚</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">\sum_j(u_j+v_j)\mathbf{a}_j</annotation></semantics></math> 可分成两项，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mi>j</mi></msub><mi>c</mi><msub><mi>u</mi><mi>j</mi></msub><msub><mi>𝐚</mi><mi>j</mi></msub><mo>=</mo><mi>c</mi><msub><mo>∑</mo><mi>j</mi></msub><msub><mi>u</mi><mi>j</mi></msub><msub><mi>𝐚</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">\sum_j cu_j\mathbf{a}_j=c\sum_j u_j\mathbf{a}_j</annotation></semantics></math>。解集关系已据此使用分配规律，这里把它统一表述为线性性质。</p>
+<p>行操作也是线性规则的一个来源；<a href="../topics/elementary-row-matrices.html#linearity">下一主题</a>将从分量运算验证它，并用标准单位向量的像构造矩阵。</p>
+<section id="superposition" class="level3">
+<h3 class="anchored" data-anchor-id="superposition">叠加原理 <span class="heading-en">Superposition Principle</span></h3>
+<p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>:</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">T:\mathbb R^n\to\mathbb R^m</annotation></semantics></math> 线性，对任意正整数 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>、向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐯</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>𝐯</mi><mi>p</mi></msub><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf v_1,\ldots,\mathbf v_p\in\mathbb R^n</annotation></semantics></math> 与实数 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>c</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">c_1,\ldots,c_p</annotation></semantics></math>， <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mrow><mo stretchy="true" form="prefix">(</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>p</mi></munderover><msub><mi>c</mi><mi>j</mi></msub><msub><mi>𝐯</mi><mi>j</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>p</mi></munderover><msub><mi>c</mi><mi>j</mi></msub><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐯</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">T\left(\sum_{j=1}^p c_j\mathbf v_j\right)=\sum_{j=1}^p c_jT(\mathbf v_j).</annotation></semantics></math> 理由是先反复用加法保持性拆开有限项之和，再对每项用数乘保持性提出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>c</mi><mi>j</mi></msub><annotation encoding="application/x-tex">c_j</annotation></semantics></math>；两项情形就是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mi>𝐮</mi><mo>+</mo><mi>d</mi><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>c</mi><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐮</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>d</mi><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(c\mathbf u+d\mathbf v)=cT(\mathbf u)+dT(\mathbf v)</annotation></semantics></math>。教材§1.8将这个联系称为叠加原理：在线性模型适用时，组合输入信号的响应等于各输入响应的同系数组合。它不表示所有物理系统都线性。</p>
+</section>
+<section id="零输入给零输出必要而不充分" class="level3">
+<h3 class="anchored" data-anchor-id="零输入给零输出必要而不充分">零输入给零输出：必要而不充分 <span class="heading-en">Zero Maps to Zero: Necessary but Not Sufficient</span></h3>
+<p>在线性定义中取 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">c=0</annotation></semantics></math>，得到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mn>𝟎</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mi>𝐮</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐮</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">T(\mathbf{0})=T(0\mathbf{u})=0T(\mathbf{u})=\mathbf{0}</annotation></semantics></math>。输入与输出的零向量分别属于各自空间。</p>
+<p><strong>动笔辨别。</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">h</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">f</mi><mi mathvariant="normal">t</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T_{\mathrm{shift}}(x,y)=(x+1,y)</annotation></semantics></math> 与 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">q</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T_{\mathrm{sq}}(x,y)=(x^2,y)</annotation></semantics></math> 是否线性？先算零输入，再为不能靠零输入排除的映射找一个失败的数乘关系。</p>
+<details class="review-answer"><summary>提示（hint）</summary>
+<p>对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">q</mi></mrow></msub><annotation encoding="application/x-tex">T_{\mathrm{sq}}</annotation></semantics></math> 比较 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">q</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T_{\mathrm{sq}}(2,0)</annotation></semantics></math> 与 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>T</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">q</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">2T_{\mathrm{sq}}(1,0)</annotation></semantics></math>。</p>
+</details>
+<details class="review-answer"><summary>答案与反馈（answer and feedback）</summary>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">h</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">f</mi><mi mathvariant="normal">t</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>≠</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T_{\mathrm{shift}}(0,0)=(1,0)\ne(0,0)</annotation></semantics></math>，故平移 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">h</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">f</mi><mi mathvariant="normal">t</mi></mrow></msub><annotation encoding="application/x-tex">T_{\mathrm{shift}}</annotation></semantics></math> 非线性。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">q</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T_{\mathrm{sq}}(0,0)=(0,0)</annotation></semantics></math>，但 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">q</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T_{\mathrm{sq}}(2,0)=(4,0)</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>T</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">q</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">2T_{\mathrm{sq}}(1,0)=(2,0)</annotation></semantics></math>，不相等，故也非线性。满足 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mn>𝟎</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">T(\mathbf{0})=\mathbf{0}</annotation></semantics></math> 不能取代两条线性性质。</p>
+</details>
+<p><a href="../topics/homogeneous-and-nonhomogeneous-equations.html#geometry">解集页的平移</a>也是如此：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐡</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>𝐱</mi><mi>p</mi></msub><mo>+</mo><mi>𝐡</mi></mrow><annotation encoding="application/x-tex">F(\mathbf h)=\mathbf x_p+\mathbf h</annotation></semantics></math> 在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐱</mi><mi>p</mi></msub><mo>≠</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf x_p\ne\mathbf0</annotation></semantics></math> 时将零送到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐱</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\mathbf x_p</annotation></semantics></math>，故不线性。它是仿射映射（affine map）的一个例子；这里“仿射”指线性规则之后再加一个固定向量。平移解集时坐标轴保持固定。</p>
+</section>
+</section>
+<section id="standard-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="standard-matrix">标准单位向量的像决定矩阵 <span class="heading-en">Images of Standard Unit Vectors Determine the Matrix</span></h2>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^n</annotation></semantics></math> 中第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math> 个分量为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>、其他分量为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> 的向量叫<strong>标准单位向量（standard unit vector）</strong>，记作 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐞</mi><mi>j</mi></msub><annotation encoding="application/x-tex">\mathbf{e}_j</annotation></semantics></math>。例如在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^2</annotation></semantics></math> 中，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐞</mi><mn>1</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf{e}_1=(1,0)^{\mathsf T}</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐞</mi><mn>2</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf{e}_2=(0,1)^{\mathsf T}</annotation></semantics></math>。</p>
+<div id="lay6-ch01-thm10" class="course-theorem">
+<p><strong>教材§1.9，定理10：线性变换的唯一标准矩阵 / The Standard Matrix of a Linear Transformation</strong></p>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>:</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">T:\mathbb R^n\to\mathbb R^m</annotation></semantics></math> 是线性变换（linear transformation）。存在唯一的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math> 实矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>，使每个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf x\in\mathbb R^n</annotation></semantics></math> 都满足 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>A</mi><mi>𝐱</mi></mrow><annotation encoding="application/x-tex">T(\mathbf x)=A\mathbf x</annotation></semantics></math>。 若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐞</mi><mi>j</mi></msub><annotation encoding="application/x-tex">\mathbf e_j</annotation></semantics></math> 是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>n</mi></msub><annotation encoding="application/x-tex">I_n</annotation></semantics></math> 的第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math> 列，即第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math> 个标准单位向量，则</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">[</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>⋯</mi><mspace width="0.222em"></mspace><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+A=[T(\mathbf e_1)\ \cdots\ T(\mathbf e_n)].
+</annotation></semantics></math></p>
+<p><a href="../theorems/chapter-01.html#lay6-ch01-thm10">定理汇编 / Theorem Reference</a></p>
+</div>
+<p><strong>构造与唯一性的理由。</strong> 定理中的矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 在以下推导记作 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>。任意输入有逐分量恒等式</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub><msub><mi>𝐞</mi><mn>1</mn></msub><mo>+</mo><mi>⋯</mi><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub><msub><mi>𝐞</mi><mi>n</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf{x}=x_1\mathbf{e}_1+\cdots+x_n\mathbf{e}_n.</annotation></semantics></math></p>
+<p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math> 线性，便有</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>⋯</mi><mo>+</mo><msub><mi>x</mi><mi>n</mi></msub><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><munder><mrow><mo stretchy="false" form="prefix">[</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>⋯</mi><mspace width="0.222em"></mspace><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo></mrow><mo accent="true">⏟</mo></munder><mi>M</mi></munder><mi>𝐱</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">T(\mathbf{x})=x_1T(\mathbf{e}_1)+\cdots+x_nT(\mathbf{e}_n)
+=\underbrace{[T(\mathbf{e}_1)\ \cdots\ T(\mathbf{e}_n)]}_{M}\mathbf{x}.</annotation></semantics></math></p>
+<p>矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math> 叫 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math> 的<strong>标准矩阵（standard matrix）</strong>。每个像有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> 个分量，共 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 列，所以尺寸为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math>。这里是从线性和具体坐标展开推出矩阵表示，没有预设任意映射都能这样表示。</p>
+<p>这个矩阵还唯一：若另一个矩阵也表示 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>，代入 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐞</mi><mi>j</mi></msub><annotation encoding="application/x-tex">\mathbf{e}_j</annotation></semantics></math> 就选出它的第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math> 列，必须等于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(\mathbf{e}_j)</annotation></semantics></math>。</p>
+</section>
+<section id="geometric-transformations" class="level2">
+<h2 class="anchored" data-anchor-id="geometric-transformations">常见几何线性变换 <span class="heading-en">Common Geometric Linear Transformations</span></h2>
+<p>怎样由几何规则构造矩阵，再由矩阵读懂它的作用？以下都是主动变换（active transformation）：移动点或向量，坐标轴保持固定。核心是找到单位向量的像并按列排列。</p>
+<section id="general-rotation" class="level3">
+<h3 class="anchored" data-anchor-id="general-rotation">一般角度的平面旋转 <span class="heading-en">Planar Rotation through a General Angle</span></h3>
+<p>将向量绕原点旋转角度 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>，正角按逆时针方向。单位向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐞</mi><mn>1</mn></msub><annotation encoding="application/x-tex">\mathbf e_1</annotation></semantics></math> 的像与正横轴成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math> 角，故坐标为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>θ</mi><mo>,</mo><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>θ</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(\cos\theta,\sin\theta)^{\mathsf T}</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐞</mi><mn>2</mn></msub><annotation encoding="application/x-tex">\mathbf e_2</annotation></semantics></math> 的像与正横轴成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>+</mo><mi>π</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\theta+\pi/2</annotation></semantics></math> 角，故为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>θ</mi><mo>,</mo><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>θ</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(-\sin\theta,\cos\theta)^{\mathsf T}</annotation></semantics></math>。旋转保持平行四边形的向量加法构图，也保持实数数乘，因此是线性变换。由两列得到 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>θ</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">[</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>θ</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>θ</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>θ</mi></mtd><mtd columnalign="center" style="text-align: center"><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>θ</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">R_\theta=[T(\mathbf e_1)\ T(\mathbf e_2)]
+=\begin{bmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{bmatrix}.</annotation></semantics></math> 对任意输入，列组合给 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>θ</mi></msub><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>x</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>y</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>x</mi><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>θ</mi><mo>−</mo><mi>y</mi><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>θ</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>x</mi><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>θ</mi><mo>+</mo><mi>y</mi><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>θ</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">R_\theta\begin{bmatrix}x\\y\end{bmatrix}
+=\begin{bmatrix}x\cos\theta-y\sin\theta\\x\sin\theta+y\cos\theta\end{bmatrix}.</annotation></semantics></math> 也可直接用三角加法公式检查：非零输入写成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>φ</mi><mo>,</mo><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>φ</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">r(\cos\varphi,\sin\varphi)^{\mathsf T}</annotation></semantics></math>，结果就是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>φ</mi><mo>+</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>φ</mi><mo>+</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">r(\cos(\varphi+\theta),\sin(\varphi+\theta))^{\mathsf T}</annotation></semantics></math>；零向量仍为零。这验证了任意输入的旋转方向与矩阵符号。</p>
+</section>
+<section id="geometry-table" class="level3">
+<h3 class="anchored" data-anchor-id="geometry-table">几何规则与矩阵对照 <span class="heading-en">Geometric Rules and Their Matrices</span></h3>
+<p>以下均指定 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>:</mo><msup><mi>ℝ</mi><mn>2</mn></msup><mo>→</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">T:\mathbb R^2\to\mathbb R^2</annotation></semantics></math>，坐标轴固定。第二栏中的两个像依次组成标准矩阵的第一、第二列（教材§1.8–1.9）。</p>
+<div class="operation-table" tabindex="0" aria-label="几何规则、单位向量像与标准矩阵 / Geometric rules, unit-vector images and matrices">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>几何规则 / Rule</th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(\mathbf e_1),T(\mathbf e_2)</annotation></semantics></math> 与标准矩阵 / Images and matrix</th>
+<th>主要效果 / Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>逆时针旋转 / Counterclockwise rotation，角度 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">\theta\in\mathbb R</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>θ</mi><mo>,</mo><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>θ</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(\cos\theta,\sin\theta)^{\mathsf T}</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>θ</mi><mo>,</mo><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>θ</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(-\sin\theta,\cos\theta)^{\mathsf T}</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>θ</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>θ</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>θ</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>θ</mi></mtd><mtd columnalign="center" style="text-align: center"><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>θ</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">R_\theta=\begin{bmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{bmatrix}</annotation></semantics></math></td>
+<td>绕固定原点旋转；正角逆时针，负角顺时针</td>
+</tr>
+<tr class="even">
+<td>关于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> 轴反射 / Reflection，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>↦</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>−</mi><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x,y)\mapsto(x,-y)</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,0)^{\mathsf T}</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mi>−</mi><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(0,-1)^{\mathsf T}</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">F=\begin{bmatrix}1&amp;0\\0&amp;-1\end{bmatrix}</annotation></semantics></math></td>
+<td>横坐标不变，纵坐标变号</td>
+</tr>
+<tr class="odd">
+<td>水平收缩/伸长 / Horizontal contraction/expansion，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>↦</mo><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x,y)\mapsto(kx,y)</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">k&gt;0</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(k,0)^{\mathsf T}</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(0,1)^{\mathsf T}</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>k</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>k</mi></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">D_k=\begin{bmatrix}k&amp;0\\0&amp;1\end{bmatrix}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>k</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0&lt;k&lt;1</annotation></semantics></math> 水平收缩，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k&gt;1</annotation></semantics></math> 水平伸长；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k=1</annotation></semantics></math> 不变</td>
+</tr>
+<tr class="even">
+<td>水平剪切 / Horizontal shear，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>↦</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mi>k</mi><mi>y</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x,y)\mapsto(x+ky,y)</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">k\in\mathbb R</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,0)^{\mathsf T}</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(k,1)^{\mathsf T}</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mi>k</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>k</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">H_k=\begin{bmatrix}1&amp;k\\0&amp;1\end{bmatrix}</annotation></semantics></math></td>
+<td>纵坐标不变，水平位移为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">ky</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> 轴上的点不动</td>
+</tr>
+<tr class="odd">
+<td>竖直剪切 / Vertical shear，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>↦</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>+</mo><mi>k</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x,y)\mapsto(x,y+kx)</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">k\in\mathbb R</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>k</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,k)^{\mathsf T}</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(0,1)^{\mathsf T}</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>k</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>k</mi></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">V_k=\begin{bmatrix}1&amp;0\\k&amp;1\end{bmatrix}</annotation></semantics></math></td>
+<td>横坐标不变，竖直位移为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">kx</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> 轴上的点不动</td>
+</tr>
+<tr class="even">
+<td>到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> 轴的坐标投影 / Coordinate projection，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>↦</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x,y)\mapsto(x,0)</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,0)^{\mathsf T}</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(0,0)^{\mathsf T}</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">P=\begin{bmatrix}1&amp;0\\0&amp;0\end{bmatrix}</annotation></semantics></math></td>
+<td>舍去纵坐标；值域是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> 轴，多个输入可有同一输出</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>表中的反射、伸缩、剪切和投影都可从给定坐标规则直接求两个单位向量的像。对任意 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math>，按列计算所得恰好是该规则，所以这些映射都线性。例如水平剪切给 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mi>y</mi><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>k</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>x</mi><mo>+</mo><mi>k</mi><mi>y</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>y</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">x\begin{bmatrix}1\\0\end{bmatrix}+y\begin{bmatrix}k\\1\end{bmatrix}
+=\begin{bmatrix}x+ky\\y\end{bmatrix}.</annotation></semantics></math> 这里的剪切变换（shear transformation）与此前的行操作相连：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>←</mo><msub><mi>R</mi><mn>2</mn></msub><mo>+</mo><mi>λ</mi><msub><mi>R</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">R_2\leftarrow R_2+\lambda R_1</annotation></semantics></math> 对每列施加 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false" form="postfix">)</mo><mo>↦</mo><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo>+</mo><mi>λ</mi><mi>u</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(u,v)\mapsto(u,v+\lambda u)</annotation></semantics></math>，是<strong>竖直</strong>剪切 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>λ</mi></msub><annotation encoding="application/x-tex">V_\lambda</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>←</mo><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><mi>λ</mi><msub><mi>R</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">R_1\leftarrow R_1+\lambda R_2</annotation></semantics></math> 才是水平剪切 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mi>λ</mi></msub><annotation encoding="application/x-tex">H_\lambda</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda=0</annotation></semantics></math> 时都是恒等规则。</p>
+<div class="figure-scroll" tabindex="0" aria-label="固定坐标轴上的剪切与投影 / Shear and projection on fixed axes">
+<div id="fig-shear-projection" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-shear-projection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/chapter-01/shear-projection.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shear-projection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 / Figure&nbsp;1: 左：水平剪切 H₁ 将蓝色单位正方形变为橙色平行四边形，底边不动，顶边右移1。右：投影 P 将 (1,1) 与 (1,2) 都送到 (1,0)；灰虚箭头仅指示点的对应。两图坐标轴固定。
+</figcaption>
+</figure>
+</div>
+</div>
+<p>投影 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>:</mo><msup><mi>ℝ</mi><mn>2</mn></msup><mo>→</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">P:\mathbb R^2\to\mathbb R^2</annotation></semantics></math> 的定义域和目标空间都是整个平面，但值域只有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> 轴。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1,1)</annotation></semantics></math> 与 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1,2)</annotation></semantics></math> 同映到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1,0)</annotation></semantics></math>；而目标 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(0,1)</annotation></semantics></math> 没有输入能产生。这些观察将在<a href="#injective-surjective">单射与满射</a>中得到统一表述。映满 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> 轴不等于映满指定的目标空间 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb R^2</annotation></semantics></math>。此处只讨论坐标投影，不使用一般正交投影或最小二乘理论。</p>
+<p><strong>短练习。</strong> 不先套表，求 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>−</mo><mn>2</mn><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Q(x,y)=(x,y-2x)</annotation></semantics></math> 的两个单位向量像与标准矩阵，再算 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Q(2,1)</annotation></semantics></math>。它与哪种行操作对应？另求关于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> 轴反射和竖直伸缩 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>↦</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>k</mi><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x,y)\mapsto(x,ky)</annotation></semantics></math>（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">k&gt;0</annotation></semantics></math>）的矩阵。</p>
+<details class="review-answer"><summary>答案与反馈 / Answer and Feedback</summary>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>−</mi><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">Q(\mathbf e_1)=(1,-2)^{\mathsf T}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">Q(\mathbf e_2)=(0,1)^{\mathsf T}</annotation></semantics></math>，矩阵为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>−</mi><mn>2</mn></mrow></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">V_{-2}=\begin{bmatrix}1&amp;0\\-2&amp;1\end{bmatrix}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mi>−</mi><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Q(2,1)=(2,-3)</annotation></semantics></math>；对应 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>←</mo><msub><mi>R</mi><mn>2</mn></msub><mo>−</mo><mn>2</mn><msub><mi>R</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">R_2\leftarrow R_2-2R_1</annotation></semantics></math>，是竖直剪切。关于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> 轴反射的矩阵为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix}-1&amp;0\\0&amp;1\end{bmatrix}</annotation></semantics></math>，竖直伸缩为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>k</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix}1&amp;0\\0&amp;k\end{bmatrix}</annotation></semantics></math>；它们分别把单位向量送到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><msub><mi>𝐞</mi><mn>1</mn></msub><mo>,</mo><msub><mi>𝐞</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">-\mathbf e_1,\mathbf e_2</annotation></semantics></math> 和 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐞</mi><mn>1</mn></msub><mo>,</mo><mi>k</mi><msub><mi>𝐞</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\mathbf e_1,k\mathbf e_2</annotation></semantics></math>。</p>
+</details>
+</section>
+<section id="rotation" class="level3">
+<h3 class="anchored" data-anchor-id="rotation">动笔核对：逆时针旋转90度 <span class="heading-en">Check by Calculation: A 90-Degree Counterclockwise Rotation</span></h3>
+<p>取<a href="#general-rotation">一般旋转</a>中的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mi>π</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\theta=\pi/2</annotation></semantics></math>，在固定坐标轴上核对规则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(x,y)=(-y,x)</annotation></semantics></math>。请先写出两个标准单位向量的像，按列组成矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>，再用列组合检验 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐯</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf v=(2,1)^{\mathsf T}</annotation></semantics></math> 是否变为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo>,</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(-1,2)^{\mathsf T}</annotation></semantics></math>。</p>
+<details class="review-answer"><summary>答案与反馈 / Answer and Feedback</summary>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>𝐞</mi><mn>2</mn></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><msub><mi>𝐞</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">T(\mathbf{e}_1)=\mathbf{e}_2=\begin{bmatrix}0\\1\end{bmatrix},\qquad
+T(\mathbf{e}_2)=-\mathbf{e}_1=\begin{bmatrix}-1\\0\end{bmatrix}.</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mo stretchy="false" form="prefix">[</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">M=[T(\mathbf{e}_1)\ T(\mathbf{e}_2)]=\begin{bmatrix}0&amp;-1\\1&amp;0\end{bmatrix}.</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>𝐯</mi><mo>=</mo><mn>2</mn><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">M\mathbf{v}=2\begin{bmatrix}0\\1\end{bmatrix}+\begin{bmatrix}-1\\0\end{bmatrix}
+=\begin{bmatrix}-1\\2\end{bmatrix}.</annotation></semantics></math></p>
+<p>这与一般公式 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mrow><mi>π</mi><mi>/</mi><mn>2</mn></mrow></msub><annotation encoding="application/x-tex">R_{\pi/2}</annotation></semantics></math> 一致；像依次排成列，第二列为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><msub><mi>𝐞</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">-\mathbf e_1</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>↦</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(2,1)\mapsto(-1,2)</annotation></semantics></math> 的长度仍为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mn>5</mn></msqrt><annotation encoding="application/x-tex">\sqrt5</annotation></semantics></math>。</p>
+</details>
+<div class="figure-scroll" tabindex="0" aria-label="主动旋转的单位向量与检验向量，固定坐标轴，可横向滚动">
+<div id="fig-rotation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rotation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/chapter-01/rotation-90.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rotation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 / Figure&nbsp;2: 左图在固定坐标轴上展示单位向量的像：蓝色为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐞</mi><mn>1</mn></msub><annotation encoding="application/x-tex">\mathbf{e}_1</annotation></semantics></math>，橙色为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(\mathbf{e}_1),T(\mathbf{e}_2)</annotation></semantics></math>，其中 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐞</mi><mn>2</mn></msub><mo>=</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{e}_2=T(\mathbf{e}_1)</annotation></semantics></math>；右图蓝色为输入、橙色为像，检验 v=(2,1) 到 T(v)=(-1,2)，同一单位尺度，弧箭头表示逆时针90度。
+</figcaption>
+</figure>
+</div>
+</div>
+<p>接着用一个不同输入/输出维数的例子检验同样的构矩阵方法。</p>
+</section>
+<section id="独立练习矩形标准矩阵" class="level3">
+<h3 class="anchored" data-anchor-id="独立练习矩形标准矩阵">独立练习：矩形标准矩阵 <span class="heading-en">Independent Practice: A Rectangular Standard Matrix</span></h3>
+<p><strong>独立练习。</strong> 对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>:</mo><msup><mi>ℝ</mi><mn>2</mn></msup><mo>→</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">T:\mathbb{R}^2\to\mathbb{R}^3</annotation></semantics></math>，</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>2</mn><mi>x</mi><mo>−</mo><mi>y</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>3</mn><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">T(x,y)=(x+2y,\ 2x-y,\ 3y),</annotation></semantics></math></p>
+<p>求 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(\mathbf{e}_1)</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(\mathbf{e}_2)</annotation></semantics></math> 与标准矩阵。分别用直接代入和矩阵列组合求输入 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mi>−</mi><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(2,-1)^{\mathsf T}</annotation></semantics></math> 的像，并说明此规则为什么线性。</p>
+<details class="review-answer"><summary>提示（hint）</summary>
+<p>两次单位输入的输出应各有三个分量。把它们排为两列，不能排为两行。</p>
+</details>
+<details class="review-answer"><summary>完整答案（complete answer）</summary>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐞</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>M</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">T(\mathbf{e}_1)=\begin{bmatrix}1\\2\\0\end{bmatrix},\qquad
+T(\mathbf{e}_2)=\begin{bmatrix}2\\-1\\3\end{bmatrix},\qquad
+M=\begin{bmatrix}1&amp;2\\2&amp;-1\\0&amp;3\end{bmatrix}.</annotation></semantics></math></p>
+<p>直接代入得到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>−</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo>+</mo><mn>1</mn><mo>,</mo><mi>−</mi><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo>,</mo><mi>−</mi><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(2-2,4+1,-3)^{\mathsf T}=(0,5,-3)^{\mathsf T}</annotation></semantics></math>；矩阵表示给</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mn>2</mn><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>−</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>5</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>3</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">M\begin{bmatrix}2\\-1\end{bmatrix}
+=2\begin{bmatrix}1\\2\\0\end{bmatrix}-\begin{bmatrix}2\\-1\\3\end{bmatrix}
+=\begin{bmatrix}0\\5\\-3\end{bmatrix}.</annotation></semantics></math></p>
+<p>对任意 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math>，上述列组合为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>,</mo><mn>2</mn><mi>x</mi><mo>−</mo><mi>y</mi><mo>,</mo><mn>3</mn><mi>y</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(x+2y,2x-y,3y)^{\mathsf T}</annotation></semantics></math>，因此规则就是矩阵映射，满足线性两性质。标准矩阵是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">3\times2</annotation></semantics></math>；输入两个分量，输出三个分量。</p>
+</details>
+</section>
+</section>
+<section id="injective-surjective" class="level2">
+<h2 class="anchored" data-anchor-id="injective-surjective">单射与满射分别回答什么？ <span class="heading-en">What Do Injectivity and Surjectivity Tell Us?</span></h2>
+<p><strong>单射（one-to-one / injective）</strong>指不同输入不能得到相同输出。等价地，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐮</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(\mathbf{u})=T(\mathbf{v})</annotation></semantics></math> 必须推出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐮</mi><mo>=</mo><mi>𝐯</mi></mrow><annotation encoding="application/x-tex">\mathbf{u}=\mathbf{v}</annotation></semantics></math>。它允许一些目标没有原像，只要求每个目标<strong>至多</strong>对应一个输入。</p>
+<p><strong>满射（onto / surjective）</strong>指目标空间中每个向量都可达到，即每个目标<strong>至少</strong>有一个输入。必须说清目标空间；把目标空间改小，会改变是否满射的判断。</p>
+<section id="两个熟悉的矩形矩阵" class="level3">
+<h3 class="anchored" data-anchor-id="两个熟悉的矩形矩阵">两个熟悉的矩形矩阵 <span class="heading-en">Two Familiar Rectangular Matrices</span></h3>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>B</mi></msub><mo>:</mo><msup><mi>ℝ</mi><mn>3</mn></msup><mo>→</mo><msup><mi>ℝ</mi><mn>2</mn></msup><mo>,</mo><mspace width="1.0em"></mspace><mi>B</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>;</mo><mspace width="2.0em"></mspace><msub><mi>T</mi><mi>C</mi></msub><mo>:</mo><msup><mi>ℝ</mi><mn>2</mn></msup><mo>→</mo><msup><mi>ℝ</mi><mn>3</mn></msup><mo>,</mo><mspace width="1.0em"></mspace><mi>C</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">T_B:\mathbb{R}^3\to\mathbb{R}^2,\quad
+B=\begin{bmatrix}1&amp;1&amp;1\\2&amp;3&amp;1\end{bmatrix};\qquad
+T_C:\mathbb{R}^2\to\mathbb{R}^3,\quad
+C=\begin{bmatrix}1&amp;0\\0&amp;1\\1&amp;1\end{bmatrix}.</annotation></semantics></math></p>
+<p>记 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>B</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>B</mi><mi>𝐱</mi></mrow><annotation encoding="application/x-tex">T_B(\mathbf{x})=B\mathbf{x}</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>C</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>C</mi><mi>𝐱</mi></mrow><annotation encoding="application/x-tex">T_C(\mathbf{x})=C\mathbf{x}</annotation></semantics></math>，分别表示两个矩阵对应的线性变换。<strong>先动笔判断两者的单射/满射，并各给计算证据。</strong> 可用<a href="../topics/span-column-and-null-spaces.html#every-target">小矩阵的任意目标计算</a>、<a href="../topics/homogeneous-and-nonhomogeneous-equations.html#small-review">齐次方向</a>、<a href="../lessons/05-independence.html">线性无关与表示的唯一性</a>；不必从头消元。</p>
+<details class="review-answer"><summary>答案与反馈（answer and feedback）</summary>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>B</mi></msub><annotation encoding="application/x-tex">T_B</annotation></semantics></math> <strong>满射但非单射</strong>。对任意 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(p,q)^{\mathsf T}</annotation></semantics></math>，输入 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mi>p</mi><mo>−</mo><mi>q</mi><mo>,</mo><mi>q</mi><mo>−</mo><mn>2</mn><mi>p</mi><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(3p-q,q-2p,0)^{\mathsf T}</annotation></semantics></math> 给出该目标，故满射。非零输入 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(-2,1,1)^{\mathsf T}</annotation></semantics></math> 与零输入都给零输出，故非单射；也可比较 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,1,0)^{\mathsf T}</annotation></semantics></math> 与 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(-1,2,1)^{\mathsf T}</annotation></semantics></math> 的输出。</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>C</mi></msub><annotation encoding="application/x-tex">T_C</annotation></semantics></math> <strong>单射但非满射</strong>。若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo>,</mo><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup><mo>=</mo><mi>C</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>s</mi><mo>′</mo></msup><mo>,</mo><msup><mi>t</mi><mo>′</mo></msup><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">C(s,t)^{\mathsf T}=C(s',t')^{\mathsf T}</annotation></semantics></math>，前两个分量立即给 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><msup><mi>s</mi><mo>′</mo></msup><mo>,</mo><mi>t</mi><mo>=</mo><msup><mi>t</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">s=s',t=t'</annotation></semantics></math>，故单射；目标 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>4</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,2,4)^{\mathsf T}</annotation></semantics></math> 无原像，故不满到指定的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^3</annotation></semantics></math>。值域仍是平面 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mi>u</mi><mo>+</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">w=u+v</annotation></semantics></math>。</p>
+</details>
+<p>沿用小矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>，这次用同一输出的多个输入观察非单射。蓝、橙线上的点分别给零输出与同一非零输出；每个输入向量仍从固定原点表示。静态图及完整约定见<a href="../topics/homogeneous-and-nonhomogeneous-equations.html#geometry">解集平移</a>。</p>
+<div class="solution-label-scope" data-matrix-label="B">
+<div class="solution-explorer">
+<p>
+<strong>沿解直线移动 / Move Along the Solution Lines.</strong> 拖动 t 或用按钮比较解点；位置箭头从固定 O 出发，灰虚箭头表示加上 xₚ 的位移。t=0 时重合的灰箭头省去。<a href="../topics/homogeneous-and-nonhomogeneous-equations.html#geometry">图示约定 / Diagram conventions</a>。
+</p>
+<div class="sync-controls">
+<label>参数 / Parameter t <input aria-label="解直线参数 / Solution parameter t" type="range" min="-1" max="1" step="0.05" value="0.5"></label>
+<div class="sync-buttons">
+<button type="button" data-t="-1">
+负参数 / Negative t=−1
+</button>
+<button type="button" data-t="0">
+特解 / Particular t=0
+</button>
+<button type="button" data-t="1">
+另一解 / Another t=1
+</button>
+<button type="button" data-t="0.5">
+重置 / Reset
+</button>
+</div>
+</div>
+<div class="solution-picture figure-scroll" tabindex="0" aria-label="解点与位置向量，可横向滚动 / Solution points and position vectors, horizontally scrollable">
+
+</div>
+<p>
+左侧为输入 R³ 的投影，右侧为输出 R²。滑块仅取样 −1≤t≤1，完整解的参数仍取遍全体实数。
+</p>
+<output aria-live="polite">
+</output>
+<noscript>
+交互需要 JavaScript；可读<a href="../topics/homogeneous-and-nonhomogeneous-equations.html#geometry">解集平移的静态图及参数公式 / Static solution-set diagram</a>。
+</noscript>
+</div>
+<script src="../assets/chapter-01/solution-model.js"></script>
+<script src="../assets/chapter-01/solution-explorer.js"></script>
+</div>
+<div class="figure-scroll" tabindex="0" aria-label="图形可横向滚动，查看坐标与标签">
+<div id="fig-c-range" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-c-range-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/chapter-01/reachable-plane.svg" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-c-range-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 / Figure&nbsp;3: C 把输入 R² 中的系数 (s,t) 送到输出 R³ 的 (s,t,s+t)。输出平面中的每一点有唯一输入，但平面外没有输入。坐标 u、v、w 是输出分量。
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="injective-proof" class="level3">
+<h3 class="anchored" data-anchor-id="injective-proof">单射为什么只需检查零输出？ <span class="heading-en">Why Does Injectivity Reduce to the Zero Output?</span></h3>
+<div id="lay6-ch01-thm11" class="course-theorem">
+<p><strong>教材§1.9，定理11：单射与零核等价 / Injectivity and the Zero Kernel</strong></p>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>:</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">T:\mathbb R^n\to\mathbb R^m</annotation></semantics></math> 线性。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math> 为单射（one-to-one / injective），当且仅当方程 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">T(\mathbf x)=\mathbf0</annotation></semantics></math> 只有平凡解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf x=\mathbf0</annotation></semantics></math>。 单射指不同输入有不同输出，等价于每个输出至多有一个原像。</p>
+<p><a href="../theorems/chapter-01.html#lay6-ch01-thm11">定理汇编 / Theorem Reference</a></p>
+</div>
+<p>若单射，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>𝟎</mn><mo>=</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mn>𝟎</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(\mathbf{x})=\mathbf{0}=T(\mathbf{0})</annotation></semantics></math> 推出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf{x}=\mathbf{0}</annotation></semantics></math>。反过来，若只有零输入得到零输出，当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐮</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(\mathbf{u})=T(\mathbf{v})</annotation></semantics></math> 时，线性给 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐮</mi><mo>−</mo><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">T(\mathbf{u}-\mathbf{v})=\mathbf{0}</annotation></semantics></math>，于是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐮</mi><mo>−</mo><mi>𝐯</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf{u}-\mathbf{v}=\mathbf{0}</annotation></semantics></math>。这里“相减”一步正是线性发挥作用的地方。</p>
+<p>列无关、齐次仅零解、每列主元的联系来自<a href="../lessons/05-independence.html">线性无关主题</a>；满射与每行主元的双向理由见<a href="../topics/span-column-and-null-spaces.html#every-target">主元判据</a>。不能把“某个目标有唯一解”当作一般映射的满射定义。</p>
+<div id="lay6-ch01-thm12" class="course-theorem">
+<p><strong>教材§1.9，定理12：单满射的列向量判据 / Onto and One-to-One Matrix Transformations</strong></p>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>:</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">T:\mathbb R^n\to\mathbb R^m</annotation></semantics></math> 线性，标准矩阵为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>。则：</p>
+<ol type="a">
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math> 映满 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>m</mi></msup><annotation encoding="application/x-tex">\mathbb R^m</annotation></semantics></math>（onto / surjective），当且仅当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的列向量张成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>m</mi></msup><annotation encoding="application/x-tex">\mathbb R^m</annotation></semantics></math>。</p></li>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math> 是单射，当且仅当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的列向量线性无关。</p></li>
+</ol>
+<p><a href="../theorems/chapter-01.html#lay6-ch01-thm12">定理汇编 / Theorem Reference</a></p>
+</div>
+</section>
+<section id="条件与判据的理由" class="level3">
+<h3 class="anchored" data-anchor-id="条件与判据的理由">条件与判据的理由 <span class="heading-en">Reasons for the Criteria</span></h3>
+<p>定理11把单射化为齐次仅零解，再由线性无关的定义得到定理12(b)；定理12(a)则是“任意目标可由列组合得到”的同义表述。下表汇总这些已经建立的联系，只适用于<strong>线性</strong>映射 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>A</mi><mi>𝐱</mi></mrow><annotation encoding="application/x-tex">T(\mathbf{x})=A\mathbf{x}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 为实 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math> 矩阵。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">问题</th>
+<th style="text-align: left;">方程/列组合</th>
+<th style="text-align: left;">消元依据</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">给定 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐛</mi><annotation encoding="application/x-tex">\mathbf{b}</annotation></semantics></math> 是否有输入？</td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>∈</mo><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\mathbf{b}\in\operatorname{Col}A</annotation></semantics></math></td>
+<td style="text-align: left;">增广矩阵化为阶梯形后，没有矛盾行</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">是否单射？</td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">A\mathbf{x}=\mathbf{0}</annotation></semantics></math> 仅零解；列无关；每个可达目标表示唯一</td>
+<td style="text-align: left;">系数矩阵每列有主元，无自由变量</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">是否满到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>m</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^m</annotation></semantics></math>？</td>
+<td style="text-align: left;">每个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf{b}\in\mathbb{R}^m</annotation></semantics></math> 都有解；列张成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>m</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^m</annotation></semantics></math></td>
+<td style="text-align: left;">系数矩阵每行有主元</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="elimination-map" class="level2">
+<h2 class="anchored" data-anchor-id="elimination-map">最后回看消元：变换规则与它的矩阵 <span class="heading-en">Revisiting Elimination: A Rule and Its Matrix</span></h2>
+<p>一般矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的规则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>A</mi></msub><mo>:</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">T_A:\mathbb R^n\to\mathbb R^m</annotation></semantics></math> 把输入系数送到输出。行操作则在输出空间 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>m</mi></msup><annotation encoding="application/x-tex">\mathbb R^m</annotation></semantics></math> 对各列及右端施加同一个线性且可撤销的规则。它的标准矩阵是什么，为什么全部解不变？<a href="../topics/elementary-row-matrices.html">初等行变换对应的矩阵</a>从三种熟悉操作逐步回答。</p>
+<section id="elimination-equivalence" class="level3">
+<h3 class="anchored" data-anchor-id="elimination-equivalence">线性保留组合关系，可逆性保证反向 <span class="heading-en">Linearity Preserves Combinations; Reversibility Gives Equivalence</span></h3>
+<p>线性性允许把对列组合的作用分配到各列；撤销操作允许从新等式回到原等式。<a href="../topics/elementary-row-matrices.html#elimination-equivalence">完整双向推导与不可逆对照</a>接着说明这两个条件各负责什么。</p>
+</section>
+<section id="用矩阵表示这一步行操作" class="level3">
+<h3 class="anchored" data-anchor-id="用矩阵表示这一步行操作">用矩阵表示这一步行操作 <span class="heading-en">Representing This Row Operation by a Matrix</span></h3>
+<p>对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>←</mo><msub><mi>R</mi><mn>2</mn></msub><mo>−</mo><mn>2</mn><msub><mi>R</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">R_2\leftarrow R_2-2R_1</annotation></semantics></math>，对应矩阵为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">E=\begin{bmatrix}1&amp;0\\-2&amp;1\end{bmatrix}</annotation></semantics></math>。<a href="../topics/elementary-row-matrices.html#small-example">逐列计算及右端同步</a>仍使用熟悉的三未知数小例；仍沿用记号 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>。</p>
+</section>
+</section>
+<section id="exit" class="level2">
+<h2 class="anchored" data-anchor-id="exit">结束检查与后续主题 <span class="heading-en">Check Your Understanding and Continue</span></h2>
+<p>书写：对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math> 矩阵，原规则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>A</mi></msub><annotation encoding="application/x-tex">T_A</annotation></semantics></math> 与消元规则分别在哪两个空间之间作用？为什么等价式能反向成立？口头用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>B</mi></msub><mo>,</mo><msub><mi>T</mi><mi>C</mi></msub></mrow><annotation encoding="application/x-tex">T_B,T_C</annotation></semantics></math> 对照单射和满射。</p>
+<details class="review-answer"><summary>检查答案（exit feedback）</summary>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>A</mi></msub><mo>:</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">T_A:\mathbb{R}^n\to\mathbb{R}^m</annotation></semantics></math>；消元规则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi mathvariant="normal">r</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">w</mi></mrow></msub><mo>:</mo><msup><mi>ℝ</mi><mi>m</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">T_{\mathrm{row}}:\mathbb{R}^m\to\mathbb{R}^m</annotation></semantics></math> 作用于所有列及右端。逆变换恢复原输出等式，所以使列组合等于相应常数向量的所有输入完全相同。下一页的二维输出例将用一个初等矩阵表示它。贯穿例 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>B</mi></msub><annotation encoding="application/x-tex">T_B</annotation></semantics></math> 满非单、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>C</mi></msub><annotation encoding="application/x-tex">T_C</annotation></semantics></math> 单非满。</p>
+</details>
+<p>接着读<a href="../topics/elementary-row-matrices.html">初等行变换对应的矩阵 / Matrices for Elementary Row Operations</a>，再进入<a href="../chapter-01-review.html">第一章综合复习 / Chapter 1 Review Problems</a>，用一个新系统检验你能否从方程、行图像、列组合、解集与映射五种角度解释同一问题。<a href="../glossary.html">共享术语表</a>。</p>
+<p><a href="../lessons/05-independence.html">上一主题：线性无关与表示的唯一性 / Previous: Linear Independence and Uniqueness of Representation</a> · <a href="../topics/elementary-row-matrices.html">下一主题：初等行变换对应的矩阵 / Next: Matrices for Elementary Row Operations</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../lessons/05-independence.html" class="pagination-link" aria-label="线性无关与表示的唯一性 / Linear Independence and Uniqueness of Representation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">线性无关与表示的唯一性 / Linear Independence and Uniqueness of Representation</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../topics/elementary-row-matrices.html" class="pagination-link" aria-label="初等行变换对应的矩阵 / Matrices for Elementary Row Operations">
+        <span class="nav-page-text"><span class="chapter-title">初等行变换对应的矩阵 / Matrices for Elementary Row Operations</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script src="../assets/math-layout.js"></script>
+
+
+
+
+</body></html>
