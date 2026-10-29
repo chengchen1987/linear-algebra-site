@@ -2,7 +2,7 @@
 .chapter-one .synthesis-table { max-width:100%; overflow-x:auto; margin:1rem 0; border:1px solid #b8cbd7; overscroll-behavior-x:contain; }
 .chapter-one .synthesis-table:focus-visible { outline:3px solid #22688b; outline-offset:3px; }
 .chapter-one .synthesis-table table { table-layout:fixed; width:100%; min-width:900px; margin:0; font-size:1rem; line-height:1.7; }
-.chapter-one .solution-perspectives table { min-width:1450px; }
+.chapter-one .solution-perspectives table { min-width:1180px; }
 .chapter-one .synthesis-table th, .chapter-one .synthesis-table td { padding:.8rem; vertical-align:top; overflow-wrap:break-word; }
 .chapter-one .synthesis-table thead th { background:#eaf1f6; color:#243746; }
 .chapter-one .synthesis-table tbody th { background:#f4f7fa; font-weight:600; }
@@ -15,3 +15,10 @@
   .chapter-one #quarto-content { display:block; padding-left:24px; padding-right:24px; }
   .chapter-one #quarto-sidebar { max-width:100%; }
 }
+
+.chapter-one .solution-perspectives th:first-child { position:sticky;left:0;z-index:1;width:16%;box-shadow:1px 0 #b8cbd7; }
+.chapter-one .solution-perspectives thead th:first-child {z-index:2;}
+.chapter-one .solution-perspectives th:nth-child(2) {width:18%;}
+/* On a phone a pinned 190px perspective cell would cover the left edge of the
+   final 190px column. Keep every cell reachable by disabling pinning there. */
+@media(max-width:600px){.chapter-one .solution-perspectives th:first-child{position:static;box-shadow:none}}
