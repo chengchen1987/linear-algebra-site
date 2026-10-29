@@ -19,14 +19,3 @@
  document.fonts.ready.then(schedule);
  schedule();
 })();
-
-/* Text-only navigation enhancement; all bilingual text remains present without JS. */
-if(document.body.classList.contains('chapter-one')){
- for(const node of document.querySelectorAll('.sidebar-item-text .chapter-title, .nav-page-text')){
-  if(node.children.length)continue;
-  const text=node.textContent, split=text.indexOf(' / ');
-  if(split<0)continue;
-  node.textContent=text.slice(0,split);
-  const en=document.createElement('span');en.className='nav-en';en.textContent=text.slice(split+3);node.append(en);
- }
-}

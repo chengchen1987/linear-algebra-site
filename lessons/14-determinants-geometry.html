@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-59b0fd22973036f71b2f3b55428159e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0669924a6a5174ef4a224d7e1cb67b62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,7 +75,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../assets/course.css">
-</head>
+<link rel="stylesheet" href="../assets/navigation.css">
+<noscript><style>
+#quarto-sidebar,#quarto-sidebar .collapse{display:block!important;visibility:visible!important;height:auto!important;transform:none!important}
+#quarto-sidebar .chapter-arrow,.quarto-btn-toggle,.quarto-search-button,.sidebar-search{display:none!important}
+@media(max-width:991.98px){#quarto-sidebar{position:static!important;width:auto!important;max-height:none!important;grid-column:page-start/page-end!important}#quarto-header{position:static!important}#quarto-content{padding-top:0!important}}
+</style></noscript></head>
 
 <body class="nav-sidebar floating quarto-light">
 
@@ -83,13 +88,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="课程目录 / Course Contents" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/14-determinants-geometry.html"><span class="chapter-title">几何意义与前三章贯通</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="当前位置 / Current Page"><span class="course-current-label"><span class="nav-zh" lang="zh-CN">几何意义与前三章贯通</span><span class="nav-en" lang="en">Geometric Meaning and Connections across Chapters 1–3</span></span></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" aria-hidden="true" tabindex="-1">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="搜索 / Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -98,10 +103,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto course-navigation" aria-label="课程目录 / Course Contents">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">线性代数 · 学习与复习</a> 
+      <a href="../" aria-label="线性代数 · 学习与复习 / Linear Algebra: Learning and Review"><span>线性代数</span><span>学习与复习</span></a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -109,227 +114,236 @@ ul.task-list li input[type="checkbox"] {
         <div id="quarto-search" class="" title="搜索"></div>
         </div>
         </div>
-    <div class="sidebar-menu-container"> 
+    <div class="sidebar-menu-container"><div class="course-contents-label"><span class="nav-zh" lang="zh-CN">课程目录</span><span class="nav-en" lang="en">Course Contents</span></div> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">前言 / Preface</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">前言</span><span class="nav-en" lang="en">Preface</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapter-01-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章总览：从方程组到线性变换 / Chapter 1: From Linear Systems to Linear Transformations</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../topics/linear-systems.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组与矩阵表示 / Linear Systems and Matrix Representation</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../topics/gaussian-elimination.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">高斯消元法 / Gaussian Elimination</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../topics/row-picture.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组的行图像 / The Row Picture of Linear Systems</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../topics/column-picture.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性方程组的列图像 / The Column Picture of Linear Systems</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../topics/vector-and-matrix-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">向量方程与矩阵方程 / Vector and Matrix Equations</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../topics/homogeneous-and-nonhomogeneous-equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">齐次与非齐次方程组的解集 / Solution Sets of Homogeneous and Nonhomogeneous Linear Systems</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../topics/span-column-and-null-spaces.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">张成、列空间与零空间 / Span, Column Space and Null Space</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/05-independence.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性无关与表示的唯一性 / Linear Independence and Uniqueness of Representation</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/06-transformations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">线性变换与矩阵表示 / Linear Transformations and Matrix Representations</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../topics/elementary-row-matrices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">初等行变换对应的矩阵 / Matrices for Elementary Row Operations</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapter-01-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章 · 知识与术语速查 / Chapter 1: Concepts and Terminology</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapter-01-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章综合复习：从一次消元读出整个结构 / Chapter 1 Review: Reading the Structure from Elimination</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapter-01-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第一章应用选读：力平衡与流量守恒 / Chapter 1 Applications: Force Balance and Flow Conservation</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapter-02-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 矩阵代数总览</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">为什么矩阵这样相乘？</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/08-inverses.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">逆矩阵与初等矩阵</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/09-invertibility-blocks.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">可逆矩阵定理与分块运算</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">把消元保存为 LU 分解</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapter-02-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 知识与术语速查</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapter-02-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第二章 · 综合复习</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapter-03-overview.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章 · 行列式总览</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/11-determinants.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">行列式的定义与展开</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/12-determinants-properties.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">消元、性质与可逆性</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/13-cramer-adjugate.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">从解方程到古典伴随矩阵</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lessons/14-determinants-geometry.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">几何意义与前三章贯通</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapter-03-other-definitions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">补充阅读 · 行列式的其他定义：排列、逆序数与基本性质</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapter-03-reference.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章 · 知识与术语速查</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapter-03-review.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第三章与前三章 · 综合复习</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">中英术语表</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">定理汇编 / Theorem Reference</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="展开或折叠此栏">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-1" aria-label="第一章：方程组与线性变换 / Chapter 1: Linear Systems and Transformations"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">第一章：方程组与线性变换</span><span class="nav-en" lang="en">Chapter 1: Linear Systems and Transformations</span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theorems/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">汇编入口 / Reference contents</span></a>
+  <a href="../chapter-01-overview.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">本章导读</span><span class="nav-en" lang="en">Chapter Overview</span></a>
+  </div>
+</li>
+          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">方程组与求解</span><span class="nav-en" lang="en">Systems and Elimination</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/linear-systems.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">线性方程组与矩阵表示</span><span class="nav-en" lang="en">Linear Systems and Matrix Representation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theorems/chapter-01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第1章 线性方程与变换 / Linear Equations</span></a>
+  <a href="../topics/gaussian-elimination.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">高斯消元法</span><span class="nav-en" lang="en">Gaussian Elimination</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">两种几何图像</span><span class="nav-en" lang="en">Two Geometric Pictures</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/row-picture.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">行图像</span><span class="nav-en" lang="en">Row Picture</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theorems/chapter-02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第2章 矩阵代数 / Matrix Algebra</span></a>
+  <a href="../topics/column-picture.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">列图像</span><span class="nav-en" lang="en">Column Picture</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">向量表达与解集结构</span><span class="nav-en" lang="en">Vector Form and Solution Structure</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/vector-and-matrix-equations.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">向量方程与矩阵方程</span><span class="nav-en" lang="en">Vector and Matrix Equations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theorems/chapter-03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第3章 行列式 / Determinants</span></a>
+  <a href="../topics/homogeneous-and-nonhomogeneous-equations.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">齐次与非齐次解集</span><span class="nav-en" lang="en">Homogeneous and Nonhomogeneous Solution Sets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theorems/chapter-04.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第4章 向量空间 / Vector Spaces</span></a>
+  <a href="../topics/span-column-and-null-spaces.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">张成、列空间与零空间</span><span class="nav-en" lang="en">Span, Column Space and Null Space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theorems/chapter-05.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第5章 特征值与特征向量 / Eigenvalues</span></a>
+  <a href="../lessons/05-independence.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">线性无关与表示的唯一性</span><span class="nav-en" lang="en">Linear Independence and Uniqueness of Representation</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">线性变换与消元</span><span class="nav-en" lang="en">Linear Transformations and Elimination</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/06-transformations.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">线性变换与矩阵表示</span><span class="nav-en" lang="en">Linear Transformations and Matrix Representations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theorems/chapter-06.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第6章 正交性与最小二乘 / Orthogonality</span></a>
+  <a href="../topics/elementary-row-matrices.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">初等行变换的矩阵</span><span class="nav-en" lang="en">Matrices for Elementary Row Operations</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theorems/chapter-07.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第7章 对称矩阵与SVD / Symmetric Matrices and SVD</span></a>
+  <a href="../chapter-01-review.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">综合复习</span><span class="nav-en" lang="en">Chapter Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-applications.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">应用选读</span><span class="nav-en" lang="en">Applications</span></a>
+  </div>
+</li>
+      </ul></li></ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-2" aria-label="第二章：矩阵代数 / Chapter 2: Matrix Algebra；草稿 / Draft"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">第二章：矩阵代数</span><span class="nav-en" lang="en">Chapter 2: Matrix Algebra</span><span class="nav-status"><span class="nav-zh" lang="zh-CN">草稿</span><span class="nav-en" lang="en">Draft</span></span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-overview.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">本章导读</span><span class="nav-en" lang="en">Chapter Overview</span></a>
+  </div>
+</li>
+          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">学习主题</span><span class="nav-en" lang="en">Core Topics</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">矩阵乘法的定义</span><span class="nav-en" lang="en">Defining Matrix Multiplication</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/08-inverses.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">逆矩阵与初等矩阵</span><span class="nav-en" lang="en">Inverse and Elementary Matrices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/09-invertibility-blocks.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">可逆矩阵定理与分块运算</span><span class="nav-en" lang="en">Invertible Matrix Theorem and Block Operations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">用 LU 分解记录消元</span><span class="nav-en" lang="en">Recording Elimination with LU Factorization</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-review.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">综合复习</span><span class="nav-en" lang="en">Chapter Review</span></a>
+  </div>
+</li>
+      </ul></li></ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section course-chapter current-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" type="button" aria-controls="quarto-sidebar-section-3" aria-label="第三章：行列式 / Chapter 3: Determinants；草稿 / Draft"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">第三章：行列式</span><span class="nav-en" lang="en">Chapter 3: Determinants</span><span class="nav-status"><span class="nav-zh" lang="zh-CN">草稿</span><span class="nav-en" lang="en">Draft</span></span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-overview.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">本章导读</span><span class="nav-en" lang="en">Chapter Overview</span></a>
+  </div>
+</li>
+          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">学习主题</span><span class="nav-en" lang="en">Core Topics</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/11-determinants.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">行列式的定义与展开</span><span class="nav-en" lang="en">Defining and Expanding Determinants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/12-determinants-properties.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">消元、行列式性质与可逆性</span><span class="nav-en" lang="en">Elimination, Determinant Properties and Invertibility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/13-cramer-adjugate.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">解方程与古典伴随矩阵</span><span class="nav-en" lang="en">Solving Systems and the Classical Adjugate</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/14-determinants-geometry.html" class="sidebar-item-text sidebar-link active" aria-current="page"><span class="nav-zh" lang="zh-CN">几何意义与前三章贯通</span><span class="nav-en" lang="en">Geometric Meaning and Connections across Chapters 1–3</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-other-definitions.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">行列式的其他定义（选读）</span><span class="nav-en" lang="en">Other Definitions of the Determinant (Optional)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-review.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">前三章综合复习</span><span class="nav-en" lang="en">Chapters 1–3 Review</span></a>
+  </div>
+</li>
+      </ul></li></ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-4" aria-label="定理汇编 / Theorem Reference"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">定理汇编</span><span class="nav-en" lang="en">Theorem Reference</span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/index.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">汇编入口</span><span class="nav-en" lang="en">Reference Contents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-01.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第1章：方程组与线性变换</span><span class="nav-en" lang="en">Chapter 1: Linear Systems and Transformations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-02.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第2章：矩阵代数</span><span class="nav-en" lang="en">Chapter 2: Matrix Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-03.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第3章：行列式</span><span class="nav-en" lang="en">Chapter 3: Determinants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-04.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第4章：向量空间</span><span class="nav-en" lang="en">Chapter 4: Vector Spaces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-05.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第5章：特征值与特征向量</span><span class="nav-en" lang="en">Chapter 5: Eigenvalues and Eigenvectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-06.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第6章：正交性与最小二乘</span><span class="nav-en" lang="en">Chapter 6: Orthogonality and Least Squares</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-07.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第7章：对称矩阵与 SVD</span><span class="nav-en" lang="en">Chapter 7: Symmetric Matrices and SVD</span></a>
   </div>
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">中英术语表</span><span class="nav-en" lang="en">Chinese–English Glossary</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">目录 / Contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active" aria-label="本页目录 / On This Page">
+    <h2 id="toc-title"><span class="nav-zh" lang="zh-CN">本页目录</span><span class="nav-en" lang="en">On This Page</span></h2>
    
   <ul class="collapse">
-  <li><a href="#geometry" id="toc-geometry" class="nav-link active" data-scroll-target="#geometry">有向面积与普通面积</a></li>
-  <li><a href="#elimination-bridge" id="toc-elimination-bridge" class="nav-link" data-scroll-target="#elimination-bridge">消元究竟保持什么？</a></li>
-  <li><a href="#connections" id="toc-connections" class="nav-link" data-scroll-target="#connections">前三章联系题：一个标量的边界</a></li>
+  <li><a href="#geometry" id="toc-geometry" class="nav-link active" data-scroll-target="#geometry"><span class="nav-zh" lang="zh-CN">有向面积与普通面积</span><span class="nav-en" lang="en">Signed Area and Ordinary Area</span></a></li>
+  <li><a href="#elimination-bridge" id="toc-elimination-bridge" class="nav-link" data-scroll-target="#elimination-bridge"><span class="nav-zh" lang="zh-CN">消元究竟保持什么？</span><span class="nav-en" lang="en">What Does Elimination Preserve?</span></a></li>
+  <li><a href="#connections" id="toc-connections" class="nav-link" data-scroll-target="#connections"><span class="nav-zh" lang="zh-CN">前三章联系题：一个标量的边界</span><span class="nav-en" lang="en">Connections across Chapters 1–3: The Limits of One Scalar</span></a></li>
   </ul>
 </nav>
     </div>
@@ -826,18 +840,19 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lessons/13-cramer-adjugate.html" class="pagination-link" aria-label="从解方程到古典伴随矩阵">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">从解方程到古典伴随矩阵</span></span>
+      <a href="../lessons/13-cramer-adjugate.html" class="pagination-link" aria-label="上一页 / Previous: 解方程与古典伴随矩阵 / Solving Systems and the Classical Adjugate">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="nav-zh" lang="zh-CN">解方程与古典伴随矩阵</span><span class="nav-en" lang="en">Solving Systems and the Classical Adjugate</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapter-03-other-definitions.html" class="pagination-link" aria-label="补充阅读 · 行列式的其他定义：排列、逆序数与基本性质">
-        <span class="nav-page-text"><span class="chapter-title">补充阅读 · 行列式的其他定义：排列、逆序数与基本性质</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapter-03-other-definitions.html" class="pagination-link" aria-label="下一页 / Next: 行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)">
+        <span class="nav-page-text"><span class="nav-zh" lang="zh-CN">行列式的其他定义（选读）</span><span class="nav-en" lang="en">Other Definitions of the Determinant (Optional)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
 <script src="../assets/math-layout.js"></script>
+<script src="../assets/navigation.js"></script>
 
 
 

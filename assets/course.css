@@ -57,7 +57,6 @@ math[tabindex]:focus-visible{outline:2px solid #22688b;outline-offset:2px}
 .theorem-reference #TOC .theorem-en { font-size: inherit; display: inline; color: inherit; }
 
 /* Chapter 1 bilingual navigation and embedded statements retain normal math size. */
-.sidebar-item-text, .sidebar-item-text .chapter-title, #TOC a, .nav-page-text { white-space: normal; overflow-wrap: anywhere; }
 .chapter-one main h2, .chapter-one main h3 { line-height: 1.5; overflow-wrap: anywhere; }
 .course-theorem { margin: 1.3rem 0; padding: .85rem 1rem; border-left: 4px solid #386d87; background: #f2f7fa; }
 .course-theorem > p:first-child { line-height: 1.7; }
@@ -71,8 +70,3 @@ math[tabindex]:focus-visible{outline:2px solid #22688b;outline-offset:2px}
 
 /* Chapter 1: bilingual hierarchy; translations stay readable in body and navigation. */
 .chapter-one main h2 .heading-en, .chapter-one main h3 .heading-en { display:block; margin-top:.3rem; font-size:1rem; font-weight:500; line-height:1.5; color:#435967; }
-.chapter-one #TOC .heading-en { display:block; margin-top:.12rem; font-size:.85rem; line-height:1.4; }
-.chapter-one .sidebar-item-text .nav-en, .chapter-one .nav-page-text .nav-en { display:block; margin-top:.18rem; font-size:.85rem; line-height:1.45; color:#435967; }
-.chapter-one .sidebar-item { margin-top:.3rem; margin-bottom:.3rem; }
-.chapter-one #TOC .nav-link { padding-top:.3rem; padding-bottom:.3rem; }
-.chapter-one .nav-page-text { line-height:1.5; }
