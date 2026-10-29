@@ -204,24 +204,39 @@ ul.task-list li input[type="checkbox"] {
   <a href="../chapter-02-overview.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">本部分导读</span><span class="nav-en" lang="en">Part Overview</span></a>
   </div>
 </li>
-          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">学习主题</span><span class="nav-en" lang="en">Core Topics</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">矩阵基本运算</span><span class="nav-en" lang="en">Basic Matrix Operations</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">矩阵运算</span><span class="nav-en" lang="en">Matrix Operations</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">逆矩阵与可逆性</span><span class="nav-en" lang="en">Inverse Matrices and Invertibility</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/08-inverses.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">逆矩阵与初等矩阵</span><span class="nav-en" lang="en">Inverse and Elementary Matrices</span></a>
+  <a href="../lessons/08-inverses.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">逆矩阵与逆变换</span><span class="nav-en" lang="en">Inverse Matrices and Inverse Transformations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/09-invertibility-blocks.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">可逆矩阵定理与分块运算</span><span class="nav-en" lang="en">Invertible Matrix Theorem and Block Operations</span></a>
+  <a href="../topics/elementary-matrices-and-inverses.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">初等矩阵与矩阵求逆</span><span class="nav-en" lang="en">Elementary Matrices and Computing Inverses</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">用 LU 分解记录消元</span><span class="nav-en" lang="en">Recording Elimination with LU Factorization</span></a>
+  <a href="../lessons/09-invertibility-blocks.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">可逆矩阵定理</span><span class="nav-en" lang="en">The Invertible Matrix Theorem</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">分块矩阵</span><span class="nav-en" lang="en">Partitioned Matrices</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/partitioned-matrices.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">分块表示与运算</span><span class="nav-en" lang="en">Block Representation and Operations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/inverses-of-partitioned-matrices.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">分块矩阵的逆</span><span class="nav-en" lang="en">Inverses of Partitioned Matrices</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">矩阵分解</span><span class="nav-en" lang="en">Matrix Factorizations</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
   </div>
 </li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
@@ -232,6 +247,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapter-02-review.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">综合复习</span><span class="nav-en" lang="en">Part Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-input-output.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">投入产出模型</span><span class="nav-en" lang="en">Input–Output Models</span></a>
   </div>
 </li>
       </ul></li></ul>
@@ -468,7 +488,7 @@ A^{-1}=\frac1{ad-bc}\begin{bmatrix}d&amp;-b\\-c&amp;a\end{bmatrix}.
 </annotation></semantics></math></p></li>
 <li><p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>d</mi><mo>−</mo><mi>b</mi><mi>c</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">ad-bc=0</annotation></semantics></math>，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 不可逆。</p></li>
 </ul>
-<p><strong>理解与回查。</strong> 先检查分母，再使用公式；奇异分支不能用“分母为零时公式无意义”代替不可逆结论。教材把证明留在 §2.2 Exercises 35–36。<a href="../lessons/08-inverses.html#inverse-computation">已有增广求逆计算</a>可与一般公式对照。</p>
+<p><strong>理解与回查。</strong> 先检查分母，再使用公式；奇异分支不能用“分母为零时公式无意义”代替不可逆结论。教材把证明留在 §2.2 Exercises 35–36。<a href="../lessons/08-inverses.html#two-by-two">一般二阶公式与两个分支</a>可与一般公式对照。</p>
 </section>
 <section id="lay6-ch02-thm05" class="level3">
 <h3 class="anchored" data-anchor-id="lay6-ch02-thm05">定理 5：可逆系统的唯一解 <span class="theorem-en">Solving with an Inverse</span></h3>
@@ -497,7 +517,7 @@ A^{-1}=\frac1{ad-bc}\begin{bmatrix}d&amp;-b\\-c&amp;a\end{bmatrix}.
 </div>
 <p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆当且仅当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 行等价于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>n</mi></msub><annotation encoding="application/x-tex">I_n</annotation></semantics></math>。此时，<strong>任何</strong>把 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 化成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>n</mi></msub><annotation encoding="application/x-tex">I_n</annotation></semantics></math> 的初等行操作序列，施加在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>n</mi></msub><annotation encoding="application/x-tex">I_n</annotation></semantics></math> 上都会得到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math>。</p>
 <p>因此在增广矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable class="augmented-table" data-rhs-columns="1" data-coefficient-columns="1"><mtr><mtd columnalign="center" style="text-align: center"><mi>A</mi></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>I</mi><mi>n</mi></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}{c|c}A&amp;I_n\end{array}\right]</annotation></semantics></math> 上同步操作，若左侧能化成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>n</mi></msub><annotation encoding="application/x-tex">I_n</annotation></semantics></math>，右侧即为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math>；若不能，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 不可逆。</p>
-<p><strong>理解与回查。</strong> 右侧记录同一串操作的作用。<a href="../lessons/08-inverses.html#elementary">初等矩阵解释</a>、<a href="../lessons/09-invertibility-blocks.html#reasoning">可逆性等价链</a>；教材证明与算法见 §2.2。</p>
+<p><strong>理解与回查。</strong> 右侧记录同一串操作的作用。<a href="../topics/elementary-matrices-and-inverses.html#row-reduction">初等矩阵解释</a>、<a href="../lessons/09-invertibility-blocks.html#reasoning">可逆性等价链</a>；教材证明与算法见 §2.2。</p>
 </section>
 </section>
 <section id="sec-2-3" class="level2">
@@ -543,7 +563,7 @@ S(T(\mathbf x))=\mathbf x,\qquad T(S(\mathbf x))=\mathbf x.
 </annotation></semantics></math></p>
 <p>则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math> 可逆当且仅当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆；此时满足上述双侧关系的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math> 唯一，且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math> 是线性变换，其公式为</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mi>𝐱</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">S(\mathbf x)=A^{-1}\mathbf x.</annotation></semantics></math></p>
-<p><strong>理解与回查。</strong> 两侧恒等分别保证可恢复原输入和每个输出都可被恢复。教材 §2.3 给出双侧定义，并在定理框中陈述等价、线性与唯一性；唯一性证明另指本节 Exercise 47。<a href="../lessons/08-inverses.html#meaning">已有逆的解释</a>与<a href="../lessons/06-transformations.html#elimination-map">列关系中的可逆变换</a>可帮助理解，完整一般命题见本条。</p>
+<p><strong>理解与回查。</strong> 两侧恒等分别保证可恢复原输入和每个输出都可被恢复。教材 §2.3 给出双侧定义，并在定理框中陈述等价、线性与唯一性；唯一性证明另指本节 Exercise 47。<a href="../lessons/09-invertibility-blocks.html#inverse-transformations">逆映射唯一且线性的完整论证</a>与<a href="../lessons/06-transformations.html#elimination-map">列关系中的可逆变换</a>可帮助理解，完整一般命题如上。</p>
 </section>
 </section>
 <section id="sec-2-4" class="level2">
@@ -558,7 +578,7 @@ S(T(\mathbf x))=\mathbf x,\qquad T(S(\mathbf x))=\mathbf x.
 AB=\sum_{k=1}^n\operatorname{col}_k(A)\operatorname{row}_k(B).
 </annotation></semantics></math></p>
 <p>每一项都是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">m\times p</annotation></semantics></math> 的外积（outer product），它们的和也是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">m\times p</annotation></semantics></math> 矩阵。</p>
-<p><strong>理解与回查。</strong> 行乘列算一个元素，列乘行产生整个矩阵；本定理把乘积拆成后者的和。第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(i,j)</annotation></semantics></math> 个元素都是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mi>k</mi></msub><msub><mi>a</mi><mrow><mi>i</mi><mi>k</mi></mrow></msub><msub><mi>b</mi><mrow><mi>k</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\sum_k a_{ik}b_{kj}</annotation></semantics></math>，给出逐元素证明。<a href="../lessons/09-invertibility-blocks.html#blocks">已有分块与外积例</a>；教材证明见 §2.4。</p>
+<p><strong>理解与回查。</strong> 行乘列算一个元素，列乘行产生整个矩阵；本定理把乘积拆成后者的和。第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(i,j)</annotation></semantics></math> 个元素都是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mi>k</mi></msub><msub><mi>a</mi><mrow><mi>i</mi><mi>k</mi></mrow></msub><msub><mi>b</mi><mrow><mi>k</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\sum_k a_{ik}b_{kj}</annotation></semantics></math>，给出逐元素证明。<a href="../topics/partitioned-matrices.html#column-row">一般列—行展开与数值例</a>；教材证明见 §2.4。</p>
 </section>
 </section>
 <section id="sec-2-6" class="level2">
@@ -576,7 +596,7 @@ c_{ij}\ge0,\quad d_i\ge0,\quad
 <p>则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>n</mi></msub><mo>−</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">I_n-C</annotation></semantics></math> 可逆，且</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>I</mi><mi>n</mi></msub><mo>−</mo><mi>C</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>−</mi><mn>1</mn></mrow></msup><mi>𝐝</mi></mrow><annotation encoding="application/x-tex">\mathbf x=(I_n-C)^{-1}\mathbf d</annotation></semantics></math></p>
 <p>是方程 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><mi>C</mi><mi>𝐱</mi><mo>+</mo><mi>𝐝</mi></mrow><annotation encoding="application/x-tex">\mathbf x=C\mathbf x+\mathbf d</annotation></semantics></math> 的<strong>唯一</strong>解，并且各分量非负。</p>
-<p><strong>理解与回查。</strong> 每列和严格小于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> 是保证可行总产出的充分条件，不能反写为必要条件。教材 §2.6 用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>+</mo><mi>C</mi><mo>+</mo><msup><mi>C</mi><mn>2</mn></msup><mo>+</mo><mi>⋯</mi></mrow><annotation encoding="application/x-tex">I+C+C^2+\cdots</annotation></semantics></math> 说明逆矩阵为何非负；模型定义也在本节。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐝</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf d=\mathbf0</annotation></semantics></math> 时唯一解是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟎</mn><annotation encoding="application/x-tex">\mathbf0</annotation></semantics></math>，也在结论内。</p>
+<p><strong>理解与回查。</strong> 每列和严格小于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> 是保证可行总产出的充分条件，不能反写为必要条件。教材 §2.6 用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>+</mo><mi>C</mi><mo>+</mo><msup><mi>C</mi><mn>2</mn></msup><mo>+</mo><mi>⋯</mi></mrow><annotation encoding="application/x-tex">I+C+C^2+\cdots</annotation></semantics></math> 说明逆矩阵为何非负；模型定义也在本节。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐝</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf d=\mathbf0</annotation></semantics></math> 时唯一解是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟎</mn><annotation encoding="application/x-tex">\mathbf0</annotation></semantics></math>，也在结论内。<a href="../chapter-02-input-output.html#model">投入产出阅读、完整理由与两部门计算</a>。</p>
 </section>
 </section>
 <section id="sec-2-8" class="level2">

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>第二部分 · 矩阵代数总览 – 线性代数 · 学习与复习</title>
+<title>第二部分 · 矩阵代数 – 线性代数 · 学习与复习</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
 @media(max-width:991.98px){#quarto-sidebar{position:static!important;width:auto!important;max-height:none!important;grid-column:page-start/page-end!important}#quarto-header{position:static!important}#quarto-content{padding-top:0!important;display:block!important;padding-inline:24px!important}}
 </style></noscript></head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating chapter-one quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -204,24 +204,39 @@ ul.task-list li input[type="checkbox"] {
   <a href="./chapter-02-overview.html" class="sidebar-item-text sidebar-link active" aria-current="page"><span class="nav-zh" lang="zh-CN">本部分导读</span><span class="nav-en" lang="en">Part Overview</span></a>
   </div>
 </li>
-          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">学习主题</span><span class="nav-en" lang="en">Core Topics</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">矩阵基本运算</span><span class="nav-en" lang="en">Basic Matrix Operations</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">矩阵运算</span><span class="nav-en" lang="en">Matrix Operations</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">逆矩阵与可逆性</span><span class="nav-en" lang="en">Inverse Matrices and Invertibility</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lessons/08-inverses.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">逆矩阵与初等矩阵</span><span class="nav-en" lang="en">Inverse and Elementary Matrices</span></a>
+  <a href="./lessons/08-inverses.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">逆矩阵与逆变换</span><span class="nav-en" lang="en">Inverse Matrices and Inverse Transformations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lessons/09-invertibility-blocks.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">可逆矩阵定理与分块运算</span><span class="nav-en" lang="en">Invertible Matrix Theorem and Block Operations</span></a>
+  <a href="./topics/elementary-matrices-and-inverses.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">初等矩阵与矩阵求逆</span><span class="nav-en" lang="en">Elementary Matrices and Computing Inverses</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">用 LU 分解记录消元</span><span class="nav-en" lang="en">Recording Elimination with LU Factorization</span></a>
+  <a href="./lessons/09-invertibility-blocks.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">可逆矩阵定理</span><span class="nav-en" lang="en">The Invertible Matrix Theorem</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">分块矩阵</span><span class="nav-en" lang="en">Partitioned Matrices</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/partitioned-matrices.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">分块表示与运算</span><span class="nav-en" lang="en">Block Representation and Operations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/inverses-of-partitioned-matrices.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">分块矩阵的逆</span><span class="nav-en" lang="en">Inverses of Partitioned Matrices</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">矩阵分解</span><span class="nav-en" lang="en">Matrix Factorizations</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
   </div>
 </li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
@@ -232,6 +247,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter-02-review.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">综合复习</span><span class="nav-en" lang="en">Part Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-02-input-output.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">投入产出模型</span><span class="nav-en" lang="en">Input–Output Models</span></a>
   </div>
 </li>
       </ul></li></ul>
@@ -336,16 +356,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" aria-label="本页目录 / On This Page">
+    <h2 id="toc-title"><span class="nav-zh" lang="zh-CN">本页目录</span><span class="nav-en" lang="en">On This Page</span></h2>
+   
+  <ul class="collapse">
+  <li><a href="#route" id="toc-route" class="nav-link active" data-scroll-target="#route">按问题顺读 <span class="heading-en">Read by Mathematical Questions</span></a></li>
+  <li><a href="#textbook" id="toc-textbook" class="nav-link" data-scroll-target="#textbook">复习、应用与教材定位 <span class="heading-en">Review, Application, and Textbook Locations</span></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">第二部分 · 矩阵代数总览</span></h1>
-<p class="subtitle lead">Part 2: Matrix Algebra Overview</p>
+<h1 class="title"><span class="chapter-title">第二部分 · 矩阵代数</span></h1>
+<p class="subtitle lead">Part 2: Matrix Algebra</p>
 </div>
 
 
@@ -362,45 +389,58 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>第一部分问哪些输入能到达给定输出。第二部分把变换的组合、可逆操作和消元过程组织成矩阵运算，再把同一次消元用于多个右端。</p>
+<p>第一部分问哪些输入能够得到给定输出，以及输入是否唯一。第二部分沿着两条相连的线继续：<strong>对一个向量作用 → 对多列作用 → 变换复合 → 恢复输入 → 分解操作</strong>；<strong>一个目标 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math> → 多个目标 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>X</mi><mo>=</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">AX=F</annotation></semantics></math> → 求逆与可逆性 → 保存消元、重复求解</strong>。</p>
+<section id="route" class="level2">
+<h2 class="anchored" data-anchor-id="route">按问题顺读 <span class="heading-en">Read by Mathematical Questions</span></h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>课</th>
-<th>学习入口</th>
-<th>主要问题</th>
+<th>学习入口 / Topic</th>
+<th>主要问题 / Guiding Question</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>7</td>
 <td><a href="./lessons/07-matrix-products.html">矩阵运算 / Matrix Operations</a></td>
-<td>逐列作用、行列点积与变换复合</td>
+<td>逐列作用、行列点积与变换复合为什么表示同一运算？</td>
 </tr>
 <tr class="even">
-<td>8</td>
-<td><a href="./lessons/08-inverses.html">逆矩阵与初等矩阵</a></td>
-<td>恢复输入与可逆行操作</td>
+<td><a href="./lessons/08-inverses.html">逆矩阵与逆变换 / Inverse Matrices and Inverse Transformations</a></td>
+<td>怎样唯一恢复输入？怎样同时处理多个目标？</td>
 </tr>
 <tr class="odd">
-<td>9</td>
-<td><a href="./lessons/09-invertibility-blocks.html">可逆矩阵定理与分块</a></td>
-<td>方阵条件、多右端组织</td>
+<td><a href="./topics/elementary-matrices-and-inverses.html">初等矩阵与矩阵求逆 / Elementary Matrices and Computing Inverses</a></td>
+<td>怎样把可撤销的行操作记录下来，化 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>？</td>
 </tr>
 <tr class="even">
-<td>10</td>
-<td><a href="./lessons/10-lu.html">保存消元的 LU</a></td>
-<td>一次分解、多次求解</td>
+<td><a href="./lessons/09-invertibility-blocks.html">可逆矩阵定理 / The Invertible Matrix Theorem</a></td>
+<td>对方阵，唯一性与所有目标的存在性为什么连接起来？</td>
+</tr>
+<tr class="odd">
+<td><a href="./topics/partitioned-matrices.html">分块表示与运算 / Block Representation and Operations</a></td>
+<td>怎样分组处理行列，同时保持尺寸与运算次序？</td>
+</tr>
+<tr class="even">
+<td><a href="./topics/inverses-of-partitioned-matrices.html">分块矩阵的逆 / Inverses of Partitioned Matrices</a></td>
+<td>哪些块结构允许分别恢复或逐步恢复输入？</td>
+</tr>
+<tr class="odd">
+<td><a href="./lessons/10-lu.html">LU分解与方程组求解 / LU Factorization and Solving Linear Systems</a></td>
+<td>怎样把 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 化为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math> 的过程保存下来，用于新的右端？</td>
 </tr>
 </tbody>
 </table>
-<p>各课正文、完整推理、计算、提示和答案均为核心复习；放在线上不等于选读。先独立计算，再展开答案。以实数为标量，方阵条件在相应结论处明确。</p>
-<p>本部分对应教材§2.1–2.5的核心主题。§2.8–2.9的子空间、维数与秩留第四部分；§2.6–2.7的专门应用保留候选。旧CR分解与四基本子空间的系统处理也留后续，未在本部分覆盖。</p>
-<p>小节主题依据<a href="https://www.pearson.com/en-us/subject-catalog/p/linear-algebra-and-its-applications/P200000006235?view=educator">Pearson第六版目录</a>核对。矩阵运算主题已按教材§2.1正文核对定义与定理1–3；其他主题的维护状态分别记录，不沿用旧讲义的页码、例号或题号。</p>
-<p>完成后进入<a href="./chapter-02-review.html">本部分复习</a>，或查询<a href="./glossary.html">中英术语表</a>。</p>
-<p><a href="./chapter-02-reference.html">本部分知识与术语速查</a>：按问题查看条件、公式、用法，并返回相应解释与计算训练。</p>
+<p>这些主题在实数范围内提供定义、推理、例题与独立计算。核心结果默认可见；提示、长证明与完整答案可以展开。在线完整内容供独立学习与复习，主题数不规定课堂次数。</p>
+</section>
+<section id="textbook" class="level2">
+<h2 class="anchored" data-anchor-id="textbook">复习、应用与教材定位 <span class="heading-en">Review, Application, and Textbook Locations</span></h2>
+<p>用<a href="./chapter-02-reference.html">知识与术语速查 / Concepts and Terminology</a>找条件，用<a href="./chapter-02-review.html">综合复习 / Part Review</a>连接概念，再读<a href="./chapter-02-input-output.html">投入产出模型 / Input–Output Models</a>，考察非负目标与非负产出的关系。</p>
+<p>本部分覆盖教材§2.1–2.5：定理1–10，以及没有编号定理的分块运算、三角结构、LU算法、矩形尺寸、换行与常规计算量。§2.6定理11在投入产出阅读中解释并计算；课堂可以不展开该应用，但完整说明可在此阅读。</p>
+<p>§2.8定理12的零空间结论已在<a href="./topics/span-column-and-null-spaces.html#null-space">第一部分</a>提前学习。§2.8定理13、§2.9定理14–15与可逆矩阵定理的后续扩展，以及基、维数、秩、秩不等式与CR分解，留第四部分。§2.7计算机图形应用没有在此完整展开；已经使用旋转与剪切并不等于学完该节。按教材顺序查阅时可使用<a href="./theorems/chapter-02.html">教材教材第2章定理汇编 / Textbook Chapter 2 Theorem Reference</a>，汇编中的完整陈述不替代各学习主题的解释。</p>
+<p>一般行列式理论在<a href="./chapter-03-overview.html">第三部分导读 / Part 3 Overview</a>继续；本部分仅在二阶求逆时使用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>d</mi><mo>−</mo><mi>b</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">ad-bc</annotation></semantics></math>。</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

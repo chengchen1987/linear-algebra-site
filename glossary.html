@@ -203,24 +203,39 @@ ul.task-list li input[type="checkbox"] {
   <a href="./chapter-02-overview.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">本部分导读</span><span class="nav-en" lang="en">Part Overview</span></a>
   </div>
 </li>
-          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">学习主题</span><span class="nav-en" lang="en">Core Topics</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">矩阵基本运算</span><span class="nav-en" lang="en">Basic Matrix Operations</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">矩阵运算</span><span class="nav-en" lang="en">Matrix Operations</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">逆矩阵与可逆性</span><span class="nav-en" lang="en">Inverse Matrices and Invertibility</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lessons/08-inverses.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">逆矩阵与初等矩阵</span><span class="nav-en" lang="en">Inverse and Elementary Matrices</span></a>
+  <a href="./lessons/08-inverses.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">逆矩阵与逆变换</span><span class="nav-en" lang="en">Inverse Matrices and Inverse Transformations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lessons/09-invertibility-blocks.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">可逆矩阵定理与分块运算</span><span class="nav-en" lang="en">Invertible Matrix Theorem and Block Operations</span></a>
+  <a href="./topics/elementary-matrices-and-inverses.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">初等矩阵与矩阵求逆</span><span class="nav-en" lang="en">Elementary Matrices and Computing Inverses</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">用 LU 分解记录消元</span><span class="nav-en" lang="en">Recording Elimination with LU Factorization</span></a>
+  <a href="./lessons/09-invertibility-blocks.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">可逆矩阵定理</span><span class="nav-en" lang="en">The Invertible Matrix Theorem</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">分块矩阵</span><span class="nav-en" lang="en">Partitioned Matrices</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/partitioned-matrices.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">分块表示与运算</span><span class="nav-en" lang="en">Block Representation and Operations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/inverses-of-partitioned-matrices.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">分块矩阵的逆</span><span class="nav-en" lang="en">Inverses of Partitioned Matrices</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">矩阵分解</span><span class="nav-en" lang="en">Matrix Factorizations</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
   </div>
 </li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
@@ -231,6 +246,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter-02-review.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">综合复习</span><span class="nav-en" lang="en">Part Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-02-input-output.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">投入产出模型</span><span class="nav-en" lang="en">Input–Output Models</span></a>
   </div>
 </li>
       </ul></li></ul>
@@ -634,74 +654,86 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">invertible matrix theorem</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">子矩阵；列—行展开</td>
+<td style="text-align: left;">submatrix; column–row expansion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">外积；叉积</td>
+<td style="text-align: left;">outer product; cross product</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">投入产出模型；消耗矩阵；最终需求</td>
+<td style="text-align: left;">input–output model; consumption matrix; final demand</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">分块矩阵</td>
 <td style="text-align: left;">partitioned matrix / block matrix</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">矩阵分解；LU分解</td>
 <td style="text-align: left;">matrix factorization; LU factorization</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">上三角；下三角；单位下三角</td>
 <td style="text-align: left;">upper triangular; lower triangular; unit lower triangular</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">消元乘子；置换矩阵</td>
 <td style="text-align: left;">elimination multiplier; permutation matrix</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">前代；回代</td>
 <td style="text-align: left;">forward substitution; back substitution</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">行列式</td>
 <td style="text-align: left;">determinant</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">余子式；代数余子式</td>
 <td style="text-align: left;">minor; cofactor</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">余子式展开</td>
 <td style="text-align: left;">cofactor expansion</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">有向面积；有向体积；定向</td>
 <td style="text-align: left;">signed area; signed volume; orientation</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">塌缩</td>
 <td style="text-align: left;">collapse</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">克拉默法则</td>
 <td style="text-align: left;">Cramer’s rule</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">古典伴随矩阵</td>
 <td style="text-align: left;">adjugate</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">删行删列子矩阵</td>
 <td style="text-align: left;">submatrix obtained by deleting a row and a column</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">单行/单列线性</td>
 <td style="text-align: left;">linearity in one row / one column</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">多重线性；交替性；归一化</td>
 <td style="text-align: left;">multilinearity; alternating property; normalization</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">排列；逆序对；逆序数</td>
 <td style="text-align: left;">permutation; inversion; inversion number</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">奇偶性；排列符号</td>
 <td style="text-align: left;">parity; sign of a permutation</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">排列展开</td>
 <td style="text-align: left;">Leibniz formula</td>
 </tr>
