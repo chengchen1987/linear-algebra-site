@@ -34,7 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./chapter-02-review.html" rel="next">
-<link href="./lessons/10-lu.html" rel="prev">
+<link href="./topics/four-fundamental-subspaces.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -239,6 +239,16 @@ ul.task-list li input[type="checkbox"] {
   <a href="./lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
   </div>
 </li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">独立关系与子空间</span><span class="nav-en" lang="en">Independence and Subspaces</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/matrix-rank-factorization.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">秩与秩分解</span><span class="nav-en" lang="en">Rank and Rank Factorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/four-fundamental-subspaces.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">四个基本子空间</span><span class="nav-en" lang="en">Four Fundamental Subspaces</span></a>
+  </div>
+</li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter-02-reference.html" class="sidebar-item-text sidebar-link active" aria-current="page"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
@@ -368,6 +378,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#blocks" id="toc-blocks" class="nav-link" data-scroll-target="#blocks">分块与列—行展开 <span class="heading-en">Blocks and Column–Row Expansion</span></a></li>
   <li><a href="#block-inverse" id="toc-block-inverse" class="nav-link" data-scroll-target="#block-inverse">分块逆 <span class="heading-en">Inverses of Partitioned Matrices</span></a></li>
   <li><a href="#lu" id="toc-lu" class="nav-link" data-scroll-target="#lu">LU、前代与回代 <span class="heading-en">LU Factorization and Substitution</span></a></li>
+  <li><a href="#rank" id="toc-rank" class="nav-link" data-scroll-target="#rank">基、坐标、秩与三种消元结果 <span class="heading-en">Bases, Coordinates, Rank and Three Elimination Outcomes</span></a></li>
+  <li><a href="#four-spaces" id="toc-four-spaces" class="nav-link" data-scroll-target="#four-spaces">四空间与相容性 <span class="heading-en">Four Spaces and Consistency</span></a></li>
   <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">投入产出 <span class="heading-en">Input–Output Models</span></a></li>
   </ul>
 </nav>
@@ -455,6 +467,42 @@ ul.task-list li input[type="checkbox"] {
 <section id="lu" class="level2">
 <h2 class="anchored" data-anchor-id="lu">LU、前代与回代 <span class="heading-en">LU Factorization and Substitution</span></h2>
 <p>对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>:</mo><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">A:m\times n</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>:</mo><mi>m</mi><mo>×</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">L:m\times m</annotation></semantics></math> 为单位下三角，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>:</mo><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">U:m\times n</annotation></semantics></math> 为阶梯形；不换行的下方消元给出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>L</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">A=LU</annotation></semantics></math>。换行时采用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>A</mi><mo>=</mo><mi>L</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">PA=LU</annotation></semantics></math>，右端同步变为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">P\mathbf b</annotation></semantics></math>。<a href="./lessons/10-lu.html#derivation">算法</a>、<a href="./lessons/10-lu.html#main-example">算例与两个右端向量</a>、<a href="./lessons/10-lu.html#rectangular">矩形及退化情形</a>、<a href="./lessons/10-lu.html#later-pivot">换行调整乘子</a>。常规稠密方阵分解为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>n</mi><mn>3</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(n^3)</annotation></semantics></math>，每个新右端求解为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math>，见<a href="./lessons/10-lu.html#cost">计算量范围</a>。</p>
+</section>
+<section id="rank" class="level2">
+<h2 class="anchored" data-anchor-id="rank">基、坐标、秩与三种消元结果 <span class="heading-en">Bases, Coordinates, Rank and Three Elimination Outcomes</span></h2>
+<p>一组基既无关又张成；维数是基的长度，坐标是相对于有序基的唯一表示系数。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">rank</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mrow><mi mathvariant="normal">dim</mi><mo>⁡</mo></mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{rank}A=\dim\operatorname{Col}A</annotation></semantics></math>，等于主元数；零矩阵秩为0。<a href="./topics/matrix-rank-factorization.html#dimension">定义及理由</a>、<a href="./topics/matrix-rank-factorization.html#coordinates">坐标</a>。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>结果 / Result</th>
+<th>对象及用途 / Objects and Uses</th>
+<th>回查 / Read More</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RREF：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math></td>
+<td>完整的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math> 简化阶梯形；规范读解与列关系</td>
+<td><a href="./topics/matrix-rank-factorization.html#rref-uniqueness">无循环的唯一性证明</a></td>
+</tr>
+<tr class="even">
+<td>LU：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>L</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">A=LU</annotation></semantics></math> 或 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>A</mi><mo>=</mo><mi>L</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">PA=LU</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>:</mo><mi>m</mi><mo>×</mo><mi>m</mi><mo>,</mo><mi>U</mi><mo>:</mo><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">L:m\times m,U:m\times n</annotation></semantics></math>；保存并复用消元</td>
+<td><a href="./lessons/10-lu.html#block-recursion">分块递推</a></td>
+</tr>
+<tr class="odd">
+<td>CR：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>C</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">A=CR</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>:</mo><mi>m</mi><mo>×</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">C:m\times r</annotation></semantics></math> 取原主元列，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>:</mo><mi>r</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">R:r\times n</annotation></semantics></math> 是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math> 的非零行；重建全部列</td>
+<td><a href="./topics/matrix-rank-factorization.html#cr">构造与证明</a></td>
+</tr>
+</tbody>
+</table>
+<p>行列秩相等，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">rank</mi><mo>⁡</mo></mrow><mi>A</mi><mo>+</mo><mrow><mi mathvariant="normal">dim</mi><mo>⁡</mo></mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">\operatorname{rank}A+\dim\operatorname{Nul}A=n</annotation></semantics></math>。基定理须先限定向量在同一个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> 维子空间内，再用“恰有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> 个且无关”或“恰有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> 个且张成”。<a href="./topics/matrix-rank-factorization.html#rank-nullity">定理14/15</a>、<a href="./topics/matrix-rank-factorization.html#invertible-rank">方阵可逆续篇m–q</a>。</p>
+</section>
+<section id="four-spaces" class="level2">
+<h2 class="anchored" data-anchor-id="four-spaces">四空间与相容性 <span class="heading-en">Four Spaces and Consistency</span></h2>
+<p>对秩 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math> 的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math> 矩阵，列空间与左零空间在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>m</mi></msup><annotation encoding="application/x-tex">\mathbb R^m</annotation></semantics></math>，维数分别 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>,</mo><mi>m</mi><mo>−</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">r,m-r</annotation></semantics></math>；行空间与零空间在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math>，维数分别 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>,</mo><mi>n</mi><mo>−</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">r,n-r</annotation></semantics></math>。<a href="./topics/four-fundamental-subspaces.html#four-spaces">四空间总表和基的计算</a>。</p>
+<p>给定 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐛</mi><annotation encoding="application/x-tex">\mathbf b</annotation></semantics></math> 时，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math> 相容，当且仅当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">rank</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>∣</mo><mi>𝐛</mi><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mrow><mi mathvariant="normal">rank</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{rank}[A\mid\mathbf b]=\operatorname{rank}A</annotation></semantics></math>，也当且仅当对全部 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐲</mi><mo>∈</mo><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>A</mi><mi>𝖳</mi></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf y\in\operatorname{Nul}(A^{\mathsf T})</annotation></semantics></math> 有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>𝐲</mi><mi>𝖳</mi></msup><mi>𝐛</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf y^{\mathsf T}\mathbf b=0</annotation></semantics></math>。<strong>相容以后</strong>，秩等于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 才给唯一解。对<strong>所有</strong>右端都有解则要求秩等于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>。<a href="./chapter-02-review.html#rank-criteria">量词判据与理由</a>、<a href="./topics/four-fundamental-subspaces.html#general-compatibility">左零空间的消元证明</a>。</p>
 </section>
 <section id="model" class="level2">
 <h2 class="anchored" data-anchor-id="model">投入产出 <span class="heading-en">Input–Output Models</span></h2>
@@ -866,8 +914,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./lessons/10-lu.html" class="pagination-link" aria-label="上一页 / Previous: LU分解与方程组求解 / LU Factorization and Solving Linear Systems">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></span>
+      <a href="./topics/four-fundamental-subspaces.html" class="pagination-link" aria-label="上一页 / Previous: 四个基本子空间 / Four Fundamental Subspaces">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="nav-zh" lang="zh-CN">四个基本子空间</span><span class="nav-en" lang="en">Four Fundamental Subspaces</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

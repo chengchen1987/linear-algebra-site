@@ -239,6 +239,16 @@ ul.task-list li input[type="checkbox"] {
   <a href="../lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
   </div>
 </li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">独立关系与子空间</span><span class="nav-en" lang="en">Independence and Subspaces</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/matrix-rank-factorization.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">秩与秩分解</span><span class="nav-en" lang="en">Rank and Rank Factorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/four-fundamental-subspaces.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">四个基本子空间</span><span class="nav-en" lang="en">Four Fundamental Subspaces</span></a>
+  </div>
+</li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapter-02-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
@@ -559,6 +569,7 @@ y&amp;=2.
 <p><strong>教材§1.2，定理1：简化阶梯形的唯一性 / Uniqueness of the Reduced Echelon Form</strong></p>
 <p>对任意 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math> 实矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>，存在且仅存在一个与 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 行等价（row equivalent）的简化行阶梯形矩阵（reduced row echelon form，RREF）。行等价指可用有限次初等行操作互相得到。</p>
 <p><a href="../theorems/chapter-01.html#lay6-ch01-thm01">定理汇编 / Theorem Reference</a></p>
+<p>第二部分学过基与表示系数后，可阅读<a href="../topics/matrix-rank-factorization.html#rref-uniqueness">由列关系证明RREF唯一性 / Proving RREF Uniqueness through Column Relations</a>。本部分先使用定理和消元算法；下面的两条数值路径用于核对，不代替一般证明。</p>
 </div>
 <p>因此主元位置与主元列确定；中间的主元数值和当前行可随操作路径改变。<a href="#rref-paths">不同路径的计算</a>说明这个区别，一般唯一性证明见教材附录A，这两条数值路径不是一般证明。</p>
 </section>

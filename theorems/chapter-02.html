@@ -239,6 +239,16 @@ ul.task-list li input[type="checkbox"] {
   <a href="../lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
   </div>
 </li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">独立关系与子空间</span><span class="nav-en" lang="en">Independence and Subspaces</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/matrix-rank-factorization.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">秩与秩分解</span><span class="nav-en" lang="en">Rank and Rank Factorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/four-fundamental-subspaces.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">四个基本子空间</span><span class="nav-en" lang="en">Four Fundamental Subspaces</span></a>
+  </div>
+</li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapter-02-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
@@ -617,6 +627,7 @@ c_{ij}\ge0,\quad d_i\ge0,\quad
 </div>
 <p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>。由 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的阶梯形确定主元列的<strong>下标</strong>，再从原矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 中取出这些列，它们构成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Col}A</annotation></semantics></math> 的一组基。</p>
 <p><strong>理解与回查。</strong> 行化简保留列之间的线性关系，却通常改变列空间；不能直接取阶梯形矩阵的列充当原列空间的基。教材 §2.8 的例7–8说明理由；<a href="../theorems/chapter-04.html#lay6-ch04-thm06">第四章定理6</a>重述。零矩阵没有主元列，零子空间的空基约定见下段。</p>
+<p><a href="../topics/matrix-rank-factorization.html#column-basis">第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2</a>。</p>
 </section>
 </section>
 <section id="sec-2-9" class="level2">
@@ -631,6 +642,7 @@ c_{ij}\ge0,\quad d_i\ge0,\quad
 <p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>，则</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">rank</mi><mo>⁡</mo></mrow><mi>A</mi><mo>+</mo><mrow><mi mathvariant="normal">dim</mi><mo>⁡</mo></mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mi>n</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\operatorname{rank}A+\dim\operatorname{Nul}A=n.</annotation></semantics></math></p>
 <p><strong>理解与回查。</strong> 主元列数与自由变量数合计为未知数个数 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>；不是行数 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>。零矩阵时为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>+</mo><mi>n</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">0+n=n</annotation></semantics></math>。教材 §2.9；更一般的讨论实际位于 <a href="../theorems/chapter-04.html#lay6-ch04-thm14">§4.5 定理14</a>，不是原书此处交叉引用所写的 §4.6。</p>
+<p><a href="../topics/matrix-rank-factorization.html#rank-nullity">第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2</a>。</p>
 </section>
 <section id="lay6-ch02-thm15" class="level3">
 <h3 class="anchored" data-anchor-id="lay6-ch02-thm15">定理 15：子空间的基定理 <span class="theorem-en">The Basis Theorem</span></h3>
@@ -643,13 +655,14 @@ c_{ij}\ge0,\quad d_i\ge0,\quad
 <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> 中任何恰含 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> 个向量、并且张成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> 的向量组，也都是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> 的基。</li>
 </ul>
 <p><strong>理解与回查。</strong> 数量等于维数时，只需检查“无关”或“张成”之一；向量首先必须属于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">p=0</annotation></semantics></math> 时按上面的零子空间约定解释。教材证明见 <a href="../theorems/chapter-04.html#lay6-ch04-thm13">§4.5 定理13</a>。</p>
+<p><a href="../topics/matrix-rank-factorization.html#basis-theorem">第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2</a>。</p>
 </section>
 <section id="lay6-ch02-imt-sec29" class="level3">
 <h3 class="anchored" data-anchor-id="lay6-ch02-imt-sec29">可逆矩阵定理续篇：基、秩与零空间扩展 <span class="theorem-en">The Invertible Matrix Theorem (continued)</span></h3>
 <div class="theorem-source">
 <p>来源 / Source：教材第2章 / Chapter 2，§2.9，The Invertible Matrix Theorem (continued)。教材原题名。</p>
 </div>
-<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math>。以下每一项都等价于“<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆”，也等价于 <a href="#lay6-ch02-thm08">§2.3 的(a)–(l)</a>：</p>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math>。以下每一项都等价于“<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆”，也等价于 §2.3 的(a)–(l)：</p>
 <ol start="13" type="a">
 <li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的列向量构成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 的一组基。</p></li>
 <li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\operatorname{Col}A=\mathbb R^n</annotation></semantics></math>。</p></li>
@@ -658,6 +671,7 @@ c_{ij}\ge0,\quad d_i\ge0,\quad
 <li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>𝟎</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A=\{\mathbf0\}</annotation></semantics></math>。</p></li>
 </ol>
 <p><strong>理解与回查。</strong> 新概念是基、维数、秩和零空间；(m)把无关与张成合写，(o)–(q)把主元与自由变量语言改写为维数语言。教材论证 §2.9。本处新增五项，<a href="../theorems/chapter-04.html#lay6-ch04-imt-sec45">§4.5</a>再次陈述同一五项；随后有 <a href="../theorems/chapter-05.html#lay6-ch05-imt-sec52">r</a> 与 <a href="../theorems/chapter-07.html#lay6-ch07-imt-sec74">s–v</a>。</p>
+<p><a href="../topics/matrix-rank-factorization.html#invertible-rank">第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2</a>。</p>
 
 
 </section>

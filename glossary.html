@@ -238,6 +238,16 @@ ul.task-list li input[type="checkbox"] {
   <a href="./lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
   </div>
 </li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">独立关系与子空间</span><span class="nav-en" lang="en">Independence and Subspaces</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/matrix-rank-factorization.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">秩与秩分解</span><span class="nav-en" lang="en">Rank and Rank Factorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/four-fundamental-subspaces.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">四个基本子空间</span><span class="nav-en" lang="en">Four Fundamental Subspaces</span></a>
+  </div>
+</li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter-02-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
@@ -458,292 +468,320 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">dimension</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">基；有序基；空基</td>
+<td style="text-align: left;">basis; ordered basis; empty basis</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">坐标；坐标向量</td>
+<td style="text-align: left;">coordinates; coordinate vector</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">秩；零度</td>
+<td style="text-align: left;">rank; nullity</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">满行秩；满列秩</td>
+<td style="text-align: left;">full row rank; full column rank</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CR分解；秩分解</td>
+<td style="text-align: left;">CR factorization; rank factorization</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">行空间；左零空间</td>
+<td style="text-align: left;">row space; left null space</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">四个基本子空间</td>
+<td style="text-align: left;">four fundamental subspaces</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">唯一解；无穷多解；无解</td>
 <td style="text-align: left;">unique solution; infinitely many solutions; no solution</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">消元；列图像</td>
 <td style="text-align: left;">elimination; column picture</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">线性组合；矩阵方程</td>
 <td style="text-align: left;">linear combination; matrix equation</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">列向量；分量</td>
 <td style="text-align: left;">column vector; component</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">系数矩阵；增广矩阵</td>
 <td style="text-align: left;">coefficient matrix; augmented matrix</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">线性变换；可逆线性变换</td>
 <td style="text-align: left;">linear transformation; invertible linear transformation</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">逆变换；逆操作</td>
 <td style="text-align: left;">inverse transformation; inverse operation</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">初等行变换；行等价</td>
 <td style="text-align: left;">elementary row operation; row equivalence</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">行阶梯形；简化行阶梯形</td>
 <td style="text-align: left;">row echelon form (REF); reduced row echelon form (RREF)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">主元；主元位置；主元行；主元列</td>
 <td style="text-align: left;">pivot; pivot position; pivot row; pivot column</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">基本变量；自由变量</td>
 <td style="text-align: left;">basic variable; free variable</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">参数表示</td>
 <td style="text-align: left;">parametric representation</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">自由度；独立约束</td>
 <td style="text-align: left;">degrees of freedom; independent constraint</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">高斯消元法</td>
 <td style="text-align: left;">Gaussian elimination</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">向前消元；向后消元</td>
 <td style="text-align: left;">forward elimination; backward elimination</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">列空间；张成</td>
 <td style="text-align: left;">column space; span</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">向量；数乘</td>
 <td style="text-align: left;">vector; scalar multiplication</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">矩阵向量乘法；矩阵向量乘积</td>
 <td style="text-align: left;">matrix-vector multiplication; matrix-vector product</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">点积；标准内积（实坐标）</td>
 <td style="text-align: left;">dot product; standard inner product (real coordinates)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">行向量</td>
 <td style="text-align: left;">row vector</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">向量方程</td>
 <td style="text-align: left;">vector equation</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">零空间；线性子空间</td>
 <td style="text-align: left;">null space; linear subspace</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">封闭性；仿射子空间</td>
 <td style="text-align: left;">closure; affine subspace</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">线性性；向量加法</td>
 <td style="text-align: left;">linearity; vector addition</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">张成集</td>
 <td style="text-align: left;">span</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">齐次方程组；非齐次方程组</td>
 <td style="text-align: left;">homogeneous linear system; nonhomogeneous linear system</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">零解；非零解</td>
 <td style="text-align: left;">zero solution; nonzero solution</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">平凡解；非平凡解</td>
 <td style="text-align: left;">trivial solution; nontrivial solution</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">特解；参数向量形式</td>
 <td style="text-align: left;">particular solution; parametric vector form</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">平移</td>
 <td style="text-align: left;">translation</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">线性无关；线性相关</td>
 <td style="text-align: left;">linear independence; linear dependence</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">映射；像</td>
 <td style="text-align: left;">mapping; image</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">定义域；陪域（目标空间）；值域</td>
 <td style="text-align: left;">domain; codomain; range</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">标准单位向量；标准矩阵</td>
 <td style="text-align: left;">standard unit vector; standard matrix</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">单射；满射</td>
 <td style="text-align: left;">one-to-one / injective; onto / surjective</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">解集结构</td>
 <td style="text-align: left;">structure of the solution set</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">主动变换；旋转</td>
 <td style="text-align: left;">active transformation; rotation</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">初等矩阵；单位矩阵</td>
 <td style="text-align: left;">elementary matrix; identity matrix</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">单位方向向量；拉力大小</td>
 <td style="text-align: left;">unit direction vector; tension magnitude</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">力平衡</td>
 <td style="text-align: left;">force equilibrium</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">稳态；无积累</td>
 <td style="text-align: left;">steady state; no accumulation</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">流量守恒；环流</td>
 <td style="text-align: left;">flow conservation; circulation</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">矩阵乘法；复合</td>
 <td style="text-align: left;">matrix multiplication; composition</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">矩阵加法；转置</td>
 <td style="text-align: left;">matrix addition; transpose</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">剪切；反射</td>
 <td style="text-align: left;">shear; reflection</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">消去律；零乘积性质</td>
 <td style="text-align: left;">cancellation law; zero-product property</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">逆矩阵；可逆</td>
 <td style="text-align: left;">inverse matrix; invertible</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">非奇异；奇异</td>
 <td style="text-align: left;">nonsingular; singular</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">可逆矩阵定理</td>
 <td style="text-align: left;">invertible matrix theorem</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">子矩阵；列—行展开</td>
 <td style="text-align: left;">submatrix; column–row expansion</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">外积；叉积</td>
 <td style="text-align: left;">outer product; cross product</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">投入产出模型；消耗矩阵；最终需求</td>
 <td style="text-align: left;">input–output model; consumption matrix; final demand</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">分块矩阵</td>
 <td style="text-align: left;">partitioned matrix / block matrix</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">矩阵分解；LU分解</td>
 <td style="text-align: left;">matrix factorization; LU factorization</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">上三角；下三角；单位下三角</td>
 <td style="text-align: left;">upper triangular; lower triangular; unit lower triangular</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">消元乘子；置换矩阵</td>
 <td style="text-align: left;">elimination multiplier; permutation matrix</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">前代；回代</td>
 <td style="text-align: left;">forward substitution; back substitution</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">行列式</td>
 <td style="text-align: left;">determinant</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">余子式；代数余子式</td>
 <td style="text-align: left;">minor; cofactor</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">余子式展开</td>
 <td style="text-align: left;">cofactor expansion</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">有向面积；有向体积；定向</td>
 <td style="text-align: left;">signed area; signed volume; orientation</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">塌缩</td>
 <td style="text-align: left;">collapse</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">克拉默法则</td>
 <td style="text-align: left;">Cramer’s rule</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">古典伴随矩阵</td>
 <td style="text-align: left;">adjugate</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">删行删列子矩阵</td>
 <td style="text-align: left;">submatrix obtained by deleting a row and a column</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">单行/单列线性</td>
 <td style="text-align: left;">linearity in one row / one column</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">多重线性；交替性；归一化</td>
 <td style="text-align: left;">multilinearity; alternating property; normalization</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">排列；逆序对；逆序数</td>
 <td style="text-align: left;">permutation; inversion; inversion number</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">奇偶性；排列符号</td>
 <td style="text-align: left;">parity; sign of a permutation</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">排列展开</td>
 <td style="text-align: left;">Leibniz formula</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">逆操作；逆变换（逆映射）；逆矩阵</td>
 <td style="text-align: left;">inverse operation; inverse transformation (inverse map); inverse matrix</td>
 </tr>
 </tbody>
 </table>
-<p>记号约定：方程用“式（1）”等编号及链接；矩阵的行用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>i</mi></msub><annotation encoding="application/x-tex">R_i</annotation></semantics></math>，行操作如 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>←</mo><msub><mi>R</mi><mn>2</mn></msub><mo>+</mo><mn>2</mn><msub><mi>R</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">R_2\leftarrow R_2+2R_1</annotation></semantics></math>；变换用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math> 或明确下标，初等矩阵用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math> 或下标。 线性变换主题说明 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>λ</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>E</mi><mi>λ</mi></msub><mi>𝐯</mi></mrow><annotation encoding="application/x-tex">T_\lambda(\mathbf{v})=E_\lambda\mathbf{v}</annotation></semantics></math>；规则与表示它的矩阵各有明确含义。 <a href="./topics/span-column-and-null-spaces.html">张成、列空间与零空间</a>用含零、加法/数乘封闭逐项检查线性子空间；一般理论、基、维数与秩留后续系统学习。</p>
+<p>记号约定：方程用“式（1）”等编号及链接；矩阵的行用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>i</mi></msub><annotation encoding="application/x-tex">R_i</annotation></semantics></math>，行操作如 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>←</mo><msub><mi>R</mi><mn>2</mn></msub><mo>+</mo><mn>2</mn><msub><mi>R</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">R_2\leftarrow R_2+2R_1</annotation></semantics></math>；变换用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math> 或明确下标，初等矩阵用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math> 或下标。 线性变换主题说明 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>λ</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>E</mi><mi>λ</mi></msub><mi>𝐯</mi></mrow><annotation encoding="application/x-tex">T_\lambda(\mathbf{v})=E_\lambda\mathbf{v}</annotation></semantics></math>；规则与表示它的矩阵各有明确含义。 <a href="./topics/span-column-and-null-spaces.html">张成、列空间与零空间</a>用含零、加法/数乘封闭逐项检查线性子空间；具体欧氏子空间的<a href="./topics/matrix-rank-factorization.html">基、坐标、维数与秩</a>及<a href="./topics/four-fundamental-subspaces.html">四个基本子空间</a>在第二部分继续；一般向量空间和换基在第四部分深化。</p>
 <p>维数在第一部分仅作“独立可选坐标数”的初步理解；正式理论以后学习。每行/每列有主元均指系数矩阵消元所揭示的主元位置。</p>
 <p>独立查阅定义、尺寸、条件和用法：<a href="./chapter-01-reference.html">第一部分</a> · <a href="./chapter-02-reference.html">第二部分</a> · <a href="./chapter-03-reference.html#properties">第三部分性质</a>。排列等术语只属于<a href="./chapter-03-other-definitions.html">独立补充阅读</a>。</p>
 <p>基础复习：<a href="./topics/linear-systems.html#terms">方程组与矩阵表示</a> · <a href="./topics/gaussian-elimination.html#terms">高斯消元法</a>。</p>

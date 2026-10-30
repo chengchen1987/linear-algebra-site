@@ -239,6 +239,16 @@ ul.task-list li input[type="checkbox"] {
   <a href="./lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
   </div>
 </li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">独立关系与子空间</span><span class="nav-en" lang="en">Independence and Subspaces</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/matrix-rank-factorization.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">秩与秩分解</span><span class="nav-en" lang="en">Rank and Rank Factorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/four-fundamental-subspaces.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">四个基本子空间</span><span class="nav-en" lang="en">Four Fundamental Subspaces</span></a>
+  </div>
+</li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter-02-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
@@ -361,7 +371,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title"><span class="nav-zh" lang="zh-CN">本页目录</span><span class="nav-en" lang="en">On This Page</span></h2>
    
   <ul class="collapse">
-  <li><a href="#three-connections" id="toc-three-connections" class="nav-link active" data-scroll-target="#three-connections">三条连接 <span class="heading-en">Three Connections</span></a></li>
+  <li><a href="#three-connections" id="toc-three-connections" class="nav-link active" data-scroll-target="#three-connections">同一次消元回答哪些问题？ <span class="heading-en">What Can One Elimination Tell Us?</span></a></li>
+  <li><a href="#synthesis-example" id="toc-synthesis-example" class="nav-link" data-scroll-target="#synthesis-example">从一个矩阵读出解与关系 <span class="heading-en">Solutions and Relations from One Matrix</span></a></li>
+  <li><a href="#rank-criteria" id="toc-rank-criteria" class="nav-link" data-scroll-target="#rank-criteria">给定右端与所有右端：秩判据 <span class="heading-en">Rank Criteria for a Given or Every Right-Hand Side</span></a></li>
+  <li><a href="#factorizations" id="toc-factorizations" class="nav-link" data-scroll-target="#factorizations">RREF、LU与CR各保存什么？ <span class="heading-en">What Do RREF, LU and CR Preserve?</span></a></li>
   <li><a href="#review-problems" id="toc-review-problems" class="nav-link" data-scroll-target="#review-problems">独立复习题 <span class="heading-en">Independent Review Problems</span></a></li>
   <li><a href="#旧训练保留特殊分块乘积核心在线" id="toc-旧训练保留特殊分块乘积核心在线" class="nav-link" data-scroll-target="#旧训练保留特殊分块乘积核心在线">分块与多个方程组 <span class="heading-en">Blocks and Multiple Linear Systems</span></a></li>
   <li><a href="#连接应用与后续-connections-to-applications-and-what-follows" id="toc-连接应用与后续-connections-to-applications-and-what-follows" class="nav-link" data-scroll-target="#连接应用与后续-connections-to-applications-and-what-follows">连接应用与后续 <span class="heading-en">Connections to Applications and What Follows</span></a></li>
@@ -392,8 +405,103 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="three-connections" class="level2">
-<h2 class="anchored" data-anchor-id="three-connections">三条连接 <span class="heading-en">Three Connections</span></h2>
-<p>矩阵乘法由逐列作用定义，也表示线性变换的复合；逆矩阵把输出恢复为唯一输入；已有的LU分解可以用于求解同一系数矩阵对应的多个方程组。回看<a href="./chapter-02-overview.html">本部分导读 / Part Overview</a>中从运算、逆、分块到分解的学习路线。分块组织同一矩阵，分解则写出矩阵乘积。</p>
+<h2 class="anchored" data-anchor-id="three-connections">同一次消元回答哪些问题？ <span class="heading-en">What Can One Elimination Tell Us?</span></h2>
+<p>矩阵运算、求逆与LU解决怎样计算和复用的问题；秩、CR与四空间解释独立关系和相容性。把它们放回同一个方程组，能够同时看清“当前右端是否可达”和“所有右端是否都可达”的区别。先独立完成下面的综合例，再用后面的判据整理理由。</p>
+</section>
+<section id="synthesis-example" class="level2">
+<h2 class="anchored" data-anchor-id="synthesis-example">从一个矩阵读出解与关系 <span class="heading-en">Solutions and Relations from One Matrix</span></h2>
+<p>取熟悉的矩形矩阵 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>𝐛</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo>,</mo><mi>s</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">A=\begin{bmatrix}1&amp;2&amp;0&amp;1\\0&amp;0&amp;1&amp;1\\1&amp;2&amp;1&amp;2\end{bmatrix},\qquad\mathbf b=(p,q,s)^{\mathsf T}.</annotation></semantics></math> 依次做 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>3</mn></msub><mo>←</mo><msub><mi>R</mi><mn>3</mn></msub><mo>−</mo><msub><mi>R</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">R_3\leftarrow R_3-R_1</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>3</mn></msub><mo>←</mo><msub><mi>R</mi><mn>3</mn></msub><mo>−</mo><msub><mi>R</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">R_3\leftarrow R_3-R_2</annotation></semantics></math>。请回答：</p>
+<ol type="1">
+<li>当前方程组何时有解？有解时是否唯一，有几个自由变量？</li>
+<li>哪些原列构成基？其余列怎样表示？写出CR分解。</li>
+<li>写出行空间、列空间、零空间和左零空间的基、环境空间与维数。</li>
+<li>哪条行关系限制了 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐛</mi><annotation encoding="application/x-tex">\mathbf b</annotation></semantics></math>？换一组右端时，哪些结果可复用？</li>
+</ol>
+<details class="review-answer"><summary>分步提示 / Step-by-Step Hints</summary>
+<p>先看增广最后一行，再看系数主元列1、3。CR的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> 取原列；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math> 只取完整RREF的非零行。齐次解取自由变量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">x_2,x_4</annotation></semantics></math>；左零空间可从第三行是前两行之和读出。</p>
+</details>
+<details class="review-answer"><summary>完整答案 / Full Solution</summary>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>∣</mo><mi>𝐛</mi><mo stretchy="false" form="postfix">]</mo><mspace width="0.222em"></mspace><mo>→</mo><mspace width="0.222em"></mspace><mrow><mo stretchy="true" form="prefix">[</mo><mtable class="augmented-table" data-rhs-columns="1" data-coefficient-columns="4"><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>p</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>q</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>s</mi><mo>−</mo><mi>p</mi><mo>−</mo><mi>q</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">[A\mid\mathbf b]\ \longrightarrow\
+\left[\begin{array}{cccc|c}1&amp;2&amp;0&amp;1&amp;p\\0&amp;0&amp;1&amp;1&amp;q\\0&amp;0&amp;0&amp;0&amp;s-p-q\end{array}\right].</annotation></semantics></math> 相容当且仅当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>p</mi><mo>+</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">s=p+q</annotation></semantics></math>。相容时有两个自由变量，全部解为 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>p</mi><mo>−</mo><mn>2</mn><mi>u</mi><mo>−</mo><mi>v</mi><mo>,</mo><mi>u</mi><mo>,</mo><mi>q</mi><mo>−</mo><mi>v</mi><mo>,</mo><mi>v</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup><mo>,</mo><mspace width="2.0em"></mspace><mi>u</mi><mo>,</mo><mi>v</mi><mo>∈</mo><mi>ℝ</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf x=(p-2u-v,u,q-v,v)^{\mathsf T},\qquad u,v\in\mathbb R.</annotation></semantics></math> 原列1、3独立，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐚</mi><mn>2</mn></msub><mo>=</mo><mn>2</mn><msub><mi>𝐚</mi><mn>1</mn></msub><mo>,</mo><msub><mi>𝐚</mi><mn>4</mn></msub><mo>=</mo><msub><mi>𝐚</mi><mn>1</mn></msub><mo>+</mo><msub><mi>𝐚</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">\mathbf a_2=2\mathbf a_1,\mathbf a_4=\mathbf a_1+\mathbf a_3</annotation></semantics></math>，所以 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mi>C</mi><mi>R</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">A=\begin{bmatrix}1&amp;0\\0&amp;1\\1&amp;1\end{bmatrix}\begin{bmatrix}1&amp;2&amp;0&amp;1\\0&amp;0&amp;1&amp;1\end{bmatrix}=CR.</annotation></semantics></math> 列空间基为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup><mo>,</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,0,1)^{\mathsf T},(0,1,1)^{\mathsf T}</annotation></semantics></math>，在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb R^3</annotation></semantics></math> 中维数2；行空间基为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup><mo>,</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,2,0,1)^{\mathsf T},(0,0,1,1)^{\mathsf T}</annotation></semantics></math>，在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>4</mn></msup><annotation encoding="application/x-tex">\mathbb R^4</annotation></semantics></math> 中维数2。零空间基为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup><mo>,</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi>−</mi><mn>1</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(-2,1,0,0)^{\mathsf T},(-1,0,-1,1)^{\mathsf T}</annotation></semantics></math>，在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>4</mn></msup><annotation encoding="application/x-tex">\mathbb R^4</annotation></semantics></math> 中维数2；左零空间基为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo>,</mo><mi>−</mi><mn>1</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(-1,-1,1)^{\mathsf T}</annotation></semantics></math>，在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb R^3</annotation></semantics></math> 中维数1。</p>
+<p>行关系 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><msub><mi>R</mi><mn>1</mn></msub><mo>−</mo><msub><mi>R</mi><mn>2</mn></msub><mo>+</mo><msub><mi>R</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">-R_1-R_2+R_3=0</annotation></semantics></math> 要求 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>p</mi><mo>−</mo><mi>q</mi><mo>+</mo><mi>s</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">-p-q+s=0</annotation></semantics></math>。固定 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 后，四空间、CR以及操作矩阵 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">G=\begin{bmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\\-1&amp;-1&amp;1\end{bmatrix}</annotation></semantics></math> 均可复用；只需计算新 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">G\mathbf b</annotation></semantics></math> 并读解。若保留前向消元的因子，也有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>L</mi><mi>F</mi></mrow><annotation encoding="application/x-tex">A=LF</annotation></semantics></math>，其中 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><msup><mi>G</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">L=G^{-1}=\begin{bmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\\1&amp;1&amp;1\end{bmatrix}</annotation></semantics></math>。本例 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">U=F</annotation></semantics></math> 恰已是RREF，一般LU中的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math> 不必如此。</p>
+</details>
+</section>
+<section id="rank-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="rank-criteria">给定右端与所有右端：秩判据 <span class="heading-en">Rank Criteria for a Given or Every Right-Hand Side</span></h2>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mrow><mi mathvariant="normal">rank</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">r=\operatorname{rank}A</annotation></semantics></math>。先明确量词，再翻译成主元或空间语言。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>问题 / Question</th>
+<th>判据 / Criterion</th>
+<th>理由 / Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>给定 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐛</mi><annotation encoding="application/x-tex">\mathbf b</annotation></semantics></math> 是否有解？ / A given right-hand side</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">rank</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>∣</mo><mi>𝐛</mi><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">\operatorname{rank}[A\mid\mathbf b]=r</annotation></semantics></math></td>
+<td>常数列不新增主元，等价于无矛盾行，也等价于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>∈</mo><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\mathbf b\in\operatorname{Col}A</annotation></semantics></math></td>
+</tr>
+<tr class="even">
+<td>相容时是否唯一？ / Uniqueness when consistent</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">r=n</annotation></semantics></math></td>
+<td>没有自由变量；否则有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">n-r</annotation></semantics></math> 个自由变量和无穷多解</td>
+</tr>
+<tr class="odd">
+<td>每个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf b\in\mathbb R^m</annotation></semantics></math> 都有解？ / Every right-hand side</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">r=m</annotation></semantics></math></td>
+<td>每行有主元，列空间等于整个陪域</td>
+</tr>
+<tr class="even">
+<td>方阵是否可逆？ / Invertibility of a square matrix</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m=n</annotation></semantics></math> 且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">r=n</annotation></semantics></math></td>
+<td>每行、每列都有主元，所有右端都唯一可解</td>
+</tr>
+</tbody>
+</table>
+<p>第一行可从任一阶梯化理解：若消元后的常数列在系数部分零行处出现非零元素，就新增一个主元，增广秩比 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math> 大1；否则不新增主元。第二行必须先有相容性，不能仅凭列无关断言当前有解。对所有右端“至多一个解”要求 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">r=n</annotation></semantics></math>，允许某些右端无解；“至少一个解”要求 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">r=m</annotation></semantics></math>，允许多个解。长方形矩阵的“满行秩”和“满列秩”须分清。</p>
+<p>相容性还可由<a href="./topics/four-fundamental-subspaces.html#general-compatibility">左零空间条件</a>判断；其双向证明来自消元，不需提前使用正交补。第一部分的<a href="./chapter-01-review.html#solution-perspectives">两张综合表</a>仍按原语言成立，这里增加的是基和维数的计数方式。</p>
+</section>
+<section id="factorizations" class="level2">
+<h2 class="anchored" data-anchor-id="factorizations">RREF、LU与CR各保存什么？ <span class="heading-en">What Do RREF, LU and CR Preserve?</span></h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>形式 / Form</th>
+<th>保存的信息 / Information</th>
+<th>主要用途 / Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mi>A</mi><mo>=</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">GA=F</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>为完整RREF</td>
+<td>规范的主元位置、变量及列关系；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>G</mi><annotation encoding="application/x-tex">G</annotation></semantics></math>可另记录操作</td>
+<td>读全部解，判断相容，证明规范形式唯一</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>L</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">A=LU</annotation></semantics></math> 或 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>A</mi><mo>=</mo><mi>L</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">PA=LU</annotation></semantics></math></td>
+<td>前向消元乘子和阶梯形 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math></td>
+<td>对不同右端反复前代、回代</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>C</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">A=CR</annotation></semantics></math></td>
+<td>原独立列与所有列的坐标</td>
+<td>表示、重建矩阵，理解秩及列关系</td>
+</tr>
+</tbody>
+</table>
+<p>RREF不是把原列空间原样留下；LU不要求把主元归一或清上方；CR的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math> 不含完整RREF的零行。三者来自相关的消元知识，却回答不同问题。分块则是组织同一矩阵的行列，不是第四种分解。</p>
 </section>
 <section id="review-problems" class="level2">
 <h2 class="anchored" data-anchor-id="review-problems">独立复习题 <span class="heading-en">Independent Review Problems</span></h2>
@@ -435,7 +543,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="连接应用与后续-connections-to-applications-and-what-follows" class="level2">
 <h2 class="anchored" data-anchor-id="连接应用与后续-connections-to-applications-and-what-follows">连接应用与后续 <span class="heading-en">Connections to Applications and What Follows</span></h2>
-<p>在<a href="./chapter-02-input-output.html">投入产出模型</a>中辨认固定的系数矩阵与改变的目标，说明非负性与每列元素之和小于1的条件，如何保证存在唯一的非负解。这是一组充分条件，不是所有可解模型都必须满足的条件。一般行列式理论在<a href="./chapter-03-overview.html">第三部分导读</a>继续；基、维数、秩及CR分解留第四部分。</p>
+<p>在<a href="./chapter-02-input-output.html">投入产出模型</a>中辨认固定的系数矩阵与改变的目标，说明非负性与每列元素之和小于1的条件，如何保证存在唯一的非负解。这是一组充分条件，不是所有可解模型都必须满足的条件。一般行列式理论在<a href="./chapter-03-overview.html">第三部分导读</a>继续；具体基、维数、秩和CR已经在本部分建立；一般空间与换基在第四部分继续。</p>
 <div id="三条连接">
 <p><a href="#three-connections">运算、求逆与分解的联系 / Connections among Operations, Inverses and Factorizations</a>。</p>
 </div>

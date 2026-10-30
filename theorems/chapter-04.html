@@ -239,6 +239,16 @@ ul.task-list li input[type="checkbox"] {
   <a href="../lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
   </div>
 </li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">独立关系与子空间</span><span class="nav-en" lang="en">Independence and Subspaces</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/matrix-rank-factorization.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">秩与秩分解</span><span class="nav-en" lang="en">Rank and Rank Factorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/four-fundamental-subspaces.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">四个基本子空间</span><span class="nav-en" lang="en">Four Fundamental Subspaces</span></a>
+  </div>
+</li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapter-02-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
@@ -504,6 +514,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>。从阶梯形确定主元列的下标后，取<strong>原矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的对应列</strong>，它们构成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Col}A</annotation></semantics></math> 的基。</p>
 <p><strong>理解与回查。</strong> 重述<a href="../theorems/chapter-02.html#lay6-ch02-thm13">第二章定理13</a>，本节给一般证明和警告：阶梯形中的列通常不是原列空间的向量。若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">A=0</annotation></semantics></math>，主元列组为空；允许空基时结论直接适用，按教材零子空间措辞则单列维数0。</p>
+<p><a href="../topics/matrix-rank-factorization.html#column-basis">第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2</a>。</p>
 </section>
 <section id="lay6-ch04-thm07" class="level3">
 <h3 class="anchored" data-anchor-id="lay6-ch04-thm07">定理 7：行等价保持行空间与行空间基 <span class="theorem-en">Row Equivalence and Row-Space Bases</span></h3>
@@ -512,6 +523,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>若实矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A,B\in\mathbb R^{m\times n}</annotation></semantics></math> 行等价，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Row</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mrow><mi mathvariant="normal">Row</mi><mo>⁡</mo></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">\operatorname{Row}A=\operatorname{Row}B</annotation></semantics></math>。若进一步 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> 为阶梯形，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> 的非零行组成这两个相同行空间的一组基。</p>
 <p><strong>理解与回查。</strong> 行操作的可逆性给出两个方向的包含；阶梯形非零行的主元位置保证无关。行空间可直接取化简后的行，列空间须取原矩阵的列。零矩阵时非零行组为空，约定同上。教材证明见 §4.3。</p>
+<p><a href="../topics/matrix-rank-factorization.html#row-space">第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2</a>。</p>
 </section>
 </section>
 <section id="sec-4-4" class="level2">
@@ -524,6 +536,7 @@ ul.task-list li input[type="checkbox"] {
 <p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℬ</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐛</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>𝐛</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal B=(\mathbf b_1,\ldots,\mathbf b_n)</annotation></semantics></math> 是实向量空间 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> 的有序基。对每个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">\mathbf x\in V</annotation></semantics></math>，存在唯一一组实数 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>c</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">c_1,\ldots,c_n</annotation></semantics></math>，使</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><msub><mi>c</mi><mn>1</mn></msub><msub><mi>𝐛</mi><mn>1</mn></msub><mo>+</mo><mi>⋯</mi><mo>+</mo><msub><mi>c</mi><mi>n</mi></msub><msub><mi>𝐛</mi><mi>n</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf x=c_1\mathbf b_1+\cdots+c_n\mathbf b_n.</annotation></semantics></math></p>
 <p><strong>理解与回查。</strong> 张成保证存在，无关保证唯一（教材 §4.4）。坐标向量（coordinate vector）定义为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>𝐱</mi><msub><mo stretchy="false" form="postfix">]</mo><mi>ℬ</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>c</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>c</mi><mi>n</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msup><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">[\mathbf x]_{\mathcal B}=(c_1,\ldots,c_n)^T\in\mathbb R^n</annotation></semantics></math>。它是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐱</mi><annotation encoding="application/x-tex">\mathbf x</annotation></semantics></math> 在这组基下的描述，不是把 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">\mathbf x\in V</annotation></semantics></math> 与一个数字列不加说明地等同。</p>
+<p><a href="../topics/matrix-rank-factorization.html#coordinates">第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2</a>。</p>
 </section>
 <section id="lay6-ch04-thm09" class="level3">
 <h3 class="anchored" data-anchor-id="lay6-ch04-thm09">定理 9：坐标映射是线性同构 <span class="theorem-en">The Coordinate Mapping</span></h3>
@@ -546,6 +559,7 @@ ul.task-list li input[type="checkbox"] {
 <p>若实向量空间 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> 有一组含 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个向量的基，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> 中任何多于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个向量的集合都线性相关。</p>
 <p>无限集合也适用：它含有一个相关的有限子集；无限集合的相关性按这一含义定义。</p>
 <p><strong>理解与回查。</strong> 用坐标映射把问题转到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math>，再用向量数超过分量数的判据。教材 §4.5 的证明与脚注。</p>
+<p><a href="../topics/matrix-rank-factorization.html#dimension">第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2</a>。</p>
 </section>
 <section id="lay6-ch04-thm11" class="level3">
 <h3 class="anchored" data-anchor-id="lay6-ch04-thm11">定理 11：有限维空间基的等势性 <span class="theorem-en">Cardinality of Bases</span></h3>
@@ -554,6 +568,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>若实向量空间 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> 有一组含 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个向量的基，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> 的每一组基都恰有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个向量。</p>
 <p><strong>理解与回查。</strong> 因而“维数”不随基的选择而变。教材 §4.5 用定理10从两个方向比较基的长度；零子空间的维数约定见本页术语。</p>
+<p><a href="../topics/matrix-rank-factorization.html#dimension">第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2</a>。</p>
 </section>
 <section id="lay6-ch04-thm12" class="level3">
 <h3 class="anchored" data-anchor-id="lay6-ch04-thm12">定理 12：子空间的扩基与维数上界 <span class="theorem-en">Extending Independent Sets in Subspaces</span></h3>
@@ -585,6 +600,7 @@ ul.task-list li input[type="checkbox"] {
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">rank</mi><mo>⁡</mo></mrow><mi>A</mi><mo>+</mo><mrow><mi mathvariant="normal">nullity</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mi>n</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">\operatorname{rank}A+\operatorname{nullity}A=n,</annotation></semantics></math></p>
 <p>即列空间与零空间的维数之和等于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的列数。</p>
 <p><strong>理解与回查。</strong> 主元列数加非主元列数等于总列数；零度数的是自由变量的个数，不是“非主元列向量张成的空间”。教材证明见 §4.5；重述<a href="../theorems/chapter-02.html#lay6-ch02-thm14">第二章定理14</a>。</p>
+<p><a href="../topics/matrix-rank-factorization.html#rank-nullity">第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2</a>。</p>
 </section>
 <section id="lay6-ch04-imt-sec45" class="level3">
 <h3 class="anchored" data-anchor-id="lay6-ch04-imt-sec45">可逆矩阵定理续篇：基与秩五项重述 <span class="theorem-en">The Invertible Matrix Theorem (continued)</span></h3>

@@ -239,6 +239,16 @@ ul.task-list li input[type="checkbox"] {
   <a href="./lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
   </div>
 </li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">独立关系与子空间</span><span class="nav-en" lang="en">Independence and Subspaces</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/matrix-rank-factorization.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">秩与秩分解</span><span class="nav-en" lang="en">Rank and Rank Factorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/four-fundamental-subspaces.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">四个基本子空间</span><span class="nav-en" lang="en">Four Fundamental Subspaces</span></a>
+  </div>
+</li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter-02-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
@@ -389,7 +399,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>第一部分问哪些输入能够得到给定输出，以及输入是否唯一。第二部分沿着两条相连的线继续：<strong>对一个向量作用 → 对多列作用 → 变换复合 → 逆变换 → 矩阵分解</strong>；<strong>求解方程组 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math> → 同步求解多个方程组 → 求逆与可逆性 → 利用已有分解求解新的方程组</strong>。</p>
+<p>第一部分用矩阵表示方程组，讨论解的存在性与唯一性。第二部分进一步问：<strong>怎样运算、求解和分解矩阵，以及怎样识别矩阵中的独立关系？</strong></p>
+<p>两条线索在消元与列组合处相接：矩阵乘法→逆矩阵→同步消元→分块→LU，解释怎样组织和复用计算；列之间的关系→基与维数→秩与CR→行空间与四个基本子空间，解释矩阵包含了哪些独立信息。</p>
 <section id="route" class="level2">
 <h2 class="anchored" data-anchor-id="route">按问题顺读 <span class="heading-en">Read by Mathematical Questions</span></h2>
 <table class="caption-top table">
@@ -426,7 +437,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><a href="./lessons/10-lu.html">LU分解与方程组求解 / LU Factorization and Solving Linear Systems</a></td>
-<td>怎样用已有的LU分解求解同一系数矩阵对应的多个方程组？</td>
+<td>怎样用分块理解消元乘子，再复用同一组因子？</td>
+</tr>
+<tr class="even">
+<td><a href="./topics/matrix-rank-factorization.html">矩阵的秩与秩分解 / Matrix Rank and Rank Factorization</a></td>
+<td>怎样选出独立列、记录表示系数，并解释RREF为什么唯一？</td>
+</tr>
+<tr class="odd">
+<td><a href="./topics/four-fundamental-subspaces.html">四个基本子空间 / Four Fundamental Subspaces</a></td>
+<td>行列关系分别属于哪个空间？行依赖如何给出全部相容性条件？</td>
 </tr>
 </tbody>
 </table>
@@ -436,8 +455,9 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="textbook">复习、应用与教材定位 <span class="heading-en">Review, Application, and Textbook Locations</span></h2>
 <p>用<a href="./chapter-02-reference.html">知识与术语速查 / Concepts and Terminology</a>找条件，用<a href="./chapter-02-review.html">综合复习 / Part Review</a>连接概念，再读<a href="./chapter-02-input-output.html">投入产出模型 / Input–Output Models</a>，考察非负目标与非负产出的关系。</p>
 <p>本部分覆盖教材§2.1–2.5：定理1–10，以及没有编号定理的分块运算、三角结构、LU算法、矩形尺寸、换行与常规计算量。§2.6定理11在投入产出阅读中解释并计算；这项应用说明如何用矩阵方程分析非负需求与产出。</p>
-<p>§2.8定理12的零空间结论已在<a href="./topics/span-column-and-null-spaces.html#null-space">第一部分</a>提前学习。§2.8定理13、§2.9定理14–15与可逆矩阵定理的后续扩展，以及基、维数、秩、秩不等式与CR分解，留第四部分。§2.7计算机图形应用没有在此完整展开；已经使用旋转与剪切并不等于学完该节。按教材顺序查阅时可使用<a href="./theorems/chapter-02.html">教材第2章定理汇编 / Textbook Chapter 2 Theorem Reference</a>，汇编中的完整陈述不替代各学习主题的解释。</p>
+<p>§2.8定理12的零空间结论已在<a href="./topics/span-column-and-null-spaces.html#null-space">第一部分</a>提前学习。§2.8定理13、§2.9定理14–15与可逆矩阵定理的基/秩续篇，在本部分的<a href="./topics/matrix-rank-factorization.html">秩主题</a>正式解释；先从具体欧氏子空间建立基、维数与坐标。行空间及其基提前联系教材§4.3，维数与坐标的理由联系§4.4–4.5。CR、RREF唯一性的列关系证明和左零空间相容性论证按课程逻辑组织，来源身份分别标明。§2.7计算机图形应用没有在此完整展开；已经使用旋转与剪切并不等于学完该节。按教材顺序查阅时可使用<a href="./theorems/chapter-02.html">教材第2章定理汇编 / Textbook Chapter 2 Theorem Reference</a>，汇编中的完整陈述不替代各学习主题的解释。</p>
 <p>一般行列式理论在<a href="./chapter-03-overview.html">第三部分导读 / Part 3 Overview</a>继续；本部分仅在二阶求逆时使用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>d</mi><mo>−</mo><mi>b</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">ad-bc</annotation></semantics></math>。</p>
+<p>一般向量空间、一般映射与换基在第四部分深化；四空间的正交关系、投影和最小二乘在第六部分继续，奇异值分解在第七部分统一解释。这些后续理论不是当前消元证明的先修。</p>
 
 
 </section>
