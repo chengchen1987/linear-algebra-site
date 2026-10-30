@@ -88,6 +88,7 @@ body.reading-ready :target{scroll-margin-top:calc(var(--reading-bar-height,75px)
  body.reading-ready #quarto-sidebar,body.reading-ready #quarto-margin-sidebar{position:fixed!important;top:var(--reading-bar-height,75px)!important;bottom:0;max-height:calc(100dvh - var(--reading-bar-height,75px))!important;width:min(88vw,350px)!important;z-index:1045;background:white;border:1px solid #a8bcc9;padding:1rem!important;overflow:auto!important;transform:none!important;visibility:visible!important;height:auto!important}
  body.reading-left-open #quarto-sidebar{display:block!important;left:0}
  body.reading-right-open #quarto-margin-sidebar{display:block!important;right:0}
+ body.reading-ready.reading-right-open #TOC{display:block!important}
 }
 
 body.reading-ready #quarto-content>.page-navigation{grid-column:body-start/body-end;grid-row:2;min-width:0}

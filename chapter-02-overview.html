@@ -389,7 +389,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>第一部分问哪些输入能够得到给定输出，以及输入是否唯一。第二部分沿着两条相连的线继续：<strong>对一个向量作用 → 对多列作用 → 变换复合 → 恢复输入 → 分解操作</strong>；<strong>一个目标 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math> → 多个目标 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>X</mi><mo>=</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">AX=F</annotation></semantics></math> → 求逆与可逆性 → 保存消元、重复求解</strong>。</p>
+<p>第一部分问哪些输入能够得到给定输出，以及输入是否唯一。第二部分沿着两条相连的线继续：<strong>对一个向量作用 → 对多列作用 → 变换复合 → 逆变换 → 矩阵分解</strong>；<strong>求解方程组 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math> → 同步求解多个方程组 → 求逆与可逆性 → 利用已有分解求解新的方程组</strong>。</p>
 <section id="route" class="level2">
 <h2 class="anchored" data-anchor-id="route">按问题顺读 <span class="heading-en">Read by Mathematical Questions</span></h2>
 <table class="caption-top table">
@@ -406,15 +406,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><a href="./lessons/08-inverses.html">逆矩阵与逆变换 / Inverse Matrices and Inverse Transformations</a></td>
-<td>怎样唯一恢复输入？怎样同时处理多个目标？</td>
+<td>什么是逆矩阵？它怎样恢复输入，并保证方程组有唯一解？</td>
 </tr>
 <tr class="odd">
 <td><a href="./topics/elementary-matrices-and-inverses.html">初等矩阵与矩阵求逆 / Elementary Matrices and Computing Inverses</a></td>
-<td>怎样把可撤销的行操作记录下来，化 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>？</td>
+<td>怎样从 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi><mo>=</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">AB=I</annotation></semantics></math> 的列方程出发，用同步消元求逆？为什么得到双侧逆？</td>
 </tr>
 <tr class="even">
 <td><a href="./lessons/09-invertibility-blocks.html">可逆矩阵定理 / The Invertible Matrix Theorem</a></td>
-<td>对方阵，唯一性与所有目标的存在性为什么连接起来？</td>
+<td>对方阵，解的存在性与唯一性为什么能由主元条件联系起来？</td>
 </tr>
 <tr class="odd">
 <td><a href="./topics/partitioned-matrices.html">分块表示与运算 / Block Representation and Operations</a></td>
@@ -426,17 +426,17 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><a href="./lessons/10-lu.html">LU分解与方程组求解 / LU Factorization and Solving Linear Systems</a></td>
-<td>怎样把 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 化为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math> 的过程保存下来，用于新的右端？</td>
+<td>怎样用已有的LU分解求解同一系数矩阵对应的多个方程组？</td>
 </tr>
 </tbody>
 </table>
-<p>这些主题在实数范围内提供定义、推理、例题与独立计算。核心结果默认可见；提示、长证明与完整答案可以展开。在线完整内容供独立学习与复习，主题数不规定课堂次数。</p>
+<p>这些主题在实数范围内提供定义、推理、例题与独立计算。核心结果默认可见；提示、长证明与完整答案可以展开。可以按问题顺读，也可以通过回查链接复习相关定义和计算。</p>
 </section>
 <section id="textbook" class="level2">
 <h2 class="anchored" data-anchor-id="textbook">复习、应用与教材定位 <span class="heading-en">Review, Application, and Textbook Locations</span></h2>
 <p>用<a href="./chapter-02-reference.html">知识与术语速查 / Concepts and Terminology</a>找条件，用<a href="./chapter-02-review.html">综合复习 / Part Review</a>连接概念，再读<a href="./chapter-02-input-output.html">投入产出模型 / Input–Output Models</a>，考察非负目标与非负产出的关系。</p>
-<p>本部分覆盖教材§2.1–2.5：定理1–10，以及没有编号定理的分块运算、三角结构、LU算法、矩形尺寸、换行与常规计算量。§2.6定理11在投入产出阅读中解释并计算；课堂可以不展开该应用，但完整说明可在此阅读。</p>
-<p>§2.8定理12的零空间结论已在<a href="./topics/span-column-and-null-spaces.html#null-space">第一部分</a>提前学习。§2.8定理13、§2.9定理14–15与可逆矩阵定理的后续扩展，以及基、维数、秩、秩不等式与CR分解，留第四部分。§2.7计算机图形应用没有在此完整展开；已经使用旋转与剪切并不等于学完该节。按教材顺序查阅时可使用<a href="./theorems/chapter-02.html">教材教材第2章定理汇编 / Textbook Chapter 2 Theorem Reference</a>，汇编中的完整陈述不替代各学习主题的解释。</p>
+<p>本部分覆盖教材§2.1–2.5：定理1–10，以及没有编号定理的分块运算、三角结构、LU算法、矩形尺寸、换行与常规计算量。§2.6定理11在投入产出阅读中解释并计算；这项应用说明如何用矩阵方程分析非负需求与产出。</p>
+<p>§2.8定理12的零空间结论已在<a href="./topics/span-column-and-null-spaces.html#null-space">第一部分</a>提前学习。§2.8定理13、§2.9定理14–15与可逆矩阵定理的后续扩展，以及基、维数、秩、秩不等式与CR分解，留第四部分。§2.7计算机图形应用没有在此完整展开；已经使用旋转与剪切并不等于学完该节。按教材顺序查阅时可使用<a href="./theorems/chapter-02.html">教材第2章定理汇编 / Textbook Chapter 2 Theorem Reference</a>，汇编中的完整陈述不替代各学习主题的解释。</p>
 <p>一般行列式理论在<a href="./chapter-03-overview.html">第三部分导读 / Part 3 Overview</a>继续；本部分仅在二阶求逆时使用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>d</mi><mo>−</mo><mi>b</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">ad-bc</annotation></semantics></math>。</p>
 
 
