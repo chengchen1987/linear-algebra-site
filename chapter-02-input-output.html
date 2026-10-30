@@ -206,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">矩阵基本运算</span><span class="nav-en" lang="en">Basic Matrix Operations</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">矩阵运算</span><span class="nav-en" lang="en">Matrix Operations</span></a>
+  <a href="./lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">矩阵基本运算</span><span class="nav-en" lang="en">Basic Matrix Operations</span></a>
   </div>
 </li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">逆矩阵与可逆性</span><span class="nav-en" lang="en">Inverse Matrices and Invertibility</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
@@ -437,7 +437,7 @@ c_{ij}\ge0,\quad d_i\ge0,\quad
 <details class="review-answer"><summary>完整答案 / Full Solution</summary>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>80</mn><mo>,</mo><mn>40</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf x=(80,40)^{\mathsf T}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>𝐱</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>20</mn><mo>,</mo><mn>40</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">C\mathbf x=(20,40)^{\mathsf T}</annotation></semantics></math>。尽管第二部门的外部需求为零，系统内部仍需要其40单位产出。相加得到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>20</mn><mo>,</mo><mn>40</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>60</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>80</mn><mo>,</mo><mn>40</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(20,40)+(60,0)=(80,40)</annotation></semantics></math>。</p>
 </details>
-<p>本模型依赖固定技术比例与价格等假设，不把它当作所有经济系统的精确描述。它把“给定目标的解”和“对所有非负需求的保证”分开，也展示了同一个系数矩阵可反复处理不同右端。</p>
+<p>本模型依赖固定技术比例与价格等假设，不把它当作所有经济系统的精确描述。它把“给定目标的解”和“对所有非负需求的保证”分开，也展示了同一个系数矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>−</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">I-C</annotation></semantics></math> 可以用于不同的方程右端目标向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐝</mi><annotation encoding="application/x-tex">\mathbf d</annotation></semantics></math>，即不同的外部需求。</p>
 
 
 </section>

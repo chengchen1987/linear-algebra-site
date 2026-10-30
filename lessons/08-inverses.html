@@ -206,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">矩阵基本运算</span><span class="nav-en" lang="en">Basic Matrix Operations</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">矩阵运算</span><span class="nav-en" lang="en">Matrix Operations</span></a>
+  <a href="../lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">矩阵基本运算</span><span class="nav-en" lang="en">Basic Matrix Operations</span></a>
   </div>
 </li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">逆矩阵与可逆性</span><span class="nav-en" lang="en">Inverse Matrices and Invertibility</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
@@ -417,7 +417,7 @@ G=\begin{bmatrix}0&amp;1\\-1&amp;0\end{bmatrix},\qquad MG=GM=I_2.</annotation></
 <p><strong>不可逆的对照 / A Noninvertible Contrast.</strong> 上一主题的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mrow><mi mathvariant="normal">diag</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N=\operatorname{diag}(1,0)</annotation></semantics></math> 把 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(x,y)^{\mathsf T}</annotation></semantics></math> 变成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(x,0)^{\mathsf T}</annotation></semantics></math>。它把 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐞</mi><mn>2</mn></msub><annotation encoding="application/x-tex">\mathbf e_2</annotation></semantics></math> 和 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟎</mn><annotation encoding="application/x-tex">\mathbf0</annotation></semantics></math> 都变成零向量，无法从同一个输出确定原输入。因此不存在对所有输入都有效的逆变换，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math> 也没有逆矩阵。这说明非零矩阵不一定可逆。</p>
 <section id="unique-solution" class="level3">
 <h3 class="anchored" data-anchor-id="unique-solution">可逆矩阵对应的方程组 <span class="heading-en">Linear Systems with an Invertible Coefficient Matrix</span></h3>
-<p>逆矩阵一旦存在，就能恢复任意给定右端向量所对应的输入。下面把这句话写成方程组的存在性与唯一性结论。</p>
+<p>逆矩阵一旦存在，就能确定任意给定方程右端目标向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐛</mi><annotation encoding="application/x-tex">\mathbf b</annotation></semantics></math> 所对应的唯一输入。下面把这句话写成方程组的存在性与唯一性结论。</p>
 <div id="lay6-ch02-thm05" class="course-theorem">
 <p><strong>教材§2.2，定理5 / Textbook §2.2, Theorem 5</strong></p>
 <p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math> 可逆，则对每个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf b\in\mathbb R^n</annotation></semantics></math>，方程 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math> 有唯一解，且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">\mathbf x=A^{-1}\mathbf b</annotation></semantics></math>。</p>
@@ -929,8 +929,8 @@ S^{-1}M^{-1}=\begin{bmatrix}1&amp;1\\-1&amp;0\end{bmatrix}.</annotation></semant
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lessons/07-matrix-products.html" class="pagination-link" aria-label="上一页 / Previous: 矩阵运算 / Matrix Operations">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="nav-zh" lang="zh-CN">矩阵运算</span><span class="nav-en" lang="en">Matrix Operations</span></span>
+      <a href="../lessons/07-matrix-products.html" class="pagination-link" aria-label="上一页 / Previous: 矩阵基本运算 / Basic Matrix Operations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="nav-zh" lang="zh-CN">矩阵基本运算</span><span class="nav-en" lang="en">Basic Matrix Operations</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

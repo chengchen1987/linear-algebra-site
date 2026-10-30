@@ -206,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">矩阵基本运算</span><span class="nav-en" lang="en">Basic Matrix Operations</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">矩阵运算</span><span class="nav-en" lang="en">Matrix Operations</span></a>
+  <a href="../lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">矩阵基本运算</span><span class="nav-en" lang="en">Basic Matrix Operations</span></a>
   </div>
 </li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">逆矩阵与可逆性</span><span class="nav-en" lang="en">Inverse Matrices and Invertibility</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
@@ -452,7 +452,7 @@ G_0=\begin{bmatrix}I_p&amp;0\\-D&amp;I_q\end{bmatrix}</annotation></semantics></
 <details class="review-answer"><summary>完整答案 / Full Solution</summary>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mn>0</mn></msub><msub><mi>G</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">K_0G_0</annotation></semantics></math> 的左下块为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><msub><mi>I</mi><mi>p</mi></msub><mo>+</mo><msub><mi>I</mi><mi>q</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>D</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">DI_p+I_q(-D)=0</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mn>0</mn></msub><msub><mi>K</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">G_0K_0</annotation></semantics></math> 的左下块为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>D</mi><mo stretchy="false" form="postfix">)</mo><msub><mi>I</mi><mi>p</mi></msub><mo>+</mo><msub><mi>I</mi><mi>q</mi></msub><mi>D</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">(-D)I_p+I_qD=0</annotation></semantics></math>。两侧对角块都是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>p</mi></msub><mo>,</mo><msub><mi>I</mi><mi>q</mi></msub></mrow><annotation encoding="application/x-tex">I_p,I_q</annotation></semantics></math>，右上块都是零，因此两乘积都为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mrow><mi>p</mi><mo>+</mo><mi>q</mi></mrow></msub><annotation encoding="application/x-tex">I_{p+q}</annotation></semantics></math>。这一结论不要求长方形块 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math> 有逆。</p>
 </details>
-<p>上述结构已足够说明分块如何简化计算；任意分块矩阵不能套用这些公式。若把矩阵的第一行与其余行分组，下三角逆操作会消去左下块，同时更新右下块。下一步用这种结构解释<a href="../lessons/10-lu.html">LU分解 / LU Factorization</a>。</p>
+<p>上述结构已足够说明分块如何简化计算；任意分块矩阵不能套用这些公式。单位分块下三角矩阵可以给一组行加上另一组行的线性组合。适当选择这些系数，就能把矩阵左下部分消成零，同时更新右下部分。接下来用这个操作解释<a href="../lessons/10-lu.html">LU分解 / LU Factorization</a>。</p>
 
 
 </section>
