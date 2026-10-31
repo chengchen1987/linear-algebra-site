@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
 @media(max-width:991.98px){#quarto-sidebar{position:static!important;width:auto!important;max-height:none!important;grid-column:page-start/page-end!important}#quarto-header{position:static!important}#quarto-content{padding-top:0!important;display:block!important;padding-inline:24px!important}}
 </style></noscript></head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating chapter-one quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -381,8 +381,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" aria-label="本页目录 / On This Page">
+    <h2 id="toc-title"><span class="nav-zh" lang="zh-CN">本页目录</span><span class="nav-en" lang="en">On This Page</span></h2>
+   
+  <ul class="collapse">
+  <li><a href="#route" id="toc-route" class="nav-link active" data-scroll-target="#route">从已有结构到一个标量 <span class="heading-en">From Matrix Structure to a Scalar</span></a></li>
+  <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading">怎样阅读与练习 <span class="heading-en">Reading and Practice</span></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -407,45 +414,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>第二部分保存消元过程，本部分提取方阵的一个标量：它把可逆性、消元中的变化与有向面积/体积联系起来。它不能替代全部解或整个变换的描述。</p>
+<p>我们已经会用消元、基、秩和子空间理解矩阵。对于方阵，能否用一个数判断其可逆性？这个数又怎样反映线性变换对面积和体积的影响？本部分的<strong>行列式（determinant）</strong>把这两个问题联系起来，也帮助我们重新表达方程的解与矩阵的逆。</p>
+<section id="route" class="level2">
+<h2 class="anchored" data-anchor-id="route">从已有结构到一个标量 <span class="heading-en">From Matrix Structure to a Scalar</span></h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>课</th>
-<th>学习入口</th>
-<th>主要问题</th>
+<th>学习入口 / Topic</th>
+<th>要解决的问题 / Guiding Question</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>11</td>
-<td><a href="./lessons/11-determinants.html">定义与展开</a></td>
-<td>从固定首行递归到任意行列展开</td>
+<td><a href="./lessons/11-determinants.html">定义与展开 / Definition and Expansion</a></td>
+<td>从二阶可逆条件出发，以固定首行递归定义，再用任意行列展开计算</td>
 </tr>
 <tr class="even">
-<td>12</td>
-<td><a href="./lessons/12-determinants-properties.html">消元、性质与可逆性</a></td>
-<td>由基础关系推性质，再集中整理</td>
+<td><a href="./lessons/12-determinants-properties.html">消元、性质与可逆性 / Elimination, Properties and Invertibility</a></td>
+<td>由少数基础关系推导性质，经主元连接基、秩、四空间与可逆性</td>
 </tr>
 <tr class="odd">
-<td>13</td>
-<td><a href="./lessons/13-cramer-adjugate.html">克拉默与古典伴随</a></td>
-<td>由单位右端看清余子式为何转置</td>
+<td><a href="./lessons/13-cramer-adjugate.html">克拉默与伴随矩阵 / Cramer’s Rule and Adjugates</a></td>
+<td>用行列式表达解，再由单位目标求逆的各列，解释余子式为何转置</td>
 </tr>
 <tr class="even">
-<td>14</td>
-<td><a href="./lessons/14-determinants-geometry.html">几何与前三部分贯通</a></td>
-<td>有向缩放与一个标量的信息边界</td>
+<td><a href="./lessons/14-determinants-geometry.html">几何意义与联系 / Geometry and Connections</a></td>
+<td>分清图形本身的大小与变换的缩放，理解定向、平移与退化</td>
 </tr>
 </tbody>
 </table>
-<p>课堂讲清主线理由并保留独立计算；课后要会用展开、性质、求解公式并理解条件。完整一般证明与替代推导分别标明，旧伴随运算仍为课后训练；不把每条证明的独立复现都设成新要求。先独立计算，再展开答案。以实数为标量，方阵条件在相应结论处明确。</p>
-<p>本部分覆盖§3.1–3.3核心主题，包括克拉默与古典伴随。课堂保留推理骨架与小算例，完整证明与旧训练在线保留并明确学习层次；不引入特征值乘积或Jacobian理论。</p>
-<p>小节主题依据<a href="https://www.pearson.com/en-us/subject-catalog/p/linear-algebra-and-its-applications/P200000006235?view=educator">Pearson第六版目录</a>核对。教材正文、历史页码例号题号未核验；这里按主题自洽编写，新题标为自编。</p>
-<p>完成后进入<a href="./chapter-03-review.html">本部分复习</a>，或查询<a href="./glossary.html">中英术语表</a>。</p>
-<p><a href="./chapter-03-reference.html">知识与术语速查</a>按计算规则、矩阵运算、结构判断、几何与求解公式组织，条目可回到证明与练习。 <a href="./chapter-03-other-definitions.html">其他定义：排列、逆序数与基本性质</a>为独立HTML选读，建议第11–12课后阅读；不占四课，也不是课堂递归定义的先修。</p>
+<p>行列式是一个标量，不能恢复整个矩阵；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\det A=0</annotation></semantics></math> 也不能单独判定某个给定目标的相容性。第二部分的<a href="./topics/matrix-rank-factorization.html">秩与秩分解 / Rank and Rank Factorization</a>及<a href="./topics/four-fundamental-subspaces.html">四个基本子空间 / Four Fundamental Subspaces</a>仍帮助我们回答这些更细的问题。</p>
+</section>
+<section id="reading" class="level2">
+<h2 class="anchored" data-anchor-id="reading">怎样阅读与练习 <span class="heading-en">Reading and Practice</span></h2>
+<p>主线依次给出定义、定理、理由和计算。完整在线学习中的性质、适用条件、计算方法与反馈都是必修内容；先独立计算，再展开提示和答案。“进一步证明”保留完整一般论证和替代路线，便于细读；首次计算可先使用已经陈述的定理。<a href="./lessons/13-cramer-adjugate.html#adjugate-training">伴随矩阵的性质推导 / Deriving Adjugate Properties</a>集中保留核心推导训练。</p>
+<p>本部分对应教材第3章§3.1–3.3。各学习主题给出完整定理及<a href="./theorems/chapter-03.html">汇编入口 / Theorem Reference</a>，陈述与条件依据第六版原文核对；例题与练习注明课程自编。这里以实数为标量，只对方阵定义行列式。</p>
+<p>完成后进入<a href="./chapter-03-review.html">综合复习 / Synthesis and Review</a>，或用<a href="./chapter-03-reference.html">知识与术语速查 / Concepts and Terminology</a>回查性质与解释。<a href="./chapter-03-other-definitions.html">其他定义 / Alternative Definitions</a>是独立选读，建议在理解展开与性质后阅读，不是递归定义的先修。<a href="./glossary.html">共享术语表 / Glossary</a>提供中英术语。</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

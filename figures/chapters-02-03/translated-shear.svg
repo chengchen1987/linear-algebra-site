@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="610" viewBox="0 0 580 610" role="img" aria-labelledby="title desc">
+<title id="title">非原点平行四边形与剪切 / A translated parallelogram and its shear</title>
+<desc id="desc">Original edge displacements (2,1) and (1,3) start at p=(1,-1). The shear maps them to (3,1) and (4,3). Both areas are 5. Equal coordinate units.</desc>
+<rect width="100%" height="100%" fill="white"/>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#176c83"/></marker></defs>
+<g font-family="sans-serif" font-size="16" fill="#183a48">
+<text x="25" y="28" >原图形 / Original</text>
+<text x="420" y="28" >面积 / Area = 5</text>
+<path d="M80,265.0 V53.5" stroke="#e0e7ea"/>
+<path d="M125,265.0 V53.5" stroke="#e0e7ea"/>
+<path d="M170,265.0 V53.5" stroke="#e0e7ea"/>
+<path d="M215,265.0 V53.5" stroke="#e0e7ea"/>
+<path d="M260,265.0 V53.5" stroke="#e0e7ea"/>
+<path d="M305,265.0 V53.5" stroke="#e0e7ea"/>
+<path d="M350,265.0 V53.5" stroke="#e0e7ea"/>
+<path d="M395,265.0 V53.5" stroke="#e0e7ea"/>
+<path d="M440,265.0 V53.5" stroke="#e0e7ea"/>
+<path d="M66.5,256 H453.50000000000006" stroke="#e0e7ea"/>
+<path d="M66.5,211 H453.50000000000006" stroke="#e0e7ea"/>
+<path d="M66.5,166 H453.50000000000006" stroke="#e0e7ea"/>
+<path d="M66.5,121 H453.50000000000006" stroke="#e0e7ea"/>
+<path d="M66.5,76 H453.50000000000006" stroke="#e0e7ea"/>
+<path d="M66.5,211 H453.50000000000006 M80,269.5 V53.5" stroke="#82949d" fill="none"/>
+<text x="60" y="230" >0</text>
+<text x="460.24999999999994" y="216.4" >x</text>
+<text x="62.9" y="51.25" >y</text>
+<text x="125" y="232.6" >1</text>
+<text x="61.1" y="166" >1</text>
+<polygon points="125,256 215,211 260,76 170,121" fill="#c9e8ec" stroke="#176c83" stroke-width="2"/>
+<circle cx="125" cy="256" r="3" fill="#183a48"/>
+<text x="133" y="278" >p</text>
+<circle cx="215" cy="211" r="3" fill="#183a48"/>
+<text x="223" y="203" >q</text>
+<circle cx="260" cy="76" r="3" fill="#183a48"/>
+<text x="268" y="68" >s</text>
+<circle cx="170" cy="121" r="3" fill="#183a48"/>
+<text x="178" y="113" >r</text>
+<path d="M125,256 L215,211" stroke="#176c83" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="148.0" y="225.5" >v₁</text>
+<path d="M125,256 L170,121" stroke="#176c83" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="125.5" y="180.5" >v₂</text>
+<text x="25" y="328" >剪切后的像 / Sheared image</text>
+<text x="420" y="328" >面积 / Area = 5</text>
+<path d="M80,565.0 V353.5" stroke="#e0e7ea"/>
+<path d="M125,565.0 V353.5" stroke="#e0e7ea"/>
+<path d="M170,565.0 V353.5" stroke="#e0e7ea"/>
+<path d="M215,565.0 V353.5" stroke="#e0e7ea"/>
+<path d="M260,565.0 V353.5" stroke="#e0e7ea"/>
+<path d="M305,565.0 V353.5" stroke="#e0e7ea"/>
+<path d="M350,565.0 V353.5" stroke="#e0e7ea"/>
+<path d="M395,565.0 V353.5" stroke="#e0e7ea"/>
+<path d="M440,565.0 V353.5" stroke="#e0e7ea"/>
+<path d="M66.5,556 H453.50000000000006" stroke="#e0e7ea"/>
+<path d="M66.5,511 H453.50000000000006" stroke="#e0e7ea"/>
+<path d="M66.5,466 H453.50000000000006" stroke="#e0e7ea"/>
+<path d="M66.5,421 H453.50000000000006" stroke="#e0e7ea"/>
+<path d="M66.5,376 H453.50000000000006" stroke="#e0e7ea"/>
+<path d="M66.5,511 H453.50000000000006 M80,569.5 V353.5" stroke="#82949d" fill="none"/>
+<text x="60" y="530" >0</text>
+<text x="460.24999999999994" y="516.4" >x</text>
+<text x="62.9" y="351.25" >y</text>
+<text x="125" y="532.6" >1</text>
+<text x="61.1" y="466" >1</text>
+<polygon points="80,556 215,511 395,376 260,421" fill="#c9e8ec" stroke="#176c83" stroke-width="2"/>
+<circle cx="80" cy="556" r="3" fill="#183a48"/>
+<text x="88" y="578" >Sp</text>
+<circle cx="215" cy="511" r="3" fill="#183a48"/>
+<text x="223" y="503" >Sq</text>
+<circle cx="395" cy="376" r="3" fill="#183a48"/>
+<text x="403" y="368" >Ss</text>
+<circle cx="260" cy="421" r="3" fill="#183a48"/>
+<text x="268" y="413" >Sr</text>
+<path d="M80,556 L215,511" stroke="#176c83" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="125.5" y="525.5" >Sv₁</text>
+<path d="M80,556 L260,421" stroke="#176c83" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="148.0" y="480.5" >Sv₂</text>
+</g></svg>
