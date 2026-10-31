@@ -264,6 +264,21 @@ ul.task-list li input[type="checkbox"] {
   <a href="../chapter-02-input-output.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">投入产出模型</span><span class="nav-en" lang="en">Input–Output Models</span></a>
   </div>
 </li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">物理联系（选读）</span><span class="nav-en" lang="en">Physics Connections (Optional)</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/pauli-matrices-and-commutators.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">泡利矩阵与对易子（选读）</span><span class="nav-en" lang="en">Pauli Matrices and Commutators (Optional)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/force-balance-revisited.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">再看两绳力平衡（选读）</span><span class="nav-en" lang="en">Two-Rope Force Balance Revisited (Optional)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/flow-conservation-revisited.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">再看流量守恒（选读）</span><span class="nav-en" lang="en">Flow Conservation Revisited (Optional)</span></a>
+  </div>
+</li>
       </ul></li></ul>
   </li>
         <li class="sidebar-item sidebar-item-section course-chapter">
@@ -456,7 +471,6 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </div>
-<p>窄屏可在表格区域横向滚动 / Scroll within the table on narrow screens.</p>
 <p>这些维数不是四条独立的记忆规则。列空间维数是秩的定义；行空间维数由<a href="../topics/matrix-rank-factorization.html#row-space">行列秩相等</a>得到。对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 应用<a href="../topics/matrix-rank-factorization.html#rank-nullity">秩定理</a>得 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">n-r</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mi>𝖳</mi></msup><annotation encoding="application/x-tex">A^{\mathsf T}</annotation></semantics></math> 有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> 列且秩也是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>，再应用同一定理得 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>−</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">m-r</annotation></semantics></math>。行空间的具体论证提前来自教材§4.3；这里先通过消元理解四空间，正交关系稍后再学。</p>
 </section>
 <section id="worked-example" class="level2">
@@ -522,8 +536,8 @@ y_1+y_3&amp;=0,\\2y_1+2y_3&amp;=0,\\y_2+y_3&amp;=0,\\y_1+y_2+2y_3&amp;=0.
 </section>
 <section id="invertibility" class="level2">
 <h2 class="anchored" data-anchor-id="invertibility">用四个基本子空间回看可逆性 <span class="heading-en">Invertibility Revisited through the Four Fundamental Subspaces</span></h2>
-<p>现在限定 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math>。方阵的满行秩与满列秩条件相同，所以以下每一行都与 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆等价。这是将<a href="../lessons/09-invertibility-blocks.html#theorem">教材§2.3定理8</a>、<a href="../topics/matrix-rank-factorization.html#invertible-rank">§2.9基与秩续篇</a>和本页维数公式联系起来的<strong>课程推论</strong>，不另编教材定理号。</p>
-<div class="operation-table" tabindex="0" role="region" aria-label="四空间与方阵可逆性 / Four spaces and square-matrix invertibility">
+<p>现在限定 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{n\times n}</annotation></semantics></math>。方阵的满行秩与满列秩条件相同，所以以下每一行都与 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆等价。这是将<a href="../lessons/09-invertibility-blocks.html#theorem">教材§2.3定理8</a>、<a href="../topics/matrix-rank-factorization.html#invertible-rank">§2.9基与秩续篇</a>和本页维数公式联系起来的<strong>推论</strong>。</p>
+<div class="operation-table invertibility-table" tabindex="0" role="region" aria-label="四空间与方阵可逆性 / Four spaces and square-matrix invertibility">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -559,7 +573,6 @@ y_1+y_3&amp;=0,\\2y_1+2y_3&amp;=0,\\y_2+y_3&amp;=0,\\y_1+y_2+2y_3&amp;=0.
 </tbody>
 </table>
 </div>
-<p>窄屏可在表格区域横向滚动 / Scroll within the table on narrow screens.</p>
 <p>理由来自已经建立的空间结构：列空间与行空间维数均为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>，两个零空间维数均为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">n-r</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 的子空间维数为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 就是整个空间，维数为0就只有零向量。因此表中每个条件都等价于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">r=n</annotation></semantics></math>，再由可逆矩阵定理得到可逆性。行空间一行还用了<a href="../topics/matrix-rank-factorization.html#basis-theorem">基定理</a>：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个向量张成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 维空间，就构成基。</p>
 <p>“没有额外相容性条件”有确切依据：<a href="#general-compatibility">左零空间相容性充要条件</a>要求对所有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐲</mi><mo>∈</mo><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>A</mi><mi>𝖳</mi></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf y\in\operatorname{Nul}(A^{\mathsf T})</annotation></semantics></math> 都有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>𝐲</mi><mi>𝖳</mi></msup><mi>𝐛</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf y^{\mathsf T}\mathbf b=0</annotation></semantics></math>。当该空间只有零向量时，这个要求对每个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐛</mi><annotation encoding="application/x-tex">\mathbf b</annotation></semantics></math> 自动成立。零空间一行则由 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>𝐱</mi><mn>1</mn></msub><mo>=</mo><mi>A</mi><msub><mi>𝐱</mi><mn>2</mn></msub><mo>⇔</mo><mi>A</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐱</mi><mn>1</mn></msub><mo>−</mo><msub><mi>𝐱</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">A\mathbf x_1=A\mathbf x_2\iff A(\mathbf x_1-\mathbf x_2)=0</annotation></semantics></math> 解释唯一性。只有在方阵前提下，两类条件才汇合为对每个目标都恰有一个输入。</p>
 </section>
@@ -567,6 +580,7 @@ y_1+y_3&amp;=0,\\2y_1+2y_3&amp;=0,\\y_2+y_3&amp;=0,\\y_1+y_2+2y_3&amp;=0.
 <h2 class="anchored" data-anchor-id="looking-ahead">后续怎样理解这些关系？ <span class="heading-en">How Will These Relations Develop?</span></h2>
 <p>本页通过行列组合、秩和消元建立四空间及相容性。第六部分将用正交补解释两对空间的关系，并在最小二乘问题中处理不可达的目标向量；第七部分将用奇异向量给出四空间的标准正交基。教材对应位置是§6.1、§6.5和§7.4，本页不以这些后续理论作为证明前提。</p>
 <p>先用<a href="../chapter-02-review.html">第二部分综合复习 / Part 2 Review</a>把方程求解、列关系、线性变换与空间结构放回同一次消元。</p>
+<p>在<a href="../topics/flow-conservation-revisited.html">再看流量守恒（选读） / Flow Conservation Revisited (Optional)</a>中，用四空间解释原三节点模型：哪些净注入可以实现，环流为何不改变平衡，新增测量怎样消除自由度。</p>
 
 
 </section>

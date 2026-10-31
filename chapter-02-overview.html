@@ -264,6 +264,21 @@ ul.task-list li input[type="checkbox"] {
   <a href="./chapter-02-input-output.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">投入产出模型</span><span class="nav-en" lang="en">Input–Output Models</span></a>
   </div>
 </li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">物理联系（选读）</span><span class="nav-en" lang="en">Physics Connections (Optional)</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/pauli-matrices-and-commutators.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">泡利矩阵与对易子（选读）</span><span class="nav-en" lang="en">Pauli Matrices and Commutators (Optional)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/force-balance-revisited.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">再看两绳力平衡（选读）</span><span class="nav-en" lang="en">Two-Rope Force Balance Revisited (Optional)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/flow-conservation-revisited.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">再看流量守恒（选读）</span><span class="nav-en" lang="en">Flow Conservation Revisited (Optional)</span></a>
+  </div>
+</li>
       </ul></li></ul>
   </li>
         <li class="sidebar-item sidebar-item-section course-chapter">
@@ -373,6 +388,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#route" id="toc-route" class="nav-link active" data-scroll-target="#route">按问题顺读 <span class="heading-en">Read by Mathematical Questions</span></a></li>
   <li><a href="#textbook" id="toc-textbook" class="nav-link" data-scroll-target="#textbook">复习、应用与教材定位 <span class="heading-en">Review, Application, and Textbook Locations</span></a></li>
+  <li><a href="#physics-connections" id="toc-physics-connections" class="nav-link" data-scroll-target="#physics-connections">物理联系（选读） <span class="heading-en">Physics Connections (Optional)</span></a></li>
   </ul>
 </nav>
     </div>
@@ -402,7 +418,7 @@ ul.task-list li input[type="checkbox"] {
 <p>第一部分从线性方程组出发，通过行图像、列图像和消元，讨论解的存在性与唯一性，并逐步认识线性组合、子空间和线性变换。第二部分将在这些认识的基础上，进一步学习矩阵运算，并用矩阵研究线性变换与相关空间的结构。</p>
 <p>矩阵加法、数乘和乘法，使我们能够组合已有的线性变换；逆矩阵帮助我们理解何时能够从输出唯一恢复输入；分块与矩阵分解则帮助我们看清运算结构，并组织和复用计算。随后，我们通过基、维数和秩描述空间中的独立方向，并用矩阵的四个基本子空间，进一步理解哪些目标向量能够达到、解为什么可能不唯一，以及方程之间的关系怎样影响求解。这里，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math> 接受输入 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf x\in\mathbb R^n</annotation></semantics></math>，产生输出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">A\mathbf x\in\mathbb R^m</annotation></semantics></math>；给定的方程右端目标向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf b\in\mathbb R^m</annotation></semantics></math> 是否能成为输出，正是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math> 是否有解的问题。</p>
 <p>可逆矩阵定理是贯穿这些内容的一条重要线索。对于方阵，求解、主元、线性无关、张成和线性变换等不同语言，能够描述同一种可逆性。随着基、维数和秩的引入，我们会再次认识这一联系；后续学习行列式、特征值和奇异值分解时，还会获得新的理解。</p>
-<p>本部分先在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 的具体子空间中建立这些认识，为后续学习一般向量空间、坐标与换基，以及内积、正交和投影作准备。“线性空间”与“向量空间”通常是同义词；这里从具体子空间走向一般理论，并非引入两种依次升级的空间类别。此前已用实坐标的点积计算矩阵乘积的元素，后续将系统研究内积带来的长度、夹角与正交关系。</p>
+<p>本部分先在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 的具体子空间中建立这些认识，为后续学习一般向量空间、坐标与换基，以及内积、正交和投影作准备。向量空间也称线性空间。此前已用实坐标的点积计算矩阵乘积的元素，后续将系统研究内积带来的长度、夹角与正交关系。</p>
 <section id="route" class="level2">
 <h2 class="anchored" data-anchor-id="route">按问题顺读 <span class="heading-en">Read by Mathematical Questions</span></h2>
 <table class="caption-top table">
@@ -419,7 +435,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><a href="./lessons/08-inverses.html">逆矩阵与逆变换 / Inverse Matrices and Inverse Transformations</a></td>
-<td>何时能从任意输出唯一恢复输入，矩阵逆怎样表示逆变换？</td>
+<td>何时每个目标向量都对应唯一的输入，逆矩阵怎样表示这种对应？</td>
 </tr>
 <tr class="odd">
 <td><a href="./topics/elementary-matrices-and-inverses.html">初等矩阵与矩阵求逆 / Elementary Matrices and Computing Inverses</a></td>
@@ -460,6 +476,10 @@ ul.task-list li input[type="checkbox"] {
 <p>§2.8定理12的零空间结论已在<a href="./topics/span-column-and-null-spaces.html#null-space">第一部分</a>提前学习。§2.8定理13、§2.9定理14–15与可逆矩阵定理的基/秩续篇，在本部分的<a href="./topics/matrix-rank-factorization.html">秩主题</a>正式解释；先从具体欧氏子空间建立基、维数与坐标。行空间及其基提前联系教材§4.3，维数与坐标的理由联系§4.4–4.5。CR、RREF唯一性的列关系证明和左零空间相容性论证按课程逻辑组织，来源身份分别标明。§2.7计算机图形应用没有在此完整展开；已经使用旋转与剪切并不等于学完该节。按教材顺序查阅时可使用<a href="./theorems/chapter-02.html">教材第2章定理汇编 / Textbook Chapter 2 Theorem Reference</a>，汇编中的完整陈述不替代各学习主题的解释。</p>
 <p>一般行列式理论在<a href="./chapter-03-overview.html">第三部分导读 / Part 3 Overview</a>继续；本部分仅在二阶求逆时使用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>d</mi><mo>−</mo><mi>b</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">ad-bc</annotation></semantics></math>。</p>
 <p>一般向量空间与换基、特征值、正交关系与最小二乘、奇异值分解分别在后续部分深化；相关学习主题尚待建设。现有定理汇编用于教材回查，不表示这些主题已经讲解；这些后续理论也不是当前消元证明的先修。</p>
+</section>
+<section id="physics-connections" class="level2">
+<h2 class="anchored" data-anchor-id="physics-connections">物理联系（选读） <span class="heading-en">Physics Connections (Optional)</span></h2>
+<p>从<a href="./topics/pauli-matrices-and-commutators.html">泡利矩阵与对易子</a>理解运算次序，再用<a href="./topics/force-balance-revisited.html">两绳力平衡</a>区分唯一代数解与物理可行性，最后用<a href="./topics/flow-conservation-revisited.html">流量守恒</a>解释四空间和相容条件。后两篇接续第一部分原例，分别提出关于一般目标与空间结构的新问题。</p>
 
 
 </section>

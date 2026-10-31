@@ -264,6 +264,21 @@ ul.task-list li input[type="checkbox"] {
   <a href="../chapter-02-input-output.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">投入产出模型</span><span class="nav-en" lang="en">Input–Output Models</span></a>
   </div>
 </li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">物理联系（选读）</span><span class="nav-en" lang="en">Physics Connections (Optional)</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/pauli-matrices-and-commutators.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">泡利矩阵与对易子（选读）</span><span class="nav-en" lang="en">Pauli Matrices and Commutators (Optional)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/force-balance-revisited.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">再看两绳力平衡（选读）</span><span class="nav-en" lang="en">Two-Rope Force Balance Revisited (Optional)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/flow-conservation-revisited.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">再看流量守恒（选读）</span><span class="nav-en" lang="en">Flow Conservation Revisited (Optional)</span></a>
+  </div>
+</li>
       </ul></li></ul>
   </li>
         <li class="sidebar-item sidebar-item-section course-chapter">
@@ -408,7 +423,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="theorem" class="level2">
 <h2 class="anchored" data-anchor-id="theorem">回顾：解的存在性与唯一性 <span class="heading-en">Review: Existence and Uniqueness of Solutions</span></h2>
 <p>固定 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>，第一部分的<a href="../chapter-01-review.html#all-targets">所有目标表</a>分开讨论：系数矩阵每列有主元，保证对每个方程右端目标向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf b\in\mathbb R^m</annotation></semantics></math>，方程组<strong>至多</strong>有一个解；每行有主元，保证对每个目标向量，方程组<strong>至少</strong>有一个解。前者连接零空间、列无关与单射，后者连接列空间、值域与满射。</p>
-<p>此前的“有没有解”“是否唯一”“列是否无关”“是否张成整个目标空间”以及单射、满射，分别回答不同问题。可逆矩阵定理将说明：对方阵，它们能够通过主元结构相互联系，并与逆矩阵的存在等价。</p>
+<p>对于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n\times n</annotation></semantics></math> 方阵，“对每个目标向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐛</mi><annotation encoding="application/x-tex">\mathbf b</annotation></semantics></math>，方程组 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math> 都有解”与“齐次方程 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf0</annotation></semantics></math> 只有零解”等价，并且都等价于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 可逆。它们分别联系列向量的张成性与线性无关性，也分别联系线性变换的满射性与单射性。</p>
 <p>现在加上关键前提：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n\times n</annotation></semantics></math> <strong>方阵</strong>。主元位于不同的行和列，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个主元便同时占满所有行与列，因而同时满足关于存在性和唯一性的两类条件。</p>
 <div id="lay6-ch02-thm08" class="course-theorem">
 <p><strong>教材§2.3，定理8 / Textbook §2.3, Theorem 8</strong></p>
@@ -519,6 +534,7 @@ E^{-1}=\begin{bmatrix}1&amp;0\\2&amp;1\end{bmatrix}.</annotation></semantics></m
 <p><a href="../topics/partitioned-matrices.html#block-example">不同块尺寸的K/W计算 / Computing with Blocks of Different Sizes</a>。</p>
 </div>
 <p>学过基、维数和秩之后，可以继续阅读<a href="../topics/matrix-rank-factorization.html#invertible-rank">可逆矩阵定理的基与秩续篇 / The Basis and Rank Continuation</a>。基将“无关且张成”合在一起，维数和秩则为主元条件提供空间表述；本页证明不依赖这些后续概念。再学过四空间后，还可用<a href="../topics/four-fundamental-subspaces.html#invertibility">列空间、行空间和两个零空间</a>回看同一种可逆性。这里分别是教材续篇与课程推论，不是另列两套无关判据。</p>
+<p>在<a href="../topics/force-balance-revisited.html">两绳力平衡（选读） / Two-Rope Force Balance (Optional)</a>中，检验“每个目标唯一的代数解”与“满足非负拉力条件的物理解”有何区别。</p>
 
 
 </section>

@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>再看流量守恒：秩与四个基本子空间（选读） – 线性代数 · 学习与复习</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapter-03-overview.html" rel="next">
+<link href="../topics/force-balance-revisited.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0669924a6a5174ef4a224d7e1cb67b62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../assets/course.css">
+<link rel="stylesheet" href="../assets/navigation.css">
+<noscript><style>
+#quarto-sidebar,#quarto-sidebar .collapse{display:block!important;visibility:visible!important;height:auto!important;transform:none!important}
+#quarto-sidebar .chapter-arrow,.quarto-btn-toggle,.quarto-search-button,.sidebar-search{display:none!important}
+@media(max-width:991.98px){#quarto-sidebar{position:static!important;width:auto!important;max-height:none!important;grid-column:page-start/page-end!important}#quarto-header{position:static!important}#quarto-content{padding-top:0!important;display:block!important;padding-inline:24px!important}}
+</style></noscript></head>
+
+<body class="nav-sidebar floating chapter-one quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="课程目录 / Course Contents" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="当前位置 / Current Page"><span class="course-current-label"><span class="nav-zh" lang="zh-CN">再看流量守恒（选读）</span><span class="nav-en" lang="en">Flow Conservation Revisited (Optional)</span></span></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" aria-hidden="true" tabindex="-1">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索 / Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto course-navigation" aria-label="课程目录 / Course Contents">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../" aria-label="线性代数 · 学习与复习 / Linear Algebra: Learning and Review"><span>线性代数</span><span>学习与复习</span></a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"><div class="course-contents-label"><span class="nav-zh" lang="zh-CN">课程目录</span><span class="nav-en" lang="en">Course Contents</span></div> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">前言</span><span class="nav-en" lang="en">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-1" aria-label="第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">第一部分：方程组与线性变换</span><span class="nav-en" lang="en">Part 1: Linear Systems and Transformations</span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-overview.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">本部分导读</span><span class="nav-en" lang="en">Part Overview</span></a>
+  </div>
+</li>
+          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">方程组与求解</span><span class="nav-en" lang="en">Systems and Elimination</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/linear-systems.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">线性方程组与矩阵表示</span><span class="nav-en" lang="en">Linear Systems and Matrix Representation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/gaussian-elimination.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">高斯消元法</span><span class="nav-en" lang="en">Gaussian Elimination</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">两种几何图像</span><span class="nav-en" lang="en">Two Geometric Pictures</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/row-picture.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">行图像</span><span class="nav-en" lang="en">Row Picture</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/column-picture.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">列图像</span><span class="nav-en" lang="en">Column Picture</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">向量表达与解集结构</span><span class="nav-en" lang="en">Vector Form and Solution Structure</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/vector-and-matrix-equations.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">向量方程与矩阵方程</span><span class="nav-en" lang="en">Vector and Matrix Equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/homogeneous-and-nonhomogeneous-equations.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">齐次与非齐次解集</span><span class="nav-en" lang="en">Homogeneous and Nonhomogeneous Solution Sets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/span-column-and-null-spaces.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">张成、列空间与零空间</span><span class="nav-en" lang="en">Span, Column Space and Null Space</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/05-independence.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">线性无关与表示的唯一性</span><span class="nav-en" lang="en">Linear Independence and Uniqueness of Representation</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">线性变换与消元</span><span class="nav-en" lang="en">Linear Transformations and Elimination</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/06-transformations.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">线性变换与矩阵表示</span><span class="nav-en" lang="en">Linear Transformations and Matrix Representations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/elementary-row-matrices.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">初等行变换的矩阵</span><span class="nav-en" lang="en">Matrices for Elementary Row Operations</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-review.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">综合复习</span><span class="nav-en" lang="en">Part Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-applications.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">应用选读</span><span class="nav-en" lang="en">Applications</span></a>
+  </div>
+</li>
+      </ul></li></ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section course-chapter current-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" type="button" aria-controls="quarto-sidebar-section-2" aria-label="第二部分：矩阵代数 / Part 2: Matrix Algebra；草稿 / Draft"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">第二部分：矩阵代数</span><span class="nav-en" lang="en">Part 2: Matrix Algebra</span><span class="nav-status"><span class="nav-zh" lang="zh-CN">草稿</span><span class="nav-en" lang="en">Draft</span></span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-overview.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">本部分导读</span><span class="nav-en" lang="en">Part Overview</span></a>
+  </div>
+</li>
+          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">矩阵基本运算</span><span class="nav-en" lang="en">Basic Matrix Operations</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">矩阵基本运算</span><span class="nav-en" lang="en">Basic Matrix Operations</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">逆矩阵与可逆性</span><span class="nav-en" lang="en">Inverse Matrices and Invertibility</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/08-inverses.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">逆矩阵与逆变换</span><span class="nav-en" lang="en">Inverse Matrices and Inverse Transformations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/elementary-matrices-and-inverses.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">初等矩阵与矩阵求逆</span><span class="nav-en" lang="en">Elementary Matrices and Computing Inverses</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/09-invertibility-blocks.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">可逆矩阵定理</span><span class="nav-en" lang="en">The Invertible Matrix Theorem</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">分块矩阵</span><span class="nav-en" lang="en">Partitioned Matrices</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/partitioned-matrices.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">分块表示与运算</span><span class="nav-en" lang="en">Block Representation and Operations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/inverses-of-partitioned-matrices.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">分块矩阵的逆</span><span class="nav-en" lang="en">Inverses of Partitioned Matrices</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">矩阵分解</span><span class="nav-en" lang="en">Matrix Factorizations</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">独立关系与子空间</span><span class="nav-en" lang="en">Independence and Subspaces</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/matrix-rank-factorization.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">秩与秩分解</span><span class="nav-en" lang="en">Rank and Rank Factorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/four-fundamental-subspaces.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">四个基本子空间</span><span class="nav-en" lang="en">Four Fundamental Subspaces</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-review.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">综合复习</span><span class="nav-en" lang="en">Part Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-input-output.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">投入产出模型</span><span class="nav-en" lang="en">Input–Output Models</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">物理联系（选读）</span><span class="nav-en" lang="en">Physics Connections (Optional)</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/pauli-matrices-and-commutators.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">泡利矩阵与对易子（选读）</span><span class="nav-en" lang="en">Pauli Matrices and Commutators (Optional)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/force-balance-revisited.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">再看两绳力平衡（选读）</span><span class="nav-en" lang="en">Two-Rope Force Balance Revisited (Optional)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/flow-conservation-revisited.html" class="sidebar-item-text sidebar-link active" aria-current="page"><span class="nav-zh" lang="zh-CN">再看流量守恒（选读）</span><span class="nav-en" lang="en">Flow Conservation Revisited (Optional)</span></a>
+  </div>
+</li>
+      </ul></li></ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-3" aria-label="第三部分：行列式 / Part 3: Determinants；草稿 / Draft"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">第三部分：行列式</span><span class="nav-en" lang="en">Part 3: Determinants</span><span class="nav-status"><span class="nav-zh" lang="zh-CN">草稿</span><span class="nav-en" lang="en">Draft</span></span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-overview.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">本部分导读</span><span class="nav-en" lang="en">Part Overview</span></a>
+  </div>
+</li>
+          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">学习主题</span><span class="nav-en" lang="en">Core Topics</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/11-determinants.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">行列式的定义与展开</span><span class="nav-en" lang="en">Defining and Expanding Determinants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/12-determinants-properties.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">消元、行列式性质与可逆性</span><span class="nav-en" lang="en">Elimination, Determinant Properties and Invertibility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/13-cramer-adjugate.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">解方程与古典伴随矩阵</span><span class="nav-en" lang="en">Solving Systems and the Classical Adjugate</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/14-determinants-geometry.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">几何意义与前三部分贯通</span><span class="nav-en" lang="en">Geometric Meaning and Connections across Parts 1–3</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-other-definitions.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">行列式的其他定义（选读）</span><span class="nav-en" lang="en">Other Definitions of the Determinant (Optional)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-review.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">前三部分综合复习</span><span class="nav-en" lang="en">Parts 1–3 Review</span></a>
+  </div>
+</li>
+      </ul></li></ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-4" aria-label="定理汇编 / Theorem Reference"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">定理汇编</span><span class="nav-en" lang="en">Theorem Reference</span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/index.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">汇编入口</span><span class="nav-en" lang="en">Reference Contents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-01.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">教材第1章：方程组与线性变换</span><span class="nav-en" lang="en">Textbook Chapter 1: Linear Systems and Transformations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-02.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">教材第2章：矩阵代数</span><span class="nav-en" lang="en">Textbook Chapter 2: Matrix Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-03.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">教材第3章：行列式</span><span class="nav-en" lang="en">Textbook Chapter 3: Determinants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-04.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">教材第4章：向量空间</span><span class="nav-en" lang="en">Textbook Chapter 4: Vector Spaces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-05.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">教材第5章：特征值与特征向量</span><span class="nav-en" lang="en">Textbook Chapter 5: Eigenvalues and Eigenvectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-06.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">教材第6章：正交性与最小二乘</span><span class="nav-en" lang="en">Textbook Chapter 6: Orthogonality and Least Squares</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-07.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">教材第7章：对称矩阵与 SVD</span><span class="nav-en" lang="en">Textbook Chapter 7: Symmetric Matrices and SVD</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">中英术语表</span><span class="nav-en" lang="en">Chinese–English Glossary</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" aria-label="本页目录 / On This Page">
+    <h2 id="toc-title"><span class="nav-zh" lang="zh-CN">本页目录</span><span class="nav-en" lang="en">On This Page</span></h2>
+   
+  <ul class="collapse">
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">从一个解集到一般问题 <span class="heading-en">From One Solution Set to a General Question</span></a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">支路流量与节点净注入 <span class="heading-en">Branch Flows and Net Injections at Nodes</span></a></li>
+  <li><a href="#all-solutions" id="toc-all-solutions" class="nav-link" data-scroll-target="#all-solutions">相容条件与全部解 <span class="heading-en">Consistency and All Solutions</span></a></li>
+  <li><a href="#four-spaces" id="toc-four-spaces" class="nav-link" data-scroll-target="#four-spaces">四个空间，各自描述什么？ <span class="heading-en">What Do the Four Spaces Describe?</span></a></li>
+  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">练习：目标、环流与新增测量 <span class="heading-en">Exercises: Targets, Circulation, and an Additional Measurement</span></a></li>
+  <li><a href="#current-conservation" id="toc-current-conservation" class="nav-link" data-scroll-target="#current-conservation">与电流守恒的联系 <span class="heading-en">Connection to Current Conservation</span></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">再看流量守恒：秩与四个基本子空间（选读）</span></h1>
+<p class="subtitle lead">Flow Conservation Revisited: Rank and the Four Fundamental Subspaces (Optional)</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">从一个解集到一般问题 <span class="heading-en">From One Solution Set to a General Question</span></h2>
+<p><a href="../chapter-01-applications.html#flow-conservation">第一部分流量例</a>研究 A→B→C→A 的三条内部通道，外部净注入为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi>−</mi><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(3,0,-3)^{\mathsf T}</annotation></semantics></math>，得到</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐪</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mi>t</mi><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf q=\begin{bmatrix}3\\3\\0\end{bmatrix}
++t\begin{bmatrix}1\\1\\1\end{bmatrix}.</annotation></semantics></math></p>
+<p>全部代数解允许 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">t\in\mathbb R</annotation></semantics></math>；原题要求实际流量沿固定箭头方向且非负，因此物理解还需 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t\ge0</annotation></semantics></math>。现在进一步问：<strong>任意外部净注入何时可以实现？为什么有一个自由度？四个基本子空间分别描述什么？</strong></p>
+<p>先修为<a href="../topics/matrix-rank-factorization.html">秩与秩分解</a>、<a href="../topics/four-fundamental-subspaces.html">四个基本子空间及相容性</a>。这是课程自编例子的递进，不增加容量、压力或阻力规律。</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">支路流量与节点净注入 <span class="heading-en">Branch Flows and Net Injections at Nodes</span></h2>
+<p>内部流量依次为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x,y,z</annotation></semantics></math>，令 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐪</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf q=(x,y,z)^{\mathsf T}</annotation></semantics></math>。令 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐬</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><msub><mi>s</mi><mn>2</mn></msub><mo>,</mo><msub><mi>s</mi><mn>3</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf s=(s_1,s_2,s_3)^{\mathsf T}</annotation></semantics></math> 为 A、B、C 三节点的外部<strong>净注入（net injection）</strong>：正值为净注入，负值为净流出。各量使用同一种流量单位，例如 L/s。</p>
+<div class="figure-scroll" tabindex="0" aria-label="原三节点流量图 / Original three-node flow diagram">
+<div id="fig-flow-revisited" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-flow-revisited-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/chapter-01/flow-network.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flow-revisited-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 / Figure&nbsp;1: 旧例回顾：内部箭头 A→B、B→C、C→A 分别计 x、y、z；图中外部数值3对应原净注入(3,0,−3)，不表示所有目标。箭头规定方向，线长不表示流量。
+</figcaption>
+</figure>
+</div>
+</div>
+<p>每个节点无积累时，“内部净流出量=外部净注入量”，于是</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>x</mi><mo>−</mo><mi>z</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>−</mi><mi>x</mi><mo>+</mo><mi>y</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msub><mi>s</mi><mn>2</mn></msub><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>−</mi><mi>y</mi><mo>+</mo><mi>z</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msub><mi>s</mi><mn>3</mn></msub><mi>.</mi></mtd></mtr></mtable></mrow><mspace width="2.0em"></mspace><mi>B</mi><mi>𝐪</mi><mo>=</mo><mi>𝐬</mi><mo>,</mo><mspace width="2.0em"></mspace><mi>B</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">\left\{\begin{aligned}
+x-z&amp;=s_1,\\
+-x+y&amp;=s_2,\\
+-y+z&amp;=s_3.
+\end{aligned}\right.\qquad
+B\mathbf q=\mathbf s,\qquad
+B=\begin{bmatrix}1&amp;0&amp;-1\\-1&amp;1&amp;0\\0&amp;-1&amp;1\end{bmatrix}.</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> 每行对应一个节点方程。每列对应一条支路：在出发节点记 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math>，在到达节点记 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>，表示该支路对两端节点内部净流出的贡献。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> 无量纲，等式两边都是流量。</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐪</mi><mo>∈</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\mathbf q\in\mathbb R^3</annotation></semantics></math> 的坐标标记<strong>支路流量</strong>，方程右端目标向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐬</mi><mo>∈</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\mathbf s\in\mathbb R^3</annotation></semantics></math> 的坐标标记<strong>节点净注入</strong>。即使维数相同，它们也不是同一种物理对象。</p>
+</section>
+<section id="all-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="all-solutions">相容条件与全部解 <span class="heading-en">Consistency and All Solutions</span></h2>
+<p>三行之和为零，所以三个方程相加给出必要条件</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>+</mo><msub><mi>s</mi><mn>2</mn></msub><mo>+</mo><msub><mi>s</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">s_1+s_2+s_3=0.</annotation></semantics></math></p>
+<p>它也充分。由第一式 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><msub><mi>s</mi><mn>1</mn></msub><mo>+</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x=s_1+z</annotation></semantics></math>，第二式 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>x</mi><mo>+</mo><msub><mi>s</mi><mn>2</mn></msub><mo>=</mo><msub><mi>s</mi><mn>1</mn></msub><mo>+</mo><msub><mi>s</mi><mn>2</mn></msub><mo>+</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">y=x+s_2=s_1+s_2+z</annotation></semantics></math>。取 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">z=t</annotation></semantics></math>，当上述条件成立时，</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐪</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>s</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>s</mi><mn>1</mn></msub><mo>+</mo><msub><mi>s</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mi>t</mi><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>t</mi><mo>∈</mo><mi>ℝ</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf q=\begin{bmatrix}s_1\\s_1+s_2\\0\end{bmatrix}
++t\begin{bmatrix}1\\1\\1\end{bmatrix},\qquad t\in\mathbb R.</annotation></semantics></math></p>
+<p>回代前三式，左侧依次为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><msub><mi>s</mi><mn>2</mn></msub><mo>,</mo><mi>−</mi><msub><mi>s</mi><mn>1</mn></msub><mo>−</mo><msub><mi>s</mi><mn>2</mn></msub><mo>=</mo><msub><mi>s</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">s_1,s_2,-s_1-s_2=s_3</annotation></semantics></math>。反过来，每个解取 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">t=z</annotation></semantics></math> 都必须有这个形式，因此这是全部实数代数解。参数项是<strong>环流（circulation）</strong>：三条支路同增同减，任何节点平衡都不变。</p>
+<p>若仍要求实际流量沿三条规定方向且非负，须进一步满足 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t\ge0</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>+</mo><mi>t</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s_1+t\ge0</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>+</mo><msub><mi>s</mi><mn>2</mn></msub><mo>+</mo><mi>t</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s_1+s_2+t\ge0</annotation></semantics></math>；原目标恰好化为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t\ge0</annotation></semantics></math>。代数参数范围与模型允许的参数范围应分开。</p>
+</section>
+<section id="four-spaces" class="level2">
+<h2 class="anchored" data-anchor-id="four-spaces">四个空间，各自描述什么？ <span class="heading-en">What Do the Four Spaces Describe?</span></h2>
+<p>前两行独立：它们的线性组合为零时，从第三分量得第一系数为零，再从第二分量得第二系数为零。第三行是前两行之和的负数，因此 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">rank</mi><mo>⁡</mo></mrow><mi>B</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\operatorname{rank}B=2</annotation></semantics></math>。结合行列秩相等和<a href="../theorems/chapter-02.html#lay6-ch02-thm14">教材§2.9定理14</a>，两个零空间的维数均为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>−</mo><mn>2</mn><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">3-2=1</annotation></semantics></math>。</p>
+<div class="operation-table" tabindex="0" role="region" aria-label="流量模型四空间 / Four spaces of the flow model">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>空间 / Space</th>
+<th>基与维数 / Basis and Dimension</th>
+<th>坐标对象与意义 / Coordinates and Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">\operatorname{Col}B</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>−</mi><mn>1</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup><mo>,</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi>−</mi><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,-1,0)^{\mathsf T},(0,1,-1)^{\mathsf T}</annotation></semantics></math>；维数2</td>
+<td>节点净注入空间中的平面 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>+</mo><msub><mi>s</mi><mn>2</mn></msub><mo>+</mo><msub><mi>s</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s_1+s_2+s_3=0</annotation></semantics></math>；可由内部流量实现的目标</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">\operatorname{Nul}B</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,1,1)^{\mathsf T}</annotation></semantics></math>；维数1</td>
+<td>支路流量空间中的环流；不改变节点平衡</td>
+</tr>
+<tr class="odd">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Row</mi><mo>⁡</mo></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">\operatorname{Row}B</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi>−</mi><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup><mo>,</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,0,-1)^{\mathsf T},(-1,1,0)^{\mathsf T}</annotation></semantics></math>；维数2</td>
+<td>支路变量上的约束系数空间；各行组合能给出的约束系数</td>
+</tr>
+<tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>B</mi><mi>𝖳</mi></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{Nul}(B^{\mathsf T})</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,1,1)^{\mathsf T}</annotation></semantics></math>；维数1</td>
+<td>节点方程的组合系数空间；使各行的线性组合等于零</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>表中行空间的基把行转为列记号，按<a href="../topics/matrix-rank-factorization.html#row-space">行空间约定</a>在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb R^3</annotation></semantics></math> 中比较。<strong>行空间不是所有允许流量的集合</strong>：一行是对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x,y,z</annotation></semantics></math> 施加约束所用的三个系数。</p>
+<p>这些基可以直接核对。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> 的前两列独立，第三列是它们之和的负数；任意总和为零的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐬</mi><annotation encoding="application/x-tex">\mathbf s</annotation></semantics></math> 都有</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐬</mi><mo>=</mo><msub><mi>s</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>s</mi><mn>1</mn></msub><mo>+</mo><msub><mi>s</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathbf s=s_1\begin{bmatrix}1\\-1\\0\end{bmatrix}
++(s_1+s_2)\begin{bmatrix}0\\1\\-1\end{bmatrix},</annotation></semantics></math></p>
+<p>所以这两列确实张成所述平面。齐次方程给出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>y</mi><mo>=</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x=y=z</annotation></semantics></math>，说明右零空间恰是环流直线。前两行独立并张成全部行，给出行空间基。最后，设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝛌</mi><mo>∈</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\boldsymbol\lambda\in\mathbb R^3</annotation></semantics></math> 的分量为节点方程的组合系数；由 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>B</mi><mi>𝖳</mi></msup><mi>𝛌</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">B^{\mathsf T}\boldsymbol\lambda=0</annotation></semantics></math> 得 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><msub><mi>λ</mi><mn>2</mn></msub><mo>=</mo><msub><mi>λ</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">\lambda_1=\lambda_2=\lambda_3</annotation></semantics></math>，给出左零空间基。</p>
+<p>于是<a href="../topics/four-fundamental-subspaces.html#general-compatibility">左零空间相容性判据</a>在这里变成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>𝐬</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">(1,1,1)\mathbf s=0</annotation></semantics></math>，也就是已经双向证明的总净注入为零。</p>
+<p>本例节点和支路恰好各有三个，某些空间有相同坐标表达，但对象仍不同：右零空间描述支路环流，左零空间描述节点方程之间的关系。一般 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math> 矩阵的列空间在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>m</mi></msup><annotation encoding="application/x-tex">\mathbb R^m</annotation></semantics></math>，行空间在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math>；不能从这个特例断言两者总是同一空间。</p>
+</section>
+<section id="practice" class="level2">
+<h2 class="anchored" data-anchor-id="practice">练习：目标、环流与新增测量 <span class="heading-en">Exercises: Targets, Circulation, and an Additional Measurement</span></h2>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐬</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi>−</mi><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf s=(2,1,-3)^{\mathsf T}</annotation></semantics></math> 能否实现？求全部代数解并解释自由参数。若按原固定流向筛选，参数还需满足什么条件？</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐬</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi>−</mi><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf s=(3,0,-2)^{\mathsf T}</annotation></semantics></math> 为什么不能有稳态解？分别用行依赖和列空间说明。</li>
+<li>回看原目标 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi>−</mi><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(3,0,-3)^{\mathsf T}</annotation></semantics></math> 下的测量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">x=5</annotation></semantics></math>。不用从头消元，解释新增约束怎样改变矩阵尺寸、秩、零空间及唯一性；任意四个观测值都相容吗？</li>
+</ol>
+<details class="review-answer"><summary>提示 / Hint</summary>
+<p>先检查三个目标分量之和，再使用一般解。测量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> 给系数矩阵增加一行 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1,0,0)</annotation></semantics></math>；检查它是否消除了原齐次方向，而不是给原矩阵增加一个未知量。</p>
+</details>
+<details class="review-answer"><summary>完整反馈 / Full Feedback</summary>
+<ol type="1">
+<li>总和为零，所以可实现。全部解为</li>
+</ol>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐪</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mi>t</mi><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>t</mi><mo>∈</mo><mi>ℝ</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf q=\begin{bmatrix}2\\3\\0\end{bmatrix}
++t\begin{bmatrix}1\\1\\1\end{bmatrix},\qquad t\in\mathbb R.</annotation></semantics></math></p>
+<p>回代得 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi>−</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">2,1,-3</annotation></semantics></math>。变化的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math> 只添加环流；按原固定流向需 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>+</mo><mi>t</mi><mo>,</mo><mn>3</mn><mo>+</mo><mi>t</mi><mo>,</mo><mi>t</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">2+t,3+t,t\ge0</annotation></semantics></math>，即 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t\ge0</annotation></semantics></math>。</p>
+<ol start="2" type="1">
+<li><p>三方程相加将给出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0=1</annotation></semantics></math>，与三行之和为零矛盾。等价地，这个目标不在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">\operatorname{Col}B</annotation></semantics></math> 的平面内，所以不存在稳态流量解。</p></li>
+<li><p>新系数矩阵及目标为</p></li>
+</ol>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>B</mi><mo accent="true">̃</mo></mover><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mover><mi>𝐬</mi><mo accent="true">̃</mo></mover><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>3</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>3</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>5</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">\widetilde B=\begin{bmatrix}1&amp;0&amp;-1\\-1&amp;1&amp;0\\0&amp;-1&amp;1\\1&amp;0&amp;0\end{bmatrix},\qquad
+\widetilde{\mathbf s}=\begin{bmatrix}3\\0\\-3\\5\end{bmatrix}.</annotation></semantics></math></p>
+<p>原来的齐次解为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">t(1,1,1)^{\mathsf T}</annotation></semantics></math>；新齐次方程又要求第一分量为零，因此 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t=0</annotation></semantics></math>。于是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mover><mi>B</mi><mo accent="true">̃</mo></mover><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>𝟎</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\operatorname{Nul}\widetilde B=\{\mathbf0\}</annotation></semantics></math>，秩从2增至3。它是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>×</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">4\times3</annotation></semantics></math> 满列秩矩形矩阵，对相容数据解唯一。本组数据对应 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(5,5,2)^{\mathsf T}</annotation></semantics></math>，符合非负条件。</p>
+<p>一般四个目标分量仍须使前三个之和为零；例如只把原净流出改成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">-2</annotation></semantics></math>，新增测量也不能消除矛盾。满列秩不保证任意目标可达，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">̃</mo></mover><annotation encoding="application/x-tex">\widetilde B</annotation></semantics></math> 也没有普通双侧逆矩阵。</p>
+</details>
+</section>
+<section id="current-conservation" class="level2">
+<h2 class="anchored" data-anchor-id="current-conservation">与电流守恒的联系 <span class="heading-en">Connection to Current Conservation</span></h2>
+<p>在节点不积累电荷的稳态电路中，规定支路电流正方向后，<strong>基尔霍夫电流定律（Kirchhoff’s current law, KCL）</strong>也给出同类节点平衡方程。与这里固定实际流向的非负流量不同，电流的负值通常表示实际方向与参考方向相反，不应机械排除。</p>
+<p>仅有节点电流守恒仍可能留下环流自由度；完整电路还要结合电压关系、欧姆定律等元件规律，不能由这个守恒模型断言完整电路的电流不唯一。<a href="https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/188228dac72f55ee8e375f5f04164e05_node_loop_meth.pdf">MIT OCW 的节点法与回路法讲义</a>展示了守恒方程与元件关系怎样配合。本页只建立这一联系，不展开完整电路求解。</p>
+<p>从<a href="../topics/pauli-matrices-and-commutators.html">泡利矩阵的次序问题</a>，到<a href="../topics/force-balance-revisited.html">两绳的逆映射与物理可行性</a>，再到本页的空间结构，三篇选读分别使用运算、可逆性和四空间解释具体问题。可回到<a href="../chapter-02-review.html">第二部分综合复习</a>对照这些数学联系。</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../topics/force-balance-revisited.html" class="pagination-link" aria-label="上一页 / Previous: 再看两绳力平衡（选读） / Two-Rope Force Balance Revisited (Optional)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="nav-zh" lang="zh-CN">再看两绳力平衡（选读）</span><span class="nav-en" lang="en">Two-Rope Force Balance Revisited (Optional)</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapter-03-overview.html" class="pagination-link" aria-label="下一页 / Next: 本部分导读 / Part Overview">
+        <span class="nav-page-text"><span class="nav-zh" lang="zh-CN">本部分导读</span><span class="nav-en" lang="en">Part Overview</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script src="../assets/math-layout.js"></script>
+<script src="../assets/navigation.js"></script>
+
+
+
+
+</body></html>

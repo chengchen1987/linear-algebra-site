@@ -70,3 +70,16 @@ math[tabindex]:focus-visible{outline:2px solid #22688b;outline-offset:2px}
 
 /* Chapter 1: bilingual hierarchy; translations stay readable in body and navigation. */
 .chapter-one main h2 .heading-en, .chapter-one main h3 .heading-en { display:block; margin-top:.3rem; font-size:1rem; font-weight:500; line-height:1.5; color:#435967; }
+
+/* Only the two-column invertibility summary: retain one semantic table. */
+.invertibility-table table { width: 100%; min-width: 0; table-layout: fixed; }
+.invertibility-table col:first-child { width: 28% !important; }
+.invertibility-table col:last-child { width: 72% !important; }
+.invertibility-table th:first-child, .invertibility-table td:first-child { width: 28%; }
+.invertibility-table th, .invertibility-table td { white-space: normal; overflow-wrap: anywhere; vertical-align: top; }
+@media(max-width:700px) {
+  .invertibility-table:before { content: none; }
+  .invertibility-table col:first-child { width: 46% !important; }
+  .invertibility-table col:last-child { width: 54% !important; }
+  .invertibility-table th:first-child, .invertibility-table td:first-child { width: 46%; }
+}

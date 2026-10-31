@@ -1388,7 +1388,7 @@
     "href": "chapter-01-applications.html#force-balance",
     "title": "第一部分应用选读：力平衡与流量守恒",
     "section": "",
-    "text": "情境 Setting\n一个结点受到竖直向下 80N80\\,\\mathrm{N} 的力，两根绳子向左上方、右上方拉住它。结点静止时，两根绳子的拉力怎样配合？\n\n\n未知量与假设 Unknowns and Assumptions\n以水平向右、竖直向上为正方向。两根绳子沿从结点指向支点的方向拉结点，单位方向向量（unit direction vectors）分别为\n𝐝1=[−3/54/5],𝐝2=[3/54/5].\\mathbf{d}_1=\\begin{bmatrix}-3/5\\\\4/5\\end{bmatrix},\\qquad\n\\mathbf{d}_2=\\begin{bmatrix}3/5\\\\4/5\\end{bmatrix}.\n两者长度都是 (3/5)2+(4/5)2=1\\sqrt{(3/5)^2+(4/5)^2}=1。未知拉力大小（tension magnitudes）为 f1,f2f_1,f_2，单位为 N。假定结点受力只有图示三项，处于力平衡（force equilibrium）；绳子只能拉，因此物理解还需 f1,f2≥0f_1,f_2\\ge0。\n\n\n\n\n\n\n\n图 / Figure 1: 结点 O 处三个力均以 O 为起点；蓝、橙箭头沿两绳方向，灰箭头竖直向下。图按解得的 50 N、50 N、80 N 使用相同力尺度；两拉力的水平分量抵消，竖直分量相加为向上 80 N。\n\n\n\n\n\n\n建立方程 Forming the Equations\n力的合向量为零，所以两根绳子的拉力合成向上 80N80\\,\\mathrm{N} 的目标：\nf1𝐝1+f2𝐝2=[080]N.f_1\\mathbf{d}_1+f_2\\mathbf{d}_2=\\begin{bmatrix}0\\\\80\\end{bmatrix}\\mathrm{N}.\n以下把拉力数值以 N 为单位代入，逐分量得\n{−35f1+35f2=0,45f1+45f2=80.\\left\\{\\begin{aligned}\n-\\frac35 f_1+\\frac35 f_2&=0,\\\\\n\\frac45 f_1+\\frac45 f_2&=80.\n\\end{aligned}\\right.\n\n\n求解 Solving\n第一式乘 5/35/3 得 −f1+f2=0-f_1+f_2=0，所以 f2=f1f_2=f_1。代入第二式，\n85f1=80,f1=f2=50N.\\frac85 f_1=80,\\qquad f_1=f_2=50\\,\\mathrm{N}.\n核对：水平分量 −30+30=0-30+30=0，竖直分量 40+40=8040+40=80，加上向下的 80N80\\,\\mathrm{N}，合力为零。\n\n\n解释结果 Interpreting the Result\n系数矩阵的两列是无量纲的绳子单位方向；组合系数是以 N 为单位的拉力大小；目标向量是用来抵消向下外力的向上合力。这里不是直接把向下的力当作目标，目标来自把它移到等式右边。\n解得的两个拉力非负，符合绳子的物理条件。列组合的代数解还须接受模型条件的检查。\n\n\n小问题：向下的力改成120 N A Question: Change the Downward Force to 120 N\n两根绳子的方向不变，求两拉力，并解释与原解的比例关系。\n答案与解释（answer and explanation）\n第一式仍给 f1=f2f_1=f_2，第二式改为 85f1=120\\frac85f_1=120，所以两拉力均为 75N75\\,\\mathrm{N}。外力变成原来的 120/80=3/2120/80=3/2，原系数同时乘 3/23/2，列组合也乘 3/23/2，恰好得到新目标。两式确定唯一解，且仍满足非负条件。",
+    "text": "情境 Setting\n一个结点受到竖直向下 80N80\\,\\mathrm{N} 的力，两根绳子向左上方、右上方拉住它。结点静止时，两根绳子的拉力怎样配合？\n\n\n未知量与假设 Unknowns and Assumptions\n以水平向右、竖直向上为正方向。两根绳子沿从结点指向支点的方向拉结点，单位方向向量（unit direction vectors）分别为\n𝐝1=[−3/54/5],𝐝2=[3/54/5].\\mathbf{d}_1=\\begin{bmatrix}-3/5\\\\4/5\\end{bmatrix},\\qquad\n\\mathbf{d}_2=\\begin{bmatrix}3/5\\\\4/5\\end{bmatrix}.\n两者长度都是 (3/5)2+(4/5)2=1\\sqrt{(3/5)^2+(4/5)^2}=1。未知拉力大小（tension magnitudes）为 f1,f2f_1,f_2，单位为 N。假定结点受力只有图示三项，处于力平衡（force equilibrium）；绳子只能拉，因此物理解还需 f1,f2≥0f_1,f_2\\ge0。\n\n\n\n\n\n\n\n图 / Figure 1: 结点 O 处三个力均以 O 为起点；蓝、橙箭头沿两绳方向，灰箭头竖直向下。图按解得的 50 N、50 N、80 N 使用相同力尺度；两拉力的水平分量抵消，竖直分量相加为向上 80 N。\n\n\n\n\n\n\n建立方程 Forming the Equations\n力的合向量为零，所以两根绳子的拉力合成向上 80N80\\,\\mathrm{N} 的目标：\nf1𝐝1+f2𝐝2=[080]N.f_1\\mathbf{d}_1+f_2\\mathbf{d}_2=\\begin{bmatrix}0\\\\80\\end{bmatrix}\\mathrm{N}.\n以下把拉力数值以 N 为单位代入，逐分量得\n{−35f1+35f2=0,45f1+45f2=80.\\left\\{\\begin{aligned}\n-\\frac35 f_1+\\frac35 f_2&=0,\\\\\n\\frac45 f_1+\\frac45 f_2&=80.\n\\end{aligned}\\right.\n\n\n求解 Solving\n第一式乘 5/35/3 得 −f1+f2=0-f_1+f_2=0，所以 f2=f1f_2=f_1。代入第二式，\n85f1=80,f1=f2=50N.\\frac85 f_1=80,\\qquad f_1=f_2=50\\,\\mathrm{N}.\n核对：水平分量 −30+30=0-30+30=0，竖直分量 40+40=8040+40=80，加上向下的 80N80\\,\\mathrm{N}，合力为零。\n\n\n解释结果 Interpreting the Result\n系数矩阵的两列是无量纲的绳子单位方向；组合系数是以 N 为单位的拉力大小；目标向量是用来抵消向下外力的向上合力。这里不是直接把向下的力当作目标，目标来自把它移到等式右边。\n解得的两个拉力非负，符合绳子的物理条件。列组合的代数解还须接受模型条件的检查。\n\n\n小问题：向下的力改成120 N A Question: Change the Downward Force to 120 N\n两根绳子的方向不变，求两拉力，并解释与原解的比例关系。\n答案与解释（answer and explanation）\n第一式仍给 f1=f2f_1=f_2，第二式改为 85f1=120\\frac85f_1=120，所以两拉力均为 75N75\\,\\mathrm{N}。外力变成原来的 120/80=3/2120/80=3/2，原系数同时乘 3/23/2，列组合也乘 3/23/2，恰好得到新目标。两式确定唯一解，且仍满足非负条件。\n\n后续选读：第二部分再看两绳力平衡 / Two-Rope Force Balance Revisited将解释同一装置面对一般目标时为何能唯一确定代数系数，以及哪些目标符合绳子只能拉的条件。",
     "crumbs": [
       "第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>应用选读 / Applications</span>"
@@ -1399,7 +1399,7 @@
     "href": "chapter-01-applications.html#flow-conservation",
     "title": "第一部分应用选读：力平衡与流量守恒",
     "section": "例子 B：三个结点的流量守恒 Example B: Flow Conservation at Three Nodes",
-    "text": "例子 B：三个结点的流量守恒 Example B: Flow Conservation at Three Nodes\n\n情境 Setting\n在一个流动网络中，内部流向为 A→B、B→C、C→A；外部向 A 输入3单位流量，从 C 输出3单位流量。各内部通道的流量能由这些信息唯一确定吗？\n\n\n\n\n\n\n\n图 / Figure 2: 内部箭头 A→B、B→C、C→A 的流量依次为 x、y、z；外部向 A 输入3，从 C 输出3。箭头表示正方向，线长和粗细不表示流量大小。\n\n\n\n\n\n\n未知量与假设 Unknowns and Assumptions\n三个未知量 x,y,zx,y,z 分别沿图示内部箭头计量，使用同一种流量单位（例如升/秒，L/s）；图中数值3也按这一单位计量。采用稳态（steady state）、结点无积累（no accumulation）假设：每个结点的总流入量等于总流出量。这就是流量守恒（flow conservation）。\n先求线性方程组的全部实数解，再按“实际流量沿图示方向且非负”的条件筛选。\n\n\n建立方程 Forming the Equations\nA 处流入 3+z3+z、流出 xx；B 处流入 xx、流出 yy；C 处流入 yy、流出 z+3z+3。因此\n{x−z=3,y−x=0,z−y=−3.\\left\\{\\begin{aligned}\nx-z&=3,\\\\\ny-x&=0,\\\\\nz-y&=-3.\n\\end{aligned}\\right.\n第三式的左右两边分别是前两式之和的负数，所以它是前两式的结果，未提供新的独立约束。总外部输入等于总外部输出，与这一依赖相符。\n\n\n求解 Solving\n第一式给 x=3+zx=3+z，第二式给 y=xy=x。令 z=tz=t，得到\n[xyz]=[330]+t[111],t∈ℝ.\\begin{bmatrix}x\\\\y\\\\z\\end{bmatrix}\n=\\begin{bmatrix}3\\\\3\\\\0\\end{bmatrix}\n+t\\begin{bmatrix}1\\\\1\\\\1\\end{bmatrix},\\qquad t\\in\\mathbb{R}.\n代回三式分别为 3+t−t=33+t-t=3、(3+t)−(3+t)=0(3+t)-(3+t)=0、t−(3+t)=−3t-(3+t)=-3；反过来每个解取 t=zt=z 都是这个形式，所以没有漏解。\n\n\n解释结果 Interpreting the Result\n作为线性方程组，参数 tt 可以取任意实数。齐次方向 (1,1,1)𝖳(1,1,1)^{\\mathsf T} 表示同时在三条内部边上增加相同流量：每个结点的流入与流出同增，外部输入/输出不变。这是沿 A→B→C→A 的环流（circulation）。\n按图示方向要求实际流量非负时，须同时有 3+t≥03+t\\ge0、3+t≥03+t\\ge0、t≥0t\\ge0，合起来就是 t≥0t\\ge0。负参数是代数解的一部分，但不满足本题对实际流向的约定。外部流量不能确定内部环流大小，故仍有自由参数。\n\n\n小问题：增加测量条件 x=5 A Question: Add the Measurement x=5\n测得 A→B 的流量为5，求全部内部流量，并检验物理条件。\n答案与解释（answer and explanation）\n由 3+t=53+t=5 得 t=2t=2，所以 (x,y,z)=(5,5,2)(x,y,z)=(5,5,2)，均非负。核对 A：3+2=53+2=5；B：5=55=5；C：5=2+35=2+3。这条测量确定了原来未定的环流参数。\n\n两例都先用已建立的线性系统语言建模，再检查单位与物理条件。回看向量与矩阵方程的列组合和解集关系的全部解结构；教材对应表在第一部分总览。\n上一主题：第一部分综合复习：从一次消元读出整个结构 / Previous: Part 1 Review: Reading the Structure from Elimination",
+    "text": "例子 B：三个结点的流量守恒 Example B: Flow Conservation at Three Nodes\n\n情境 Setting\n在一个流动网络中，内部流向为 A→B、B→C、C→A；外部向 A 输入3单位流量，从 C 输出3单位流量。各内部通道的流量能由这些信息唯一确定吗？\n\n\n\n\n\n\n\n图 / Figure 2: 内部箭头 A→B、B→C、C→A 的流量依次为 x、y、z；外部向 A 输入3，从 C 输出3。箭头表示正方向，线长和粗细不表示流量大小。\n\n\n\n\n\n\n未知量与假设 Unknowns and Assumptions\n三个未知量 x,y,zx,y,z 分别沿图示内部箭头计量，使用同一种流量单位（例如升/秒，L/s）；图中数值3也按这一单位计量。采用稳态（steady state）、结点无积累（no accumulation）假设：每个结点的总流入量等于总流出量。这就是流量守恒（flow conservation）。\n先求线性方程组的全部实数解，再按“实际流量沿图示方向且非负”的条件筛选。\n\n\n建立方程 Forming the Equations\nA 处流入 3+z3+z、流出 xx；B 处流入 xx、流出 yy；C 处流入 yy、流出 z+3z+3。因此\n{x−z=3,y−x=0,z−y=−3.\\left\\{\\begin{aligned}\nx-z&=3,\\\\\ny-x&=0,\\\\\nz-y&=-3.\n\\end{aligned}\\right.\n第三式的左右两边分别是前两式之和的负数，所以它是前两式的结果，未提供新的独立约束。总外部输入等于总外部输出，与这一依赖相符。\n\n\n求解 Solving\n第一式给 x=3+zx=3+z，第二式给 y=xy=x。令 z=tz=t，得到\n[xyz]=[330]+t[111],t∈ℝ.\\begin{bmatrix}x\\\\y\\\\z\\end{bmatrix}\n=\\begin{bmatrix}3\\\\3\\\\0\\end{bmatrix}\n+t\\begin{bmatrix}1\\\\1\\\\1\\end{bmatrix},\\qquad t\\in\\mathbb{R}.\n代回三式分别为 3+t−t=33+t-t=3、(3+t)−(3+t)=0(3+t)-(3+t)=0、t−(3+t)=−3t-(3+t)=-3；反过来每个解取 t=zt=z 都是这个形式，所以没有漏解。\n\n\n解释结果 Interpreting the Result\n作为线性方程组，参数 tt 可以取任意实数。齐次方向 (1,1,1)𝖳(1,1,1)^{\\mathsf T} 表示同时在三条内部边上增加相同流量：每个结点的流入与流出同增，外部输入/输出不变。这是沿 A→B→C→A 的环流（circulation）。\n按图示方向要求实际流量非负时，须同时有 3+t≥03+t\\ge0、3+t≥03+t\\ge0、t≥0t\\ge0，合起来就是 t≥0t\\ge0。负参数是代数解的一部分，但不满足本题对实际流向的约定。外部流量不能确定内部环流大小，故仍有自由参数。\n\n\n小问题：增加测量条件 x=5 A Question: Add the Measurement x=5\n测得 A→B 的流量为5，求全部内部流量，并检验物理条件。\n答案与解释（answer and explanation）\n由 3+t=53+t=5 得 t=2t=2，所以 (x,y,z)=(5,5,2)(x,y,z)=(5,5,2)，均非负。核对 A：3+2=53+2=5；B：5=55=5；C：5=2+35=2+3。这条测量确定了原来未定的环流参数。\n\n后续选读：第二部分再看流量守恒 / Flow Conservation Revisited将从任意净注入出发，用四个基本子空间解释相容条件、环流自由度和新增测量的作用。\n两例都先用已建立的线性系统语言建模，再检查单位与物理条件。回看向量与矩阵方程的列组合和解集关系的全部解结构；教材对应表在第一部分总览。\n上一主题：第一部分综合复习：从一次消元读出整个结构 / Previous: Part 1 Review: Reading the Structure from Elimination",
     "crumbs": [
       "第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>应用选读 / Applications</span>"
@@ -1410,7 +1410,7 @@
     "href": "chapter-02-overview.html",
     "title": "第二部分 · 矩阵代数",
     "section": "",
-    "text": "按问题顺读 Read by Mathematical Questions\n第一部分从线性方程组出发，通过行图像、列图像和消元，讨论解的存在性与唯一性，并逐步认识线性组合、子空间和线性变换。第二部分将在这些认识的基础上，进一步学习矩阵运算，并用矩阵研究线性变换与相关空间的结构。\n矩阵加法、数乘和乘法，使我们能够组合已有的线性变换；逆矩阵帮助我们理解何时能够从输出唯一恢复输入；分块与矩阵分解则帮助我们看清运算结构，并组织和复用计算。随后，我们通过基、维数和秩描述空间中的独立方向，并用矩阵的四个基本子空间，进一步理解哪些目标向量能够达到、解为什么可能不唯一，以及方程之间的关系怎样影响求解。这里，A∈ℝm×nA\\in\\mathbb R^{m\\times n} 接受输入 𝐱∈ℝn\\mathbf x\\in\\mathbb R^n，产生输出 A𝐱∈ℝmA\\mathbf x\\in\\mathbb R^m；给定的方程右端目标向量 𝐛∈ℝm\\mathbf b\\in\\mathbb R^m 是否能成为输出，正是 A𝐱=𝐛A\\mathbf x=\\mathbf b 是否有解的问题。\n可逆矩阵定理是贯穿这些内容的一条重要线索。对于方阵，求解、主元、线性无关、张成和线性变换等不同语言，能够描述同一种可逆性。随着基、维数和秩的引入，我们会再次认识这一联系；后续学习行列式、特征值和奇异值分解时，还会获得新的理解。\n本部分先在 ℝn\\mathbb R^n 的具体子空间中建立这些认识，为后续学习一般向量空间、坐标与换基，以及内积、正交和投影作准备。“线性空间”与“向量空间”通常是同义词；这里从具体子空间走向一般理论，并非引入两种依次升级的空间类别。此前已用实坐标的点积计算矩阵乘积的元素，后续将系统研究内积带来的长度、夹角与正交关系。\n这些主题在实数范围内提供定义、推理、例题与独立计算。核心结果默认可见；提示、长证明与完整答案可以展开。可以按问题顺读，也可以通过回查链接复习相关定义和计算。",
+    "text": "按问题顺读 Read by Mathematical Questions\n第一部分从线性方程组出发，通过行图像、列图像和消元，讨论解的存在性与唯一性，并逐步认识线性组合、子空间和线性变换。第二部分将在这些认识的基础上，进一步学习矩阵运算，并用矩阵研究线性变换与相关空间的结构。\n矩阵加法、数乘和乘法，使我们能够组合已有的线性变换；逆矩阵帮助我们理解何时能够从输出唯一恢复输入；分块与矩阵分解则帮助我们看清运算结构，并组织和复用计算。随后，我们通过基、维数和秩描述空间中的独立方向，并用矩阵的四个基本子空间，进一步理解哪些目标向量能够达到、解为什么可能不唯一，以及方程之间的关系怎样影响求解。这里，A∈ℝm×nA\\in\\mathbb R^{m\\times n} 接受输入 𝐱∈ℝn\\mathbf x\\in\\mathbb R^n，产生输出 A𝐱∈ℝmA\\mathbf x\\in\\mathbb R^m；给定的方程右端目标向量 𝐛∈ℝm\\mathbf b\\in\\mathbb R^m 是否能成为输出，正是 A𝐱=𝐛A\\mathbf x=\\mathbf b 是否有解的问题。\n可逆矩阵定理是贯穿这些内容的一条重要线索。对于方阵，求解、主元、线性无关、张成和线性变换等不同语言，能够描述同一种可逆性。随着基、维数和秩的引入，我们会再次认识这一联系；后续学习行列式、特征值和奇异值分解时，还会获得新的理解。\n本部分先在 ℝn\\mathbb R^n 的具体子空间中建立这些认识，为后续学习一般向量空间、坐标与换基，以及内积、正交和投影作准备。向量空间也称线性空间。此前已用实坐标的点积计算矩阵乘积的元素，后续将系统研究内积带来的长度、夹角与正交关系。\n这些主题在实数范围内提供定义、推理、例题与独立计算。核心结果默认可见；提示、长证明与完整答案可以展开。可以按问题顺读，也可以通过回查链接复习相关定义和计算。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
@@ -1421,7 +1421,7 @@
     "href": "chapter-02-overview.html#route",
     "title": "第二部分 · 矩阵代数",
     "section": "",
-    "text": "学习入口 / Topic\n主要问题 / Guiding Question\n\n\n\n\n矩阵基本运算 / Basic Matrix Operations\n不同计算表示怎样表达同一运算，乘积怎样对应变换复合？\n\n\n逆矩阵与逆变换 / Inverse Matrices and Inverse Transformations\n何时能从任意输出唯一恢复输入，矩阵逆怎样表示逆变换？\n\n\n初等矩阵与矩阵求逆 / Elementary Matrices and Computing Inverses\n怎样复用同一组行变换求解多列目标，并得到逆矩阵？\n\n\n可逆矩阵定理 / The Invertible Matrix Theorem\n对方阵，方程、主元、列向量和线性变换为什么给出等价的可逆判据？\n\n\n分块表示与运算 / Block Representation and Operations\n怎样按输入、输出或行列分组，理解和组织运算？\n\n\n分块矩阵的逆 / Inverses of Partitioned Matrices\n怎样利用块结构理解和求出整体逆变换？\n\n\nLU分解与方程组求解 / LU Factorization and Solving Linear Systems\n为什么值得分解？为什么消元乘子能直接组成 LL？\n\n\n矩阵的秩与秩分解 / Matrix Rank and Rank Factorization\n怎样用基和维数描述独立方向，用CR记录列的坐标，并回看可逆性？\n\n\n四个基本子空间 / Four Fundamental Subspaces\n四个空间怎样共同解释可达目标、解的不唯一性和行之间的关系？",
+    "text": "学习入口 / Topic\n主要问题 / Guiding Question\n\n\n\n\n矩阵基本运算 / Basic Matrix Operations\n不同计算表示怎样表达同一运算，乘积怎样对应变换复合？\n\n\n逆矩阵与逆变换 / Inverse Matrices and Inverse Transformations\n何时每个目标向量都对应唯一的输入，逆矩阵怎样表示这种对应？\n\n\n初等矩阵与矩阵求逆 / Elementary Matrices and Computing Inverses\n怎样复用同一组行变换求解多列目标，并得到逆矩阵？\n\n\n可逆矩阵定理 / The Invertible Matrix Theorem\n对方阵，方程、主元、列向量和线性变换为什么给出等价的可逆判据？\n\n\n分块表示与运算 / Block Representation and Operations\n怎样按输入、输出或行列分组，理解和组织运算？\n\n\n分块矩阵的逆 / Inverses of Partitioned Matrices\n怎样利用块结构理解和求出整体逆变换？\n\n\nLU分解与方程组求解 / LU Factorization and Solving Linear Systems\n为什么值得分解？为什么消元乘子能直接组成 LL？\n\n\n矩阵的秩与秩分解 / Matrix Rank and Rank Factorization\n怎样用基和维数描述独立方向，用CR记录列的坐标，并回看可逆性？\n\n\n四个基本子空间 / Four Fundamental Subspaces\n四个空间怎样共同解释可达目标、解的不唯一性和行之间的关系？",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
@@ -1433,6 +1433,17 @@
     "title": "第二部分 · 矩阵代数",
     "section": "复习、应用与教材定位 Review, Application, and Textbook Locations",
     "text": "复习、应用与教材定位 Review, Application, and Textbook Locations\n用知识与术语速查 / Concepts and Terminology找条件，用综合复习 / Part Review连接概念，再读投入产出模型 / Input–Output Models，考察非负目标与非负产出的关系。\n本部分覆盖教材§2.1–2.5：定理1–10，以及没有编号定理的分块运算、三角结构、LU算法、矩形尺寸、换行与常规计算量。§2.6定理11在投入产出阅读中解释并计算；这项应用说明如何用矩阵方程分析非负需求与产出。\n§2.8定理12的零空间结论已在第一部分提前学习。§2.8定理13、§2.9定理14–15与可逆矩阵定理的基/秩续篇，在本部分的秩主题正式解释；先从具体欧氏子空间建立基、维数与坐标。行空间及其基提前联系教材§4.3，维数与坐标的理由联系§4.4–4.5。CR、RREF唯一性的列关系证明和左零空间相容性论证按课程逻辑组织，来源身份分别标明。§2.7计算机图形应用没有在此完整展开；已经使用旋转与剪切并不等于学完该节。按教材顺序查阅时可使用教材第2章定理汇编 / Textbook Chapter 2 Theorem Reference，汇编中的完整陈述不替代各学习主题的解释。\n一般行列式理论在第三部分导读 / Part 3 Overview继续；本部分仅在二阶求逆时使用 ad−bcad-bc。\n一般向量空间与换基、特征值、正交关系与最小二乘、奇异值分解分别在后续部分深化；相关学习主题尚待建设。现有定理汇编用于教材回查，不表示这些主题已经讲解；这些后续理论也不是当前消元证明的先修。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-overview.html#physics-connections",
+    "href": "chapter-02-overview.html#physics-connections",
+    "title": "第二部分 · 矩阵代数",
+    "section": "物理联系（选读） Physics Connections (Optional)",
+    "text": "物理联系（选读） Physics Connections (Optional)\n从泡利矩阵与对易子理解运算次序，再用两绳力平衡区分唯一代数解与物理可行性，最后用流量守恒解释四空间和相容条件。后两篇接续第一部分原例，分别提出关于一般目标与空间结构的新问题。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
@@ -1509,7 +1520,7 @@
     "href": "lessons/07-matrix-products.html#order",
     "title": "矩阵基本运算",
     "section": "为什么一般不满足交换律？ Why Matrix Multiplication Is Generally Noncommutative",
-    "text": "为什么一般不满足交换律？ Why Matrix Multiplication Is Generally Noncommutative\n先看尺寸 / Dimensions First. 上例的 DFDF 为 2×22\\times2，FDFD 为 3×33\\times3。两者都有定义，却连尺寸都不同。交换后也可能根本没有定义。\n尺寸自检 / Dimension Check. 若 AA 为 2×32\\times3、BB 为 3×43\\times4，ABAB 与 BABA 是否都有定义？\n答案 / Answer\nABAB 有定义，尺寸为 2×42\\times4；BABA 的内尺寸4与2不同，没有定义。\n\n再看元素 / Compare Entries. 即使同阶方阵，行列配对也不同。取水平拉伸矩阵 HH 与水平剪切矩阵 SS：\nH=[2001],S=[1101].H=\\begin{bmatrix}2&0\\\\0&1\\end{bmatrix},\\qquad S=\\begin{bmatrix}1&1\\\\0&1\\end{bmatrix}.\n行列计算给出\nHS=[2201],SH=[2101].HS=\\begin{bmatrix}2&2\\\\0&1\\end{bmatrix},\\qquad SH=\\begin{bmatrix}2&1\\\\0&1\\end{bmatrix}.\n例如右上元素分别是 2⋅1+0⋅1=22\\cdot1+0\\cdot1=2 与 1⋅0+1⋅1=11\\cdot0+1\\cdot1=1，所以 HS≠SHHS\\ne SH。\n最后看操作次序 / Interpret the Order. H(u,v)𝖳=(2u,v)𝖳H(u,v)^{\\mathsf T}=(2u,v)^{\\mathsf T}，S(u,v)𝖳=(u+v,v)𝖳S(u,v)^{\\mathsf T}=(u+v,v)^{\\mathsf T}。对 𝐞2=(0,1)𝖳\\mathbf e_2=(0,1)^{\\mathsf T}：\n先 S 后 H:(0,1)𝖳↦(1,1)𝖳↦(2,1)𝖳,先 H 后 S:(0,1)𝖳↦(0,1)𝖳↦(1,1)𝖳.\\begin{aligned}\n\\text{先 }S\\text{ 后 }H:&\\quad(0,1)^{\\mathsf T}\\longmapsto(1,1)^{\\mathsf T}\\longmapsto(2,1)^{\\mathsf T},\\\\\n\\text{先 }H\\text{ 后 }S:&\\quad(0,1)^{\\mathsf T}\\longmapsto(0,1)^{\\mathsf T}\\longmapsto(1,1)^{\\mathsf T}.\n\\end{aligned}\n\n\n\n\n\n\n\n图 / Figure 1: 水平拉伸与水平剪切的两种顺序。固定等比例坐标轴，所有向量从原点出发；右图输入与中间像重合。 / Stretch and shear in two orders, with fixed equal-scale axes and vectors based at the origin.\n\n\n\n\n因此矩阵乘法一般不满足交换律（noncommutative）；不是说任意两个矩阵都不能交换。单位矩阵以及标量矩阵 cIncI_n 都与任意同阶矩阵交换。",
+    "text": "为什么一般不满足交换律？ Why Matrix Multiplication Is Generally Noncommutative\n先看尺寸 / Dimensions First. 上例的 DFDF 为 2×22\\times2，FDFD 为 3×33\\times3。两者都有定义，却连尺寸都不同。交换后也可能根本没有定义。\n尺寸自检 / Dimension Check. 若 AA 为 2×32\\times3、BB 为 3×43\\times4，ABAB 与 BABA 是否都有定义？\n答案 / Answer\nABAB 有定义，尺寸为 2×42\\times4；BABA 的内尺寸4与2不同，没有定义。\n\n再看元素 / Compare Entries. 即使同阶方阵，行列配对也不同。取水平拉伸矩阵 HH 与水平剪切矩阵 SS：\nH=[2001],S=[1101].H=\\begin{bmatrix}2&0\\\\0&1\\end{bmatrix},\\qquad S=\\begin{bmatrix}1&1\\\\0&1\\end{bmatrix}.\n行列计算给出\nHS=[2201],SH=[2101].HS=\\begin{bmatrix}2&2\\\\0&1\\end{bmatrix},\\qquad SH=\\begin{bmatrix}2&1\\\\0&1\\end{bmatrix}.\n例如右上元素分别是 2⋅1+0⋅1=22\\cdot1+0\\cdot1=2 与 1⋅0+1⋅1=11\\cdot0+1\\cdot1=1，所以 HS≠SHHS\\ne SH。\n最后看操作次序 / Interpret the Order. H(u,v)𝖳=(2u,v)𝖳H(u,v)^{\\mathsf T}=(2u,v)^{\\mathsf T}，S(u,v)𝖳=(u+v,v)𝖳S(u,v)^{\\mathsf T}=(u+v,v)^{\\mathsf T}。对 𝐞2=(0,1)𝖳\\mathbf e_2=(0,1)^{\\mathsf T}：\n先 S 后 H:(0,1)𝖳↦(1,1)𝖳↦(2,1)𝖳,先 H 后 S:(0,1)𝖳↦(0,1)𝖳↦(1,1)𝖳.\\begin{aligned}\n\\text{先 }S\\text{ 后 }H:&\\quad(0,1)^{\\mathsf T}\\longmapsto(1,1)^{\\mathsf T}\\longmapsto(2,1)^{\\mathsf T},\\\\\n\\text{先 }H\\text{ 后 }S:&\\quad(0,1)^{\\mathsf T}\\longmapsto(0,1)^{\\mathsf T}\\longmapsto(1,1)^{\\mathsf T}.\n\\end{aligned}\n\n\n\n\n\n\n\n图 / Figure 1: 水平拉伸与水平剪切的两种顺序。固定等比例坐标轴，所有向量从原点出发；右图输入与中间像重合。 / Stretch and shear in two orders, with fixed equal-scale axes and vectors based at the origin.\n\n\n\n\n因此矩阵乘法一般不满足交换律（noncommutative）；不是说任意两个矩阵都不能交换。单位矩阵以及标量矩阵 cIncI_n 都与任意同阶矩阵交换。\n选读：泡利矩阵与对易子 / Pauli Matrices and Commutators用两个分量操作比较乘法次序，并练习不交换因子的展开。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>矩阵基本运算 / Basic Matrix Operations</span>"
@@ -1729,7 +1740,7 @@
     "href": "lessons/09-invertibility-blocks.html",
     "title": "可逆矩阵定理",
     "section": "",
-    "text": "回顾：解的存在性与唯一性 Review: Existence and Uniqueness of Solutions\n本部分导读 / Part Overview · 初等矩阵与矩阵求逆 / Elementary Matrices and Computing Inverses\n固定 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，第一部分的所有目标表分开讨论：系数矩阵每列有主元，保证对每个方程右端目标向量 𝐛∈ℝm\\mathbf b\\in\\mathbb R^m，方程组至多有一个解；每行有主元，保证对每个目标向量，方程组至少有一个解。前者连接零空间、列无关与单射，后者连接列空间、值域与满射。\n此前的“有没有解”“是否唯一”“列是否无关”“是否张成整个目标空间”以及单射、满射，分别回答不同问题。可逆矩阵定理将说明：对方阵，它们能够通过主元结构相互联系，并与逆矩阵的存在等价。\n现在加上关键前提：AA 是 n×nn\\times n 方阵。主元位于不同的行和列，nn 个主元便同时占满所有行与列，因而同时满足关于存在性和唯一性的两类条件。\n完整定理汇编 / Complete Theorem Reference。这里的主元位置由行化简辨认，不是说原矩阵每行、每列各有一个非零元素就够了。十二项是同一种性质的不同表述。下面通过已经学过的方程组、列向量和线性变换说明它们为什么等价；理解这些连接，就不必把各项当作互不相关的记忆清单。",
+    "text": "回顾：解的存在性与唯一性 Review: Existence and Uniqueness of Solutions\n本部分导读 / Part Overview · 初等矩阵与矩阵求逆 / Elementary Matrices and Computing Inverses\n固定 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，第一部分的所有目标表分开讨论：系数矩阵每列有主元，保证对每个方程右端目标向量 𝐛∈ℝm\\mathbf b\\in\\mathbb R^m，方程组至多有一个解；每行有主元，保证对每个目标向量，方程组至少有一个解。前者连接零空间、列无关与单射，后者连接列空间、值域与满射。\n对于 n×nn\\times n 方阵，“对每个目标向量 𝐛\\mathbf b，方程组 A𝐱=𝐛A\\mathbf x=\\mathbf b 都有解”与“齐次方程 A𝐱=𝟎A\\mathbf x=\\mathbf0 只有零解”等价，并且都等价于 AA 可逆。它们分别联系列向量的张成性与线性无关性，也分别联系线性变换的满射性与单射性。\n现在加上关键前提：AA 是 n×nn\\times n 方阵。主元位于不同的行和列，nn 个主元便同时占满所有行与列，因而同时满足关于存在性和唯一性的两类条件。\n完整定理汇编 / Complete Theorem Reference。这里的主元位置由行化简辨认，不是说原矩阵每行、每列各有一个非零元素就够了。十二项是同一种性质的不同表述。下面通过已经学过的方程组、列向量和线性变换说明它们为什么等价；理解这些连接，就不必把各项当作互不相关的记忆清单。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>可逆矩阵定理 / The Invertible Matrix Theorem</span>"
@@ -1806,7 +1817,7 @@
     "href": "lessons/09-invertibility-blocks.html#blocks",
     "title": "可逆矩阵定理",
     "section": "继续学习分块与多个方程组 Continuing to Blocks and Multiple Linear Systems",
-    "text": "继续学习分块与多个方程组 Continuing to Blocks and Multiple Linear Systems\n分块表示与运算 / Block Representation and Operations接着组织同一个矩阵的行列，包含K/W完整算例与练习。分块不是把矩阵写成因子乘积；后者称为分解。\n\n同一系数矩阵的多个方程组 AX=FAX=F 与H的计算练习 / Multiple Linear Systems。\n\n\n保持顺序的矩阵方程训练 / Matrix Equation Practice。\n\n\n非方阵的对照例 / Nonsquare Examples。\n\n\n不同块尺寸的K/W计算 / Computing with Blocks of Different Sizes。\n\n学过基、维数和秩之后，可以继续阅读可逆矩阵定理的基与秩续篇 / The Basis and Rank Continuation。基将“无关且张成”合在一起，维数和秩则为主元条件提供空间表述；本页证明不依赖这些后续概念。再学过四空间后，还可用列空间、行空间和两个零空间回看同一种可逆性。这里分别是教材续篇与课程推论，不是另列两套无关判据。",
+    "text": "继续学习分块与多个方程组 Continuing to Blocks and Multiple Linear Systems\n分块表示与运算 / Block Representation and Operations接着组织同一个矩阵的行列，包含K/W完整算例与练习。分块不是把矩阵写成因子乘积；后者称为分解。\n\n同一系数矩阵的多个方程组 AX=FAX=F 与H的计算练习 / Multiple Linear Systems。\n\n\n保持顺序的矩阵方程训练 / Matrix Equation Practice。\n\n\n非方阵的对照例 / Nonsquare Examples。\n\n\n不同块尺寸的K/W计算 / Computing with Blocks of Different Sizes。\n\n学过基、维数和秩之后，可以继续阅读可逆矩阵定理的基与秩续篇 / The Basis and Rank Continuation。基将“无关且张成”合在一起，维数和秩则为主元条件提供空间表述；本页证明不依赖这些后续概念。再学过四空间后，还可用列空间、行空间和两个零空间回看同一种可逆性。这里分别是教材续篇与课程推论，不是另列两套无关判据。\n在两绳力平衡（选读） / Two-Rope Force Balance (Optional)中，检验“每个目标唯一的代数解”与“满足非负拉力条件的物理解”有何区别。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>可逆矩阵定理 / The Invertible Matrix Theorem</span>"
@@ -2114,7 +2125,7 @@
     "href": "topics/four-fundamental-subspaces.html",
     "title": "矩阵的四个基本子空间",
     "section": "",
-    "text": "从三个空间到第四个空间 From Three Spaces to a Fourth\n秩与CR分解 / Rank and CR Factorization · 本部分导读 / Part Overview\n对实矩阵 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，第一部分用列空间描述哪些方程右端目标向量能够由 A𝐱A\\mathbf x 得到，用零空间描述被 AA 映射为零向量的输入。上一主题又把各行的线性组合组织成行空间。\n前面研究了矩阵各列之间的线性关系。现在对各行提出同样的问题：哪些系数能使各行的线性组合等于零？ 把所有满足这一条件的系数向量收集起来，就得到左零空间。行空间研究组合的结果；左零空间研究行之间的关系，包括系数全为零的情况。\n左零空间（left null space）定义为 Nul⁡(A𝖳)={𝐲∈ℝm:A𝖳𝐲=0}.\\operatorname{Nul}(A^{\\mathsf T})=\\{\\mathbf y\\in\\mathbb R^m:A^{\\mathsf T}\\mathbf y=0\\}. 转置后，这个条件等价于 𝐲𝖳A=0\\mathbf y^{\\mathsf T}A=0。若 𝐲=(y1,…,ym)𝖳\\mathbf y=(y_1,\\ldots,y_m)^{\\mathsf T}，它就是说以 y1,…,ymy_1,\\ldots,y_m 为系数，将 AA 的各行线性组合得到零行。𝐲∈ℝm\\mathbf y\\in\\mathbb R^m 的分量是组合系数；被组合的是 mm 个各有 nn 个分量的行向量，不能把系数向量与这些行向量混为一谈。“左”描述乘在 AA 左侧的行向量 𝐲𝖳\\mathbf y^{\\mathsf T}，并不改变 𝐲\\mathbf y 本身是 mm 分量列向量的约定。\n设 r=rank⁡Ar=\\operatorname{rank}A。以下四个空间称为矩阵的四个基本子空间（four fundamental subspaces）。横向比较时先看环境空间，再看维数和意义。\n窄屏可在表格区域横向滚动 / Scroll within the table on narrow screens.\n这些维数不是四条独立的记忆规则。列空间维数是秩的定义；行空间维数由行列秩相等得到。对 AA 应用秩定理得 n−rn-r；A𝖳A^{\\mathsf T} 有 mm 列且秩也是 rr，再应用同一定理得 m−rm-r。行空间的具体论证提前来自教材§4.3；这里先通过消元理解四空间，正交关系稍后再学。",
+    "text": "从三个空间到第四个空间 From Three Spaces to a Fourth\n秩与CR分解 / Rank and CR Factorization · 本部分导读 / Part Overview\n对实矩阵 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，第一部分用列空间描述哪些方程右端目标向量能够由 A𝐱A\\mathbf x 得到，用零空间描述被 AA 映射为零向量的输入。上一主题又把各行的线性组合组织成行空间。\n前面研究了矩阵各列之间的线性关系。现在对各行提出同样的问题：哪些系数能使各行的线性组合等于零？ 把所有满足这一条件的系数向量收集起来，就得到左零空间。行空间研究组合的结果；左零空间研究行之间的关系，包括系数全为零的情况。\n左零空间（left null space）定义为 Nul⁡(A𝖳)={𝐲∈ℝm:A𝖳𝐲=0}.\\operatorname{Nul}(A^{\\mathsf T})=\\{\\mathbf y\\in\\mathbb R^m:A^{\\mathsf T}\\mathbf y=0\\}. 转置后，这个条件等价于 𝐲𝖳A=0\\mathbf y^{\\mathsf T}A=0。若 𝐲=(y1,…,ym)𝖳\\mathbf y=(y_1,\\ldots,y_m)^{\\mathsf T}，它就是说以 y1,…,ymy_1,\\ldots,y_m 为系数，将 AA 的各行线性组合得到零行。𝐲∈ℝm\\mathbf y\\in\\mathbb R^m 的分量是组合系数；被组合的是 mm 个各有 nn 个分量的行向量，不能把系数向量与这些行向量混为一谈。“左”描述乘在 AA 左侧的行向量 𝐲𝖳\\mathbf y^{\\mathsf T}，并不改变 𝐲\\mathbf y 本身是 mm 分量列向量的约定。\n设 r=rank⁡Ar=\\operatorname{rank}A。以下四个空间称为矩阵的四个基本子空间（four fundamental subspaces）。横向比较时先看环境空间，再看维数和意义。\n这些维数不是四条独立的记忆规则。列空间维数是秩的定义；行空间维数由行列秩相等得到。对 AA 应用秩定理得 n−rn-r；A𝖳A^{\\mathsf T} 有 mm 列且秩也是 rr，再应用同一定理得 m−rm-r。行空间的具体论证提前来自教材§4.3；这里先通过消元理解四空间，正交关系稍后再学。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>四个基本子空间 / Four Fundamental Subspaces</span>"
@@ -2191,7 +2202,7 @@
     "href": "topics/four-fundamental-subspaces.html#invertibility",
     "title": "矩阵的四个基本子空间",
     "section": "用四个基本子空间回看可逆性 Invertibility Revisited through the Four Fundamental Subspaces",
-    "text": "用四个基本子空间回看可逆性 Invertibility Revisited through the Four Fundamental Subspaces\n现在限定 A∈ℝn×nA\\in\\mathbb R^{n\\times n}。方阵的满行秩与满列秩条件相同，所以以下每一行都与 AA 可逆等价。这是将教材§2.3定理8、§2.9基与秩续篇和本页维数公式联系起来的课程推论，不另编教材定理号。\n\n\n\n\n\n\n\n\n条件 / Condition\n空间与求解的意义 / Meaning for Spaces and Solutions\n\n\n\n\nrank⁡A=n\\operatorname{rank}A=n\n列空间有 nn 个独立方向；方阵每行、每列都有主元\n\n\nCol⁡A=ℝn\\operatorname{Col}A=\\mathbb R^n\n每个方程右端目标向量都可以达到\n\n\nRow⁡A=ℝn\\operatorname{Row}A=\\mathbb R^n\nnn 个行向量张成 ℝn\\mathbb R^n，因而构成它的一组基\n\n\nNul⁡A={𝟎}\\operatorname{Nul}A=\\{\\mathbf0\\}\n不同输入不会得到同一个输出，因此相容时解唯一\n\n\nNul⁡(A𝖳)={𝟎}\\operatorname{Nul}(A^{\\mathsf T})=\\{\\mathbf0\\}\n不存在非平凡行依赖关系，因而没有由这类关系施加的额外相容性条件\n\n\n\n\n窄屏可在表格区域横向滚动 / Scroll within the table on narrow screens.\n理由来自已经建立的空间结构：列空间与行空间维数均为 rr，两个零空间维数均为 n−rn-r。ℝn\\mathbb R^n 的子空间维数为 nn 就是整个空间，维数为0就只有零向量。因此表中每个条件都等价于 r=nr=n，再由可逆矩阵定理得到可逆性。行空间一行还用了基定理：nn 个向量张成 nn 维空间，就构成基。\n“没有额外相容性条件”有确切依据：左零空间相容性充要条件要求对所有 𝐲∈Nul⁡(A𝖳)\\mathbf y\\in\\operatorname{Nul}(A^{\\mathsf T}) 都有 𝐲𝖳𝐛=0\\mathbf y^{\\mathsf T}\\mathbf b=0。当该空间只有零向量时，这个要求对每个 𝐛\\mathbf b 自动成立。零空间一行则由 A𝐱1=A𝐱2⇔A(𝐱1−𝐱2)=0A\\mathbf x_1=A\\mathbf x_2\\iff A(\\mathbf x_1-\\mathbf x_2)=0 解释唯一性。只有在方阵前提下，两类条件才汇合为对每个目标都恰有一个输入。",
+    "text": "用四个基本子空间回看可逆性 Invertibility Revisited through the Four Fundamental Subspaces\n现在限定 A∈ℝn×nA\\in\\mathbb R^{n\\times n}。方阵的满行秩与满列秩条件相同，所以以下每一行都与 AA 可逆等价。这是将教材§2.3定理8、§2.9基与秩续篇和本页维数公式联系起来的推论。\n\n\n\n\n\n\n\n\n条件 / Condition\n空间与求解的意义 / Meaning for Spaces and Solutions\n\n\n\n\nrank⁡A=n\\operatorname{rank}A=n\n列空间有 nn 个独立方向；方阵每行、每列都有主元\n\n\nCol⁡A=ℝn\\operatorname{Col}A=\\mathbb R^n\n每个方程右端目标向量都可以达到\n\n\nRow⁡A=ℝn\\operatorname{Row}A=\\mathbb R^n\nnn 个行向量张成 ℝn\\mathbb R^n，因而构成它的一组基\n\n\nNul⁡A={𝟎}\\operatorname{Nul}A=\\{\\mathbf0\\}\n不同输入不会得到同一个输出，因此相容时解唯一\n\n\nNul⁡(A𝖳)={𝟎}\\operatorname{Nul}(A^{\\mathsf T})=\\{\\mathbf0\\}\n不存在非平凡行依赖关系，因而没有由这类关系施加的额外相容性条件\n\n\n\n\n理由来自已经建立的空间结构：列空间与行空间维数均为 rr，两个零空间维数均为 n−rn-r。ℝn\\mathbb R^n 的子空间维数为 nn 就是整个空间，维数为0就只有零向量。因此表中每个条件都等价于 r=nr=n，再由可逆矩阵定理得到可逆性。行空间一行还用了基定理：nn 个向量张成 nn 维空间，就构成基。\n“没有额外相容性条件”有确切依据：左零空间相容性充要条件要求对所有 𝐲∈Nul⁡(A𝖳)\\mathbf y\\in\\operatorname{Nul}(A^{\\mathsf T}) 都有 𝐲𝖳𝐛=0\\mathbf y^{\\mathsf T}\\mathbf b=0。当该空间只有零向量时，这个要求对每个 𝐛\\mathbf b 自动成立。零空间一行则由 A𝐱1=A𝐱2⇔A(𝐱1−𝐱2)=0A\\mathbf x_1=A\\mathbf x_2\\iff A(\\mathbf x_1-\\mathbf x_2)=0 解释唯一性。只有在方阵前提下，两类条件才汇合为对每个目标都恰有一个输入。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>四个基本子空间 / Four Fundamental Subspaces</span>"
@@ -2202,7 +2213,7 @@
     "href": "topics/four-fundamental-subspaces.html#looking-ahead",
     "title": "矩阵的四个基本子空间",
     "section": "后续怎样理解这些关系？ How Will These Relations Develop?",
-    "text": "后续怎样理解这些关系？ How Will These Relations Develop?\n本页通过行列组合、秩和消元建立四空间及相容性。第六部分将用正交补解释两对空间的关系，并在最小二乘问题中处理不可达的目标向量；第七部分将用奇异向量给出四空间的标准正交基。教材对应位置是§6.1、§6.5和§7.4，本页不以这些后续理论作为证明前提。\n先用第二部分综合复习 / Part 2 Review把方程求解、列关系、线性变换与空间结构放回同一次消元。",
+    "text": "后续怎样理解这些关系？ How Will These Relations Develop?\n本页通过行列组合、秩和消元建立四空间及相容性。第六部分将用正交补解释两对空间的关系，并在最小二乘问题中处理不可达的目标向量；第七部分将用奇异向量给出四空间的标准正交基。教材对应位置是§6.1、§6.5和§7.4，本页不以这些后续理论作为证明前提。\n先用第二部分综合复习 / Part 2 Review把方程求解、列关系、线性变换与空间结构放回同一次消元。\n在再看流量守恒（选读） / Flow Conservation Revisited (Optional)中，用四空间解释原三节点模型：哪些净注入可以实现，环流为何不改变平衡，新增测量怎样消除自由度。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>四个基本子空间 / Four Fundamental Subspaces</span>"
@@ -2400,7 +2411,7 @@
     "href": "chapter-02-review.html#连接应用与后续-connections-to-applications-and-what-follows",
     "title": "第二部分 · 综合复习",
     "section": "连接应用与后续 Connections to Applications and What Follows",
-    "text": "连接应用与后续 Connections to Applications and What Follows\n在投入产出模型中辨认固定的系数矩阵与改变的目标，说明非负性与每列元素之和小于1的条件，如何保证存在唯一的非负解。这是一组充分条件，不是所有可解模型都必须满足的条件。一般行列式理论在第三部分导读继续；具体基、维数、秩和CR已经在本部分建立；一般空间与换基在第四部分继续。\n\n运算、求逆与分解的联系 / Connections among Operations, Inverses and Factorizations。\n\n\n独立复习题与答案 / Independent Review Problems and Solutions。",
+    "text": "连接应用与后续 Connections to Applications and What Follows\n在投入产出模型中辨认固定的系数矩阵与改变的目标，说明非负性与每列元素之和小于1的条件，如何保证存在唯一的非负解。这是一组充分条件，不是所有可解模型都必须满足的条件。一般行列式理论在第三部分导读继续；具体基、维数、秩和CR已经在本部分建立；一般空间与换基在第四部分继续。\n物理选读可分别检验三种联系：泡利矩阵中，次序怎样体现在乘积里？两绳力平衡中，可逆为何不保证拉力非负？流量守恒中，行依赖怎样限制目标，零空间怎样描述环流？\n\n运算、求逆与分解的联系 / Connections among Operations, Inverses and Factorizations。\n\n\n独立复习题与答案 / Independent Review Problems and Solutions。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>综合复习 / Part Review</span>"
@@ -2440,6 +2451,204 @@
     ]
   },
   {
+    "objectID": "topics/pauli-matrices-and-commutators.html",
+    "href": "topics/pauli-matrices-and-commutators.html",
+    "title": "泡利矩阵与对易子（选读）",
+    "section": "",
+    "text": "问题与先修 Question and Prerequisites\n两个简单的线性变换，交换先后次序会怎样？本页从两个实矩阵出发，用对易子（commutator）记录这种差别。先学习矩阵基本运算中的逐列乘法、变换复合、结合律与分配律；自逆的解释还可回查逆矩阵。末段涉及复数，是进一步选读，不需要先掌握量子态或测量理论。\n三篇物理选读依次联系运算次序、两绳模型中的逆映射与物理解、流量模型中的四空间与相容性。每篇都从已学线性代数提出一个新的问题。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>泡利矩阵与对易子（选读） / Pauli Matrices and Commutators (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/pauli-matrices-and-commutators.html#real-matrices",
+    "href": "topics/pauli-matrices-and-commutators.html#real-matrices",
+    "title": "泡利矩阵与对易子（选读）",
+    "section": "两个分量操作 Two Operations on Components",
+    "text": "两个分量操作 Two Operations on Components\n考虑两个泡利矩阵（Pauli matrices）\nσx=[0110],σz=[100−1].\\sigma_x=\\begin{bmatrix}0&1\\\\1&0\\end{bmatrix},\\qquad\n\\sigma_z=\\begin{bmatrix}1&0\\\\0&-1\\end{bmatrix}.\n对任意实输入向量 𝐯=(a,b)𝖳\\mathbf v=(a,b)^{\\mathsf T}，\nσx𝐯=[ba],σz𝐯=[a−b].\\sigma_x\\mathbf v=\\begin{bmatrix}b\\\\a\\end{bmatrix},\\qquad\n\\sigma_z\\mathbf v=\\begin{bmatrix}a\\\\-b\\end{bmatrix}.\n前者交换两个分量；后者保持第一分量，改变第二分量的符号。它们都是已知的矩阵变换。复合时仍是乘积右侧的矩阵先作用：\nσz(σx𝐯)=σz(b,a)𝖳=(b,−a)𝖳,σx(σz𝐯)=σx(a,−b)𝖳=(−b,a)𝖳.\\begin{aligned}\n\\sigma_z(\\sigma_x\\mathbf v)&=\\sigma_z(b,a)^{\\mathsf T}=(b,-a)^{\\mathsf T},\\\\\n\\sigma_x(\\sigma_z\\mathbf v)&=\\sigma_x(a,-b)^{\\mathsf T}=(-b,a)^{\\mathsf T}.\n\\end{aligned}\n相应矩阵为\nσzσx=[01−10],σxσz=[0−110].\\sigma_z\\sigma_x=\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix},\\qquad\n\\sigma_x\\sigma_z=\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}.\n这两个乘积互为相反矩阵，并不相等。这里比较的是线性变换的复合。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>泡利矩阵与对易子（选读） / Pauli Matrices and Commutators (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/pauli-matrices-and-commutators.html#commutator",
+    "href": "topics/pauli-matrices-and-commutators.html#commutator",
+    "title": "泡利矩阵与对易子（选读）",
+    "section": "用对易子记录次序差别 Recording Order with a Commutator",
+    "text": "用对易子记录次序差别 Recording Order with a Commutator\n对同阶方阵 A,BA,B，定义\n[A,B]=AB−BA.[A,B]=AB-BA.\n若 [A,B]=0[A,B]=0，称 AA 与 BB 对易（commute）；否则称不对易。由定义也立即得到 [A,B]=−[B,A][A,B]=-[B,A]。本例\n[σz,σx]=2[01−10]≠0.[\\sigma_z,\\sigma_x]=2\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}\\ne0.\n练习：乘积、分量与自逆 / Exercise: Products, Components, and Self-Inverses. 独立计算上面两种乘积和对易子；再验证 σx2=σz2=I2\\sigma_x^2=\\sigma_z^2=I_2，用分量操作解释为什么各自作用两次都会恢复原向量。\n提示 / Hint\n逐行与列相乘后，分别把两个乘积作用于 (a,b)𝖳(a,b)^{\\mathsf T}。计算平方时，让同一种操作连续做两次；不要把“各自能恢复”误解成“两种操作可以交换”。\n\n完整反馈 / Full Feedback\nσzσx\\sigma_z\\sigma_x 的第一行取出 σx\\sigma_x 的第一行，第二行将其第二行变号，得到 (0,1)(0,1) 与 (−1,0)(-1,0)。σxσz\\sigma_x\\sigma_z 则交换 σz\\sigma_z 的两行，得到 (0,−1)(0,-1) 与 (1,0)(1,0)；相减即上述对易子。\n交换两次回到 (a,b)(a,b)；将第二分量变号两次也回到 (a,b)(a,b)。直接计算得到\nσx2=[1001]=I2,σz2=[1001]=I2.\\sigma_x^2=\\begin{bmatrix}1&0\\\\0&1\\end{bmatrix}=I_2,\n\\qquad \\sigma_z^2=\\begin{bmatrix}1&0\\\\0&1\\end{bmatrix}=I_2.\n按双侧逆定义，σx−1=σx\\sigma_x^{-1}=\\sigma_x、σz−1=σz\\sigma_z^{-1}=\\sigma_z。两个因子各自可逆，并不保证它们对易。\n\n练习：不交换因子的展开 / Exercise: Expanding without Reordering. 对同阶方阵 A,B,CA,B,C，证明\n[A,BC]=[A,B]C+B[A,C].[A,BC]=[A,B]C+B[A,C].\n提示 / Hint\n从右侧代入定义，使用分配律。注意中间两个项的因子次序是否完全相同。\n\n完整反馈 / Full Feedback\n在尺寸相容的前提下，\n[A,B]C+B[A,C]=(AB−BA)C+B(AC−CA)=ABC−BAC+BAC−BCA=ABC−BCA=[A,BC].\\begin{aligned}\n[A,B]C+B[A,C]\n&=(AB-BA)C+B(AC-CA)\\\\\n&=ABC-BAC+BAC-BCA\\\\\n&=ABC-BCA\\\\\n&=[A,BC].\n\\end{aligned}\n第二行仅用结合律省略括号，没有交换因子。消去的是两个同为 BACBAC 的项；一般不能把它改成 ABCABC。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>泡利矩阵与对易子（选读） / Pauli Matrices and Commutators (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/pauli-matrices-and-commutators.html#complex-extension",
+    "href": "topics/pauli-matrices-and-commutators.html#complex-extension",
+    "title": "泡利矩阵与对易子（选读）",
+    "section": "第三个矩阵：含复数的进一步阅读 A Third Matrix: Further Reading with Complex Numbers",
+    "text": "第三个矩阵：含复数的进一步阅读 A Third Matrix: Further Reading with Complex Numbers\n现在允许矩阵元素为复数。只需使用 i2=−1i^2=-1，加法、数乘和行列相乘后求和的计算规则不变。第三个泡利矩阵是\nσy=[0−ii0].\\sigma_y=\\begin{bmatrix}0&-i\\\\i&0\\end{bmatrix}.\n练习 / Exercise. 直接相乘，验证以下循环次序的关系，并检查逆序时的负号：\n[σx,σy]=2iσz,[σy,σz]=2iσx,[σz,σx]=2iσy.\\begin{aligned}\n[\\sigma_x,\\sigma_y]&=2i\\sigma_z,\\\\\n[\\sigma_y,\\sigma_z]&=2i\\sigma_x,\\\\\n[\\sigma_z,\\sigma_x]&=2i\\sigma_y.\n\\end{aligned}\n提示 / Hint\n先算 σxσy\\sigma_x\\sigma_y 的两个对角元，再算另外两组。每个对易子都需分别计算正序和逆序，不能只算一个乘积。\n\n完整反馈 / Full Feedback\n三个正序乘积为\nσxσy=[i00−i]=iσz,σyσz=[0ii0]=iσx,σzσx=[01−10]=iσy.\\begin{aligned}\n\\sigma_x\\sigma_y&=\\begin{bmatrix}i&0\\\\0&-i\\end{bmatrix}=i\\sigma_z,\\\\\n\\sigma_y\\sigma_z&=\\begin{bmatrix}0&i\\\\i&0\\end{bmatrix}=i\\sigma_x,\\\\\n\\sigma_z\\sigma_x&=\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}=i\\sigma_y.\n\\end{aligned}\n逆序乘积依次为 −iσz,−iσx,−iσy-i\\sigma_z,-i\\sigma_x,-i\\sigma_y，所以相减给出三条关系。最后一式与实矩阵部分相符，因为 i(−i)=1i(-i)=1、i2=−1i^2=-1。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>泡利矩阵与对易子（选读） / Pauli Matrices and Commutators (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/pauli-matrices-and-commutators.html#physics",
+    "href": "topics/pauli-matrices-and-commutators.html#physics",
+    "title": "泡利矩阵与对易子（选读）",
+    "section": "物理联系与解释边界 Physical Connections and Interpretive Limits",
+    "text": "物理联系与解释边界 Physical Connections and Interpretive Limits\n量子力学中，自旋（spin）1/21/2 的三个分量可用矩阵 Sj=(ℏ/2)σjS_j=(\\hbar/2)\\sigma_j 表示，其中 j=x,y,zj=x,y,z，ℏ\\hbar 是约化普朗克常数（reduced Planck constant）。这一对应见Georgetown University 的自旋与泡利矩阵讲义。这里只认识矩阵关系，完整物理解释留给后续课程。\n量子计算中常把这三个矩阵记作 X,Y,ZX,Y,Z，用来表示量子门（quantum gates）；它们也与相应可观测量有关，但矩阵或算符的乘积不能直接当作连续测量过程。操作与可观测量的区别可参阅IBM Quantum Learning：Pauli operations and observables。\n本例还有一个重要区别：σzσx=−σxσz\\sigma_z\\sigma_x=-\\sigma_x\\sigma_z。若把两种乘积分别作为量子门序列作用于同一态，所得向量只差整体负号，即整体相位（global phase）。整体相位不改变末态的测量概率，所以不能由这对矩阵不对易，就断言单独测量末态必能区分两种次序。参阅IBM Quantum Learning：整体相位。这不改变它们作为矩阵不相等的事实。\n下一篇两绳力平衡把问题从“操作怎样组合”转到“给定合力能否唯一恢复拉力，以及代数解是否符合物理条件”。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>泡利矩阵与对易子（选读） / Pauli Matrices and Commutators (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/force-balance-revisited.html",
+    "href": "topics/force-balance-revisited.html",
+    "title": "再看两绳力平衡：可逆性与物理解（选读）",
+    "section": "",
+    "text": "已知什么，现在问什么？ What Do We Know, and What Comes Next?\n第一部分两绳例已算出：抵消向下 80N80\\,\\mathrm N 的外力时，两绳各拉 50N50\\,\\mathrm N；外力改成 120N120\\,\\mathrm N 时，两拉力按比例变成 75N75\\,\\mathrm N。这里不重复旧求解，而问：同一装置面对任意目标合力，是否都有唯一解？这个解一定是可实现的拉力吗？\n先修是逆矩阵与逆变换、可逆矩阵定理；基和秩的说法可回查秩主题。本例是课程自编模型的延伸。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>再看两绳力平衡（选读） / Two-Rope Force Balance Revisited (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/force-balance-revisited.html#model",
+    "href": "topics/force-balance-revisited.html#model",
+    "title": "再看两绳力平衡：可逆性与物理解（选读）",
+    "section": "固定绳方向，改变目标合力 Fixed Rope Directions, Changing Target Force",
+    "text": "固定绳方向，改变目标合力 Fixed Rope Directions, Changing Target Force\n仍以向右、向上为正方向，两绳单位方向为\n𝐝1=[−3/54/5],𝐝2=[3/54/5],A=[𝐝1𝐝2]=[−3/53/54/54/5].\\mathbf d_1=\\begin{bmatrix}-3/5\\\\4/5\\end{bmatrix},\\qquad\n\\mathbf d_2=\\begin{bmatrix}3/5\\\\4/5\\end{bmatrix},\\qquad\nA=[\\mathbf d_1\\ \\mathbf d_2]=\\begin{bmatrix}-3/5&3/5\\\\4/5&4/5\\end{bmatrix}.\n未知向量 𝐟=(f1,f2)𝖳\\mathbf f=(f_1,f_2)^{\\mathsf T} 的分量是两绳拉力大小，不是位移。方程右端目标向量 𝐛=(bx,by)𝖳\\mathbf b=(b_x,b_y)^{\\mathsf T} 是两绳需要产生的合力，即外力向量的负数。平衡条件是\nA𝐟=𝐛.A\\mathbf f=\\mathbf b.\nAA 的元素无量纲，𝐟\\mathbf f 和 𝐛\\mathbf b 的分量均按 N 计量。以下公式和数值都使用这一单位约定。\n\n\n\n\n\n\n\n图 / Figure 1: 旧例回顾：从结点 O 出发的两根拉力箭头分别为50 N，向下外力为80 N；此图只表示第一部分的对称目标，不表示下文的新目标。单位 N 为牛顿（newton）。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>再看两绳力平衡（选读） / Two-Rope Force Balance Revisited (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/force-balance-revisited.html#invertibility",
+    "href": "topics/force-balance-revisited.html#invertibility",
+    "title": "再看两绳力平衡：可逆性与物理解（选读）",
+    "section": "唯一性来自哪里？ Where Does Uniqueness Come From?",
+    "text": "唯一性来自哪里？ Where Does Uniqueness Come From?\n若 c1𝐝1+c2𝐝2=𝟎c_1\\mathbf d_1+c_2\\mathbf d_2=\\mathbf0，水平分量给出 c2=c1c_2=c_1，竖直分量给出 c1+c2=0c_1+c_2=0，因此 c1=c2=0c_1=c_2=0。两列线性无关。它们在 ℝ2\\mathbb R^2 中构成一组基（basis），张成整个平面；等价地，rank⁡A=2\\operatorname{rank}A=2，系数矩阵每行、每列都有主元。\n由教材§2.3定理8，AA 可逆，因而对每个目标向量 𝐛∈ℝ2\\mathbf b\\in\\mathbb R^2，都存在唯一的一组代数系数 𝐟\\mathbf f。这里尚未检查这些系数能否作为拉力。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>再看两绳力平衡（选读） / Two-Rope Force Balance Revisited (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/force-balance-revisited.html#inverse-map",
+    "href": "topics/force-balance-revisited.html#inverse-map",
+    "title": "再看两绳力平衡：可逆性与物理解（选读）",
+    "section": "用逆映射处理一般目标 Using the Inverse Map for a General Target",
+    "text": "用逆映射处理一般目标 Using the Inverse Map for a General Target\n本装置的逆矩阵为\nA−1=[−5/65/85/65/8].A^{-1}=\\begin{bmatrix}-5/6&5/8\\\\5/6&5/8\\end{bmatrix}.\n两个次序都可直接核验：AA−1AA^{-1} 的两行分别为 (1,0),(0,1)(1,0),(0,1)；A−1AA^{-1}A 的对角元均为 1/2+1/2=11/2+1/2=1，非对角元均为 −1/2+1/2=0-1/2+1/2=0。所以这确实是双侧逆。由教材§2.2定理5，\n𝐟=A−1𝐛,{f1=−56bx+58by,f2=56bx+58by.\\mathbf f=A^{-1}\\mathbf b,\\qquad\n\\left\\{\\begin{aligned}\nf_1&=-\\frac56 b_x+\\frac58 b_y,\\\\\nf_2&=\\frac56 b_x+\\frac58 b_y.\n\\end{aligned}\\right.\nAA 把拉力系数变为合力；A−1A^{-1} 则从给定合力恢复两拉力。只要绳方向不变，就使用同一个逆映射，而不必为每个目标重新建立方向关系。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>再看两绳力平衡（选读） / Two-Rope Force Balance Revisited (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/force-balance-revisited.html#physical-solutions",
+    "href": "topics/force-balance-revisited.html#physical-solutions",
+    "title": "再看两绳力平衡：可逆性与物理解（选读）",
+    "section": "唯一代数解与物理可行性 A Unique Algebraic Solution and Physical Feasibility",
+    "text": "唯一代数解与物理可行性 A Unique Algebraic Solution and Physical Feasibility\n绳子只能拉，因而还要有 f1,f2≥0f_1,f_2\\ge0。代入上式得\nby≥43bx,by≥−43bx,即by≥43|bx|.b_y\\ge\\frac43 b_x,\\qquad b_y\\ge-\\frac43 b_x,\n\\quad\\text{即}\\quad b_y\\ge\\frac43|b_x|.\n这是固定两绳方向下的非负拉力条件。可逆性保证任意目标的代数解唯一，不保证该解满足模型的非负条件。\n练习 / Exercise. 比较目标 𝐛=(60,80)𝖳\\mathbf b=(60,80)^{\\mathsf T} 与 (90,80)𝖳(90,80)^{\\mathsf T}（分量单位均为 N）。求拉力、回代，并解释物理差别。\n提示 / Hint\n先用同一个 A−1A^{-1}，再逐项检查拉力是否非负。目标向量是所需合力，外力与它方向相反。\n\n完整反馈 / Full Feedback\n第一目标给\n𝐟=[−50+5050+50]=[0100]N.\\mathbf f=\\begin{bmatrix}-50+50\\\\50+50\\end{bmatrix}\n=\\begin{bmatrix}0\\\\100\\end{bmatrix}\\mathrm N.\n合力为 0𝐝1+100𝐝2=(60,80)𝖳N0\\mathbf d_1+100\\mathbf d_2=(60,80)^{\\mathsf T}\\mathrm N。此时 80=(4/3)6080=(4/3)60，在非负条件的边界；第一根绳张力为零，未施加推力。\n第二目标给\n𝐟=[−75+5075+50]=[−25125]N.\\mathbf f=\\begin{bmatrix}-75+50\\\\75+50\\end{bmatrix}\n=\\begin{bmatrix}-25\\\\125\\end{bmatrix}\\mathrm N.\n代数回代的水平分量为 15+75=9015+75=90，竖直分量为 −20+100=80-20+100=80。但负的 f1f_1 不符合绳子只能拉的假设，因此不存在本模型允许的两绳物理解；不能把负数当成绳子实际施加的负张力。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>再看两绳力平衡（选读） / Two-Rope Force Balance Revisited (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/force-balance-revisited.html#parallel-case",
+    "href": "topics/force-balance-revisited.html#parallel-case",
+    "title": "再看两绳力平衡：可逆性与物理解（选读）",
+    "section": "如果两根绳同向呢？ What If the Ropes Point in the Same Direction?",
+    "text": "如果两根绳同向呢？ What If the Ropes Point in the Same Direction?\n把方向改为 𝐝1=𝐝2=(0,1)𝖳\\mathbf d_1=\\mathbf d_2=(0,1)^{\\mathsf T}，系数矩阵变为\nA∥=[0011].A_{\\parallel}=\\begin{bmatrix}0&0\\\\1&1\\end{bmatrix}.\n列空间只是一条竖直直线，秩为1；两列相关，且\nNul⁡(A∥)=Span⁡{[1−1]}.\\operatorname{Nul}(A_{\\parallel})\n=\\operatorname{Span}\\left\\{\\begin{bmatrix}1\\\\-1\\end{bmatrix}\\right\\}.\n在一根绳上增加的拉力可由另一根等量减少而保持合力，所以不再唯一。对 𝐛=(0,80)𝖳N\\mathbf b=(0,80)^{\\mathsf T}\\mathrm N，全部代数解满足 f1+f2=80f_1+f_2=80；再加非负条件得 0≤f1≤800\\le f_1\\le80、f2=80−f1f_2=80-f_1。若目标有非零水平分量，就不在列空间中，方程组无解。这个矩阵不可逆，存在性和唯一性都可从空间结构解释。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>再看两绳力平衡（选读） / Two-Rope Force Balance Revisited (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/force-balance-revisited.html#connections",
+    "href": "topics/force-balance-revisited.html#connections",
+    "title": "再看两绳力平衡：可逆性与物理解（选读）",
+    "section": "从力平衡走向守恒 From Force Balance to Conservation",
+    "text": "从力平衡走向守恒 From Force Balance to Conservation\n两绳问题说明：先判断方程是否可解、系数是否唯一，再检查力的方向与非负约束。下一篇流量守恒将研究另一种情况：行之间有依赖关系，目标向量必须满足相容条件，而可解时仍有环流自由度。这里只使用静力平衡模型，没有增加弹簧、位移或材料规律。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>再看两绳力平衡（选读） / Two-Rope Force Balance Revisited (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/flow-conservation-revisited.html",
+    "href": "topics/flow-conservation-revisited.html",
+    "title": "再看流量守恒：秩与四个基本子空间（选读）",
+    "section": "",
+    "text": "从一个解集到一般问题 From One Solution Set to a General Question\n第一部分流量例研究 A→B→C→A 的三条内部通道，外部净注入为 (3,0,−3)𝖳(3,0,-3)^{\\mathsf T}，得到\n𝐪=[330]+t[111].\\mathbf q=\\begin{bmatrix}3\\\\3\\\\0\\end{bmatrix}\n+t\\begin{bmatrix}1\\\\1\\\\1\\end{bmatrix}.\n全部代数解允许 t∈ℝt\\in\\mathbb R；原题要求实际流量沿固定箭头方向且非负，因此物理解还需 t≥0t\\ge0。现在进一步问：任意外部净注入何时可以实现？为什么有一个自由度？四个基本子空间分别描述什么？\n先修为秩与秩分解、四个基本子空间及相容性。这是课程自编例子的递进，不增加容量、压力或阻力规律。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>再看流量守恒（选读） / Flow Conservation Revisited (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/flow-conservation-revisited.html#model",
+    "href": "topics/flow-conservation-revisited.html#model",
+    "title": "再看流量守恒：秩与四个基本子空间（选读）",
+    "section": "支路流量与节点净注入 Branch Flows and Net Injections at Nodes",
+    "text": "支路流量与节点净注入 Branch Flows and Net Injections at Nodes\n内部流量依次为 x,y,zx,y,z，令 𝐪=(x,y,z)𝖳\\mathbf q=(x,y,z)^{\\mathsf T}。令 𝐬=(s1,s2,s3)𝖳\\mathbf s=(s_1,s_2,s_3)^{\\mathsf T} 为 A、B、C 三节点的外部净注入（net injection）：正值为净注入，负值为净流出。各量使用同一种流量单位，例如 L/s。\n\n\n\n\n\n\n\n图 / Figure 1: 旧例回顾：内部箭头 A→B、B→C、C→A 分别计 x、y、z；图中外部数值3对应原净注入(3,0,−3)，不表示所有目标。箭头规定方向，线长不表示流量。\n\n\n\n\n每个节点无积累时，“内部净流出量=外部净注入量”，于是\n{x−z=s1,−x+y=s2,−y+z=s3.B𝐪=𝐬,B=[10−1−1100−11].\\left\\{\\begin{aligned}\nx-z&=s_1,\\\\\n-x+y&=s_2,\\\\\n-y+z&=s_3.\n\\end{aligned}\\right.\\qquad\nB\\mathbf q=\\mathbf s,\\qquad\nB=\\begin{bmatrix}1&0&-1\\\\-1&1&0\\\\0&-1&1\\end{bmatrix}.\nBB 每行对应一个节点方程。每列对应一条支路：在出发节点记 +1+1，在到达节点记 −1-1，表示该支路对两端节点内部净流出的贡献。BB 无量纲，等式两边都是流量。\n𝐪∈ℝ3\\mathbf q\\in\\mathbb R^3 的坐标标记支路流量，方程右端目标向量 𝐬∈ℝ3\\mathbf s\\in\\mathbb R^3 的坐标标记节点净注入。即使维数相同，它们也不是同一种物理对象。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>再看流量守恒（选读） / Flow Conservation Revisited (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/flow-conservation-revisited.html#all-solutions",
+    "href": "topics/flow-conservation-revisited.html#all-solutions",
+    "title": "再看流量守恒：秩与四个基本子空间（选读）",
+    "section": "相容条件与全部解 Consistency and All Solutions",
+    "text": "相容条件与全部解 Consistency and All Solutions\n三行之和为零，所以三个方程相加给出必要条件\ns1+s2+s3=0.s_1+s_2+s_3=0.\n它也充分。由第一式 x=s1+zx=s_1+z，第二式 y=x+s2=s1+s2+zy=x+s_2=s_1+s_2+z。取 z=tz=t，当上述条件成立时，\n𝐪=[s1s1+s20]+t[111],t∈ℝ.\\mathbf q=\\begin{bmatrix}s_1\\\\s_1+s_2\\\\0\\end{bmatrix}\n+t\\begin{bmatrix}1\\\\1\\\\1\\end{bmatrix},\\qquad t\\in\\mathbb R.\n回代前三式，左侧依次为 s1,s2,−s1−s2=s3s_1,s_2,-s_1-s_2=s_3。反过来，每个解取 t=zt=z 都必须有这个形式，因此这是全部实数代数解。参数项是环流（circulation）：三条支路同增同减，任何节点平衡都不变。\n若仍要求实际流量沿三条规定方向且非负，须进一步满足 t≥0t\\ge0、s1+t≥0s_1+t\\ge0、s1+s2+t≥0s_1+s_2+t\\ge0；原目标恰好化为 t≥0t\\ge0。代数参数范围与模型允许的参数范围应分开。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>再看流量守恒（选读） / Flow Conservation Revisited (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/flow-conservation-revisited.html#four-spaces",
+    "href": "topics/flow-conservation-revisited.html#four-spaces",
+    "title": "再看流量守恒：秩与四个基本子空间（选读）",
+    "section": "四个空间，各自描述什么？ What Do the Four Spaces Describe?",
+    "text": "四个空间，各自描述什么？ What Do the Four Spaces Describe?\n前两行独立：它们的线性组合为零时，从第三分量得第一系数为零，再从第二分量得第二系数为零。第三行是前两行之和的负数，因此 rank⁡B=2\\operatorname{rank}B=2。结合行列秩相等和教材§2.9定理14，两个零空间的维数均为 3−2=13-2=1。\n\n\n\n\n\n\n\n\n\n空间 / Space\n基与维数 / Basis and Dimension\n坐标对象与意义 / Coordinates and Meaning\n\n\n\n\nCol⁡B\\operatorname{Col}B\n(1,−1,0)𝖳,(0,1,−1)𝖳(1,-1,0)^{\\mathsf T},(0,1,-1)^{\\mathsf T}；维数2\n节点净注入空间中的平面 s1+s2+s3=0s_1+s_2+s_3=0；可由内部流量实现的目标\n\n\nNul⁡B\\operatorname{Nul}B\n(1,1,1)𝖳(1,1,1)^{\\mathsf T}；维数1\n支路流量空间中的环流；不改变节点平衡\n\n\nRow⁡B\\operatorname{Row}B\n(1,0,−1)𝖳,(−1,1,0)𝖳(1,0,-1)^{\\mathsf T},(-1,1,0)^{\\mathsf T}；维数2\n支路变量上的约束系数空间；各行组合能给出的约束系数\n\n\nNul⁡(B𝖳)\\operatorname{Nul}(B^{\\mathsf T})\n(1,1,1)𝖳(1,1,1)^{\\mathsf T}；维数1\n节点方程的组合系数空间；使各行的线性组合等于零\n\n\n\n\n表中行空间的基把行转为列记号，按行空间约定在 ℝ3\\mathbb R^3 中比较。行空间不是所有允许流量的集合：一行是对 x,y,zx,y,z 施加约束所用的三个系数。\n这些基可以直接核对。BB 的前两列独立，第三列是它们之和的负数；任意总和为零的 𝐬\\mathbf s 都有\n𝐬=s1[1−10]+(s1+s2)[01−1],\\mathbf s=s_1\\begin{bmatrix}1\\\\-1\\\\0\\end{bmatrix}\n+(s_1+s_2)\\begin{bmatrix}0\\\\1\\\\-1\\end{bmatrix},\n所以这两列确实张成所述平面。齐次方程给出 x=y=zx=y=z，说明右零空间恰是环流直线。前两行独立并张成全部行，给出行空间基。最后，设 𝛌∈ℝ3\\boldsymbol\\lambda\\in\\mathbb R^3 的分量为节点方程的组合系数；由 B𝖳𝛌=0B^{\\mathsf T}\\boldsymbol\\lambda=0 得 λ1=λ2=λ3\\lambda_1=\\lambda_2=\\lambda_3，给出左零空间基。\n于是左零空间相容性判据在这里变成 (1,1,1)𝐬=0(1,1,1)\\mathbf s=0，也就是已经双向证明的总净注入为零。\n本例节点和支路恰好各有三个，某些空间有相同坐标表达，但对象仍不同：右零空间描述支路环流，左零空间描述节点方程之间的关系。一般 m×nm\\times n 矩阵的列空间在 ℝm\\mathbb R^m，行空间在 ℝn\\mathbb R^n；不能从这个特例断言两者总是同一空间。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>再看流量守恒（选读） / Flow Conservation Revisited (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/flow-conservation-revisited.html#practice",
+    "href": "topics/flow-conservation-revisited.html#practice",
+    "title": "再看流量守恒：秩与四个基本子空间（选读）",
+    "section": "练习：目标、环流与新增测量 Exercises: Targets, Circulation, and an Additional Measurement",
+    "text": "练习：目标、环流与新增测量 Exercises: Targets, Circulation, and an Additional Measurement\n\n𝐬=(2,1,−3)𝖳\\mathbf s=(2,1,-3)^{\\mathsf T} 能否实现？求全部代数解并解释自由参数。若按原固定流向筛选，参数还需满足什么条件？\n𝐬=(3,0,−2)𝖳\\mathbf s=(3,0,-2)^{\\mathsf T} 为什么不能有稳态解？分别用行依赖和列空间说明。\n回看原目标 (3,0,−3)𝖳(3,0,-3)^{\\mathsf T} 下的测量 x=5x=5。不用从头消元，解释新增约束怎样改变矩阵尺寸、秩、零空间及唯一性；任意四个观测值都相容吗？\n\n提示 / Hint\n先检查三个目标分量之和，再使用一般解。测量 xx 给系数矩阵增加一行 (1,0,0)(1,0,0)；检查它是否消除了原齐次方向，而不是给原矩阵增加一个未知量。\n\n完整反馈 / Full Feedback\n\n总和为零，所以可实现。全部解为\n\n𝐪=[230]+t[111],t∈ℝ.\\mathbf q=\\begin{bmatrix}2\\\\3\\\\0\\end{bmatrix}\n+t\\begin{bmatrix}1\\\\1\\\\1\\end{bmatrix},\\qquad t\\in\\mathbb R.\n回代得 2,1,−32,1,-3。变化的 tt 只添加环流；按原固定流向需 2+t,3+t,t≥02+t,3+t,t\\ge0，即 t≥0t\\ge0。\n\n三方程相加将给出 0=10=1，与三行之和为零矛盾。等价地，这个目标不在 Col⁡B\\operatorname{Col}B 的平面内，所以不存在稳态流量解。\n新系数矩阵及目标为\n\nB̃=[10−1−1100−11100],𝐬̃=[30−35].\\widetilde B=\\begin{bmatrix}1&0&-1\\\\-1&1&0\\\\0&-1&1\\\\1&0&0\\end{bmatrix},\\qquad\n\\widetilde{\\mathbf s}=\\begin{bmatrix}3\\\\0\\\\-3\\\\5\\end{bmatrix}.\n原来的齐次解为 t(1,1,1)𝖳t(1,1,1)^{\\mathsf T}；新齐次方程又要求第一分量为零，因此 t=0t=0。于是 Nul⁡B̃={𝟎}\\operatorname{Nul}\\widetilde B=\\{\\mathbf0\\}，秩从2增至3。它是 4×34\\times3 满列秩矩形矩阵，对相容数据解唯一。本组数据对应 (5,5,2)𝖳(5,5,2)^{\\mathsf T}，符合非负条件。\n一般四个目标分量仍须使前三个之和为零；例如只把原净流出改成 −2-2，新增测量也不能消除矛盾。满列秩不保证任意目标可达，B̃\\widetilde B 也没有普通双侧逆矩阵。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>再看流量守恒（选读） / Flow Conservation Revisited (Optional)</span>"
+    ]
+  },
+  {
+    "objectID": "topics/flow-conservation-revisited.html#current-conservation",
+    "href": "topics/flow-conservation-revisited.html#current-conservation",
+    "title": "再看流量守恒：秩与四个基本子空间（选读）",
+    "section": "与电流守恒的联系 Connection to Current Conservation",
+    "text": "与电流守恒的联系 Connection to Current Conservation\n在节点不积累电荷的稳态电路中，规定支路电流正方向后，基尔霍夫电流定律（Kirchhoff’s current law, KCL）也给出同类节点平衡方程。与这里固定实际流向的非负流量不同，电流的负值通常表示实际方向与参考方向相反，不应机械排除。\n仅有节点电流守恒仍可能留下环流自由度；完整电路还要结合电压关系、欧姆定律等元件规律，不能由这个守恒模型断言完整电路的电流不唯一。MIT OCW 的节点法与回路法讲义展示了守恒方程与元件关系怎样配合。本页只建立这一联系，不展开完整电路求解。\n从泡利矩阵的次序问题，到两绳的逆映射与物理可行性，再到本页的空间结构，三篇选读分别使用运算、可逆性和四空间解释具体问题。可回到第二部分综合复习对照这些数学联系。",
+    "crumbs": [
+      "第二部分：矩阵代数 / Part 2: Matrix Algebra",
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>再看流量守恒（选读） / Flow Conservation Revisited (Optional)</span>"
+    ]
+  },
+  {
     "objectID": "chapter-03-overview.html",
     "href": "chapter-03-overview.html",
     "title": "第三部分 · 行列式总览",
@@ -2447,7 +2656,7 @@
     "text": "第二部分保存消元过程，本部分提取方阵的一个标量：它把可逆性、消元中的变化与有向面积/体积联系起来。它不能替代全部解或整个变换的描述。\n\n\n\n课\n学习入口\n主要问题\n\n\n\n\n11\n定义与展开\n从固定首行递归到任意行列展开\n\n\n12\n消元、性质与可逆性\n由基础关系推性质，再集中整理\n\n\n13\n克拉默与古典伴随\n由单位右端看清余子式为何转置\n\n\n14\n几何与前三部分贯通\n有向缩放与一个标量的信息边界\n\n\n\n课堂讲清主线理由并保留独立计算；课后要会用展开、性质、求解公式并理解条件。完整一般证明与替代推导分别标明，旧伴随运算仍为课后训练；不把每条证明的独立复现都设成新要求。先独立计算，再展开答案。以实数为标量，方阵条件在相应结论处明确。\n本部分覆盖§3.1–3.3核心主题，包括克拉默与古典伴随。课堂保留推理骨架与小算例，完整证明与旧训练在线保留并明确学习层次；不引入特征值乘积或Jacobian理论。\n小节主题依据Pearson第六版目录核对。教材正文、历史页码例号题号未核验；这里按主题自洽编写，新题标为自编。\n完成后进入本部分复习，或查询中英术语表。\n知识与术语速查按计算规则、矩阵运算、结构判断、几何与求解公式组织，条目可回到证明与练习。 其他定义：排列、逆序数与基本性质为独立HTML选读，建议第11–12课后阅读；不占四课，也不是课堂递归定义的先修。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
     ]
   },
   {
@@ -2458,7 +2667,7 @@
     "text": "一个数能记录什么？\n知识与术语速查 · 本部分学习路线\n前两章研究矩阵对向量的作用，也学会了用消元判断可逆性。现在从二维几何出发：单位正方形的两条有序边是 𝐞1,𝐞2\\mathbf e_1,\\mathbf e_2，经过 AA 后变成它的两列。像的面积可能扩大、缩小或变成零；边的次序还可能反转方向。\n行列式（determinant）是方阵对应的一个标量，记作 det⁡A\\det A。在二维，它记录有向面积的缩放；在三维，对应有向体积。普通面积、体积非负，要用 |det⁡A||\\det A|。这里先用几何提出问题，再用代数定义进行可靠计算；第十四课补全几何联系。全章为实数方阵，本课程不对非方阵定义行列式。\n对 A=[abcd]A=\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}，定义\ndet⁡A=ad−bc.\\det A=ad-bc.\n例如 H=[1123]H=\\begin{bmatrix}1&1\\\\2&3\\end{bmatrix} 给出 3−2=13-2=1；反射矩阵 diag⁡(−1,1)\\operatorname{diag}(-1,1) 给出 −1-1。后者表示定向反转，普通面积仍为1。不要把矩阵方括号与行列式的标量混淆；本文统一优先写 det\\det。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>行列式的定义与展开 / Defining and Expanding Determinants</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>行列式的定义与展开 / Defining and Expanding Determinants</span>"
     ]
   },
   {
@@ -2469,7 +2678,7 @@
     "text": "从低阶递归定义\n一阶矩阵定义 det⁡[a]=a\\det[a]=a。对 n≥2n\\ge2，删去 AA 的第 ii 行、第 jj 列，得到 (n−1)×(n−1)(n-1)\\times(n-1) 的子矩阵 AijA_{ij}。称 Mij=det⁡AijM_{ij}=\\det A_{ij} 为余子式（minor），称\nCij=(−1)i+jMijC_{ij}=(-1)^{i+j}M_{ij}\n为代数余子式（cofactor）。AijA_{ij} 是矩阵，Mij,CijM_{ij},C_{ij} 是数。符号从左上角的正号起，行列相邻均换号：\n[+−+−+−+−+].\\begin{bmatrix}+&-&+\\\\-&+&-\\\\+&-&+\\end{bmatrix}.\n递归地用第一行定义：det⁡A=∑j=1na1jC1j\\det A=\\sum_{j=1}^n a_{1j}C_{1j}。二阶时正好得到 ad−bcad-bc。由此可证明按任意一行或任意一列展开都给相同结果：\ndet⁡A=∑j=1naijCij（固定行 i）,det⁡A=∑i=1naijCij（固定列 j）.\\det A=\\sum_{j=1}^n a_{ij}C_{ij}\\quad\\text{（固定行 }i\\text{）},\\qquad\n\\det A=\\sum_{i=1}^n a_{ij}C_{ij}\\quad\\text{（固定列 }j\\text{）}.\n这称为余子式展开（cofactor expansion）。选择零多的行/列可以减少手算；删行删列必须与当前元素的位置对应。任意展开是从固定首行定义推出的定理；本页末尾给推理路线与进一步证明，不另立多个定义。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>行列式的定义与展开 / Defining and Expanding Determinants</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>行列式的定义与展开 / Defining and Expanding Determinants</span>"
     ]
   },
   {
@@ -2480,7 +2689,7 @@
     "text": "完整三阶例题：复用 LU 的 B\nB=[123257−13−2].B=\\begin{bmatrix}1&2&3\\\\2&5&7\\\\-1&3&-2\\end{bmatrix}.\n第一行的余子式依次为 5(−2)−7⋅3=−315(-2)-7\\cdot3=-31、2(−2)−7(−1)=32(-2)-7(-1)=3、2⋅3−5(−1)=112\\cdot3-5(-1)=11；代数余子式是 −31,−3,11-31,-3,11。故\ndet⁡B=1(−31)+2(−3)+3(11)=−31−6+33=−4.\\det B=1(-31)+2(-3)+3(11)=-31-6+33=-4.\n注意第二项的负号已经在 C12=−3C_{12}=-3 中，不能再次额外乘负号。\n独立计算（自编）。 对同一个 BB 按第二列展开；说明这里与首行展开为什么应得同一个数。消元交叉核验留到第十二课。\n\n第二列是 2,5,32,5,3，对应符号是 −,+,−-,+,-。在余子式中保留未删除的行列次序。\n\n完整答案\nC12=−3C_{12}=-3；C22=det⁡[13−1−2]=1C_{22}=\\det\\begin{bmatrix}1&3\\\\-1&-2\\end{bmatrix}=1；C32=−det⁡[1327]=−1C_{32}=-\\det\\begin{bmatrix}1&3\\\\2&7\\end{bmatrix}=-1。 因此第二列展开给 2(−3)+5(1)+3(−1)=−42(-3)+5(1)+3(-1)=-4。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>行列式的定义与展开 / Defining and Expanding Determinants</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>行列式的定义与展开 / Defining and Expanding Determinants</span>"
     ]
   },
   {
@@ -2491,7 +2700,7 @@
     "text": "三角矩阵与本课收束\n三角矩阵（triangular matrix）的行列式等于对角元乘积，包含零对角情形。下三角沿第一行递归；上三角沿第一列逐阶展开，即得 a11⋯anna_{11}\\cdots a_{nn}。这里没有除以对角元，因此不需它们非零。特别地 det⁡In=1\\det I_n=1。\n短算（自编）。 对 U=[12301100−4]U=\\begin{bmatrix}1&2&3\\\\0&1&1\\\\0&0&-4\\end{bmatrix}，哪条行/列展开最省事？若把最后一个对角元改成0呢？\n答案与选行理由\n第一列有两个零，先得 1det⁡[110−4]=−41\\det\\begin{bmatrix}1&1\\\\0&-4\\end{bmatrix}=-4。改成0时同样展开得到0，无需进行除法。B本身没有零，换一列未必省算；选择零多的行/列才直接减少非零项。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>行列式的定义与展开 / Defining and Expanding Determinants</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>行列式的定义与展开 / Defining and Expanding Determinants</span>"
     ]
   },
   {
@@ -2502,7 +2711,7 @@
     "text": "定义到展开定理：理由与学习层次\n课堂理解骨架。 固定首行的递归式先确定每阶唯一的数；利用低一阶结论，可证明它对单行（单列）线性、交换两行（两列）变号。把目标行移到首行即可得到该行展开；再说明转置不改这个数，就得到任意列展开。第十二课把基础关系集中用于消元。这里没有借用乘积公式或可逆判据。\n会按任意行/列展开、区分子矩阵/余子式/代数余子式，是本课计算与课后复习的重点。下面保留从递归起点的完整理由供进一步证明训练；不要求课堂先学排列或逆序数。独立的其他定义补充阅读建议学完第11–12课后再看，不是这些结论成立的先修。\n进一步证明：从递归出发，不用排列作定义\n对阶数归纳，一阶直接成立，二阶用 ad−bcad-bc 核对。假定低一阶的单行/单列线性、交换变号均已证明。\n单行线性。 第一行由定义显然线性；对第 r&gt;1r&gt;1 行，每个首行展开的子式恰含该行删去一个分量后的行向量，归纳假设给线性。单列线性同样成立：固定第 ss 列，首行第 ss 项仅系数含 a1sa_{1s}、子式不含该列；其余项仅子式含该列、系数固定，故整个式对该列线性。零行/零列给零。\n换行变号。 交换首行以下的相邻两行，由子式归纳立得。交换第一、二行时，将首行展开的每个子式再按其首行展开。对不同列 j,kj,k，含 a1ja2ka_{1j}a_{2k} 的系数为 (−1)j+k−𝟏k&gt;jdet⁡A1,2̂;j,k̂(-1)^{j+k-\\mathbf1_{k&gt;j}}\\det A_{\\widehat{1,2};\\widehat{j,k}}，其中 𝟏k&gt;j\\mathbf1_{k&gt;j} 在 k&gt;jk&gt;j 时为1，否则为0；下标表示删除前两行与两列，剩余次序不变。交换后配对的 a2ka1ja_{2k}a_{1j} 系数为 (−1)k+j−𝟏j&gt;k(-1)^{k+j-\\mathbf1_{j&gt;k}}，恰相差负号；所有项成对变号。任意两行交换可分解为奇数次相邻交换：相距 dd 的两行共需 2d−12d-1 次，故也变号。重复行交换后不变，故行列式为零。\n任意行展开。 把第 ii 行经过 i−1i-1 次相邻交换移到首行，其余行相对次序不变；首行展开的子矩阵正是原 AijA_{ij}，两个符号相乘为 (−1)i−1(−1)1+j=(−1)i+j(-1)^{i-1}(-1)^{1+j}=(-1)^{i+j}，得到所述行展开。\n换列变号。 对相邻列 s,s+1s,s+1，首行展开中选择其他列的项，其子矩阵交换了相邻两列，归纳后变号。选择这两列的两个项相互配对：交换后的删列矩阵与原另一项相同，首行系数也对应相同，但 (−1)1+s(-1)^{1+s} 与 (−1)1+s+1(-1)^{1+s+1} 相反。任意两列再用上述 2d−12d-1 次相邻交换。重复列给零。\n至此，单行/列线性及重复行/列为零已足以推出倍加不变、倍乘的因子和交换的因子。先不用转置或一般列展开证明三角结论： 下三角沿首行；上三角沿最后一行（已证任意行展开），均递归得对角乘积。\n转置与列展开。 用消元把任意 AA 化为上三角阶梯矩阵 UU，只做交换和倍加即可。设这些操作的行列式因子之积为 f≠0f\\ne0，则 det⁡U=fdet⁡A\\det U=f\\det A。转置后，同一过程改为对 A𝖳A^{\\mathsf T} 做对应列操作，得 det⁡U𝖳=fdet⁡A𝖳\\det U^{\\mathsf T}=f\\det A^{\\mathsf T}。上下三角有同一对角乘积，所以约去非零 ff 得 det⁡A𝖳=det⁡A\\det A^{\\mathsf T}=\\det A；即使对角有零也成立。现在对转置矩阵按第 jj 行展开，用低一阶子式的转置相等，就得到原矩阵的第 jj 列展开。整个论证按“递归→基础关系→任意行→三角→转置→任意列”推进，不以行列式非零或乘积公式作依据。\n\n下一课消元、性质与可逆性用这些基础关系追踪每一步计算。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>行列式的定义与展开 / Defining and Expanding Determinants</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>行列式的定义与展开 / Defining and Expanding Determinants</span>"
     ]
   },
   {
@@ -2513,7 +2722,7 @@
     "text": "从基础关系推到行操作\n知识与术语速查 · 本部分学习路线\n上课的固定首行递归定义给出单行线性（linearity in one row）：固定其余行，第 ii 行换成 c𝐮+d𝐯c\\mathbf u+d\\mathbf v 时，行列式是分别换成 𝐮\\mathbf u、𝐯\\mathbf v 的行列式的 c,dc,d 线性组合。交换两行变号，故两行相同给零；这些基础结论的递归证明在第十一课。\n由单行线性，把 RiR_i 换成 Ri+cRjR_i+cR_j 的结果是“原行列式 + cc 倍的重复行行列式”，后项为零。因此三类行操作的规则并非孤立记忆，更不借助尚待推出的可逆判据。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>消元、行列式性质与可逆性 / Elimination, Determinant Properties and Invertibility</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>消元、行列式性质与可逆性 / Elimination, Determinant Properties and Invertibility</span>"
     ]
   },
   {
@@ -2524,7 +2733,7 @@
     "text": "消元时怎样记账？\n对方阵做初等行变换时：\n\n\n\n对 AA 的操作\n变后行列式\n\n\n\n\n交换两行\n−det⁡A-\\det A\n\n\n某行乘 c≠0c\\ne0\ncdet⁡Ac\\det A\n\n\n某行加另一行的 cc 倍\ndet⁡A\\det A\n\n\n\n三角矩阵的行列式是对角元的乘积。这可直接由余子式展开递归看出：上三角沿第一列逐阶展开，下三角沿第一行逐阶展开，无需假设对角元非零。单位矩阵的行列式因而为1。若存在零行，行列式为零；若两行相等，交换它们矩阵不变又使行列式变号，故行列式为零。\n完整记账例（自编）。 设 D=[021130274]D=\\begin{bmatrix}0&2&1\\\\1&3&0\\\\2&7&4\\end{bmatrix}。依次操作：\nD→R1↔R2[130021274]→R3←R3−2R1[130021014].D\\xrightarrow{R_1\\leftrightarrow R_2}\n\\begin{bmatrix}1&3&0\\\\0&2&1\\\\2&7&4\\end{bmatrix}\n\\xrightarrow{R_3\\leftarrow R_3-2R_1}\n\\begin{bmatrix}1&3&0\\\\0&2&1\\\\0&1&4\\end{bmatrix}.\n再做 R2←12R2R_2\\leftarrow\\frac12R_2，最后 R3←R3−R2R_3\\leftarrow R_3-R_2：\n[1300112014]→V=[13001120072].\\begin{bmatrix}1&3&0\\\\0&1&\\frac12\\\\0&1&4\\end{bmatrix}\n\\longrightarrow V=\\begin{bmatrix}1&3&0\\\\0&1&\\frac12\\\\0&0&\\frac72\\end{bmatrix}.\ndet⁡V=7/2\\det V=7/2，但 det⁡V=(−1)(1/2)det⁡D\\det V=(-1)(1/2)\\det D，所以 det⁡D=−7\\det D=-7。也可按原第一行展开：0−2(4)+1(7−6)=−70-2(4)+1(7-6)=-7。不要把最终三角阵的对角乘积直接当原矩阵的行列式。\n学生动笔（自编）。 从 DD 出发先做 R3←R3−2R2R_3\\leftarrow R_3-2R_2，再交换前两行，不做倍乘，继续化到三角阵并复核 det⁡D\\det D。\n答案\n先得到 [021130014]\\begin{bmatrix}0&2&1\\\\1&3&0\\\\0&1&4\\end{bmatrix}，交换后是 [130021014]\\begin{bmatrix}1&3&0\\\\0&2&1\\\\0&1&4\\end{bmatrix}，还需 R3←R3−12R2R_3\\leftarrow R_3-\\frac12R_2 才成三角阵，其对角为 1,2,7/21,2,7/2，乘积7。一次交换给 det⁡D=−7\\det D=-7。第二步之后尚未成三角阵，不能漏掉最后消元。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>消元、行列式性质与可逆性 / Elimination, Determinant Properties and Invertibility</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>消元、行列式性质与可逆性 / Elimination, Determinant Properties and Invertibility</span>"
     ]
   },
   {
@@ -2535,7 +2744,7 @@
     "text": "用消元连接可逆性\n设 AA 为实 n×nn\\times n 方阵。把 AA 行化简时，每次交换、非零倍乘对行列式的因子都非零，倍加则不改变行列式。因此“是否为零”沿整个过程保持。\n若 AA 可逆，第九课说明它行等价于 II，而 det⁡I=1\\det I=1，故 det⁡A≠0\\det A\\ne0。若不可逆，阶梯形缺主元，在方阵中就有零行，行列式为零；反推 det⁡A=0\\det A=0。所以\nA 可逆⇔det⁡A≠0.A\\text{ 可逆}\\quad\\Longleftrightarrow\\quad\\det A\\ne0.\n依赖顺序是“第一部分主元结论→第二部分可逆定理→本课行列式变化规则→此判据”，没有用本结论证明它自己。它也告诉我们列相关的方阵行列式为零。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>消元、行列式性质与可逆性 / Elimination, Determinant Properties and Invertibility</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>消元、行列式性质与可逆性 / Elimination, Determinant Properties and Invertibility</span>"
     ]
   },
   {
@@ -2546,7 +2755,7 @@
     "text": "乘积、转置与逆\n对同阶方阵，\ndet⁡(AB)=det⁡Adet⁡B,det⁡(A𝖳)=det⁡A.\\det(AB)=\\det A\\det B,\\qquad\\det(A^{\\mathsf T})=\\det A.\n若 AA 可逆，则 1=det⁡(AA−1)=det⁡Adet⁡(A−1)1=\\det(AA^{-1})=\\det A\\det(A^{-1})，从而\ndet⁡(A−1)=1det⁡A.\\det(A^{-1})=\\frac1{\\det A}.\n乘积公式描述连续两次作用时有向缩放相乘；它不要求 AB=BAAB=BA。转置相等也不意味着 A𝖳=AA^{\\mathsf T}=A。几何帮助理解公式，下面的核心推导同时覆盖不可逆情形。\n\n乘积公式：先理解初等矩阵，再补齐奇异情形\n对初等矩阵 EE，本课已建立的三条规则可统一写成 det⁡(EA)=det⁡Edet⁡A\\det(EA)=\\det E\\det A，其中 det⁡E\\det E 分别为 −1,c,1-1,c,1，是将同一操作施于 II 得到的。这一步只用了行变换规则。\n若 AA 可逆，把它化为 II 后逆向恢复，得 A=F1⋯FkA=F_1\\cdots F_k，各 FiF_i 为初等矩阵。反复使用上述规则，det⁡(AB)=(∏idet⁡Fi)det⁡B\\det(AB)=(\\prod_i\\det F_i)\\det B，而对 A=F1⋯FkIA=F_1\\cdots F_k I 使用同样规则得 det⁡A=∏idet⁡Fi\\det A=\\prod_i\\det F_i，于是公式成立。\n若 AA 不可逆，用行操作乘积 GG 使 GAGA 出现零行。则 (GA)B=G(AB)(GA)B=G(AB) 的该行仍为零。对 ABAB 施加同样的操作，各行列式因子之积非零，故 det⁡(AB)=0\\det(AB)=0。又 det⁡A=0\\det A=0，所以公式仍成立。这一分支没有除以 det⁡A\\det A，也没有使用秩理论。\n\n\n转置公式的归纳回看\n一阶显然成立。假设对 (n−1)(n-1) 阶成立，沿 A𝖳A^{\\mathsf T} 第一行展开，它的第 (1,j)(1,j) 元是 aj1a_{j1}；删行删列所得矩阵是 (Aj1)𝖳(A_{j1})^{\\mathsf T}。由归纳假设，\ndet⁡(A𝖳)=∑jaj1(−1)1+jdet⁡((Aj1)𝖳)=∑jaj1(−1)j+1det⁡Aj1=det⁡A.\\det(A^{\\mathsf T})=\\sum_j a_{j1}(-1)^{1+j}\\det((A_{j1})^{\\mathsf T})\n=\\sum_j a_{j1}(-1)^{j+1}\\det A_{j1}=\\det A.\n最后一式是 AA 的第一列展开。因此同样的三条变换规则也适用于列，但列操作与行操作在几何中是不同的动作，不能混写解释。\n\n\n用 LU 回看旧例\n第十课的 B=LUB=LU，LL 对角全为1，UU 对角为 1,1,−41,1,-4，所以 det⁡B=1⋅(−4)=−4\\det B=1\\cdot(-4)=-4，与第十一课两种展开结果一致。若约定 PA=LUPA=LU，则应写 det⁡Pdet⁡A=det⁡Ldet⁡U\\det P\\det A=\\det L\\det U；一次换行时 det⁡P=−1\\det P=-1，不能漏这个符号。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>消元、行列式性质与可逆性 / Elimination, Determinant Properties and Invertibility</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>消元、行列式性质与可逆性 / Elimination, Determinant Properties and Invertibility</span>"
     ]
   },
   {
@@ -2557,7 +2766,7 @@
     "text": "短检查：线性指哪一行？\n自编题。 判断并改正：(a) det⁡(A+B)=det⁡A+det⁡B\\det(A+B)=\\det A+\\det B；(b) det⁡(2A)=2det⁡A\\det(2A)=2\\det A；(c) 把三阶矩阵的一行乘2，行列式乘2。\n反例与条件\n\n一般错误。取 A=B=I2A=B=I_2，左边 det⁡(2I2)=4\\det(2I_2)=4，右边2。(b) 对二阶矩阵一般为 4det⁡A4\\det A，对 nn 阶为 2ndet⁡A2^n\\det A，因为每一行都乘2；一般 det⁡(cA)=cndet⁡A\\det(cA)=c^n\\det A，含 c=0c=0。(c) 正确，只改变了一行，其他行保持。\n\n单行线性例子：固定第二行 (0,1)(0,1)，第一行 (1,2)+(3,4)=(4,6)(1,2)+(3,4)=(4,6) 时行列式为4，等于两次分别取第一行 (1,2)(1,2)、(3,4)(3,4) 的行列式 1+31+3。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>消元、行列式性质与可逆性 / Elimination, Determinant Properties and Invertibility</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>消元、行列式性质与可逆性 / Elimination, Determinant Properties and Invertibility</span>"
     ]
   },
   {
@@ -2568,7 +2777,7 @@
     "text": "推导后的性质整理\n以下 A,BA,B 为同阶实 n×nn\\times n 方阵，cc 为实数；求逆另需 det⁡A≠0\\det A\\ne0。\n\n\n\n\n\n\n\n计算/运算\n结论及前提\n\n\n\n\n单行乘 cc；整矩阵乘 cc\n前者乘 cc；后者 det⁡(cA)=cndet⁡A\\det(cA)=c^n\\det A，因为共缩放 nn 行\n\n\n交换两行；倍加\n分别变号；不变；列规则同理\n\n\n三角、单位阵\n对角乘积；det⁡I=1\\det I=1\n\n\n乘积、转置\ndet⁡(AB)=det⁡Adet⁡B\\det(AB)=\\det A\\det B；det⁡A𝖳=det⁡A\\det A^{\\mathsf T}=\\det A，均含奇异方阵\n\n\n可逆与求逆\ndet⁡A≠0⇔A\\det A\\ne0\\iff A可逆；此时 det⁡A−1=1/det⁡A\\det A^{-1}=1/\\det A\n\n\n\n完整查阅见行列式的性质。课后需要会用并理解上述条件；乘积证明的可逆/奇异两个分支都应读懂。逐字复现所有替代证明不是这里新增的要求。\nLU短核对。 第十课 PA0=UPA_0=U，det⁡P=−1\\det P=-1、det⁡U=2\\det U=2，故 det⁡A0=−2\\det A_0=-2。对旧 BB，仅倍加得到 UU，所以 det⁡B=−4\\det B=-4；这次回访的目的在于追踪行列式，不重新求两个右端。\n进入第十三课，把解的分量与逆的各列连接起来。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>消元、行列式性质与可逆性 / Elimination, Determinant Properties and Invertibility</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>消元、行列式性质与可逆性 / Elimination, Determinant Properties and Invertibility</span>"
     ]
   },
   {
@@ -2579,7 +2788,7 @@
     "text": "克拉默法则：把解的分量写成行列式\n知识与术语速查 · 本部分学习路线\n学习主线。 先用列组合推克拉默，再由单位右端找到逆的各列。课后要会做Q/J计算并理解恒等式的条件；另一种克拉默证明和双侧一般论证设为独立推导，旧伴随运算保留为课后训练。\n对可逆方阵 AA 和 A𝐱=𝐛A\\mathbf x=\\mathbf b，用 𝐛\\mathbf b 替换 AA 的第 ii 列得到 Ai(𝐛)A_i(\\mathbf b)。克拉默法则（Cramer’s rule）为\nxi=det⁡Ai(𝐛)det⁡A.x_i=\\frac{\\det A_i(\\mathbf b)}{\\det A}.\n理由是 𝐛=∑jxj𝐚j\\mathbf b=\\sum_jx_j\\mathbf a_j。在被替换的那一列用线性展开，j≠ij\\ne i 的每一项都含两个相同列，行列式为零；仅 j=ij=i 留下 det⁡Ai(𝐛)=xidet⁡A\\det A_i(\\mathbf b)=x_i\\det A。可逆前提保证能除以分母。\n完整小例。 再求 H𝐱=(2,5)𝖳H\\mathbf x=(2,5)^{\\mathsf T}。det⁡H=1\\det H=1，\nH1(𝐛)=[2153],det⁡H1=6−5=1;H2(𝐛)=[1225],det⁡H2=5−4=1.H_1(\\mathbf b)=\\begin{bmatrix}2&1\\\\5&3\\end{bmatrix},\\quad\\det H_1=6-5=1;\\qquad\nH_2(\\mathbf b)=\\begin{bmatrix}1&2\\\\2&5\\end{bmatrix},\\quad\\det H_2=5-4=1.\n所以 𝐱=(1,1)𝖳\\mathbf x=(1,1)^{\\mathsf T}，与消元、逆矩阵一致。若 det⁡A=0\\det A=0，不能把 0/00/0 当作自由参数或判无解，必须返回相容性和自由变量的分析。克拉默法则适合理论联系与小型手算；大型系统通常用消元或复用 LU，不把逐个计算行列式作为默认办法。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>解方程与古典伴随矩阵 / Solving Systems and the Classical Adjugate</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>解方程与古典伴随矩阵 / Solving Systems and the Classical Adjugate</span>"
     ]
   },
   {
@@ -2590,7 +2799,7 @@
     "text": "进一步推导：替换单位列的另一种证明\n将 II 第 ii 列换为 𝐱\\mathbf x 得 X=Ii(𝐱)X=I_i(\\mathbf x)，该列不再是 𝐞i\\mathbf e_i。于是 AX=Ai(𝐛)AX=A_i(\\mathbf b)；按该列展开，只有第 ii 个分量贡献，det⁡X=xi\\det X=x_i。乘积公式再得 det⁡Ai(𝐛)=det⁡Axi\\det A_i(\\mathbf b)=\\det A\\,x_i。这保留旧讲义的第二种解释，并修正其替列漏写问题。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>解方程与古典伴随矩阵 / Solving Systems and the Classical Adjugate</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>解方程与古典伴随矩阵 / Solving Systems and the Classical Adjugate</span>"
     ]
   },
   {
@@ -2601,7 +2810,7 @@
     "text": "从逆的第 j 列发现转置\n第八课已知：解 A𝐱=𝐞jA\\mathbf x=\\mathbf e_j，得到的 𝐱\\mathbf x 就是 A−1A^{-1} 的第 jj 列。假设 det⁡A≠0\\det A\\ne0，用刚得到的克拉默法则写其第 ii 个分量：\n(A−1)ij=det⁡Ai(𝐞j)det⁡A.(A^{-1})_{ij}=\\frac{\\det A_i(\\mathbf e_j)}{\\det A}.\n这里替换的是第 ii 列，该列只有第 jj 行为1。沿这条被替换的列展开，删去第 jj 行、第 ii 列后，替换的列已经删去，剩下的正是原来的 AjiA_{ji}。因此\ndet⁡Ai(𝐞j)=(−1)j+idet⁡Aji=Cji,(A−1)ij=Cjidet⁡A.\\det A_i(\\mathbf e_j)=(-1)^{j+i}\\det A_{ji}=C_{ji},\\qquad\n(A^{-1})_{ij}=\\frac{C_{ji}}{\\det A}.\n注意逆矩阵位置是 ijij，用的代数余子式指标却是 jiji：转置由解方程的索引自然出现，不是另加的记忆规则。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>解方程与古典伴随矩阵 / Solving Systems and the Classical Adjugate</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>解方程与古典伴随矩阵 / Solving Systems and the Classical Adjugate</span>"
     ]
   },
   {
@@ -2612,7 +2821,7 @@
     "text": "古典伴随矩阵：命名刚得到的矩阵\n对 n≥2n\\ge2 的方阵，令 C=[Cij]C=[C_{ij}] 为代数余子式矩阵，定义古典伴随矩阵（adjugate）为\nadj⁡(A)=C𝖳.\\operatorname{adj}(A)=C^{\\mathsf T}.\n这里用 adj\\operatorname{adj}，不使用容易与共轭转置混淆的星号。一阶可约定 adj⁡([a])=[1]\\operatorname{adj}([a])=[1]。对所有方阵，包括奇异方阵，\nAadj⁡(A)=adj⁡(A)A=(det⁡A)I.A\\operatorname{adj}(A)=\\operatorname{adj}(A)A=(\\det A)I.\n只有在 det⁡A≠0\\det A\\ne0 时，才能进一步写\nA−1=1det⁡Aadj⁡(A).A^{-1}=\\frac{1}{\\det A}\\operatorname{adj}(A).\n以 HH 核对：代数余子式矩阵为 [3−2−11]\\begin{bmatrix}3&-2\\\\-1&1\\end{bmatrix}，转置后 adj⁡(H)=[3−1−21]\\operatorname{adj}(H)=\\begin{bmatrix}3&-1\\\\-2&1\\end{bmatrix}。因 det⁡H=1\\det H=1，恰为第八课的逆；那里的双侧乘法给出 (det⁡H)I=I(\\det H)I=I。\n\n恒等式为何也适用于奇异矩阵？\nAadj⁡(A)A\\operatorname{adj}(A) 的 (i,k)(i,k) 元为 ∑jaijCkj\\sum_j a_{ij}C_{kj}。若 i=ki=k，这就是第 ii 行展开，等于 det⁡A\\det A。若 i≠ki\\ne k，这是把 AA 第 kk 行换成第 ii 行后的第 kk 行展开；其余子式不受该行替换影响，但矩阵出现两个相同行，故为零。\n同理，adj⁡(A)A\\operatorname{adj}(A)A 的 (i,k)(i,k) 元是 ∑jCjiajk\\sum_j C_{ji}a_{jk}；当 i≠ki\\ne k，这是把第 ii 列换成第 kk 列后的第 ii 列展开，有重复列；当 i=ki=k，是原第 ii 列展开。整个证明未除以行列式，所以奇异情况也包括在内。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>解方程与古典伴随矩阵 / Solving Systems and the Classical Adjugate</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>解方程与古典伴随矩阵 / Solving Systems and the Classical Adjugate</span>"
     ]
   },
   {
@@ -2623,7 +2832,7 @@
     "text": "独立计算与课后核心复习\n自编题。 (a) 用克拉默法则解 Q𝐱=(4,5)𝖳Q\\mathbf x=(4,5)^{\\mathsf T}，Q=[2112]Q=\\begin{bmatrix}2&1\\\\1&2\\end{bmatrix}；再用伴随求逆。(b) 对 J=[1224]J=\\begin{bmatrix}1&2\\\\2&4\\end{bmatrix} 求伴随并检验双侧恒等式，说明为何仍不能求逆。\n\n二阶伴随为 [d−b−ca]\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}。求逆时分母是否非零必须另查；恒等式本身无需可逆。\n\n完整答案\n\ndet⁡Q=3\\det Q=3，替第一列得 [4152]\\begin{bmatrix}4&1\\\\5&2\\end{bmatrix}，行列式 8−5=38-5=3；替第二列得 [2415]\\begin{bmatrix}2&4\\\\1&5\\end{bmatrix}，行列式 10−4=610-4=6。故 (x1,x2)=(1,2)(x_1,x_2)=(1,2)。 adj⁡(Q)=[2−1−12]\\operatorname{adj}(Q)=\\begin{bmatrix}2&-1\\\\-1&2\\end{bmatrix}，两侧乘积均为 3I3I，所以 Q−1=13adj⁡(Q)Q^{-1}=\\frac13\\operatorname{adj}(Q)；回代为 (4,5)𝖳(4,5)^{\\mathsf T}，与第八课一致。\ndet⁡J=0\\det J=0，adj⁡(J)=[4−2−21]≠0\\operatorname{adj}(J)=\\begin{bmatrix}4&-2\\\\-2&1\\end{bmatrix}\\ne0。 Jadj⁡(J)=[4−4−2+28−8−4+4]=0J\\operatorname{adj}(J)=\\begin{bmatrix}4-4&-2+2\\\\8-8&-4+4\\end{bmatrix}=0，反向相乘也为零。恒等式右侧是零矩阵，不是单位矩阵；不可除以零。\n\n\n旧训练的核心复习（限可逆 AA，n≥2n\\ge2，数乘时 c≠0c\\ne0）。 请分别推导伴随的数乘、转置、行列式、逆与双伴随公式，写清每一步所需前提。提示：前两项从余子式入手，其余用 adj⁡A=det⁡AA−1\\operatorname{adj}A=\\det A\\,A^{-1}。此处明确保留可逆前提，不能用含 A−1A^{-1} 的推理覆盖奇异情况。\n伴随运算的完整核对\n由每个余子式都是 (n−1)(n-1) 阶行列式，adj⁡(cA)=cn−1adj⁡(A)\\operatorname{adj}(cA)=c^{n-1}\\operatorname{adj}(A)。删除行列再转置给 adj⁡(A𝖳)=(adj⁡(A))𝖳\\operatorname{adj}(A^{\\mathsf T})=(\\operatorname{adj}(A))^{\\mathsf T}；这两条实际上不需可逆。\n在本题可逆条件下，adj⁡(A)=det⁡AA−1\\operatorname{adj}(A)=\\det A\\,A^{-1}，因此 det⁡(adj⁡(A))=(det⁡A)ndet⁡(A−1)=(det⁡A)n−1,\\det(\\operatorname{adj}(A))=(\\det A)^n\\det(A^{-1})=(\\det A)^{n-1}, (adj⁡(A))−1=Adet⁡A=adj⁡(A−1),(\\operatorname{adj}(A))^{-1}=\\frac{A}{\\det A}=\\operatorname{adj}(A^{-1}), adj⁡(adj⁡(A))=(det⁡A)n−1Adet⁡A=(det⁡A)n−2A.\\operatorname{adj}(\\operatorname{adj}(A))=(\\det A)^{n-1}\\frac{A}{\\det A}=(\\det A)^{n-2}A. 这些最后三式的本段证明均用了可逆前提。课堂主线只需定义、双侧恒等式和小例；本段供课后核心计算复习，不加新课次。\n\n继续第十四课：几何与贯通。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>解方程与古典伴随矩阵 / Solving Systems and the Classical Adjugate</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>解方程与古典伴随矩阵 / Solving Systems and the Classical Adjugate</span>"
     ]
   },
   {
@@ -2634,7 +2843,7 @@
     "text": "有向面积与普通面积\n知识与术语速查 · 本部分学习路线\n二维中，以有序列 𝐚1,𝐚2\\mathbf a_1,\\mathbf a_2 为边的平行四边形的有向面积是 det⁡[𝐚1𝐚2]\\det[\\mathbf a_1\\ \\mathbf a_2]。标准单位边的次序取正定向；把它们交换，普通图形相同、有向面积变号。普通面积是其绝对值。\n对于以 V=[𝐯1𝐯2]V=[\\mathbf v_1\\ \\mathbf v_2] 的列为边的平行四边形，变换后的边组成 AVAV，故\n变后面积=|det⁡(AV)|=|det⁡A||det⁡V|.\\text{变后面积}=|\\det(AV)|=|\\det A|\\,|\\det V|.\n若 VV 本来退化，面积原已为零，公式仍成立。三维同理：三条边构成的平行六面体体积为 |det⁡V||\\det V|，经 AA 变为原来的 |det⁡A||\\det A| 倍。\n图中反射 F=diag⁡(−1,1)F=\\operatorname{diag}(-1,1) 把顶点依次送到 (0,0),(−1,0),(−1,1),(0,1)(0,0),(-1,0),(-1,1),(0,1)。det⁡F=−1\\det F=-1，定向反转；普通面积仍为1。\n塌缩（collapse）矩阵 K=[1100]K=\\begin{bmatrix}1&1\\\\0&0\\end{bmatrix} 把 (x,y)(x,y) 送到 (x+y,0)(x+y,0)，单位正方形落在从 (0,0)(0,0) 到 (2,0)(2,0) 的线段上，det⁡K=0\\det K=0，二维面积为零。并不是“所有点都变成原点”，也不是线段长度为零。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>几何意义与前三部分贯通 / Geometric Meaning and Connections across Parts 1–3</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>几何意义与前三部分贯通 / Geometric Meaning and Connections across Parts 1–3</span>"
     ]
   },
   {
@@ -2645,7 +2854,7 @@
     "text": "图 / Figure 1: 固定等长坐标单位下的单位正方形、反射和塌缩。边按 O→e1→e1+e2→e2→O 标定次序；反射像改为顺时针，塌缩像为线段。\n\n\n\n\n\n\n\n为什么面积/体积对应行列式？\n二维的 ad−bcad-bc 与底乘高的面积公式相符，符号记录两边的定向。也可把可逆 AA 写成初等矩阵的乘积：交换两个坐标反转定向但不改普通面积/体积；某坐标乘 cc 的普通缩放是 |c||c|；剪切 u←u+cvu\\leftarrow u+cv 的截面长度与高度不变。三种动作分别与行列式因子吻合。这里左乘是在对所有点的坐标做同一变换，区别于给一个生成边加另一边。\n在三维，用平行截面的面积与高度作同样解释；这是初等几何的体积论证。若 AA 奇异，消元后有一行全零，所有像被限制在一个坐标平面或更低的集合内；逆向撤销可逆操作后仍是一个平面或更低的集合，三维体积为零。这个结论不需要提前引入秩。\n对于有面积/体积、可用小矩形盒逼近的有界区域，线性变换对每个小盒有同一缩放因子，因此取越来越细的分割可得到相同规律。本课重点为平行四边形、平行六面体与它们组成的区域，不发展一般测度或 Jacobian 理论。\n独立检查（自编）。 (a) D=diag⁡(−2,3)D=\\operatorname{diag}(-2,3) 把面积为5的平行四边形变成多大？(b) Q=diag⁡(2,3,−1)Q=\\operatorname{diag}(2,3,-1) 把体积为4的平行六面体变成多大？(c) I2I_2 和 S=[1101]S=\\begin{bmatrix}1&1\\\\0&1\\end{bmatrix} 行列式都为1，是否作用相同？\n答案和局限\n\ndet⁡D=−6\\det D=-6，面积30，定向反转。(b) det⁡Q=−6\\det Q=-6，体积24，定向反转。(c) 不同，S𝐞2=(1,1)𝖳S\\mathbf e_2=(1,1)^{\\mathsf T} 而 I2𝐞2=(0,1)𝖳I_2\\mathbf e_2=(0,1)^{\\mathsf T}。一个行列式数值不能恢复整个矩阵，也不能确定所有长度和夹角。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>几何意义与前三部分贯通 / Geometric Meaning and Connections across Parts 1–3</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>几何意义与前三部分贯通 / Geometric Meaning and Connections across Parts 1–3</span>"
     ]
   },
   {
@@ -2656,7 +2865,7 @@
     "text": "消元究竟保持什么？\n对可逆的初等矩阵 EE，线性使 (EA)𝐱=E(A𝐱)(EA)\\mathbf x=E(A\\mathbf x)，可逆使反向成立：\nA𝐱=𝐛⇔(EA)𝐱=E𝐛.A\\mathbf x=\\mathbf b\\quad\\Longleftrightarrow\\quad(EA)\\mathbf x=E\\mathbf b.\n这是同一组输入 𝐱\\mathbf x 的全部解保持。对方阵系数，det⁡(EA)=det⁡Edet⁡A\\det(EA)=\\det E\\det A 的数值可以改变，但 det⁡E≠0\\det E\\ne0，所以是否为零保持。例如将 HH 第一行乘2并将右端同乘2，解集不变，行列式却从1变2。长度、夹角一般不保持。\n区分两个操作。 左乘 EE 将每个输出向量、每个生成列和右端都送到它的像。若只把生成列 𝐯2\\mathbf v_2 换为 𝐯2+c𝐯1\\mathbf v_2+c\\mathbf v_1，则是给定边组中的列操作，第一列保留；不能把这一步的图说成对所有坐标点作同一行操作。前面的反射/塌缩图画的是左乘变换后的所有顶点，公式是 AVAV。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>几何意义与前三部分贯通 / Geometric Meaning and Connections across Parts 1–3</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>几何意义与前三部分贯通 / Geometric Meaning and Connections across Parts 1–3</span>"
     ]
   },
   {
@@ -2667,7 +2876,7 @@
     "text": "前三部分联系题：一个标量的边界\n本课包括三部分小结，不另占复习课。请独立回答，写理由而不只选“能/不能”。\n\n对第一部分 A=[111231]A=\\begin{bmatrix}1&1&1\\\\2&3&1\\end{bmatrix}、𝐛=(2,5)𝖳\\mathbf b=(2,5)^{\\mathsf T}，写全部解；能用本部分 det⁡A\\det A 判解吗？\ndet⁡J=0\\det J=0 能区分无解与无穷多解吗？用第九课两个右端说明。\ndet⁡A=1\\det A=1 能确定整个变换，或保证长度不变吗？\n一组右端、连续到来的许多右端、小型理论公式，各何时用消元、LU、克拉默/伴随？\n\n\n分别检查尺寸、增广右端、剪切对单位向量的像、系数矩阵能否复用。\n\n答案与三部分连接\n\n全部解为 (1,1,0)𝖳+t(−2,1,1)𝖳(1,1,0)^{\\mathsf T}+t(-2,1,1)^{\\mathsf T}，t∈ℝt\\in\\mathbb R；非方阵不定义本部分行列式。\n不能。J=[1224]J=\\begin{bmatrix}1&2\\\\2&4\\end{bmatrix} 对 (3,6)𝖳(3,6)^{\\mathsf T} 有 (3−2t,t)𝖳(3-2t,t)^{\\mathsf T}，对 (3,7)𝖳(3,7)^{\\mathsf T} 出现矛盾行而无解。\n不能。II 与剪切 SS 的行列式都是1，但 S𝐞2=(1,1)𝖳S\\mathbf e_2=(1,1)^{\\mathsf T}，长度从1变为 2\\sqrt2；它与 S𝐞1S\\mathbf e_1 也不再垂直。\n消元直接分析一组系统的相容性和全部解；同系数反复求解时可保存LU并前代/回代，需换行时同步 P𝐛P\\mathbf b。克拉默/伴随用于小型手算和理论联系，不是大系统的默认算法。\n\n第一部分研究输入解集；第二部分组织操作、保存消元；第三部分提取方阵可逆性与有向面积/体积的信息，不能恢复整个变换。\n\n第三部分复习保留贯通训练；性质速查便于独立查阅。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>几何意义与前三部分贯通 / Geometric Meaning and Connections across Parts 1–3</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>几何意义与前三部分贯通 / Geometric Meaning and Connections across Parts 1–3</span>"
     ]
   },
   {
@@ -2678,7 +2887,7 @@
     "text": "同一对象，不同起点\n课程补充，仅HTML选读。 建议学完第十一课与第十二课后阅读；不占第三部分四课时，也不是课堂主线的先修。这里用自己的中文推导比较三种起点，教材的递归定义已经完整地确定行列式，不需要这篇补读来补足定义。\n课堂从固定第一行递归展开定义行列式，任意行列展开是定理。也可以先写出每阶的总和，再把余子式展开证明为定理；还可以先指定三条性质，再证明满足它们的函数存在且唯一。“定义”和“定理”的角色取决于选择哪条路线，最终得到的是同一个标量。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
     ]
   },
   {
@@ -2689,7 +2898,7 @@
     "text": "排列与符号：从次序开始\n把 1,2,…,n1,2,\\ldots,n 各用一次，按新的顺序排成 (σ(1),…,σ(n))(\\sigma(1),\\ldots,\\sigma(n))，叫排列（permutation）。SnS_n 只表示全部这些排列组成的集合，不需要群论；共有 n!=n(n−1)⋯1n!=n(n-1)\\cdots1 个。\n若位置 i&lt;ji&lt;j，但数值 σ(i)&gt;σ(j)\\sigma(i)&gt;\\sigma(j)，则位置对 (i,j)(i,j) 叫逆序对（inversion）。逆序数（inversion number）和排列符号（sign）定义为\nN(σ)=#{(i,j):i&lt;j 且 σ(i)&gt;σ(j)},sgn⁡(σ)=(−1)N(σ).N(\\sigma)=\\#\\{(i,j):i&lt;j\\text{ 且 }\\sigma(i)&gt;\\sigma(j)\\},\\qquad\n\\operatorname{sgn}(\\sigma)=(-1)^{N(\\sigma)}.\n#\\# 表示集合元素个数。NN 的奇偶性（parity）决定符号：偶数为 +1+1，奇数为 −1-1。逆序对数的是位置对，不是“有几个数放错位置”。例如 (2,3,1)(2,3,1) 的逆序对为 (1,3),(2,3)(1,3),(2,3)，所以 N=2N=2、符号正；(3,2,1)(3,2,1) 的三对位置都逆序，所以 N=3N=3、符号负。\n交换相邻位置的两个数，只改变它们相互的逆序关系，与其他位置的逆序总数不变，所以奇偶性改变。相距 dd 的两个位置交换，可用 2d−12d-1 次相邻交换完成，仍改变符号。这给下文的变号规则一个不依赖路径的理由：符号直接由 NN 定义。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
     ]
   },
   {
@@ -2700,7 +2909,7 @@
     "text": "排列展开：每行每列各取一个\n对实 n×nn\\times n 矩阵 A=[aij]A=[a_{ij}]，排列展开（Leibniz formula）是\ndet⁡A=∑σ∈Sn(−1)N(σ)∏i=1nai,σ(i).\\det A=\\sum_{\\sigma\\in S_n}(-1)^{N(\\sigma)}\\prod_{i=1}^n a_{i,\\sigma(i)}.\n第 ii 行选择第 σ(i)\\sigma(i) 列；排列不重复列，所以每个乘积恰好从每行、每列各取一个元素。先乘这 nn 个元素，再乘排列符号，最后把 n!n! 项相加。二阶只有 (1,2)(1,2) 与 (2,1)(2,1)，于是得到 ad−bcad-bc。\n三阶记\nA=[abcdefghi],det⁡A=aei+bfg+cdh−afh−bdi−ceg.A=\\begin{bmatrix}a&b&c\\\\d&e&f\\\\g&h&i\\end{bmatrix},\\qquad\n\\det A=aei+bfg+cdh-afh-bdi-ceg.\n字母 ii 在这一个三阶示例中是右下角元素；公式中的行指标已在各处明确。排列公式揭示结构，不建议实际计算高阶时逐项枚举。三阶对角线口诀不能推广到四阶。该公式与低阶解释参考 Cheung 的教学页面 (Cheung, 不详)，下文给本课程独立组织的推导。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
     ]
   },
   {
@@ -2711,7 +2920,7 @@
     "text": "六种选择：静态表与可操作展示\n复用第十一课的 BB，同时显示字母项和对应数值。静态表始终保留，未启用脚本也能读到全部六项；选中的三个元素除颜色外，还带粗边框与位置文字。\n\n选择排列 / Permutation\n(1,2,3)(1,3,2)(2,1,3)(2,3,1)(3,1,2)(3,2,1)无需交互也可阅读下方六项完整表。\n\nB的元素；启用交互后选中项带边框\n\n\n1位置(1,1)\n2位置(1,2)\n3位置(1,3)\n\n\n2位置(2,1)\n5位置(2,2)\n7位置(2,3)\n\n\n-1位置(3,1)\n3位置(3,2)\n-2位置(3,3)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n排列\n逆序位置对\nN / 符号\n字母项（含符号）\nB的乘积（未乘符号）\n带符号值\n\n\n\n\n(1,2,3)\n无\n0 / +\n+aei\n1 × 5 × (-2) = -10\n-10\n\n\n(1,3,2)\n(2,3)\n1 / −\n−afh\n1 × 7 × 3 = 21\n-21\n\n\n(2,1,3)\n(1,2)\n1 / −\n−bdi\n2 × 2 × (-2) = -8\n8\n\n\n(2,3,1)\n(1,3)、(2,3)\n2 / +\n+bfg\n2 × 7 × (-1) = -14\n-14\n\n\n(3,1,2)\n(1,2)、(1,3)\n2 / +\n+cdh\n3 × 2 × 3 = 18\n18\n\n\n(3,2,1)\n(1,2)、(1,3)、(2,3)\n3 / −\n−ceg\n3 × 5 × (-1) = -15\n15\n\n\n\n\n六项总和：−10−21+8−14+18+15=−4=det⁡B-10-21+8-14+18+15=-4=\\det B。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
     ]
   },
   {
@@ -2722,7 +2931,7 @@
     "text": "六项怎样变成余子式展开？\n按第一行所选的元素 a,b,ca,b,c 分组：\naei+bfg+cdh−afh−bdi−ceg=a(ei−fh)−b(di−fg)+c(dh−eg).aei+bfg+cdh-afh-bdi-ceg\n=a(ei-fh)-b(di-fg)+c(dh-eg).\n例如选择 b=a12b=a_{12} 时，两项为 bfg−bdi=−b(di−fg)bfg-bdi=-b(di-fg)。括号正是删去第一行、第二列后 [dfgi]\\begin{bmatrix}d&f\\\\g&i\\end{bmatrix} 的二阶行列式，外部负号是 (−1)1+2(-1)^{1+2}。不是另换了一套算法定义，而是把同一总和重新分组。\n一般地，固定选择 aija_{ij}，删去它的行列，剩余选择恰好遍历子矩阵全部排列。被删去的那一对行列指标给符号因子 (−1)i+j(-1)^{i+j}；所以按固定行或固定列分组，都得到余子式展开。\n一般分组与递归等价：完整论证\n将排列求和定义的函数暂记为 FnF_n，避免先把要证结论当定义。固定 σ(i)=j\\sigma(i)=j，删除位置 ii 和数值 jj，把剩余位置、数值按原相对次序重新编号为 1,…,n−11,\\ldots,n-1，得到唯一的子排列 τ\\tau；反过来每个 τ\\tau 都唯一补回一个这样的 σ\\sigma。\n删除前后，其余数彼此间的逆序关系不变。设位置 ii 之前有 rr 个数小于 jj。与选定位置构成的逆序对有：前面的较大数 i−1−ri-1-r 个，后面的小数 j−1−rj-1-r 个。因此\nN(σ)−N(τ)=i+j−2−2r,(−1)N(σ)=(−1)i+j(−1)N(τ).N(\\sigma)-N(\\tau)=i+j-2-2r,\\qquad\n(-1)^{N(\\sigma)}=(-1)^{i+j}(-1)^{N(\\tau)}.\n所以所有 σ(i)=j\\sigma(i)=j 的项合起来，正是 aij(−1)i+jFn−1(Aij)a_{ij}(-1)^{i+j}F_{n-1}(A_{ij})。固定行 ii 对 jj 求和就得行展开；固定列 jj 时，每个排列也恰有一个位置选到它，对 ii 求和即列展开。\n特别取第一行：F1([a])=aF_1([a])=a，而 FnF_n 满足课堂固定首行递归式。按阶数归纳，若低一阶的 Fn−1F_{n-1} 与课堂定义相同，本阶各个子式和符号都相同，FnF_n 也相同。故所有阶都相同。这是一般等价证明；B的数值核对只用于检查计算，不能代替归纳。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
     ]
   },
   {
@@ -2733,7 +2942,7 @@
     "text": "用性质定义：为何存在且唯一？\n另一条路线在实 n×nn\\times n 矩阵的列上要求函数 DD 满足：\n\n\n\n\n\n\n\n性质\n准确含义\n\n\n\n\n多重线性（multilinearity）\n固定其余 n−1n-1 列时，对剩下那一列分别线性\n\n\n交替性（alternating property）\n交换任意两列，函数值变号；实数范围内，两列相同便给零\n\n\n归一化（normalization）\nD(In)=1D(I_n)=1\n\n\n\n“分别对每列线性”不是“对整个矩阵线性”。若全部 nn 列同时乘 cc，每列各贡献一个 cc，故 D(cA)=cnD(A)D(cA)=c^nD(A)。满足这三条性质的函数存在且唯一：排列公式构造出一个，任何其他这样的函数展开各列后也只能是它。此性质刻画参考 Miličić 的讲义中关于交替多重线性函数的论证 (Miličić, 不详)；这里限定实数，统一采用列指标，不引入群论。\n存在与唯一的细节：保持列指标一致\n存在。 排列公式每一项恰含任一指定列的一个元素，所以固定其他列时，它对该列线性。交换两列，相当于把每项选择的那两个列号交换；排列之间一一对应，符号由奇偶性改变而相反，故总和变号。单位阵只有选择全部对角元素的排列给非零项，它的符号正、乘积1。因此构造满足三条要求。\n唯一。 第 jj 列写成 𝐚j=∑k=1nakj𝐞k\\mathbf a_j=\\sum_{k=1}^n a_{kj}\\mathbf e_k。逐列使用多重线性，得到\nD(A)=∑k1=1n⋯∑kn=1n(∏j=1nakjj)D([𝐞k1⋯𝐞kn]).D(A)=\\sum_{k_1=1}^n\\cdots\\sum_{k_n=1}^n\n\\left(\\prod_{j=1}^n a_{k_jj}\\right)\nD([\\mathbf e_{k_1}\\ \\cdots\\ \\mathbf e_{k_n}]).\n有重复 kjk_j 的项含重复列，值为零。余下可写 kj=τ(j)k_j=\\tau(j)，其中 τ\\tau 遍历排列。把单位列按该次序排好，交换变号与 D(I)=1D(I)=1 给出值 (−1)N(τ)(-1)^{N(\\tau)}：相邻交换把逆序依次消去，每次少一对，共 N(τ)N(\\tau) 次。因此\nD(A)=∑τ∈Sn(−1)N(τ)∏jaτ(j),j.D(A)=\\sum_{\\tau\\in S_n}(-1)^{N(\\tau)}\\prod_j a_{\\tau(j),j}.\n这里 τ\\tau 指“每一列选哪一行”，而前面的 σ\\sigma 指“每一行选哪一列”，二者互逆。逆排列逆序数相同：p&lt;qp&lt;q 且 τ(p)&gt;τ(q)\\tau(p)&gt;\\tau(q)，对应逆排列中的位置对 (τ(q),τ(p))(\\tau(q),\\tau(p))，其像为 q&gt;pq&gt;p，这个对应可逆。故 N(τ−1)=N(τ)N(\\tau^{-1})=N(\\tau)；把 σ=τ−1\\sigma=\\tau^{-1} 代入，正好得到前面的排列公式。于是任何 DD 均已被三性质唯一确定。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
     ]
   },
   {
@@ -2744,7 +2953,7 @@
     "text": "三条路线各照亮什么？\n\n\n\n\n\n\n\n\n起点\n首先容易看清的内容\n在该路线中需要证明的联系\n\n\n\n\n固定首行递归展开\n从小矩阵定义大矩阵，删行删列与手算\n任意行列展开、基本性质\n\n\n排列求和\n每行每列各一次、整体符号与所有项\n按行列分组得到递归式\n\n\n交替多重线性与归一化\n单列改变如何影响数值\n满足要求的函数存在且唯一\n\n\n\n三条路线等价，不排出优劣。几何解释连接第十四课的有向面积与体积；这里不扩展到外代数、张量或其他记号体系。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
     ]
   },
   {
@@ -2755,7 +2964,7 @@
     "text": "三道短练习\n\n求 (3,1,2)(3,1,2) 的逆序对、逆序数和符号；再求 (3,2,1)(3,2,1) 的符号。\n将上述三阶六项按第二列（b,e,hb,e,h）分组，注明代数余子式符号。\n有人说“行列式是多重线性的，所以 det⁡(cA)=cdet⁡A\\det(cA)=c\\det A”。哪里错了？用 2I22I_2 核对，并解释一般 nn 阶关系。\n\n\n第一题比较位置对，不数错位元素。第二题固定的列位置是2，符号沿行依次为负、正、负。第三题先分清一次只改一列和同时改所有列。\n\n答案与反馈\n\n(3,1,2)(3,1,2) 有 (1,2),(1,3)(1,2),(1,3) 两个逆序对，N=2N=2，符号正；(3,2,1)(3,2,1) 有三对，符号负。\n−b(di−fg)+e(ai−cg)−h(af−cd)-b(di-fg)+e(ai-cg)-h(af-cd)。展开后是 −bdi+bfg+aei−ceg−afh+cdh-bdi+bfg+aei-ceg-afh+cdh，就是原六项；三个子式分别删去第1、2、3行及第2列。\n多重线性固定其余列。cAcA 改了 nn 列，依次抽出 nn 个 cc，得 cndet⁡Ac^n\\det A（c=0c=0 同样成立）。det⁡(2I2)=4\\det(2I_2)=4，而 2det⁡I2=22\\det I_2=2；这个反例否定错误等式，一般公式则由逐列线性给出。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
     ]
   },
   {
@@ -2766,7 +2975,7 @@
     "text": "参考资料\n实际访问与使用范围记录于修订报告：Cheung用于核对排列公式及低阶展开；Miličić用于核对性质刻画。正文推导、例子与反馈均为本课程组织，未复制整篇来源；原讲义反序排列应为 n+1−in+1-i，这里直接用定义核对，不沿用其 n−in-i 笔误。\n\n\nCheung, K. n.d. “Definition of the Determinant of a Square\nMatrix.” Carleton University. Accessed October 7, 2026. https://people.math.carleton.ca/~kcheung/math/notes/MATH1107/07/07_definition.html.\n\n\nMiličić, Dragan. n.d. Determinants. University of Utah lecture\nnotes. Accessed October 7, 2026. https://www.math.utah.edu/~milicic/Math_2270/determinants.pdf.",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>行列式的其他定义（选读） / Other Definitions of the Determinant (Optional)</span>"
     ]
   },
   {
@@ -2777,7 +2986,7 @@
     "text": "行列式与余子式（determinant; minor; cofactor）\n四课逻辑学习与本页查阅互相连接。公式需要会用、条件需要理解；完整证明和进一步训练见各条链接。独立其他定义阅读另标选读。\n对象为实n×nn\\times n方阵，输出是一个标量。删第ii行第jj列的AijA_{ij}为(n−1)×(n−1)(n-1)\\times(n-1)矩阵；Mij=det⁡AijM_{ij}=\\det A_{ij}是余子式，Cij=(−1)i+jMijC_{ij}=(-1)^{i+j}M_{ij}是代数余子式。固定首行递归det⁡A=∑ja1jC1j\\det A=\\sum_j a_{1j}C_{1j}，一阶起点det⁡[a]=a\\det[a]=a，二阶ad−bcad-bc。\n任意行/列的同样展开是定理，用于选择零多的行列手算；定义与指标、B完整例及独立第二列、递归证明依赖。非方阵不使用本部分行列式。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>35</span>  <span class='chapter-title'>知识与术语速查 / Concepts and Terminology</span>"
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>知识与术语速查 / Concepts and Terminology</span>"
     ]
   },
   {
@@ -2788,7 +2997,7 @@
     "text": "行列式的性质（Properties of Determinants）\n\n计算规则与矩阵运算\n以下 A,BA,B 为同阶实 n×nn\\times n 方阵，cc 为实数；求逆另需 det⁡A≠0\\det A\\ne0。\n\n\n\n\n\n\n\n计算/运算\n结论及前提\n\n\n\n\n单行乘 cc；整矩阵乘 cc\n前者乘 cc；后者 det⁡(cA)=cndet⁡A\\det(cA)=c^n\\det A，因为共缩放 nn 行\n\n\n交换两行；倍加\n分别变号；不变；列规则同理\n\n\n三角、单位阵\n对角乘积；det⁡I=1\\det I=1\n\n\n乘积、转置\ndet⁡(AB)=det⁡Adet⁡B\\det(AB)=\\det A\\det B；det⁡A𝖳=det⁡A\\det A^{\\mathsf T}=\\det A，均含奇异方阵\n\n\n可逆与求逆\ndet⁡A≠0⇔A\\det A\\ne0\\iff A可逆；此时 det⁡A−1=1/det⁡A\\det A^{-1}=1/\\det A\n\n\n\n单行线性固定其他行；不意味着det⁡(A+B)=det⁡A+det⁡B\\det(A+B)=\\det A+\\det B。基础理由与D记账、线性辨析反例、乘积完整证明含奇异分支、转置理由。\n\n\n结构判断（invertibility）\n方阵的det⁡A≠0\\det A\\ne0连接每行/列主元、列无关及每个右端唯一解；零行、重复行或列相关使行列式为零。零行列式不能判断给定右端是否相容。消元判据、J的不同右端。\n\n\n几何（signed area / volume）\n二维/三维生成边组成方阵VV；普通面积/体积为|det⁡V||\\det V|，经AA后为|det⁡A||det⁡V||\\det A|\\,|\\det V|。符号表示定向，零表示塌缩，未必所有向量都变成零。图、理由与短算；消元保持全部输入解但数值可变。\n\n\n求解与伴随（Cramer’s rule; adjugate）\nAi(𝐛)A_i(\\mathbf b)把实n×nn\\times n方阵AA的第ii列替换为𝐛∈ℝn\\mathbf b\\in\\mathbb R^n；det⁡A≠0\\det A\\ne0时，xi=det⁡Ai(𝐛)/det⁡Ax_i=\\det A_i(\\mathbf b)/\\det A。adj⁡A=[Cij]𝖳\\operatorname{adj}A=[C_{ij}]^{\\mathsf T}；所有方阵满足Aadj⁡A=adj⁡AA=det⁡AIA\\operatorname{adj}A=\\operatorname{adj}A\\,A=\\det A\\,I，只有非零行列式时才能求逆A−1=adj⁡A/det⁡AA^{-1}=\\operatorname{adj}A/\\det A。一阶约定adj⁡[a]=[1]\\operatorname{adj}[a]=[1]。\n用途为小型计算与理论联系。列线性推克拉默、从逆的各列解释转置、含奇异情形的双侧证明、Q/J及旧伴随运算训练。大系统回到消元/LU。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>35</span>  <span class='chapter-title'>知识与术语速查 / Concepts and Terminology</span>"
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>知识与术语速查 / Concepts and Terminology</span>"
     ]
   },
   {
@@ -2799,7 +3008,7 @@
     "text": "把三个问题分别说清楚\n第一部分的 A𝐱=𝐛A\\mathbf x=\\mathbf b 关心存在、唯一与全部解。第二部分组织变换并保存消元。第三部分的行列式判方阵可逆性、记录有向面积/体积缩放；一个数不决定整个矩阵。回看第十一课与第十二课、第十三课与第十四课。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>36</span>  <span class='chapter-title'>前三部分综合复习 / Parts 1–3 Review</span>"
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>前三部分综合复习 / Parts 1–3 Review</span>"
     ]
   },
   {
@@ -2810,7 +3019,7 @@
     "text": "独立综合题（自编）\n\n对 A=[111231]A=\\begin{bmatrix}1&1&1\\\\2&3&1\\end{bmatrix}、𝐛=(2,5)𝖳\\mathbf b=(2,5)^{\\mathsf T} 写全部解。能用行列式解吗？\n对 B=[123257−13−2]B=\\begin{bmatrix}1&2&3\\\\2&5&7\\\\-1&3&-2\\end{bmatrix}，为何多个右端可以复用LU？从分解与独立展开各给一次 det⁡B\\det B 的依据。\ndet⁡J=0\\det J=0 能否区分某个 J𝐱=𝐛J\\mathbf x=\\mathbf b 无解还是无穷多解？\ndet⁡S=1\\det S=1 是否保证保长度？给一个明确向量作检验。\n从A𝐱=𝐞jA\\mathbf x=\\mathbf e_j说明逆的(i,j)(i,j)元为什么是Cji/det⁡AC_{ji}/\\det A；为什么计算 adj⁡A\\operatorname{adj}A 时要转置？当 AA 奇异时双侧恒等式还成立吗？\n\n\n先查尺寸。将第二部分的可逆条件限定于方阵；行列式并未替你检查一个奇异系统的右端。伴随乘法的对角项要成为同一行的余子式展开。\n\n完整答案\n\n消元给 x2−x3=1x_2-x_3=1、x1+x2+x3=2x_1+x_2+x_3=2，令 x3=tx_3=t，全部解为 (1,1,0)𝖳+t(−2,1,1)𝖳(1,1,0)^{\\mathsf T}+t(-2,1,1)^{\\mathsf T}。原式恒为 (2,5)𝖳(2,5)^{\\mathsf T}。AA 非方阵，本课程不定义其行列式。\n系数的消元操作不随右端变，保存为 B=LUB=LU 后只须前代回代。det⁡L=1\\det L=1，det⁡U=1⋅1⋅(−4)=−4\\det U=1\\cdot1\\cdot(-4)=-4；独立沿第一行展开是 −31−6+33=−4-31-6+33=-4。因非零，每个右端都有唯一解。\n不能。J=[1224]J=\\begin{bmatrix}1&2\\\\2&4\\end{bmatrix} 对 (3,6)𝖳(3,6)^{\\mathsf T} 的解为 (3−2t,t)𝖳(3-2t,t)^{\\mathsf T}，对 (3,7)𝖳(3,7)^{\\mathsf T} 无解。要看增广系统是否有矛盾行。\n不能。S=[1101]S=\\begin{bmatrix}1&1\\\\0&1\\end{bmatrix} 把 𝐞2\\mathbf e_2 送到 (1,1)𝖳(1,1)^{\\mathsf T}，长度从1变为 2\\sqrt2，但面积缩放为1。\n克拉默给(A−1)ij=det⁡Ai(𝐞j)/det⁡A(A^{-1})_{ij}=\\det A_i(\\mathbf e_j)/\\det A，沿替换的第ii列展开只有第jj行的1贡献，得到CjiC_{ji}，所以要转置。转置后 Aadj⁡(A)A\\operatorname{adj}(A) 的 (i,k)(i,k) 元为 ∑jaijCkj\\sum_j a_{ij}C_{kj}，对角是原行展开，非对角是重复行的行列式。这个证明不需可逆，所以奇异时仍有两侧为零矩阵的恒等式；只是不能除以 det⁡A\\det A 求逆。\n\n\n下一阶段将系统建立子空间、基、坐标与维数，整理“所有可能输出”“所有零输出输入”这些集合。相关课程尚未在此站点展开。查阅共享术语表，也可返回第一部分综合复习。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>36</span>  <span class='chapter-title'>前三部分综合复习 / Parts 1–3 Review</span>"
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>前三部分综合复习 / Parts 1–3 Review</span>"
     ]
   },
   {
@@ -2821,7 +3030,7 @@
     "text": "分母与替列的计算复习\n重做第十三课Q/J练习：Q的行列式为3、右端为(4,5)，两替列行列式为3和6，解为(1,2)。先独立算，再核对完整答案。性质速查可查前提。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
-      "<span class='chapter-number'>36</span>  <span class='chapter-title'>前三部分综合复习 / Parts 1–3 Review</span>"
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>前三部分综合复习 / Parts 1–3 Review</span>"
     ]
   },
   {
@@ -2832,7 +3041,7 @@
     "text": "按教材章节查阅 / Browse by Textbook Chapter\n本汇编帮助你按教材查找结论，再回到课程学习主题理解推导和应用。范围为 Lay、Lay 与 McDonald，Linear Algebra and Its Applications，第六版，第1–7章。各章按教材节与定理号排列；学习主题仍按课程原有顺序组织。\n合计 / Total：95 条编号定理 + 4 处续篇 = 99 个来源条目。\n这些数字统计教材中定理的来源出现次数，包括重述和续篇；它们不是互不重复的新数学结果数。定理正文与必要条件默认展开，章内目录可直接定位各条。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>汇编入口 / Reference Contents</span>"
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>汇编入口 / Reference Contents</span>"
     ]
   },
   {
@@ -2843,7 +3052,7 @@
     "text": "教材第1章：线性方程与线性变换 / Textbook Chapter 1: Linear Equations and Linear Transformations\n12 条编号定理；共 12 个来源条目。\n教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra\n15 条编号定理，1 处续篇；共 16 个来源条目。\n教材第3章：行列式 / Textbook Chapter 3: Determinants\n10 条编号定理；共 10 个来源条目。\n教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces\n20 条编号定理，1 处续篇；共 21 个来源条目。\n教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors\n11 条编号定理，1 处续篇；共 12 个来源条目。\n教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares\n17 条编号定理；共 17 个来源条目。\n教材第7章：对称矩阵、二次型与奇异值分解 / Textbook Chapter 7: Symmetric Matrices, Quadratic Forms, and SVD\n10 条编号定理，1 处续篇；共 11 个来源条目。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>汇编入口 / Reference Contents</span>"
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>汇编入口 / Reference Contents</span>"
     ]
   },
   {
@@ -2854,7 +3063,7 @@
     "text": "怎样查找 / How to Find a Result\n使用侧栏的全站搜索，可输入中文名（如“最小二乘”）、英文名（如“Cauchy”），或教材章与定理号（如“第2章 定理11”）。进入结果后核对条目旁的节号与来源信息；不同章的定理号会重复。\n每条以教材小节编号（如 §2.3）定位，并保留该章内的定理号。名称标为“教材原题名”时，英文沿用原书题名；标为“描述性名称”时，是为查找编写的中英文概括。陈述用中文重新组织，分项字母与原书对应。\n“理解与回查”提供使用提示、已有课程讲解链接或教材证明位置。简短思路不等于完整证明，数值验证也不能代替一般证明。没有课程讲解的条目可先按教材位置阅读。本汇编的收录不表示所有条目都要在同一次课堂中讲授。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>汇编入口 / Reference Contents</span>"
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>汇编入口 / Reference Contents</span>"
     ]
   },
   {
@@ -2865,7 +3074,7 @@
     "text": "可逆矩阵定理的五个位置 / Five Locations of the Invertible Matrix Theorem\n\n§2.3：a–l，消元、方程、映射、逆与转置。\n§2.9：新增 m–q，基、维数、秩与零空间。\n§4.5：重述 m–q，一般向量空间之后再看。\n§5.2：新增 r，零特征值。\n§7.4：新增 s–v，正交补、行空间与奇异值。\n\n各阶段在对应教材章节说明所需的新概念，完整列出该处条件，并互相链接。教材第2章不预先混入后续章的全部条件。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>汇编入口 / Reference Contents</span>"
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>汇编入口 / Reference Contents</span>"
     ]
   },
   {
@@ -2876,7 +3085,7 @@
     "text": "补充结论 / Supplementary Results\n以下5项是教材中的重要未编号结论，与编号定理分开列出；定义、算法和例题没有因此改称定理。\n\n行操作保持解集 / Row Operations Preserve Solutions：§1.1。\n齐次非平凡解判据 / Nontrivial Homogeneous Solutions：§1.5，是定理2的具体化。\n有限区域缩放 / Scaling Regions of Finite Area or Volume：§3.3，扩展定理10。\n行秩等于列秩 / Equality of Row Rank and Column Rank：§4.5。\n实对称矩阵谱分解 / Spectral Decomposition：§7.1，由正交对角化与列—行展开得到。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>汇编入口 / Reference Contents</span>"
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>汇编入口 / Reference Contents</span>"
     ]
   },
   {
@@ -2887,7 +3096,7 @@
     "text": "记号与术语 / Notation and Terms\n除第五章明确使用复数的部分外，陈述使用实数域。矩阵尺寸为正整数；零子空间、零矩阵和零秩仍须分别处理。粗体小写字母表示向量，大写字母表示矩阵，斜体小写字母表示标量。𝟎\\mathbf0 与 InI_n 的尺寸由所在空间确定。\n中英术语表 / Glossary集中列出配对名称，第四至七章的页内说明给出基、坐标、特征空间、正则随机矩阵、正交补、奇异值等必要定义。零子空间的教材措辞与空基惯例见第二章约定；奇异值的列表长度见第七章约定。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>汇编入口 / Reference Contents</span>"
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>汇编入口 / Reference Contents</span>"
     ]
   },
   {
@@ -2898,7 +3107,7 @@
     "text": "§1.2 行化简与阶梯形 / Row Reduction and Echelon Forms\n汇编目录 / Reference contents · 本页按教材第一章定理号排列。 本页矩阵、向量和标量均在实数域 ℝ\\mathbb R 上；ℝn\\mathbb R^n 是有 nn 个实分量的列向量空间。 Span\\operatorname{Span} 表示所有线性组合构成的集合（张成 / span），𝟎\\mathbf 0 表示所在空间的零向量。 需要消元、主元、线性无关和映射的定义时，可查术语表 / Glossary。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>教材第1章：方程组与线性变换 / Textbook Chapter 1: Linear Systems and Transformations</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第1章：方程组与线性变换 / Textbook Chapter 1: Linear Systems and Transformations</span>"
     ]
   },
   {
@@ -2909,7 +3118,7 @@
     "text": "定理 1：简化阶梯形的唯一性 Uniqueness of the Reduced Echelon Form\n\n来源 / Source：教材第1章 定理1 / Textbook Chapter 1, Theorem 1；§1.2。教材原题名。\n\n对任意 m×nm\\times n 实矩阵 AA，存在且仅存在一个与 AA 行等价（row equivalent）的简化行阶梯形矩阵（reduced row echelon form，RREF）。行等价指可用有限次初等行操作互相得到。\n理解与回查。 消元路径可以不同，最终 RREF 相同；一般行阶梯形（REF）并不唯一。零矩阵也包括在内。消元与主元给出完整陈述和计算；一般唯一性证明见教材附录A。两条数值消元路径仅是例证。\n课程完整证明：列关系→CR→RREF唯一性 / Full Course Proof。\n\n\n定理 2：解的存在与唯一性 Existence and Uniqueness Theorem\n\n来源 / Source：教材第1章 定理2 / Textbook Chapter 1, Theorem 2；§1.2。教材原题名。\n\n一个实线性方程组相容（consistent，有解），当且仅当其增广矩阵的最后一列不是主元列；等价地，增广矩阵的阶梯形中没有对应 0=b0=b、b≠0b\\ne0 的行。\n在已经相容的前提下：\n\n没有自由变量时，解唯一；\n至少有一个自由变量时，有无穷多个解。\n\n理解与回查。 先检查存在性，再用自由变量判断唯一性。主元计数不可跳过相容性检查。读出解的类型与全部解给出理由和计算；教材 §1.2。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>教材第1章：方程组与线性变换 / Textbook Chapter 1: Linear Systems and Transformations</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第1章：方程组与线性变换 / Textbook Chapter 1: Linear Systems and Transformations</span>"
     ]
   },
   {
@@ -2920,7 +3129,7 @@
     "text": "§1.4 矩阵方程 / The Matrix Equation\n\n定理 3：三种方程表示的解集一致 Equivalent Forms of a Linear System\n\n来源 / Source：教材第1章 定理3 / Textbook Chapter 1, Theorem 3；§1.4。中英文名为描述性名称。\n\n设 A=[𝐚1⋯𝐚n]∈ℝm×nA=[\\mathbf a_1\\ \\cdots\\ \\mathbf a_n]\\in\\mathbb R^{m\\times n}，𝐛∈ℝm\\mathbf b\\in\\mathbb R^m。以下三种表示对未知列向量 𝐱=(x1,…,xn)T∈ℝn\\mathbf x=(x_1,\\ldots,x_n)^T\\in\\mathbb R^n 给出完全相同的解集：\n\n矩阵方程 A𝐱=𝐛A\\mathbf x=\\mathbf b；\n向量方程 x1𝐚1+⋯+xn𝐚n=𝐛x_1\\mathbf a_1+\\cdots+x_n\\mathbf a_n=\\mathbf b；\n增广矩阵为 [𝐚1⋯𝐚n𝐛]\\left[\\begin{array}{ccc|c}\\mathbf a_1&\\cdots&\\mathbf a_n&\\mathbf b\\end{array}\\right] 的线性方程组。\n\n理解与回查。 列组合的系数就是原方程组的未知数，三种写法没有换一批解。三种方程与求解；教材 §1.4。\n\n\n定理 4：全部目标可达的四个等价条件 Solvability for Every Right-Hand Side\n\n来源 / Source：教材第1章 定理4 / Textbook Chapter 1, Theorem 4；§1.4。中英文名为描述性名称。\n\n对固定的 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，以下条件等价：\n\n对每个 𝐛∈ℝm\\mathbf b\\in\\mathbb R^m，A𝐱=𝐛A\\mathbf x=\\mathbf b 都有解。\nℝm\\mathbb R^m 中每个向量都是 AA 的列向量的线性组合。\nAA 的列向量张成 ℝm\\mathbb R^m。\nAA 的每一行都有主元位置。\n\n理解与回查。 它判断的是“所有右端都能达到”，并非只判断某个给定右端。条件(d)检查系数矩阵 AA，而非增广矩阵。每个目标与主元的双向理由；教材证明见 §1.4。\n\n\n定理 5：矩阵向量乘积的线性 Linearity of Matrix-Vector Multiplication\n\n来源 / Source：教材第1章 定理5 / Textbook Chapter 1, Theorem 5；§1.4。中英文名为描述性名称。\n\n若 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，𝐮,𝐯∈ℝn\\mathbf u,\\mathbf v\\in\\mathbb R^n，c∈ℝc\\in\\mathbb R，则\n\nA(𝐮+𝐯)=A𝐮+A𝐯A(\\mathbf u+\\mathbf v)=A\\mathbf u+A\\mathbf v；\nA(c𝐮)=c(A𝐮)A(c\\mathbf u)=c(A\\mathbf u)。\n\n理解与回查。 矩阵乘法保留输入的加法和数乘；这是“特解加齐次解”和线性变换的代数基础。一般分配律推导；教材 §1.4。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>教材第1章：方程组与线性变换 / Textbook Chapter 1: Linear Systems and Transformations</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第1章：方程组与线性变换 / Textbook Chapter 1: Linear Systems and Transformations</span>"
     ]
   },
   {
@@ -2931,7 +3140,7 @@
     "text": "§1.5 线性系统的解集 / Solution Sets of Linear Systems\n\n定理 6：非齐次解集是齐次解集的平移 A Particular Solution Plus Homogeneous Solutions\n\n来源 / Source：教材第1章 定理6 / Textbook Chapter 1, Theorem 6；§1.5。中英文名为描述性名称。\n\n设 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，𝐛∈ℝm\\mathbf b\\in\\mathbb R^m，且 A𝐱=𝐛A\\mathbf x=\\mathbf b 相容。固定任意一个特解（particular solution）𝐩\\mathbf p，即 A𝐩=𝐛A\\mathbf p=\\mathbf b。则全部解恰为\n{𝐩+𝐯h:𝐯h∈ℝn,A𝐯h=𝟎}.\n\\{\\mathbf p+\\mathbf v_h:\\ \\mathbf v_h\\in\\mathbb R^n,\\ A\\mathbf v_h=\\mathbf0\\}.\n\n也就是说，每个齐次解都能加到 𝐩\\mathbf p 上得到原方程的解，原方程的任意解减去 𝐩\\mathbf p 又必是齐次解。\n理解与回查。 求一个特解与求所有齐次解是两个任务。全部解的双向证明；教材 §1.5，Practice Problem 3 及其解答、Exercise 37。\n条件说明。 允许 𝐛=𝟎\\mathbf b=\\mathbf0 或 𝐩=𝟎\\mathbf p=\\mathbf0；只需相容。教材定理后的 Warning 把图中非零平移的限制带入一般叙述，本条按定理框保留零情形。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>教材第1章：方程组与线性变换 / Textbook Chapter 1: Linear Systems and Transformations</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第1章：方程组与线性变换 / Textbook Chapter 1: Linear Systems and Transformations</span>"
     ]
   },
   {
@@ -2942,7 +3151,7 @@
     "text": "§1.7 线性无关 / Linear Independence\n\n定理 7：线性相关向量组的刻画 Characterization of Linearly Dependent Sets\n\n来源 / Source：教材第1章 定理7 / Textbook Chapter 1, Theorem 7；§1.7。教材原题名。\n\n设 S=(𝐯1,…,𝐯p)S=(\\mathbf v_1,\\ldots,\\mathbf v_p) 是 ℝn\\mathbb R^n 中的有序向量组，p≥2p\\ge2。则 SS 线性相关（linearly dependent），当且仅当至少一个向量可以写成其余向量的线性组合。\n进一步，若 SS 相关且 𝐯1≠𝟎\\mathbf v_1\\ne\\mathbf0，则存在 j∈{2,…,p}j\\in\\{2,\\ldots,p\\}，使\n𝐯j∈Span⁡{𝐯1,…,𝐯j−1}.\n\\mathbf v_j\\in\\operatorname{Span}\\{\\mathbf v_1,\\ldots,\\mathbf v_{j-1}\\}.\n\n理解与回查。 一般结论说明“至少一个可删”；加强结论说明可以按既定次序找到可由前序表示的向量。不是每个向量都能由其余或前序表示。 从关系式解出一列给出一般两方向与前序条款的简短证明；教材证明在 §1.7。\n证明思路。 非平凡零关系中解出一个非零系数对应的向量；反过来，把表示式移到一边，得到一个系数为 11 的非平凡零关系。若 𝐯1≠𝟎\\mathbf v_1\\ne\\mathbf0，取关系中最后一个非零系数的下标 jj，必有 j&gt;1j&gt;1，即可得到前序表示。\n\n\n定理 8：向量数多于分量数必相关 More Vectors Than Coordinates\n\n来源 / Source：教材第1章 定理8 / Textbook Chapter 1, Theorem 8；§1.7。中英文名为描述性名称。\n\n若 𝐯1,…,𝐯p∈ℝn\\mathbf v_1,\\ldots,\\mathbf v_p\\in\\mathbb R^n 且 p&gt;np&gt;n，则这组向量线性相关。\n理解与回查。 把向量排成 n×pn\\times p 矩阵，主元至多有 nn 个，齐次系统必有自由变量。p≤np\\le n 时本定理不作判断。主元数论证与训练；教材 §1.7。\n\n\n定理 9：含零向量的组必相关 Sets Containing the Zero Vector\n\n来源 / Source：教材第1章 定理9 / Textbook Chapter 1, Theorem 9；§1.7。中英文名为描述性名称。\n\n若有限向量组 S=(𝐯1,…,𝐯p)S=(\\mathbf v_1,\\ldots,\\mathbf v_p) 位于 ℝn\\mathbb R^n 中，且至少一个向量为 𝟎\\mathbf0，则 SS 线性相关。\n理解与回查。 给该零向量系数 11，给其余向量系数 00，就得到非平凡零关系；只有零向量的单向量组也适用。定义与零向量情形；教材证明见 §1.7。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>教材第1章：方程组与线性变换 / Textbook Chapter 1: Linear Systems and Transformations</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第1章：方程组与线性变换 / Textbook Chapter 1: Linear Systems and Transformations</span>"
     ]
   },
   {
@@ -2953,7 +3162,7 @@
     "text": "§1.9 线性变换的矩阵 / The Matrix of a Linear Transformation\n\n定理 10：线性变换的唯一标准矩阵 The Standard Matrix of a Linear Transformation\n\n来源 / Source：教材第1章 定理10 / Textbook Chapter 1, Theorem 10；§1.9。中英文名为描述性名称。\n\n设 T:ℝn→ℝmT:\\mathbb R^n\\to\\mathbb R^m 是线性变换（linear transformation）。存在唯一的 m×nm\\times n 实矩阵 AA，使每个 𝐱∈ℝn\\mathbf x\\in\\mathbb R^n 都满足 T(𝐱)=A𝐱T(\\mathbf x)=A\\mathbf x。 若 𝐞j\\mathbf e_j 是 InI_n 的第 jj 列，即第 jj 个标准单位向量，则\nA=[T(𝐞1)⋯T(𝐞n)].\nA=[T(\\mathbf e_1)\\ \\cdots\\ T(\\mathbf e_n)].\n\n理解与回查。 只要知道所有标准单位向量的像，就知道整个线性规则。标准矩阵的构造、唯一性与计算；教材 §1.9，唯一性另见 §1.9 Exercise 41。\n\n\n定理 11：单射与零核等价 Injectivity and the Zero Kernel\n\n来源 / Source：教材第1章 定理11 / Textbook Chapter 1, Theorem 11；§1.9。中英文名为描述性名称。\n\n设 T:ℝn→ℝmT:\\mathbb R^n\\to\\mathbb R^m 线性。TT 为单射（one-to-one / injective），当且仅当方程 T(𝐱)=𝟎T(\\mathbf x)=\\mathbf0 只有平凡解 𝐱=𝟎\\mathbf x=\\mathbf0。 单射指不同输入有不同输出，等价于每个输出至多有一个原像。\n理解与回查。 线性性把任意两个输入的比较化为它们之差是否映到零。两向证明；教材 §1.9。\n\n\n定理 12：单满射的列向量判据 Onto and One-to-One Matrix Transformations\n\n来源 / Source：教材第1章 定理12 / Textbook Chapter 1, Theorem 12；§1.9。中英文名为描述性名称。\n\n设 T:ℝn→ℝmT:\\mathbb R^n\\to\\mathbb R^m 线性，标准矩阵为 A∈ℝm×nA\\in\\mathbb R^{m\\times n}。则：\n\nTT 映满 ℝm\\mathbb R^m（onto / surjective），当且仅当 AA 的列向量张成 ℝm\\mathbb R^m。\nTT 是单射，当且仅当 AA 的列向量线性无关。\n\n理解与回查。 满射关心每个目标有没有原像，单射关心已有原像是否唯一；矩形矩阵也适用。单射与满射的列判据；教材证明见 §1.9。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>教材第1章：方程组与线性变换 / Textbook Chapter 1: Linear Systems and Transformations</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第1章：方程组与线性变换 / Textbook Chapter 1: Linear Systems and Transformations</span>"
     ]
   },
   {
@@ -2964,7 +3173,7 @@
     "text": "补充结论 / Supplementary Results\n\n行操作保持解集 / Row Operations Preserve Solutions\n对实线性方程组的整个增广矩阵施行有限次初等行操作（交换两行、一行乘非零数、一行加另一行的倍数），解集不变；因此行等价的增广矩阵表示等价方程组。每步均有同类逆操作，两个方向都成立。\n来源：§1.1 的未编号说明。它说明消元为何能保留全部解，与定理1的“最终RREF唯一”不同。双向等价解释。\n\n\n齐次非平凡解判据 / Nontrivial Homogeneous Solutions\n设 A∈ℝm×nA\\in\\mathbb R^{m\\times n}。A𝐱=𝟎A\\mathbf x=\\mathbf0 总有零解；存在非零解当且仅当行化简后至少有一个自由变量，也就是主元数小于 nn。特别地，n&gt;mn&gt;m 足以保证非零解。\n来源：§1.5 未编号框；是定理2对必相容系统的具体化，也支持定理8，不另计为新编号定理。齐次解的参数表示。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>教材第1章：方程组与线性变换 / Textbook Chapter 1: Linear Systems and Transformations</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第1章：方程组与线性变换 / Textbook Chapter 1: Linear Systems and Transformations</span>"
     ]
   },
   {
@@ -2975,7 +3184,7 @@
     "text": "§2.1 矩阵运算 / Matrix Operations\n汇编目录 / Reference contents · 本页的矩阵和标量均为实数。InI_n 是 nn 阶单位矩阵，ATA^T 是转置（transpose）。方阵 AA 可逆（invertible）指存在同阶矩阵 A−1A^{-1} 满足 AA−1=A−1A=IAA^{-1}=A^{-1}A=I。 基、维数和秩的简要说明放在§2.8与§2.9，前面的可逆性判据不预用它们。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
     ]
   },
   {
@@ -2986,7 +3195,7 @@
     "text": "定理 1：矩阵加法与数乘运算律 Addition and Scalar Multiplication Laws\n\n来源 / Source：教材第2章 定理1 / Textbook Chapter 2, Theorem 1；§2.1。中英文名为描述性名称。\n\n设 A,B,C∈ℝm×nA,B,C\\in\\mathbb R^{m\\times n}，r,s∈ℝr,s\\in\\mathbb R，00 是同尺寸的零矩阵。则：\n\nA+B=B+AA+B=B+A。\n(A+B)+C=A+(B+C)(A+B)+C=A+(B+C)。\nA+0=AA+0=A。\nr(A+B)=rA+rBr(A+B)=rA+rB。\n(r+s)A=rA+sA(r+s)A=rA+sA。\nr(sA)=(rs)Ar(sA)=(rs)A。\n\n理解与回查。 加法和数乘逐元素进行，因此沿用实数运算律；相加矩阵必须同尺寸。运算性质；教材逐项说明见 §2.1。\n\n\n定理 2：矩阵乘法运算律 Matrix Multiplication Laws\n\n来源 / Source：教材第2章 定理2 / Textbook Chapter 2, Theorem 2；§2.1。中英文名为描述性名称。\n\n设 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，r∈ℝr\\in\\mathbb R。以下每条各自假设其中的加法和乘法有定义：\n\nA(BC)=(AB)CA(BC)=(AB)C。例如 BB 为 n×pn\\times p、CC 为 p×qp\\times q。\nA(B+C)=AB+ACA(B+C)=AB+AC，其中 B,CB,C 同为 n×pn\\times p。\n(B+C)A=BA+CA(B+C)A=BA+CA，其中 B,CB,C 同为 p×mp\\times m。\nr(AB)=(rA)B=A(rB)r(AB)=(rA)B=A(rB)，其中 BB 为 n×pn\\times p。\nImA=A=AInI_mA=A=AI_n。\n\n理解与回查。 结合律允许改括号，不允许交换因子；不能把这些式子读成 AB=BAAB=BA。复合与结合律、性质表；教材 §2.1，其他分项见 §2.1 Exercises 37–39。\n\n\n定理 3：转置运算律 Transpose Laws\n\n来源 / Source：教材第2章 定理3 / Textbook Chapter 2, Theorem 3；§2.1。中英文名为描述性名称。\n\n对实矩阵及实数 rr，在各式尺寸相容时：\n\n(AT)T=A(A^T)^T=A。\n(A+B)T=AT+BT(A+B)^T=A^T+B^T（A,BA,B 同尺寸）。\n(rA)T=rAT(rA)^T=rA^T。\n(AB)T=BTAT(AB)^T=B^TA^T（例如 AA 为 m×nm\\times n，BB 为 n×pn\\times p）。\n\n理解与回查。 转置乘积时必须倒转次序，所得尺寸为 p×mp\\times m。转置与乘法；教材 §2.1，(d)证明指向 §2.1 Exercise 41。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
     ]
   },
   {
@@ -2997,7 +3206,7 @@
     "text": "§2.2 逆矩阵 / The Inverse of a Matrix\n\n定理 4：二阶矩阵的逆公式与奇异判据 The Inverse of a Two-by-Two Matrix\n\n来源 / Source：教材第2章 定理4 / Textbook Chapter 2, Theorem 4；§2.2。中英文名为描述性名称。\n\n设 A=[abcd]A=\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}，a,b,c,d∈ℝa,b,c,d\\in\\mathbb R。\n\n若 ad−bc≠0ad-bc\\ne0，则 AA 可逆，且\nA−1=1ad−bc[d−b−ca].\nA^{-1}=\\frac1{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}.\n\n若 ad−bc=0ad-bc=0，则 AA 不可逆。\n\n理解与回查。 先检查分母，再使用公式；奇异分支不能用“分母为零时公式无意义”代替不可逆结论。教材把证明留在 §2.2 Exercises 35–36。一般二阶公式与两个分支可与一般公式对照。\n\n\n定理 5：可逆系统的唯一解 Solving with an Inverse\n\n来源 / Source：教材第2章 定理5 / Textbook Chapter 2, Theorem 5；§2.2。中英文名为描述性名称。\n\n若 A∈ℝn×nA\\in\\mathbb R^{n\\times n} 可逆，则对每个 𝐛∈ℝn\\mathbf b\\in\\mathbb R^n，方程 A𝐱=𝐛A\\mathbf x=\\mathbf b 有唯一解，且 𝐱=A−1𝐛\\mathbf x=A^{-1}\\mathbf b。\n理解与回查。 代入验证存在，左乘 A−1A^{-1} 验证所有解都只能是这一向量。存在与唯一的证明；教材 §2.2。该表达式是理论结论，不要求计算时先显式求逆。\n\n\n定理 6：逆矩阵运算律 Properties of Inverses\n\n来源 / Source：教材第2章 定理6 / Textbook Chapter 2, Theorem 6；§2.2。中英文名为描述性名称。\n\n\n若实方阵 AA 可逆，则 A−1A^{-1} 也可逆，且 (A−1)−1=A(A^{-1})^{-1}=A。\n若 A,B∈ℝn×nA,B\\in\\mathbb R^{n\\times n} 都可逆，则 ABAB 可逆，且 (AB)−1=B−1A−1(AB)^{-1}=B^{-1}A^{-1}。\n若实方阵 AA 可逆，则 ATA^T 可逆，且 (AT)−1=(A−1)T(A^T)^{-1}=(A^{-1})^T。\n\n理解与回查。 复合动作要按相反次序撤销；每个逆候选都要满足双侧乘积为单位矩阵。双侧核对；教材 §2.2。\n\n\n定理 7：行消元求逆的充要条件 Row Reduction and Invertibility\n\n来源 / Source：教材第2章 定理7 / Textbook Chapter 2, Theorem 7；§2.2。中英文名为描述性名称。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n}。AA 可逆当且仅当 AA 行等价于 InI_n。此时，任何把 AA 化成 InI_n 的初等行操作序列，施加在 InI_n 上都会得到 A−1A^{-1}。\n因此在增广矩阵 [AIn]\\left[\\begin{array}{c|c}A&I_n\\end{array}\\right] 上同步操作，若左侧能化成 InI_n，右侧即为 A−1A^{-1}；若不能，AA 不可逆。\n理解与回查。 右侧记录同一串操作的作用。初等矩阵解释、可逆性等价链；教材证明与算法见 §2.2。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
     ]
   },
   {
@@ -3008,7 +3217,7 @@
     "text": "§2.3 可逆性刻画 / Characterizations of Invertibility\n\n定理 8：可逆矩阵定理：初始十二项 The Invertible Matrix Theorem\n\n来源 / Source：教材第2章 定理8 / Textbook Chapter 2, Theorem 8；§2.3。教材原题名。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n}。以下十二项等价：其中任意一项成立时全部成立，任意一项不成立时全部不成立。\n消元与齐次系统 / Elimination and homogeneous systems\n\nAA 可逆。\nAA 行等价于 InI_n。\nAA 有 nn 个主元位置。\nA𝐱=𝟎A\\mathbf x=\\mathbf0 只有平凡解。\nAA 的列向量线性无关。\n线性变换 𝐱↦A𝐱\\mathbf x\\mapsto A\\mathbf x 是单射。\n\n所有目标向量与映射 / All Target Vectors and Mappings\n\n对每个 𝐛∈ℝn\\mathbf b\\in\\mathbb R^n，A𝐱=𝐛A\\mathbf x=\\mathbf b 至少有一个解。\nAA 的列向量张成 ℝn\\mathbb R^n。\n线性变换 𝐱↦A𝐱\\mathbf x\\mapsto A\\mathbf x 把 ℝn\\mathbb R^n 映满 ℝn\\mathbb R^n。\n\n单侧逆与转置 / One-sided inverses and transpose\n\n存在 C∈ℝn×nC\\in\\mathbb R^{n\\times n}，使 CA=InCA=I_n。\n存在 D∈ℝn×nD\\in\\mathbb R^{n\\times n}，使 AD=InAD=I_n。\nATA^T 可逆。\n\n理解与回查。 方阵前提把“足够多的主元”和“没有自由变量”合在一起；矩形矩阵不能照搬全部等价项。现有主元等价链；教材 §2.3 给完整链。(l)的反向由 (AT)T=A(A^T)^T=A 和定理6(c)得到。\n后续阶段 / Later stages： §2.9 基与秩 m–q → §4.5 重述 m–q → §5.2 特征值 r → §7.4 正交补与奇异值 s–v。各阶段使用的新概念在对应页面说明。\n\n\n定理 9：可逆变换与矩阵的逆 Invertible Linear Transformations\n\n来源 / Source：教材第2章 定理9 / Textbook Chapter 2, Theorem 9；§2.3。中英文名为描述性名称。\n\n设 T:ℝn→ℝnT:\\mathbb R^n\\to\\mathbb R^n 线性，标准矩阵为 AA。这里 TT 可逆指存在映射 S:ℝn→ℝnS:\\mathbb R^n\\to\\mathbb R^n，使对所有 𝐱∈ℝn\\mathbf x\\in\\mathbb R^n 同时有\nS(T(𝐱))=𝐱,T(S(𝐱))=𝐱.\nS(T(\\mathbf x))=\\mathbf x,\\qquad T(S(\\mathbf x))=\\mathbf x.\n\n则 TT 可逆当且仅当 AA 可逆；此时满足上述双侧关系的 SS 唯一，且 SS 是线性变换，其公式为\nS(𝐱)=A−1𝐱.S(\\mathbf x)=A^{-1}\\mathbf x.\n理解与回查。 两侧恒等分别保证可恢复原输入和每个输出都可被恢复。教材 §2.3 给出双侧定义，并在定理框中陈述等价、线性与唯一性；唯一性证明另指本节 Exercise 47。逆映射唯一且线性的完整论证与列关系中的可逆变换可帮助理解，完整一般命题如上。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
     ]
   },
   {
@@ -3019,7 +3228,7 @@
     "text": "§2.4 分块矩阵 / Partitioned Matrices\n\n定理 10：矩阵乘积的列行外积展开 Column–Row Expansion of AB\n\n来源 / Source：教材第2章 定理10 / Textbook Chapter 2, Theorem 10；§2.4。教材原题名。\n\n设 A∈ℝm×nA\\in\\mathbb R^{m\\times n}、B∈ℝn×pB\\in\\mathbb R^{n\\times p}。用 col⁡k(A)\\operatorname{col}_k(A) 表示 AA 的第 kk 列（m×1m\\times1），row⁡k(B)\\operatorname{row}_k(B) 表示 BB 的第 kk 行（1×p1\\times p）。则\nAB=∑k=1ncol⁡k(A)row⁡k(B).\nAB=\\sum_{k=1}^n\\operatorname{col}_k(A)\\operatorname{row}_k(B).\n\n每一项都是 m×pm\\times p 的外积（outer product），它们的和也是 m×pm\\times p 矩阵。\n理解与回查。 行乘列算一个元素，列乘行产生整个矩阵；本定理把乘积拆成后者的和。第 (i,j)(i,j) 个元素都是 ∑kaikbkj\\sum_k a_{ik}b_{kj}，给出逐元素证明。一般列—行展开与数值例；教材证明见 §2.4。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
     ]
   },
   {
@@ -3030,7 +3239,7 @@
     "text": "§2.6 投入产出模型 / The Leontief Input–Output Model\n\n定理 11：投入产出模型的非负唯一解 Nonnegative Solutions of the Leontief Model\n\n来源 / Source：教材第2章 定理11 / Textbook Chapter 2, Theorem 11；§2.6。中英文名为描述性名称。\n\n设 C=(cij)∈ℝn×nC=(c_{ij})\\in\\mathbb R^{n\\times n} 为消耗矩阵（consumption matrix）：cijc_{ij} 表示第 jj 部门生产一个单位产出需要第 ii 部门的投入量；𝐝∈ℝn\\mathbf d\\in\\mathbb R^n 为最终需求（final demand），𝐱\\mathbf x 为总产出。假设\ncij≥0,di≥0,∑i=1ncij&lt;1(j=1,…,n).\nc_{ij}\\ge0,\\quad d_i\\ge0,\\quad\n\\sum_{i=1}^n c_{ij}&lt;1\\quad(j=1,\\ldots,n).\n\n则 In−CI_n-C 可逆，且\n𝐱=(In−C)−1𝐝\\mathbf x=(I_n-C)^{-1}\\mathbf d\n是方程 𝐱=C𝐱+𝐝\\mathbf x=C\\mathbf x+\\mathbf d 的唯一解，并且各分量非负。\n理解与回查。 每列和严格小于 11 是保证可行总产出的充分条件，不能反写为必要条件。教材 §2.6 用 I+C+C2+⋯I+C+C^2+\\cdots 说明逆矩阵为何非负；模型定义也在本节。𝐝=𝟎\\mathbf d=\\mathbf0 时唯一解是 𝟎\\mathbf0，也在结论内。投入产出阅读、完整理由与两部门计算。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
     ]
   },
   {
@@ -3041,7 +3250,7 @@
     "text": "§2.8 子空间与基 / Subspaces and Bases\n子空间（subspace）是含零且对加法、数乘封闭的子集。Col⁡A\\operatorname{Col}A 是 AA 的列张成的空间；Nul⁡A={𝐱:A𝐱=𝟎}\\operatorname{Nul}A=\\{\\mathbf x:A\\mathbf x=\\mathbf0\\} 是零空间（null space）。子空间 HH 的基（basis）是 HH 内既线性无关又张成 HH 的一组向量。\n\n定理 12：零空间是子空间 The Null Space Is a Subspace\n\n来源 / Source：教材第2章 定理12 / Textbook Chapter 2, Theorem 12；§2.8。中英文名为描述性名称。\n\n若 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，则 Nul⁡A\\operatorname{Nul}A 是 ℝn\\mathbb R^n 的子空间。等价地，一个含 nn 个未知数的实齐次线性方程组的解集是 ℝn\\mathbb R^n 的子空间。\n理解与回查。 未知向量有 nn 个分量，零空间因此在 ℝn\\mathbb R^n 中，而不是 ℝm\\mathbb R^m 中。零、加法与数乘检查；教材证明见 §2.8；第四章定理2重述此结论。\n\n\n定理 13：原矩阵主元列给出列空间基 A Basis for the Column Space\n\n来源 / Source：教材第2章 定理13 / Textbook Chapter 2, Theorem 13；§2.8。中英文名为描述性名称。\n\n设 A∈ℝm×nA\\in\\mathbb R^{m\\times n}。由 AA 的阶梯形确定主元列的下标，再从原矩阵 AA 中取出这些列，它们构成 Col⁡A\\operatorname{Col}A 的一组基。\n理解与回查。 行化简保留列之间的线性关系，却通常改变列空间；不能直接取阶梯形矩阵的列充当原列空间的基。教材 §2.8 的例7–8说明理由；第四章定理6重述。零矩阵没有主元列，零子空间的空基约定见下段。\n第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
     ]
   },
   {
@@ -3052,7 +3261,7 @@
     "text": "§2.9 维数与秩 / Dimension and Rank\n有限维空间的维数（dimension）是基中向量的个数，记作 dim⁡H\\dim H；矩阵的秩（rank）定义为 rank⁡A=dim⁡Col⁡A\\operatorname{rank}A=\\dim\\operatorname{Col}A，零度（nullity）是 dim⁡Nul⁡A\\dim\\operatorname{Nul}A。零子空间 {𝟎}\\{\\mathbf0\\} 的维数是 00。\n零子空间约定 / Zero-space convention。 教材 §2.9 脚注称零子空间“没有基”，并另定维数为 00；允许空集作基的另一常见约定则把空组作为它的基。本汇编在涉及空组时明确指出后一解释，不把两种措辞混用：零矩阵主元列为空，若允许空基，这个空组就是其零列空间的基；按教材措辞则将零子空间单列。两种约定的维数与秩计算相同。\n\n定理 14：秩与零度定理 The Rank Theorem\n\n来源 / Source：教材第2章 定理14 / Textbook Chapter 2, Theorem 14；§2.9。教材原题名。\n\n若 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，则\nrank⁡A+dim⁡Nul⁡A=n.\\operatorname{rank}A+\\dim\\operatorname{Nul}A=n.\n理解与回查。 主元列数与自由变量数合计为未知数个数 nn；不是行数 mm。零矩阵时为 0+n=n0+n=n。教材 §2.9；更一般的讨论实际位于 §4.5 定理14，不是原书此处交叉引用所写的 §4.6。\n第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2。\n\n\n定理 15：子空间的基定理 The Basis Theorem\n\n来源 / Source：教材第2章 定理15 / Textbook Chapter 2, Theorem 15；§2.9。教材原题名。\n\n设 HH 是 ℝn\\mathbb R^n 中维数为 pp 的子空间。\n\nHH 中任何恰含 pp 个向量的线性无关组，都是 HH 的基。\nHH 中任何恰含 pp 个向量、并且张成 HH 的向量组，也都是 HH 的基。\n\n理解与回查。 数量等于维数时，只需检查“无关”或“张成”之一；向量首先必须属于 HH。p=0p=0 时按上面的零子空间约定解释。教材证明见 §4.5 定理13。\n第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2。\n\n\n可逆矩阵定理续篇：基、秩与零空间扩展 The Invertible Matrix Theorem (continued)\n\n来源 / Source：教材第2章 / Chapter 2，§2.9，The Invertible Matrix Theorem (continued)。教材原题名。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n}。以下每一项都等价于“AA 可逆”，也等价于 §2.3 的(a)–(l)：\n\nAA 的列向量构成 ℝn\\mathbb R^n 的一组基。\nCol⁡A=ℝn\\operatorname{Col}A=\\mathbb R^n。\nrank⁡A=n\\operatorname{rank}A=n。\ndim⁡Nul⁡A=0\\dim\\operatorname{Nul}A=0。\nNul⁡A={𝟎}\\operatorname{Nul}A=\\{\\mathbf0\\}。\n\n理解与回查。 新概念是基、维数、秩和零空间；(m)把无关与张成合写，(o)–(q)把主元与自由变量语言改写为维数语言。教材论证 §2.9。本处新增五项，§4.5再次陈述同一五项；随后有 r 与 s–v。\n第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第2章：矩阵代数 / Textbook Chapter 2: Matrix Algebra</span>"
     ]
   },
   {
@@ -3063,7 +3272,7 @@
     "text": "§3.1 行列式的展开 / Cofactor Expansion\n汇编目录 / Reference contents · 本页 A,BA,B 均为实方阵；几何部分使用 ℝ2\\mathbb R^2 或 ℝ3\\mathbb R^3 的通常面积与体积。行列式（determinant）记作 det⁡A\\det A。固定首行的递归定义见学习主题，不要把任意行列展开与递归起点混为同一层次。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>40</span>  <span class='chapter-title'>教材第3章：行列式 / Textbook Chapter 3: Determinants</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>教材第3章：行列式 / Textbook Chapter 3: Determinants</span>"
     ]
   },
   {
@@ -3074,7 +3283,7 @@
     "text": "定理 1：沿任意行或列的代数余子式展开 Cofactor Expansion\n\n来源 / Source：教材第3章 定理1 / Textbook Chapter 3, Theorem 1；§3.1。中英文名为描述性名称。\n\n设 A=(aij)∈ℝn×nA=(a_{ij})\\in\\mathbb R^{n\\times n}。删去第 ii 行和第 jj 列得到 AijA_{ij}，其代数余子式（cofactor）为 Cij=(−1)i+jdet⁡AijC_{ij}=(-1)^{i+j}\\det A_{ij}。则沿任意固定的第 ii 行可展开为\ndet⁡A=∑j=1naijCij,\\det A=\\sum_{j=1}^n a_{ij}C_{ij},\n沿任意固定的第 jj 列可展开为\ndet⁡A=∑i=1naijCij.\\det A=\\sum_{i=1}^n a_{ij}C_{ij}.\n一阶矩阵的行列式就是其唯一元素；如把上式也写到 n=1n=1，约定空余子式的行列式为 11。\n理解与回查。 可选择零最多的行或列，所有选择都给同一个数。教材 §3.1 省略一般证明；课程完整理由与展开计算可供回查。\n\n\n定理 2：三角矩阵的行列式 Determinant of a Triangular Matrix\n\n来源 / Source：教材第3章 定理2 / Textbook Chapter 3, Theorem 2；§3.1。中英文名为描述性名称。\n\n若 A∈ℝn×nA\\in\\mathbb R^{n\\times n} 为上三角或下三角矩阵，则\ndet⁡A=a11a22⋯ann.\\det A=a_{11}a_{22}\\cdots a_{nn}.\n理解与回查。 对角元允许为零，结论包括奇异三角阵；矩形阶梯阵没有本条所说的行列式。三角阵与递归理由；教材 §3.1。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>40</span>  <span class='chapter-title'>教材第3章：行列式 / Textbook Chapter 3: Determinants</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>教材第3章：行列式 / Textbook Chapter 3: Determinants</span>"
     ]
   },
   {
@@ -3085,7 +3294,7 @@
     "text": "§3.2 行列式的性质 / Properties of Determinants\n\n定理 3：行操作与行列式 Row Operations\n\n来源 / Source：教材第3章 定理3 / Textbook Chapter 3, Theorem 3；§3.2。教材原题名。\n\n设 AA 为实方阵，BB 由所述单次行操作得到。\n\n把一行的倍数加到另一行，det⁡B=det⁡A\\det B=\\det A。\n交换两行，det⁡B=−det⁡A\\det B=-\\det A。\n将一行乘实数 kk，det⁡B=kdet⁡A\\det B=k\\det A。\n\n理解与回查。 (c)的代数公式包括 k=0k=0；只有要把该步视为可逆初等行操作时才要求 k≠0k\\ne0。是“一行”倍乘，不是整个矩阵倍乘。行操作记账与证明；教材证明见 §3.2。\n\n\n定理 4：行列式的可逆判据 Determinants and Invertibility\n\n来源 / Source：教材第3章 定理4 / Textbook Chapter 3, Theorem 4；§3.2。中英文名为描述性名称。\n\n实方阵 AA 可逆，当且仅当 det⁡A≠0\\det A\\ne0。\n理解与回查。 消元后的主元数与三角阵对角乘积把可逆性连接到一个标量。消元证明；教材 §3.2；可与可逆矩阵定理 a–l联用。\n\n\n定理 5：转置保持行列式 Determinant of a Transpose\n\n来源 / Source：教材第3章 定理5 / Textbook Chapter 3, Theorem 5；§3.2。中英文名为描述性名称。\n\n对每个 A∈ℝn×nA\\in\\mathbb R^{n\\times n}，det⁡(AT)=det⁡A\\det(A^T)=\\det A。\n理解与回查。 转置把行与列互换，因而行操作对行列式的规律也适用于列操作。一般证明；教材 §3.2。\n\n\n定理 6：行列式的乘法性质 Multiplicative Property\n\n来源 / Source：教材第3章 定理6 / Textbook Chapter 3, Theorem 6；§3.2。教材原题名。\n\n对任意 A,B∈ℝn×nA,B\\in\\mathbb R^{n\\times n}，\ndet⁡(AB)=(det⁡A)(det⁡B).\\det(AB)=(\\det A)(\\det B).\n不要求任何一个矩阵可逆。\n理解与回查。 复合变换的体积因子相乘；奇异情形也必须在证明中保留，不能先除以 det⁡A\\det A。含奇异分支的证明；教材 §3.2。行列式一般不满足 det⁡(A+B)=det⁡A+det⁡B\\det(A+B)=\\det A+\\det B。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>40</span>  <span class='chapter-title'>教材第3章：行列式 / Textbook Chapter 3: Determinants</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>教材第3章：行列式 / Textbook Chapter 3: Determinants</span>"
     ]
   },
   {
@@ -3096,7 +3305,7 @@
     "text": "§3.3 克拉默法则与几何 / Cramer’s Rule and Geometry\n\n定理 7：克拉默法则 Cramer’s Rule\n\n来源 / Source：教材第3章 定理7 / Textbook Chapter 3, Theorem 7；§3.3。教材原题名。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n} 可逆，𝐛∈ℝn\\mathbf b\\in\\mathbb R^n。以 𝐛\\mathbf b 替换 AA 的第 ii 列得到 Ai(𝐛)A_i(\\mathbf b)。则 A𝐱=𝐛A\\mathbf x=\\mathbf b 的唯一解满足\nxi=det⁡Ai(𝐛)det⁡A,i=1,…,n.x_i=\\frac{\\det A_i(\\mathbf b)}{\\det A},\\qquad i=1,\\ldots,n.\n理解与回查。 计算哪个分量就替换哪一列，分母非零来自可逆前提。两种证明与计算；教材证明见 §3.3。这是理论表达式，不意味着大系统应逐个计算这些行列式。\n\n\n定理 8：伴随矩阵求逆公式 An Inverse Formula\n\n来源 / Source：教材第3章 定理8 / Textbook Chapter 3, Theorem 8；§3.3。教材原题名。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n} 可逆。令伴随矩阵（adjugate matrix）adj⁡A\\operatorname{adj}A 的第 (i,j)(i,j) 个元素为 CjiC_{ji}，即代数余子式矩阵的转置。则\nA−1=1det⁡Aadj⁡A.A^{-1}=\\frac{1}{\\det A}\\operatorname{adj}A.\n理解与回查。 先取余子式，再转置；逆矩阵第 (i,j)(i,j) 个元素对应 CjiC_{ji}。由逆的列推导、伴随矩阵及训练；教材 §3.3。一阶时伴随为 [1][1]，与前述空余子式约定一致。\n\n\n定理 9：列生成图形的面积与体积 Area and Volume of Generated Figures\n\n来源 / Source：教材第3章 定理9 / Textbook Chapter 3, Theorem 9；§3.3。中英文名为描述性名称。\n\n若 A∈ℝ2×2A\\in\\mathbb R^{2\\times2}，由它的两列作为邻边生成的平行四边形面积为 |det⁡A||\\det A|。\n若 A∈ℝ3×3A\\in\\mathbb R^{3\\times3}，由它的三列作为棱生成的平行六面体体积为 |det⁡A||\\det A|。\n理解与回查。 普通面积和体积取绝对值。相关列会使图形退化，面积或体积为零；结论不要求可逆。几何解释与退化情况；教材 §3.3。原书证明中把一般矩阵化为对角的步骤不能不加区分地用于奇异矩阵，本条保留正确的退化结论。\n\n\n定理 10：线性变换的面积与体积缩放 Area and Volume under Linear Transformations\n\n来源 / Source：教材第3章 定理10 / Textbook Chapter 3, Theorem 10；§3.3。中英文名为描述性名称。\n\n设 T(𝐱)=A𝐱T(\\mathbf x)=A\\mathbf x。\n\n若 A∈ℝ2×2A\\in\\mathbb R^{2\\times2}，S⊂ℝ2S\\subset\\mathbb R^2 是平行四边形区域，则\narea⁡(T(S))=|det⁡A|area⁡(S).\\operatorname{area}(T(S))=|\\det A|\\operatorname{area}(S).\n若 A∈ℝ3×3A\\in\\mathbb R^{3\\times3}，S⊂ℝ3S\\subset\\mathbb R^3 是平行六面体区域，则\nvol⁡(T(S))=|det⁡A|vol⁡(S).\\operatorname{vol}(T(S))=|\\det A|\\operatorname{vol}(S).\n\n允许图形平移，也允许矩阵或图形退化。\n理解与回查。 这里变换的是一个已有图形，前一定理则由矩阵的列直接生成图形。若生成矩阵为 BB，变换后为 ABAB，再用乘积性质；平移不改变面积体积。课程几何解释；教材证明见 §3.3。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>40</span>  <span class='chapter-title'>教材第3章：行列式 / Textbook Chapter 3: Determinants</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>教材第3章：行列式 / Textbook Chapter 3: Determinants</span>"
     ]
   },
   {
@@ -3107,7 +3316,7 @@
     "text": "补充结论 / Supplementary Results\n\n有限面积与体积区域的缩放 / Scaling Regions of Finite Area or Volume\n对 T(𝐱)=A𝐱T(\\mathbf x)=A\\mathbf x，若 AA 为实 2×22\\times2 矩阵、S⊂ℝ2S\\subset\\mathbb R^2 是具有有限面积的区域，则 area⁡(T(S))=|det⁡A|area⁡(S)\\operatorname{area}(T(S))=|\\det A|\\operatorname{area}(S)。 实 3×33\\times3 矩阵与具有有限体积的 S⊂ℝ3S\\subset\\mathbb R^3 满足相应体积公式。\n来源：§3.3 的未编号框，是定理10从平行图形到一般区域的扩展。这里“具有面积/体积”是前提，不对不可测集合下结论。教材前文用小矩形逼近解释，例5应用到椭圆；已有主题给初等几何解释，不作一般测度论证明。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>40</span>  <span class='chapter-title'>教材第3章：行列式 / Textbook Chapter 3: Determinants</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>教材第3章：行列式 / Textbook Chapter 3: Determinants</span>"
     ]
   },
   {
@@ -3118,7 +3327,7 @@
     "text": "术语与记号 / Terms and Notation\n汇编目录 / Reference contents · 本页采用实数域。\n实向量空间（real vector space）VV 的元素称为向量，带有加法和实数数乘；运算满足加法交换、结合、零元、加法逆元，两条分配律、数乘结合律和 1𝐯=𝐯1\\mathbf v=\\mathbf v，且结果仍在 VV 中。向量可以是多项式或信号，不一定是数字列；完整定义见教材 §4.1。\n子空间（subspace）H⊆VH\\subseteq V 含零并对加法、数乘封闭。张成（span）只使用有限线性组合；无关（linear independence）指有限零组合只能有全零系数。基（basis）同时无关并张成目标空间。有限基的长度是维数（dimension）。零子空间维数为0；教材“没有基”与空基惯例的区别见第二章约定，本页同样逐处标明零情形。\n对 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，Col⁡A⊆ℝm\\operatorname{Col}A\\subseteq\\mathbb R^m 为列空间，Nul⁡A⊆ℝn\\operatorname{Nul}A\\subseteq\\mathbb R^n 为零空间，Row⁡A⊆ℝn\\operatorname{Row}A\\subseteq\\mathbb R^n 为行向量张成的行空间（row space；比较坐标时把行转为列）。秩 rank⁡A=dim⁡Col⁡A\\operatorname{rank}A=\\dim\\operatorname{Col}A，零度 nullity⁡A=dim⁡Nul⁡A\\operatorname{nullity}A=\\dim\\operatorname{Nul}A。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
     ]
   },
   {
@@ -3129,7 +3338,7 @@
     "text": "§4.1 向量空间与子空间 / Vector Spaces and Subspaces\n\n定理 1：向量组的张成集是子空间 Spans Are Subspaces\n\n来源 / Source：教材第4章 定理1 / Textbook Chapter 4, Theorem 1；§4.1。中英文名为描述性名称。\n\n若 𝐯1,…,𝐯p\\mathbf v_1,\\ldots,\\mathbf v_p 属于实向量空间 VV，则 Span⁡{𝐯1,…,𝐯p}\\operatorname{Span}\\{\\mathbf v_1,\\ldots,\\mathbf v_p\\} 是 VV 的子空间。\n理解与回查。 两个有限线性组合相加或数乘后，仍是同一组向量的线性组合。教材 §4.1 由例11推广；坐标空间中的子空间检查给出具体解释。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
     ]
   },
   {
@@ -3140,7 +3349,7 @@
     "text": "§4.2 零空间、列空间与行空间 / Null, Column, and Row Spaces\n\n定理 2：零空间是子空间（重述） The Null Space Is a Subspace\n\n来源 / Source：教材第4章 定理2 / Textbook Chapter 4, Theorem 2；§4.2。中英文名为描述性名称。\n\n这里 Nul⁡A={𝐱∈ℝn:A𝐱=𝟎}\\operatorname{Nul}A=\\{\\mathbf x\\in\\mathbb R^n:A\\mathbf x=\\mathbf0\\}。\n若 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，则 Nul⁡A\\operatorname{Nul}A 是 ℝn\\mathbb R^n 的子空间。等价地，一个含 nn 个未知数的实齐次线性方程组的解集是 ℝn\\mathbb R^n 的子空间。\n理解与回查。 这是第二章定理12的重述，包含零子空间情形。已有完整检查；教材证明见 §4.2。\n\n\n定理 3：列空间是子空间 The Column Space Is a Subspace\n\n来源 / Source：教材第4章 定理3 / Textbook Chapter 4, Theorem 3；§4.2。中英文名为描述性名称。\n\n若 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，则 Col⁡A\\operatorname{Col}A 是 ℝm\\mathbb R^m 的子空间。\n理解与回查。 列空间由 mm 分量列向量张成，直接用定理1；不要与未知向量所在的 ℝn\\mathbb R^n 混淆。列空间与所有可达目标；教材 §4.2。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
     ]
   },
   {
@@ -3151,7 +3360,7 @@
     "text": "§4.3 线性无关组与基 / Linearly Independent Sets and Bases\n\n定理 4：一般向量空间的前序相关性判据 Dependence on Preceding Vectors\n\n来源 / Source：教材第4章 定理4 / Textbook Chapter 4, Theorem 4；§4.3。中英文名为描述性名称。\n\n设 (𝐯1,…,𝐯p)(\\mathbf v_1,\\ldots,\\mathbf v_p) 是实向量空间 VV 中的有序组，p≥2p\\ge2 且 𝐯1≠𝟎\\mathbf v_1\\ne\\mathbf0。这组向量相关，当且仅当存在 j&gt;1j&gt;1，使 𝐯j\\mathbf v_j 是 𝐯1,…,𝐯j−1\\mathbf v_1,\\ldots,\\mathbf v_{j-1} 的线性组合。\n理解与回查。 不必先把向量转成数字列，相关性的定义本身就能解出一个向量。第一章定理7给同一证明思路；教材 §4.3。\n\n\n定理 5：张成集缩减定理 The Spanning Set Theorem\n\n来源 / Source：教材第4章 定理5 / Textbook Chapter 4, Theorem 5；§4.3。教材原题名。\n\n设 S=(𝐯1,…,𝐯p)⊂VS=(\\mathbf v_1,\\ldots,\\mathbf v_p)\\subset V，H=Span⁡SH=\\operatorname{Span}S。\n\n若 𝐯k\\mathbf v_k 是 SS 中其余向量的线性组合，删去 𝐯k\\mathbf v_k 后的向量组仍张成 HH。\n若 H≠{𝟎}H\\ne\\{\\mathbf0\\}，则 SS 的某个子集构成 HH 的基。\n\n理解与回查。 删冗余不改变张成空间，有限次删除最终留下基。(b)保留原书非零前提；空基惯例另见术语说明。教材 §4.3 证明先代入表示式，再重复删除。\n\n\n定理 6：原矩阵主元列组成列空间基（重述） Pivot Columns Form a Basis\n\n来源 / Source：教材第4章 定理6 / Textbook Chapter 4, Theorem 6；§4.3。中英文名为描述性名称。\n\n设 A∈ℝm×nA\\in\\mathbb R^{m\\times n}。从阶梯形确定主元列的下标后，取原矩阵 AA 的对应列，它们构成 Col⁡A\\operatorname{Col}A 的基。\n理解与回查。 重述第二章定理13，本节给一般证明和警告：阶梯形中的列通常不是原列空间的向量。若 A=0A=0，主元列组为空；允许空基时结论直接适用，按教材零子空间措辞则单列维数0。\n第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2。\n\n\n定理 7：行等价保持行空间与行空间基 Row Equivalence and Row-Space Bases\n\n来源 / Source：教材第4章 定理7 / Textbook Chapter 4, Theorem 7；§4.3。中英文名为描述性名称。\n\n若实矩阵 A,B∈ℝm×nA,B\\in\\mathbb R^{m\\times n} 行等价，则 Row⁡A=Row⁡B\\operatorname{Row}A=\\operatorname{Row}B。若进一步 BB 为阶梯形，则 BB 的非零行组成这两个相同行空间的一组基。\n理解与回查。 行操作的可逆性给出两个方向的包含；阶梯形非零行的主元位置保证无关。行空间可直接取化简后的行，列空间须取原矩阵的列。零矩阵时非零行组为空，约定同上。教材证明见 §4.3。\n第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
     ]
   },
   {
@@ -3162,7 +3371,7 @@
     "text": "§4.4 坐标系 / Coordinate Systems\n\n定理 8：基下表示唯一 The Unique Representation Theorem\n\n来源 / Source：教材第4章 定理8 / Textbook Chapter 4, Theorem 8；§4.4。教材原题名。\n\n设 ℬ=(𝐛1,…,𝐛n)\\mathcal B=(\\mathbf b_1,\\ldots,\\mathbf b_n) 是实向量空间 VV 的有序基。对每个 𝐱∈V\\mathbf x\\in V，存在唯一一组实数 c1,…,cnc_1,\\ldots,c_n，使\n𝐱=c1𝐛1+⋯+cn𝐛n.\\mathbf x=c_1\\mathbf b_1+\\cdots+c_n\\mathbf b_n.\n理解与回查。 张成保证存在，无关保证唯一（教材 §4.4）。坐标向量（coordinate vector）定义为 [𝐱]ℬ=(c1,…,cn)T∈ℝn[\\mathbf x]_{\\mathcal B}=(c_1,\\ldots,c_n)^T\\in\\mathbb R^n。它是 𝐱\\mathbf x 在这组基下的描述，不是把 𝐱∈V\\mathbf x\\in V 与一个数字列不加说明地等同。\n第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2。\n\n\n定理 9：坐标映射是线性同构 The Coordinate Mapping\n\n来源 / Source：教材第4章 定理9 / Textbook Chapter 4, Theorem 9；§4.4。中英文名为描述性名称。\n\n若 ℬ=(𝐛1,…,𝐛n)\\mathcal B=(\\mathbf b_1,\\ldots,\\mathbf b_n) 是实向量空间 VV 的有序基，则坐标映射\nV→ℝn,𝐱↦[𝐱]ℬV\\longrightarrow\\mathbb R^n,\\qquad \\mathbf x\\longmapsto[\\mathbf x]_{\\mathcal B}\n是单射且满射的线性变换，即线性同构（isomorphism）。特别地，对 𝐮,𝐯∈V\\mathbf u,\\mathbf v\\in V 和 c∈ℝc\\in\\mathbb R，坐标保持加法与数乘。\n理解与回查。 可把 VV 内的线性关系搬到数字坐标中计算，但要记得使用哪组基。教材 §4.4 证明线性，单射、满射见 §4.4 Exercises 27–28。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
     ]
   },
   {
@@ -3173,7 +3382,7 @@
     "text": "§4.5 维数 / Dimension\n\n定理 10：有限基约束无关向量数 Dependence in a Space with a Finite Basis\n\n来源 / Source：教材第4章 定理10 / Textbook Chapter 4, Theorem 10；§4.5。中英文名为描述性名称。\n\n若实向量空间 VV 有一组含 nn 个向量的基，则 VV 中任何多于 nn 个向量的集合都线性相关。\n无限集合也适用：它含有一个相关的有限子集；无限集合的相关性按这一含义定义。\n理解与回查。 用坐标映射把问题转到 ℝn\\mathbb R^n，再用向量数超过分量数的判据。教材 §4.5 的证明与脚注。\n第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2。\n\n\n定理 11：有限维空间基的等势性 Cardinality of Bases\n\n来源 / Source：教材第4章 定理11 / Textbook Chapter 4, Theorem 11；§4.5。中英文名为描述性名称。\n\n若实向量空间 VV 有一组含 nn 个向量的基，则 VV 的每一组基都恰有 nn 个向量。\n理解与回查。 因而“维数”不随基的选择而变。教材 §4.5 用定理10从两个方向比较基的长度；零子空间的维数约定见本页术语。\n第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2。\n\n\n定理 12：子空间的扩基与维数上界 Extending Independent Sets in Subspaces\n\n来源 / Source：教材第4章 定理12 / Textbook Chapter 4, Theorem 12；§4.5。中英文名为描述性名称。\n\n设 HH 是有限维实向量空间 VV 的子空间。HH 内任意线性无关组都可以在需要时补入向量，扩充成 HH 的一组基。并且 HH 有限维，满足\ndim⁡H≤dim⁡V.\\dim H\\le\\dim V.\n理解与回查。 新向量必须来自 HH，且位于已有向量的张成之外；过程受 dim⁡V\\dim V 限制。教材 §4.5 的证明单列 H={𝟎}H=\\{\\mathbf0\\} 得维数0；扩基措辞在允许空基时也涵盖空组，否则按教材将零子空间单列。\n\n\n定理 13：有限维向量空间的基定理 The Basis Theorem\n\n来源 / Source：教材第4章 定理13 / Textbook Chapter 4, Theorem 13；§4.5。教材原题名。\n\n设 VV 为实 pp 维向量空间，p≥1p\\ge1。\n\nVV 中恰含 pp 个向量的任何线性无关组都是 VV 的基。\nVV 中恰含 pp 个向量、且张成 VV 的任何向量组都是 VV 的基。\n\n理解与回查。 定理12允许扩基，定理5允许删冗余，数量恰好时都不必增删。教材证明见 §4.5；它推广第二章定理15，本框明确保留 p≥1p\\ge1。\n\n\n定理 14：秩与零度定理（重述） The Rank Theorem\n\n来源 / Source：教材第4章 定理14 / Textbook Chapter 4, Theorem 14；§4.5。教材原题名。\n\n若 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，则\nrank⁡A+nullity⁡A=n,\\operatorname{rank}A+\\operatorname{nullity}A=n,\n即列空间与零空间的维数之和等于 AA 的列数。\n理解与回查。 主元列数加非主元列数等于总列数；零度数的是自由变量的个数，不是“非主元列向量张成的空间”。教材证明见 §4.5；重述第二章定理14。\n第二部分的具体论证与训练 / Concrete Reasoning and Practice in Part 2。\n\n\n可逆矩阵定理续篇：基与秩五项重述 The Invertible Matrix Theorem (continued)\n\n来源 / Source：教材第4章 / Chapter 4，§4.5，The Invertible Matrix Theorem (continued)。教材原题名。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n}。下列条件各自等价于 AA 可逆：\n\nAA 的列构成 ℝn\\mathbb R^n 的基。\nCol⁡A=ℝn\\operatorname{Col}A=\\mathbb R^n。\nrank⁡A=n\\operatorname{rank}A=n。\nnullity⁡A=0\\operatorname{nullity}A=0。\nNul⁡A={𝟎}\\operatorname{Nul}A=\\{\\mathbf0\\}。\n\n理解与回查。 这是§2.9 的五项在一般空间、基与维数之后的重述，没有新增字母条件。教材 §4.5 连接回 a–l；下一阶段为 r，最后为 s–v。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
     ]
   },
   {
@@ -3184,7 +3393,7 @@
     "text": "§4.6 换基 / Change of Basis\n\n定理 15：换基矩阵的存在、唯一性与列构造 Change-of-Coordinates Matrix\n\n来源 / Source：教材第4章 定理15 / Textbook Chapter 4, Theorem 15；§4.6。中英文名为描述性名称。\n\n设 ℬ=(𝐛1,…,𝐛n)\\mathcal B=(\\mathbf b_1,\\ldots,\\mathbf b_n) 与 𝒞=(𝐜1,…,𝐜n)\\mathcal C=(\\mathbf c_1,\\ldots,\\mathbf c_n) 是同一实向量空间 VV 的有序基。存在唯一 n×nn\\times n 实矩阵 P𝒞←ℬP_{\\mathcal C\\leftarrow\\mathcal B}，使每个 𝐱∈V\\mathbf x\\in V 满足\n[𝐱]𝒞=P𝒞←ℬ[𝐱]ℬ.[\\mathbf x]_{\\mathcal C}=P_{\\mathcal C\\leftarrow\\mathcal B}[\\mathbf x]_{\\mathcal B}.\n其列为旧基向量的新坐标：\nP𝒞←ℬ=[[𝐛1]𝒞⋯[𝐛n]𝒞].P_{\\mathcal C\\leftarrow\\mathcal B}=\n\\bigl[[\\mathbf b_1]_{\\mathcal C}\\ \\cdots\\ [\\mathbf b_n]_{\\mathcal C}\\bigr].\n理解与回查。 箭头从输入坐标基指向输出坐标基；原向量没有改变。教材 §4.6 给出推导，并进一步说明反向换基矩阵是它的逆。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
     ]
   },
   {
@@ -3195,7 +3404,7 @@
     "text": "§4.7 数字信号 / Digital Signals\n这里信号（signal）是双向实数序列 𝐲=(yk)k∈ℤ\\mathbf y=(y_k)_{k\\in\\mathbb Z}，全体构成空间 𝒮\\mathcal S，运算逐项进行。右移（shift）算子记 SS，(S𝐲)k=yk−1(S\\mathbf y)_k=y_{k-1}；单位脉冲（unit impulse）𝛅\\boldsymbol\\delta 在 k=0k=0 处为1、其他位置为0。负次幂表示向左移，Sj𝛅S^j\\boldsymbol\\delta 在 k=jk=j 处为1。字体区分空间 𝒮\\mathcal S 与算子 SS。\n\n定理 16：时不变线性变换是线性变换 LTI Transformations are Linear Transformations\n\n来源 / Source：教材第4章 定理16 / Textbook Chapter 4, Theorem 16；§4.7。教材原题名。\n\n设 T:𝒮→𝒮T:\\mathcal S\\to\\mathcal S 是线性时不变（linear time-invariant，LTI）变换，即对任意信号 𝐱,𝐲\\mathbf x,\\mathbf y、实数 cc 及整数 qq 有\nT(𝐱+𝐲)=T𝐱+T𝐲,T(c𝐱)=cT𝐱,T(Sq𝐱)=Sq(T𝐱).\n\\begin{aligned}\nT(\\mathbf x+\\mathbf y)&=T\\mathbf x+T\\mathbf y,\\\\\nT(c\\mathbf x)&=cT\\mathbf x,\\\\\nT(S^q\\mathbf x)&=S^q(T\\mathbf x).\n\\end{aligned}\n\n则 TT 是信号空间 𝒮\\mathcal S 上的线性变换。\n理解与回查。 前两条就是线性性，第三条另加平移不变；不能反推所有线性变换都时不变。教材定义、定理与说明均在 §4.7。\n\n\n定理 17：有限区间支撑信号空间与基 Signals Supported on a Finite Interval\n\n来源 / Source：教材第4章 定理17 / Textbook Chapter 4, Theorem 17；§4.7。中英文名为描述性名称。\n\n设整数 n≥0n\\ge0，𝒮n\\mathcal S_n 是所有满足 k&lt;0k&lt;0 或 k&gt;nk&gt;n 时 yk=0y_k=0 的信号组成的集合。则 𝒮n\\mathcal S_n 是 𝒮\\mathcal S 的子空间，与 ℝn+1\\mathbb R^{n+1} 同构，且\nℬn=(𝛅,S𝛅,…,Sn𝛅)\\mathcal B_n=(\\boldsymbol\\delta,S\\boldsymbol\\delta,\\ldots,S^n\\boldsymbol\\delta)\n是它的一组基。因此 dim⁡𝒮n=n+1\\dim\\mathcal S_n=n+1。\n理解与回查。 支撑区间是 0,1,…,n0,1,\\ldots,n，含 n+1n+1 个位置。每个信号唯一写为 ∑j=0nyjSj𝛅\\sum_{j=0}^n y_jS^j\\boldsymbol\\delta；教材定义与证明见 §4.7。\n\n\n定理 18：有限支撑信号空间的无限基 A Basis for Finitely Supported Signals\n\n来源 / Source：教材第4章 定理18 / Textbook Chapter 4, Theorem 18；§4.7。中英文名为描述性名称。\n\n令 𝒮f\\mathcal S_f 为仅有有限个非零分量的双向实信号组成的空间。则\nℬf={Sj𝛅:j∈ℤ}\\mathcal B_f=\\{S^j\\boldsymbol\\delta:j\\in\\mathbb Z\\}\n是无限维向量空间 𝒮f\\mathcal S_f 的一组基。\n理解与回查。 每个有限支撑信号都只需有限个脉冲；无关性也逐个位置检查。这不意味着 ℬf\\mathcal B_f 是全体信号 𝒮\\mathcal S 的基，无限级数不属于这里的有限线性组合。教材 §4.7 的证明中一次写成 𝒮n\\mathcal S_n 的张成对象，应按定理及同段有限支撑语境读作 𝒮f\\mathcal S_f。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
     ]
   },
   {
@@ -3206,7 +3415,7 @@
     "text": "§4.8 差分方程 / Difference Equations\n本节用 k∈ℤk\\in\\mathbb Z 的双向信号。nn 阶常系数线性差分方程（linear difference equation）首末系数非零；除以首系数后写成下列规范形式。这个“末系数非零”来自教材 §4.8 的定义，不能只读后面的定理框而漏掉。\n\n定理 19：双向差分方程的初值唯一性 Unique Solutions of Difference Equations\n\n来源 / Source：教材第4章 定理19 / Textbook Chapter 4, Theorem 19；§4.8。中英文名为描述性名称。\n\n设 n≥1n\\ge1，a1,…,an∈ℝa_1,\\ldots,a_n\\in\\mathbb R 且 an≠0a_n\\ne0，给定双向实信号 (zk)k∈ℤ(z_k)_{k\\in\\mathbb Z}。方程\nyk+n+a1yk+n−1+⋯+anyk=zk(k∈ℤ)y_{k+n}+a_1y_{k+n-1}+\\cdots+a_ny_k=z_k\\qquad(k\\in\\mathbb Z)\n在任意指定实初值 y0,…,yn−1y_0,\\ldots,y_{n-1} 后，都有唯一的双向信号解。\n理解与回查。 首系数1允许向前求下一项，an≠0a_n\\ne0 允许向后求前一项。教材证明见 §4.8；若只研究单向序列，初值问题的条件需要另行说明，不能据此删去本条条件。\n\n\n定理 20：齐次差分方程解空间维数 Dimension of a Homogeneous Solution Space\n\n来源 / Source：教材第4章 定理20 / Textbook Chapter 4, Theorem 20；§4.8。中英文名为描述性名称。\n\n设 n≥1n\\ge1，a1,…,an∈ℝa_1,\\ldots,a_n\\in\\mathbb R 且 an≠0a_n\\ne0。齐次差分方程\nyk+n+a1yk+n−1+⋯+anyk=0(k∈ℤ)y_{k+n}+a_1y_{k+n-1}+\\cdots+a_ny_k=0\\qquad(k\\in\\mathbb Z)\n的全部双向实信号解组成一个 nn 维向量空间 HH。\n理解与回查。 初值映射 𝐲↦(y0,…,yn−1)T\\mathbf y\\mapsto(y_0,\\ldots,y_{n-1})^T 从 HH 到 ℝn\\mathbb R^n 线性且双射，故维数为 nn。教材 §4.8 用定理19证明；这是完整解空间的维数，不是一个解序列的长度。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
     ]
   },
   {
@@ -3217,7 +3426,7 @@
     "text": "补充结论 / Supplementary Results\n\n行秩等于列秩 / Equality of Row Rank and Column Rank\n对 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，\ndim⁡Row⁡A=dim⁡Col⁡A=rank⁡A.\\dim\\operatorname{Row}A=\\dim\\operatorname{Col}A=\\operatorname{rank}A.\n来源：§4.5 定理14之前的未编号框与说明。阶梯形中非零行数等于主元列数，再用定理6–7。这比较的是维数；两个空间分别位于 ℝn\\mathbb R^n 和 ℝm\\mathbb R^m，并不是说行空间等于列空间。它与定理14的“秩加零度”不是同一句结论。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第4章：向量空间 / Textbook Chapter 4: Vector Spaces</span>"
     ]
   },
   {
@@ -3228,7 +3437,7 @@
     "text": "术语与记号 / Terms and Notation\n汇编目录 / Reference contents · 除 §5.5 明确使用复数外，本页在实数域讨论矩阵、特征值与对角化。\n若 A∈ℝn×nA\\in\\mathbb R^{n\\times n}、𝐯≠𝟎\\mathbf v\\ne\\mathbf0 且 A𝐯=λ𝐯A\\mathbf v=\\lambda\\mathbf v，则 λ\\lambda 为特征值（eigenvalue），𝐯\\mathbf v 为对应特征向量（eigenvector）。特征空间（eigenspace）Eλ=Nul⁡(A−λIn)E_\\lambda=\\operatorname{Nul}(A-\\lambda I_n) 包含零向量，但零向量不是特征向量。\n特征多项式（characteristic polynomial）为 det⁡(A−tIn)\\det(A-tI_n)；λ\\lambda 是特征值当且仅当 det⁡(A−λIn)=0\\det(A-\\lambda I_n)=0（§5.2 的未编号结论，由非零核与行列式可逆判据得到）。根的重数称代数重数（algebraic multiplicity），dim⁡Eλ\\dim E_\\lambda 称几何重数（geometric multiplicity）。\n相似（similar）指 B=P−1APB=P^{-1}AP，其中 PP 可逆；可对角化（diagonalizable）指存在同一数域内的可逆 PP 与对角矩阵 DD，使 A=PDP−1A=PDP^{-1}。若改在复数域讨论，必须同时允许复特征向量和复 P,DP,D；“在实数域不可对角化”不自动排除复数域的对角化。教材定义见 §§5.1–5.3。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors</span>"
     ]
   },
   {
@@ -3239,7 +3448,7 @@
     "text": "§5.1 特征值与特征向量 / Eigenvalues and Eigenvectors\n\n定理 1：三角矩阵的特征值 Eigenvalues of a Triangular Matrix\n\n来源 / Source：教材第5章 定理1 / Textbook Chapter 5, Theorem 1；§5.1。中英文名为描述性名称。\n\n实 n×nn\\times n 上三角或下三角矩阵的特征值恰为主对角线上出现的数。\n理解与回查。 三角阵 A−λIA-\\lambda I 何时缺少主元，只取决于某个对角元是否为零；重复对角元可给重复根，零对角元也允许。教材 §5.1 用上三角三阶式说明一般方法，下三角见 §5.1 Exercise 36。\n\n\n定理 2：不同特征值的特征向量无关 Eigenvectors for Distinct Eigenvalues\n\n来源 / Source：教材第5章 定理2 / Textbook Chapter 5, Theorem 2；§5.1。中英文名为描述性名称。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n}，λ1,…,λr\\lambda_1,\\ldots,\\lambda_r 是互不相同的实特征值。若 𝐯1,…,𝐯r\\mathbf v_1,\\ldots,\\mathbf v_r 是分别对应它们的特征向量，则这组向量线性无关。\n理解与回查。 不同特征值提供独立方向；同一特征值下选到的多个向量并不自动无关。教材 §5.1 的证明用 AA 作用于最短相关式，再减去一个特征值倍数。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors</span>"
     ]
   },
   {
@@ -3250,7 +3459,7 @@
     "text": "§5.2 特征方程与相似 / The Characteristic Equation and Similarity\n\n定理 3：行列式性质集中重述 Properties of Determinants\n\n来源 / Source：教材第5章 定理3 / Textbook Chapter 5, Theorem 3；§5.2。教材原题名。\n\n设 A,B∈ℝn×nA,B\\in\\mathbb R^{n\\times n}。以下为第三章性质的集中重述：\n\nAA 可逆当且仅当 det⁡A≠0\\det A\\ne0。\ndet⁡(AB)=(det⁡A)(det⁡B)\\det(AB)=(\\det A)(\\det B)。\ndet⁡(AT)=det⁡A\\det(A^T)=\\det A。\n若 AA 为三角矩阵，则 det⁡A\\det A 等于主对角元乘积。\n对 AA 施行单次行替换，行列式不变；交换两行，行列式变号；一行乘标量 cc，行列式也乘 cc。\n\n理解与回查。 倍乘公式也包括 c=0c=0，可逆行操作才另要求非零。证明回查第三章的三角阵、行操作、可逆性、转置与乘积，已有主题性质总览。\n\n\n可逆矩阵定理续篇：零不是特征值 The Invertible Matrix Theorem (continued)\n\n来源 / Source：教材第5章 / Chapter 5，§5.2，The Invertible Matrix Theorem (continued)。教材原题名。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n}。AA 可逆当且仅当：\n\n00 不是 AA 的特征值。\n\n理解与回查。 00 是特征值恰好表示 A𝐱=𝟎A\\mathbf x=\\mathbf0 有非零解，故与 a–l、m–q及其§4.5重述相连。教材 §5.2 的续篇只新增 r，下一续篇为 s–v。\n\n\n定理 4：相似矩阵的特征多项式相同 Similarity Preserves the Characteristic Polynomial\n\n来源 / Source：教材第5章 定理4 / Textbook Chapter 5, Theorem 4；§5.2。中英文名为描述性名称。\n\n若 A,B∈ℝn×nA,B\\in\\mathbb R^{n\\times n} 相似，即 B=P−1APB=P^{-1}AP 且 PP 为可逆实矩阵，则 A,BA,B 的特征多项式相同，因而它们的特征值及各特征值的代数重数相同（也包括在复数中考察这些多项式的根）。\n理解与回查。 由 B−tI=P−1(A−tI)PB-tI=P^{-1}(A-tI)P 和行列式乘法得到，教材 §5.2 给出证明。反向不成立；相同特征值与重数并不保证相似，行等价也不保证特征值相同。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors</span>"
     ]
   },
   {
@@ -3261,7 +3470,7 @@
     "text": "§5.3 对角化 / Diagonalization\n\n定理 5：可对角化的充要条件 The Diagonalization Theorem\n\n来源 / Source：教材第5章 定理5 / Textbook Chapter 5, Theorem 5；§5.3。教材原题名。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n}。AA 在实数域可对角化，当且仅当它有 nn 个线性无关的实特征向量。\n更具体地，若 P=[𝐯1⋯𝐯n]P=[\\mathbf v_1\\ \\cdots\\ \\mathbf v_n]，D=diag⁡(λ1,…,λn)D=\\operatorname{diag}(\\lambda_1,\\ldots,\\lambda_n)，则 PP 可逆且 A=PDP−1A=PDP^{-1}，当且仅当各 𝐯j\\mathbf v_j 是对应 λj\\lambda_j 的特征向量且彼此线性无关。DD 上特征值的次序必须与 PP 的列次序相配。\n理解与回查。 比较 APAP 和 PDPD 的第 jj 列即可看到等价关系；教材 §5.3 的完整证明。这里要求足够多的独立特征向量，不要求特征值互异。\n\n\n定理 6：互异特征值保证可对角化 Distinct Eigenvalues and Diagonalizability\n\n来源 / Source：教材第5章 定理6 / Textbook Chapter 5, Theorem 6；§5.3。中英文名为描述性名称。\n\n若 A∈ℝn×nA\\in\\mathbb R^{n\\times n} 有 nn 个互不相同的实特征值，则 AA 在实数域可对角化。\n理解与回查。 由定理2获得 nn 个无关特征向量，再用定理5；教材 §5.3。此条件充分而非必要，例如重复特征值的对角矩阵仍可对角化。若在复数域使用本条，所有 nn 个特征值、特征向量和对角化矩阵均须在该域理解。\n\n\n定理 7：重特征值与可对角化 Eigenspace Dimensions and Diagonalizability\n\n来源 / Source：教材第5章 定理7 / Textbook Chapter 5, Theorem 7；§5.3。中英文名为描述性名称。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n}，λ1,…,λp\\lambda_1,\\ldots,\\lambda_p 为其互不相同的实特征值，EλkE_{\\lambda_k} 为对应实特征空间。\n\n对每个 k=1,…,pk=1,\\ldots,p，dim⁡Eλk\\dim E_{\\lambda_k} 不超过 λk\\lambda_k 的代数重数。\nAA 在实数域可对角化，当且仅当 ∑k=1pdim⁡Eλk=n\\sum_{k=1}^p\\dim E_{\\lambda_k}=n。这又等价于以下两条同时成立：特征多项式在实数域完全分解为一次因子的乘积；每个特征值的几何重数等于其代数重数。\n若 AA 可对角化，从每个 EλkE_{\\lambda_k} 任取一组基 ℬk\\mathcal B_k，把这些基合在一起，就得到 ℝn\\mathbb R^n 的一组由特征向量组成的基。\n\n理解与回查。 重根是否妨碍对角化，要看相应特征空间是否提供足够多的独立向量；不能只数不同特征值。本条采用本节实数语境，完全分裂条件不可省。教材 §5.3 陈述并指向外部教材证明，本汇编未收入该外部证明。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors</span>"
     ]
   },
   {
@@ -3272,7 +3481,7 @@
     "text": "§5.4 线性变换的矩阵 / Matrices of Linear Transformations\n若 ℬ\\mathcal B 是 VV 的有序基，T:V→VT:V\\to V 线性，基矩阵（matrix relative to a basis）[T]ℬ[T]_{\\mathcal B} 由 [T(𝐱)]ℬ=[T]ℬ[𝐱]ℬ[T(\\mathbf x)]_{\\mathcal B}=[T]_{\\mathcal B}[\\mathbf x]_{\\mathcal B} 定义，其第 jj 列是第 jj 个基向量像的坐标。\n\n定理 8：对角矩阵是特征基下的表示 Diagonal Matrix Representation\n\n来源 / Source：教材第5章 定理8 / Textbook Chapter 5, Theorem 8；§5.4。教材原题名。\n\n设 A=PDP−1A=PDP^{-1}，其中 D∈ℝn×nD\\in\\mathbb R^{n\\times n} 为对角矩阵，PP 为可逆实矩阵。若 ℬ\\mathcal B 是 PP 的各列按次序构成的 ℝn\\mathbb R^n 的基，则线性变换 T(𝐱)=A𝐱T(\\mathbf x)=A\\mathbf x 在 ℬ\\mathcal B 下的矩阵就是 DD。\n理解与回查。 对角化是在特征基中描述同一个变换：[T]ℬ=P−1AP=D[T]_{\\mathcal B}=P^{-1}AP=D。教材证明见 §5.4；坐标与换基见第四章定理15。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors</span>"
     ]
   },
   {
@@ -3283,7 +3492,7 @@
     "text": "§5.5 复特征值 / Complex Eigenvalues\n本节 i2=−1i^2=-1，Re⁡𝐯\\operatorname{Re}\\mathbf v、Im⁡𝐯\\operatorname{Im}\\mathbf v 表示复向量逐分量的实部与虚部。矩阵 AA 仍为实矩阵，但特征向量允许在 ℂ2\\mathbb C^2 中。复数基础见教材附录B。\n\n定理 9：复特征值的实二阶块 A Real Block for Complex Eigenvalues\n\n来源 / Source：教材第5章 定理9 / Textbook Chapter 5, Theorem 9；§5.5。中英文名为描述性名称。\n\n设 A∈ℝ2×2A\\in\\mathbb R^{2\\times2} 有非实特征值 λ=a−bi\\lambda=a-bi，其中 a,b∈ℝa,b\\in\\mathbb R、b≠0b\\ne0。令非零向量 𝐯∈ℂ2\\mathbf v\\in\\mathbb C^2 满足 A𝐯=λ𝐯A\\mathbf v=\\lambda\\mathbf v。则\nP=[Re⁡𝐯Im⁡𝐯]P=[\\operatorname{Re}\\mathbf v\\ \\operatorname{Im}\\mathbf v]\n为可逆实矩阵，并且\nA=PCP−1,C=[a−bba].A=PCP^{-1},\\qquad C=\\begin{bmatrix}a&-b\\\\b&a\\end{bmatrix}.\n理解与回查。 复特征方向在实平面中表现为旋转与伸缩的二阶块。CC 的符号与 λ=a−bi\\lambda=a-bi 的选择成对，改用 a+bia+bi 时不能原样保留全部符号。教材 §5.5；AP=PCAP=PC 的核对见 §5.5 Exercise 30。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors</span>"
     ]
   },
   {
@@ -3294,7 +3503,7 @@
     "text": "§5.9 马尔可夫链 / Markov Chains\n概率向量（probability vector）是分量非负、分量和为1的实列向量。这里随机矩阵（stochastic matrix）采用列和为1的约定：P≥0P\\ge0，每列是概率向量。马尔可夫链按 𝐱k+1=P𝐱k\\mathbf x_{k+1}=P\\mathbf x_k 更新。稳态向量（steady-state vector）是满足 P𝐪=𝐪P\\mathbf q=\\mathbf q 的概率向量。\n\n定理 10：随机矩阵具有特征值1 Stochastic Matrices\n\n来源 / Source：教材第5章 定理10 / Textbook Chapter 5, Theorem 10；§5.9。教材原题名。\n\n若 P∈ℝn×nP\\in\\mathbb R^{n\\times n} 是列随机矩阵，则 11 是 PP 的特征值。\n理解与回查。 PTP^T 作用于全1向量得到它自身，且转置保持特征多项式；教材 §5.9 给出证明。这一结论本身尚未保证稳态唯一或每个初始状态都收敛。\n\n\n定理 11：正则随机矩阵的稳态与收敛 Convergence of Regular Markov Chains\n\n来源 / Source：教材第5章 定理11 / Textbook Chapter 5, Theorem 11；§5.9。中英文名为描述性名称。\n\n设 P∈ℝn×nP\\in\\mathbb R^{n\\times n} 是正则随机矩阵（regular stochastic matrix）：PP 列随机，且存在正整数 rr 使 PrP^r 的所有元素严格为正。则存在唯一的稳态概率向量 𝐪\\mathbf q。对任意初始概率向量 𝐱0\\mathbf x_0，若\n𝐱k+1=P𝐱k(k=0,1,2,…),\\mathbf x_{k+1}=P\\mathbf x_k\\quad(k=0,1,2,\\ldots),\n就有 𝐱k=Pk𝐱0→𝐪\\mathbf x_k=P^k\\mathbf x_0\\to\\mathbf q。\n理解与回查。 唯一性包含概率归一化，不能说特征值1的任意特征向量都数值唯一。正则性是这条收敛保证的条件，不能把它删成“所有随机矩阵”。教材 §5.9 陈述并转介马尔可夫链教材证明，本条没有冒充完整收敛证明。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>教材第5章：特征值与特征向量 / Textbook Chapter 5: Eigenvalues and Eigenvectors</span>"
     ]
   },
   {
@@ -3305,7 +3514,7 @@
     "text": "术语与记号 / Terms and Notation\n汇编目录 / Reference contents · §6.1–6.5 使用实坐标空间的标准点积，§6.7 再推广到一般实内积。\n在 ℝn\\mathbb R^n 中，点积（dot product）为 𝐮⋅𝐯=𝐮T𝐯=∑iuivi\\mathbf u\\cdot\\mathbf v=\\mathbf u^T\\mathbf v=\\sum_i u_iv_i；范数（norm）为 ∥𝐮∥=𝐮⋅𝐮\\|\\mathbf u\\|=\\sqrt{\\mathbf u\\cdot\\mathbf u}，距离为 ∥𝐮−𝐯∥\\|\\mathbf u-\\mathbf v\\|。正交（orthogonal）指点积为零。\n正交组中的不同向量两两正交；涉及基或归一化时各向量必须非零。标准正交组（orthonormal set）还要求每个向量长度为1。W⊆ℝnW\\subseteq\\mathbb R^n 的正交补（orthogonal complement）是\nW⟂={𝐳∈ℝn:𝐳⋅𝐰=0 对所有 𝐰∈W}.W^\\perp=\\{\\mathbf z\\in\\mathbb R^n:\\mathbf z\\cdot\\mathbf w=0\\text{ 对所有 }\\mathbf w\\in W\\}.\n正交矩阵（orthogonal matrix）是列标准正交的实方阵，满足 QTQ=QQT=IQ^TQ=QQ^T=I。矩形矩阵即使列标准正交，也不能直接称它为这里的正交矩阵。定义见教材 §§6.1–6.2。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares</span>"
     ]
   },
   {
@@ -3316,7 +3525,7 @@
     "text": "§6.1 点积、长度与正交 / Inner Product, Length, and Orthogonality\n\n定理 1：实点积的运算与正定性 Properties of the Dot Product\n\n来源 / Source：教材第6章 定理1 / Textbook Chapter 6, Theorem 1；§6.1。中英文名为描述性名称。\n\n若 𝐮,𝐯,𝐰∈ℝn\\mathbf u,\\mathbf v,\\mathbf w\\in\\mathbb R^n，c∈ℝc\\in\\mathbb R，则：\n\n𝐮⋅𝐯=𝐯⋅𝐮\\mathbf u\\cdot\\mathbf v=\\mathbf v\\cdot\\mathbf u。\n(𝐮+𝐯)⋅𝐰=𝐮⋅𝐰+𝐯⋅𝐰(\\mathbf u+\\mathbf v)\\cdot\\mathbf w=\\mathbf u\\cdot\\mathbf w+\\mathbf v\\cdot\\mathbf w。\n(c𝐮)⋅𝐯=c(𝐮⋅𝐯)=𝐮⋅(c𝐯)(c\\mathbf u)\\cdot\\mathbf v=c(\\mathbf u\\cdot\\mathbf v)=\\mathbf u\\cdot(c\\mathbf v)。\n𝐮⋅𝐮≥0\\mathbf u\\cdot\\mathbf u\\ge0，且等号成立当且仅当 𝐮=𝟎\\mathbf u=\\mathbf0。\n\n理解与回查。 (d)使点积可以定义长度；以上是实点积公式，不能把不带共轭的转置直接当复内积使用。教材 §6.1，证明指向 §6.1 Exercises 29–30；已用过的行点积可回看。\n\n\n定理 2：勾股等式与正交的等价 The Pythagorean Theorem\n\n来源 / Source：教材第6章 定理2 / Textbook Chapter 6, Theorem 2；§6.1。教材原题名。\n\n对 𝐮,𝐯∈ℝn\\mathbf u,\\mathbf v\\in\\mathbb R^n，\n𝐮⟂𝐯⇔∥𝐮+𝐯∥2=∥𝐮∥2+∥𝐯∥2.\\mathbf u\\perp\\mathbf v\n\\quad\\Longleftrightarrow\\quad\n\\|\\mathbf u+\\mathbf v\\|^2=\\|\\mathbf u\\|^2+\\|\\mathbf v\\|^2.\n理解与回查。 展开左侧范数平方，多出的是 2𝐮⋅𝐯2\\mathbf u\\cdot\\mathbf v；教材 §6.1。零向量与任意向量正交，等价也包括这一情形。\n\n\n定理 3：行列空间的正交补 Orthogonal Complements of Row and Column Spaces\n\n来源 / Source：教材第6章 定理3 / Textbook Chapter 6, Theorem 3；§6.1。中英文名为描述性名称。\n\n若 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，则\n(Row⁡A)⟂=Nul⁡A⊆ℝn,\n(\\operatorname{Row}A)^\\perp=\\operatorname{Nul}A\\subseteq\\mathbb R^n,\n\n(Col⁡A)⟂=Nul⁡(AT)⊆ℝm.\n(\\operatorname{Col}A)^\\perp=\\operatorname{Nul}(A^T)\\subseteq\\mathbb R^m.\n\n理解与回查。 A𝐱=𝟎A\\mathbf x=\\mathbf0 正是 𝐱\\mathbf x 与每一行正交；第二式对 ATA^T 使用同一理由。教材证明见 §6.1。两式所在的环境空间不同，不能交叉取正交补。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares</span>"
     ]
   },
   {
@@ -3327,7 +3536,7 @@
     "text": "§6.2 正交组 / Orthogonal Sets\n\n定理 4：非零正交组线性无关 Independence of Nonzero Orthogonal Vectors\n\n来源 / Source：教材第6章 定理4 / Textbook Chapter 6, Theorem 4；§6.2。中英文名为描述性名称。\n\n若 𝐮1,…,𝐮p∈ℝn\\mathbf u_1,\\ldots,\\mathbf u_p\\in\\mathbb R^n 两两正交，且每个 𝐮j≠𝟎\\mathbf u_j\\ne\\mathbf0，则它们线性无关，因而构成自身张成空间的一组基。\n理解与回查。 把零关系逐个与 𝐮j\\mathbf u_j 点乘，只剩 cj∥𝐮j∥2=0c_j\\|\\mathbf u_j\\|^2=0；非零前提保证可推出 cj=0c_j=0。教材证明见 §6.2。含零的正交组不满足本条无关结论。\n\n\n定理 5：正交基的坐标公式 Coordinates in an Orthogonal Basis\n\n来源 / Source：教材第6章 定理5 / Textbook Chapter 6, Theorem 5；§6.2。中英文名为描述性名称。\n\n若 (𝐮1,…,𝐮p)(\\mathbf u_1,\\ldots,\\mathbf u_p) 是子空间 W⊆ℝnW\\subseteq\\mathbb R^n 的正交基，则每个 𝐲∈W\\mathbf y\\in W 的唯一表示\n𝐲=∑j=1pcj𝐮j\\mathbf y=\\sum_{j=1}^p c_j\\mathbf u_j\n具有系数\ncj=𝐲⋅𝐮j𝐮j⋅𝐮j,j=1,…,p.c_j=\\frac{\\mathbf y\\cdot\\mathbf u_j}{\\mathbf u_j\\cdot\\mathbf u_j},\\qquad j=1,\\ldots,p.\n理解与回查。 正交性让每个系数单独求出，基向量非零保证分母非零。教材证明见 §6.2。若 𝐲∉W\\mathbf y\\notin W，同一公式给投影而非 𝐲\\mathbf y 本身，见定理8。\n\n\n定理 6：标准正交列的矩阵判据 Matrices with Orthonormal Columns\n\n来源 / Source：教材第6章 定理6 / Textbook Chapter 6, Theorem 6；§6.2。中英文名为描述性名称。\n\n设 U∈ℝm×nU\\in\\mathbb R^{m\\times n}。UU 的列向量标准正交，当且仅当\nUTU=In.U^TU=I_n.\n理解与回查。 第 (i,j)(i,j) 元就是第 i,ji,j 列的点积；教材证明见 §6.2。此时必有 n≤mn\\le m；若 n&lt;mn&lt;m，一般 UUT≠ImUU^T\\ne I_m。\n\n\n定理 7：标准正交列保持长度和内积 Isometries with Orthonormal Columns\n\n来源 / Source：教材第6章 定理7 / Textbook Chapter 6, Theorem 7；§6.2。中英文名为描述性名称。\n\n设 U∈ℝm×nU\\in\\mathbb R^{m\\times n} 的列标准正交，𝐱,𝐲∈ℝn\\mathbf x,\\mathbf y\\in\\mathbb R^n。则：\n\n∥U𝐱∥=∥𝐱∥\\|U\\mathbf x\\|=\\|\\mathbf x\\|。\n(U𝐱)⋅(U𝐲)=𝐱⋅𝐲(U\\mathbf x)\\cdot(U\\mathbf y)=\\mathbf x\\cdot\\mathbf y。\nU𝐱⟂U𝐲U\\mathbf x\\perp U\\mathbf y 当且仅当 𝐱⟂𝐲\\mathbf x\\perp\\mathbf y。\n\n理解与回查。 输入和输出可有不同分量数，但长度与内积保持。用 UTU=InU^TU=I_n 即得；教材 §6.2，证明练习为 §6.2 Exercise 33。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares</span>"
     ]
   },
   {
@@ -3338,7 +3547,7 @@
     "text": "§6.3 正交投影 / Orthogonal Projections\n\n定理 8：正交分解及投影公式 The Orthogonal Decomposition Theorem\n\n来源 / Source：教材第6章 定理8 / Textbook Chapter 6, Theorem 8；§6.3。教材原题名。\n\n设 WW 为 ℝn\\mathbb R^n 的子空间。每个 𝐲∈ℝn\\mathbf y\\in\\mathbb R^n 都唯一分解为\n𝐲=𝐲̂+𝐳,𝐲̂∈W,𝐳∈W⟂.\\mathbf y=\\widehat{\\mathbf y}+\\mathbf z,\\qquad\n\\widehat{\\mathbf y}\\in W,\\quad\\mathbf z\\in W^\\perp.\n若 (𝐮1,…,𝐮p)(\\mathbf u_1,\\ldots,\\mathbf u_p) 是 WW 的任意正交基，则\n𝐲̂=∑j=1p𝐲⋅𝐮j𝐮j⋅𝐮j𝐮j,𝐳=𝐲−𝐲̂.\\widehat{\\mathbf y}=\\sum_{j=1}^p\n\\frac{\\mathbf y\\cdot\\mathbf u_j}{\\mathbf u_j\\cdot\\mathbf u_j}\\mathbf u_j,\n\\qquad \\mathbf z=\\mathbf y-\\widehat{\\mathbf y}.\n𝐲̂\\widehat{\\mathbf y} 称为 𝐲\\mathbf y 在 WW 上的正交投影（orthogonal projection），记 proj⁡W𝐲\\operatorname{proj}_W\\mathbf y。若 W={𝟎}W=\\{\\mathbf0\\}，直接取 𝐲̂=𝟎\\widehat{\\mathbf y}=\\mathbf0、𝐳=𝐲\\mathbf z=\\mathbf y。\n理解与回查。 投影由子空间决定，与所选正交基无关。教材 §6.3 证明存在与唯一，并在脚注明确零子空间情形；定理11保证非零子空间能找到正交基。\n\n\n定理 9：正交投影是唯一最佳逼近 The Best Approximation Theorem\n\n来源 / Source：教材第6章 定理9 / Textbook Chapter 6, Theorem 9；§6.3。教材原题名。\n\n设 W⊆ℝnW\\subseteq\\mathbb R^n 是子空间，𝐲∈ℝn\\mathbf y\\in\\mathbb R^n，𝐲̂=proj⁡W𝐲\\widehat{\\mathbf y}=\\operatorname{proj}_W\\mathbf y。对每个 𝐯∈W\\mathbf v\\in W 且 𝐯≠𝐲̂\\mathbf v\\ne\\widehat{\\mathbf y}，有\n∥𝐲−𝐲̂∥&lt;∥𝐲−𝐯∥.\\|\\mathbf y-\\widehat{\\mathbf y}\\|&lt;\\|\\mathbf y-\\mathbf v\\|.\n所以 𝐲̂\\widehat{\\mathbf y} 是 WW 中距 𝐲\\mathbf y 最近的唯一向量。\n理解与回查。 误差分成正交两部分，勾股等式中增加的平方严格为正；教材证明见 §6.3。若 𝐲∈W\\mathbf y\\in W，唯一最近点就是它自身。\n\n\n定理 10：标准正交基的投影矩阵 Projection with an Orthonormal Basis\n\n来源 / Source：教材第6章 定理10 / Textbook Chapter 6, Theorem 10；§6.3。中英文名为描述性名称。\n\n若 (𝐮1,…,𝐮p)(\\mathbf u_1,\\ldots,\\mathbf u_p) 是 W⊆ℝnW\\subseteq\\mathbb R^n 的标准正交基，U=[𝐮1⋯𝐮p]∈ℝn×pU=[\\mathbf u_1\\ \\cdots\\ \\mathbf u_p]\\in\\mathbb R^{n\\times p}，则对任意 𝐲∈ℝn\\mathbf y\\in\\mathbb R^n，\nproj⁡W𝐲=∑j=1p(𝐲⋅𝐮j)𝐮j=UUT𝐲.\\operatorname{proj}_W\\mathbf y\n=\\sum_{j=1}^p(\\mathbf y\\cdot\\mathbf u_j)\\mathbf u_j\n=UU^T\\mathbf y.\n理解与回查。 UTU^T 读出投影系数，UU 把系数组合为向量；教材 §6.3。UTU=IpU^TU=I_p，而 UUTUU^T 是 n×nn\\times n 投影矩阵，只有 W=ℝnW=\\mathbb R^n 时才是全空间恒等。零子空间投影为零；采用空基时可将 UU 理解为 n×0n\\times0 矩阵。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares</span>"
     ]
   },
   {
@@ -3349,7 +3558,7 @@
     "text": "§6.4 正交化与QR分解 / Gram–Schmidt and QR Factorization\n\n定理 11：格拉姆–施密特正交化 The Gram–Schmidt Process\n\n来源 / Source：教材第6章 定理11 / Textbook Chapter 6, Theorem 11；§6.4。教材原题名。\n\n设 (𝐱1,…,𝐱p)(\\mathbf x_1,\\ldots,\\mathbf x_p) 是非零子空间 W⊆ℝnW\\subseteq\\mathbb R^n 的一组基。依次定义\n𝐯1=𝐱1,\\mathbf v_1=\\mathbf x_1,\n𝐯k=𝐱k−∑j=1k−1𝐱k⋅𝐯j𝐯j⋅𝐯j𝐯j,k=2,…,p.\\mathbf v_k=\\mathbf x_k-\\sum_{j=1}^{k-1}\n\\frac{\\mathbf x_k\\cdot\\mathbf v_j}{\\mathbf v_j\\cdot\\mathbf v_j}\\mathbf v_j,\n\\qquad k=2,\\ldots,p.\n则每个 𝐯j≠𝟎\\mathbf v_j\\ne\\mathbf0，(𝐯1,…,𝐯p)(\\mathbf v_1,\\ldots,\\mathbf v_p) 为 WW 的正交基；对每个 k=1,…,pk=1,\\ldots,p，还有\nSpan⁡{𝐯1,…,𝐯k}=Span⁡{𝐱1,…,𝐱k}.\\operatorname{Span}\\{\\mathbf v_1,\\ldots,\\mathbf v_k\\}\n=\\operatorname{Span}\\{\\mathbf x_1,\\ldots,\\mathbf x_k\\}.\n理解与回查。 每步只减去已有方向上的投影，保留一个新方向。输入必须无关，否则可能出现零分母前的零向量；归一化后得到标准正交基。教材 §6.4 给出证明与数值实现的注意事项。\n\n\n定理 12：满列秩的QR分解 The QR Factorization\n\n来源 / Source：教材第6章 定理12 / Textbook Chapter 6, Theorem 12；§6.4。教材原题名。\n\n若 A∈ℝm×nA\\in\\mathbb R^{m\\times n} 的列线性无关（因此 n≤mn\\le m），则存在分解 A=QRA=QR，其中：\n\nQ∈ℝm×nQ\\in\\mathbb R^{m\\times n} 的列构成 Col⁡A\\operatorname{Col}A 的标准正交基；\nR∈ℝn×nR\\in\\mathbb R^{n\\times n} 为可逆上三角矩阵，主对角元严格为正。\n\n理解与回查。 正交化每一步保持前序张成空间，导致 RR 上三角；本条是满列秩的薄QR形式，不宣称秩亏时仍有可逆的 RR。教材证明见 §6.4。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares</span>"
     ]
   },
   {
@@ -3360,7 +3569,7 @@
     "text": "§6.5 最小二乘 / Least-Squares Problems\n对 A∈ℝm×nA\\in\\mathbb R^{m\\times n}、𝐛∈ℝm\\mathbf b\\in\\mathbb R^m，最小二乘解（least-squares solution）是使 ∥𝐛−A𝐱∥\\|\\mathbf b-A\\mathbf x\\| 在所有 𝐱∈ℝn\\mathbf x\\in\\mathbb R^n 中达到最小的 𝐱̂\\widehat{\\mathbf x}。它并不预设原系统相容。残差（residual）为 𝐛−A𝐱̂\\mathbf b-A\\widehat{\\mathbf x}。\n\n定理 13：最小二乘解等于正规方程解 Least-Squares Solutions and Normal Equations\n\n来源 / Source：教材第6章 定理13 / Textbook Chapter 6, Theorem 13；§6.5。中英文名为描述性名称。\n\n对任意 A∈ℝm×nA\\in\\mathbb R^{m\\times n} 和 𝐛∈ℝm\\mathbf b\\in\\mathbb R^m，A𝐱=𝐛A\\mathbf x=\\mathbf b 的最小二乘解集，恰好等于正规方程（normal equations）\nATA𝐱=AT𝐛A^TA\\mathbf x=A^T\\mathbf b\n的解集，而且这个解集非空。\n理解与回查。 投影 𝐛̂=proj⁡Col⁡A𝐛\\widehat{\\mathbf b}=\\operatorname{proj}_{\\operatorname{Col}A}\\mathbf b 永远存在且唯一，但满足 A𝐱̂=𝐛̂A\\widehat{\\mathbf x}=\\widehat{\\mathbf b} 的系数可能不唯一。即使 AA 秩亏、为零或原系统不相容，最小二乘解仍存在。教材 §6.5 的投影与残差正交推导，反向见 §6.5 Exercise 25。\n\n\n定理 14：最小二乘系数唯一性的等价判据 Uniqueness of Least-Squares Coefficients\n\n来源 / Source：教材第6章 定理14 / Textbook Chapter 6, Theorem 14；§6.5。中英文名为描述性名称。\n\n设 A∈ℝm×nA\\in\\mathbb R^{m\\times n}。以下条件等价：\n\n对每个 𝐛∈ℝm\\mathbf b\\in\\mathbb R^m，A𝐱=𝐛A\\mathbf x=\\mathbf b 都有唯一的最小二乘解。\nAA 的列向量线性无关。\nATAA^TA 可逆。\n\n当这些条件成立时，唯一解为\n𝐱̂=(ATA)−1AT𝐛.\\widehat{\\mathbf x}=(A^TA)^{-1}A^T\\mathbf b.\n理解与回查。 这是系数唯一性的判据，不能把它误当成最小二乘解存在的条件。教材 §6.5，证明主要步骤见 §6.5 Exercises 27–29；若 AA 有非零核，给任何一个系数解加上核向量仍是同一投影的系数。\n\n\n定理 15：QR求唯一最小二乘解 Least Squares via QR\n\n来源 / Source：教材第6章 定理15 / Textbook Chapter 6, Theorem 15；§6.5。中英文名为描述性名称。\n\n设 A∈ℝm×nA\\in\\mathbb R^{m\\times n} 的列线性无关，且 A=QRA=QR 为定理12的分解，QQ 为 m×nm\\times n、RR 为可逆 n×nn\\times n 上三角矩阵。对每个 𝐛∈ℝm\\mathbf b\\in\\mathbb R^m，唯一最小二乘解为\n𝐱̂=R−1QT𝐛.\\widehat{\\mathbf x}=R^{-1}Q^T\\mathbf b.\n理解与回查。 先算 QT𝐛Q^T\\mathbf b，再回代求解 R𝐱̂=QT𝐛R\\widehat{\\mathbf x}=Q^T\\mathbf b，通常不显式计算 R−1R^{-1}。教材证明与紧随的数值说明在 §6.5。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares</span>"
     ]
   },
   {
@@ -3371,7 +3580,7 @@
     "text": "§6.7 一般实内积空间 / Real Inner Product Spaces\n实内积（real inner product）⟨𝐮,𝐯⟩\\langle\\mathbf u,\\mathbf v\\rangle 是取实数值、对称、对加法与实数数乘线性且正定的配对：⟨𝐮,𝐮⟩≥0\\langle\\mathbf u,\\mathbf u\\rangle\\ge0，等号当且仅当 𝐮=𝟎\\mathbf u=\\mathbf0。由它定义 ∥𝐮∥=⟨𝐮,𝐮⟩\\|\\mathbf u\\|=\\sqrt{\\langle\\mathbf u,\\mathbf u\\rangle}。完整公理见教材 §6.7。\n它可以是带正权的点积或适当函数空间中的积分内积，不必等于坐标公式 𝐮T𝐯\\mathbf u^T\\mathbf v。下面两条采用这个一般实内积与相应范数；复内积涉及共轭，不在这里无说明地套用前面的转置公式。\n\n定理 16：柯西–施瓦茨不等式 The Cauchy–Schwarz Inequality\n\n来源 / Source：教材第6章 定理16 / Textbook Chapter 6, Theorem 16；§6.7。教材原题名。\n\n在任意实内积空间 VV 中，对所有 𝐮,𝐯∈V\\mathbf u,\\mathbf v\\in V，\n|⟨𝐮,𝐯⟩|≤∥𝐮∥∥𝐯∥.|\\langle\\mathbf u,\\mathbf v\\rangle|\\le\\|\\mathbf u\\|\\,\\|\\mathbf v\\|.\n理解与回查。 内积的大小受两向量长度限制。教材 §6.7 先处理 𝐮=𝟎\\mathbf u=\\mathbf0，再投影到 Span⁡{𝐮}\\operatorname{Span}\\{\\mathbf u\\} 证明；零向量情形不能通过除以其范数处理。\n\n\n定理 17：三角不等式 The Triangle Inequality\n\n来源 / Source：教材第6章 定理17 / Textbook Chapter 6, Theorem 17；§6.7。教材原题名。\n\n在任意实内积空间 VV 中，对所有 𝐮,𝐯∈V\\mathbf u,\\mathbf v\\in V，\n∥𝐮+𝐯∥≤∥𝐮∥+∥𝐯∥.\\|\\mathbf u+\\mathbf v\\|\\le\\|\\mathbf u\\|+\\|\\mathbf v\\|.\n理解与回查。 合向量的长度不超过两段长度之和，函数向量也适用。教材 §6.7 展开范数平方并使用柯西–施瓦茨不等式，再取非负平方根。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>教材第6章：正交性与最小二乘 / Textbook Chapter 6: Orthogonality and Least Squares</span>"
     ]
   },
   {
@@ -3382,7 +3591,7 @@
     "text": "§7.1 对称矩阵的对角化 / Diagonalization of Symmetric Matrices\n汇编目录 / Reference contents · 本页全部矩阵、向量和内积均为实数语境。特征值和特征空间的定义见第五章术语；正交补与标准正交基见第六章术语。\n对称矩阵（symmetric matrix）满足 AT=AA^T=A。正交对角化（orthogonal diagonalization）指 A=PDPTA=PDP^T，其中 PP 为实正交矩阵、DD 为实对角矩阵；此时 P−1=PTP^{-1}=P^T。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第7章：对称矩阵与 SVD / Textbook Chapter 7: Symmetric Matrices and SVD</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>教材第7章：对称矩阵与 SVD / Textbook Chapter 7: Symmetric Matrices and SVD</span>"
     ]
   },
   {
@@ -3393,7 +3602,7 @@
     "text": "定理 1：实对称矩阵的异特征空间正交 Orthogonality of Eigenvectors of a Symmetric Matrix\n\n来源 / Source：教材第7章 定理1 / Textbook Chapter 7, Theorem 1；§7.1。中英文名为描述性名称。\n\n若 A∈ℝn×nA\\in\\mathbb R^{n\\times n} 对称，则对应不同特征值的任意两个特征向量正交。\n理解与回查。 对称性使 (A𝐮)T𝐯=𝐮TA𝐯(A\\mathbf u)^T\\mathbf v=\\mathbf u^TA\\mathbf v，所以 (λ−μ)𝐮T𝐯=0(\\lambda-\\mu)\\mathbf u^T\\mathbf v=0；教材证明见 §7.1。同一个特征空间内的任意两向量不一定正交，可以在其中选择标准正交基。\n\n\n定理 2：实对称与正交可对角化等价 Orthogonal Diagonalization and Symmetry\n\n来源 / Source：教材第7章 定理2 / Textbook Chapter 7, Theorem 2；§7.1。中英文名为描述性名称。\n\n实矩阵 A∈ℝn×nA\\in\\mathbb R^{n\\times n} 可正交对角化，当且仅当 AA 对称。\n理解与回查。 正交对角化比一般可对角化多要求基标准正交。教材 §7.1 直接用转置证明必要性；充分性的完整证明在书中省略，本节给出证明路线与练习指引。\n\n\n定理 3：实对称矩阵谱定理 The Spectral Theorem for Symmetric Matrices\n\n来源 / Source：教材第7章 定理3 / Textbook Chapter 7, Theorem 3；§7.1。教材原题名。\n\n若 A∈ℝn×nA\\in\\mathbb R^{n\\times n} 对称，则：\n\n按代数重数计，AA 有 nn 个实特征值。\n每个特征值的特征空间维数等于它作为特征方程根的重数。\n对应不同特征值的特征空间相互正交。\nAA 可以正交对角化。\n\n理解与回查。 重复特征值不妨碍对称矩阵取得完整标准正交特征基。教材 §7.1 对(a)指向 §5.5 Exercise 28，对(b)指向本节 Exercise 37，(c)即定理1，(d)给 Exercise 38 与第6章补充题34的路线；这些指引不等于书中已展开全部证明。外积形式见本页谱分解补充。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第7章：对称矩阵与 SVD / Textbook Chapter 7: Symmetric Matrices and SVD</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>教材第7章：对称矩阵与 SVD / Textbook Chapter 7: Symmetric Matrices and SVD</span>"
     ]
   },
   {
@@ -3404,7 +3613,7 @@
     "text": "§7.2 二次型 / Quadratic Forms\n实二次型（quadratic form）可写为 Q(𝐱)=𝐱TA𝐱Q(\\mathbf x)=\\mathbf x^TA\\mathbf x，其中取 AA 对称。交叉项 xixjx_ix_j 的系数是 2aij2a_{ij}（i≠ji\\ne j），不是 aija_{ij}。 正定（positive definite）指对所有 𝐱≠𝟎\\mathbf x\\ne\\mathbf0 有 Q(𝐱)&gt;0Q(\\mathbf x)&gt;0；负定（negative definite）用 &lt;0&lt;0；不定（indefinite）指既取正值又取负值。半正定（positive semidefinite）指对所有 𝐱\\mathbf x 有 Q(𝐱)≥0Q(\\mathbf x)\\ge0，半负定相应用 ≤0\\le0。定义见 §7.2。\n\n定理 4：二次型的主轴定理 The Principal Axes Theorem\n\n来源 / Source：教材第7章 定理4 / Textbook Chapter 7, Theorem 4；§7.2。教材原题名。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n} 对称。存在正交换元 𝐱=P𝐲\\mathbf x=P\\mathbf y，其中 PP 为实正交矩阵，使\n𝐱TA𝐱=𝐲TD𝐲=∑j=1nλjyj2,\\mathbf x^TA\\mathbf x=\\mathbf y^TD\\mathbf y\n=\\sum_{j=1}^n\\lambda_j y_j^2,\n其中 D=PTAP=diag⁡(λ1,…,λn)D=P^TAP=\\operatorname{diag}(\\lambda_1,\\ldots,\\lambda_n)。换元后二次型没有交叉项。\n理解与回查。 PP 的列为主轴方向，换坐标保持长度；教材 §7.2 通过正交对角化推导。不要求 AA 可逆，零特征值给零平方项。\n\n\n定理 5：二次型的特征值分类 Quadratic Forms and Eigenvalues\n\n来源 / Source：教材第7章 定理5 / Textbook Chapter 7, Theorem 5；§7.2。教材原题名。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n} 对称。二次型 𝐱TA𝐱\\mathbf x^TA\\mathbf x：\n\n正定，当且仅当 AA 的所有特征值严格为正。\n负定，当且仅当 AA 的所有特征值严格为负。\n不定，当且仅当 AA 同时有正特征值和负特征值。\n\n理解与回查。 用主轴坐标查看平方项符号；教材证明见 §7.2。零特征值会排除正定或负定，但不会单独推出不定；例如全零二次型既半正定又半负定。本框原有分项只有 a–c，半定术语的定义列在上方。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第7章：对称矩阵与 SVD / Textbook Chapter 7: Symmetric Matrices and SVD</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>教材第7章：对称矩阵与 SVD / Textbook Chapter 7: Symmetric Matrices and SVD</span>"
     ]
   },
   {
@@ -3415,7 +3624,7 @@
     "text": "§7.3 约束极值 / Constrained Optimization\n以下特征值按实数大小降序排列，并计入重数：λ1≥⋯≥λn\\lambda_1\\ge\\cdots\\ge\\lambda_n。单位向量满足 𝐱T𝐱=1\\mathbf x^T\\mathbf x=1，此约束保证比较的是方向而不是任意放大的长度。\n\n定理 6：单位球上二次型的最大最小值 Extreme Values on the Unit Sphere\n\n来源 / Source：教材第7章 定理6 / Textbook Chapter 7, Theorem 6；§7.3。中英文名为描述性名称。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n} 对称，n≥1n\\ge1。则\nmax∥𝐱∥=1𝐱TA𝐱=λ1,min∥𝐱∥=1𝐱TA𝐱=λn.\\max_{\\|\\mathbf x\\|=1}\\mathbf x^TA\\mathbf x=\\lambda_1,\n\\qquad \\min_{\\|\\mathbf x\\|=1}\\mathbf x^TA\\mathbf x=\\lambda_n.\n最大值在对应 λ1\\lambda_1 的单位特征向量处取得，最小值在对应 λn\\lambda_n 的单位特征向量处取得。\n理解与回查。 正交坐标下是 ∑jλjyj2\\sum_j\\lambda_j y_j^2，且 ∑jyj2=1\\sum_j y_j^2=1；教材 §7.3 给定义与证明。特征值可为正、零或负，不需正定。\n\n\n定理 7：去除首主轴后的最大值 Maximum on the First Eigenvector Orthogonal Complement\n\n来源 / Source：教材第7章 定理7 / Textbook Chapter 7, Theorem 7；§7.3。中英文名为描述性名称。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n} 对称，n≥2n\\ge2，𝐮1\\mathbf u_1 是最大特征值 λ1\\lambda_1 对应的单位特征向量。在约束\n𝐱T𝐱=1,𝐱T𝐮1=0\\mathbf x^T\\mathbf x=1,\\qquad\\mathbf x^T\\mathbf u_1=0\n下，𝐱TA𝐱\\mathbf x^TA\\mathbf x 的最大值是第二大特征值 λ2\\lambda_2（计重数）。可以选取一个对应 λ2\\lambda_2 且与 𝐮1\\mathbf u_1 正交的单位特征向量 𝐮2\\mathbf u_2，最大值在 𝐱=𝐮2\\mathbf x=\\mathbf u_2 处取得。\n理解与回查。 如果 λ1=λ2\\lambda_1=\\lambda_2，必须在该特征空间内另选与 𝐮1\\mathbf u_1 正交的单位向量；任意同特征值向量不一定满足约束。这是把原框的取到极值说明与约束、相邻正交对角化语境合读后的明确限定。教材 §7.3 给类似定理6的证明思路和例4。\n\n\n定理 8：逐步正交约束的特征值极值 Successive Constrained Maxima\n\n来源 / Source：教材第7章 定理8 / Textbook Chapter 7, Theorem 8；§7.3。中英文名为描述性名称。\n\n设实对称 A∈ℝn×nA\\in\\mathbb R^{n\\times n} 有正交对角化 A=PDPTA=PDP^T，DD 的对角元为按重数排序的 λ1≥⋯≥λn\\lambda_1\\ge\\cdots\\ge\\lambda_n，PP 的列为按同一次序配对的标准正交特征向量 𝐮1,…,𝐮n\\mathbf u_1,\\ldots,\\mathbf u_n。\n对每个 k=2,…,nk=2,\\ldots,n，在约束\n∥𝐱∥=1,𝐱⟂𝐮1,…,𝐮k−1\\|\\mathbf x\\|=1,\\qquad\n\\mathbf x\\perp\\mathbf u_1,\\ldots,\\mathbf u_{k-1}\n下，𝐱TA𝐱\\mathbf x^TA\\mathbf x 的最大值为 λk\\lambda_k，且在 𝐱=𝐮k\\mathbf x=\\mathbf u_k 处取得。\n理解与回查。 约束逐个排除前面的主轴，剩余平方项中最大的系数为 λk\\lambda_k。同一组标准正交特征基必须贯穿全部约束，重根也不例外。教材 §7.3 陈述，省略一般证明。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第7章：对称矩阵与 SVD / Textbook Chapter 7: Symmetric Matrices and SVD</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>教材第7章：对称矩阵与 SVD / Textbook Chapter 7: Symmetric Matrices and SVD</span>"
     ]
   },
   {
@@ -3426,7 +3635,7 @@
     "text": "§7.4 奇异值分解 / Singular Value Decomposition\n设 A∈ℝm×nA\\in\\mathbb R^{m\\times n}。ATAA^TA 是 n×nn\\times n 实对称半正定矩阵。其特征值按重数排列为 λ1≥⋯≥λn≥0\\lambda_1\\ge\\cdots\\ge\\lambda_n\\ge0。教材 §7.4 定义奇异值（singular values）为\nσj=λj,j=1,…,n.\\sigma_j=\\sqrt{\\lambda_j},\\qquad j=1,\\ldots,n.\n计数约定 / Counting convention。 本书按 ATAA^TA 列出 nn 个奇异值，包含零。另一常见约定只列 min⁡(m,n)\\min(m,n) 个；当 n&gt;mn&gt;m，本书列表多出的 n−mn-m 个必为零。两种列表的正奇异值相同，零值个数不能不说明约定就混算。下面沿用本书的 nn 值列表。\n\n定理 9：奇异值与列空间基、秩 Singular Values, Rank, and a Column-Space Basis\n\n来源 / Source：教材第7章 定理9 / Textbook Chapter 7, Theorem 9；§7.4。中英文名为描述性名称。\n\n设 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，(𝐯1,…,𝐯n)(\\mathbf v_1,\\ldots,\\mathbf v_n) 是由 ATAA^TA 的特征向量组成的 ℝn\\mathbb R^n 的标准正交基，并按对应特征值 λ1≥⋯≥λn≥0\\lambda_1\\ge\\cdots\\ge\\lambda_n\\ge0 排列。若 AA 恰有 rr 个非零奇异值，则\nA𝐯1,…,A𝐯rA\\mathbf v_1,\\ldots,A\\mathbf v_r\n构成 Col⁡A\\operatorname{Col}A 的正交基，且 rank⁡A=r\\operatorname{rank}A=r。\n理解与回查。 ∥A𝐯j∥=σj\\|A\\mathbf v_j\\|=\\sigma_j，所以前 rr 个像非零，其余全为零；教材证明见 §7.4。只能对正奇异值使用 A𝐯j/σjA\\mathbf v_j/\\sigma_j。当 r=0r=0 时 A=0A=0、列空间为零子空间；空基惯例下基为空组，按教材措辞则单列维数0。\n\n\n定理 10：奇异值分解的存在 The Singular Value Decomposition\n\n来源 / Source：教材第7章 定理10 / Textbook Chapter 7, Theorem 10；§7.4。教材原题名。\n\n设 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，rank⁡A=r≤min⁡(m,n)\\operatorname{rank}A=r\\le\\min(m,n)，正奇异值为 σ1≥⋯≥σr&gt;0\\sigma_1\\ge\\cdots\\ge\\sigma_r&gt;0。存在实正交矩阵 U∈ℝm×mU\\in\\mathbb R^{m\\times m}、V∈ℝn×nV\\in\\mathbb R^{n\\times n} 和 Σ∈ℝm×n\\Sigma\\in\\mathbb R^{m\\times n}，使\nA=UΣVT.A=U\\Sigma V^T.\n其中 Σ\\Sigma 的第 (j,j)(j,j) 元为 σj\\sigma_j（1≤j≤r1\\le j\\le r），其余元素全为零。也可写作\nΣ=[D000],D=diag⁡(σ1,…,σr).\\Sigma=\\begin{bmatrix}D&0\\\\0&0\\end{bmatrix},\n\\qquad D=\\operatorname{diag}(\\sigma_1,\\ldots,\\sigma_r).\n若 r=mr=m 或 r=nr=n，相应零块可以没有行或列；若 r=0r=0，Σ\\Sigma 就是整个 m×nm\\times n 零矩阵，任意相应尺寸的正交 U,VU,V 都给出零矩阵的分解。\n理解与回查。 这叫奇异值分解（singular value decomposition，SVD）；UU 的列是左奇异向量，VV 的列是右奇异向量。矩形、秩亏与零矩阵都包括在内，UU 和 VV 的阶数通常不同。\n唯一性与构造。 奇异值及其重数由 AA 确定，因子一般不唯一：可同步改变成对向量的符号，重复正奇异值对应的成对基可同步作正交变换，零子空间内也可另选标准正交基。教材 §7.4 用 ATAA^TA 的特征基与补齐正交基证明存在；本节还明确数值计算采用别的方法。因此这一存在性构造不称为通用稳定数值算法。\n\n\n可逆矩阵定理续篇：正交补与奇异值终篇 The Invertible Matrix Theorem (concluded)\n\n来源 / Source：教材第7章 / Chapter 7，§7.4，The Invertible Matrix Theorem (concluded)。教材原题名。\n\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n}。下列每项都等价于 AA 可逆，正交补都在 ℝn\\mathbb R^n 中取：\n\n(Col⁡A)⟂={𝟎}(\\operatorname{Col}A)^\\perp=\\{\\mathbf0\\}。\n(Nul⁡A)⟂=ℝn(\\operatorname{Nul}A)^\\perp=\\mathbb R^n。\nRow⁡A=ℝn\\operatorname{Row}A=\\mathbb R^n。\nAA 有 nn 个非零奇异值。\n\n理解与回查。 最后一阶段使用正交补、行空间与奇异值；教材 §7.4 的四个基本子空间说明支持这些等价。此前的 a–l、m–q、m–q重述与 r各有原书位置，不能把重述当作新条件。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第7章：对称矩阵与 SVD / Textbook Chapter 7: Symmetric Matrices and SVD</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>教材第7章：对称矩阵与 SVD / Textbook Chapter 7: Symmetric Matrices and SVD</span>"
     ]
   },
   {
@@ -3437,7 +3646,7 @@
     "text": "补充结论 / Supplementary Results\n\n实对称矩阵的谱分解 / Spectral Decomposition of a Real Symmetric Matrix\n设 A∈ℝn×nA\\in\\mathbb R^{n\\times n} 对称，(𝐮1,…,𝐮n)(\\mathbf u_1,\\ldots,\\mathbf u_n) 是标准正交特征基，对应实特征值为 λ1,…,λn\\lambda_1,\\ldots,\\lambda_n（计重数）。则\nA=∑j=1nλj𝐮j𝐮jT.A=\\sum_{j=1}^n\\lambda_j\\mathbf u_j\\mathbf u_j^T.\n来源：§7.1 的未编号公式(2)，由正交对角化与列—行展开得到。\n每个 𝐮j𝐮jT\\mathbf u_j\\mathbf u_j^T 是投影到 Span⁡{𝐮j}\\operatorname{Span}\\{\\mathbf u_j\\} 的秩1正交投影矩阵；带系数的 λj𝐮j𝐮jT\\lambda_j\\mathbf u_j\\mathbf u_j^T 在 λj≠0\\lambda_j\\ne0 时秩1，在 λj=0\\lambda_j=0 时秩0，也一般不是投影矩阵。这里补明了原书随后的“每项秩1”说明所需的非零限定。重复特征值下，单个方向的选择可以改变，把同一特征空间的投影项合并后不变。",
     "crumbs": [
       "定理汇编 / Theorem Reference",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>教材第7章：对称矩阵与 SVD / Textbook Chapter 7: Symmetric Matrices and SVD</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>教材第7章：对称矩阵与 SVD / Textbook Chapter 7: Symmetric Matrices and SVD</span>"
     ]
   },
   {
@@ -3447,7 +3656,7 @@
     "section": "",
     "text": "定理汇编术语 / Theorem Reference Terms\n前三部分统一使用下列配对术语；linear system 是 system of linear equations 的简写。\n记号约定：方程用“式（1）”等编号及链接；矩阵的行用 RiR_i，行操作如 R2←R2+2R1R_2\\leftarrow R_2+2R_1；变换用 TT 或明确下标，初等矩阵用 EE 或下标。 线性变换主题说明 Tλ(𝐯)=Eλ𝐯T_\\lambda(\\mathbf{v})=E_\\lambda\\mathbf{v}；规则与表示它的矩阵各有明确含义。 张成、列空间与零空间用含零、加法/数乘封闭逐项检查线性子空间；具体欧氏子空间的基、坐标、维数与秩及四个基本子空间在第二部分继续；一般向量空间和换基在第四部分深化。\n维数在第一部分仅作“独立可选坐标数”的初步理解；正式理论以后学习。每行/每列有主元均指系数矩阵消元所揭示的主元位置。\n独立查阅定义、尺寸、条件和用法：第一部分 · 第二部分 · 第三部分性质。排列等术语只属于独立补充阅读。\n基础复习：方程组与矩阵表示 · 高斯消元法。\n以下配对名称供汇编各页共同使用；定义与条件可沿链接回查。",
     "crumbs": [
-      "<span class='chapter-number'>45</span>  <span class='chapter-title'>中英术语表 / Chinese–English Glossary</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>中英术语表 / Chinese–English Glossary</span>"
     ]
   },
   {
@@ -3457,7 +3666,7 @@
     "section": "",
     "text": "中文\nEnglish\n定义与回查 / Definition\n\n\n\n\n基；坐标向量；线性同构\nbasis; coordinate vector; isomorphism\n向量空间与坐标\n\n\n行空间；秩；零度\nrow space; rank; nullity\n所在空间与维数\n\n\n换基矩阵\nchange-of-coordinates matrix\n换基\n\n\n信号；移位；单位脉冲；线性时不变\nsignal; shift; unit impulse; linear time-invariant\n数字信号\n\n\n差分方程\ndifference equation\n差分方程\n\n\n特征值；特征向量；特征空间\neigenvalue; eigenvector; eigenspace\n特征概念\n\n\n特征多项式；代数重数；几何重数\ncharacteristic polynomial; algebraic multiplicity; geometric multiplicity\n根与维数\n\n\n相似；可对角化\nsimilarity; diagonalizability\n数域与对角化\n\n\n概率向量；随机矩阵；正则随机矩阵\nprobability vector; stochastic matrix; regular stochastic matrix\n马尔可夫链\n\n\n正交；标准正交；正交补；范数\northogonal; orthonormal; orthogonal complement; norm\n正交性\n\n\n正交投影；最佳逼近\northogonal projection; best approximation\n投影\n\n\n格拉姆–施密特过程；QR分解\nGram–Schmidt process; QR factorization\n正交化\n\n\n最小二乘解；正规方程；残差\nleast-squares solution; normal equations; residual\n最小二乘\n\n\n实内积；柯西–施瓦茨不等式\nreal inner product; Cauchy–Schwarz inequality\n一般实内积\n\n\n对称矩阵；谱分解\nsymmetric matrix; spectral decomposition\n对称矩阵\n\n\n二次型；正定；负定；不定；半正定\nquadratic form; positive definite; negative definite; indefinite; positive semidefinite\n二次型\n\n\n奇异值；左/右奇异向量；奇异值分解\nsingular value; left/right singular vector; singular value decomposition\nSVD及列表约定\n\n\n外积；消耗矩阵；最终需求\nouter product; consumption matrix; final demand\n列—行展开；投入产出",
     "crumbs": [
-      "<span class='chapter-number'>45</span>  <span class='chapter-title'>中英术语表 / Chinese–English Glossary</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>中英术语表 / Chinese–English Glossary</span>"
     ]
   },
   {
@@ -3467,7 +3676,17 @@
     "section": "第一部分图示与初等矩阵 / Part 1 Diagrams and Elementary Matrices",
     "text": "第一部分图示与初等矩阵 / Part 1 Diagrams and Elementary Matrices\n\n\n\n中文 / Chinese\nEnglish\n含义与回查 / Meaning and Link\n\n\n\n\n坐标点\ncoordinate point\n用坐标标记的一个点，可代表同坐标的向量\n\n\n位置向量\nposition vector\n从固定原点指向该坐标点的向量；零向量只标原点\n\n\n位移\ndisplacement\n从一点到另一点，等于终点坐标减起点坐标；点与位置箭头约定\n\n\n仿射映射\naffine map\n线性规则之后加一个固定向量；非零平移不线性\n\n\n初等矩阵\nelementary matrix\n对单位矩阵做一次初等行操作所得；定义与三类操作\n\n\n左乘\nleft multiplication\n此处 EAEA 逐列对 AA 应用 EE；维度与理由\n\n\n相反向量、向量减法\nadditive inverse, vector subtraction\n−𝐮=(−1)𝐮-\\mathbf u=(-1)\\mathbf u；𝐮−𝐯=𝐮+(−𝐯)\\mathbf u-\\mathbf v=\\mathbf u+(-\\mathbf v)；运算与八条性质\n\n\n反射、收缩、伸长\nreflection, contraction, expansion\n按指定轴或方向改变坐标；规则与矩阵\n\n\n剪切变换\nshear transformation\n一个坐标加上另一个坐标的固定倍数，后者不变；水平与竖直剪切\n\n\n坐标投影\ncoordinate projection\n例如 (x,y)↦(x,0)(x,y)\\mapsto(x,0)；须指定目标空间；例子与值域\n\n\n叠加原理\nsuperposition principle\n线性规则把组合输入送到像的同系数组合；有限次线性性",
     "crumbs": [
-      "<span class='chapter-number'>45</span>  <span class='chapter-title'>中英术语表 / Chinese–English Glossary</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>中英术语表 / Chinese–English Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "glossary.html#physics-terms",
+    "href": "glossary.html#physics-terms",
+    "title": "中英术语表",
+    "section": "物理联系选读术语 Terms for Optional Physics Connections",
+    "text": "物理联系选读术语 Terms for Optional Physics Connections\n\n\n\n中文 / Chinese\nEnglish\n含义与回查 / Meaning and Link\n\n\n\n\n泡利矩阵\nPauli matrices\n三个二阶矩阵；定义与分量操作\n\n\n对易子、对易\ncommutator, commute\n[A,B]=AB−BA[A,B]=AB-BA；为零时称对易；次序差别\n\n\n整体相位\nglobal phase\n量子态向量整体乘同一单位模复数；本例的整体负号\n\n\n净注入\nnet injection\n外部注入减去外部流出；节点与支路的区别\n\n\n环流\ncirculation\n本模型三条内部支路的流量同时增减而不改变节点平衡；零空间\n\n\n物理可行性\nphysical feasibility\n代数解满足模型额外条件，例如拉力非负；两绳模型",
+    "crumbs": [
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>中英术语表 / Chinese–English Glossary</span>"
     ]
   }
 ]
