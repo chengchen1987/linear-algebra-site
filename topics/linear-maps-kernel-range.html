@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>线性映射、核与值域 – 线性代数 · 学习与复习</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../topics/linear-independence-and-bases.html" rel="next">
+<link href="../topics/vector-spaces-and-subspaces.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0669924a6a5174ef4a224d7e1cb67b62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../assets/course.css">
+<link rel="stylesheet" href="../assets/navigation.css">
+<noscript><style>
+#quarto-sidebar,#quarto-sidebar .collapse{display:block!important;visibility:visible!important;height:auto!important;transform:none!important}
+#quarto-sidebar .chapter-arrow,.quarto-btn-toggle,.quarto-search-button,.sidebar-search{display:none!important}
+@media(max-width:991.98px){#quarto-sidebar{position:static!important;width:auto!important;max-height:none!important;grid-column:page-start/page-end!important}#quarto-header{position:static!important}#quarto-content{padding-top:0!important;display:block!important;padding-inline:24px!important}}
+</style></noscript></head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="课程目录 / Course Contents" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="当前位置 / Current Page"><span class="course-current-label"><span class="nav-zh" lang="zh-CN">线性映射、核与值域</span><span class="nav-en" lang="en">Linear Maps, Kernels and Ranges</span></span></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" aria-hidden="true" tabindex="-1">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="搜索 / Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto course-navigation" aria-label="课程目录 / Course Contents">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../" aria-label="线性代数 · 学习与复习 / Linear Algebra: Learning and Review"><span>线性代数</span><span>学习与复习</span></a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="搜索"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"><div class="course-contents-label"><span class="nav-zh" lang="zh-CN">课程目录</span><span class="nav-en" lang="en">Course Contents</span></div> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">前言</span><span class="nav-en" lang="en">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-1" aria-label="第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">第一部分：方程组与线性变换</span><span class="nav-en" lang="en">Part 1: Linear Systems and Transformations</span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-overview.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">本部分导读</span><span class="nav-en" lang="en">Part Overview</span></a>
+  </div>
+</li>
+          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">方程组与求解</span><span class="nav-en" lang="en">Systems and Elimination</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/linear-systems.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">线性方程组与矩阵表示</span><span class="nav-en" lang="en">Linear Systems and Matrix Representation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/gaussian-elimination.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">高斯消元法</span><span class="nav-en" lang="en">Gaussian Elimination</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">两种几何图像</span><span class="nav-en" lang="en">Two Geometric Pictures</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/row-picture.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">行图像</span><span class="nav-en" lang="en">Row Picture</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/column-picture.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">列图像</span><span class="nav-en" lang="en">Column Picture</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">向量表达与解集结构</span><span class="nav-en" lang="en">Vector Form and Solution Structure</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/vector-and-matrix-equations.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">向量方程与矩阵方程</span><span class="nav-en" lang="en">Vector and Matrix Equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/homogeneous-and-nonhomogeneous-equations.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">齐次与非齐次解集</span><span class="nav-en" lang="en">Homogeneous and Nonhomogeneous Solution Sets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/span-column-and-null-spaces.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">张成、列空间与零空间</span><span class="nav-en" lang="en">Span, Column Space and Null Space</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/05-independence.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">线性无关与表示的唯一性</span><span class="nav-en" lang="en">Linear Independence and Uniqueness of Representation</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">线性变换与消元</span><span class="nav-en" lang="en">Linear Transformations and Elimination</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/06-transformations.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">线性变换与矩阵表示</span><span class="nav-en" lang="en">Linear Transformations and Matrix Representations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/elementary-row-matrices.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">初等行变换的矩阵</span><span class="nav-en" lang="en">Matrices for Elementary Row Operations</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-review.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">综合复习</span><span class="nav-en" lang="en">Part Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-01-applications.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">应用选读</span><span class="nav-en" lang="en">Applications</span></a>
+  </div>
+</li>
+      </ul></li></ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-2" aria-label="第二部分：矩阵代数 / Part 2: Matrix Algebra；草稿 / Draft"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">第二部分：矩阵代数</span><span class="nav-en" lang="en">Part 2: Matrix Algebra</span><span class="nav-status"><span class="nav-zh" lang="zh-CN">草稿</span><span class="nav-en" lang="en">Draft</span></span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-overview.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">本部分导读</span><span class="nav-en" lang="en">Part Overview</span></a>
+  </div>
+</li>
+          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">矩阵基本运算</span><span class="nav-en" lang="en">Basic Matrix Operations</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/07-matrix-products.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">矩阵基本运算</span><span class="nav-en" lang="en">Basic Matrix Operations</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">逆矩阵与可逆性</span><span class="nav-en" lang="en">Inverse Matrices and Invertibility</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/08-inverses.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">逆矩阵与逆变换</span><span class="nav-en" lang="en">Inverse Matrices and Inverse Transformations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/elementary-matrices-and-inverses.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">初等矩阵与矩阵求逆</span><span class="nav-en" lang="en">Elementary Matrices and Computing Inverses</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/09-invertibility-blocks.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">可逆矩阵定理</span><span class="nav-en" lang="en">The Invertible Matrix Theorem</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">分块矩阵</span><span class="nav-en" lang="en">Partitioned Matrices</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/partitioned-matrices.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">分块表示与运算</span><span class="nav-en" lang="en">Block Representation and Operations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/inverses-of-partitioned-matrices.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">分块矩阵的逆</span><span class="nav-en" lang="en">Inverses of Partitioned Matrices</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">矩阵分解</span><span class="nav-en" lang="en">Matrix Factorizations</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">独立关系与子空间</span><span class="nav-en" lang="en">Independence and Subspaces</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/matrix-rank-factorization.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">秩与秩分解</span><span class="nav-en" lang="en">Rank and Rank Factorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/four-fundamental-subspaces.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">四个基本子空间</span><span class="nav-en" lang="en">Four Fundamental Subspaces</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-review.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">综合复习</span><span class="nav-en" lang="en">Part Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-02-input-output.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">投入产出模型</span><span class="nav-en" lang="en">Input–Output Models</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">物理联系（选读）</span><span class="nav-en" lang="en">Physics Connections (Optional)</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/pauli-matrices-and-commutators.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">泡利矩阵与对易子（选读）</span><span class="nav-en" lang="en">Pauli Matrices and Commutators (Optional)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/force-balance-revisited.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">再看两绳力平衡（选读）</span><span class="nav-en" lang="en">Two-Rope Force Balance Revisited (Optional)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/flow-conservation-revisited.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">再看流量守恒（选读）</span><span class="nav-en" lang="en">Flow Conservation Revisited (Optional)</span></a>
+  </div>
+</li>
+      </ul></li></ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-3" aria-label="第三部分：行列式 / Part 3: Determinants；草稿 / Draft"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">第三部分：行列式</span><span class="nav-en" lang="en">Part 3: Determinants</span><span class="nav-status"><span class="nav-zh" lang="zh-CN">草稿</span><span class="nav-en" lang="en">Draft</span></span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-overview.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">本部分导读</span><span class="nav-en" lang="en">Part Overview</span></a>
+  </div>
+</li>
+          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">学习主题</span><span class="nav-en" lang="en">Core Topics</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/11-determinants.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">行列式的定义与展开</span><span class="nav-en" lang="en">Defining and Expanding Determinants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/12-determinants-properties.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">消元、行列式性质与可逆性</span><span class="nav-en" lang="en">Elimination, Determinant Properties and Invertibility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/13-cramer-adjugate.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">解方程与古典伴随矩阵</span><span class="nav-en" lang="en">Solving Systems and the Classical Adjugate</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lessons/14-determinants-geometry.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">几何意义与前三部分贯通</span><span class="nav-en" lang="en">Geometric Meaning and Connections across Parts 1–3</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与拓展</span><span class="nav-en" lang="en">Review and Further Reading</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-other-definitions.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">行列式的其他定义（选读）</span><span class="nav-en" lang="en">Other Definitions of the Determinant (Optional)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-03-review.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">前三部分综合复习</span><span class="nav-en" lang="en">Parts 1–3 Review</span></a>
+  </div>
+</li>
+      </ul></li></ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section course-chapter current-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" type="button" aria-controls="quarto-sidebar-section-4" aria-label="第四部分：向量空间 / Part 4: Vector Spaces；草稿 / Draft"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">第四部分：向量空间</span><span class="nav-en" lang="en">Part 4: Vector Spaces</span><span class="nav-status"><span class="nav-zh" lang="zh-CN">草稿</span><span class="nav-en" lang="en">Draft</span></span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-04-overview.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">本部分导读</span><span class="nav-en" lang="en">Part Overview</span></a>
+  </div>
+</li>
+          <li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">核心主题</span><span class="nav-en" lang="en">Core Topics</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/vector-spaces-and-subspaces.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">向量空间与子空间</span><span class="nav-en" lang="en">Vector Spaces and Subspaces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/linear-maps-kernel-range.html" class="sidebar-item-text sidebar-link active" aria-current="page"><span class="nav-zh" lang="zh-CN">线性映射、核与值域</span><span class="nav-en" lang="en">Linear Maps, Kernels and Ranges</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/linear-independence-and-bases.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">线性无关与基</span><span class="nav-en" lang="en">Linear Independence and Bases</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/coordinates-and-isomorphisms.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">坐标与同构</span><span class="nav-en" lang="en">Coordinates and Isomorphisms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/dimension-rank-invertibility.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">维数、秩与可逆性</span><span class="nav-en" lang="en">Dimension, Rank and Invertibility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/change-of-basis.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">换基与坐标变换</span><span class="nav-en" lang="en">Change of Basis and Coordinate Changes</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">应用阅读</span><span class="nav-en" lang="en">Application Readings</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/digital-signals.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">数字信号：向量空间与线性处理</span><span class="nav-en" lang="en">Digital Signals: Vector Spaces and Linear Processing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topics/difference-equations.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">差分方程：解空间与初值</span><span class="nav-en" lang="en">Difference Equations: Solution Spaces and Initial Values</span></a>
+  </div>
+</li>
+          </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">复习与联系</span><span class="nav-en" lang="en">Review and Connections</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-04-reference.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">知识与术语速查</span><span class="nav-en" lang="en">Concepts and Terminology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapter-04-review.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">综合复习</span><span class="nav-en" lang="en">Review and Connections</span></a>
+  </div>
+</li>
+      </ul></li></ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-5" aria-label="定理汇编 / Theorem Reference"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">定理汇编</span><span class="nav-en" lang="en">Theorem Reference</span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/index.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">汇编入口</span><span class="nav-en" lang="en">Reference Contents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-01.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">教材第1章：方程组与线性变换</span><span class="nav-en" lang="en">Textbook Chapter 1: Linear Systems and Transformations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-02.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">教材第2章：矩阵代数</span><span class="nav-en" lang="en">Textbook Chapter 2: Matrix Algebra</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-03.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">教材第3章：行列式</span><span class="nav-en" lang="en">Textbook Chapter 3: Determinants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-04.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">教材第4章：向量空间</span><span class="nav-en" lang="en">Textbook Chapter 4: Vector Spaces</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-05.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">教材第5章：特征值与特征向量</span><span class="nav-en" lang="en">Textbook Chapter 5: Eigenvalues and Eigenvectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-06.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">教材第6章：正交性与最小二乘</span><span class="nav-en" lang="en">Textbook Chapter 6: Orthogonality and Least Squares</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theorems/chapter-07.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">教材第7章：对称矩阵与 SVD</span><span class="nav-en" lang="en">Textbook Chapter 7: Symmetric Matrices and SVD</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">中英术语表</span><span class="nav-en" lang="en">Chinese–English Glossary</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" aria-label="本页目录 / On This Page">
+    <h2 id="toc-title"><span class="nav-zh" lang="zh-CN">本页目录</span><span class="nav-en" lang="en">On This Page</span></h2>
+   
+  <ul class="collapse">
+  <li><a href="#matrix-spaces" id="toc-matrix-spaces" class="nav-link active" data-scroll-target="#matrix-spaces">从矩阵的三个空间出发 <span class="heading-en">Starting with Three Matrix Subspaces</span></a></li>
+  <li><a href="#linearity" id="toc-linearity" class="nav-link" data-scroll-target="#linearity">一般空间之间的线性映射 <span class="heading-en">Linear Maps between General Spaces</span></a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">存在、唯一与全部解 <span class="heading-en">Existence, Uniqueness and All Solutions</span></a></li>
+  <li><a href="#derivative" id="toc-derivative" class="nav-link" data-scroll-target="#derivative">例：多项式求导 <span class="heading-en">Example: Differentiating Polynomials</span></a></li>
+  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">练习与反馈 <span class="heading-en">Practice and Feedback</span></a></li>
+  <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">小结与下一步 <span class="heading-en">Summary and Next Step</span></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">线性映射、核与值域</span></h1>
+<p class="subtitle lead">Linear Maps, Kernels and Ranges</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>向量的外观可以改变，保持线性组合的运算仍值得单独研究。把多项式变成导数，就是一个不以数字列为输入的例子。先回看矩阵的三个空间，再把共同理由推广到一般空间。</p>
+<section id="matrix-spaces" class="level2">
+<h2 class="anchored" data-anchor-id="matrix-spaces">从矩阵的三个空间出发 <span class="heading-en">Starting with Three Matrix Subspaces</span></h2>
+<p>对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>，写 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">[</mo><msub><mi>𝐚</mi><mn>1</mn></msub><mspace width="0.222em"></mspace><mi>⋯</mi><mspace width="0.222em"></mspace><msub><mi>𝐚</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">A=[\mathbf a_1\ \cdots\ \mathbf a_n]</annotation></semantics></math>。</p>
+<ul>
+<li><strong>零空间（null space）</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>𝐱</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>:</mo><mi>A</mi><mi>𝐱</mi><mo>=</mo><mn>𝟎</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A=\{\mathbf x\in\mathbb R^n:A\mathbf x=\mathbf0\}</annotation></semantics></math>，由输入必须满足的条件描述。</li>
+<li><strong>列空间（column space）</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mrow><mi mathvariant="normal">Span</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>𝐚</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>𝐚</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">}</mo><mo>⊆</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">\operatorname{Col}A=\operatorname{Span}\{\mathbf a_1,\ldots,\mathbf a_n\}\subseteq\mathbb R^m</annotation></semantics></math>，由生成方式描述，也等于所有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi></mrow><annotation encoding="application/x-tex">A\mathbf x</annotation></semantics></math> 的集合。</li>
+<li><strong>行空间（row space）</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Row</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>A</mi><mi>𝖳</mi></msup><mo stretchy="false" form="postfix">)</mo><mo>⊆</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\operatorname{Row}A=\operatorname{Col}(A^{\mathsf T})\subseteq\mathbb R^n</annotation></semantics></math>，把各行转写为列后取张成。</li>
+</ul>
+<div id="lay6-ch04-thm02" class="course-theorem">
+<p><strong>教材§4.2，定理2 / Textbook §4.2, Theorem 2</strong></p>
+<p>这里 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>𝐱</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>:</mo><mi>A</mi><mi>𝐱</mi><mo>=</mo><mn>𝟎</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A=\{\mathbf x\in\mathbb R^n:A\mathbf x=\mathbf0\}</annotation></semantics></math>。</p>
+<p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A</annotation></semantics></math> 是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 的子空间。等价地，一个含 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个未知数的实齐次线性方程组的解集是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 的子空间。</p>
+</div>
+<div id="lay6-ch04-thm03" class="course-theorem">
+<p><strong>教材§4.2，定理3 / Textbook §4.2, Theorem 3</strong></p>
+<p>若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Col}A</annotation></semantics></math> 是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>m</mi></msup><annotation encoding="application/x-tex">\mathbb R^m</annotation></semantics></math> 的子空间。</p>
+</div>
+<p>零空间的理由是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mn>𝟎</mn><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">A\mathbf0=\mathbf0</annotation></semantics></math>，且零输出的输入相加、数乘后仍给零输出；列空间和行空间则直接应用<a href="../topics/vector-spaces-and-subspaces.html#span">张成是子空间</a>。定理2也是教材§2.8定理12的重述。具体证明和计算回查<a href="../topics/span-column-and-null-spaces.html#null-space">零空间</a>、<a href="../topics/span-column-and-null-spaces.html#column-space">列空间</a>、<a href="../topics/matrix-rank-factorization.html#row-space">行空间</a>；<a href="../theorems/chapter-04.html#sec-4-2">汇编定理2–3</a>。</p>
+<p>判断一个给定 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐮</mi><annotation encoding="application/x-tex">\mathbf u</annotation></semantics></math> 是否在零空间，只需算 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐮</mi></mrow><annotation encoding="application/x-tex">A\mathbf u</annotation></semantics></math>；求整个零空间的一组基则需要求全部齐次解。判断 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐛</mi><annotation encoding="application/x-tex">\mathbf b</annotation></semantics></math> 是否在列空间，要查 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math> 是否相容；它又不同于寻找整个列空间的基。先区分问题，再选算法。</p>
+</section>
+<section id="linearity" class="level2">
+<h2 class="anchored" data-anchor-id="linearity">一般空间之间的线性映射 <span class="heading-en">Linear Maps between General Spaces</span></h2>
+<p>设 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>,</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">V,W</annotation></semantics></math> 为实向量空间。映射 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>:</mo><mi>V</mi><mo>→</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">T:V\to W</annotation></semantics></math> 给每个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐯</mi><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">\mathbf v\in V</annotation></semantics></math> 指定唯一的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>𝐯</mi><mo>∈</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">T\mathbf v\in W</annotation></semantics></math>。若对所有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐮</mi><mo>,</mo><mi>𝐯</mi><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">\mathbf u,\mathbf v\in V</annotation></semantics></math> 和 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">c\in\mathbb R</annotation></semantics></math>， <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐮</mi><mo>+</mo><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>T</mi><mi>𝐮</mi><mo>+</mo><mi>T</mi><mi>𝐯</mi><mo>,</mo><mspace width="2.0em"></mspace><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>c</mi><mi>T</mi><mi>𝐯</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">T(\mathbf u+\mathbf v)=T\mathbf u+T\mathbf v,\qquad T(c\mathbf v)=cT\mathbf v,</annotation></semantics></math> 则称 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math> 为<strong>线性映射（linear map）</strong>，也称线性变换（linear transformation）。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> 是定义域，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math> 是陪域；值域可能只是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math> 的一部分。由定义，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><msub><mn>𝟎</mn><mi>V</mi></msub><mo>=</mo><msub><mn>𝟎</mn><mi>W</mi></msub></mrow><annotation encoding="application/x-tex">T\mathbf0_V=\mathbf0_W</annotation></semantics></math>，并保持所有有限线性组合。</p>
+<p>定义<strong>核（kernel）</strong>和<strong>值域（range，也称 image）</strong>： <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo></mrow><mi>T</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>𝐯</mi><mo>∈</mo><mi>V</mi><mo>:</mo><mi>T</mi><mi>𝐯</mi><mo>=</mo><msub><mn>𝟎</mn><mi>W</mi></msub><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">\ker T=\{\mathbf v\in V:T\mathbf v=\mathbf0_W\},</annotation></semantics></math> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">range</mi><mo>⁡</mo></mrow><mi>T</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>T</mi><mi>𝐯</mi><mo>:</mo><mi>𝐯</mi><mo>∈</mo><mi>V</mi><mo stretchy="false" form="postfix">}</mo><mo>⊆</mo><mi>W</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\operatorname{range}T=\{T\mathbf v:\mathbf v\in V\}\subseteq W.</annotation></semantics></math> 核在输入空间里，值域在输出空间里。对矩阵映射 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>𝐱</mi><mo>=</mo><mi>A</mi><mi>𝐱</mi></mrow><annotation encoding="application/x-tex">T\mathbf x=A\mathbf x</annotation></semantics></math>，二者分别就是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A</annotation></semantics></math> 和 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Col}A</annotation></semantics></math>。行空间则属于选定矩阵的描述；没有选定基和矩阵时，不为任意抽象映射另定义一个无基依赖的“行空间”。</p>
+<p><strong>两者都是子空间（教材§4.2未编号结论）。</strong> 核含零；若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>𝐮</mi><mo>=</mo><mi>T</mi><mi>𝐯</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">T\mathbf u=T\mathbf v=\mathbf0</annotation></semantics></math>，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐮</mi><mo>+</mo><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">T(\mathbf u+\mathbf v)=\mathbf0</annotation></semantics></math> 且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mi>𝐮</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">T(c\mathbf u)=\mathbf0</annotation></semantics></math>。值域含 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mn>𝟎</mn><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">T\mathbf0=\mathbf0</annotation></semantics></math>；两个像 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>𝐮</mi><mo>,</mo><mi>T</mi><mi>𝐯</mi></mrow><annotation encoding="application/x-tex">T\mathbf u,T\mathbf v</annotation></semantics></math> 的和为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐮</mi><mo>+</mo><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(\mathbf u+\mathbf v)</annotation></semantics></math>，数乘为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mi>𝐮</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T(c\mathbf u)</annotation></semantics></math>，也在值域中。这给出了两个子空间判据的完整检查。</p>
+</section>
+<section id="solutions" class="level2">
+<h2 class="anchored" data-anchor-id="solutions">存在、唯一与全部解 <span class="heading-en">Existence, Uniqueness and All Solutions</span></h2>
+<p>对于方程 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>𝐯</mi><mo>=</mo><mi>𝐰</mi></mrow><annotation encoding="application/x-tex">T\mathbf v=\mathbf w</annotation></semantics></math>，要区分以下问题：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>问题 / Question</th>
+<th>准确条件 / Exact condition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>给定这个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐰</mi><mo>∈</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">\mathbf w\in W</annotation></semantics></math>，有没有解？</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐰</mi><mo>∈</mo><mrow><mi mathvariant="normal">range</mi><mo>⁡</mo></mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">\mathbf w\in\operatorname{range}T</annotation></semantics></math></td>
+</tr>
+<tr class="even">
+<td>对每个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐰</mi><mo>∈</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">\mathbf w\in W</annotation></semantics></math>，都有解吗？</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">range</mi><mo>⁡</mo></mrow><mi>T</mi><mo>=</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">\operatorname{range}T=W</annotation></semantics></math>，即满射（surjective）</td>
+</tr>
+<tr class="odd">
+<td>相容时，解是否唯一？</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo></mrow><mi>T</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><msub><mn>𝟎</mn><mi>V</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\ker T=\{\mathbf0_V\}</annotation></semantics></math>，即单射（injective）</td>
+</tr>
+<tr class="even">
+<td>对每个目标都有且只有一个解吗？</td>
+<td>同时单射且满射</td>
+</tr>
+</tbody>
+</table>
+<p>单射是指相同输出只能来自相同输入。若核仅含零，由 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>𝐮</mi><mo>=</mo><mi>T</mi><mi>𝐯</mi></mrow><annotation encoding="application/x-tex">T\mathbf u=T\mathbf v</annotation></semantics></math> 得 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐮</mi><mo>−</mo><mi>𝐯</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">T(\mathbf u-\mathbf v)=\mathbf0</annotation></semantics></math>，故 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐮</mi><mo>=</mo><mi>𝐯</mi></mrow><annotation encoding="application/x-tex">\mathbf u=\mathbf v</annotation></semantics></math>。反过来，若单射，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>𝐯</mi><mo>=</mo><mi>T</mi><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">T\mathbf v=T\mathbf0</annotation></semantics></math> 强制 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐯</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf v=\mathbf0</annotation></semantics></math>。这将<a href="../lessons/06-transformations.html#injective-proof">第一部分的零输出判据</a>推广到一般空间。</p>
+<p>若已找到一个特解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>𝐯</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\mathbf v_p</annotation></semantics></math>，则全部解恰为 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐯</mi><mi>p</mi></msub><mo>+</mo><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo></mrow><mi>T</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><msub><mi>𝐯</mi><mi>p</mi></msub><mo>+</mo><mi>𝐡</mi><mo>:</mo><mi>𝐡</mi><mo>∈</mo><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo></mrow><mi>T</mi><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf v_p+\ker T=\{\mathbf v_p+\mathbf h:\mathbf h\in\ker T\}.</annotation></semantics></math> <strong>两个方向都要检查：</strong> 核中任意 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐡</mi><annotation encoding="application/x-tex">\mathbf h</annotation></semantics></math> 满足 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>𝐯</mi><mi>p</mi></msub><mo>+</mo><mi>𝐡</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>𝐰</mi></mrow><annotation encoding="application/x-tex">T(\mathbf v_p+\mathbf h)=\mathbf w</annotation></semantics></math>；任意解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐯</mi><annotation encoding="application/x-tex">\mathbf v</annotation></semantics></math> 又满足 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>𝐯</mi><mo>−</mo><msub><mi>𝐯</mi><mi>p</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>𝐰</mi><mo>−</mo><mi>𝐰</mi><mo>=</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">T(\mathbf v-\mathbf v_p)=\mathbf w-\mathbf w=\mathbf0</annotation></semantics></math>，所以没有漏解。若核有非零 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐡</mi><annotation encoding="application/x-tex">\mathbf h</annotation></semantics></math>，则每个非空解集都有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐯</mi><mi>p</mi></msub><mo>+</mo><mi>t</mi><mi>𝐡</mi></mrow><annotation encoding="application/x-tex">\mathbf v_p+t\mathbf h</annotation></semantics></math> 这一族不同解。若无解，不能凭空选择特解。</p>
+<p>当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐰</mi><mo>≠</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf w\ne\mathbf0</annotation></semantics></math> 时，非空解集不含零输入，<strong>一定不是</strong>子空间；它是核的平移。这与<a href="../topics/homogeneous-and-nonhomogeneous-equations.html#all-solutions">齐次/非齐次解集的双向证明</a>是同一结构。</p>
+</section>
+<section id="derivative" class="level2">
+<h2 class="anchored" data-anchor-id="derivative">例：多项式求导 <span class="heading-en">Example: Differentiating Polynomials</span></h2>
+<p>取 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>:</mo><msub><mi>P</mi><mn>2</mn></msub><mo>→</mo><msub><mi>P</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">D:P_2\to P_1</annotation></semantics></math>，定义 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>𝐩</mi><mo>=</mo><msup><mi>𝐩</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">D\mathbf p=\mathbf p'</annotation></semantics></math>。已知微积分中的和与常数倍求导法则保证 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math> 线性。对 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐩</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>t</mi><mo>+</mo><mi>c</mi><msup><mi>t</mi><mn>2</mn></msup><mo>,</mo><mspace width="2.0em"></mspace><mi>D</mi><mi>𝐩</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>b</mi><mo>+</mo><mn>2</mn><mi>c</mi><mi>t</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">\mathbf p(t)=a+bt+ct^2,\qquad D\mathbf p(t)=b+2ct,</annotation></semantics></math> 导数恒为零当且仅当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mi>c</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b=c=0</annotation></semantics></math>，所以 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo></mrow><mi>D</mi><mo>=</mo><mrow><mi mathvariant="normal">Span</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">{</mo><mn>1</mn><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">\ker D=\operatorname{Span}\{1\}.</annotation></semantics></math> 任意目标 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐪</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>u</mi><mo>+</mo><mi>v</mi><mi>t</mi><mo>∈</mo><msub><mi>P</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\mathbf q(t)=u+vt\in P_1</annotation></semantics></math> 都有原像 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐩</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>u</mi><mi>t</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>v</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\mathbf p(t)=ut+(v/2)t^2</annotation></semantics></math>，故 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">range</mi><mo>⁡</mo></mrow><mi>D</mi><mo>=</mo><msub><mi>P</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\operatorname{range}D=P_1</annotation></semantics></math>。这证明了对<strong>每个</strong>目标的存在性；常数项可任取，故没有唯一性。</p>
+<p>例如 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>𝐩</mi><mo>=</mo><mn>2</mn><mo>+</mo><mn>6</mn><mi>t</mi></mrow><annotation encoding="application/x-tex">D\mathbf p=2+6t</annotation></semantics></math> 的一个特解为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝐩</mi><mi>p</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mi>t</mi><mo>+</mo><mn>3</mn><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\mathbf p_p(t)=2t+3t^2</annotation></semantics></math>，全部解为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mn>2</mn><mi>t</mi><mo>+</mo><mn>3</mn><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a+2t+3t^2</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">a\in\mathbb R</annotation></semantics></math>。这些多项式组成核的平移，而非子空间。我们只是比较多项式系数，并未把多项式直接放进实数矩阵进行消元；系统的坐标算法将在<a href="../topics/coordinates-and-isomorphisms.html#polynomial-calculation">坐标与同构</a>建立。</p>
+</section>
+<section id="practice" class="level2">
+<h2 class="anchored" data-anchor-id="practice">练习与反馈 <span class="heading-en">Practice and Feedback</span></h2>
+<p>定义 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>:</mo><msub><mi>P</mi><mn>2</mn></msub><mo>→</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">E:P_2\to\mathbb R</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi>𝐩</mi><mo>=</mo><mi>𝐩</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E\mathbf p=\mathbf p(0)</annotation></semantics></math>。证明线性，求核和值域，判断 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi>𝐩</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">E\mathbf p=3</annotation></semantics></math> 是否有唯一解，并写出全部解。再比较 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>𝐩</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">D\mathbf p=3</annotation></semantics></math> 的全部解。</p>
+<details class="review-answer"><summary>提示 / Hint</summary>
+<p>将 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐩</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>t</mi><mo>+</mo><mi>c</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\mathbf p(t)=a+bt+ct^2</annotation></semantics></math> 代入两个规则。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math> 取函数值，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math> 取导数，输出空间也不同。</p>
+</details>
+<details class="review-answer"><summary>完整答案与反馈 / Full Answer and Feedback</summary>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>𝐩</mi><mo>+</mo><mi>𝐪</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>𝐩</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>𝐪</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\mathbf p+\mathbf q)(0)=\mathbf p(0)+\mathbf q(0)</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mi>𝐩</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>c</mi><mi>𝐩</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(c\mathbf p)(0)=c\mathbf p(0)</annotation></semantics></math>，故 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math> 线性。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi>𝐩</mi><mo>=</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">E\mathbf p=a</annotation></semantics></math>，所以 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo></mrow><mi>E</mi><mo>=</mo><mrow><mi mathvariant="normal">Span</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">{</mo><mi>t</mi><mo>,</mo><msup><mi>t</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\ker E=\operatorname{Span}\{t,t^2\}</annotation></semantics></math>；每个实数都可由常数多项式达到，值域为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℝ</mi><annotation encoding="application/x-tex">\mathbb R</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi>𝐩</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">E\mathbf p=3</annotation></semantics></math> 的全部解为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>+</mo><mi>b</mi><mi>t</mi><mo>+</mo><mi>c</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">3+bt+ct^2</annotation></semantics></math>，不唯一，也不是子空间。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>𝐩</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">D\mathbf p=3</annotation></semantics></math> 的全部解是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mn>3</mn><mi>t</mi></mrow><annotation encoding="application/x-tex">a+3t</annotation></semantics></math>；此处目标是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mn>1</mn></msub><annotation encoding="application/x-tex">P_1</annotation></semantics></math> 中的常数多项式，核为常数多项式空间。两个问题不能因为都出现数字3就混为一谈。</p>
+</details>
+</section>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">小结与下一步 <span class="heading-en">Summary and Next Step</span></h2>
+<p>值域控制能达到的目标，核控制同一目标的输入差异。要有效描述这些空间，需要找到既能生成所有向量、又没有冗余的一组向量。</p>
+<p><a href="../topics/vector-spaces-and-subspaces.html">上一主题：向量空间与子空间 / Previous: Vector Spaces and Subspaces</a> · <a href="../topics/linear-independence-and-bases.html">下一主题：线性无关与基 / Next: Linear Independence and Bases</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../topics/vector-spaces-and-subspaces.html" class="pagination-link" aria-label="上一页 / Previous: 向量空间与子空间 / Vector Spaces and Subspaces">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="nav-zh" lang="zh-CN">向量空间与子空间</span><span class="nav-en" lang="en">Vector Spaces and Subspaces</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../topics/linear-independence-and-bases.html" class="pagination-link" aria-label="下一页 / Next: 线性无关与基 / Linear Independence and Bases">
+        <span class="nav-page-text"><span class="nav-zh" lang="zh-CN">线性无关与基</span><span class="nav-en" lang="en">Linear Independence and Bases</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script src="../assets/math-layout.js"></script>
+<script src="../assets/navigation.js"></script>
+
+
+
+
+</body></html>

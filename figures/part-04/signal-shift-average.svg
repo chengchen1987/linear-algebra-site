@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="690" viewBox="0 0 720 690" role="img" aria-labelledby="title"><title id="title">离散输入、右移和两项平均 / Discrete input, right shift and two-term average</title>
+<rect width="100%" height="100%" fill="#fff"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 Z" fill="context-stroke"/></marker></defs>
+<g font-family="sans-serif" font-size="20" fill="#173846">
+<text x="30" y="30" font-size="22">输入 / Input y</text>
+<line x1="70" y1="166" x2="666" y2="166" stroke="#82969e" stroke-width="1" marker-end="url(#arrow)"/>
+<text x="674" y="172" >k</text>
+<line x1="105" y1="166" x2="105" y2="166" stroke="#185b91" stroke-width="3"/>
+<circle cx="105" cy="166" r="5" fill="#185b91"/>
+<text x="105" y="194" text-anchor="middle" font-size="18">-2</text>
+<line x1="185" y1="166" x2="185" y2="166" stroke="#185b91" stroke-width="3"/>
+<circle cx="185" cy="166" r="5" fill="#185b91"/>
+<text x="185" y="194" text-anchor="middle" font-size="18">-1</text>
+<line x1="265" y1="166" x2="265" y2="70" stroke="#185b91" stroke-width="3"/>
+<circle cx="265" cy="70" r="5" fill="#185b91"/>
+<text x="265" y="194" text-anchor="middle" font-size="18">0</text>
+<text x="265" y="58" text-anchor="middle" font-size="19" fill="#185b91">2</text>
+<line x1="345" y1="166" x2="345" y2="118" stroke="#185b91" stroke-width="3"/>
+<circle cx="345" cy="118" r="5" fill="#185b91"/>
+<text x="345" y="194" text-anchor="middle" font-size="18">1</text>
+<text x="345" y="106" text-anchor="middle" font-size="19" fill="#185b91">1</text>
+<line x1="425" y1="166" x2="425" y2="166" stroke="#185b91" stroke-width="3"/>
+<circle cx="425" cy="166" r="5" fill="#185b91"/>
+<text x="425" y="194" text-anchor="middle" font-size="18">2</text>
+<line x1="505" y1="166" x2="505" y2="166" stroke="#185b91" stroke-width="3"/>
+<circle cx="505" cy="166" r="5" fill="#185b91"/>
+<text x="505" y="194" text-anchor="middle" font-size="18">3</text>
+<line x1="585" y1="166" x2="585" y2="166" stroke="#185b91" stroke-width="3"/>
+<circle cx="585" cy="166" r="5" fill="#185b91"/>
+<text x="585" y="194" text-anchor="middle" font-size="18">4</text>
+<text x="30" y="250" font-size="22">右移 / Shift Sy</text>
+<line x1="70" y1="386" x2="666" y2="386" stroke="#82969e" stroke-width="1" marker-end="url(#arrow)"/>
+<text x="674" y="392" >k</text>
+<line x1="105" y1="386" x2="105" y2="386" stroke="#b25725" stroke-width="3"/>
+<circle cx="105" cy="386" r="5" fill="#b25725"/>
+<text x="105" y="414" text-anchor="middle" font-size="18">-2</text>
+<line x1="185" y1="386" x2="185" y2="386" stroke="#b25725" stroke-width="3"/>
+<circle cx="185" cy="386" r="5" fill="#b25725"/>
+<text x="185" y="414" text-anchor="middle" font-size="18">-1</text>
+<line x1="265" y1="386" x2="265" y2="386" stroke="#b25725" stroke-width="3"/>
+<circle cx="265" cy="386" r="5" fill="#b25725"/>
+<text x="265" y="414" text-anchor="middle" font-size="18">0</text>
+<line x1="345" y1="386" x2="345" y2="290" stroke="#b25725" stroke-width="3"/>
+<circle cx="345" cy="290" r="5" fill="#b25725"/>
+<text x="345" y="414" text-anchor="middle" font-size="18">1</text>
+<text x="345" y="278" text-anchor="middle" font-size="19" fill="#b25725">2</text>
+<line x1="425" y1="386" x2="425" y2="338" stroke="#b25725" stroke-width="3"/>
+<circle cx="425" cy="338" r="5" fill="#b25725"/>
+<text x="425" y="414" text-anchor="middle" font-size="18">2</text>
+<text x="425" y="326" text-anchor="middle" font-size="19" fill="#b25725">1</text>
+<line x1="505" y1="386" x2="505" y2="386" stroke="#b25725" stroke-width="3"/>
+<circle cx="505" cy="386" r="5" fill="#b25725"/>
+<text x="505" y="414" text-anchor="middle" font-size="18">3</text>
+<line x1="585" y1="386" x2="585" y2="386" stroke="#b25725" stroke-width="3"/>
+<circle cx="585" cy="386" r="5" fill="#b25725"/>
+<text x="585" y="414" text-anchor="middle" font-size="18">4</text>
+<text x="30" y="470" font-size="22">两项平均 / Average My</text>
+<line x1="70" y1="606" x2="666" y2="606" stroke="#82969e" stroke-width="1" marker-end="url(#arrow)"/>
+<text x="674" y="612" >k</text>
+<line x1="105" y1="606" x2="105" y2="606.0" stroke="#16725c" stroke-width="3"/>
+<circle cx="105" cy="606.0" r="5" fill="#16725c"/>
+<text x="105" y="634" text-anchor="middle" font-size="18">-2</text>
+<line x1="185" y1="606" x2="185" y2="606.0" stroke="#16725c" stroke-width="3"/>
+<circle cx="185" cy="606.0" r="5" fill="#16725c"/>
+<text x="185" y="634" text-anchor="middle" font-size="18">-1</text>
+<line x1="265" y1="606" x2="265" y2="558.0" stroke="#16725c" stroke-width="3"/>
+<circle cx="265" cy="558.0" r="5" fill="#16725c"/>
+<text x="265" y="634" text-anchor="middle" font-size="18">0</text>
+<text x="265" y="546.0" text-anchor="middle" font-size="19" fill="#16725c">1</text>
+<line x1="345" y1="606" x2="345" y2="534.0" stroke="#16725c" stroke-width="3"/>
+<circle cx="345" cy="534.0" r="5" fill="#16725c"/>
+<text x="345" y="634" text-anchor="middle" font-size="18">1</text>
+<text x="345" y="522.0" text-anchor="middle" font-size="19" fill="#16725c">1.5</text>
+<line x1="425" y1="606" x2="425" y2="582.0" stroke="#16725c" stroke-width="3"/>
+<circle cx="425" cy="582.0" r="5" fill="#16725c"/>
+<text x="425" y="634" text-anchor="middle" font-size="18">2</text>
+<text x="425" y="570.0" text-anchor="middle" font-size="19" fill="#16725c">0.5</text>
+<line x1="505" y1="606" x2="505" y2="606.0" stroke="#16725c" stroke-width="3"/>
+<circle cx="505" cy="606.0" r="5" fill="#16725c"/>
+<text x="505" y="634" text-anchor="middle" font-size="18">3</text>
+<line x1="585" y1="606" x2="585" y2="606.0" stroke="#16725c" stroke-width="3"/>
+<circle cx="585" cy="606.0" r="5" fill="#16725c"/>
+<text x="585" y="634" text-anchor="middle" font-size="18">4</text>
+</g></svg>

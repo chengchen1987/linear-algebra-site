@@ -2,7 +2,7 @@ body{font-family:system-ui,"Droid Sans Fallback",sans-serif;color:#243746;line-h
 
 details.review-answer{margin:.75rem 0;padding:.45rem 0;border-top:1px solid #d8e1e7}details.review-answer summary{cursor:pointer;color:#285773;font-weight:600}details.review-answer[open] summary{margin-bottom:.6rem}
 
-.figure-scroll{overflow-x:auto}.figure-scroll:focus-visible{outline:2px solid #186d99}@media(max-width:600px){#fig-anchor img{width:100%!important}.figure-scroll img{min-width:700px;max-width:none!important}.figure-scroll:before{content:"并排图可左右滑动 / Swipe to compare";font-size:.8rem;color:#526676;display:block}}
+.figure-scroll{overflow-x:auto}.figure-scroll:focus-visible{outline:2px solid #186d99}@media(max-width:600px){#fig-anchor img{width:100%!important}.figure-scroll img{min-width:700px;max-width:none!important}.figure-scroll:before{content:"图形可左右滑动查看 / Swipe to view the figure";font-size:.8rem;color:#526676;display:block}}
 
 /* Stable, equal-unit diagrams; panels stack on narrow displays. */
 .row-column-sync{border:1px solid #d0dbe2;padding:1rem;margin:1.5rem 0;background:#fafcfd}
