@@ -408,6 +408,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="theorem" class="level2">
 <h2 class="anchored" data-anchor-id="theorem">回顾：解的存在性与唯一性 <span class="heading-en">Review: Existence and Uniqueness of Solutions</span></h2>
 <p>固定 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>，第一部分的<a href="../chapter-01-review.html#all-targets">所有目标表</a>分开讨论：系数矩阵每列有主元，保证对每个方程右端目标向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf b\in\mathbb R^m</annotation></semantics></math>，方程组<strong>至多</strong>有一个解；每行有主元，保证对每个目标向量，方程组<strong>至少</strong>有一个解。前者连接零空间、列无关与单射，后者连接列空间、值域与满射。</p>
+<p>此前的“有没有解”“是否唯一”“列是否无关”“是否张成整个目标空间”以及单射、满射，分别回答不同问题。可逆矩阵定理将说明：对方阵，它们能够通过主元结构相互联系，并与逆矩阵的存在等价。</p>
 <p>现在加上关键前提：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n\times n</annotation></semantics></math> <strong>方阵</strong>。主元位于不同的行和列，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个主元便同时占满所有行与列，因而同时满足关于存在性和唯一性的两类条件。</p>
 <div id="lay6-ch02-thm08" class="course-theorem">
 <p><strong>教材§2.3，定理8 / Textbook §2.3, Theorem 8</strong></p>
@@ -434,7 +435,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mi>T</mi></msup><annotation encoding="application/x-tex">A^T</annotation></semantics></math> 可逆。</p></li>
 </ol>
 </div>
-<p><a href="../theorems/chapter-02.html#lay6-ch02-thm08">完整定理汇编 / Complete Theorem Reference</a>。这里的主元位置由行化简辨认，不是说原矩阵每行、每列各有一个非零元素就够了。十二项是同一组等价条件，下面通过已经学过的方程组、列向量和线性变换说明这些条件为什么等价。</p>
+<p><a href="../theorems/chapter-02.html#lay6-ch02-thm08">完整定理汇编 / Complete Theorem Reference</a>。这里的主元位置由行化简辨认，不是说原矩阵每行、每列各有一个非零元素就够了。十二项是同一种性质的不同表述。下面通过已经学过的方程组、列向量和线性变换说明它们为什么等价；理解这些连接，就不必把各项当作互不相关的记忆清单。</p>
 </section>
 <section id="reasoning" class="level2">
 <h2 class="anchored" data-anchor-id="reasoning">方阵的主元如何联系存在性与唯一性？ <span class="heading-en">How Do Pivots Connect Existence and Uniqueness for a Square Matrix?</span></h2>
@@ -511,14 +512,13 @@ E^{-1}=\begin{bmatrix}1&amp;0\\2&amp;1\end{bmatrix}.</annotation></semantics></m
 <div id="legacy-equation">
 <p><a href="../topics/elementary-matrices-and-inverses.html#legacy-equation">保持顺序的矩阵方程训练 / Matrix Equation Practice</a>。</p>
 </div>
-<p>基、维数、秩及相应续篇将在本部分后续主题中学习；本页十二项的证明不依赖这些尚未定义的概念。</p>
 <div id="完整例题与矩形边界">
 <p><a href="#rectangular">非方阵的对照例 / Nonsquare Examples</a>。</p>
 </div>
 <div id="完整例题自编不同大小的块">
 <p><a href="../topics/partitioned-matrices.html#block-example">不同块尺寸的K/W计算 / Computing with Blocks of Different Sizes</a>。</p>
 </div>
-<p>学过基、维数和秩之后，可以继续阅读<a href="../topics/matrix-rank-factorization.html#invertible-rank">可逆矩阵定理的基与秩续篇 / The Basis and Rank Continuation</a>。它将同一个方阵主元条件写成五种新的语言。</p>
+<p>学过基、维数和秩之后，可以继续阅读<a href="../topics/matrix-rank-factorization.html#invertible-rank">可逆矩阵定理的基与秩续篇 / The Basis and Rank Continuation</a>。基将“无关且张成”合在一起，维数和秩则为主元条件提供空间表述；本页证明不依赖这些后续概念。再学过四空间后，还可用<a href="../topics/four-fundamental-subspaces.html#invertibility">列空间、行空间和两个零空间</a>回看同一种可逆性。这里分别是教材续篇与课程推论，不是另列两套无关判据。</p>
 
 
 </section>

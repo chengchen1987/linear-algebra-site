@@ -399,8 +399,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>第一部分用矩阵表示方程组，讨论解的存在性与唯一性。第二部分进一步问：<strong>怎样进行矩阵运算、求解矩阵方程，并利用矩阵分解组织计算，以及怎样识别矩阵中的独立关系？</strong></p>
-<p>两条线索在消元与列组合处相接：矩阵乘法→逆矩阵→同步消元→分块→LU，解释怎样组织和复用计算；列之间的关系→基与维数→秩与CR→行空间与四个基本子空间，解释矩阵包含了哪些独立信息。</p>
+<p>第一部分从线性方程组出发，通过行图像、列图像和消元，讨论解的存在性与唯一性，并逐步认识线性组合、子空间和线性变换。第二部分将在这些认识的基础上，进一步学习矩阵运算，并用矩阵研究线性变换与相关空间的结构。</p>
+<p>矩阵加法、数乘和乘法，使我们能够组合已有的线性变换；逆矩阵帮助我们理解何时能够从输出唯一恢复输入；分块与矩阵分解则帮助我们看清运算结构，并组织和复用计算。随后，我们通过基、维数和秩描述空间中的独立方向，并用矩阵的四个基本子空间，进一步理解哪些目标向量能够达到、解为什么可能不唯一，以及方程之间的关系怎样影响求解。这里，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math> 接受输入 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf x\in\mathbb R^n</annotation></semantics></math>，产生输出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">A\mathbf x\in\mathbb R^m</annotation></semantics></math>；给定的方程右端目标向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf b\in\mathbb R^m</annotation></semantics></math> 是否能成为输出，正是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">A\mathbf x=\mathbf b</annotation></semantics></math> 是否有解的问题。</p>
+<p>可逆矩阵定理是贯穿这些内容的一条重要线索。对于方阵，求解、主元、线性无关、张成和线性变换等不同语言，能够描述同一种可逆性。随着基、维数和秩的引入，我们会再次认识这一联系；后续学习行列式、特征值和奇异值分解时，还会获得新的理解。</p>
+<p>本部分先在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb R^n</annotation></semantics></math> 的具体子空间中建立这些认识，为后续学习一般向量空间、坐标与换基，以及内积、正交和投影作准备。“线性空间”与“向量空间”通常是同义词；这里从具体子空间走向一般理论，并非引入两种依次升级的空间类别。此前已用实坐标的点积计算矩阵乘积的元素，后续将系统研究内积带来的长度、夹角与正交关系。</p>
 <section id="route" class="level2">
 <h2 class="anchored" data-anchor-id="route">按问题顺读 <span class="heading-en">Read by Mathematical Questions</span></h2>
 <table class="caption-top table">
@@ -413,27 +415,27 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><a href="./lessons/07-matrix-products.html">矩阵基本运算 / Basic Matrix Operations</a></td>
-<td>逐列作用、行列点积与变换复合为什么表示同一运算？</td>
+<td>不同计算表示怎样表达同一运算，乘积怎样对应变换复合？</td>
 </tr>
 <tr class="even">
 <td><a href="./lessons/08-inverses.html">逆矩阵与逆变换 / Inverse Matrices and Inverse Transformations</a></td>
-<td>什么是逆矩阵？它怎样恢复输入，并保证方程组有唯一解？</td>
+<td>何时能从任意输出唯一恢复输入，矩阵逆怎样表示逆变换？</td>
 </tr>
 <tr class="odd">
 <td><a href="./topics/elementary-matrices-and-inverses.html">初等矩阵与矩阵求逆 / Elementary Matrices and Computing Inverses</a></td>
-<td>怎样从 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi><mo>=</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">AB=I</annotation></semantics></math> 的列方程出发，用同步消元求逆？为什么得到双侧逆？</td>
+<td>怎样复用同一组行变换求解多列目标，并得到逆矩阵？</td>
 </tr>
 <tr class="even">
 <td><a href="./lessons/09-invertibility-blocks.html">可逆矩阵定理 / The Invertible Matrix Theorem</a></td>
-<td>对方阵，解的存在性与唯一性为什么能由主元条件联系起来？</td>
+<td>对方阵，方程、主元、列向量和线性变换为什么给出等价的可逆判据？</td>
 </tr>
 <tr class="odd">
 <td><a href="./topics/partitioned-matrices.html">分块表示与运算 / Block Representation and Operations</a></td>
-<td>怎样分组处理行列，同时保持尺寸与运算次序？</td>
+<td>怎样按输入、输出或行列分组，理解和组织运算？</td>
 </tr>
 <tr class="even">
 <td><a href="./topics/inverses-of-partitioned-matrices.html">分块矩阵的逆 / Inverses of Partitioned Matrices</a></td>
-<td>哪些块结构允许分别恢复或逐步恢复输入？</td>
+<td>怎样利用块结构理解和求出整体逆变换？</td>
 </tr>
 <tr class="odd">
 <td><a href="./lessons/10-lu.html">LU分解与方程组求解 / LU Factorization and Solving Linear Systems</a></td>
@@ -441,11 +443,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><a href="./topics/matrix-rank-factorization.html">矩阵的秩与秩分解 / Matrix Rank and Rank Factorization</a></td>
-<td>怎样选出独立列、记录表示系数，并解释RREF为什么唯一？</td>
+<td>怎样用基和维数描述独立方向，用CR记录列的坐标，并回看可逆性？</td>
 </tr>
 <tr class="odd">
 <td><a href="./topics/four-fundamental-subspaces.html">四个基本子空间 / Four Fundamental Subspaces</a></td>
-<td>行列关系分别属于哪个空间？行依赖如何给出全部相容性条件？</td>
+<td>四个空间怎样共同解释可达目标、解的不唯一性和行之间的关系？</td>
 </tr>
 </tbody>
 </table>
@@ -457,7 +459,7 @@ ul.task-list li input[type="checkbox"] {
 <p>本部分覆盖教材§2.1–2.5：定理1–10，以及没有编号定理的分块运算、三角结构、LU算法、矩形尺寸、换行与常规计算量。§2.6定理11在投入产出阅读中解释并计算；这项应用说明如何用矩阵方程分析非负需求与产出。</p>
 <p>§2.8定理12的零空间结论已在<a href="./topics/span-column-and-null-spaces.html#null-space">第一部分</a>提前学习。§2.8定理13、§2.9定理14–15与可逆矩阵定理的基/秩续篇，在本部分的<a href="./topics/matrix-rank-factorization.html">秩主题</a>正式解释；先从具体欧氏子空间建立基、维数与坐标。行空间及其基提前联系教材§4.3，维数与坐标的理由联系§4.4–4.5。CR、RREF唯一性的列关系证明和左零空间相容性论证按课程逻辑组织，来源身份分别标明。§2.7计算机图形应用没有在此完整展开；已经使用旋转与剪切并不等于学完该节。按教材顺序查阅时可使用<a href="./theorems/chapter-02.html">教材第2章定理汇编 / Textbook Chapter 2 Theorem Reference</a>，汇编中的完整陈述不替代各学习主题的解释。</p>
 <p>一般行列式理论在<a href="./chapter-03-overview.html">第三部分导读 / Part 3 Overview</a>继续；本部分仅在二阶求逆时使用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>d</mi><mo>−</mo><mi>b</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">ad-bc</annotation></semantics></math>。</p>
-<p>一般向量空间、一般映射与换基在第四部分深化；四空间的正交关系、投影和最小二乘在第六部分继续，奇异值分解在第七部分统一解释。这些后续理论不是当前消元证明的先修。</p>
+<p>一般向量空间与换基、特征值、正交关系与最小二乘、奇异值分解分别在后续部分深化；相关学习主题尚待建设。现有定理汇编用于教材回查，不表示这些主题已经讲解；这些后续理论也不是当前消元证明的先修。</p>
 
 
 </section>
