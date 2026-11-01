@@ -93,4 +93,4 @@ body.reading-ready :target{scroll-margin-top:calc(var(--reading-bar-height,75px)
 
 body.reading-ready #quarto-content>.page-navigation{grid-column:body-start/body-end;grid-row:2;min-width:0}
 
-.matrix-operations .heading-en{display:block;font-size:.72em;font-weight:400;color:#435967;margin-top:.25rem}
+/* Body bilingual heading hierarchy is shared in course.css. */

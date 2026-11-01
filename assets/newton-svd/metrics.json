@@ -1,0 +1,96 @@
+{
+  "shape": [
+    512,
+    364
+  ],
+  "full_reconstruction_relative_error": 3.5672622273670985e-15,
+  "numpy_version": "2.4.6",
+  "pillow_version": "12.3.0",
+  "measurements": [
+    {
+      "k": 1,
+      "relative_frobenius_error": 0.32921298162964985,
+      "tail_relative_error": 0.32921298162964985,
+      "retained_squared_norm": 0.8916188127265163,
+      "stored_scalar_count": 877,
+      "scalar_count_ratio": 0.004705743475274725,
+      "float32_factor_bytes": 3508,
+      "raw_uint8_bytes": 186368,
+      "float32_to_raw_uint8_byte_ratio": 0.0188229739010989,
+      "display_clipped_fraction": 0.0
+    },
+    {
+      "k": 5,
+      "relative_frobenius_error": 0.1721361524265341,
+      "tail_relative_error": 0.17213615242653407,
+      "retained_squared_norm": 0.9703691450277897,
+      "stored_scalar_count": 4385,
+      "scalar_count_ratio": 0.023528717376373628,
+      "float32_factor_bytes": 17540,
+      "raw_uint8_bytes": 186368,
+      "float32_to_raw_uint8_byte_ratio": 0.09411486950549451,
+      "display_clipped_fraction": 0.0001663375686813187
+    },
+    {
+      "k": 10,
+      "relative_frobenius_error": 0.12467517082435407,
+      "tail_relative_error": 0.12467517082435403,
+      "retained_squared_norm": 0.9844561017799187,
+      "stored_scalar_count": 8770,
+      "scalar_count_ratio": 0.047057434752747256,
+      "float32_factor_bytes": 35080,
+      "raw_uint8_bytes": 186368,
+      "float32_to_raw_uint8_byte_ratio": 0.18822973901098902,
+      "display_clipped_fraction": 0.0
+    },
+    {
+      "k": 20,
+      "relative_frobenius_error": 0.09284899408326572,
+      "tail_relative_error": 0.09284899408326569,
+      "retained_squared_norm": 0.9913790642977262,
+      "stored_scalar_count": 17540,
+      "scalar_count_ratio": 0.09411486950549451,
+      "float32_factor_bytes": 70160,
+      "raw_uint8_bytes": 186368,
+      "float32_to_raw_uint8_byte_ratio": 0.37645947802197804,
+      "display_clipped_fraction": 0.0
+    },
+    {
+      "k": 40,
+      "relative_frobenius_error": 0.06885421691020012,
+      "tail_relative_error": 0.06885421691020009,
+      "retained_squared_norm": 0.9952590968136839,
+      "stored_scalar_count": 35080,
+      "scalar_count_ratio": 0.18822973901098902,
+      "float32_factor_bytes": 140320,
+      "raw_uint8_bytes": 186368,
+      "float32_to_raw_uint8_byte_ratio": 0.7529189560439561,
+      "display_clipped_fraction": 0.0
+    },
+    {
+      "k": 80,
+      "relative_frobenius_error": 0.048530987792873015,
+      "tail_relative_error": 0.048530987792873,
+      "retained_squared_norm": 0.9976447432238484,
+      "stored_scalar_count": 70160,
+      "scalar_count_ratio": 0.37645947802197804,
+      "float32_factor_bytes": 280640,
+      "raw_uint8_bytes": 186368,
+      "float32_to_raw_uint8_byte_ratio": 1.5058379120879122,
+      "display_clipped_fraction": 0.0
+    },
+    {
+      "k": 160,
+      "relative_frobenius_error": 0.027475562567666843,
+      "tail_relative_error": 0.027475562567666843,
+      "retained_squared_norm": 0.9992450934615907,
+      "stored_scalar_count": 140320,
+      "scalar_count_ratio": 0.7529189560439561,
+      "float32_factor_bytes": 561280,
+      "raw_uint8_bytes": 186368,
+      "float32_to_raw_uint8_byte_ratio": 3.0116758241758244,
+      "display_clipped_fraction": 0.0
+    }
+  ],
+  "error_convention": "float64 factors; before display clipping/rounding; float32 bytes are only a storage budget"
+}

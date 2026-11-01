@@ -1,0 +1,24 @@
+{
+  "title": "牛顿肖像画 / Painted portrait of Isaac Newton",
+  "source_page": "https://commons.wikimedia.org/wiki/File:GodfreyKneller-IsaacNewton-1689.jpg",
+  "source_image": "https://upload.wikimedia.org/wikipedia/commons/3/39/GodfreyKneller-IsaacNewton-1689.jpg",
+  "credit": "Copy after Godfrey Kneller (1689); Commons author field: James Thronill after Sir Godfrey Kneller",
+  "rights": "Commons PD-art / Public Domain Mark 1.0; artwork and faithful reproduction marked public domain",
+  "rights_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "received_and_source_checked": "2026-11-01",
+  "independent_download_date": "2026-11-01",
+  "download_byte_comparison": "SHA-256 identical to the supplied JPEG",
+  "original_package_download_date": "not recorded in supplied package",
+  "source_sha256": "d2d2c6b74b70428a3fc997786c8a179b503d0f8e17bd2dd73a1ec36f7a0fdc1f",
+  "original_size": [
+    1364,
+    1916
+  ],
+  "grayscale_shape": [
+    512,
+    364
+  ],
+  "preprocessing": "Pillow convert L then LANCZOS resize to height 512, preserve aspect ratio; no centering, stretching, or contrast enhancement",
+  "display": "Same 0–255 scale; clip and round to nearest uint8 for PNG display only",
+  "generator": "scripts/build-course-wide-figures.py"
+}
