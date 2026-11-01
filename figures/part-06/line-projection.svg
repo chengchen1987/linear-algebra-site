@@ -6,10 +6,10 @@
 <text x="156" y="313" font-size="16" fill="#173846" text-anchor="start">O</text>
 <line x1="128.000" y1="342.000" x2="394.500" y2="75.500" stroke="#7b9690" stroke-width="2"/>
 <text x="402" y="81" font-size="20" fill="#16725c" text-anchor="start">L = Span{(1,1)}</text>
-<line x1="180.000" y1="290.000" x2="440.000" y2="290.000" stroke="#185b91" stroke-width="3" marker-end="url(#arrow)"/>
-<line x1="180.000" y1="290.000" x2="310.000" y2="160.000" stroke="#16725c" stroke-width="3" marker-end="url(#arrow)"/>
-<line x1="180.000" y1="290.000" x2="310.000" y2="420.000" stroke="#b25725" stroke-width="3" marker-end="url(#arrow)"/>
-<line x1="310.000" y1="160.000" x2="440.000" y2="290.000" stroke="#b25725" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6 5"/>
+<line x1="180.000" y1="290.000" x2="440.000" y2="290.000" stroke="#185b91" stroke-width="2.6" marker-end="url(#arrow)"/>
+<line x1="180.000" y1="290.000" x2="310.000" y2="160.000" stroke="#16725c" stroke-width="2.6" marker-end="url(#arrow)"/>
+<line x1="180.000" y1="290.000" x2="310.000" y2="420.000" stroke="#b25725" stroke-width="2.6" marker-end="url(#arrow)"/>
+<line x1="310.000" y1="160.000" x2="440.000" y2="290.000" stroke="#b25725" stroke-width="2.8" marker-end="url(#arrow)" stroke-dasharray="6 5"/>
 <polyline points="325.600,175.600 310.000,191.200 294.400,175.600" fill="none" stroke="#617b82" stroke-width="2"/>
 <text x="445" y="275" font-size="21" fill="#185b91" text-anchor="start">b = (2,0)</text>
 <text x="251" y="139" font-size="21" fill="#16725c" text-anchor="start">b̂ = (1,1)</text>

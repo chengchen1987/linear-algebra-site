@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="420" viewBox="0 0 850 420" role="img" aria-labelledby="title"><title id="title">多通道像素向量 / Multichannel pixel vectors</title><rect width="100%" height="100%" fill="white"/><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="context-stroke"/></marker></defs><g font-family="sans-serif" font-size="18" fill="#173846">
+<rect x="30" y="75" width="40" height="40" fill="#185b91" opacity="0.3" stroke="white"/>
+<rect x="72" y="75" width="40" height="40" fill="#185b91" opacity="0.44999999999999996" stroke="white"/>
+<rect x="30" y="117" width="40" height="40" fill="#185b91" opacity="0.6" stroke="white"/>
+<rect x="72" y="117" width="40" height="40" fill="#185b91" opacity="0.75" stroke="white"/>
+<rect x="75" y="63" width="40" height="40" fill="#16725c" opacity="0.3" stroke="white"/>
+<rect x="117" y="63" width="40" height="40" fill="#16725c" opacity="0.44999999999999996" stroke="white"/>
+<rect x="75" y="105" width="40" height="40" fill="#16725c" opacity="0.6" stroke="white"/>
+<rect x="117" y="105" width="40" height="40" fill="#16725c" opacity="0.75" stroke="white"/>
+<rect x="120" y="51" width="40" height="40" fill="#b25725" opacity="0.3" stroke="white"/>
+<rect x="162" y="51" width="40" height="40" fill="#b25725" opacity="0.44999999999999996" stroke="white"/>
+<rect x="120" y="93" width="40" height="40" fill="#b25725" opacity="0.6" stroke="white"/>
+<rect x="162" y="93" width="40" height="40" fill="#b25725" opacity="0.75" stroke="white"/>
+<text x="25" y="30" font-size="18" fill="#173846" text-anchor="start">三个通道 / 3 channels</text>
+<text x="25" y="196" font-size="17" fill="#173846" text-anchor="start">同一像素 j / Same pixel j</text>
+<line x1="218.000" y1="113.000" x2="270.000" y2="113.000" stroke="#185b91" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="285" y="55" width="175" height="150" rx="8" fill="#eef5f7" stroke="#b6cbd2"/>
+<text x="372" y="85" font-size="22" fill="#173846" text-anchor="middle">xⱼ ∈ R³</text>
+<text x="372" y="121" font-size="14" fill="#173846" text-anchor="middle">(通道1, 通道2, 通道3)ᵀ</text>
+<text x="372" y="160" font-size="18" fill="#173846" text-anchor="middle">feature vector</text>
+<line x1="470.000" y1="113.000" x2="520.000" y2="113.000" stroke="#185b91" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="535" y="55" width="280" height="150" rx="8" fill="#eef5f7" stroke="#b6cbd2"/>
+<text x="675" y="89" font-size="21" fill="#173846" text-anchor="middle">X = [x₁ … xN] : 3×N</text>
+<text x="675" y="128" font-size="18" fill="#173846" text-anchor="middle">中心化 → 协方差 → 主方向</text>
+<text x="675" y="170" font-size="19" fill="#173846" text-anchor="middle">scores zᵢⱼ = pᵢᵀ(xⱼ − μ)</text>
+<text x="30" y="263" font-size="18" fill="#173846" text-anchor="start">固定方向 i，把各像素分数 zᵢⱼ 放回原位置，形成一幅分数图像。</text>
+<text x="30" y="303" font-size="17" fill="#173846" text-anchor="start">For each direction, arrange pixel scores back into their spatial positions.</text>
+<text x="30" y="354" font-size="20" fill="#173846" text-anchor="start">特征维数 = 通道数；观测数 = 像素数。</text>
+<text x="30" y="390" font-size="19" fill="#173846" text-anchor="start">Feature dimension = channels; observations = pixels.</text>
+</g></svg>

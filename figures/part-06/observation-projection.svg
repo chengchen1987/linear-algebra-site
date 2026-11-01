@@ -6,10 +6,10 @@
 <text x="263.5" y="255.0" font-size="20" fill="#173846" text-anchor="start">q₂</text>
 <line x1="145.000" y1="370.000" x2="145.000" y2="100.000" stroke="#82969e" stroke-width="1" marker-end="url(#arrow)"/>
 <text x="153" y="104.0" font-size="20" fill="#173846" text-anchor="start">q₃</text>
-<line x1="145.000" y1="370.000" x2="514.278" y2="278.933" stroke="#16725c" stroke-width="3" marker-end="url(#arrow)"/>
-<line x1="145.000" y1="370.000" x2="514.278" y2="217.696" stroke="#185b91" stroke-width="3" marker-end="url(#arrow)"/>
-<line x1="145.000" y1="370.000" x2="145.000" y2="308.763" stroke="#b25725" stroke-width="3" marker-end="url(#arrow)"/>
-<line x1="514.278" y1="278.933" x2="514.278" y2="217.696" stroke="#b25725" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6 5"/>
+<line x1="145.000" y1="370.000" x2="514.278" y2="278.933" stroke="#16725c" stroke-width="2.6" marker-end="url(#arrow)"/>
+<line x1="145.000" y1="370.000" x2="514.278" y2="217.696" stroke="#185b91" stroke-width="2.6" marker-end="url(#arrow)"/>
+<line x1="145.000" y1="370.000" x2="145.000" y2="308.763" stroke="#b25725" stroke-width="2.6" marker-end="url(#arrow)"/>
+<line x1="514.278" y1="278.933" x2="514.278" y2="217.696" stroke="#b25725" stroke-width="2.8" marker-end="url(#arrow)" stroke-dasharray="6 5"/>
 <text x="526.2780915233161" y="212.69606236570917" font-size="23" fill="#185b91" text-anchor="start">y</text>
 <text x="526.2780915233161" y="288.9333059352886" font-size="23" fill="#16725c" text-anchor="start">ŷ</text>
 <text x="164" y="316" font-size="21" fill="#b25725" text-anchor="start">e</text>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="430" viewBox="0 0 850 430" role="img" aria-labelledby="title"><title id="title">SVD的输入与输出坐标 / SVD input and output coordinates</title><rect width="100%" height="100%" fill="white"/><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="context-stroke"/></marker></defs><g font-family="sans-serif" font-size="18" fill="#173846">
+<rect x="20" y="80" width="165" height="135" rx="8" fill="#eef5f7" stroke="#b6cbd2"/>
+<text x="102" y="30" font-size="17" fill="#173846" text-anchor="middle">输入</text>
+<text x="102" y="57" font-size="15" fill="#173846" text-anchor="middle">Input</text>
+<text x="102" y="124" font-size="17" fill="#173846" text-anchor="middle">x ∈ Rⁿ</text>
+<text x="102" y="175" font-size="14" fill="#173846" text-anchor="middle">原坐标 / Original</text>
+<rect x="235" y="80" width="165" height="135" rx="8" fill="#eef5f7" stroke="#b6cbd2"/>
+<text x="317" y="30" font-size="17" fill="#173846" text-anchor="middle">输入坐标</text>
+<text x="317" y="57" font-size="15" fill="#173846" text-anchor="middle">Input coordinates</text>
+<text x="317" y="124" font-size="17" fill="#173846" text-anchor="middle">c = Vᵀx ∈ Rⁿ</text>
+<text x="317" y="175" font-size="14" fill="#173846" text-anchor="middle">标准正交基 v₁,…,vₙ</text>
+<rect x="450" y="80" width="165" height="135" rx="8" fill="#eef5f7" stroke="#b6cbd2"/>
+<text x="532" y="30" font-size="17" fill="#173846" text-anchor="middle">输出坐标</text>
+<text x="532" y="57" font-size="15" fill="#173846" text-anchor="middle">Output coordinates</text>
+<text x="532" y="124" font-size="17" fill="#173846" text-anchor="middle">d = Σc ∈ Rᵐ</text>
+<text x="532" y="175" font-size="14" fill="#173846" text-anchor="middle">dⱼ = σⱼcⱼ (j ≤ r)</text>
+<rect x="665" y="80" width="165" height="135" rx="8" fill="#eef5f7" stroke="#b6cbd2"/>
+<text x="747" y="30" font-size="17" fill="#173846" text-anchor="middle">输出</text>
+<text x="747" y="57" font-size="15" fill="#173846" text-anchor="middle">Output</text>
+<text x="747" y="124" font-size="17" fill="#173846" text-anchor="middle">Ax = Ud ∈ Rᵐ</text>
+<text x="747" y="175" font-size="14" fill="#173846" text-anchor="middle">标准正交基 u₁,…,uₘ</text>
+<line x1="190.000" y1="145.000" x2="228.000" y2="145.000" stroke="#185b91" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="209" y="111" font-size="22" fill="#185b91" text-anchor="middle">Vᵀ</text>
+<line x1="405.000" y1="145.000" x2="443.000" y2="145.000" stroke="#185b91" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="424" y="111" font-size="22" fill="#185b91" text-anchor="middle">Σ</text>
+<line x1="620.000" y1="145.000" x2="658.000" y2="145.000" stroke="#185b91" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="639" y="111" font-size="22" fill="#185b91" text-anchor="middle">U</text>
+<text x="30" y="270" font-size="22" fill="#173846" text-anchor="start">Vᵀ : n×n       Σ : m×n       U : m×m</text>
+<text x="30" y="315" font-size="19" fill="#173846" text-anchor="start">输入的后 n−r 个方向消失；输出的后 m−r 个坐标为零。</text>
+<text x="30" y="348" font-size="17" fill="#173846" text-anchor="start">The last n−r input directions vanish; the last m−r output coordinates are zero.</text>
+<text x="30" y="393" font-size="19" fill="#173846" text-anchor="start">两端空间分别换基 / Change orthonormal bases in two separate spaces</text>
+</g></svg>

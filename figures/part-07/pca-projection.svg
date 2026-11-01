@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="570" viewBox="0 0 720 570" role="img" aria-labelledby="title"><title id="title">PCA主方向与重建 / PCA directions and reconstructions</title><rect width="100%" height="100%" fill="white"/><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="context-stroke"/></marker></defs><g font-family="sans-serif" font-size="18" fill="#173846">
+<line x1="74.000" y1="455.000" x2="594.000" y2="455.000" stroke="#82969e" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="100.000" y1="481.000" x2="100.000" y2="19.500" stroke="#82969e" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="470" y="488" font-size="17" fill="#173846" text-anchor="start">特征1 / Feature 1</text>
+<text x="125" y="25" font-size="17" fill="#173846" text-anchor="start">特征2 / Feature 2</text>
+<text x="100" y="480" font-size="16" fill="#173846" text-anchor="middle">0</text>
+<text x="80" y="460" font-size="16" fill="#173846" text-anchor="end">0</text>
+<text x="230" y="480" font-size="16" fill="#173846" text-anchor="middle">1</text>
+<text x="80" y="330" font-size="16" fill="#173846" text-anchor="end">1</text>
+<text x="360" y="480" font-size="16" fill="#173846" text-anchor="middle">2</text>
+<text x="80" y="200" font-size="16" fill="#173846" text-anchor="end">2</text>
+<text x="490" y="480" font-size="16" fill="#173846" text-anchor="middle">3</text>
+<text x="80" y="70" font-size="16" fill="#173846" text-anchor="end">3</text>
+<line x1="87.000" y1="468.000" x2="522.500" y2="32.500" stroke="#16725c" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="412.000" y1="377.000" x2="178.000" y2="143.000" stroke="#b25725" stroke-width="1.7" marker-end="url(#arrow)" stroke-dasharray="6 5"/>
+<line x1="425.000" y1="130.000" x2="490.000" y2="195.000" stroke="#b25725" stroke-width="2.5" stroke-dasharray="6 5"/>
+<circle cx="490.000" cy="195.000" r="5" fill="#185b91"/>
+<circle cx="425.000" cy="130.000" r="6" fill="#16725c"/>
+<text x="499" y="185" font-size="18" fill="#185b91" text-anchor="start">x1</text>
+<line x1="165.000" y1="390.000" x2="230.000" y2="455.000" stroke="#b25725" stroke-width="2.5" stroke-dasharray="6 5"/>
+<circle cx="230.000" cy="455.000" r="5" fill="#185b91"/>
+<circle cx="165.000" cy="390.000" r="6" fill="#16725c"/>
+<text x="239" y="445" font-size="18" fill="#185b91" text-anchor="start">x2</text>
+<line x1="425.000" y1="130.000" x2="360.000" y2="65.000" stroke="#b25725" stroke-width="2.5" stroke-dasharray="6 5"/>
+<circle cx="360.000" cy="65.000" r="5" fill="#185b91"/>
+<circle cx="425.000" cy="130.000" r="6" fill="#16725c"/>
+<text x="369" y="55" font-size="18" fill="#185b91" text-anchor="start">x3</text>
+<line x1="165.000" y1="390.000" x2="100.000" y2="325.000" stroke="#b25725" stroke-width="2.5" stroke-dasharray="6 5"/>
+<circle cx="100.000" cy="325.000" r="5" fill="#185b91"/>
+<circle cx="165.000" cy="390.000" r="6" fill="#16725c"/>
+<text x="109" y="315" font-size="18" fill="#185b91" text-anchor="start">x4</text>
+<circle cx="295.000" cy="260.000" r="6" fill="#173846"/>
+<text x="307.0" y="265.0" font-size="18" fill="#173846" text-anchor="start">μ = (1.5,1.5)</text>
+<text x="525" y="46" font-size="21" fill="#16725c" text-anchor="start">p₁</text>
+<text x="164" y="125" font-size="21" fill="#b25725" text-anchor="start">p₂</text>
+<text x="30" y="515" font-size="18" fill="#173846" text-anchor="start">蓝：观测；绿：一维重建；黑：均值；虚线：残差</text>
+<text x="30" y="550" font-size="16" fill="#173846" text-anchor="start">Blue: data · Green: reconstruction · Black: mean · Dashed: residual</text>
+</g></svg>
