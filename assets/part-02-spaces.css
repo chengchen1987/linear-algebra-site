@@ -1,0 +1,7 @@
+/* Part 2 diagrams only; shared teacher styles and reading controls are untouched. */
+.four-spaces-figure { margin: 1.5rem 0; }
+.four-spaces-figure picture, .four-spaces-figure img { display: block; width: 100%; height: auto; }
+.four-spaces-figure figcaption { margin-top: .65rem; color: #42566a; font-size: .93em; line-height: 1.6; }
+@media (max-width: 600px) {
+  .four-spaces-figure picture { max-width: 420px; margin-inline: auto; }
+}

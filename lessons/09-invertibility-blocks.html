@@ -674,7 +674,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="../chapter-02-overview.html">本部分导读 / Part Overview</a> · <a href="../topics/elementary-matrices-and-inverses.html">初等矩阵与矩阵求逆 / Elementary Matrices and Computing Inverses</a></p>
 <section id="theorem" class="level2">
 <h2 class="anchored" data-anchor-id="theorem">回顾：解的存在性与唯一性 <span class="heading-en">Review: Existence and Uniqueness of Solutions</span></h2>
 <p>固定 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{m\times n}</annotation></semantics></math>，第一部分的<a href="../chapter-01-review.html#all-targets">所有目标表</a>分开讨论：系数矩阵每列有主元，保证对每个方程右端目标向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf b\in\mathbb R^m</annotation></semantics></math>，方程组<strong>至多</strong>有一个解；每行有主元，保证对每个目标向量，方程组<strong>至少</strong>有一个解。前者连接零空间、列无关与单射，后者连接列空间、值域与满射。</p>
@@ -775,9 +774,9 @@ E^{-1}=\begin{bmatrix}1&amp;0\\2&amp;1\end{bmatrix}.</annotation></semantics></m
 </section>
 <section id="blocks" class="level2">
 <h2 class="anchored" data-anchor-id="blocks">继续学习分块与多个方程组 <span class="heading-en">Continuing to Blocks and Multiple Linear Systems</span></h2>
-<p><a href="../topics/partitioned-matrices.html">分块表示与运算 / Block Representation and Operations</a>接着组织同一个矩阵的行列，包含K/W完整算例与练习。分块不是把矩阵写成因子乘积；后者称为分解。</p>
+<p><a href="../topics/partitioned-matrices.html">分块表示与运算 / Block Representation and Operations</a>接着组织同一个矩阵的行列，包含不同大小块的完整计算例与练习。分块不是把矩阵写成因子乘积；后者称为分解。</p>
 <div id="multiple-rhs">
-<p><a href="../topics/elementary-matrices-and-inverses.html#multiple-rhs">同一系数矩阵的多个方程组 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>X</mi><mo>=</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">AX=F</annotation></semantics></math> 与H的计算练习 / Multiple Linear Systems</a>。</p>
+<p><a href="../topics/elementary-matrices-and-inverses.html#multiple-rhs">同一系数矩阵的多个方程组：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>X</mi><mo>=</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">AX=F</annotation></semantics></math> 的计算练习 / Multiple Linear Systems</a>。</p>
 </div>
 <div id="legacy-equation">
 <p><a href="../topics/elementary-matrices-and-inverses.html#legacy-equation">保持顺序的矩阵方程训练 / Matrix Equation Practice</a>。</p>
@@ -786,7 +785,7 @@ E^{-1}=\begin{bmatrix}1&amp;0\\2&amp;1\end{bmatrix}.</annotation></semantics></m
 <p><a href="#rectangular">非方阵的对照例 / Nonsquare Examples</a>。</p>
 </div>
 <div id="完整例题自编不同大小的块">
-<p><a href="../topics/partitioned-matrices.html#block-example">不同块尺寸的K/W计算 / Computing with Blocks of Different Sizes</a>。</p>
+<p><a href="../topics/partitioned-matrices.html#block-example">不同块尺寸的乘法计算 / Computing with Blocks of Different Sizes</a>。</p>
 </div>
 <p>学过基、维数和秩之后，可以继续阅读<a href="../topics/matrix-rank-factorization.html#invertible-rank">可逆矩阵定理的基与秩续篇 / The Basis and Rank Continuation</a>。基将“无关且张成”合在一起，维数和秩则为主元条件提供空间表述；本页证明不依赖这些后续概念。再学过四空间后，还可用<a href="../topics/four-fundamental-subspaces.html#invertibility">列空间、行空间和两个零空间</a>回看同一种可逆性。这里分别是教材续篇与课程推论，不是另列两套无关判据。</p>
 <p>在<a href="../topics/force-balance-revisited.html">两绳力平衡（选读） / Two-Rope Force Balance (Optional)</a>中，检验“每个目标唯一的代数解”与“满足非负拉力条件的物理解”有何区别。</p>
