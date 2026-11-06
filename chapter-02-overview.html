@@ -239,6 +239,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="./lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/computational-cost.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">线性代数运算的计算量估算</span><span class="nav-en" lang="en">Estimating the Computational Cost of Linear Algebra Operations</span></a>
+  </div>
+</li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">独立关系与子空间</span><span class="nav-en" lang="en">Independence and Subspaces</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./topics/matrix-rank-factorization.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">秩与秩分解</span><span class="nav-en" lang="en">Rank and Rank Factorization</span></a>
@@ -687,7 +692,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><a href="./lessons/07-matrix-products.html">矩阵基本运算 / Basic Matrix Operations</a></td>
-<td>不同计算表示怎样表达同一运算，乘积怎样对应变换复合，怎样数常规计算的工作量？</td>
+<td>不同计算表示怎样表达同一运算，乘积怎样对应变换复合，零元素怎样决定乘积结构？</td>
 </tr>
 <tr class="even">
 <td><a href="./lessons/08-inverses.html">逆矩阵与逆变换 / Inverse Matrices and Inverse Transformations</a></td>
@@ -714,15 +719,20 @@ ul.task-list li input[type="checkbox"] {
 <td>为什么值得分解？为什么消元乘子能直接组成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>，消元又保留哪些列关系？</td>
 </tr>
 <tr class="even">
+<td><a href="./topics/computational-cost.html">线性代数运算的计算量估算 / Estimating the Computational Cost of Linear Algebra Operations</a></td>
+<td>怎样按输出数或步骤求和估算工作量，比较计算顺序与分解复用？</td>
+</tr>
+<tr class="odd">
 <td><a href="./topics/matrix-rank-factorization.html">矩阵的秩与秩分解 / Matrix Rank and Rank Factorization</a></td>
 <td>怎样用基和维数描述独立方向，用CR记录列的坐标，并回看可逆性？</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="./topics/four-fundamental-subspaces.html">四个基本子空间 / Four Fundamental Subspaces</a></td>
 <td>四个空间怎样共同解释可达目标、解的不唯一性和行之间的关系？</td>
 </tr>
 </tbody>
 </table>
+<p>LU之后有两条入口：计算角度进入独立计算量主题；结构角度直接进入秩与CR，计算量不是后者的先修。计算量估算仍属本部分的在线学习内容。</p>
 <p>从独立列出发的顺读线是：基、维数与秩 → 坐标 → CR分解的作用 → 行空间与行列秩 → 零空间与秩—零度 → 四个基本子空间。维数的依据、RREF唯一性及详细计算量推导都有邻近的折叠入口。</p>
 <p>这些主题在实数范围内提供定义、推理、例题与独立计算。核心结果默认可见；提示、长证明与完整答案可以展开。可以按问题顺读，也可以通过回查链接复习相关定义和计算。</p>
 </section>

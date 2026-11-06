@@ -238,6 +238,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="./lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/computational-cost.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">线性代数运算的计算量估算</span><span class="nav-en" lang="en">Estimating the Computational Cost of Linear Algebra Operations</span></a>
+  </div>
+</li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">独立关系与子空间</span><span class="nav-en" lang="en">Independence and Subspaces</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./topics/matrix-rank-factorization.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">秩与秩分解</span><span class="nav-en" lang="en">Rank and Rank Factorization</span></a>
@@ -648,7 +653,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#part-six-terms" id="toc-part-six-terms" class="nav-link" data-scroll-target="#part-six-terms">第六部分术语 <span class="heading-en">Part 6 Terms</span></a></li>
   <li><a href="#part-seven-terms" id="toc-part-seven-terms" class="nav-link" data-scroll-target="#part-seven-terms">第七部分术语 <span class="heading-en">Part 7 Terms</span></a></li>
   <li><a href="#physics-applications" id="toc-physics-applications" class="nav-link" data-scroll-target="#physics-applications">物理与直观应用补充 <span class="heading-en">Physics and Intuitive Applications</span></a></li>
-  <li><a href="#part-two-computation" id="toc-part-two-computation" class="nav-link" data-scroll-target="#part-two-computation">第二部分的计算量术语 <span class="heading-en">Part 2 Arithmetic-Count Terms</span></a></li>
+  <li><a href="#part-two-computation" id="toc-part-two-computation" class="nav-link" data-scroll-target="#part-two-computation">第二部分的结构与计算量术语 <span class="heading-en">Part 2 Structure and Arithmetic-Count Terms</span></a></li>
   </ul>
 </nav>
     </div>
@@ -1626,7 +1631,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </section>
 <section id="part-two-computation" class="level2">
-<h2 class="anchored" data-anchor-id="part-two-computation">第二部分的计算量术语 <span class="heading-en">Part 2 Arithmetic-Count Terms</span></h2>
+<h2 class="anchored" data-anchor-id="part-two-computation">第二部分的结构与计算量术语 <span class="heading-en">Part 2 Structure and Arithmetic-Count Terms</span></h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1639,7 +1644,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>算术运算</td>
 <td>arithmetic operation</td>
-<td>本课程计实标量加、减、乘、除各一次；<a href="./lessons/07-matrix-products.html#operation-count">约定与逐项计数</a></td>
+<td>本课程计实标量加、减、乘、除各一次；<a href="./topics/computational-cost.html#operation-count">约定与逐项计数</a></td>
 </tr>
 <tr class="even">
 <td>大O记号</td>
@@ -1649,7 +1654,22 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>前代、回代</td>
 <td>forward substitution, back substitution</td>
-<td>按已知分量逐行求解下、上三角方程；<a href="./lessons/10-lu.html#triangular">推导与计数</a></td>
+<td>按已知分量逐行求解下、上三角方程；<a href="./lessons/10-lu.html#triangular">求解公式</a>、<a href="./topics/computational-cost.html#triangular">逐行计数</a></td>
+</tr>
+<tr class="even">
+<td>对角矩阵</td>
+<td>diagonal matrix</td>
+<td>非对角元全零；<a href="./lessons/07-matrix-products.html#diagonal-products">左乘与右乘</a></td>
+</tr>
+<tr class="odd">
+<td>上三角矩阵、下三角矩阵</td>
+<td>upper triangular matrix, lower triangular matrix</td>
+<td>方阵主对角线下方或上方全零；<a href="./lessons/07-matrix-products.html#upper-triangular">定义与乘积</a></td>
+</tr>
+<tr class="even">
+<td>单位上三角矩阵、单位下三角矩阵</td>
+<td>unit upper triangular matrix, unit lower triangular matrix</td>
+<td>相应三角矩阵的对角元全为1；<a href="./lessons/07-matrix-products.html#lower-triangular">独立证明</a></td>
 </tr>
 </tbody>
 </table>

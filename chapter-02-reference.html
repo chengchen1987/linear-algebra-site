@@ -239,6 +239,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="./lessons/10-lu.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">LU分解与方程组求解</span><span class="nav-en" lang="en">LU Factorization and Solving Linear Systems</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./topics/computational-cost.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">线性代数运算的计算量估算</span><span class="nav-en" lang="en">Estimating the Computational Cost of Linear Algebra Operations</span></a>
+  </div>
+</li>
           </ul></li><li class="course-group"><div class="course-group-label"><span class="nav-zh" lang="zh-CN">独立关系与子空间</span><span class="nav-en" lang="en">Independence and Subspaces</span></div><ul class="list-unstyled course-group-items"><li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./topics/matrix-rank-factorization.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">秩与秩分解</span><span class="nav-en" lang="en">Rank and Rank Factorization</span></a>
@@ -648,6 +653,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#blocks" id="toc-blocks" class="nav-link" data-scroll-target="#blocks">分块与列—行展开 <span class="heading-en">Blocks and Column–Row Expansion</span></a></li>
   <li><a href="#block-inverse" id="toc-block-inverse" class="nav-link" data-scroll-target="#block-inverse">分块逆 <span class="heading-en">Inverses of Partitioned Matrices</span></a></li>
   <li><a href="#lu" id="toc-lu" class="nav-link" data-scroll-target="#lu">LU、前代与回代 <span class="heading-en">LU Factorization and Substitution</span></a></li>
+  <li><a href="#computation-cost" id="toc-computation-cost" class="nav-link" data-scroll-target="#computation-cost">常规算法的计算量速查 <span class="heading-en">Arithmetic Counts for Conventional Algorithms</span></a></li>
   <li><a href="#rank" id="toc-rank" class="nav-link" data-scroll-target="#rank">基、坐标、秩与三种消元结果 <span class="heading-en">Bases, Coordinates, Rank and Three Elimination Outcomes</span></a></li>
   <li><a href="#four-spaces" id="toc-four-spaces" class="nav-link" data-scroll-target="#four-spaces">四空间与相容性 <span class="heading-en">Four Spaces and Consistency</span></a></li>
   <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">投入产出 <span class="heading-en">Input–Output Models</span></a></li>
@@ -712,6 +718,7 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p><a href="./lessons/07-matrix-products.html#counterexamples">零乘积与消去反例</a>提醒：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">AB=0</annotation></semantics></math> 是说 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> 的每列在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{Nul}(A)</annotation></semantics></math> 中；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi><mo>=</mo><mi>A</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">AB=AC</annotation></semantics></math> 是说 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>−</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">B-C</annotation></semantics></math> 的每列在其中。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 列无关时才能保证对任意这些列都可消去。</p>
+<p><a href="./lessons/07-matrix-products.html#special-products">特殊矩阵的乘法 / Products of Special Matrices</a>：同阶对角矩阵左乘缩行、右乘缩列；同类三角乘积保持结构及对角元乘积规则；混合乘积一般不保持三角结构。结构保持不等于交换性。</p>
 </section>
 <section id="inverse" class="level2">
 <h2 class="anchored" data-anchor-id="inverse">逆矩阵与逆变换 <span class="heading-en">Inverse Matrices and Inverse Transformations</span></h2>
@@ -737,9 +744,10 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="lu" class="level2">
 <h2 class="anchored" data-anchor-id="lu">LU、前代与回代 <span class="heading-en">LU Factorization and Substitution</span></h2>
-<p>对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>:</mo><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">A:m\times n</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>:</mo><mi>m</mi><mo>×</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">L:m\times m</annotation></semantics></math> 为单位下三角，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>:</mo><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">U:m\times n</annotation></semantics></math> 为阶梯形；不换行的下方消元给出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>L</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">A=LU</annotation></semantics></math>。换行时采用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>A</mi><mo>=</mo><mi>L</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">PA=LU</annotation></semantics></math>，方程右端目标向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐛</mi><annotation encoding="application/x-tex">\mathbf b</annotation></semantics></math> 同步变为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">P\mathbf b</annotation></semantics></math>。<a href="./lessons/10-lu.html#derivation">逆操作顺序与算法</a>、<a href="./lessons/10-lu.html#main-example">分解例题</a>、<a href="./lessons/10-lu.html#reuse">两个目标向量的求解</a>、<a href="./lessons/10-lu.html#rectangular">矩形及退化情形</a>、<a href="./lessons/10-lu.html#later-pivot">换行调整乘子</a>。常规稠密方阵分解为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>n</mi><mn>3</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(n^3)</annotation></semantics></math>，每个新目标向量对应的求解为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math>，见<a href="./lessons/10-lu.html#cost">计算量范围</a>。</p>
-<section id="computation-cost" class="level3">
-<h3 class="anchored" data-anchor-id="computation-cost">常规算法的计算量速查 <span class="heading-en">Arithmetic Counts for Conventional Algorithms</span></h3>
+<p>对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>:</mo><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">A:m\times n</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>:</mo><mi>m</mi><mo>×</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">L:m\times m</annotation></semantics></math> 为单位下三角，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>:</mo><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">U:m\times n</annotation></semantics></math> 为阶梯形；不换行的下方消元给出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>L</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">A=LU</annotation></semantics></math>。换行时采用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>A</mi><mo>=</mo><mi>L</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">PA=LU</annotation></semantics></math>，方程右端目标向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐛</mi><annotation encoding="application/x-tex">\mathbf b</annotation></semantics></math> 同步变为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">P\mathbf b</annotation></semantics></math>。<a href="./lessons/10-lu.html#derivation">逆操作顺序与算法</a>、<a href="./lessons/10-lu.html#main-example">分解例题</a>、<a href="./lessons/10-lu.html#reuse">两个目标向量的求解</a>、<a href="./lessons/10-lu.html#rectangular">矩形及退化情形</a>、<a href="./lessons/10-lu.html#later-pivot">换行调整乘子</a>。常规稠密方阵分解为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>n</mi><mn>3</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(n^3)</annotation></semantics></math>，每个新目标向量对应的求解为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math>，见<a href="./topics/computational-cost.html#reuse">计算量范围</a>。</p>
+</section>
+<section id="computation-cost" class="level2">
+<h2 class="anchored" data-anchor-id="computation-cost">常规算法的计算量速查 <span class="heading-en">Arithmetic Counts for Conventional Algorithms</span></h2>
 <p><strong>算术运算（arithmetic operation）</strong>：实标量加、减、乘、除各计一次；尺寸为正整数。除向量加法/数乘外，表中突出主要项；不要求记住精确到个位的次数。次数不等于存储量或实际时间。</p>
 <div class="operation-table" tabindex="0" role="region" aria-label="计算量速查 / Arithmetic-count reference">
 <table class="caption-top table">
@@ -759,44 +767,47 @@ ul.task-list li input[type="checkbox"] {
 <td>各 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></td>
 </tr>
 <tr class="even">
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math> 矩阵相加或数乘</td>
+<td>各 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">mn</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(mn)</annotation></semantics></math></td>
+</tr>
+<tr class="odd">
 <td>长度 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 的点积</td>
 <td>约 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>n</mi></mrow><annotation encoding="application/x-tex">2n</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>:</mo><mi>m</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">A:m\times n</annotation></semantics></math>，计算 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>𝐱</mi></mrow><annotation encoding="application/x-tex">A\mathbf x</annotation></semantics></math></td>
 <td>约 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>m</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">2mn</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(mn)</annotation></semantics></math>；方阵约 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">2n^2</annotation></semantics></math></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>:</mo><mi>m</mi><mo>×</mo><mi>n</mi><mo>,</mo><mi>B</mi><mo>:</mo><mi>n</mi><mo>×</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">A:m\times n,B:n\times p</annotation></semantics></math>，常规行列求和</td>
 <td>约 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>m</mi><mi>n</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">2mnp</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mi>n</mi><mi>p</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(mnp)</annotation></semantics></math>；方阵约 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msup><mi>n</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">2n^3</annotation></semantics></math></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>非零对角元的稠密三角方程，逐行求解</td>
 <td>约 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>n</mi><mn>2</mn></msup><annotation encoding="application/x-tex">n^2</annotation></semantics></math></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>可按当前算法分解的非奇异稠密方阵，常规LU分解</td>
 <td>约 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac><msup><mi>n</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\frac23n^3</annotation></semantics></math></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>同一矩阵分解一次，求解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> 个目标</td>
 <td>约 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac><msup><mi>n</mi><mn>3</mn></msup><mo>+</mo><mn>2</mn><mi>k</mi><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac23n^3+2kn^2</annotation></semantics></math></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>每个目标都重新分解并求解</td>
 <td>约 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo stretchy="false" form="prefix">(</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><msup><mi>n</mi><mn>3</mn></msup><mo>+</mo><mn>2</mn><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">k(\frac23n^3+2n^2)</annotation></semantics></math></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>已有LU后增加一个目标</td>
 <td>约 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">2n^2</annotation></semantics></math></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p><a href="./lessons/07-matrix-products.html#operation-count">从点积开始数 / Counting from Dot Products</a>；<a href="./lessons/07-matrix-products.html#evaluation-order">一次求值的运算顺序 / Order for One Evaluation</a>；<a href="./lessons/10-lu.html#triangular">三角求解 / Triangular Solves</a>；<a href="./lessons/10-lu.html#cost">LU求和与复用 / LU Count and Reuse</a>。<strong>大O记号（big-O notation）</strong>描述规模增长时的上界量级；这些是所述算法的成本，不是所有算法的下界。</p>
+<p><a href="./topics/computational-cost.html#operation-count">从点积开始数 / Counting from Dot Products</a>；<a href="./topics/computational-cost.html#evaluation-order">一次求值的运算顺序 / Order for One Evaluation</a>；<a href="./topics/computational-cost.html#elimination">逐步求和与三角求解计数 / Step Sums and Triangular-Solve Counts</a>；<a href="./topics/computational-cost.html#reuse">LU求和与复用 / LU Count and Reuse</a>。<strong>大O记号（big-O notation）</strong>描述规模增长时的上界量级；这些是所述算法的成本，不是所有算法的下界。</p>
 <p>上述LU成本比较限于非奇异稠密方阵及所述算法。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>100</mn><mo>,</mo><mi>k</mi><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">n=100,k=10</annotation></semantics></math> 时，三种情形分别约为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8.7</mn><mo>×</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">8.7\times10^5</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6.9</mn><mo>×</mo><msup><mn>10</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">6.9\times10^6</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.0</mn><mo>×</mo><msup><mn>10</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">2.0\times10^4</annotation></semantics></math> 次，均为主要项估计。</p>
 <p>对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>L</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">A=LU</annotation></semantics></math> 且 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math> 可逆，<a href="./lessons/10-lu.html#column-relations">零空间和列关系保持，列空间取像</a>。定义秩以后，可再看<a href="./topics/matrix-rank-factorization.html#lu-column-basis">用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mi>r</mi></msub><annotation encoding="application/x-tex">L_r</annotation></semantics></math> 的列张成原列空间</a>，不能无条件用整个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math> 替代；同一处也说明 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Row</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">Row</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>U</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{Row}(A)=\operatorname{Row}(U)</annotation></semantics></math> 不要求满秩。</p>
-</section>
 </section>
 <section id="rank" class="level2">
 <h2 class="anchored" data-anchor-id="rank">基、坐标、秩与三种消元结果 <span class="heading-en">Bases, Coordinates, Rank and Three Elimination Outcomes</span></h2>
