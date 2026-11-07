@@ -1,41 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 1050" role="img" aria-labelledby="title desc">
-<title id="title">四个基本子空间 / Four Fundamental Subspaces</title><desc id="desc">包含框示意，不是几何平面。输入环境Rⁿ包含行空间与零空间；输出环境Rᵐ包含列空间与左零空间。所有输入经A的像组成列空间，零空间映到零。Containment schematic, not a geometric drawing.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 690" role="img" aria-labelledby="title desc">
+<title id="title">四个基本子空间与矩阵的作用 / Four Fundamental Subspaces and the Action of a Matrix</title><desc id="desc">左右分别是实空间Rⁿ、Rᵐ，同侧两个子空间共享原点。行空间与列空间维数为r，零空间为n−r，左零空间为m−r。A从左向右作用：一般输入x的输出b=Ax属于列空间，零空间向量z映射为右侧零向量。实线箭头从各自原点出发表示向量，较粗虚线箭头表示矩阵作用。菱形形状、面积和夹角不表示实际几何关系。 Separate real ambient spaces; shared origins within each side. Solid arrows are vectors; dashed arrows are matrix actions.</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs>
 <style>text{font-family:"Noto Sans CJK SC","Noto Sans",sans-serif;fill:#243442}.label{font-size:21px;font-weight:600}.small{font-size:16px}.math{font-size:25px}.en{font-size:16px;fill:#42566a}</style>
-<rect width="420" height="1050" fill="white"/>
-<text x="20" y="30" class="label" >四个基本子空间</text>
-<text x="20" y="54" class="en" >Four Fundamental Subspaces</text>
-<rect x="16" y="76" width="388" height="340" rx="10" fill="#f8fafc" stroke="#65798a" stroke-width="2" stroke-dasharray=""/>
-<text x="32" y="108" class="label" >输入环境 ℝⁿ</text>
-<text x="32" y="132" class="en" >Input ambient space</text>
-<rect x="16" y="610" width="388" height="340" rx="10" fill="#f8fafc" stroke="#65798a" stroke-width="2" stroke-dasharray=""/>
-<text x="32" y="642" class="label" >输出环境 ℝᵐ</text>
-<text x="32" y="666" class="en" >Output ambient space</text>
-<rect x="28" y="151" width="364" height="118" rx="10" fill="white" stroke="#315c88" stroke-width="2" stroke-dasharray=""/>
-<text x="42" y="182" class="math" >Row(A)</text>
-<text x="246" y="181" class="small" >dim = r</text>
-<text x="42" y="215" class="small" >约束系数：行的线性组合</text>
-<text x="42" y="242" class="en" >Combinations of constraint rows</text>
-<rect x="28" y="283" width="364" height="118" rx="10" fill="white" stroke="#896222" stroke-width="2" stroke-dasharray="6 4"/>
-<text x="42" y="314" class="math" >Nul(A)</text>
-<text x="246" y="313" class="small" >dim = n − r</text>
-<text x="42" y="347" class="small" >不改变输出的输入变化</text>
-<text x="42" y="374" class="en" >Input changes with zero output</text>
-<rect x="28" y="685" width="364" height="118" rx="10" fill="white" stroke="#27746d" stroke-width="2" stroke-dasharray=""/>
-<text x="42" y="716" class="math" >Col(A)</text>
-<text x="246" y="715" class="small" >dim = r</text>
-<text x="42" y="749" class="small" >所有可达输出</text>
-<text x="42" y="776" class="en" >All attainable outputs</text>
-<rect x="28" y="817" width="364" height="118" rx="10" fill="white" stroke="#765184" stroke-width="2" stroke-dasharray="6 4"/>
-<text x="42" y="848" class="math" >Nul(Aᵀ)</text>
-<text x="246" y="847" class="small" >dim = m − r</text>
-<text x="42" y="881" class="small" >使方程左边相消的组合系数</text>
-<text x="42" y="908" class="en" >Coefficients cancelling equation rows</text>
-<text x="25" y="453" class="label" >A：所有输入 → 可达输出</text>
-<text x="25" y="479" class="en" >A maps all inputs onto Col(A)</text>
-<text x="25" y="513" class="math" >A(Nul(A)) = {0}</text>
-<text x="25" y="540" class="en" >零空间中的输入都映到零 / Null inputs → 0</text>
-<polyline points="210.00,556.00 210.00,600.00" fill="none" stroke="#243442" stroke-width="2.4" stroke-dasharray="" marker-end="url(#arrow)"/>
-<text x="20" y="989" class="small" >框仅表示所属空间，不表示几何形状。</text>
-<text x="20" y="1016" class="en" >Boxes show membership, not geometry.</text>
+<rect width="760" height="690" fill="white"/>
+<style>.space-name{font-size:24px;font-weight:600}.space-en{font-size:18px}.formula{font-size:22px}.vec{font-weight:700}.action-label{font-size:22px;paint-order:stroke;stroke:white;stroke-width:7px;stroke-linejoin:round}.origin-label{font-size:21px}</style>
+<text x="380.0" y="33" class="formula" text-anchor="middle">A ∈ ℝᵐˣⁿ，r = rank(A)</text>
+<text x="380.0" y="68" class="math" text-anchor="middle">A : ℝⁿ → ℝᵐ</text>
+<rect x="10" y="88" width="340" height="546" rx="10" fill="#f5f8fb" stroke="#c4cfd9" stroke-width="2" stroke-dasharray=""/>
+<text x="180" y="119" class="space-name" text-anchor="middle">输入空间 ℝⁿ</text>
+<text x="180" y="146" class="space-en" text-anchor="middle">Input Space</text>
+<rect x="410" y="88" width="340" height="546" rx="10" fill="#f5f8fb" stroke="#c4cfd9" stroke-width="2" stroke-dasharray=""/>
+<text x="580" y="119" class="space-name" text-anchor="middle">输出空间 ℝᵐ</text>
+<text x="580" y="146" class="space-en" text-anchor="middle">Output Space</text>
+<polygon id="space-row" points="180,350 35,255 180,160 325,255" fill="#dfebf7" stroke="#315c88" stroke-width="1.8"/>
+<text x="180" y="211" class="space-name" text-anchor="middle">行空间</text>
+<text x="180" y="236" class="space-en" text-anchor="middle">Row Space</text>
+<text x="180" y="265" class="formula" text-anchor="middle">Row(A) = Col(Aᵀ)</text>
+<text x="180" y="294" class="formula" text-anchor="middle">dim = r</text>
+<polygon id="space-null" points="180,350 325,480 180,610 35,480" fill="#faf0d9" stroke="#896222" stroke-width="1.8"/>
+<text x="180" y="460" class="space-name" text-anchor="middle">零空间</text>
+<text x="180" y="485" class="space-en" text-anchor="middle">Null Space</text>
+<text x="180" y="514" class="formula" text-anchor="middle">Nul(A)</text>
+<text x="180" y="543" class="formula" text-anchor="middle">dim = n − r</text>
+<polygon id="space-column" points="580,350 435,255 580,160 725,255" fill="#dcefe9" stroke="#27746d" stroke-width="1.8"/>
+<text x="580" y="211" class="space-name" text-anchor="middle">列空间</text>
+<text x="580" y="236" class="space-en" text-anchor="middle">Column Space</text>
+<text x="580" y="265" class="formula" text-anchor="middle">Col(A)</text>
+<text x="580" y="294" class="formula" text-anchor="middle">dim = r</text>
+<polygon id="space-left-null" points="580,350 725,480 580,610 435,480" fill="#eee3f3" stroke="#765184" stroke-width="1.8"/>
+<text x="580" y="460" class="space-name" text-anchor="middle">左零空间</text>
+<text x="580" y="485" class="space-en" text-anchor="middle">Left Null Space</text>
+<text x="580" y="514" class="formula" text-anchor="middle">Nul(Aᵀ)</text>
+<text x="580" y="543" class="formula" text-anchor="middle">dim = m − r</text>
+<path id="vector-general" d="M180 350 L330 369" fill="none" stroke="#243442" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path id="vector-null" d="M180 350 L258 423" fill="none" stroke="#896222" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path id="vector-output" d="M580 350 L640 305" fill="none" stroke="#27746d" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path id="action-general" d="M330 369 C410 310 430 305 640 305" fill="none" stroke="#334d65" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#arrow)"/>
+<path id="action-null" d="M258 423 C410 455 470 410 580 350" fill="none" stroke="#896222" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#arrow)"/>
+<text x="288" y="402" class="formula" text-anchor="start"><tspan class="vec">x</tspan></text>
+<text x="255" y="450" class="formula" text-anchor="start"><tspan class="vec">z</tspan></text>
+<text x="644" y="334" class="formula" text-anchor="start"><tspan class="vec">b</tspan> = A<tspan class="vec">x</tspan></text>
+<text x="380.0" y="300" class="action-label" text-anchor="middle">A</text>
+<text x="380.0" y="475" class="action-label" text-anchor="middle">A<tspan class="vec">z</tspan> = <tspan class="vec">0</tspan>ₘ</text>
+<circle id="origin-ₙ" cx="180" cy="350" r="4" fill="#243442"/>
+<text x="158" y="343" class="origin-label" text-anchor="end"><tspan class="vec">0</tspan>ₙ</text>
+<circle id="origin-ₘ" cx="580" cy="350" r="4" fill="#243442"/>
+<text x="558" y="343" class="origin-label" text-anchor="end"><tspan class="vec">0</tspan>ₘ</text>
+<polyline points="30.00,664.00 70.00,664.00" fill="none" stroke="#243442" stroke-width="2.2" stroke-dasharray=""/>
+<text x="80" y="671" class="small" >向量 / Vector</text>
+<polyline points="380.00,664.00 425.00,664.00" fill="none" stroke="#243442" stroke-width="3.2" stroke-dasharray="9 6"/>
+<text x="435.0" y="671" class="small" >矩阵作用 / Matrix action</text>
 </svg>

@@ -3,8 +3,8 @@
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs>
 <style>text{font-family:"Noto Sans CJK SC","Noto Sans",sans-serif;fill:#243442}.label{font-size:21px;font-weight:600}.small{font-size:16px}.math{font-size:25px}.en{font-size:16px;fill:#42566a}</style>
 <rect width="700" height="530" fill="white"/>
-<text x="20" y="30" class="label" >同例的输出环境 ℝ³</text>
-<text x="20" y="55" class="en" >The output ambient space of the same example</text>
+<text x="20" y="30" class="label" >同例的输出空间 ℝ³</text>
+<text x="20" y="55" class="en" >The output space of the same example</text>
 <polygon points="324.81,435.64 180.56,287.56 365.19,124.36 509.44,272.44" fill="#dcefe9" fill-opacity="0.85" stroke="#27746d" stroke-width="1.4" stroke-dasharray="5 5"/>
 <polyline points="318.25,428.91 502.88,265.71" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
 <polyline points="333.20,428.22 188.95,280.15" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
