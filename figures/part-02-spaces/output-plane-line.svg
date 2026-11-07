@@ -1,50 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 530" role="img" aria-labelledby="title desc">
-<title id="title">输出侧的平面与直线 / Output Plane and Line</title><desc id="desc">真实R³示意，列空间为z=x+y，左零空间为t(-1,-1,1)。正交投影使用相同空间坐标单位；向量均从原点出发。平面和直线向绘图区外无限延伸。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" role="img" aria-labelledby="title desc">
+<title id="title">输出侧的平面与直线 / The Plane and Line on the Output Side</title><desc id="desc">同一正投影下的真实输出空间R³：列空间为b₃=b₁+b₂，左零空间由ℓ=(−1,−1,1)ᵀ张成。a₁=(1,0,1)ᵀ、a₃=(0,1,1)ᵀ与ℓ的实线箭头均从原点出发。平面和直线无限延伸，虚线轮廓仅限定绘图区；不画输入空间R⁴。 / A plane and a line in R³, with a single orthographic camera and equal world units.</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs>
 <style>text{font-family:"Noto Sans CJK SC","Noto Sans",sans-serif;fill:#243442}.label{font-size:21px;font-weight:600}.small{font-size:16px}.math{font-size:25px}.en{font-size:16px;fill:#42566a}</style>
-<rect width="700" height="530" fill="white"/>
-<text x="20" y="30" class="label" >同例的输出空间 ℝ³</text>
-<text x="20" y="55" class="en" >The output space of the same example</text>
-<polygon points="324.81,435.64 180.56,287.56 365.19,124.36 509.44,272.44" fill="#dcefe9" fill-opacity="0.85" stroke="#27746d" stroke-width="1.4" stroke-dasharray="5 5"/>
-<polyline points="318.25,428.91 502.88,265.71" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
-<polyline points="333.20,428.22 188.95,280.15" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
-<polyline points="296.40,406.47 481.03,243.27" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
-<polyline points="361.18,403.49 216.93,255.42" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
-<polyline points="274.54,384.04 459.17,220.83" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
-<polyline points="389.15,378.77 244.90,230.69" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
-<polyline points="252.68,361.60 437.32,198.40" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
-<polyline points="417.12,354.04 272.88,205.96" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
-<polyline points="230.83,339.17 415.46,175.96" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
-<polyline points="445.10,329.31 300.85,181.23" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
-<polyline points="208.97,316.73 393.60,153.53" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
-<polyline points="473.07,304.58 328.82,156.51" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
-<polyline points="187.12,294.29 371.75,131.09" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
-<polyline points="501.05,279.85 356.80,131.78" fill="none" stroke="#a4cbc3" stroke-width="1" stroke-dasharray=""/>
-<polyline points="445.54,231.79 222.61,338.68" fill="none" stroke="#7a8790" stroke-width="1.4" stroke-dasharray="" marker-end="url(#arrow)"/>
-<text x="228.60649870525913" y="342.68457196796345" class="small" >b₁</text>
-<polyline points="298.29,297.96 304.29,303.96" fill="none" stroke="#7a8790" stroke-width="1" stroke-dasharray=""/>
-<text x="307.2880352518783" y="316.9587757028441" class="en" >1</text>
-<polyline points="216.32,242.34 501.66,325.85" fill="none" stroke="#7a8790" stroke-width="1.4" stroke-dasharray="" marker-end="url(#arrow)"/>
-<text x="507.65653781701633" y="329.8494125762689" class="small" >b₂</text>
-<polyline points="397.95,293.37 403.95,299.37" fill="none" stroke="#7a8790" stroke-width="1" stroke-dasharray=""/>
-<text x="406.9487635060773" y="312.3747902058103" class="en" >1</text>
-<polyline points="345.00,431.41 345.00,95.68" fill="none" stroke="#7a8790" stroke-width="1.4" stroke-dasharray="" marker-end="url(#arrow)"/>
-<text x="351.0" y="99.67584971212267" class="small" >b₃</text>
-<polyline points="342.00,211.17 348.00,217.17" fill="none" stroke="#7a8790" stroke-width="1" stroke-dasharray=""/>
-<text x="351.0" y="230.16994632575808" class="en" >1</text>
-<polyline points="364.58,445.06 325.42,114.94" fill="none" stroke="#765184" stroke-width="2" stroke-dasharray="7 5"/>
-<polyline points="345.00,280.00 301.29,235.13" fill="none" stroke="#27746d" stroke-width="3" stroke-dasharray="" marker-end="url(#arrow)"/>
-<text x="271.2880352518783" y="227.12872202860217" class="label" >a₁</text>
-<polyline points="345.00,280.00 400.95,230.54" fill="none" stroke="#27746d" stroke-width="3" stroke-dasharray="" marker-end="url(#arrow)"/>
-<text x="410.9487635060773" y="230.54473653156842" class="label" >a₃</text>
-<polyline points="345.00,280.00 332.76,176.84" fill="none" stroke="#765184" stroke-width="3" stroke-dasharray="" marker-end="url(#arrow)"/>
-<text x="87.76320124204449" y="158.83638041710367" class="label" >ℓ = (−1,−1,1)ᵀ</text>
-<circle cx="345.0" cy="280.0" r="3.5" fill="#243442"/>
-<text x="354.0" y="300.0" class="small" >0</text>
-<text x="18" y="100" class="label" >Col(A): b₃ = b₁ + b₂</text>
-<text x="18" y="126" class="en" >平面 / Plane</text>
-<text x="455" y="355" class="label" >Nul(Aᵀ) = Span{ℓ}</text>
-<text x="505" y="381" class="en" >直线 / Line</text>
-<text x="20" y="477" class="small" >虚线轮廓只是截取范围；平面与直线均无限延伸。</text>
-<text x="20" y="504" class="en" >The dashed outline is a viewing window; both subspaces extend indefinitely.</text>
+<rect width="700" height="500" fill="white"/>
+<polygon id="column-plane" points="314.37,456.05 243.37,246.10 395.63,63.95 466.63,273.90" fill="#dcefe9" fill-opacity="0.85" stroke="#27746d" stroke-width="1.4" stroke-dasharray="5 5"/>
+<polyline points="308.45,438.55 460.71,256.40" fill="none" stroke="#b4d3cc" stroke-width="1" stroke-dasharray=""/>
+<polyline points="327.06,440.87 256.06,230.92" fill="none" stroke="#b4d3cc" stroke-width="1" stroke-dasharray=""/>
+<polyline points="293.66,394.81 445.92,212.66" fill="none" stroke="#b4d3cc" stroke-width="1" stroke-dasharray=""/>
+<polyline points="358.78,402.92 287.78,192.98" fill="none" stroke="#b4d3cc" stroke-width="1" stroke-dasharray=""/>
+<polyline points="278.87,351.08 431.13,168.92" fill="none" stroke="#b4d3cc" stroke-width="1" stroke-dasharray=""/>
+<polyline points="390.50,364.97 319.50,155.03" fill="none" stroke="#b4d3cc" stroke-width="1" stroke-dasharray=""/>
+<polyline points="264.08,307.34 416.34,125.19" fill="none" stroke="#b4d3cc" stroke-width="1" stroke-dasharray=""/>
+<polyline points="422.22,327.02 351.22,117.08" fill="none" stroke="#b4d3cc" stroke-width="1" stroke-dasharray=""/>
+<polyline points="249.29,263.60 401.55,81.45" fill="none" stroke="#b4d3cc" stroke-width="1" stroke-dasharray=""/>
+<polyline points="453.94,289.08 382.94,79.13" fill="none" stroke="#b4d3cc" stroke-width="1" stroke-dasharray=""/>
+<polyline points="423.04,309.91 272.17,199.24" fill="none" stroke="#7a8790" stroke-width="1.4" stroke-dasharray="" marker-end="url(#arrow)"/>
+<text x="280.1668206988229" y="203.24479823298884" class="label" >b₁</text>
+<polyline points="209.08,283.27 532.64,231.67" fill="none" stroke="#7a8790" stroke-width="1.4" stroke-dasharray="" marker-end="url(#arrow)"/>
+<text x="540.6363262591833" y="235.66938414329059" class="label" >b₂</text>
+<polyline points="355.00,411.29 355.00,75.82" fill="none" stroke="#7a8790" stroke-width="1.4" stroke-dasharray="" marker-end="url(#arrow)"/>
+<text x="363.0" y="79.82024632596196" class="label" >b₃</text>
+<polyline points="456.57,361.89 253.43,158.11" fill="none" stroke="#765184" stroke-width="2" stroke-dasharray="7 5"/>
+<path id="geometry-a1" data-world-vector="1,0,1" d="M355.00 260.00 L325.42 172.52" fill="none" stroke="#27746d" stroke-width="2.4" marker-end="url(#arrow)"/>
+<text x="295.416721678151" y="162.5232301996253" class="label" >a₁</text>
+<path id="geometry-a3" data-world-vector="0,1,1" d="M355.00 260.00 L418.44 184.10" fill="none" stroke="#27746d" stroke-width="2.4" marker-end="url(#arrow)"/>
+<text x="428.4415450925655" y="182.10343945330447" class="label" >a₃</text>
+<path id="geometry-ell" data-world-vector="-1,-1,1" d="M355.00 260.00 L321.14 226.04" fill="none" stroke="#765184" stroke-width="2.4" marker-end="url(#arrow)"/>
+<text x="299.1417332292835" y="233.03787998202947" class="label" >ℓ</text>
+<circle cx="355.0" cy="260.0" r="3.5" fill="#243442"/>
+<text x="365.0" y="281.0" class="label" >0</text>
+<text x="30" y="52" class="label" >Col(A)</text>
+<text x="30" y="80" class="label" >b₃ = b₁ + b₂</text>
+<text x="30" y="107" class="en" >列空间 / Column Space</text>
+<text x="445" y="405" class="label" >Nul(Aᵀ) = Span{ℓ}</text>
+<text x="445" y="432" class="en" >左零空间 / Left Null Space</text>
 </svg>

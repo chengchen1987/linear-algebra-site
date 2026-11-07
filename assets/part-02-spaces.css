@@ -3,11 +3,18 @@
 .four-spaces-scroll { overflow-x: auto; overscroll-behavior-x: contain; }
 .four-spaces-scroll:focus-visible { outline: 2px solid #315c88; outline-offset: 3px; }
 .four-spaces-figure picture, .four-spaces-figure img { display: block; width: 100%; height: auto; }
-.four-spaces-figure picture { min-width: 760px; max-width: 1000px; margin-inline: auto; }
+.four-spaces-figure picture { min-width: 720px; max-width: 1000px; margin-inline: auto; }
 .four-spaces-figure img { max-width: none; }
 .four-spaces-figure figcaption { margin-top: .65rem; color: #42566a; font-size: .93em; line-height: 1.6; }
 .four-spaces-scroll-note { display: none; }
 @media (max-width: 600px) {
   .four-spaces-scroll-note { display: block; color: #42566a; font-size: .9em; }
   .four-spaces-figure picture { width: 680px; min-width: 680px; }
+}
+
+/* The real R³ geometry keeps the same readable scale in normal/focus modes. */
+.output-geometry-figure .four-spaces-scroll { max-width: 680px; margin-inline: auto; }
+.output-geometry-figure img { width: 680px; max-width: 100%; margin-inline: auto; }
+@media (max-width: 600px) {
+  .output-geometry-figure img { min-width: 580px; max-width: none; width: 580px; }
 }
