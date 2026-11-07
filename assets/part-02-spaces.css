@@ -18,3 +18,10 @@
 @media (max-width: 600px) {
   .output-geometry-figure img { min-width: 580px; max-width: none; width: 580px; }
 }
+
+/* Equal-unit coordinate planes need local scrolling, not stretched data. */
+.two-dimensional-figure .four-spaces-scroll { max-width: 960px; margin-inline: auto; }
+.two-dimensional-figure img { width: 960px; min-width: 840px; max-width: 100%; margin-inline: auto; }
+
+/* This wider coordinate figure can also scroll at tablet widths. */
+.two-dimensional-scroll-note { display: block; color: #42566a; font-size: .9em; }

@@ -712,7 +712,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="history" class="level2">
 <h2 class="anchored" data-anchor-id="history">用语来自怎样的背景？ <span class="heading-en">The Historical Setting of the Term</span></h2>
 <p>Stewart 的<a href="http://hdl.handle.net/1903/566">早期 SVD 历史研究</a>把相关工作放在双线性型和积分方程两条线索中讨论，涉及 Beltrami、Jordan、Sylvester、Schmidt、Weyl 等人的贡献。今天统一写出的分解式，不能直接当成每位作者当时采用的记号与研究对象。</p>
-<p>在专门讨论命名的段落中，Stewart 谨慎地说 singular value 这一用语似乎来自积分方程文献。他列出早期用例，并说明有些“值”对应另一种量的倒数，后来用法才逐步稳定。这支持我们理解历史语境，却不足以证明“因为矩阵奇异，所以把这个数叫奇异值”这样的简单因果故事。本篇保留这项限制，也不据有限用例指定一个毫无争议的命名瞬间。</p>
+<p>在专门讨论命名的段落中，Stewart 谨慎地说 singular value 这一用语似乎来自积分方程文献。他列出早期用例，并说明有些“值”对应另一种量的倒数，后来用法才逐步稳定。这条词源线索仍有不确定性，不能简单解释成“因为矩阵奇异，所以叫奇异值”。</p>
 </section>
 <section id="example" class="level2">
 <h2 class="anchored" data-anchor-id="example">名字之外，先看伸缩关系 <span class="heading-en">Look First at the Scaling Relation</span></h2>
@@ -722,11 +722,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="connections" class="level2">
 <h2 class="anchored" data-anchor-id="connections">零奇异值、秩与近似 <span class="heading-en">Zero Singular Values, Rank, and Approximation</span></h2>
 <p>非零奇异值的个数等于秩。只有限定为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n\times n</annotation></semantics></math> 方阵时，才能说“全部 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> 个奇异值为正”等价于可逆；出现零奇异值则不可逆。矩形情形应分别讨论满行秩、满列秩与两个零空间，不能把方阵的用语直接套过来。</p>
-<p>再看 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>：它在每个方向上的伸缩程度都是1，完全没有“异常”，却自然拥有奇异值。这个反例帮助我们把名称与定义分开。<a href="../topics/low-rank-image-approximation.html">低秩图像近似</a>进一步利用大小不同的奇异值组织近似：保留较大项、舍去较小项，并计算误差。这里不需要再做一次照片实验；关键是从“某个数为何叫这个名字”回到它实际量度什么。</p>
+<p>再看 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>：它在每个方向上的伸缩程度都是1，完全没有“异常”，却自然拥有奇异值。这个反例帮助我们把名称与定义分开。<a href="../topics/low-rank-image-approximation.html">低秩图像近似</a>进一步利用大小不同的奇异值组织近似：保留较大项、舍去较小项，并计算误差。名字引出的问题，由此联系到可计算的伸缩程度与近似误差。</p>
 </section>
 <section id="sources" class="level2">
 <h2 class="anchored" data-anchor-id="sources">来源与返回 <span class="heading-en">Sources and Return Links</span></h2>
-<p>G. W. Stewart，<em>On the Early History of the Singular Value Decomposition</em>，University of Maryland 技术报告 CS-TR-2855 / UMIACS-TR-92-31（1992年3月），特别是引言与第7节 “Nomenclature”。<a href="http://hdl.handle.net/1903/566">馆藏及开放全文</a>的入库日期不等于报告写作日期。历史段按该研究的谨慎措辞概括；后面的矩阵例子是本课程的现代说明。</p>
+<p>G. W. Stewart，<em>On the Early History of the Singular Value Decomposition</em>，University of Maryland 技术报告 CS-TR-2855 / UMIACS-TR-92-31（1992年3月）。<a href="http://hdl.handle.net/1903/566">馆藏及开放全文</a>。上述命名讨论见报告第7节 “Nomenclature”；矩阵例子说明今天使用的定义。</p>
 <p><a href="../topics/singular-value-decomposition.html">返回：奇异值分解 / Return to Singular Value Decomposition</a></p>
 
 

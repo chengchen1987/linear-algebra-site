@@ -1,56 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 690" role="img" aria-labelledby="title desc">
-<title id="title">四个基本子空间与矩阵的作用 / Four Fundamental Subspaces and the Action of a Matrix</title><desc id="desc">左右分别是实空间Rⁿ、Rᵐ，同侧两个子空间共享原点。行空间与列空间维数为r，零空间为n−r，左零空间为m−r。A从左向右作用：一般输入x的输出b=Ax属于列空间，零空间向量z映射为右侧零向量。实线箭头从各自原点出发表示向量；端点以圆点标记，留有间隔的较粗虚线表示输入与输出的对应关系，不是位移向量。菱形形状、面积和夹角不表示实际几何关系。 Separate real ambient spaces; shared origins within each side. Solid arrows are vectors; dashed arrows are matrix actions.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 535" role="img" aria-labelledby="title desc">
+<title id="title">四个基本子空间与矩阵的作用 / Four Fundamental Subspaces and the Action of a Matrix</title><desc id="desc">左侧Rⁿ、右侧Rᵐ，同侧两个菱形共享本侧零点；行/列空间维数r，零空间n−r，左零空间m−r。虚线从行空间输入点x_r精确连接列空间像点b=Ax_r，从零空间点z精确连接输出零点0_m。一般输入x=x_r+z具有同一像。没有位置向量箭头。菱形仅表示所属关系，形状、面积、夹角不编码几何或维数。 / Points represent inputs and outputs; dashed arrows connect each input to its image.</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs>
 <style>text{font-family:"Noto Sans CJK SC","Noto Sans",sans-serif;fill:#243442}.label{font-size:21px;font-weight:600}.small{font-size:16px}.math{font-size:25px}.en{font-size:16px;fill:#42566a}</style>
-<rect width="1000" height="690" fill="white"/>
-<style>.space-name{font-size:24px;font-weight:600}.space-en{font-size:18px}.formula{font-size:22px}.vec{font-weight:700}.action-label{font-size:22px;paint-order:stroke;stroke:white;stroke-width:7px;stroke-linejoin:round}.origin-label{font-size:21px}</style>
-<text x="500.0" y="33" class="formula" text-anchor="middle">A ∈ ℝᵐˣⁿ，r = rank(A)</text>
-<text x="500.0" y="68" class="math" text-anchor="middle">A : ℝⁿ → ℝᵐ</text>
-<rect x="20" y="88" width="420" height="546" rx="10" fill="#f5f8fb" stroke="#c4cfd9" stroke-width="2" stroke-dasharray=""/>
-<text x="230" y="119" class="space-name" text-anchor="middle">输入空间 ℝⁿ</text>
-<text x="230" y="146" class="space-en" text-anchor="middle">Input Space</text>
-<rect x="560" y="88" width="420" height="546" rx="10" fill="#f5f8fb" stroke="#c4cfd9" stroke-width="2" stroke-dasharray=""/>
-<text x="770" y="119" class="space-name" text-anchor="middle">输出空间 ℝᵐ</text>
-<text x="770" y="146" class="space-en" text-anchor="middle">Output Space</text>
-<polygon id="space-row" points="230,350 45,255 230,160 415,255" fill="#dfebf7" stroke="#315c88" stroke-width="1.8"/>
-<text x="230" y="205" class="space-name" text-anchor="middle">行空间</text>
-<text x="230" y="230" class="space-en" text-anchor="middle">Row Space</text>
-<text x="230" y="259" class="formula" text-anchor="middle">Row(A) = Col(Aᵀ)</text>
-<text x="230" y="288" class="formula" text-anchor="middle">dim = r</text>
-<polygon id="space-null" points="230,350 415,480 230,610 45,480" fill="#faf0d9" stroke="#896222" stroke-width="1.8"/>
-<text x="230" y="460" class="space-name" text-anchor="middle">零空间</text>
-<text x="230" y="485" class="space-en" text-anchor="middle">Null Space</text>
-<text x="230" y="514" class="formula" text-anchor="middle">Nul(A)</text>
-<text x="230" y="543" class="formula" text-anchor="middle">dim = n − r</text>
-<polygon id="space-column" points="770,350 585,255 770,160 955,255" fill="#dcefe9" stroke="#27746d" stroke-width="1.8"/>
-<text x="770" y="205" class="space-name" text-anchor="middle">列空间</text>
-<text x="770" y="230" class="space-en" text-anchor="middle">Column Space</text>
-<text x="770" y="259" class="formula" text-anchor="middle">Col(A)</text>
-<text x="770" y="288" class="formula" text-anchor="middle">dim = r</text>
-<polygon id="space-left-null" points="770,350 955,480 770,610 585,480" fill="#eee3f3" stroke="#765184" stroke-width="1.8"/>
-<text x="770" y="460" class="space-name" text-anchor="middle">左零空间</text>
-<text x="770" y="485" class="space-en" text-anchor="middle">Left Null Space</text>
-<text x="770" y="514" class="formula" text-anchor="middle">Nul(Aᵀ)</text>
-<text x="770" y="543" class="formula" text-anchor="middle">dim = m − r</text>
-<path id="vector-general" d="M230 350 L415 369" fill="none" stroke="#243442" stroke-width="2.2" marker-end="url(#arrow)"/>
-<path id="vector-null" d="M230 350 L308 423" fill="none" stroke="#896222" stroke-width="2.2" marker-end="url(#arrow)"/>
-<path id="vector-output" d="M770 350 L880 280" fill="none" stroke="#27746d" stroke-width="2.2" marker-end="url(#arrow)"/>
-<path id="action-general" d="M431 351 C465 305 800 326 862 255" fill="none" stroke="#334d65" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#arrow)"/>
-<path id="action-null" d="M326 437 C460 455 660 410 752 370" fill="none" stroke="#896222" stroke-width="3.2" stroke-dasharray="9 6" marker-end="url(#arrow)"/>
-<circle id="endpoint-general" cx="415" cy="369" r="4.5" fill="#243442" stroke="white" stroke-width="1.2"/>
-<circle id="endpoint-null" cx="308" cy="423" r="4.5" fill="#243442" stroke="white" stroke-width="1.2"/>
-<circle id="endpoint-output" cx="880" cy="280" r="4.5" fill="#243442" stroke="white" stroke-width="1.2"/>
-<text x="373" y="402" class="formula" text-anchor="start"><tspan class="vec">x</tspan></text>
-<text x="305" y="450" class="formula" text-anchor="start"><tspan class="vec">z</tspan></text>
-<text x="885" y="316" class="formula" text-anchor="start"><tspan class="vec">b</tspan> = A<tspan class="vec">x</tspan></text>
-<text x="500.0" y="300" class="action-label" text-anchor="middle"><tspan class="vec">x</tspan> ↦ A<tspan class="vec">x</tspan></text>
-<text x="500.0" y="475" class="action-label" text-anchor="middle"><tspan class="vec">z</tspan> ↦ <tspan class="vec">0</tspan>ₘ</text>
-<circle id="origin-ₙ" cx="230" cy="350" r="4" fill="#243442"/>
-<text x="240" y="378" class="origin-label" text-anchor="start"><tspan class="vec">0</tspan>ₙ</text>
-<circle id="origin-ₘ" cx="770" cy="350" r="4" fill="#243442"/>
-<text x="780" y="378" class="origin-label" text-anchor="start"><tspan class="vec">0</tspan>ₘ</text>
-<polyline points="30.00,664.00 70.00,664.00" fill="none" stroke="#243442" stroke-width="2.2" stroke-dasharray=""/>
-<text x="80" y="671" class="small" >向量 / Vector</text>
-<polyline points="500.00,664.00 545.00,664.00" fill="none" stroke="#243442" stroke-width="3.2" stroke-dasharray="9 6"/>
-<text x="555.0" y="671" class="small" >矩阵作用 / Matrix action</text>
+<rect width="1000" height="535" fill="white"/>
+<style>.formula{font-size:22px}.space-en{font-size:17px;fill:#42566a}.map-label{font-size:21px;paint-order:stroke;stroke:white;stroke-width:5px}</style>
+<text x="210" y="29" class="label" text-anchor="middle">输入空间 ℝⁿ</text>
+<text x="210" y="53" class="space-en" text-anchor="middle">Input Space</text>
+<text x="790" y="29" class="label" text-anchor="middle">输出空间 ℝᵐ</text>
+<text x="790" y="53" class="space-en" text-anchor="middle">Output Space</text>
+<text x="500.0" y="79" class="formula" text-anchor="middle">A : ℝⁿ → ℝᵐ，r = rank(A)</text>
+<polygon id="space-row" points="210,303 30,230 210,157 390,230" fill="#eef4fa" stroke="#315c88" stroke-width="1.4"/>
+<text x="210" y="112" class="label" text-anchor="middle">行空间</text>
+<text x="210" y="135" class="space-en" text-anchor="middle">Row Space · dim = r</text>
+<text x="175" y="219" class="formula" text-anchor="middle">Row(A)</text>
+<polygon id="space-null" points="210,303 390,376 210,449 30,376" fill="#fcf7ec" stroke="#896222" stroke-width="1.4"/>
+<text x="210" y="483" class="label" text-anchor="middle">零空间</text>
+<text x="210" y="506" class="space-en" text-anchor="middle">Null Space · dim = n − r</text>
+<text x="175" y="405" class="formula" text-anchor="middle">Nul(A)</text>
+<polygon id="space-column" points="790,303 610,230 790,157 970,230" fill="#edf6f3" stroke="#27746d" stroke-width="1.4"/>
+<text x="790" y="112" class="label" text-anchor="middle">列空间</text>
+<text x="790" y="135" class="space-en" text-anchor="middle">Column Space · dim = r</text>
+<text x="825" y="219" class="formula" text-anchor="middle">Col(A)</text>
+<polygon id="space-left-null" points="790,303 970,376 790,449 610,376" fill="#f6f0f8" stroke="#765184" stroke-width="1.4"/>
+<text x="790" y="483" class="label" text-anchor="middle">左零空间</text>
+<text x="790" y="506" class="space-en" text-anchor="middle">Left Null Space · dim = m − r</text>
+<text x="825" y="405" class="formula" text-anchor="middle">Nul(Aᵀ)</text>
+<path id="action-row" d="M275 266 C380 266 620 266 725 266" fill="none" stroke="#334d65" stroke-width="2.5" stroke-dasharray="8 5" marker-end="url(#arrow)"/>
+<path id="action-null" d="M265 365 C430 385 630 303 790 303" fill="none" stroke="#896222" stroke-width="2.5" stroke-dasharray="8 5" marker-end="url(#arrow)"/>
+<circle id="endpoint-row" cx="275" cy="266" r="5.5" fill="#243442" stroke="white" stroke-width="1.5"/>
+<circle id="endpoint-null" cx="265" cy="365" r="5.5" fill="#243442" stroke="white" stroke-width="1.5"/>
+<circle id="endpoint-output" cx="725" cy="266" r="5.5" fill="#243442" stroke="white" stroke-width="1.5"/>
+<circle id="origin-ₙ" cx="210" cy="303" r="5.5" fill="#243442" stroke="white" stroke-width="1.5"/>
+<circle id="origin-ₘ" cx="790" cy="303" r="5.5" fill="#243442" stroke="white" stroke-width="1.5"/>
+<text x="263" y="251" class="formula" text-anchor="end"><tspan font-weight="700">x</tspan>ᵣ</text>
+<text x="253" y="358" class="formula" text-anchor="end"><tspan font-weight="700">z</tspan></text>
+<text x="738" y="251" class="formula" text-anchor="start"><tspan font-weight="700">b</tspan></text>
+<text x="198" y="325" class="formula" text-anchor="end"><tspan font-weight="700">0</tspan>ₙ</text>
+<text x="802" y="325" class="formula" text-anchor="start"><tspan font-weight="700">0</tspan>ₘ</text>
+<text x="500.0" y="245" class="map-label" text-anchor="middle"><tspan font-weight="700">x</tspan>ᵣ ↦ <tspan font-weight="700">b</tspan> = A<tspan font-weight="700">x</tspan>ᵣ</text>
+<text x="500.0" y="377" class="map-label" text-anchor="middle"><tspan font-weight="700">z</tspan> ↦ <tspan font-weight="700">0</tspan>ₘ</text>
 </svg>

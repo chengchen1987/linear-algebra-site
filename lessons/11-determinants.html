@@ -776,7 +776,6 @@ ul.task-list li input[type="checkbox"] {
 <p>至此，单行/列线性及重复行/列为零已足以推出倍加不变、倍乘的因子和交换的因子。<strong>先不用转置或一般列展开证明三角结论：</strong> 下三角沿首行；上三角沿最后一行（已证任意行展开），均递归得对角乘积。</p>
 <p><strong>转置与列展开。</strong> 用消元把任意 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 化为上三角阶梯矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>，只做交换和倍加即可。设这些操作的行列式因子之积为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f\ne0</annotation></semantics></math>，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><mi>U</mi><mo>=</mo><mi>f</mi><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\det U=f\det A</annotation></semantics></math>。转置后，同一过程改为对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mi>𝖳</mi></msup><annotation encoding="application/x-tex">A^{\mathsf T}</annotation></semantics></math> 做对应列操作，得 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><msup><mi>U</mi><mi>𝖳</mi></msup><mo>=</mo><mi>f</mi><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><msup><mi>A</mi><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">\det U^{\mathsf T}=f\det A^{\mathsf T}</annotation></semantics></math>。上下三角有同一对角乘积，所以约去非零 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> 得 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><msup><mi>A</mi><mi>𝖳</mi></msup><mo>=</mo><mrow><mi mathvariant="normal">det</mi><mo>⁡</mo></mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">\det A^{\mathsf T}=\det A</annotation></semantics></math>；即使对角有零也成立。现在对转置矩阵按第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math> 行展开，用低一阶子式的转置相等，就得到原矩阵的第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math> 列展开。整个论证按“递归→基础关系→任意行→三角→转置→任意列”推进，不以行列式非零或乘积公式作依据。</p>
 </details>
-<p>接着在<a href="../lessons/12-determinants-properties.html">消元、性质与可逆性 / Elimination, Properties and Invertibility</a>用这些基础关系追踪每一步计算。</p>
 <div class="callout callout-style-default callout-note callout-titled" title="选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -787,9 +786,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><a href="../topics/names-matrix-determinant.html">矩阵与行列式的名字 / Why “Matrix” and “Determinant”?</a>讨论命名背景，并用小例子联系本主题。课外阅读，跳过不影响主线。</p>
+<p>行列式的名字与“判定”有什么联系，零行列式又能告诉我们什么？见<a href="../topics/names-matrix-determinant.html#determinant-name">矩阵与行列式的名字 / Why “Matrix” and “Determinant”?</a>。</p>
 </div>
 </div>
+<p>接着在<a href="../lessons/12-determinants-properties.html">消元、性质与可逆性 / Elimination, Properties and Invertibility</a>用这些基础关系追踪每一步计算。</p>
 
 
 </section>

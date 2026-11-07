@@ -816,7 +816,6 @@ ul.task-list li input[type="checkbox"] {
 <details class="review-answer"><summary>完整解答 / Full Solution</summary>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mi>T</mi></msup><mi>𝐝</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>19</mn><mo>,</mo><mn>11</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">C^T\mathbf d=(19,11)^T</annotation></semantics></math>，消元给 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>𝐱</mi><mo accent="true">̂</mo></mover><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">\widehat{\mathbf x}=(1,2)^T</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>𝐝</mi><mo accent="true">̂</mo></mover><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">\widehat{\mathbf d}=(4,4,3)^T</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐞</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>2</mn><mo>,</mo><mi>−</mi><mn>4</mn><mo>,</mo><mn>8</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf e=(-2,-4,8)^T</annotation></semantics></math>。两个点积为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>8</mn><mo>+</mo><mn>8</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">-8+8=0</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>8</mn><mo>+</mo><mn>8</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">-8+8=0</annotation></semantics></math>，最小误差为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mn>84</mn></msqrt><annotation encoding="application/x-tex">\sqrt{84}</annotation></semantics></math>。两列无关，故系数唯一；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><msup><mi>C</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">CC^T</annotation></semantics></math> 是秩2的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3\times3</annotation></semantics></math> 矩阵，不可逆，这不影响 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mi>T</mi></msup><mi>C</mi></mrow><annotation encoding="application/x-tex">C^TC</annotation></semantics></math> 可逆。</p>
 </details>
-<p>若系数不唯一，怎样选范数最小者？第七部分的<a href="../topics/svd-four-spaces-least-squares.html#pseudoinverse">伪逆与最小范数解 / Pseudoinverse and Minimum Norm</a>用行空间与零空间的正交分解回答。</p>
 <div class="callout callout-style-default callout-note callout-titled" title="选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -827,9 +826,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><a href="../topics/names-least-squares.html">最小二乘为什么叫“二乘”？ / Why “Least Squares”?</a>讨论命名背景，并用小例子联系本主题。课外阅读，跳过不影响主线。</p>
+<p>“二乘”为什么指平方，拟合时究竟最小化什么？见<a href="../topics/names-least-squares.html">最小二乘为什么叫“二乘”？ / Why “Least Squares”?</a>。</p>
 </div>
 </div>
+<p>若系数不唯一，怎样选范数最小者？第七部分的<a href="../topics/svd-four-spaces-least-squares.html#pseudoinverse">伪逆与最小范数解 / Pseudoinverse and Minimum Norm</a>用行空间与零空间的正交分解回答。</p>
 
 
 </section>

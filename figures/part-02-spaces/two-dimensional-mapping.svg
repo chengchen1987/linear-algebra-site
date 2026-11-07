@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="title desc">
+<title id="title">两个输入，同一个输出 / Two Inputs, One Output</title><desc id="desc">B=[[1,1],[2,2]]。左右为独立的等比例R²坐标面，输入轴x₁/x₂，输出轴b₁/b₂。x_r=(1,1)、z=(2,−2)、x=(3,−1)，x_r与x均映到b=(2,4)，z映到右侧原点。四条实直线为四个子空间。浅灰平行四边形辅助线只表示相加；粗虚线是点到点的B作用。 / Equal-scale coordinate planes; three exact input-to-image correspondences.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs>
+<style>text{font-family:"Noto Sans CJK SC","Noto Sans",sans-serif;fill:#243442}.label{font-size:21px;font-weight:600}.small{font-size:16px}.math{font-size:25px}.en{font-size:16px;fill:#42566a}</style>
+<rect width="960" height="500" fill="white"/>
+<style>.formula{font-size:22px}.map-label{font-size:20px;paint-order:stroke;stroke:white;stroke-width:5px}</style>
+<text x="220" y="30" class="label" text-anchor="middle">输入空间 ℝ² / Input Space</text>
+<polyline points="106.00,418.00 106.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="144.00,418.00 144.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="182.00,418.00 182.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="220.00,418.00 220.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="258.00,418.00 258.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="296.00,418.00 296.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="334.00,418.00 334.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="372.00,418.00 372.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="87.00,399.00 391.00,399.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="87.00,361.00 391.00,361.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="87.00,323.00 391.00,323.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="87.00,285.00 391.00,285.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="87.00,247.00 391.00,247.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="87.00,209.00 391.00,209.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="87.00,171.00 391.00,171.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="87.00,133.00 391.00,133.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="87.00,95.00 391.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="87.00,285.00 394.80,285.00" fill="none" stroke="#8a959d" stroke-width="1.2" stroke-dasharray="" marker-end="url(#arrow)"/>
+<text x="402.79999999999995" y="280" class="small" >x₁</text>
+<polyline points="220.00,418.00 220.00,91.20" fill="none" stroke="#8a959d" stroke-width="1.2" stroke-dasharray="" marker-end="url(#arrow)"/>
+<text x="228" y="86.20000000000002" class="small" >x₂</text>
+<text x="144" y="304" class="small" text-anchor="middle">-2</text>
+<text x="211" y="366" class="small" text-anchor="end">-2</text>
+<text x="296" y="304" class="small" text-anchor="middle">2</text>
+<text x="211" y="214" class="small" text-anchor="end">2</text>
+<text x="372" y="304" class="small" text-anchor="middle">4</text>
+<text x="211" y="138" class="small" text-anchor="end">4</text>
+<text x="740" y="30" class="label" text-anchor="middle">输出空间 ℝ² / Output Space</text>
+<polyline points="626.00,418.00 626.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="664.00,418.00 664.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="702.00,418.00 702.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="740.00,418.00 740.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="778.00,418.00 778.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="816.00,418.00 816.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="854.00,418.00 854.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="892.00,418.00 892.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="607.00,399.00 911.00,399.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="607.00,361.00 911.00,361.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="607.00,323.00 911.00,323.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="607.00,285.00 911.00,285.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="607.00,247.00 911.00,247.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="607.00,209.00 911.00,209.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="607.00,171.00 911.00,171.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="607.00,133.00 911.00,133.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="607.00,95.00 911.00,95.00" fill="none" stroke="#edf0f2" stroke-width="1" stroke-dasharray=""/>
+<polyline points="607.00,285.00 914.80,285.00" fill="none" stroke="#8a959d" stroke-width="1.2" stroke-dasharray="" marker-end="url(#arrow)"/>
+<text x="922.8" y="280" class="small" >b₁</text>
+<polyline points="740.00,418.00 740.00,91.20" fill="none" stroke="#8a959d" stroke-width="1.2" stroke-dasharray="" marker-end="url(#arrow)"/>
+<text x="748" y="86.20000000000002" class="small" >b₂</text>
+<text x="664" y="304" class="small" text-anchor="middle">-2</text>
+<text x="731" y="366" class="small" text-anchor="end">-2</text>
+<text x="816" y="304" class="small" text-anchor="middle">2</text>
+<text x="731" y="214" class="small" text-anchor="end">2</text>
+<text x="892" y="304" class="small" text-anchor="middle">4</text>
+<text x="731" y="138" class="small" text-anchor="end">4</text>
+<g id="two-space-row" data-direction="1,1">
+<polyline points="98.40,406.60 387.20,117.80" fill="none" stroke="#315c88" stroke-width="2" stroke-dasharray=""/>
+</g>
+<g id="two-space-null" data-direction="1,-1">
+<polyline points="94.60,159.60 349.20,414.20" fill="none" stroke="#896222" stroke-width="2" stroke-dasharray=""/>
+</g>
+<g id="two-space-column" data-direction="1,2">
+<polyline points="677.30,410.40 833.10,98.80" fill="none" stroke="#27746d" stroke-width="2" stroke-dasharray=""/>
+</g>
+<g id="two-space-left-null" data-direction="-2,1">
+<polyline points="903.40,366.70 610.80,220.40" fill="none" stroke="#765184" stroke-width="2" stroke-dasharray=""/>
+</g>
+<polyline points="220.00,285.00 258.00,247.00 334.00,323.00 296.00,361.00 220.00,285.00" fill="none" stroke="#a9b3bb" stroke-width="1.4" stroke-dasharray="2 4"/>
+<path id="two-map-xr" d="M258 247 C460 150 650 85 816 133" fill="none" stroke="#334d65" stroke-width="2.5" stroke-dasharray="8 5" marker-end="url(#arrow)"/>
+<path id="two-map-x" d="M334 323 C500 315 660 205 816 133" fill="none" stroke="#334d65" stroke-width="2.5" stroke-dasharray="8 5" marker-end="url(#arrow)"/>
+<path id="two-map-z" d="M296 361 C480 425 595 285 740 285" fill="none" stroke="#896222" stroke-width="2.5" stroke-dasharray="8 5" marker-end="url(#arrow)"/>
+<circle id="two-point-xr" cx="258" cy="247" r="5.5" fill="#243442" stroke="white" stroke-width="1.5" data-world-point="1,1"/>
+<circle id="two-point-z" cx="296" cy="361" r="5.5" fill="#243442" stroke="white" stroke-width="1.5" data-world-point="2,-2"/>
+<circle id="two-point-x" cx="334" cy="323" r="5.5" fill="#243442" stroke="white" stroke-width="1.5" data-world-point="3,-1"/>
+<circle id="two-point-b" cx="816" cy="133" r="5.5" fill="#243442" stroke="white" stroke-width="1.5" data-world-point="2,4"/>
+<circle id="two-point-zero-input" cx="220" cy="285" r="5.5" fill="#243442" stroke="white" stroke-width="1.5" data-world-point="0,0"/>
+<circle id="two-point-zero-output" cx="740" cy="285" r="5.5" fill="#243442" stroke="white" stroke-width="1.5" data-world-point="0,0"/>
+<text x="238" y="233" class="formula" ><tspan font-weight="700">x</tspan>ᵣ</text>
+<text x="278" y="383" class="formula" ><tspan font-weight="700">z</tspan></text>
+<text x="349" y="340" class="formula" ><tspan font-weight="700">x</tspan></text>
+<text x="828" y="123" class="formula" ><tspan font-weight="700">b</tspan></text>
+<text x="229" y="308" class="formula" ><tspan font-weight="700">0</tspan></text>
+<text x="749" y="308" class="formula" ><tspan font-weight="700">0</tspan></text>
+<text x="480" y="140" class="map-label" text-anchor="middle">B<tspan font-weight="700">x</tspan>ᵣ = <tspan font-weight="700">b</tspan></text>
+<text x="505" y="258" class="map-label" text-anchor="middle">B<tspan font-weight="700">x</tspan> = <tspan font-weight="700">b</tspan></text>
+<text x="500" y="385" class="map-label" text-anchor="middle">B<tspan font-weight="700">z</tspan> = <tspan font-weight="700">0</tspan></text>
+<text x="330" y="112" class="small" >Row(B)</text>
+<text x="85" y="132" class="small" >Nul(B)</text>
+<text x="805" y="220" class="small" >Col(B)</text>
+<text x="620" y="195" class="small" >Nul(Bᵀ)</text>
+<text x="480" y="470" class="small" text-anchor="middle">虚线：B 的作用 / Dashed arrows: action of B</text>
+</svg>

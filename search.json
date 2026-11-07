@@ -86,22 +86,22 @@
     ]
   },
   {
-    "objectID": "chapter-01-overview.html#course-connections",
-    "href": "chapter-01-overview.html#course-connections",
+    "objectID": "chapter-01-overview.html#names-behind-math",
+    "href": "chapter-01-overview.html#names-behind-math",
     "title": "第一部分：方程组与线性变换",
-    "section": "把本部分接到全课程 Connecting This Part to the Course",
-    "text": "把本部分接到全课程 Connecting This Part to the Course\n从方程组的存在与唯一性 / Existence and Uniqueness出发，本部分用主元和自由变量描述解。第二部分把这些判定组织成矩阵、秩与四空间 / Matrices, Rank, and Four Spaces；暂不需要逆矩阵或一般矩阵乘法律。",
+    "section": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names",
+    "text": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names\n\n为什么叫高斯消元？ / Why “Gaussian Elimination”?：从一次行替换追问算法名称。\n向量与标量 / Why “Vector” and “Scalar”?：从数乘的两种角色走近术语。",
     "crumbs": [
       "第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
     ]
   },
   {
-    "objectID": "chapter-01-overview.html#names-behind-math",
-    "href": "chapter-01-overview.html#names-behind-math",
+    "objectID": "chapter-01-overview.html#course-connections",
+    "href": "chapter-01-overview.html#course-connections",
     "title": "第一部分：方程组与线性变换",
-    "section": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names",
-    "text": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names\n这些是课外阅读，不增加必修先修要求。\n\n为什么叫高斯消元？ / Why “Gaussian Elimination”?\n向量与标量 / Why “Vector” and “Scalar”?",
+    "section": "把本部分接到全课程 Connecting This Part to the Course",
+    "text": "把本部分接到全课程 Connecting This Part to the Course\n从方程组的存在与唯一性 / Existence and Uniqueness出发，本部分用主元和自由变量描述解。第二部分把这些判定组织成矩阵、秩与四空间 / Matrices, Rank, and Four Spaces；暂不需要逆矩阵或一般矩阵乘法律。",
     "crumbs": [
       "第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
@@ -288,7 +288,7 @@
     "href": "topics/gaussian-elimination.html#terms",
     "title": "高斯消元法",
     "section": "概念与术语：回到做法与理由 Concepts and Terminology",
-    "text": "概念与术语：回到做法与理由 Concepts and Terminology\n\n\n\n查阅项\n解释位置\n\n\n\n\n初等行变换 / elementary row operations\n整行、异行、非零倍乘与逆操作\n\n\n行阶梯形 / row echelon form\n向前目的与完整条件\n\n\n简化行阶梯形 / reduced row echelon form\n向后目的与完整条件\n\n\n主元、主元位置、主元行、主元列 / pivot, pivot position, pivot row, pivot column\n数值、位置与当前行\n\n\n基本变量、自由变量 / basic, free variables\n先判相容，再读解\n\n\n参数表示 / parametric representation\n3×5全部解与回代\n\n\n\n计算中方程不断改变，共同解却保持不变。在图中，究竟改变了什么？下一主题把每个方程画成点集，观察它们的共同交集。\n上一主题：线性方程组与矩阵表示 / Previous: Linear Systems and Matrix Representation · 下一主题：线性方程组的行图像 / Next: The Row Picture of Linear Systems\n\n\n\n\n\n\n注记选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names\n\n\n\n为什么叫高斯消元？ / Why “Gaussian Elimination”?讨论命名背景，并用小例子联系本主题。课外阅读，跳过不影响主线。",
+    "text": "概念与术语：回到做法与理由 Concepts and Terminology\n\n\n\n查阅项\n解释位置\n\n\n\n\n初等行变换 / elementary row operations\n整行、异行、非零倍乘与逆操作\n\n\n行阶梯形 / row echelon form\n向前目的与完整条件\n\n\n简化行阶梯形 / reduced row echelon form\n向后目的与完整条件\n\n\n主元、主元位置、主元行、主元列 / pivot, pivot position, pivot row, pivot column\n数值、位置与当前行\n\n\n基本变量、自由变量 / basic, free variables\n先判相容，再读解\n\n\n参数表示 / parametric representation\n3×5全部解与回代\n\n\n\n\n\n\n\n\n\n注记选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names\n\n\n\n消元思想早于 Gauss，为什么今天常用他的名字称呼这种方法？见为什么叫高斯消元？ / Why “Gaussian Elimination”?。\n\n\n计算中方程不断改变，共同解却保持不变。在图中，究竟改变了什么？下一主题把每个方程画成点集，观察它们的共同交集。\n上一主题：线性方程组与矩阵表示 / Previous: Linear Systems and Matrix Representation · 下一主题：线性方程组的行图像 / Next: The Row Picture of Linear Systems",
     "crumbs": [
       "第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>高斯消元法 / Gaussian Elimination</span>"
@@ -651,7 +651,7 @@
     "href": "topics/vector-and-matrix-equations.html#reference",
     "title": "向量方程与矩阵方程",
     "section": "知识与术语回查 Concepts and Terminology",
-    "text": "知识与术语回查 Concepts and Terminology\n\n向量运算及八条性质：同一坐标空间中的实数运算，是整理组合与相减两解的依据。\n列组合与乘法定义：m×nm\\times n 乘 n×1n\\times1，得到 m×1m\\times1；第 ii 分量是第 ii 个方程的左端。\n同一种乘法的三种理解：列组合、元素公式与行点积；分清 ℝm\\mathbb R^m 中的列和 ℝn\\mathbb R^n 中的行分量向量。\n计算与求解：给定输入算输出，给定目标找全部输入。\n线性性及其理由：对任意两输入与两实系数成立；它支持接下来的解集论证。\n教材主题对应§1.3、§1.4；小节核验边界与共享术语。\n\n现在已知道怎样计算 A𝐱A\\mathbf x。不同输入如何产生同一个输出？固定 AA，比较零常数向量与给定 𝐛\\mathbf b 的全部解，将把这种现象写成一般关系。\n上一主题：线性方程组的列图像 / Previous: The Column Picture of Linear Systems · 下一主题：齐次与非齐次方程组的解集 / Next: Solution Sets of Homogeneous and Nonhomogeneous Linear Systems\n\n\n\n\n\n\n注记选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names\n\n\n\n向量与标量 / Why “Vector” and “Scalar”?讨论命名背景，并用小例子联系本主题。课外阅读，跳过不影响主线。",
+    "text": "知识与术语回查 Concepts and Terminology\n\n向量运算及八条性质：同一坐标空间中的实数运算，是整理组合与相减两解的依据。\n列组合与乘法定义：m×nm\\times n 乘 n×1n\\times1，得到 m×1m\\times1；第 ii 分量是第 ii 个方程的左端。\n同一种乘法的三种理解：列组合、元素公式与行点积；分清 ℝm\\mathbb R^m 中的列和 ℝn\\mathbb R^n 中的行分量向量。\n计算与求解：给定输入算输出，给定目标找全部输入。\n线性性及其理由：对任意两输入与两实系数成立；它支持接下来的解集论证。\n教材主题对应§1.3、§1.4；小节核验边界与共享术语。\n\n\n\n\n\n\n\n注记选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names\n\n\n\n负数也能作标量，函数也能作向量；这两个名字最初描述了什么？见向量与标量 / Why “Vector” and “Scalar”?。\n\n\n现在已知道怎样计算 A𝐱A\\mathbf x。不同输入如何产生同一个输出？固定 AA，比较零常数向量与给定 𝐛\\mathbf b 的全部解，将把这种现象写成一般关系。\n上一主题：线性方程组的列图像 / Previous: The Column Picture of Linear Systems · 下一主题：齐次与非齐次方程组的解集 / Next: Solution Sets of Homogeneous and Nonhomogeneous Linear Systems",
     "crumbs": [
       "第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>向量方程与矩阵方程 / Vector and Matrix Equations</span>"
@@ -1443,7 +1443,7 @@
     "href": "topics/names-gaussian-elimination.html",
     "title": "为什么叫高斯消元？",
     "section": "",
-    "text": "一种方法，几层历史 Several Layers of One Method\n选读：名字背后的数学\nFurther Reading: The Mathematics Behind the Names\n如果消元只是把一个方程的倍数从另一个方程中减去，为什么要用 Gauss 的名字？这是学完行替换后很自然的问题。答案需要区分消去未知数的思想、便于大量手算的算法，以及今天的矩阵表述。本篇是第一部分的课外阅读。\n《九章算术》的“方程”问题已经把多组数量关系排列在算筹计算中，并逐步消去未知量。它的摆放方向、记数与操作环境并不是今天的增广矩阵课本，不能把现代记号原样安到古人手中。Grcar 的研究也追踪了近代欧洲代数教材中的消元法，说明基本思想早于 Gauss；用一个人名概括全部起源，会抹去这些不同的计算传统。Grcar 的研究论文把这种长期发展分成学校算法、专业手算和矩阵表达几个阶段。\nGauss 的重要背景是天文观测与最小二乘计算。观测多、未知参数少，数据又带有误差，需要反复解由拟合问题产生的方程。他使用的专门记号及计算组织被后来的专业计算人员采用、改进，名字因这一传统与消元紧密相连。这里的“计算人员”指从事手算的人；现代电子计算机并不是故事的起点。后来矩阵语言把不同算法的共同结构表达得更清楚。",
+    "text": "一种方法，几层历史 Several Layers of One Method\n选读：名字背后的数学\nFurther Reading: The Mathematics Behind the Names\n如果消元只是把一个方程的倍数从另一个方程中减去，为什么要用 Gauss 的名字？这是学完行替换后很自然的问题。答案需要区分消去未知数的思想、便于大量手算的算法，以及今天的矩阵表述。本篇是第一部分的课外阅读。\n《九章算术》的“方程”问题已经把多组数量关系排列在算筹计算中，并逐步消去未知量。当时的摆放方向、记数与操作方式，与今天的增广矩阵记号不同。Grcar 的研究也追踪了近代欧洲代数教材中的消元法，说明基本思想早于 Gauss。Grcar 的研究论文把这种长期发展分成学校算法、专业手算和矩阵表达几个阶段。\nGauss 的重要背景是天文观测与最小二乘计算。观测多、未知参数少，数据又带有误差，需要反复解由拟合问题产生的方程。他使用的专门记号及计算组织被后来的专业计算人员采用、改进，名字因这一传统与消元紧密相连。这些专业计算人员依靠手算完成工作。后来矩阵语言把不同算法的共同结构表达得更清楚。",
     "crumbs": [
       "第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>为什么叫高斯消元？（选读） / Why “Gaussian Elimination”? (Optional)</span>"
@@ -1454,7 +1454,7 @@
     "href": "topics/names-gaussian-elimination.html#example",
     "title": "为什么叫高斯消元？",
     "section": "一次行替换究竟保留了什么？ What Does a Row Replacement Preserve?",
-    "text": "一次行替换究竟保留了什么？ What Does a Row Replacement Preserve?\n下面用现代课程的记号说明消元，不把它当作任何古文献的逐字复原： {x+2y=5,2x+5y=12.→R2←R2−2R1{x+2y=5,y=2.\\left\\{\\begin{aligned}x+2y&=5,\\\\2x+5y&=12.\\end{aligned}\\right.\n\\quad\\xrightarrow{R_2\\leftarrow R_2-2R_1}\\quad\n\\left\\{\\begin{aligned}x+2y&=5,\\\\y&=2.\\end{aligned}\\right. 第二式两边都减去第一式的两倍，便消去 xx。原来的共同解满足新方程；反过来，把保留下来的第一式的两倍加回第二式，就恢复原系统。所以保持的是共同解集，不是每个方程各自的几何点集。代回可得 x=1x=1。\n对更大的系统，阶梯形、主元、自由变量把同样的思想组织成可重复的步骤。我们还能遇到矛盾行或自由参数，因此“消元”也不等于“总能算出唯一解”。",
+    "text": "一次行替换究竟保留了什么？ What Does a Row Replacement Preserve?\n用今天的记号看一次行替换： {x+2y=5,2x+5y=12.→R2←R2−2R1{x+2y=5,y=2.\\left\\{\\begin{aligned}x+2y&=5,\\\\2x+5y&=12.\\end{aligned}\\right.\n\\quad\\xrightarrow{R_2\\leftarrow R_2-2R_1}\\quad\n\\left\\{\\begin{aligned}x+2y&=5,\\\\y&=2.\\end{aligned}\\right. 第二式两边都减去第一式的两倍，便消去 xx。原来的共同解满足新方程；反过来，把保留下来的第一式的两倍加回第二式，就恢复原系统。所以保持的是共同解集，不是每个方程各自的几何点集。代回可得 x=1x=1。\n对更大的系统，阶梯形、主元、自由变量把同样的思想组织成可重复的步骤。我们还能遇到矛盾行或自由参数，因此“消元”也不等于“总能算出唯一解”。",
     "crumbs": [
       "第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>为什么叫高斯消元？（选读） / Why “Gaussian Elimination”? (Optional)</span>"
@@ -1476,7 +1476,7 @@
     "href": "topics/names-gaussian-elimination.html#sources",
     "title": "为什么叫高斯消元？",
     "section": "来源与返回 Sources and Return Links",
-    "text": "来源与返回 Sources and Return Links\nJoseph F. Grcar，How Ordinary Elimination Became Gaussian Elimination，Historia Mathematica 38（2011），163–218，DOI；作者开放稿可供阅读。本文历史概述依据其引言及消元、最小二乘与矩阵化的相关章节，不作新的发明优先权判断。\n返回：高斯消元法 / Return to Gaussian Elimination",
+    "text": "来源与返回 Sources and Return Links\nJoseph F. Grcar，How Ordinary Elimination Became Gaussian Elimination，Historia Mathematica 38（2011），163–218，DOI；作者开放稿可供阅读。历史背景见其引言及消元、最小二乘与矩阵化的相关章节。\n返回：高斯消元法 / Return to Gaussian Elimination",
     "crumbs": [
       "第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>为什么叫高斯消元？（选读） / Why “Gaussian Elimination”? (Optional)</span>"
@@ -1487,7 +1487,7 @@
     "href": "topics/names-vector-scalar.html",
     "title": "向量与标量",
     "section": "",
-    "text": "四元数中的两个部分 Two Parts of a Quaternion\n选读：名字背后的数学\nFurther Reading: The Mathematics Behind the Names\n物理课常说向量“有大小、有方向”，标量“只有大小”。但负数可以是标量，零向量没有确定方向，多项式又怎样成为向量？名字可以帮助进入概念，却不能代替定义。本篇供学完向量加法与数乘后选读。\nvector 的语言背景与拉丁语“携带”有关；在 Hamilton 之前，天文学已有 radius vector 的用语。圣安德鲁斯大学的术语史条目区分了这些早期用法与后来的数学含义，不能把每次出现 vector 都当成同一个概念。\nHamilton 研究四元数时，将一个对象分成实数部分与含三个分量的部分。1844年的报告解释：后三项能由空间中有方向的线段表示，因此把这部分表达式及其几何表示称为 vector。报告原文收入1847年卷，报告日期与卷的年份应分开读。在另一篇四元数论文中，他说明实数部分可沿从负到正的同一尺度（scale）变化，因而称为 scalar。原文第18节明确给出了这一解释。\n因此，历史中的“向量”既有几何表达，也有代数身份，并不只是给物理箭头换一个名字。本课程无需先学四元数乘法；下面是在实坐标空间中的现代解释。",
+    "text": "四元数中的两个部分 Two Parts of a Quaternion\n选读：名字背后的数学\nFurther Reading: The Mathematics Behind the Names\n物理课常说向量“有大小、有方向”，标量“只有大小”。但负数可以是标量，零向量没有确定方向，多项式又怎样成为向量？名字可以帮助进入概念，却不能代替定义。本篇供学完向量加法与数乘后选读。\nvector 的语言背景与拉丁语“携带”有关；在 Hamilton 之前，天文学已有 radius vector 的用语。圣安德鲁斯大学的术语史条目介绍了这些早期用法与后来数学含义的区别。\nHamilton 研究四元数时，将一个对象分成实数部分与含三个分量的部分。1844年的报告解释：后三项能由空间中有方向的线段表示，因此把这部分表达式及其几何表示称为 vector。报告原文收入1847年出版的卷册。在另一篇四元数论文中，他说明实数部分可沿从负到正的同一尺度（scale）变化，因而称为 scalar。原文第18节明确给出了这一解释。\n因此，历史中的“向量”既有几何表达，也有代数身份，并不只是给物理箭头换一个名字。回到实坐标空间，我们可以直接用数乘看清两种角色。",
     "crumbs": [
       "第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>向量与标量（选读） / Why “Vector” and “Scalar”? (Optional)</span>"
@@ -1498,7 +1498,7 @@
     "href": "topics/names-vector-scalar.html#example",
     "title": "向量与标量",
     "section": "看清数乘的两种角色 Two Roles in Scalar Multiplication",
-    "text": "看清数乘的两种角色 Two Roles in Scalar Multiplication\n取 𝐯=(1,−2)𝖳\\mathbf v=(1,-2)^{\\mathsf T}、a=−3a=-3，则 a𝐯=−3[1−2]=[−36].a\\mathbf v=-3\\begin{bmatrix}1\\\\-2\\end{bmatrix}\n=\\begin{bmatrix}-3\\\\6\\end{bmatrix}. 这里 aa 是实标量，控制各分量共同乘多少；𝐯\\mathbf v 是被作用的向量，结果仍属于 ℝ2\\mathbb R^2。对非零向量，正标量保留方向，负标量使方向反向，长度乘以 |a||a|；零标量给出零向量。这说明“标量只有大小”只是初步口语描述，不能让我们丢掉符号，更不能把 aa 与 a𝐯a\\mathbf v 当成同类角色。",
+    "text": "看清数乘的两种角色 Two Roles in Scalar Multiplication\n取 𝐯=(1,−2)𝖳\\mathbf v=(1,-2)^{\\mathsf T}、a=−3a=-3，则 a𝐯=−3[1−2]=[−36].a\\mathbf v=-3\\begin{bmatrix}1\\\\-2\\end{bmatrix}\n=\\begin{bmatrix}-3\\\\6\\end{bmatrix}. 这里 aa 是数乘系数，𝐯\\mathbf v 是原向量，a𝐯a\\mathbf v 是所得向量，仍属于 ℝ2\\mathbb R^2。对非零向量，正标量保留方向，负标量使方向反向，长度乘以 |a||a|；零标量给出零向量。因此，标量的正负号同样重要，“只有大小”并不是完整的定义。",
     "crumbs": [
       "第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>向量与标量（选读） / Why “Vector” and “Scalar”? (Optional)</span>"
@@ -1571,22 +1571,22 @@
     ]
   },
   {
-    "objectID": "chapter-02-overview.html#course-connections",
-    "href": "chapter-02-overview.html#course-connections",
+    "objectID": "chapter-02-overview.html#names-behind-math",
+    "href": "chapter-02-overview.html#names-behind-math",
     "title": "第二部分：矩阵代数",
-    "section": "把本部分接到全课程 Connecting This Part to the Course",
-    "text": "把本部分接到全课程 Connecting This Part to the Course\n第一部分的“有没有解、是否唯一”现在用列空间与零空间重新解释；第三部分 / Part 3将为方阵提供一个标量判据，但行列式不能替代对某个目标的相容性检查。四个基本子空间将在第六部分 / Part 6加入正交关系，再由第七部分的SVD / SVD in Part 7连接两端的基。",
+    "section": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names",
+    "text": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names\n\n矩阵与行列式的名字 / Why “Matrix” and “Determinant”?：矩阵怎样从产生子式的排列成为运算对象？",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
     ]
   },
   {
-    "objectID": "chapter-02-overview.html#names-behind-math",
-    "href": "chapter-02-overview.html#names-behind-math",
+    "objectID": "chapter-02-overview.html#course-connections",
+    "href": "chapter-02-overview.html#course-connections",
     "title": "第二部分：矩阵代数",
-    "section": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names",
-    "text": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names\n这些是课外阅读，不增加必修先修要求。\n\n矩阵与行列式的名字 / Why “Matrix” and “Determinant”?",
+    "section": "把本部分接到全课程 Connecting This Part to the Course",
+    "text": "把本部分接到全课程 Connecting This Part to the Course\n第一部分的“有没有解、是否唯一”现在用列空间与零空间重新解释；第三部分 / Part 3将为方阵提供一个标量判据，但行列式不能替代对某个目标的相容性检查。四个基本子空间将在第六部分 / Part 6加入正交关系，再由第七部分的SVD / SVD in Part 7连接两端的基。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
@@ -1718,7 +1718,7 @@
     "href": "lessons/07-matrix-products.html#operation-count",
     "title": "矩阵基本运算",
     "section": "计算量的后续阅读 Further Reading on Computational Cost",
-    "text": "计算量的后续阅读 Further Reading on Computational Cost\n熟悉LU的构造与求解后，可到线性代数运算的计算量估算 / Estimating Computational Cost，用“输出数量 × 每个输出所需工作量”比较点积、矩阵向量乘法与矩阵乘法。\n\n同一结果的计算顺序 Evaluation Order for the Same Result\n前面已经证明 (AB)𝐱=A(B𝐱)(AB)\\mathbf x=A(B\\mathbf x)；计算量主题中的运算顺序比较与练习 / Comparing Evaluation Orders解释只求一个输入的像时，怎样利用这个等式组织工作。",
+    "text": "计算量的后续阅读 Further Reading on Computational Cost\n熟悉LU的构造与求解后，可到线性代数运算的计算量估算 / Estimating Computational Cost，用“输出数量 × 每个输出所需工作量”比较点积、矩阵向量乘法与矩阵乘法。\n\n同一结果的计算顺序 Evaluation Order for the Same Result\n前面已经证明 (AB)𝐱=A(B𝐱)(AB)\\mathbf x=A(B\\mathbf x)；计算量主题中的运算顺序比较与练习 / Comparing Evaluation Orders解释只求一个输入的像时，怎样利用这个等式组织工作。\n\n\n\n\n\n\n注记选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names\n\n\n\nmatrix 为什么有“母体”的含义，它与行列式有什么历史联系？见矩阵与行列式的名字 / Why “Matrix” and “Determinant”?。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>矩阵基本运算 / Basic Matrix Operations</span>"
@@ -1729,7 +1729,7 @@
     "href": "lessons/07-matrix-products.html#looking-ahead",
     "title": "矩阵基本运算",
     "section": "继续思考 Looking Ahead",
-    "text": "继续思考 Looking Ahead\n加法和数乘组合相同输入下的输出，乘法则表示变换的复合；运算规则也说明这些组合怎样相互配合。接下来问：何时能从给定输出唯一恢复输入，并用另一个矩阵表示这个逆变换？带着这个问题进入逆矩阵与逆变换 / Inverse Matrices and Inverse Transformations。\n\n\n\n\n\n\n注记选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names\n\n\n\n矩阵与行列式的名字 / Why “Matrix” and “Determinant”?讨论命名背景，并用小例子联系本主题。课外阅读，跳过不影响主线。",
+    "text": "继续思考 Looking Ahead\n加法和数乘组合相同输入下的输出，乘法则表示变换的复合；运算规则也说明这些组合怎样相互配合。接下来问：何时能从给定输出唯一恢复输入，并用另一个矩阵表示这个逆变换？带着这个问题进入逆矩阵与逆变换 / Inverse Matrices and Inverse Transformations。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>矩阵基本运算 / Basic Matrix Operations</span>"
@@ -2378,7 +2378,7 @@
     "href": "topics/four-fundamental-subspaces.html#four-spaces",
     "title": "矩阵的四个基本子空间",
     "section": "",
-    "text": "空间 / Space\n环境 / Ambient Space\n维数 / Dimension\n描述与求法 / Meaning and Basis Construction\n\n\n\n\n列空间 Col⁡A\\operatorname{Col}A / Column space\nℝm\\mathbb R^m\nrr\n可达的目标向量 A𝐱A\\mathbf x；取原矩阵的主元列\n\n\n零空间 Nul⁡A\\operatorname{Nul}A / Null space\nℝn\\mathbb R^n\nn−rn-r\n被 AA 映射为零向量的输入；解 A𝐱=0A\\mathbf x=0，从自由参数取基\n\n\n行空间 Row⁡A=Col⁡(A𝖳)\\operatorname{Row}A=\\operatorname{Col}(A^{\\mathsf T}) / Row space\nℝn\\mathbb R^n\nrr\n系数行的线性组合；取阶梯形的非零行，按列向量记分量\n\n\n左零空间 Nul⁡(A𝖳)\\operatorname{Nul}(A^{\\mathsf T}) / Left null space\nℝm\\mathbb R^m\nm−rm-r\n使各行的线性组合等于零的系数向量；解 A𝖳𝐲=0A^{\\mathsf T}\\mathbf y=0\n\n\n\n\n\n\n四个基本子空间与矩阵的作用 Four Fundamental Subspaces and the Action of a Matrix\n图 1 的左右两侧分别是输入空间 ℝn\\mathbb R^n 与输出空间 ℝm\\mathbb R^m。行空间和零空间属于左侧，列空间和左零空间属于右侧；同侧两个子空间共享原点；左右两侧的原点分别记为 𝟎n\\mathbf0_n、𝟎m\\mathbf0_m。图中的菱形帮助辨认空间所属和维数，不表示四个实际的二维平面。\n矩阵 AA 可以作用于任意输入 𝐱∈ℝn\\mathbf x\\in\\mathbb R^n，输出属于列空间，并不要求 𝐱∈Row⁡(A)\\mathbf x\\in\\operatorname{Row}(A)。另取零空间中的 𝐳\\mathbf z，说明 AA 将零空间中的向量映射为零向量。\n窄屏可在图内左右滚动，查看两侧空间。 / Scroll within the diagram to see both spaces.\n\n\n\n\n   \n\n\n\n图 / Figure 1: 四空间结构示意 / Four-Space Structure。菱形的形状、面积和夹角不代表实际几何关系。实线箭头表示从原点出发的向量；虚线箭头表示矩阵将输入映射到输出的对应关系。\n\n\n\n打开主图原图 / Open Full-size Diagram。\n图示四个子空间均非零的情形；某子空间维数为零时，它仅含零向量。把图中的作用写成集合与方程，就是 {A𝐱:𝐱∈ℝn}=Col⁡(A),\\{A\\mathbf x:\\mathbf x\\in\\mathbb R^n\\}=\\operatorname{Col}(A), 𝐳∈Nul⁡(A)⇔A𝐳=𝟎m.\\mathbf z\\in\\operatorname{Nul}(A)\\quad\\Longleftrightarrow\\quad A\\mathbf z=\\mathbf0_m. 第一式收集了全部输入的输出；第二式指出哪些输入被映射为零向量。\n列空间告诉我们哪些目标向量可以达到；零空间告诉我们哪些输入被映射为零向量。若 A𝐱p=𝐛A\\mathbf x_p=\\mathbf b 且 A𝐳=𝟎mA\\mathbf z=\\mathbf0_m，由线性性质得到 A(𝐱p+𝐳)=A𝐱p+A𝐳=𝐛.A(\\mathbf x_p+\\mathbf z)=A\\mathbf x_p+A\\mathbf z=\\mathbf b. 因此，在一个解上加上零空间中的向量，仍然得到同一方程组的解；若 𝐳≠𝟎n\\mathbf z\\ne\\mathbf0_n，这就是另一个解。这里 𝐱p\\mathbf x_p 是任意一个特解，不要求它属于行空间。\n\n\n转置矩阵的作用 The Action of the Transpose Matrix\n把同样的观察用于 A𝖳A^{\\mathsf T}，映射方向就从右侧 ℝm\\mathbb R^m 指向左侧 ℝn\\mathbb R^n。图 2 保持四个子空间的位置与颜色；此时一般输入为 𝐲∈ℝm\\mathbf y\\in\\mathbb R^m，输出 A𝖳𝐲A^{\\mathsf T}\\mathbf y 属于行空间。A𝖳A^{\\mathsf T} 将左零空间中的向量 𝐰\\mathbf w 映射为 𝟎n\\mathbf0_n。\n左右位置保持不变；窄屏可在图内左右滚动。 / The spaces keep their positions; scroll within the diagram.\n\n\n\n\n   \n\n\n\n图 / Figure 2: 转置矩阵的作用 / The Action of the Transpose。虚线对应关系从右指向左；两图输入独立选取，不表示逐一送回前图的向量。\n\n\n\n打开转置视图原图 / Open Full-size Transpose Diagram。\n相应地， {A𝖳𝐲:𝐲∈ℝm}=Row⁡(A),\\{A^{\\mathsf T}\\mathbf y:\\mathbf y\\in\\mathbb R^m\\}=\\operatorname{Row}(A), 𝐰∈Nul⁡(A𝖳)⇔A𝖳𝐰=𝟎n.\\mathbf w\\in\\operatorname{Nul}(A^{\\mathsf T})\\quad\\Longleftrightarrow\\quad A^{\\mathsf T}\\mathbf w=\\mathbf0_n. 映射方向反转并不意味着撤销原来的作用：转置矩阵一般不是逆矩阵。下面用同一个 3×43\\times4 矩阵算出四组基，再看列空间与左零空间怎样判断相容性。",
+    "text": "空间 / Space\n环境 / Ambient Space\n维数 / Dimension\n描述与求法 / Meaning and Basis Construction\n\n\n\n\n列空间 Col⁡A\\operatorname{Col}A / Column space\nℝm\\mathbb R^m\nrr\n可达的目标向量 A𝐱A\\mathbf x；取原矩阵的主元列\n\n\n零空间 Nul⁡A\\operatorname{Nul}A / Null space\nℝn\\mathbb R^n\nn−rn-r\n被 AA 映射为零向量的输入；解 A𝐱=0A\\mathbf x=0，从自由参数取基\n\n\n行空间 Row⁡A=Col⁡(A𝖳)\\operatorname{Row}A=\\operatorname{Col}(A^{\\mathsf T}) / Row space\nℝn\\mathbb R^n\nrr\n系数行的线性组合；取阶梯形的非零行，按列向量记分量\n\n\n左零空间 Nul⁡(A𝖳)\\operatorname{Nul}(A^{\\mathsf T}) / Left null space\nℝm\\mathbb R^m\nm−rm-r\n使各行的线性组合等于零的系数向量；解 A𝖳𝐲=0A^{\\mathsf T}\\mathbf y=0\n\n\n\n\n\n\n四个基本子空间与矩阵的作用 Four Fundamental Subspaces and the Action of a Matrix\n图 1 左侧是输入空间 ℝn\\mathbb R^n，右侧是输出空间 ℝm\\mathbb R^m；同侧两个子空间共享本侧零点。图中用点表示输入与输出，虚线箭头表示矩阵的作用：行空间中的 𝐱r\\mathbf x_r 映射到列空间中的 𝐛=A𝐱r\\mathbf b=A\\mathbf x_r，零空间中的 𝐳\\mathbf z 映射到右侧零点 𝟎m\\mathbf0_m。\n窄屏可在图内左右滚动，查看两侧空间。 / Scroll within the diagram to see both spaces.\n\n\n\n\n   \n\n\n\n图 / Figure 1: 输入点与它的像 / Input Points and Their Images。菱形仅示意空间所属，形状、面积和夹角不表示实际几何关系；虚线箭头连接输入点与像点。\n\n\n\n打开主图原图 / Open Full-size Diagram。\n图示四个子空间均非零的情形；某子空间维数为零时，它仅含零向量。AA 可以作用于任意 𝐱∈ℝn\\mathbf x\\in\\mathbb R^n，输出属于列空间，并不要求输入在行空间中： {A𝐱:𝐱∈ℝn}=Col⁡(A),𝐳∈Nul⁡(A)⇔A𝐳=𝟎m.\\{A\\mathbf x:\\mathbf x\\in\\mathbb R^n\\}=\\operatorname{Col}(A),\\qquad\n\\mathbf z\\in\\operatorname{Nul}(A)\\ \\Longleftrightarrow\\ A\\mathbf z=\\mathbf0_m. 第二式说明 AA 将零空间中的向量映射为零向量。第一式收集的是整个输入空间的输出，不只是图中所选的一个点。\n\n\n一般输入怎样联系行空间？ How Does a General Input Relate to the Row Space?\n课程推论 / Course Corollary. 对实矩阵 A∈ℝm×nA\\in\\mathbb R^{m\\times n}，每个输入都有唯一的分解 𝐱=𝐱r+𝐳,𝐱r∈Row⁡(A),𝐳∈Nul⁡(A).\\mathbf x=\\mathbf x_r+\\mathbf z,\\qquad\n\\mathbf x_r\\in\\operatorname{Row}(A),\\quad \\mathbf z\\in\\operatorname{Nul}(A). 因此 A𝐱=A(𝐱r+𝐳)=A𝐱r+A𝐳=A𝐱r.A\\mathbf x=A(\\mathbf x_r+\\mathbf z)=A\\mathbf x_r+A\\mathbf z=A\\mathbf x_r. 一般 𝐱\\mathbf x 不必单独属于行空间或零空间中的某一个；这两个集合的简单并集通常不是整个 ℝn\\mathbb R^n。\n对每个 𝐛∈Col⁡(A)\\mathbf b\\in\\operatorname{Col}(A)，恰有一个行空间向量 𝐱r\\mathbf x_r 满足 A𝐱r=𝐛A\\mathbf x_r=\\mathbf b。也就是说，AA 限制在行空间上时，到列空间是一一对应；相应方程的全部解为 𝐱r+Nul⁡(A)={𝐱r+𝐳:𝐳∈Nul⁡(A)}.\\mathbf x_r+\\operatorname{Nul}(A)\n=\\{\\mathbf x_r+\\mathbf z:\\mathbf z\\in\\operatorname{Nul}(A)\\}. 若零空间含非零向量，整个 ℝn\\mathbb R^n 上的作用就是多对一。这与行空间上的一一对应不同，也不意味着矩形 AA 有通常意义下的逆矩阵。\n\n\n为什么成立 / Why This Holds\n\n先用行空间与列空间的表示。若 𝐯∈Row⁡(A)∩Nul⁡(A)\\mathbf v\\in\\operatorname{Row}(A)\\cap\\operatorname{Nul}(A)，则存在 𝐲∈ℝm\\mathbf y\\in\\mathbb R^m 使 𝐯=A𝖳𝐲\\mathbf v=A^{\\mathsf T}\\mathbf y，且 A𝐯=𝟎mA\\mathbf v=\\mathbf0_m。由转置与矩阵乘法规则， 𝐯𝖳𝐯=(A𝖳𝐲)𝖳𝐯=𝐲𝖳A𝐯=0.\\mathbf v^{\\mathsf T}\\mathbf v=(A^{\\mathsf T}\\mathbf y)^{\\mathsf T}\\mathbf v\n=\\mathbf y^{\\mathsf T}A\\mathbf v=0. 在实数范围，𝐯𝖳𝐯=v12+⋯+vn2\\mathbf v^{\\mathsf T}\\mathbf v=v_1^2+\\cdots+v_n^2 是分量平方和，因而 𝐯=𝟎n\\mathbf v=\\mathbf0_n。\n由前面的秩与零度，行空间和零空间的基分别含 rr 与 n−rn-r 个向量。把两组基合并：若有一个零线性组合，将行空间部分移到一侧、零空间部分移到另一侧，公共向量只能是零；各组基的无关性又使所有系数为零。于是合并后的 nn 个向量无关，由基定理构成 ℝn\\mathbb R^n 的一组基。基的表示唯一，故每个 𝐱\\mathbf x 唯一分解为 𝐱r+𝐳\\mathbf x_r+\\mathbf z；零维时按已有空基约定处理。\n若 𝐛∈Col⁡(A)\\mathbf b\\in\\operatorname{Col}(A)，可写成 𝐛=A𝐱=A𝐱r\\mathbf b=A\\mathbf x=A\\mathbf x_r，所以行空间到列空间是满射。若两个行空间向量有相同的像，其差同时属于行空间和零空间，只能为零，故也是单射。最后，A𝐱=A𝐱rA\\mathbf x=A\\mathbf x_r 等价于 𝐱−𝐱r∈Nul⁡(A)\\mathbf x-\\mathbf x_r\\in\\operatorname{Nul}(A)，这就给出全部解。\n\n此前 𝐱p\\mathbf x_p 表示任意一个特解，不要求 𝐱p∈Row⁡(A)\\mathbf x_p\\in\\operatorname{Row}(A)。若 A𝐱p=𝐛A\\mathbf x_p=\\mathbf b 且 A𝐳=𝟎mA\\mathbf z=\\mathbf0_m，仍有 A(𝐱p+𝐳)=A𝐱p+A𝐳=𝐛.A(\\mathbf x_p+\\mathbf z)=A\\mathbf x_p+A\\mathbf z=\\mathbf b. 行空间中的 𝐱r\\mathbf x_r 是这些特解中唯一属于行空间的那个。系统的正交关系留到第六部分；上面的推理只用实数平方和以及已有的基、维数事实。\n\n\n读图小例：两个输入，同一个输出 / A Two-Dimensional Example: Two Inputs, One Output\n\n用另一个矩阵 BB 看清一般输入；它不替代后面的 3×43\\times4 贯穿算例： B=[1122],𝐱r=[11],𝐳=[2−2],𝐱=𝐱r+𝐳=[3−1].B=\\begin{bmatrix}1&1\\\\2&2\\end{bmatrix},\\quad\n\\mathbf x_r=\\begin{bmatrix}1\\\\1\\end{bmatrix},\\quad\n\\mathbf z=\\begin{bmatrix}2\\\\-2\\end{bmatrix},\\quad\n\\mathbf x=\\mathbf x_r+\\mathbf z=\\begin{bmatrix}3\\\\-1\\end{bmatrix}. 四个子空间都是经过原点的真实直线，维数均为1： Row⁡(B)=Span⁡{(1,1)𝖳},Nul⁡(B)=Span⁡{(1,−1)𝖳},Col⁡(B)=Span⁡{(1,2)𝖳},Nul⁡(B𝖳)=Span⁡{(−2,1)𝖳}.\\begin{aligned}\n\\operatorname{Row}(B)&=\\operatorname{Span}\\{(1,1)^{\\mathsf T}\\},&\n\\operatorname{Nul}(B)&=\\operatorname{Span}\\{(1,-1)^{\\mathsf T}\\},\\\\\n\\operatorname{Col}(B)&=\\operatorname{Span}\\{(1,2)^{\\mathsf T}\\},&\n\\operatorname{Nul}(B^{\\mathsf T})&=\\operatorname{Span}\\{(-2,1)^{\\mathsf T}\\}.\n\\end{aligned} 直接相乘可核对： B𝐱r=B𝐱=[24]=𝐛,B𝐳=[00]=𝟎2.B\\mathbf x_r=B\\mathbf x=\\begin{bmatrix}2\\\\4\\end{bmatrix}=\\mathbf b,\\qquad\nB\\mathbf z=\\begin{bmatrix}0\\\\0\\end{bmatrix}=\\mathbf0_2. 图 2 中的 𝐱=(3,−1)𝖳\\mathbf x=(3,-1)^{\\mathsf T} 不在左侧任一条子空间直线上，却仍是合法输入，并与 𝐱r\\mathbf x_r 有相同的像。\n窄屏可在图内左右滚动；浅灰辅助线只表示相加。 / Scroll within the diagram; pale construction lines show addition only.\n\n\n\n\n\n\n\n\n图 / Figure 2: 两个输入，同一个输出 / Two Inputs, One Output。左右为独立且等比例的坐标面；直线无限延伸。粗虚线表示 BB 的作用，浅灰辅助线表示向量相加。\n\n\n\n打开二维图原图 / Open Full-size Two-Dimensional Diagram。\n\n\n\n转置矩阵的作用 The Action of the Transpose Matrix\nA𝖳:ℝm→ℝnA^{\\mathsf T}:\\mathbb R^m\\to\\mathbb R^n 从右向左作用。一般输入 𝐲∈ℝm\\mathbf y\\in\\mathbb R^m 都允许，输出属于行空间： {A𝖳𝐲:𝐲∈ℝm}=Row⁡(A),𝐰∈Nul⁡(A𝖳)⇔A𝖳𝐰=𝟎n.\\{A^{\\mathsf T}\\mathbf y:\\mathbf y\\in\\mathbb R^m\\}=\\operatorname{Row}(A),\\qquad\n\\mathbf w\\in\\operatorname{Nul}(A^{\\mathsf T})\\ \\Longleftrightarrow\\ A^{\\mathsf T}\\mathbf w=\\mathbf0_n. 图 3 选取列空间中的 𝐲c\\mathbf y_c 与左零空间中的 𝐰\\mathbf w，分别显示它们的像。两图的输入独立选取；转置一般不是逆，不能据图认定 A𝖳𝐛=𝐱rA^{\\mathsf T}\\mathbf b=\\mathbf x_r。\n左右位置保持不变；窄屏可在图内左右滚动。 / The spaces keep their positions; scroll within the diagram.\n\n\n\n\n   \n\n\n\n图 / Figure 3: 转置矩阵的点映射 / Point Mappings of the Transpose。虚线从右侧输入点指向左侧像点，空间所属与颜色保持不变。\n\n\n\n打开转置视图原图 / Open Full-size Transpose Diagram。\n下面回到原来的 3×43\\times4 矩阵，算出四组基，再看列空间与左零空间怎样判断相容性。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>四个基本子空间 / Four Fundamental Subspaces</span>"
@@ -2389,7 +2389,7 @@
     "href": "topics/four-fundamental-subspaces.html#worked-example",
     "title": "矩阵的四个基本子空间",
     "section": "一个矩形例子中的四组基 Four Bases in a Rectangular Example",
-    "text": "一个矩形例子中的四组基 Four Bases in a Rectangular Example\n沿用CR主题的矩阵： A=[120100111212],F=[120100110000].A=\\begin{bmatrix}1&2&0&1\\\\0&0&1&1\\\\1&2&1&2\\end{bmatrix},\\qquad\nF=\\begin{bmatrix}1&2&0&1\\\\0&0&1&1\\\\0&0&0&0\\end{bmatrix}. AA 为 3×43\\times4，秩为2，既不是满行秩（秩等于行数），也不是满列秩（秩等于列数）。它让两个零空间都含有非零向量，便于比较各自作用。\n列空间。 原第1、3列构成基： ℬcol=([101],[011]),Col⁡A={[aba+b]:a,b∈ℝ}⊆ℝ3.\\mathcal B_{\\mathrm{col}}=\\left(\\begin{bmatrix}1\\\\0\\\\1\\end{bmatrix},\\begin{bmatrix}0\\\\1\\\\1\\end{bmatrix}\\right),\\qquad\n\\operatorname{Col}A=\\left\\{\\begin{bmatrix}a\\\\b\\\\a+b\\end{bmatrix}:a,b\\in\\mathbb R\\right\\}\\subseteq\\mathbb R^3. 两向量无关，生成式也直接列出了所有可达的目标向量。\n行空间。 FF 的两个非零行给出基，按列向量记录为 ℬrow=([1201],[0011]),基向量属于 ℝ4.\\mathcal B_{\\mathrm{row}}=\\left(\\begin{bmatrix}1\\\\2\\\\0\\\\1\\end{bmatrix},\\begin{bmatrix}0\\\\0\\\\1\\\\1\\end{bmatrix}\\right),\\qquad\\text{基向量属于 }\\mathbb R^4. 它们的主元位置不同而无关；原第三行是前两行之和，所以全部行都在它们的张成集中。\n零空间。 从 x1=−2x2−x4,x3=−x4x_1=-2x_2-x_4,x_3=-x_4 得到 ℬnul=([−2100],[−10−11]),基向量属于 ℝ4.\\mathcal B_{\\mathrm{nul}}=\\left(\\begin{bmatrix}-2\\\\1\\\\0\\\\0\\end{bmatrix},\\begin{bmatrix}-1\\\\0\\\\-1\\\\1\\end{bmatrix}\\right),\\qquad\\text{基向量属于 }\\mathbb R^4. 两向量分别对应自由变量 x2,x4x_2,x_4。任意解都是它们的线性组合，查看这两个自由位置又证明它们无关，故零空间维数为2。\n左零空间。 按 AA 的四列写出 A𝖳𝐲=0A^{\\mathsf T}\\mathbf y=0： {y1+y3=0,2y1+2y3=0,y2+y3=0,y1+y2+2y3=0.\\left\\{\\begin{aligned}\ny_1+y_3&=0,\\\\2y_1+2y_3&=0,\\\\y_2+y_3&=0,\\\\y_1+y_2+2y_3&=0.\n\\end{aligned}\\right. 因此 𝐲=t(−1,−1,1)𝖳\\mathbf y=t(-1,-1,1)^{\\mathsf T}。一个基为 ℬleft=([−1−11]),基向量属于 ℝ3.\\mathcal B_{\\mathrm{left}}=\\left(\\begin{bmatrix}-1\\\\-1\\\\1\\end{bmatrix}\\right),\\qquad\\text{基向量属于 }\\mathbb R^3. 该向量非零，生成全部解；维数为1。它表示 −R1(A)−R2(A)+R3(A)=0-R_1(A)-R_2(A)+R_3(A)=0，即第三个方程的左边等于前两个左边之和。\n\n输出侧的平面与直线 The Plane and Line on the Output Side\n前面的菱形图概括空间结构；图 3 画出这个具体矩阵在 ℝ3\\mathbb R^3 中的列空间与左零空间： Col⁡(A)={(u,v,u+v)𝖳:u,v∈ℝ},Nul⁡(A𝖳)=Span⁡{ℓ}.\\operatorname{Col}(A)=\\{(u,v,u+v)^{\\mathsf T}:u,v\\in\\mathbb R\\},\\qquad\n\\operatorname{Nul}(A^{\\mathsf T})=\\operatorname{Span}\\{\\boldsymbol\\ell\\}. 图中三根向量均从原点出发，其坐标是 𝐚1=(1,0,1)𝖳,𝐚3=(0,1,1)𝖳,ℓ=(−1,−1,1)𝖳.\\mathbf a_1=(1,0,1)^{\\mathsf T},\\quad \\mathbf a_3=(0,1,1)^{\\mathsf T},\\quad \\boldsymbol\\ell=(-1,-1,1)^{\\mathsf T}.\n窄屏可在图内左右滚动。 / Scroll within the diagram on narrow screens.\n\n\n\n\n\n\n\n\n图 / Figure 3: 输出侧的平面与直线 / The Plane and Line on the Output Side。平面与直线均经过原点并无限延伸；虚线轮廓只是有限绘图区，不是子空间边界。这里只画输出空间 ℝ3\\mathbb R^3，输入空间 ℝ4\\mathbb R^4 没有画入。\n\n\n\n打开三维图原图 / Open Full-size Geometry Diagram。\n列空间与左零空间之间的正交关系 / Orthogonal Relationships在第六部分系统讨论。",
+    "text": "一个矩形例子中的四组基 Four Bases in a Rectangular Example\n沿用CR主题的矩阵： A=[120100111212],F=[120100110000].A=\\begin{bmatrix}1&2&0&1\\\\0&0&1&1\\\\1&2&1&2\\end{bmatrix},\\qquad\nF=\\begin{bmatrix}1&2&0&1\\\\0&0&1&1\\\\0&0&0&0\\end{bmatrix}. AA 为 3×43\\times4，秩为2，既不是满行秩（秩等于行数），也不是满列秩（秩等于列数）。它让两个零空间都含有非零向量，便于比较各自作用。\n列空间。 原第1、3列构成基： ℬcol=([101],[011]),Col⁡A={[aba+b]:a,b∈ℝ}⊆ℝ3.\\mathcal B_{\\mathrm{col}}=\\left(\\begin{bmatrix}1\\\\0\\\\1\\end{bmatrix},\\begin{bmatrix}0\\\\1\\\\1\\end{bmatrix}\\right),\\qquad\n\\operatorname{Col}A=\\left\\{\\begin{bmatrix}a\\\\b\\\\a+b\\end{bmatrix}:a,b\\in\\mathbb R\\right\\}\\subseteq\\mathbb R^3. 两向量无关，生成式也直接列出了所有可达的目标向量。\n行空间。 FF 的两个非零行给出基，按列向量记录为 ℬrow=([1201],[0011]),基向量属于 ℝ4.\\mathcal B_{\\mathrm{row}}=\\left(\\begin{bmatrix}1\\\\2\\\\0\\\\1\\end{bmatrix},\\begin{bmatrix}0\\\\0\\\\1\\\\1\\end{bmatrix}\\right),\\qquad\\text{基向量属于 }\\mathbb R^4. 它们的主元位置不同而无关；原第三行是前两行之和，所以全部行都在它们的张成集中。\n零空间。 从 x1=−2x2−x4,x3=−x4x_1=-2x_2-x_4,x_3=-x_4 得到 ℬnul=([−2100],[−10−11]),基向量属于 ℝ4.\\mathcal B_{\\mathrm{nul}}=\\left(\\begin{bmatrix}-2\\\\1\\\\0\\\\0\\end{bmatrix},\\begin{bmatrix}-1\\\\0\\\\-1\\\\1\\end{bmatrix}\\right),\\qquad\\text{基向量属于 }\\mathbb R^4. 两向量分别对应自由变量 x2,x4x_2,x_4。任意解都是它们的线性组合，查看这两个自由位置又证明它们无关，故零空间维数为2。\n左零空间。 按 AA 的四列写出 A𝖳𝐲=0A^{\\mathsf T}\\mathbf y=0： {y1+y3=0,2y1+2y3=0,y2+y3=0,y1+y2+2y3=0.\\left\\{\\begin{aligned}\ny_1+y_3&=0,\\\\2y_1+2y_3&=0,\\\\y_2+y_3&=0,\\\\y_1+y_2+2y_3&=0.\n\\end{aligned}\\right. 因此 𝐲=t(−1,−1,1)𝖳\\mathbf y=t(-1,-1,1)^{\\mathsf T}。一个基为 ℬleft=([−1−11]),基向量属于 ℝ3.\\mathcal B_{\\mathrm{left}}=\\left(\\begin{bmatrix}-1\\\\-1\\\\1\\end{bmatrix}\\right),\\qquad\\text{基向量属于 }\\mathbb R^3. 该向量非零，生成全部解；维数为1。它表示 −R1(A)−R2(A)+R3(A)=0-R_1(A)-R_2(A)+R_3(A)=0，即第三个方程的左边等于前两个左边之和。\n\n输出侧的平面与直线 The Plane and Line on the Output Side\n前面的菱形图概括空间结构；图 4 画出这个具体矩阵在 ℝ3\\mathbb R^3 中的列空间与左零空间： Col⁡(A)={(u,v,u+v)𝖳:u,v∈ℝ},Nul⁡(A𝖳)=Span⁡{ℓ}.\\operatorname{Col}(A)=\\{(u,v,u+v)^{\\mathsf T}:u,v\\in\\mathbb R\\},\\qquad\n\\operatorname{Nul}(A^{\\mathsf T})=\\operatorname{Span}\\{\\boldsymbol\\ell\\}. 图中三根向量均从原点出发，其坐标是 𝐚1=(1,0,1)𝖳,𝐚3=(0,1,1)𝖳,ℓ=(−1,−1,1)𝖳.\\mathbf a_1=(1,0,1)^{\\mathsf T},\\quad \\mathbf a_3=(0,1,1)^{\\mathsf T},\\quad \\boldsymbol\\ell=(-1,-1,1)^{\\mathsf T}.\n窄屏可在图内左右滚动。 / Scroll within the diagram on narrow screens.\n\n\n\n\n\n\n\n\n图 / Figure 4: 输出侧的平面与直线 / The Plane and Line on the Output Side。平面与直线均经过原点并无限延伸；虚线轮廓只是有限绘图区，不是子空间边界。这里只画输出空间 ℝ3\\mathbb R^3，输入空间 ℝ4\\mathbb R^4 没有画入。\n\n\n\n打开三维图原图 / Open Full-size Geometry Diagram。\n列空间与左零空间之间的正交关系 / Orthogonal Relationships在第六部分系统讨论。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>四个基本子空间 / Four Fundamental Subspaces</span>"
@@ -2917,7 +2917,7 @@
     "href": "topics/names-matrix-determinant.html",
     "title": "矩阵与行列式的名字",
     "section": "",
-    "text": "从“母体”到运算对象 From a Parent Array to an Algebraic Object\n选读：名字背后的数学\nFurther Reading: The Mathematics Behind the Names\n为什么一张数表叫 matrix，而由它计算出的式子叫 determinant？两个名字保留了不同阶段的研究兴趣。本篇只需二元方程组知识，供第二、三部分共同选读；跳过不影响主线。\n今天常先学矩阵，再从方阵定义行列式；历史并不完全按这条顺序发展。Sylvester 在1850年的论文中使用 matrix，1851年又把矩形排列比作能产生不同组行列式的共同“母体”。从排列中选取同样多的行和列，得到较小方阵，再计算行列式，就是这里的子式（minor）。这个比喻描述了“从哪里生成”，而不是说矩阵原来就是一种数据表格软件。Bernardes 与 Roque 的研究引述并分析了这段话。\n不过，名字也不能限制今天的对象。一个矩形矩阵可以没有自身的行列式，却能作用于向量；矩阵乘法还能表示两个线性变换的复合。从“生成子式的排列”到独立的运算对象，关注点已经扩大。",
+    "text": "从“母体”到运算对象 From a Parent Array to an Algebraic Object\n选读：名字背后的数学\nFurther Reading: The Mathematics Behind the Names\n为什么一张数表叫 matrix，而由它计算出的式子叫 determinant？两个名字保留了不同阶段的研究兴趣。用二元方程组的知识，就能看出这些名字与今天的矩阵运算有什么联系。\n今天常先学矩阵，再从方阵定义行列式；历史并不完全按这条顺序发展。Sylvester 在1850年的论文中使用 matrix，1851年又把矩形排列比作能产生不同组行列式的共同“母体”。从排列中选取同样多的行和列，得到较小方阵，再计算行列式，就是这里的子式（minor）。这个比喻着眼于子式“从哪里生成”。Bernardes 与 Roque 的研究引述并分析了这段话。\n不过，名字也不能限制今天的对象。非方阵没有通常意义下的行列式，但仍然可以表示线性变换；矩阵乘法还能表示两个线性变换的复合。从“生成子式的排列”到独立的运算对象，关注点已经扩大。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>35</span>  <span class='chapter-title'>矩阵与行列式的名字（选读） / Why “Matrix” and “Determinant”? (Optional)</span>"
@@ -2928,7 +2928,7 @@
     "href": "topics/names-matrix-determinant.html#determinant-name",
     "title": "矩阵与行列式的名字",
     "section": "“判定”什么，要看数学条件 What Is Determined?",
-    "text": "“判定”什么，要看数学条件 What Is Determined?\ndeterminant 与 determine 的“确定、决定”意思相通，但不能据此倒推：它最初就是为判定方程组唯一解而命名。Gauss 在1801年《算术研究》的二次型语境中使用这个词，所指的是形如 b2−acb^2-ac 的量，与今天任意阶方阵的行列式概念不同。Goldstein 的数学史研究明确区分了这一历史用法。Cauchy 后来的研究发展了接近现代意义的行列式理论；相关两篇报告于1812年宣读、1815年发表，不能把报告与出版混成同一个日期。Ycart 的研究核对了这一区别。\n今天可以用一个小例子理解行列式为何有判别力： {ax+by=p,cx+dy=q.D=ad−bc.\\left\\{\\begin{aligned}ax+by&=p,\\\\cx+dy&=q.\\end{aligned}\\right.\\qquad D=ad-bc. 若 D≠0D\\ne0，每个目标 (p,q)𝖳(p,q)^{\\mathsf T} 都对应唯一解。若 D=0D=0，还须检查相容性。例如两行系数为 (1,2)(1,2)、(2,4)(2,4) 时，q=2pq=2p 给出无穷多解；q≠2pq\\ne2p 才是无解。零行列式并不自动等于“没有答案”。",
+    "text": "“判定”什么，要看数学条件 What Is Determined?\ndeterminant 与 determine 的“确定、决定”意思相通，但不能据此倒推：它最初就是为判定方程组唯一解而命名。Gauss 在1801年《算术研究》的二次型语境中使用这个词，所指的是形如 b2−acb^2-ac 的量，与今天任意阶方阵的行列式概念不同。Goldstein 的数学史研究明确区分了这一历史用法。Cauchy 后来的研究发展了接近现代意义的行列式理论；相关两篇报告于1812年宣读、1815年发表。Ycart 的研究核对了这一区别。\n今天可以用一个小例子理解行列式为何有判别力： {ax+by=p,cx+dy=q.D=ad−bc.\\left\\{\\begin{aligned}ax+by&=p,\\\\cx+dy&=q.\\end{aligned}\\right.\\qquad D=ad-bc. 若 D≠0D\\ne0，每个目标 (p,q)𝖳(p,q)^{\\mathsf T} 都对应唯一解。若 D=0D=0，还须检查相容性。例如两行系数为 (1,2)(1,2)、(2,4)(2,4) 时，q=2pq=2p 给出无穷多解；q≠2pq\\ne2p 才是无解。零行列式并不自动等于“没有答案”。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>35</span>  <span class='chapter-title'>矩阵与行列式的名字（选读） / Why “Matrix” and “Determinant”? (Optional)</span>"
@@ -2939,7 +2939,7 @@
     "href": "topics/names-matrix-determinant.html#connections",
     "title": "矩阵与行列式的名字",
     "section": "名字是入口，关系才是内容 Names Lead to Mathematical Connections",
-    "text": "名字是入口，关系才是内容 Names Lead to Mathematical Connections\n中文“行列式”可从字面联想到按行列排列的元素所组成的计算式；这只是帮助记忆，不能证明谁先创造译名。关于它经日文等语言传播的具体路线，本篇不下首创者或年代结论。\n第三部分的几何解释还会把行列式联系到有向面积、体积的缩放；特征方程则考察 det⁡(A−λI)=0\\det(A-\\lambda I)=0。因此，行列式虽取一个数值，却表达着变换、空间与求解之间的关系；这些是现代课程中的理解，不应冒充早期命名者的全部原意。",
+    "text": "名字是入口，关系才是内容 Names Lead to Mathematical Connections\n中文“行列式”可从字面联想到按行列排列的元素所组成的计算式。这是一个助记线索；它的中文首创者和具体传播路线尚不能由这些文献确定。\n第三部分的几何解释还会把行列式联系到有向面积、体积的缩放；特征方程则考察 det⁡(A−λI)=0\\det(A-\\lambda I)=0。因此，行列式虽取一个数值，却表达着变换、空间与求解之间的关系；这些联系帮助我们理解今天的行列式，并不是对早期命名原意的解释。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>35</span>  <span class='chapter-title'>矩阵与行列式的名字（选读） / Why “Matrix” and “Determinant”? (Optional)</span>"
@@ -2990,22 +2990,22 @@
     ]
   },
   {
-    "objectID": "chapter-03-overview.html#course-connections",
-    "href": "chapter-03-overview.html#course-connections",
+    "objectID": "chapter-03-overview.html#names-behind-math",
+    "href": "chapter-03-overview.html#names-behind-math",
     "title": "第三部分：行列式",
-    "section": "把本部分接到全课程 Connecting This Part to the Course",
-    "text": "把本部分接到全课程 Connecting This Part to the Course\n选读叉乘、定向与物理中的行列式 / Cross Products, Orientation, and Determinants in Physics，可用已有性质理解力矩、极坐标局部面积和振动频率条件。这是课程拓展，不改变教材必修范围。第四部分 / Part 4继续追问：当未知对象是一整个函数时，生成、无关、核和唯一表示还能怎样使用？",
+    "section": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names",
+    "text": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names\n\n矩阵与行列式的名字 / Why “Matrix” and “Determinant”?：从行列式小节看“判定”需要哪些条件。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
       "<span class='chapter-number'>36</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
     ]
   },
   {
-    "objectID": "chapter-03-overview.html#names-behind-math",
-    "href": "chapter-03-overview.html#names-behind-math",
+    "objectID": "chapter-03-overview.html#course-connections",
+    "href": "chapter-03-overview.html#course-connections",
     "title": "第三部分：行列式",
-    "section": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names",
-    "text": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names\n这些是课外阅读，不增加必修先修要求。\n\n矩阵与行列式的名字 / Why “Matrix” and “Determinant”?",
+    "section": "把本部分接到全课程 Connecting This Part to the Course",
+    "text": "把本部分接到全课程 Connecting This Part to the Course\n选读叉乘、定向与物理中的行列式 / Cross Products, Orientation, and Determinants in Physics，可用已有性质理解力矩、极坐标局部面积和振动频率条件。这是课程拓展，不改变教材必修范围。第四部分 / Part 4继续追问：当未知对象是一整个函数时，生成、无关、核和唯一表示还能怎样使用？",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
       "<span class='chapter-number'>36</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
@@ -3060,7 +3060,7 @@
     "href": "lessons/11-determinants.html#basic-reasons",
     "title": "行列式的定义与展开",
     "section": "定义到展开定理：理由与学习层次 From the Definition to the Expansion Theorem",
-    "text": "定义到展开定理：理由与学习层次 From the Definition to the Expansion Theorem\n首次学习应能区分子矩阵、余子式与代数余子式，并用定理1选择合适的行列展开。上面的数值核对展示定理怎样使用，不是一般证明。\n下面给一条完整的独立基础路线：递归定义→单行/单列线性及交换变号→任意行展开→三角矩阵→转置→任意列展开。它不借用乘积公式或可逆判据，也不需要先学排列。其他定义选读 / Alternative Definitions另给排列路线，与这里的证明分别成立。\n进一步证明：从递归出发 / Further Proof: Starting from Recursion\n对阶数归纳，一阶直接成立，二阶用 ad−bcad-bc 核对。假定低一阶的单行/单列线性、交换变号均已证明。\n单行线性。 第一行由定义显然线性；对第 r&gt;1r&gt;1 行，每个首行展开的子式恰含该行删去一个分量后的行向量，归纳假设给线性。单列线性同样成立：固定第 ss 列，首行第 ss 项仅系数含 a1sa_{1s}、子式不含该列；其余项仅子式含该列、系数固定，故整个式对该列线性。零行/零列给零。\n换行变号。 交换首行以下的相邻两行，由子式归纳立得。交换第一、二行时，将首行展开的每个子式再按其首行展开。对不同列 j,kj,k，含 a1ja2ka_{1j}a_{2k} 的系数为 (−1)j+k−𝟏k&gt;jdet⁡A1,2̂;j,k̂(-1)^{j+k-\\mathbf1_{k&gt;j}}\\det A_{\\widehat{1,2};\\widehat{j,k}}，其中 𝟏k&gt;j\\mathbf1_{k&gt;j} 在 k&gt;jk&gt;j 时为1，否则为0；下标表示删除前两行与两列，剩余次序不变。交换后配对的 a2ka1ja_{2k}a_{1j} 系数为 (−1)k+j−𝟏j&gt;k(-1)^{k+j-\\mathbf1_{j&gt;k}}，恰相差负号；所有项成对变号。任意两行交换可分解为奇数次相邻交换：相距 dd 的两行共需 2d−12d-1 次，故也变号。重复行交换后不变，故行列式为零。\n任意行展开。 把第 ii 行经过 i−1i-1 次相邻交换移到首行，其余行相对次序不变；首行展开的子矩阵正是原 AijA_{ij}，两个符号相乘为 (−1)i−1(−1)1+j=(−1)i+j(-1)^{i-1}(-1)^{1+j}=(-1)^{i+j}，得到所述行展开。\n换列变号。 对相邻列 s,s+1s,s+1，首行展开中选择其他列的项，其子矩阵交换了相邻两列，归纳后变号。选择这两列的两个项相互配对：交换后的删列矩阵与原另一项相同，首行系数也对应相同，但 (−1)1+s(-1)^{1+s} 与 (−1)1+s+1(-1)^{1+s+1} 相反。任意两列再用上述 2d−12d-1 次相邻交换。重复列给零。\n至此，单行/列线性及重复行/列为零已足以推出倍加不变、倍乘的因子和交换的因子。先不用转置或一般列展开证明三角结论： 下三角沿首行；上三角沿最后一行（已证任意行展开），均递归得对角乘积。\n转置与列展开。 用消元把任意 AA 化为上三角阶梯矩阵 UU，只做交换和倍加即可。设这些操作的行列式因子之积为 f≠0f\\ne0，则 det⁡U=fdet⁡A\\det U=f\\det A。转置后，同一过程改为对 A𝖳A^{\\mathsf T} 做对应列操作，得 det⁡U𝖳=fdet⁡A𝖳\\det U^{\\mathsf T}=f\\det A^{\\mathsf T}。上下三角有同一对角乘积，所以约去非零 ff 得 det⁡A𝖳=det⁡A\\det A^{\\mathsf T}=\\det A；即使对角有零也成立。现在对转置矩阵按第 jj 行展开，用低一阶子式的转置相等，就得到原矩阵的第 jj 列展开。整个论证按“递归→基础关系→任意行→三角→转置→任意列”推进，不以行列式非零或乘积公式作依据。\n\n接着在消元、性质与可逆性 / Elimination, Properties and Invertibility用这些基础关系追踪每一步计算。\n\n\n\n\n\n\n注记选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names\n\n\n\n矩阵与行列式的名字 / Why “Matrix” and “Determinant”?讨论命名背景，并用小例子联系本主题。课外阅读，跳过不影响主线。",
+    "text": "定义到展开定理：理由与学习层次 From the Definition to the Expansion Theorem\n首次学习应能区分子矩阵、余子式与代数余子式，并用定理1选择合适的行列展开。上面的数值核对展示定理怎样使用，不是一般证明。\n下面给一条完整的独立基础路线：递归定义→单行/单列线性及交换变号→任意行展开→三角矩阵→转置→任意列展开。它不借用乘积公式或可逆判据，也不需要先学排列。其他定义选读 / Alternative Definitions另给排列路线，与这里的证明分别成立。\n进一步证明：从递归出发 / Further Proof: Starting from Recursion\n对阶数归纳，一阶直接成立，二阶用 ad−bcad-bc 核对。假定低一阶的单行/单列线性、交换变号均已证明。\n单行线性。 第一行由定义显然线性；对第 r&gt;1r&gt;1 行，每个首行展开的子式恰含该行删去一个分量后的行向量，归纳假设给线性。单列线性同样成立：固定第 ss 列，首行第 ss 项仅系数含 a1sa_{1s}、子式不含该列；其余项仅子式含该列、系数固定，故整个式对该列线性。零行/零列给零。\n换行变号。 交换首行以下的相邻两行，由子式归纳立得。交换第一、二行时，将首行展开的每个子式再按其首行展开。对不同列 j,kj,k，含 a1ja2ka_{1j}a_{2k} 的系数为 (−1)j+k−𝟏k&gt;jdet⁡A1,2̂;j,k̂(-1)^{j+k-\\mathbf1_{k&gt;j}}\\det A_{\\widehat{1,2};\\widehat{j,k}}，其中 𝟏k&gt;j\\mathbf1_{k&gt;j} 在 k&gt;jk&gt;j 时为1，否则为0；下标表示删除前两行与两列，剩余次序不变。交换后配对的 a2ka1ja_{2k}a_{1j} 系数为 (−1)k+j−𝟏j&gt;k(-1)^{k+j-\\mathbf1_{j&gt;k}}，恰相差负号；所有项成对变号。任意两行交换可分解为奇数次相邻交换：相距 dd 的两行共需 2d−12d-1 次，故也变号。重复行交换后不变，故行列式为零。\n任意行展开。 把第 ii 行经过 i−1i-1 次相邻交换移到首行，其余行相对次序不变；首行展开的子矩阵正是原 AijA_{ij}，两个符号相乘为 (−1)i−1(−1)1+j=(−1)i+j(-1)^{i-1}(-1)^{1+j}=(-1)^{i+j}，得到所述行展开。\n换列变号。 对相邻列 s,s+1s,s+1，首行展开中选择其他列的项，其子矩阵交换了相邻两列，归纳后变号。选择这两列的两个项相互配对：交换后的删列矩阵与原另一项相同，首行系数也对应相同，但 (−1)1+s(-1)^{1+s} 与 (−1)1+s+1(-1)^{1+s+1} 相反。任意两列再用上述 2d−12d-1 次相邻交换。重复列给零。\n至此，单行/列线性及重复行/列为零已足以推出倍加不变、倍乘的因子和交换的因子。先不用转置或一般列展开证明三角结论： 下三角沿首行；上三角沿最后一行（已证任意行展开），均递归得对角乘积。\n转置与列展开。 用消元把任意 AA 化为上三角阶梯矩阵 UU，只做交换和倍加即可。设这些操作的行列式因子之积为 f≠0f\\ne0，则 det⁡U=fdet⁡A\\det U=f\\det A。转置后，同一过程改为对 A𝖳A^{\\mathsf T} 做对应列操作，得 det⁡U𝖳=fdet⁡A𝖳\\det U^{\\mathsf T}=f\\det A^{\\mathsf T}。上下三角有同一对角乘积，所以约去非零 ff 得 det⁡A𝖳=det⁡A\\det A^{\\mathsf T}=\\det A；即使对角有零也成立。现在对转置矩阵按第 jj 行展开，用低一阶子式的转置相等，就得到原矩阵的第 jj 列展开。整个论证按“递归→基础关系→任意行→三角→转置→任意列”推进，不以行列式非零或乘积公式作依据。\n\n\n\n\n\n\n\n注记选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names\n\n\n\n行列式的名字与“判定”有什么联系，零行列式又能告诉我们什么？见矩阵与行列式的名字 / Why “Matrix” and “Determinant”?。\n\n\n接着在消元、性质与可逆性 / Elimination, Properties and Invertibility用这些基础关系追踪每一步计算。",
     "crumbs": [
       "第三部分：行列式 / Part 3: Determinants",
       "<span class='chapter-number'>37</span>  <span class='chapter-title'>行列式的定义与展开 / Defining and Expanding Determinants</span>"
@@ -4563,22 +4563,22 @@
     ]
   },
   {
-    "objectID": "chapter-05-overview.html#course-connections",
-    "href": "chapter-05-overview.html#course-connections",
+    "objectID": "chapter-05-overview.html#names-behind-math",
+    "href": "chapter-05-overview.html#names-behind-math",
     "title": "第五部分：特征值与特征向量",
-    "section": "把本部分接到全课程 Connecting This Part to the Course",
-    "text": "把本部分接到全课程 Connecting This Part to the Course\n第四部分已经区分对象与坐标；这里选择特征基来理解同一个映射的反复作用。两质点振动 / Two-Mass Oscillations把第三部分的频率条件补成正常模。第六部分 / Part 6继续问怎样选择便于测量长度和误差的坐标；特征向量一般不自动正交。",
+    "section": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names",
+    "text": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names\n\n特征值、本征值与谱 / Eigenvalues and the Spectrum：同一概念的两种译名，怎样联系特殊方向与振动？",
     "crumbs": [
       "第五部分：特征值与特征向量 / Part 5: Eigenvalues and Eigenvectors",
       "<span class='chapter-number'>57</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
     ]
   },
   {
-    "objectID": "chapter-05-overview.html#names-behind-math",
-    "href": "chapter-05-overview.html#names-behind-math",
+    "objectID": "chapter-05-overview.html#course-connections",
+    "href": "chapter-05-overview.html#course-connections",
     "title": "第五部分：特征值与特征向量",
-    "section": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names",
-    "text": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names\n这些是课外阅读，不增加必修先修要求。\n\n特征值、本征值与谱 / Eigenvalues and the Spectrum",
+    "section": "把本部分接到全课程 Connecting This Part to the Course",
+    "text": "把本部分接到全课程 Connecting This Part to the Course\n第四部分已经区分对象与坐标；这里选择特征基来理解同一个映射的反复作用。两质点振动 / Two-Mass Oscillations把第三部分的频率条件补成正常模。第六部分 / Part 6继续问怎样选择便于测量长度和误差的坐标；特征向量一般不自动正交。",
     "crumbs": [
       "第五部分：特征值与特征向量 / Part 5: Eigenvalues and Eigenvectors",
       "<span class='chapter-number'>57</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
@@ -4633,7 +4633,7 @@
     "href": "topics/eigenvalues-and-eigenspaces.html#practice",
     "title": "特征值与特征空间",
     "section": "动笔：零、负数与特征空间 Practice: Zero, Negative Values and Eigenspaces",
-    "text": "动笔：零、负数与特征空间 Practice: Zero, Negative Values and Eigenspaces\n令 H=diag⁡(−2,0)H=\\operatorname{diag}(-2,0)。检查 (1,0)𝖳(1,0)^{\\mathsf T}、(0,1)𝖳(0,1)^{\\mathsf T}、(1,1)𝖳(1,1)^{\\mathsf T}；求 E−2E_{-2} 与 E0E_0 的基和维数。E0E_0 中的零向量是否是特征向量？\n提示 / Hint\n先逐列计算像，再分别解 (H+2I)𝐯=0(H+2I)\\mathbf v=0 和 H𝐯=0H\\mathbf v=0。\n\n完整解答 / Full Solution\n三个像分别为 (−2,0)𝖳(-2,0)^{\\mathsf T}、(0,0)𝖳(0,0)^{\\mathsf T}、(−2,0)𝖳(-2,0)^{\\mathsf T}。前两向量分别对应 −2-2、0；第三个不对应任何单一标量倍数。 H+2I=diag⁡(0,2)H+2I=\\operatorname{diag}(0,2) 强制第二分量为零，所以 E−2=Span⁡{(1,0)𝖳}E_{-2}=\\operatorname{Span}\\{(1,0)^{\\mathsf T}\\}；HH 强制第一分量为零，所以 E0=Span⁡{(0,1)𝖳}E_0=\\operatorname{Span}\\{(0,1)^{\\mathsf T}\\}。两维数均为1。零属于两个子空间，却不是特征向量。\n\n已经给定 λ\\lambda 时，求特征空间就是求核。下一步问：怎样找出所有可能的 λ\\lambda？进入特征方程 / The Characteristic Equation。\n\n\n\n\n\n\n注记选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names\n\n\n\n特征值、本征值与谱 / Eigenvalues and the Spectrum讨论命名背景，并用小例子联系本主题。课外阅读，跳过不影响主线。",
+    "text": "动笔：零、负数与特征空间 Practice: Zero, Negative Values and Eigenspaces\n令 H=diag⁡(−2,0)H=\\operatorname{diag}(-2,0)。检查 (1,0)𝖳(1,0)^{\\mathsf T}、(0,1)𝖳(0,1)^{\\mathsf T}、(1,1)𝖳(1,1)^{\\mathsf T}；求 E−2E_{-2} 与 E0E_0 的基和维数。E0E_0 中的零向量是否是特征向量？\n提示 / Hint\n先逐列计算像，再分别解 (H+2I)𝐯=0(H+2I)\\mathbf v=0 和 H𝐯=0H\\mathbf v=0。\n\n完整解答 / Full Solution\n三个像分别为 (−2,0)𝖳(-2,0)^{\\mathsf T}、(0,0)𝖳(0,0)^{\\mathsf T}、(−2,0)𝖳(-2,0)^{\\mathsf T}。前两向量分别对应 −2-2、0；第三个不对应任何单一标量倍数。 H+2I=diag⁡(0,2)H+2I=\\operatorname{diag}(0,2) 强制第二分量为零，所以 E−2=Span⁡{(1,0)𝖳}E_{-2}=\\operatorname{Span}\\{(1,0)^{\\mathsf T}\\}；HH 强制第一分量为零，所以 E0=Span⁡{(0,1)𝖳}E_0=\\operatorname{Span}\\{(0,1)^{\\mathsf T}\\}。两维数均为1。零属于两个子空间，却不是特征向量。\n\n\n\n\n\n\n\n注记选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names\n\n\n\n为什么特征值也叫本征值，“谱”又指什么？见特征值、本征值与谱 / Eigenvalues and the Spectrum。\n\n\n已经给定 λ\\lambda 时，求特征空间就是求核。下一步问：怎样找出所有可能的 λ\\lambda？进入特征方程 / The Characteristic Equation。",
     "crumbs": [
       "第五部分：特征值与特征向量 / Part 5: Eigenvalues and Eigenvectors",
       "<span class='chapter-number'>58</span>  <span class='chapter-title'>特征值与特征空间 / Eigenvalues and Eigenspaces</span>"
@@ -5293,7 +5293,7 @@
     "href": "topics/names-eigenvalues-spectrum.html",
     "title": "特征值、本征值与谱",
     "section": "",
-    "text": "“自己的”什么？ What Is “Own” About an Eigenvalue?\n选读：名字背后的数学\nFurther Reading: The Mathematics Behind the Names\n为什么数学课说“特征值”，物理书又说“本征值”？英文 eigenvalue 为什么保留一截德语？这些词围绕同一种特殊的线性关系形成，但历史中的用法并非一开始就统一。本篇供第五部分学完特征值定义后选读。\n德语 eigen 有“自己的、某物特有的”等意思，词典可帮助理解这一语言联系。Eigenwert 的 Wert 是“值”；英语 eigenvalue 保留了前半部分。数学文献还使用过 characteristic value、proper value 等称呼。Tou 的数学史文章追踪了这些术语，并讨论 Hilbert 1904年积分方程研究中的 Eigenfunktion、Eigenwert。\n读历史文献还要看公式：有些积分方程作者所称的“值”，相当于现代矩阵特征值的倒数。相似的名字不能保证相同的参数约定。术语史核查特别指出了这一点。“特征值”和“本征值”在本课程所谈的线性代数关系中对应 eigenvalue；物理文献确有“本征值 / eigenvalue”的并列用例。这能证明用法存在，不能证明谁最先创造中文译名。",
+    "text": "“自己的”什么？ What Is “Own” About an Eigenvalue?\n选读：名字背后的数学\nFurther Reading: The Mathematics Behind the Names\n为什么数学课说“特征值”，物理书又说“本征值”？“特征值”和“本征值”是同一数学概念的两种中文译名，都对应这里的 eigenvalue。英文 eigenvalue 为什么保留一截德语？这些词围绕同一种特殊的线性关系形成，但历史中的用法并非一开始就统一。本篇供第五部分学完特征值定义后选读。\n德语 eigen 有“自己的、某物特有的”等意思，词典可帮助理解这一语言联系。Eigenwert 的 Wert 是“值”；英语 eigenvalue 保留了前半部分。数学文献还使用过 characteristic value、proper value 等称呼。Tou 的数学史文章追踪了这些术语，并讨论 Hilbert 1904年积分方程研究中的 Eigenfunktion、Eigenwert。\n历史文献中的参数约定并不总相同：有些积分方程作者所称的“值”，相当于现代矩阵特征值的倒数。术语史核查特别指出了这一点。",
     "crumbs": [
       "第五部分：特征值与特征向量 / Part 5: Eigenvalues and Eigenvectors",
       "<span class='chapter-number'>69</span>  <span class='chapter-title'>特征值、本征值与谱（选读） / Eigenvalues and the Spectrum (Optional)</span>"
@@ -5315,7 +5315,7 @@
     "href": "topics/names-eigenvalues-spectrum.html#connections",
     "title": "特征值、本征值与谱",
     "section": "谱与物理的联系 Connections with Physical Spectra",
-    "text": "谱与物理的联系 Connections with Physical Spectra\n在振动问题中，某些整体运动模式能保持各分量的比例，特征值问题就帮助找出这些模态；微分方程主题展示相应的数学结构。这是现代解释，不能直接当成某个历史词语的命名原意。\n“谱”也使人想到光谱，但要区分量：量子跃迁发出的光子满足 hν=E高−E低h\\nu=E_{\\mathrm{高}}-E_{\\mathrm{低}}，其中 hh 是普朗克常数、ν\\nu 是频率。谱线对应能级差，不能把所有谱线频率直接等同于能量特征值。NIST 的原子光谱说明明确列出这一关系。联系有助理解，概念之间仍需靠方程连接。",
+    "text": "谱与物理的联系 Connections with Physical Spectra\n在振动问题中，某些整体运动模式能保持各分量的比例，特征值问题就帮助找出这些模态；微分方程主题展示相应的数学结构。这种物理联系帮助理解数学结构，并不说明 eigen 一词当初为何得名。\n“谱”也使人想到光谱，但要区分量：量子跃迁发出的光子满足 hν=E高−E低h\\nu=E_{\\mathrm{高}}-E_{\\mathrm{低}}，其中 hh 是普朗克常数、ν\\nu 是频率。谱线对应能级差，不能把所有谱线频率直接等同于能量特征值。NIST 的原子光谱说明明确列出这一关系。联系有助理解，概念之间仍需靠方程连接。",
     "crumbs": [
       "第五部分：特征值与特征向量 / Part 5: Eigenvalues and Eigenvectors",
       "<span class='chapter-number'>69</span>  <span class='chapter-title'>特征值、本征值与谱（选读） / Eigenvalues and the Spectrum (Optional)</span>"
@@ -5326,7 +5326,7 @@
     "href": "topics/names-eigenvalues-spectrum.html#sources",
     "title": "特征值、本征值与谱",
     "section": "来源与返回 Sources and Return Links",
-    "text": "来源与返回 Sources and Return Links\nErik R. Tou，Math Origins: Eigenvectors and Eigenvalues，MAA Convergence（2018），DOI；MacTutor 的 eigen 术语史条目及上述词典、中文期刊用例、NIST 资料分别支持历史、语言和现代物理说明，不据此断言中文译者或“谱”一词的唯一来源。\n返回：特征值与特征空间 / Return to Eigenvalues and Eigenspaces",
+    "text": "来源与返回 Sources and Return Links\nErik R. Tou，Math Origins: Eigenvectors and Eigenvalues，MAA Convergence（2018），DOI；MacTutor 的 eigen 术语史条目及上述词典、NIST 资料分别介绍历史、语言和现代物理联系。中文物理期刊中的“本征值 / eigenvalue”用例可供对照，但这些用例并不能确定中文译名的首创者。\n返回：特征值与特征空间 / Return to Eigenvalues and Eigenspaces",
     "crumbs": [
       "第五部分：特征值与特征向量 / Part 5: Eigenvalues and Eigenvectors",
       "<span class='chapter-number'>69</span>  <span class='chapter-title'>特征值、本征值与谱（选读） / Eigenvalues and the Spectrum (Optional)</span>"
@@ -5399,22 +5399,22 @@
     ]
   },
   {
-    "objectID": "chapter-06-overview.html#course-connections",
-    "href": "chapter-06-overview.html#course-connections",
+    "objectID": "chapter-06-overview.html#names-behind-math",
+    "href": "chapter-06-overview.html#names-behind-math",
     "title": "第六部分：正交性与最小二乘",
-    "section": "把本部分接到全课程 Connecting This Part to the Course",
-    "text": "把本部分接到全课程 Connecting This Part to the Course\n前面的相容性问题并未消失：目标在列空间中时仍可精确达到；不在其中时，用投影定义最佳逼近。所有最小二乘目标都有最优拟合向量，但系数唯一仍须列满秩。第七部分 / Part 7会把正交几何与特征方向结合，用SVD一次看清四空间、最小范数解和低秩误差。",
+    "section": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names",
+    "text": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names\n\n最小二乘为什么叫“二乘”？ / Why “Least Squares”?：残差平方和为何成为拟合的目标？",
     "crumbs": [
       "第六部分：正交性与最小二乘 / Part 6: Orthogonality and Least Squares",
       "<span class='chapter-number'>70</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
     ]
   },
   {
-    "objectID": "chapter-06-overview.html#names-behind-math",
-    "href": "chapter-06-overview.html#names-behind-math",
+    "objectID": "chapter-06-overview.html#course-connections",
+    "href": "chapter-06-overview.html#course-connections",
     "title": "第六部分：正交性与最小二乘",
-    "section": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names",
-    "text": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names\n这些是课外阅读，不增加必修先修要求。\n\n最小二乘为什么叫“二乘”？ / Why “Least Squares”?",
+    "section": "把本部分接到全课程 Connecting This Part to the Course",
+    "text": "把本部分接到全课程 Connecting This Part to the Course\n前面的相容性问题并未消失：目标在列空间中时仍可精确达到；不在其中时，用投影定义最佳逼近。所有最小二乘目标都有最优拟合向量，但系数唯一仍须列满秩。第七部分 / Part 7会把正交几何与特征方向结合，用SVD一次看清四空间、最小范数解和低秩误差。",
     "crumbs": [
       "第六部分：正交性与最小二乘 / Part 6: Orthogonality and Least Squares",
       "<span class='chapter-number'>70</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
@@ -5788,7 +5788,7 @@
     "href": "topics/least-squares.html#practice",
     "title": "最小二乘法",
     "section": "动笔：保留一次独立计算 Practice: An Independent Calculation",
-    "text": "动笔：保留一次独立计算 Practice: An Independent Calculation\n令 C=[400211]C=\\begin{bmatrix}4&0\\\\0&2\\\\1&1\\end{bmatrix}、𝐝=(2,0,11)T\\mathbf d=(2,0,11)^T。构造正规方程，求系数、拟合、残差及最小误差，并解释是否唯一。\n提示 / Hint\nCTC=[17115]C^TC=\\begin{bmatrix}17&1\\\\1&5\\end{bmatrix}。解方程后应检查 CT𝐞=0C^T\\mathbf e=0，而不只检查系数。\n\n完整解答 / Full Solution\nCT𝐝=(19,11)TC^T\\mathbf d=(19,11)^T，消元给 𝐱̂=(1,2)T\\widehat{\\mathbf x}=(1,2)^T，𝐝̂=(4,4,3)T\\widehat{\\mathbf d}=(4,4,3)^T，𝐞=(−2,−4,8)T\\mathbf e=(-2,-4,8)^T。两个点积为 −8+8=0-8+8=0、−8+8=0-8+8=0，最小误差为 84\\sqrt{84}。两列无关，故系数唯一；CCTCC^T 是秩2的 3×33\\times3 矩阵，不可逆，这不影响 CTCC^TC 可逆。\n\n若系数不唯一，怎样选范数最小者？第七部分的伪逆与最小范数解 / Pseudoinverse and Minimum Norm用行空间与零空间的正交分解回答。\n\n\n\n\n\n\n注记选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names\n\n\n\n最小二乘为什么叫“二乘”？ / Why “Least Squares”?讨论命名背景，并用小例子联系本主题。课外阅读，跳过不影响主线。",
+    "text": "动笔：保留一次独立计算 Practice: An Independent Calculation\n令 C=[400211]C=\\begin{bmatrix}4&0\\\\0&2\\\\1&1\\end{bmatrix}、𝐝=(2,0,11)T\\mathbf d=(2,0,11)^T。构造正规方程，求系数、拟合、残差及最小误差，并解释是否唯一。\n提示 / Hint\nCTC=[17115]C^TC=\\begin{bmatrix}17&1\\\\1&5\\end{bmatrix}。解方程后应检查 CT𝐞=0C^T\\mathbf e=0，而不只检查系数。\n\n完整解答 / Full Solution\nCT𝐝=(19,11)TC^T\\mathbf d=(19,11)^T，消元给 𝐱̂=(1,2)T\\widehat{\\mathbf x}=(1,2)^T，𝐝̂=(4,4,3)T\\widehat{\\mathbf d}=(4,4,3)^T，𝐞=(−2,−4,8)T\\mathbf e=(-2,-4,8)^T。两个点积为 −8+8=0-8+8=0、−8+8=0-8+8=0，最小误差为 84\\sqrt{84}。两列无关，故系数唯一；CCTCC^T 是秩2的 3×33\\times3 矩阵，不可逆，这不影响 CTCC^TC 可逆。\n\n\n\n\n\n\n\n注记选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names\n\n\n\n“二乘”为什么指平方，拟合时究竟最小化什么？见最小二乘为什么叫“二乘”？ / Why “Least Squares”?。\n\n\n若系数不唯一，怎样选范数最小者？第七部分的伪逆与最小范数解 / Pseudoinverse and Minimum Norm用行空间与零空间的正交分解回答。",
     "crumbs": [
       "第六部分：正交性与最小二乘 / Part 6: Orthogonality and Least Squares",
       "<span class='chapter-number'>75</span>  <span class='chapter-title'>最小二乘法 / Least Squares</span>"
@@ -6151,7 +6151,7 @@
     "href": "topics/names-least-squares.html",
     "title": "最小二乘为什么叫“二乘”？",
     "section": "",
-    "text": "从观测误差到一个准则 From Observational Errors to a Criterion\n选读：名字背后的数学\nFurther Reading: The Mathematics Behind the Names\n“二乘”是乘以二，还是乘两次？这里指平方。最小二乘（least squares）要让一组残差的平方和尽可能小，不是让每个残差分别达到自己的最小值。本篇供第六部分学习拟合与投影时选读。\nLegendre 在1805年研究彗星轨道的著作附录中发表了最小二乘法，标题中的法语 moindres quarrés 使用当时的拼写。他面对的是由观测产生、往往不能同时精确满足的一组方程，并提出最小化误差平方和。附录英译保留了这一出发点与计算步骤。\nGauss 在1809年的著作中也论述此法，并声称自己从1795年起已使用。发表与较早使用的主张是两种证据，不能不加说明地换算成一句“某人发明于某年”。de Falguerolles 与 Pinchon 的研究区分了这些记录，也指出1806年的再版及补充背景。我们可以确认公开文本及主张的内容，而不在这里裁定全部优先权争论。",
+    "text": "从观测误差到一个准则 From Observational Errors to a Criterion\n选读：名字背后的数学\nFurther Reading: The Mathematics Behind the Names\n“二乘”是乘以二，还是乘两次？这里指平方。最小二乘（least squares）要让一组残差的平方和尽可能小，不是让每个残差分别达到自己的最小值。本篇供第六部分学习拟合与投影时选读。\nLegendre 在1805年研究彗星轨道的著作附录中发表了最小二乘法，标题中的法语 moindres quarrés 使用当时的拼写。他面对的是由观测产生、往往不能同时精确满足的一组方程，并提出最小化误差平方和。附录英译保留了这一出发点与计算步骤。\nGauss 在1809年的著作中也论述此法，并声称自己从1795年起已使用。Legendre 的公开发表与 Gauss 关于较早使用的主张，是这段历史中不同的记录。de Falguerolles 与 Pinchon 的研究介绍了相关文献与优先权争论。",
     "crumbs": [
       "第六部分：正交性与最小二乘 / Part 6: Orthogonality and Least Squares",
       "<span class='chapter-number'>81</span>  <span class='chapter-title'>最小二乘为什么叫“二乘”？（选读） / Why “Least Squares”? (Optional)</span>"
@@ -6257,22 +6257,22 @@
     ]
   },
   {
-    "objectID": "chapter-07-overview.html#course-connections",
-    "href": "chapter-07-overview.html#course-connections",
+    "objectID": "chapter-07-overview.html#names-behind-math",
+    "href": "chapter-07-overview.html#names-behind-math",
     "title": "第七部分：实对称矩阵、二次型与奇异值分解",
-    "section": "把本部分接到全课程 Connecting This Part to the Course",
-    "text": "把本部分接到全课程 Connecting This Part to the Course\n课程选读转动惯量与主轴 / Moment of Inertia and Principal Axes用同一对称矩阵区分角动量映射与转动能量；牛顿肖像的低秩表示 / Low-Rank Representation of Newton’s Portrait则区分可见图像、代数误差和存储预算。两者建立在已经学到的谱定理与SVD之后。综合复习用存在与唯一性、四空间两条线回望前六部分，不进入教材第8章。",
+    "section": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names",
+    "text": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names\n\n奇异值为什么叫“奇异”？ / Why “Singular Values”?：从单位矩阵的反例看名字与伸缩程度的区别。",
     "crumbs": [
       "第七部分：实对称矩阵、二次型与奇异值分解 / Part 7: Symmetric Matrices, Quadratic Forms, and SVD",
       "<span class='chapter-number'>82</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
     ]
   },
   {
-    "objectID": "chapter-07-overview.html#names-behind-math",
-    "href": "chapter-07-overview.html#names-behind-math",
+    "objectID": "chapter-07-overview.html#course-connections",
+    "href": "chapter-07-overview.html#course-connections",
     "title": "第七部分：实对称矩阵、二次型与奇异值分解",
-    "section": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names",
-    "text": "选读：名字背后的数学 Further Reading: The Mathematics Behind the Names\n这些是课外阅读，不增加必修先修要求。\n\n奇异值为什么叫“奇异”？ / Why “Singular Values”?",
+    "section": "把本部分接到全课程 Connecting This Part to the Course",
+    "text": "把本部分接到全课程 Connecting This Part to the Course\n课程选读转动惯量与主轴 / Moment of Inertia and Principal Axes用同一对称矩阵区分角动量映射与转动能量；牛顿肖像的低秩表示 / Low-Rank Representation of Newton’s Portrait则区分可见图像、代数误差和存储预算。两者建立在已经学到的谱定理与SVD之后。综合复习用存在与唯一性、四空间两条线回望前六部分，不进入教材第8章。",
     "crumbs": [
       "第七部分：实对称矩阵、二次型与奇异值分解 / Part 7: Symmetric Matrices, Quadratic Forms, and SVD",
       "<span class='chapter-number'>82</span>  <span class='chapter-title'>本部分导读 / Part Overview</span>"
@@ -6613,7 +6613,7 @@
     "href": "topics/singular-value-decomposition.html#practice",
     "title": "奇异值分解",
     "section": "动笔：转置后的宽矩阵 Practice: The Wide Transpose",
-    "text": "动笔：转置后的宽矩阵 Practice: The Wide Transpose\n利用上例写出 ATA^T 的完整SVD，标出各因子尺寸、奇异值数量、秩和核的维数。当 σj=0\\sigma_j=0 时，为什么不能用 𝐮j=A𝐯j/σj\\mathbf u_j=A\\mathbf v_j/\\sigma_j 构造左奇异向量，而应补成标准正交基？\n提示 / Hint\n对 A=UΣVTA=U\\Sigma V^T 取转置。宽矩阵从 ℝ3\\mathbb R^3 映到 ℝ2\\mathbb R^2。\n\n完整解答 / Full Solution\nAT⏟2×3=V⏟2×2ΣT⏟2×3UT⏟3×3.\\underbrace{A^T}_{2\\times3}=\\underbrace{V}_{2\\times2}\\underbrace{\\Sigma^T}_{2\\times3}\\underbrace{U^T}_{3\\times3}. 它的输入基为原来的 𝐮1,𝐮2,𝐮3\\mathbf u_1,\\mathbf u_2,\\mathbf u_3，输出基为原来的 𝐯1,𝐯2\\mathbf v_1,\\mathbf v_2。按教材计数，(AT)TAT=AAT(A^T)^TA^T=AA^T 有三个特征值18、0、0，故奇异值为 32,0,03\\sqrt2,0,0；ΣT\\Sigma^T 却只有两个对角位置。秩为1，核维数为 3−1=23-1=2，由 𝐮2,𝐮3\\mathbf u_2,\\mathbf u_3 张成。零奇异值对应零像，不能用零除法归一化；其余输出基从正像方向的正交补中选取。\n\n下一主题：SVD、四个基本子空间与最小二乘 / Next: SVD, the Four Fundamental Subspaces, and Least Squares。\n\n\n\n\n\n\n注记选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names\n\n\n\n奇异值为什么叫“奇异”？ / Why “Singular Values”?讨论命名背景，并用小例子联系本主题。课外阅读，跳过不影响主线。",
+    "text": "动笔：转置后的宽矩阵 Practice: The Wide Transpose\n利用上例写出 ATA^T 的完整SVD，标出各因子尺寸、奇异值数量、秩和核的维数。当 σj=0\\sigma_j=0 时，为什么不能用 𝐮j=A𝐯j/σj\\mathbf u_j=A\\mathbf v_j/\\sigma_j 构造左奇异向量，而应补成标准正交基？\n提示 / Hint\n对 A=UΣVTA=U\\Sigma V^T 取转置。宽矩阵从 ℝ3\\mathbb R^3 映到 ℝ2\\mathbb R^2。\n\n完整解答 / Full Solution\nAT⏟2×3=V⏟2×2ΣT⏟2×3UT⏟3×3.\\underbrace{A^T}_{2\\times3}=\\underbrace{V}_{2\\times2}\\underbrace{\\Sigma^T}_{2\\times3}\\underbrace{U^T}_{3\\times3}. 它的输入基为原来的 𝐮1,𝐮2,𝐮3\\mathbf u_1,\\mathbf u_2,\\mathbf u_3，输出基为原来的 𝐯1,𝐯2\\mathbf v_1,\\mathbf v_2。按教材计数，(AT)TAT=AAT(A^T)^TA^T=AA^T 有三个特征值18、0、0，故奇异值为 32,0,03\\sqrt2,0,0；ΣT\\Sigma^T 却只有两个对角位置。秩为1，核维数为 3−1=23-1=2，由 𝐮2,𝐮3\\mathbf u_2,\\mathbf u_3 张成。零奇异值对应零像，不能用零除法归一化；其余输出基从正像方向的正交补中选取。\n\n\n\n\n\n\n\n注记选读：名字背后的数学 / Further Reading: The Mathematics Behind the Names\n\n\n\n单位矩阵并不奇异，为什么也有奇异值？见奇异值为什么叫“奇异”？ / Why “Singular Values”?。\n\n\n下一主题：SVD、四个基本子空间与最小二乘 / Next: SVD, the Four Fundamental Subspaces, and Least Squares。",
     "crumbs": [
       "第七部分：实对称矩阵、二次型与奇异值分解 / Part 7: Symmetric Matrices, Quadratic Forms, and SVD",
       "<span class='chapter-number'>87</span>  <span class='chapter-title'>奇异值分解 / Singular Value Decomposition</span>"
@@ -7009,7 +7009,7 @@
     "href": "topics/names-singular-values.html",
     "title": "奇异值为什么叫“奇异”？",
     "section": "",
-    "text": "用语来自怎样的背景？ The Historical Setting of the Term\n选读：名字背后的数学\nFurther Reading: The Mathematics Behind the Names\n已经学过“奇异方阵”表示不可逆，那么“奇异值”是否只属于不可逆矩阵？最直接的检验是单位矩阵：II 可逆，它的奇异值却全为1。“奇异值”是一类数的名称，不是先判断矩阵出了什么问题。本篇供第七部分学完 SVD 后选读。\nStewart 的早期 SVD 历史研究把相关工作放在双线性型和积分方程两条线索中讨论，涉及 Beltrami、Jordan、Sylvester、Schmidt、Weyl 等人的贡献。今天统一写出的分解式，不能直接当成每位作者当时采用的记号与研究对象。\n在专门讨论命名的段落中，Stewart 谨慎地说 singular value 这一用语似乎来自积分方程文献。他列出早期用例，并说明有些“值”对应另一种量的倒数，后来用法才逐步稳定。这支持我们理解历史语境，却不足以证明“因为矩阵奇异，所以把这个数叫奇异值”这样的简单因果故事。本篇保留这项限制，也不据有限用例指定一个毫无争议的命名瞬间。",
+    "text": "用语来自怎样的背景？ The Historical Setting of the Term\n选读：名字背后的数学\nFurther Reading: The Mathematics Behind the Names\n已经学过“奇异方阵”表示不可逆，那么“奇异值”是否只属于不可逆矩阵？最直接的检验是单位矩阵：II 可逆，它的奇异值却全为1。“奇异值”是一类数的名称，不是先判断矩阵出了什么问题。本篇供第七部分学完 SVD 后选读。\nStewart 的早期 SVD 历史研究把相关工作放在双线性型和积分方程两条线索中讨论，涉及 Beltrami、Jordan、Sylvester、Schmidt、Weyl 等人的贡献。今天统一写出的分解式，不能直接当成每位作者当时采用的记号与研究对象。\n在专门讨论命名的段落中，Stewart 谨慎地说 singular value 这一用语似乎来自积分方程文献。他列出早期用例，并说明有些“值”对应另一种量的倒数，后来用法才逐步稳定。这条词源线索仍有不确定性，不能简单解释成“因为矩阵奇异，所以叫奇异值”。",
     "crumbs": [
       "第七部分：实对称矩阵、二次型与奇异值分解 / Part 7: Symmetric Matrices, Quadratic Forms, and SVD",
       "<span class='chapter-number'>93</span>  <span class='chapter-title'>奇异值为什么叫“奇异”？（选读） / Why “Singular Values”? (Optional)</span>"
@@ -7031,7 +7031,7 @@
     "href": "topics/names-singular-values.html#connections",
     "title": "奇异值为什么叫“奇异”？",
     "section": "零奇异值、秩与近似 Zero Singular Values, Rank, and Approximation",
-    "text": "零奇异值、秩与近似 Zero Singular Values, Rank, and Approximation\n非零奇异值的个数等于秩。只有限定为 n×nn\\times n 方阵时，才能说“全部 nn 个奇异值为正”等价于可逆；出现零奇异值则不可逆。矩形情形应分别讨论满行秩、满列秩与两个零空间，不能把方阵的用语直接套过来。\n再看 II：它在每个方向上的伸缩程度都是1，完全没有“异常”，却自然拥有奇异值。这个反例帮助我们把名称与定义分开。低秩图像近似进一步利用大小不同的奇异值组织近似：保留较大项、舍去较小项，并计算误差。这里不需要再做一次照片实验；关键是从“某个数为何叫这个名字”回到它实际量度什么。",
+    "text": "零奇异值、秩与近似 Zero Singular Values, Rank, and Approximation\n非零奇异值的个数等于秩。只有限定为 n×nn\\times n 方阵时，才能说“全部 nn 个奇异值为正”等价于可逆；出现零奇异值则不可逆。矩形情形应分别讨论满行秩、满列秩与两个零空间，不能把方阵的用语直接套过来。\n再看 II：它在每个方向上的伸缩程度都是1，完全没有“异常”，却自然拥有奇异值。这个反例帮助我们把名称与定义分开。低秩图像近似进一步利用大小不同的奇异值组织近似：保留较大项、舍去较小项，并计算误差。名字引出的问题，由此联系到可计算的伸缩程度与近似误差。",
     "crumbs": [
       "第七部分：实对称矩阵、二次型与奇异值分解 / Part 7: Symmetric Matrices, Quadratic Forms, and SVD",
       "<span class='chapter-number'>93</span>  <span class='chapter-title'>奇异值为什么叫“奇异”？（选读） / Why “Singular Values”? (Optional)</span>"
@@ -7042,7 +7042,7 @@
     "href": "topics/names-singular-values.html#sources",
     "title": "奇异值为什么叫“奇异”？",
     "section": "来源与返回 Sources and Return Links",
-    "text": "来源与返回 Sources and Return Links\nG. W. Stewart，On the Early History of the Singular Value Decomposition，University of Maryland 技术报告 CS-TR-2855 / UMIACS-TR-92-31（1992年3月），特别是引言与第7节 “Nomenclature”。馆藏及开放全文的入库日期不等于报告写作日期。历史段按该研究的谨慎措辞概括；后面的矩阵例子是本课程的现代说明。\n返回：奇异值分解 / Return to Singular Value Decomposition",
+    "text": "来源与返回 Sources and Return Links\nG. W. Stewart，On the Early History of the Singular Value Decomposition，University of Maryland 技术报告 CS-TR-2855 / UMIACS-TR-92-31（1992年3月）。馆藏及开放全文。上述命名讨论见报告第7节 “Nomenclature”；矩阵例子说明今天使用的定义。\n返回：奇异值分解 / Return to Singular Value Decomposition",
     "crumbs": [
       "第七部分：实对称矩阵、二次型与奇异值分解 / Part 7: Symmetric Matrices, Quadratic Forms, and SVD",
       "<span class='chapter-number'>93</span>  <span class='chapter-title'>奇异值为什么叫“奇异”？（选读） / Why “Singular Values”? (Optional)</span>"

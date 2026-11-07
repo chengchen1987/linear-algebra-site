@@ -15,11 +15,11 @@
 <polyline points="249.29,263.60 401.55,81.45" fill="none" stroke="#b4d3cc" stroke-width="1" stroke-dasharray=""/>
 <polyline points="453.94,289.08 382.94,79.13" fill="none" stroke="#b4d3cc" stroke-width="1" stroke-dasharray=""/>
 <polyline points="423.04,309.91 272.17,199.24" fill="none" stroke="#7a8790" stroke-width="1.4" stroke-dasharray="" marker-end="url(#arrow)"/>
-<text x="280.1668206988229" y="203.24479823298884" class="label" >b₁</text>
+<text x="280.1668206988229" y="203.24479823298884" class="small" >b₁</text>
 <polyline points="209.08,283.27 532.64,231.67" fill="none" stroke="#7a8790" stroke-width="1.4" stroke-dasharray="" marker-end="url(#arrow)"/>
-<text x="540.6363262591833" y="235.66938414329059" class="label" >b₂</text>
+<text x="540.6363262591833" y="235.66938414329059" class="small" >b₂</text>
 <polyline points="355.00,411.29 355.00,75.82" fill="none" stroke="#7a8790" stroke-width="1.4" stroke-dasharray="" marker-end="url(#arrow)"/>
-<text x="363.0" y="79.82024632596196" class="label" >b₃</text>
+<text x="363.0" y="79.82024632596196" class="small" >b₃</text>
 <polyline points="456.57,361.89 253.43,158.11" fill="none" stroke="#765184" stroke-width="2" stroke-dasharray="7 5"/>
 <path id="geometry-a1" data-world-vector="1,0,1" d="M355.00 260.00 L325.42 172.52" fill="none" stroke="#27746d" stroke-width="2.4" marker-end="url(#arrow)"/>
 <text x="295.416721678151" y="162.5232301996253" class="label" >a₁</text>
