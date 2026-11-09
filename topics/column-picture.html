@@ -661,6 +661,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-9" aria-label="例题与练习汇编 / Examples and Exercises"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">例题与练习汇编</span><span class="nav-en" lang="en">Examples and Exercises</span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/index.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">使用说明与索引</span><span class="nav-en" lang="en">Guide and Index</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/part-01.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第一部分：方程组与线性变换</span><span class="nav-en" lang="en">Part 1: Linear Systems and Transformations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/part-02.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第二部分：矩阵代数</span><span class="nav-en" lang="en">Part 2: Matrix Algebra</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">中英术语表</span><span class="nav-en" lang="en">Chinese–English Glossary</span></a>
@@ -993,16 +1013,7 @@ JavaScript 未启用；下面的静态对应与公式仍可完整阅读。
 </section>
 <section id="practice" class="level2">
 <h2 class="anchored" data-anchor-id="practice">练习与反馈 <span class="heading-en">Practice and Feedback</span></h2>
-<ol type="1">
-<li>三个方程、五个未知数：列向量几个，各有几个分量，解向量有几个分量？</li>
-<li>为什么不能只变换系数矩阵而保持目标向量不动？用 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>←</mo><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">R_1\leftarrow R_1+R_2</annotation></semantics></math> 检查本页二维例子的原解。</li>
-</ol>
-<details class="review-answer"><summary>解答与理由 / Solution and Reason</summary>
-<ol type="1">
-<li>五个列向量，每个三分量；解向量五分量。对照<a href="#dimensions">维数表</a>。</li>
-<li>行操作改变了方程的整个等式。此例新第一式应是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x+y=3</annotation></semantics></math>，原解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1,2)</annotation></semantics></math> 满足； 若只改系数却留下原第一式右边的常数 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>，便错误地要求 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x+y=0</annotation></semantics></math>，丢掉原解。同步图中的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐛</mi><annotation encoding="application/x-tex">\mathbf b</annotation></semantics></math> 恰好不动只因这种分量变化与本例目标向量的特殊位置，不能据此不处理目标向量。</li>
-</ol>
-</details>
+<p><strong>相关练习 / Related Exercises.</strong> <a href="../practice/part-01.html#l1-05">L1-05：列图像与同步目标 / Column Pictures and Target Operations</a>。</p>
 </section>
 <section id="linearity-preview" class="level2">
 <h2 class="anchored" data-anchor-id="linearity-preview">课后选读入口：线性与可逆性各负责什么？ <span class="heading-en">Further Reading: Roles of Linearity and Reversibility</span></h2>

@@ -661,6 +661,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-9" aria-label="例题与练习汇编 / Examples and Exercises"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">例题与练习汇编</span><span class="nav-en" lang="en">Examples and Exercises</span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/index.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">使用说明与索引</span><span class="nav-en" lang="en">Guide and Index</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/part-01.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第一部分：方程组与线性变换</span><span class="nav-en" lang="en">Part 1: Linear Systems and Transformations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/part-02.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第二部分：矩阵代数</span><span class="nav-en" lang="en">Part 2: Matrix Algebra</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">中英术语表</span><span class="nav-en" lang="en">Chinese–English Glossary</span></a>
@@ -793,24 +813,13 @@ ul.task-list li input[type="checkbox"] {
 <li>先显式形成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">AB</annotation></semantics></math>，再乘 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐱</mi><annotation encoding="application/x-tex">\mathbf x</annotation></semantics></math>：常规方法主要项约 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msup><mi>n</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">2n^3</annotation></semantics></math> 次，是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>n</mi><mn>3</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(n^3)</annotation></semantics></math>。</li>
 </ul>
 <p><strong>代数上相同，计算的组织方式会影响工作量。</strong> 比较针对这一次求值；若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">AB</annotation></semantics></math> 已经算好，或还要用于其他任务，就应按实际复用情形重新比较。</p>
-<p><strong>短练习 / Quick Practice.</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A,B</annotation></semantics></math> 都是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mo>×</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">100\times100</annotation></semantics></math> 稠密矩阵，尚未计算 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">AB</annotation></semantics></math>，只需一个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mi>𝐱</mi></mrow><annotation encoding="application/x-tex">(AB)\mathbf x</annotation></semantics></math>。选择哪种顺序？按主要项估计各需多少次运算（数值保留两位有效数字）？</p>
-<details class="review-answer"><summary>反馈：先数所需的点积 / Feedback: Count the Required Dot Products</summary>
-<p>选 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mi>𝐱</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">A(B\mathbf x)</annotation></semantics></math>：约 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4.0</mn><mo>×</mo><msup><mn>10</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">4.0\times10^4</annotation></semantics></math> 次；先形成乘积再乘向量约 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.0</mn><mo>×</mo><msup><mn>10</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">2.0\times10^6</annotation></semantics></math> 次。这里采用主要项估计。区别在于第二条路径先求出了整个矩阵的全部列，而本次只需一个向量的像；不能据此交换 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A,B</annotation></semantics></math> 的顺序。</p>
-</details>
+<p><strong>相关练习 / Related Exercises.</strong> <a href="../practice/part-02.html#l2-18">L2-18：选择计算顺序 / Choosing an Evaluation Order</a>。</p>
 </section>
 <section id="reuse" class="level2">
 <h2 class="anchored" data-anchor-id="reuse">回到LU：一次性成本与每次求解成本 <span class="heading-en">Returning to LU: Setup Cost and Cost per Solve</span></h2>
 <p>仍限于上述非奇异稠密方阵和常规算法。一次分解保存对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的消元结果；每次新目标只需解 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>𝐲</mi><mo>=</mo><mi>𝐛</mi></mrow><annotation encoding="application/x-tex">L\mathbf y=\mathbf b</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mi>𝐱</mi><mo>=</mo><mi>𝐲</mi></mrow><annotation encoding="application/x-tex">U\mathbf x=\mathbf y</annotation></semantics></math>。</p>
 <p>因此，对同一个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> 个目标向量，<strong>分解一次再复用</strong>的主要计算量约为 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><menclose notation="box"><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac><msup><mi>n</mi><mn>3</mn></msup><mo>+</mo><mn>2</mn><mi>k</mi><msup><mi>n</mi><mn>2</mn></msup></mrow></menclose><mo>,</mo></mrow><annotation encoding="application/x-tex">\boxed{\frac23n^3+2kn^2},</annotation></semantics></math> 而每次独立重新消元会把分解成本也付 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> 次，主项约为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo stretchy="false" form="prefix">(</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><msup><mi>n</mi><mn>3</mn></msup><mo>+</mo><mn>2</mn><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">k(\frac23n^3+2n^2)</annotation></semantics></math>。对同一系数矩阵反复求解时，主要的节省来自复用已经完成的分解，避免每次重新消元。已有LU后增加一个目标约需 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">2n^2</annotation></semantics></math> 次。这里的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> 表示目标个数，求和中的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math> 表示步骤编号。</p>
-<p><strong>短练习 / Quick Practice.</strong> 对可按当前算法分解的非奇异稠密 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mo>×</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">100\times100</annotation></semantics></math> 矩阵依次求解10个目标。用上述主要项估计：分解一次再复用、每个目标重新分解并求解，各需多少？若LU已经给出，新增第11个目标又需多少？数值保留两位有效数字。</p>
-<details class="review-answer"><summary>反馈：分清一次成本与每次成本 / Feedback: Separate Setup from Each Solve</summary>
-<ul>
-<li>分解一次后解十个目标：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>⋅</mo><msup><mn>100</mn><mn>3</mn></msup><mo>+</mo><mn>2</mn><mo>⋅</mo><mn>10</mn><mo>⋅</mo><msup><mn>100</mn><mn>2</mn></msup><mo>≈</mo><mn>8.7</mn><mo>×</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">\frac23\cdot100^3+2\cdot10\cdot100^2\approx8.7\times10^5</annotation></semantics></math> 次。</li>
-<li>十次各自重新分解并求解：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo stretchy="false" form="prefix">(</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>⋅</mo><msup><mn>100</mn><mn>3</mn></msup><mo>+</mo><mn>2</mn><mo>⋅</mo><msup><mn>100</mn><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mn>6.9</mn><mo>×</mo><msup><mn>10</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">10(\frac23\cdot100^3+2\cdot100^2)\approx6.9\times10^6</annotation></semantics></math> 次。</li>
-<li>已有分解后增加一个目标：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>⋅</mo><msup><mn>100</mn><mn>2</mn></msup><mo>≈</mo><mn>2.0</mn><mo>×</mo><msup><mn>10</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">2\cdot100^2\approx2.0\times10^4</annotation></semantics></math> 次。</li>
-</ul>
-<p>这些都是主要项估计，不能与含低阶项的精确计数混用。第二项只把“一次分解加一次求解”的成本乘10；新增目标则不再计分解成本。</p>
-</details>
+<p><strong>相关练习 / Related Exercises.</strong> <a href="../practice/part-02.html#l2-19">L2-19：复用分解的成本 / Cost of Reusing a Factorization</a>。</p>
 </section>
 <section id="structure" class="level2">
 <h2 class="anchored" data-anchor-id="structure">用结构节省计算 <span class="heading-en">Saving Work with Matrix Structure</span></h2>

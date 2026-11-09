@@ -661,6 +661,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-9" aria-label="例题与练习汇编 / Examples and Exercises"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">例题与练习汇编</span><span class="nav-en" lang="en">Examples and Exercises</span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/index.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">使用说明与索引</span><span class="nav-en" lang="en">Guide and Index</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/part-01.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第一部分：方程组与线性变换</span><span class="nav-en" lang="en">Part 1: Linear Systems and Transformations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/part-02.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第二部分：矩阵代数</span><span class="nav-en" lang="en">Part 2: Matrix Algebra</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">中英术语表</span><span class="nav-en" lang="en">Chinese–English Glossary</span></a>
@@ -922,13 +942,7 @@ C\begin{bmatrix}s\\t\end{bmatrix}=\begin{bmatrix}s\\t\\s+t\end{bmatrix}.</annota
 </table>
 <section id="subspace-practice" class="level3">
 <h3 class="anchored" data-anchor-id="subspace-practice">判断练习：先说所在空间，再检查条件 <span class="heading-en">Practice: Identify the Space and Check the Conditions</span></h3>
-<p>用上面的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> 判断：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">\operatorname{Col}C</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">\operatorname{Nul}C</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>𝐱</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">C\mathbf x=(1,2,3)^{\mathsf T}</annotation></semantics></math> 的解集、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>𝐱</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>4</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">C\mathbf x=(1,2,4)^{\mathsf T}</annotation></semantics></math> 的解集，哪些是线性子空间？给出条件或反例。再检查两坐标轴的并集。</p>
-<details class="review-answer"><summary>判断与解释 / Judgment and Explanation</summary>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Col</mi><mo>⁡</mo></mrow><mi>C</mi><mo>⊆</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\operatorname{Col}C\subseteq\mathbb R^3</annotation></semantics></math> 是线性子空间：含零，两点 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo>,</mo><mi>t</mi><mo>,</mo><mi>s</mi><mo>+</mo><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(s,t,s+t)^{\mathsf T}</annotation></semantics></math> 相加或数乘后仍满足第三分量等于前两分量之和。</p>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Nul</mi><mo>⁡</mo></mrow><mi>C</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>𝟎</mn><mo stretchy="false" form="postfix">}</mo><mo>⊆</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\operatorname{Nul}C=\{\mathbf0\}\subseteq\mathbb R^2</annotation></semantics></math> 也是线性子空间，零与零相加、任意数乘零都仍是零。</p>
-<p>右端 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,2,3)^{\mathsf T}</annotation></semantics></math> 的解集是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup><mo stretchy="false" form="postfix">}</mo><mo>⊆</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\{(1,2)^{\mathsf T}\}\subseteq\mathbb R^2</annotation></semantics></math>，不含零，故不是线性子空间。右端 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>4</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,2,4)^{\mathsf T}</annotation></semantics></math> 的解集为空，同样不含零。</p>
-<p>两坐标轴的并集在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb R^2</annotation></semantics></math> 中含零，也对数乘封闭，但不对加法封闭：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,0)^{\mathsf T}+(0,1)^{\mathsf T}=(1,1)^{\mathsf T}</annotation></semantics></math> 不在其中。三条条件必须同时满足。</p>
-</details>
+<p><strong>相关练习 / Related Exercises.</strong> <a href="../practice/part-01.html#l1-09">L1-09：判断子空间 / Identifying Subspaces</a>。</p>
 </section>
 </section>
 <section id="elimination" class="level2">

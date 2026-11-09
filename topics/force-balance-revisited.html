@@ -661,6 +661,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-9" aria-label="例题与练习汇编 / Examples and Exercises"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">例题与练习汇编</span><span class="nav-en" lang="en">Examples and Exercises</span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/index.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">使用说明与索引</span><span class="nav-en" lang="en">Guide and Index</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/part-01.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第一部分：方程组与线性变换</span><span class="nav-en" lang="en">Part 1: Linear Systems and Transformations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/part-02.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第二部分：矩阵代数</span><span class="nav-en" lang="en">Part 2: Matrix Algebra</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">中英术语表</span><span class="nav-en" lang="en">Chinese–English Glossary</span></a>
@@ -759,20 +779,7 @@ f_2&amp;=\frac56 b_x+\frac58 b_y.
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mi>y</mi></msub><mo>≥</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><msub><mi>b</mi><mi>x</mi></msub><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>b</mi><mi>y</mi></msub><mo>≥</mo><mi>−</mi><mfrac><mn>4</mn><mn>3</mn></mfrac><msub><mi>b</mi><mi>x</mi></msub><mo>,</mo><mspace width="1.0em"></mspace><mtext mathvariant="normal">即</mtext><mspace width="1.0em"></mspace><msub><mi>b</mi><mi>y</mi></msub><mo>≥</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo stretchy="false" form="prefix">|</mo><msub><mi>b</mi><mi>x</mi></msub><mo stretchy="false" form="prefix">|</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">b_y\ge\frac43 b_x,\qquad b_y\ge-\frac43 b_x,
 \quad\text{即}\quad b_y\ge\frac43|b_x|.</annotation></semantics></math></p>
 <p>这是固定两绳方向下的非负拉力条件。可逆性保证任意目标的代数解唯一，<strong>不保证该解满足模型的非负条件</strong>。</p>
-<p><strong>练习 / Exercise.</strong> 比较目标 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐛</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>60</mn><mo>,</mo><mn>80</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf b=(60,80)^{\mathsf T}</annotation></semantics></math> 与 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>90</mn><mo>,</mo><mn>80</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(90,80)^{\mathsf T}</annotation></semantics></math>（分量单位均为 N）。求拉力、回代，并解释物理差别。</p>
-<details class="review-answer"><summary>提示 / Hint</summary>
-<p>先用同一个 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>A</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math>，再逐项检查拉力是否非负。目标向量是所需合力，外力与它方向相反。</p>
-</details>
-<details class="review-answer"><summary>完整解答 / Full Solution</summary>
-<p>第一目标给</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐟</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>50</mn><mo>+</mo><mn>50</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>50</mn><mo>+</mo><mn>50</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>100</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi mathvariant="normal">N</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf f=\begin{bmatrix}-50+50\\50+50\end{bmatrix}
-=\begin{bmatrix}0\\100\end{bmatrix}\mathrm N.</annotation></semantics></math></p>
-<p>合力为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><msub><mi>𝐝</mi><mn>1</mn></msub><mo>+</mo><mn>100</mn><msub><mi>𝐝</mi><mn>2</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>60</mn><mo>,</mo><mn>80</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup><mi mathvariant="normal">N</mi></mrow><annotation encoding="application/x-tex">0\mathbf d_1+100\mathbf d_2=(60,80)^{\mathsf T}\mathrm N</annotation></semantics></math>。此时 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>80</mn><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mi>/</mi><mn>3</mn><mo stretchy="false" form="postfix">)</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">80=(4/3)60</annotation></semantics></math>，在非负条件的边界；第一根绳张力为零，未施加推力。</p>
-<p>第二目标给</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐟</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>75</mn><mo>+</mo><mn>50</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>75</mn><mo>+</mo><mn>50</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>25</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>125</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi mathvariant="normal">N</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf f=\begin{bmatrix}-75+50\\75+50\end{bmatrix}
-=\begin{bmatrix}-25\\125\end{bmatrix}\mathrm N.</annotation></semantics></math></p>
-<p>代数回代的水平分量为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn><mo>+</mo><mn>75</mn><mo>=</mo><mn>90</mn></mrow><annotation encoding="application/x-tex">15+75=90</annotation></semantics></math>，竖直分量为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>20</mn><mo>+</mo><mn>100</mn><mo>=</mo><mn>80</mn></mrow><annotation encoding="application/x-tex">-20+100=80</annotation></semantics></math>。但负的 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math> 不符合绳子只能拉的假设，因此不存在本模型允许的两绳物理解；不能把负数当成绳子实际施加的负张力。</p>
-</details>
+<p><strong>相关练习 / Related Exercises.</strong> <a href="../practice/part-02.html#l2-31">L2-31：两绳的代数解与物理解 / Algebraic and Physical Rope Solutions</a>。</p>
 </section>
 <section id="parallel-case" class="level2">
 <h2 class="anchored" data-anchor-id="parallel-case">如果两根绳同向呢？ <span class="heading-en">What If the Ropes Point in the Same Direction?</span></h2>

@@ -662,6 +662,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-9" aria-label="例题与练习汇编 / Examples and Exercises"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">例题与练习汇编</span><span class="nav-en" lang="en">Examples and Exercises</span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/index.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">使用说明与索引</span><span class="nav-en" lang="en">Guide and Index</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/part-01.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第一部分：方程组与线性变换</span><span class="nav-en" lang="en">Part 1: Linear Systems and Transformations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/part-02.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第二部分：矩阵代数</span><span class="nav-en" lang="en">Part 2: Matrix Algebra</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">中英术语表</span><span class="nav-en" lang="en">Chinese–English Glossary</span></a>
@@ -888,13 +908,7 @@ y_1+y_3&amp;=0,\\2y_1+2y_3&amp;=0,\\y_2+y_3&amp;=0,\\y_1+y_2+2y_3&amp;=0.
 \left[\begin{array}{cccc|c}1&amp;2&amp;0&amp;1&amp;b_1\\0&amp;0&amp;1&amp;1&amp;b_2\\0&amp;0&amp;0&amp;0&amp;b_3-b_1-b_2\end{array}\right].</annotation></semantics></math> 若 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>3</mn></msub><mo>=</mo><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">b_3=b_1+b_2</annotation></semantics></math>，取 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mi>s</mi><mo>,</mo><msub><mi>x</mi><mn>4</mn></msub><mo>=</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">x_2=s,x_4=t</annotation></semantics></math>，全部解为 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐱</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>b</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mi>s</mi><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo><mi>t</mi><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathbf x=\begin{bmatrix}b_1\\0\\b_2\\0\end{bmatrix}
 +s\begin{bmatrix}-2\\1\\0\\0\end{bmatrix}
 +t\begin{bmatrix}-1\\0\\-1\\1\end{bmatrix}.</annotation></semantics></math> 若不满足，就出现矛盾行。于是 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,2,3)^{\mathsf T}</annotation></semantics></math> 有无穷多解，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>4</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(1,2,4)^{\mathsf T}</annotation></semantics></math> 无解。这里列空间与第一部分 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">3\times2</annotation></semantics></math> 矩阵 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> 的列空间相同；但 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> 多了相关列，使相容时的输入不再唯一。</p>
-<p><strong>独立练习 / Practice.</strong> 对目标向量 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mi>−</mi><mn>1</mn><mo>,</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(2,-1,1)^{\mathsf T}</annotation></semantics></math>，先只用行关系判断相容性，再写全部解，并回代。把第三分量改为0会怎样？</p>
-<details class="review-answer"><summary>提示 / Hint</summary>
-<p>先检查第三分量是否等于前两分量之和；有解以后再使用两个自由参数。</p>
-</details>
-<details class="review-answer"><summary>完整解答 / Full Solution</summary>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>=</mo><mn>2</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">1=2+(-1)</annotation></semantics></math>，所以相容。全部解为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>−</mo><mn>2</mn><mi>s</mi><mo>−</mo><mi>t</mi><mo>,</mo><mi>s</mi><mo>,</mo><mi>−</mi><mn>1</mn><mo>−</mo><mi>t</mi><mo>,</mo><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>𝖳</mi></msup></mrow><annotation encoding="application/x-tex">(2-2s-t,s,-1-t,t)^{\mathsf T}</annotation></semantics></math>。代入第一个方程后，等号左边的值为2；代入第二、第三个方程后分别为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math> 和1，任意 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>,</mo><mi>t</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">s,t\in\mathbb R</annotation></semantics></math> 都满足。第三分量改为0后，左零空间基向量与目标向量的乘积为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>0</mn><mo>=</mo><mi>−</mi><mn>1</mn><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">-2+1+0=-1\ne0</annotation></semantics></math>，无解。</p>
-</details>
+<p><strong>相关练习 / Related Exercises.</strong> <a href="../practice/part-02.html#l2-23">L2-23：行关系与全部解 / Row Relations and All Solutions</a>。</p>
 </section>
 <section id="general-compatibility" class="level2">
 <h2 class="anchored" data-anchor-id="general-compatibility">一般相容性判据：用消元证明双向关系 <span class="heading-en">A General Consistency Criterion from Elimination</span></h2>

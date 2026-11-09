@@ -661,6 +661,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section course-chapter">
+      <div class="sidebar-item-container"><button class="sidebar-item-text course-chapter-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" type="button" aria-controls="quarto-sidebar-section-9" aria-label="例题与练习汇编 / Examples and Exercises"><span class="chapter-label"><span class="nav-zh" lang="zh-CN">例题与练习汇编</span><span class="nav-en" lang="en">Examples and Exercises</span></span><span class="chapter-arrow" aria-hidden="true"></span></button></div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/index.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">使用说明与索引</span><span class="nav-en" lang="en">Guide and Index</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/part-01.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第一部分：方程组与线性变换</span><span class="nav-en" lang="en">Part 1: Linear Systems and Transformations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/part-02.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">第二部分：矩阵代数</span><span class="nav-en" lang="en">Part 2: Matrix Algebra</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../glossary.html" class="sidebar-item-text sidebar-link"><span class="nav-zh" lang="zh-CN">中英术语表</span><span class="nav-en" lang="en">Chinese–English Glossary</span></a>
@@ -693,12 +713,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#read-solutions" id="toc-read-solutions" class="nav-link" data-scroll-target="#read-solutions">全部解与几何回顾 <span class="heading-en">All Solutions and Their Geometry</span></a></li>
   </ul></li>
   <li><a href="#terms" id="toc-terms" class="nav-link" data-scroll-target="#terms">概念与关键条件 <span class="heading-en">Concepts and Key Conditions</span></a></li>
-  <li><a href="#review" id="toc-review" class="nav-link" data-scroll-target="#review">练习与反馈：保留条件还是丢失条件？ <span class="heading-en">Practice: Keeping or Losing Conditions</span></a>
-  <ul class="collapse">
-  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">两个检验理解的任务 <span class="heading-en">Two Tasks to Check Understanding</span></a></li>
-  <li><a href="#任务-a增加约束constraint" id="toc-任务-a增加约束constraint" class="nav-link" data-scroll-target="#任务-a增加约束constraint">任务 A：增加约束 <span class="heading-en">Task A: Adding a Constraint</span></a></li>
-  <li><a href="#任务-b只保留和式还是等价方程组equivalent-systems吗" id="toc-任务-b只保留和式还是等价方程组equivalent-systems吗" class="nav-link" data-scroll-target="#任务-b只保留和式还是等价方程组equivalent-systems吗">任务 B：只保留和式，还是等价方程组吗？ <span class="heading-en">Task B: Does Keeping Only the Sum Preserve Equivalence?</span></a></li>
-  </ul></li>
+  <li><a href="#review" id="toc-review" class="nav-link" data-scroll-target="#review">练习与反馈：保留条件还是丢失条件？ <span class="heading-en">Practice: Keeping or Losing Conditions</span></a></li>
   <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">计算巩固 <span class="heading-en">Calculation Practice</span></a></li>
   <li><a href="#rref-paths" id="toc-rref-paths" class="nav-link" data-scroll-target="#rref-paths">不同消元路径 <span class="heading-en">Different Elimination Paths</span></a></li>
   <li><a href="#exploration" id="toc-exploration" class="nav-link" data-scroll-target="#exploration">可选探索：三维中的平面 <span class="heading-en">Optional Exploration: Planes in Three Dimensions</span></a>
@@ -989,45 +1004,20 @@ x_5&amp;=4,
 </section>
 <section id="review" class="level2">
 <h2 class="anchored" data-anchor-id="review">练习与反馈：保留条件还是丢失条件？ <span class="heading-en">Practice: Keeping or Losing Conditions</span></h2>
-<p>先独立完成主例的后续操作、任选参数回代，再完成下面的判断与计算。</p>
-<section id="tasks" class="level3">
-<h3 class="anchored" data-anchor-id="tasks">两个检验理解的任务 <span class="heading-en">Two Tasks to Check Understanding</span></h3>
-</section>
-<section id="任务-a增加约束constraint" class="level3">
-<h3 class="anchored" data-anchor-id="任务-a增加约束constraint">任务 A：增加约束 <span class="heading-en">Task A: Adding a Constraint</span></h3>
-<p>从原方程组出发，分别增加第三个方程：</p>
-<ul>
-<li>A1：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x+y=3</annotation></semantics></math>；</li>
-<li>A2：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">x+y=4</annotation></semantics></math>。</li>
-</ul>
-<p>各自的解集（solution set）是什么？请说明理由，而不只说“方程变多了”。</p>
-<details class="review-answer"><summary>提示 / Hint</summary>
-<p>增加方程以后，候选点仍必须先满足原来的两个方程。原解集中有哪些点可以保留？</p>
-</details>
-<details class="review-answer"><summary>解答与解释 / Solution and Explanation</summary>
-<p>原方程组的解集只有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{(1,2)\}</annotation></semantics></math>。A1 中 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">1+2=3</annotation></semantics></math>，所以这个解保留，解集不变。A2 中 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>≠</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">1+2\ne4</annotation></semantics></math>，唯一的候选点被排除，解集变成 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⌀</mi><annotation encoding="application/x-tex">\varnothing</annotation></semantics></math>，即不相容的方程组（inconsistent system）。</p>
-<p>增加约束只能从原解集中筛选，不能产生原先没有的解。重复已有信息可以不改变解集；与原有约束冲突则可能排除所有解。</p>
-</details>
-</section>
-<section id="任务-b只保留和式还是等价方程组equivalent-systems吗" class="level3">
-<h3 class="anchored" data-anchor-id="任务-b只保留和式还是等价方程组equivalent-systems吗">任务 B：只保留和式，还是等价方程组吗？ <span class="heading-en">Task B: Does Keeping Only the Sum Preserve Equivalence?</span></h3>
-<p>原来的两式相加得到 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x+y=3</annotation></semantics></math>。如果把原来的两个方程都丢掉，<strong>只保留</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x+y=3</annotation></semantics></math>，是否仍然等价？</p>
-<details class="review-answer"><summary>提示 / Hint</summary>
-<p>找一个满足 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x+y=3</annotation></semantics></math>，却不满足原方程组的点。只要找到一个，就能判断两个解集是否相同。</p>
-</details>
-<details class="review-answer"><summary>解答与解释 / Solution and Explanation</summary>
-<p>不等价。点 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(0,3)</annotation></semantics></math> 满足 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">x+y=3</annotation></semantics></math>，却使原来的第一式左边等于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">-3</annotation></semantics></math>，第二式左边等于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>6</mn><annotation encoding="application/x-tex">6</annotation></semantics></math>，均不满足要求。只保留和式后，解集是整条直线，而原解集只有一个点。</p>
-<p>原方程组的解一定满足和式，反过来却不成立。只留下和式，已经丢失了把这条线上的其他点排除掉的信息。上一节的替换之所以可逆，是因为我们<strong>同时保留了第一式</strong>，可以利用它恢复第二式。</p>
-</details>
-<p>任务 A 是在原有约束上继续筛选；任务 B 则删去约束，只留下它们的一个结果。两种操作都能写出新方程，但解集怎样变化，必须另作判断。</p>
-</section>
+<p><strong>相关练习 / Related Exercises.</strong> <a href="../practice/part-01.html#l1-04">L1-04：约束与等价方程组 / Constraints and Equivalent Systems</a>。</p>
+<div id="tasks">
+<p><a href="../practice/part-01.html#tasks">L1-04：对应小问 / Related Question</a>。</p>
+</div>
+<div id="任务-a增加约束constraint">
+<p><a href="../practice/part-01.html#任务-a增加约束constraint">L1-04：对应小问 / Related Question</a>。</p>
+</div>
+<div id="任务-b只保留和式还是等价方程组equivalent-systems吗">
+<p><a href="../practice/part-01.html#任务-b只保留和式还是等价方程组equivalent-systems吗">L1-04：对应小问 / Related Question</a>。</p>
+</div>
 </section>
 <section id="practice" class="level2">
 <h2 class="anchored" data-anchor-id="practice">计算巩固 <span class="heading-en">Calculation Practice</span></h2>
-<p>求方程组 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>2</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>+</mo><mi>z</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>5</mn></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\left\{\begin{aligned}
-x+y+z&amp;=2,\\
-2x+3y+z&amp;=5
-\end{aligned}\right.</annotation></semantics></math> 的全部解，再判断增加 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">x+2y=4</annotation></semantics></math> 后的相容性。完成<a href="../topics/gaussian-elimination.html#practice">高斯消元：独立巩固</a>中的计算并核对答案。</p>
+<p><a href="../practice/part-01.html#l1-03">相关练习 L1-03：增加约束 / Related Exercise: Adding a Constraint</a>。</p>
 </section>
 <section id="rref-paths" class="level2">
 <h2 class="anchored" data-anchor-id="rref-paths">不同消元路径 <span class="heading-en">Different Elimination Paths</span></h2>
