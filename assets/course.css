@@ -12,7 +12,7 @@ details.review-answer{margin:.75rem 0;padding:.45rem 0;border-top:1px solid #d8e
 .sync-panels{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:1rem}.sync-panels svg{display:block;width:100%;height:auto}.sync-status,#sync-caption{font-size:.88rem;line-height:1.7;margin-bottom:.4rem}
 @media(max-width:700px){.sync-panels{grid-template-columns:1fr}.row-column-sync{padding:.5rem}}
 
-.augmented-table[data-rhs-columns="1"] > mtr > mtd:last-child,.augmented-table[data-rhs-columns="2"] > mtr > mtd:nth-last-child(2){border-left:1.5px dashed currentColor;padding-left:.45em}
+.augmented-table[data-rhs-columns="1"] > mtr > mtd:last-child,.augmented-table[data-rhs-columns="2"] > mtr > mtd:nth-last-child(2),.augmented-table[data-rhs-columns="3"] > mtr > mtd:nth-last-child(3){border-left:1.5px dashed currentColor;padding-left:.45em}
 p.math-overflow:after{content:"长公式可左右滑动 / Scroll equation";display:block;font-size:.76rem;color:#526676;margin-top:.2rem}
 math[tabindex]:focus-visible{outline:2px solid #22688b;outline-offset:2px}
 
