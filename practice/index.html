@@ -695,10 +695,14 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active" aria-label="本页目录 / On This Page">
     <h2 id="toc-title"><span class="nav-zh" lang="zh-CN">本页目录</span><span class="nav-en" lang="en">On This Page</span></h2>
    
-  <ul class="collapse">
+  <ul>
   <li><a href="#guide" id="toc-guide" class="nav-link active" data-scroll-target="#guide">怎样使用 <span class="heading-en">How to Use This Collection</span></a></li>
   <li><a href="#parts" id="toc-parts" class="nav-link" data-scroll-target="#parts">选择部分 <span class="heading-en">Choose a Part</span></a></li>
-  <li><a href="#index" id="toc-index" class="nav-link" data-scroll-target="#index">题组索引 <span class="heading-en">Problem-Group Index</span></a></li>
+  <li><a href="#index" id="toc-index" class="nav-link" data-scroll-target="#index">题组索引 <span class="heading-en">Problem-Group Index</span></a>
+  <ul class="collapse">
+  <li><a href="#part-01-index" id="toc-part-01-index" class="nav-link" data-scroll-target="#part-01-index">第一部分：方程组与线性变换 <span class="heading-en">Part 1: Linear Systems and Transformations</span></a></li>
+  <li><a href="#part-02-index" id="toc-part-02-index" class="nav-link" data-scroll-target="#part-02-index">第二部分：矩阵代数 <span class="heading-en">Part 2: Matrix Algebra</span></a></li>
+  </ul></li>
   <li><a href="#retained" id="toc-retained" class="nav-link" data-scroll-target="#retained">正文中的概念示例 <span class="heading-en">Concept Examples in the Learning Topics</span></a></li>
   </ul>
 </nav>
@@ -728,8 +732,8 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="guide" class="level2">
 <h2 class="anchored" data-anchor-id="guide">怎样使用 <span class="heading-en">How to Use This Collection</span></h2>
-<p>首批集中第一、二部分的既有训练；第三至第七部分尚未迁移。先读完整题面并独立作答，再按需要展开“提示 / Hint”和“解答与说明 / Solution and Explanation”。每题的知识链接可回查具体概念、算法或教材定理；浏览器后退可回到原题。</p>
-<p>E01–E05 沿用五组例题标识，P01–P06 沿用六个练习入口标识；L1/L2 为此前训练补充稳定编号，题组中的小问仍属于原题。E01、E02、E04 按阶段阅读；E03 的第一、二阶段分别在两部分。选择方法题的详细链接放在折叠的“知识回顾 / Knowledge Review”中。概念引入所需的示例和随文短检查仍在学习主题。</p>
+<p>本汇编目前覆盖第一、二部分的例题与练习。先读完整题面并独立作答，再按需要展开“提示 / Hint”和“解答与说明 / Solution and Explanation”。每题的知识链接可回查具体概念、算法或教材定理；浏览器后退可回到原题。</p>
+<p>E、P、L1/L2 是题组编号。E01、E02、E04 按阶段阅读；E03 的第一、二阶段分别在两部分。选择方法题的详细链接放在折叠的“知识回顾 / Knowledge Review”中。概念引入所需的示例和随文短检查仍在学习主题。</p>
 <p>来源按课程自编、既有训练或题型改编分别标明。改编题不等同于原卷题目，题目也不代表本课程的考试范围。</p>
 </section>
 <section id="parts" class="level2">
@@ -741,264 +745,294 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="index" class="level2">
 <h2 class="anchored" data-anchor-id="index">题组索引 <span class="heading-en">Problem-Group Index</span></h2>
+<section id="part-01-index" class="level3">
+<h3 class="anchored" data-anchor-id="part-01-index">第一部分：方程组与线性变换 <span class="heading-en">Part 1: Linear Systems and Transformations</span></h3>
+<section id="part-01-group-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-01-group-1">消元与解集 <span class="heading-en">Elimination and Solution Sets</span></h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>部分 / Part</th>
 <th>题号与目标 / ID and Goal</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-01">L1-01：线性系统的表示 / Representing Linear Systems</a></td>
 </tr>
 <tr class="even">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-02">L1-02：操作、标准形与零行 / Operations, Forms and Zero Rows</a></td>
 </tr>
 <tr class="odd">
-<td>1</td>
-<td><a href="../practice/part-01.html#exam-e01-elimination">E01：一次消元与解集 / One Elimination and Solution Sets</a></td>
+<td><a href="../practice/part-01.html#exam-e01-elimination">E01：一次消元与解集 / One Elimination and Solution Sets</a> → <a href="../practice/part-01.html#exam-e01-solutions">齐次解与特解 / Homogeneous and Particular Solutions</a></td>
 </tr>
 <tr class="even">
-<td>1</td>
 <td><a href="../practice/part-01.html#exam-p01">P01：系数与目标都含参数 / Parameters in Coefficients and Target</a></td>
 </tr>
 <tr class="odd">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-03">L1-03：增加约束 / Adding a Constraint</a></td>
 </tr>
 <tr class="even">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-04">L1-04：约束与等价方程组 / Constraints and Equivalent Systems</a></td>
 </tr>
 <tr class="odd">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-05">L1-05：列图像与同步目标 / Column Pictures and Target Operations</a></td>
 </tr>
 <tr class="even">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-06">L1-06：三种方程语言 / Three Languages for Equations</a></td>
 </tr>
 <tr class="odd">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-07">L1-07：两个自由参数 / Two Free Parameters</a></td>
 </tr>
 <tr class="even">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-08">L1-08：三未知数的齐次系统 / A Homogeneous System with Three Unknowns</a></td>
 </tr>
+</tbody>
+</table>
+</section>
+<section id="part-01-group-2" class="level4">
+<h4 class="anchored" data-anchor-id="part-01-group-2">逆向构造与表示 <span class="heading-en">Reconstruction and Representation</span></h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>题号与目标 / ID and Goal</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
-<td>1</td>
-<td><a href="../practice/part-01.html#exam-e02">E02：从完整解集反推方程 / Reconstructing Equations from All Solutions</a></td>
+<td><a href="../practice/part-01.html#exam-e02">E02：从完整解集反推方程 / Reconstructing Equations from All Solutions</a> → <a href="../practice/part-01.html#exam-e02-reverse">指定行操作恢复 / Reversing the Given Operations</a></td>
 </tr>
 <tr class="even">
-<td>1</td>
 <td><a href="../practice/part-01.html#exam-p02">P02：构造并验证 / Construct and Verify</a></td>
 </tr>
 <tr class="odd">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-09">L1-09：判断子空间 / Identifying Subspaces</a></td>
 </tr>
 <tr class="even">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-10">L1-10：三个三分量向量 / Three Vectors in Three Dimensions</a></td>
 </tr>
 <tr class="odd">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-11">L1-11：反射与伸缩的标准矩阵 / Standard Matrices of Reflection and Scaling</a></td>
 </tr>
 <tr class="even">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-12">L1-12：矩形标准矩阵 / A Rectangular Standard Matrix</a></td>
 </tr>
+</tbody>
+</table>
+</section>
+<section id="part-01-group-3" class="level4">
+<h4 class="anchored" data-anchor-id="part-01-group-3">行操作与综合复习 <span class="heading-en">Row Operations and Review</span></h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>题号与目标 / ID and Goal</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-13">L1-13：从行操作构造矩阵 / Matrices of Row Operations</a></td>
 </tr>
 <tr class="even">
-<td>1</td>
-<td><a href="../practice/part-01.html#exam-e03">E03：列关系与同步目标 / Column Relations and Target Operations</a></td>
+<td><a href="../practice/part-01.html#exam-e03">E03：列关系与同步目标 / Column Relations and Target Operations</a> → <a href="../practice/part-02.html#exam-e03-spaces">第二部分：秩与空间 / Part 2: Rank and Spaces</a></td>
 </tr>
 <tr class="odd">
-<td>1</td>
 <td><a href="../practice/part-01.html#exam-p03">P03：行操作的四个判断 / Four Claims about Row Operations</a></td>
 </tr>
 <tr class="even">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-14">L1-14：从一个目标到所有目标：七问 / Seven Questions from One Target to All Targets</a></td>
 </tr>
 <tr class="odd">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-15">L1-15：四个容易混淆的判断 / Four Common Confusions</a></td>
 </tr>
 <tr class="even">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-16">L1-16：转换判据的语言 / Translating Criteria</a></td>
 </tr>
+</tbody>
+</table>
+</section>
+<section id="part-01-group-4" class="level4">
+<h4 class="anchored" data-anchor-id="part-01-group-4">应用训练 <span class="heading-en">Application Practice</span></h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>题号与目标 / ID and Goal</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-17">L1-17：两绳承受120 N外力 / Two Ropes Supporting 120 N</a></td>
 </tr>
 <tr class="even">
-<td>1</td>
 <td><a href="../practice/part-01.html#l1-18">L1-18：流量与新增测量 / Flows and an Additional Measurement</a></td>
 </tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="part-02-index" class="level3">
+<h3 class="anchored" data-anchor-id="part-02-index">第二部分：矩阵代数 <span class="heading-en">Part 2: Matrix Algebra</span></h3>
+<section id="part-02-group-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-02-group-1">矩阵运算与求逆 <span class="heading-en">Matrix Operations and Inversion</span></h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>题号与目标 / ID and Goal</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-01">L2-01：矩形乘积与复合 / Rectangular Products and Composition</a></td>
 </tr>
 <tr class="even">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-02">L2-02：乘积的转置 / Transpose of a Product</a></td>
 </tr>
 <tr class="odd">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-03">L2-03：对角缩放与交换性 / Diagonal Scaling and Commutativity</a></td>
 </tr>
 <tr class="even">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-04">L2-04：旋转与剪切 / Rotation and Shear</a></td>
 </tr>
 <tr class="odd">
-<td>2</td>
-<td><a href="../practice/part-02.html#exam-e04-products">E04：特殊矩阵乘法与求逆 / Special Products and Inversion</a></td>
+<td><a href="../practice/part-02.html#exam-e04-products">E04：特殊矩阵乘法与求逆 / Special Products and Inversion</a> → <a href="../practice/part-02.html#exam-e04-inverse">同步求逆 / Simultaneous Inversion</a></td>
 </tr>
 <tr class="even">
-<td>2</td>
 <td><a href="../practice/part-02.html#exam-p05">P05：下三角与单位下三角 / Lower and Unit Lower Triangular Matrices</a></td>
 </tr>
 <tr class="odd">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-05">L2-05：奇异矩阵与逐元素倒数 / Singular Matrices and Entrywise Reciprocals</a></td>
 </tr>
 <tr class="even">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-06">L2-06：旋转与剪切复合的逆 / Inverting a Rotation–Shear Composition</a></td>
 </tr>
 <tr class="odd">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-07">L2-07：同步求解多个目标 / Solving Multiple Targets</a></td>
 </tr>
 <tr class="even">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-08">L2-08：求逆与操作次序 / Inversion and Operation Order</a></td>
 </tr>
 <tr class="odd">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-09">L2-09：矩阵方程中的次序 / Order in a Matrix Equation</a></td>
 </tr>
 <tr class="even">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-10">L2-10：非零元素与主元 / Nonzero Entries and Pivots</a></td>
 </tr>
+</tbody>
+</table>
+</section>
+<section id="part-02-group-2" class="level4">
+<h4 class="anchored" data-anchor-id="part-02-group-2">分块、LU与计算量 <span class="heading-en">Blocks, LU and Computational Cost</span></h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>题号与目标 / ID and Goal</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-11">L2-11：不同大小的块 / Unequal Blocks</a></td>
 </tr>
 <tr class="even">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-12">L2-12：列—行展开 / Column–Row Expansion</a></td>
 </tr>
 <tr class="odd">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-13">L2-13：分块求逆计算 / Computing a Block Inverse</a></td>
 </tr>
 <tr class="even">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-14">L2-14：单位分块下三角的逆 / Inverting Unit Block Lower Triangular Matrices</a></td>
 </tr>
 <tr class="odd">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-15">L2-15：复用LU求新目标 / Reusing LU for a New Target</a></td>
 </tr>
 <tr class="even">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-16">L2-16：换行与目标向量 / Row Interchanges and Targets</a></td>
 </tr>
 <tr class="odd">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-17">L2-17：中途换行后的求解 / Solving after an Intermediate Interchange</a></td>
 </tr>
 <tr class="even">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-18">L2-18：选择计算顺序 / Choosing an Evaluation Order</a></td>
 </tr>
 <tr class="odd">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-19">L2-19：复用分解的成本 / Cost of Reusing a Factorization</a></td>
 </tr>
-<tr class="even">
-<td>2</td>
-<td><a href="../practice/part-02.html#exam-e03-spaces">E03：行变换保持的六类对象 / Six Objects under Row Operations</a></td>
+</tbody>
+</table>
+</section>
+<section id="part-02-group-3" class="level4">
+<h4 class="anchored" data-anchor-id="part-02-group-3">秩、空间与综合复习 <span class="heading-en">Rank, Spaces and Integrated Review</span></h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>题号与目标 / ID and Goal</th>
 </tr>
+</thead>
+<tbody>
 <tr class="odd">
-<td>2</td>
+<td><a href="../practice/part-02.html#exam-e03-spaces">E03：行变换保持的六类对象 / Six Objects under Row Operations</a>；<a href="../practice/part-01.html#exam-e03">第一阶段：列关系 / First Stage: Column Relations</a></td>
+</tr>
+<tr class="even">
 <td><a href="../practice/part-02.html#exam-p06">P06：消去律与零乘积 / Cancellation and Zero Products</a></td>
 </tr>
-<tr class="even">
-<td>2</td>
+<tr class="odd">
 <td><a href="../practice/part-02.html#l2-20">L2-20：输出坐标与输入 / Output Coordinates and Inputs</a></td>
 </tr>
-<tr class="odd">
-<td>2</td>
+<tr class="even">
 <td><a href="../practice/part-02.html#l2-21">L2-21：参数解与原列关系 / Parameters and Original Column Relations</a></td>
 </tr>
-<tr class="even">
-<td>2</td>
+<tr class="odd">
 <td><a href="../practice/part-02.html#l2-22">L2-22：秩不等式的边界 / Limits of Rank Inequalities</a></td>
 </tr>
-<tr class="odd">
-<td>2</td>
+<tr class="even">
 <td><a href="../practice/part-02.html#l2-23">L2-23：行关系与全部解 / Row Relations and All Solutions</a></td>
 </tr>
-<tr class="even">
-<td>2</td>
+<tr class="odd">
 <td><a href="../practice/part-02.html#l2-24">L2-24：一个矩阵的解与四空间 / Solutions and Four Spaces</a></td>
 </tr>
-<tr class="odd">
-<td>2</td>
+<tr class="even">
 <td><a href="../practice/part-02.html#exam-e05">E05：从LU到CR与全部解 / From LU to CR and All Solutions</a></td>
 </tr>
-<tr class="even">
-<td>2</td>
+<tr class="odd">
 <td><a href="../practice/part-02.html#exam-p04">P04：自行选择方法 / Choose Your Own Method</a></td>
 </tr>
-<tr class="odd">
-<td>2</td>
+<tr class="even">
 <td><a href="../practice/part-02.html#l2-25">L2-25：运算、逆与LU复习 / Review of Operations, Inverses and LU</a></td>
 </tr>
-<tr class="even">
-<td>2</td>
+<tr class="odd">
 <td><a href="../practice/part-02.html#l2-26">L2-26：分块与多个系统复习 / Review of Blocks and Multiple Systems</a></td>
 </tr>
+</tbody>
+</table>
+</section>
+<section id="part-02-group-4" class="level4">
+<h4 class="anchored" data-anchor-id="part-02-group-4">应用与选读训练 <span class="heading-en">Applications and Further Practice</span></h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>题号与目标 / ID and Goal</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-27">L2-27：投入产出中的新需求 / New Demand in an Input–Output Model</a></td>
 </tr>
 <tr class="even">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-28">L2-28：泡利矩阵的乘积与自逆 / Pauli Products and Self-Inverses</a></td>
 </tr>
 <tr class="odd">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-29">L2-29：不交换因子的展开 / Expanding without Reordering</a></td>
 </tr>
 <tr class="even">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-30">L2-30：复数泡利矩阵的循环关系 / Cyclic Relations of Complex Pauli Matrices</a></td>
 </tr>
 <tr class="odd">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-31">L2-31：两绳的代数解与物理解 / Algebraic and Physical Rope Solutions</a></td>
 </tr>
 <tr class="even">
-<td>2</td>
 <td><a href="../practice/part-02.html#l2-32">L2-32：目标、环流与测量 / Targets, Circulation and Measurements</a></td>
 </tr>
 </tbody>
 </table>
+</section>
+</section>
 </section>
 <section id="retained" class="level2">
 <h2 class="anchored" data-anchor-id="retained">正文中的概念示例 <span class="heading-en">Concept Examples in the Learning Topics</span></h2>

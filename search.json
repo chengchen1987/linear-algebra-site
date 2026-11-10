@@ -2488,7 +2488,7 @@
     "href": "chapter-02-review.html#exam-practice",
     "title": "第二部分 · 综合复习",
     "section": "",
-    "text": "入口 / Entry\n目标 / Goal\n\n\n\n\n行变换判断 / Row-Operation Claims\n分清秩、空间集合与列关系；衔接第一部分判断题 / Part 1 Claims\n\n\n结构化乘积 / Structured Products → 同步求逆 / Simultaneous Inversion\n行列点积、三角零项、缩行/缩列和双侧验算；复用下三角证明练习 / Lower Triangular Proof Practice\n\n\nLU—CR综合例 / LU–CR Worked Example\n用同一矩阵连接消元、坐标、零空间与全部解\n\n\n自主选择方法 / Choose a Method · 消去律练习 / Cancellation Practice\n根据目标选择工具，检查可逆条件与反例",
+    "text": "入口 / Entry\n目标 / Goal\n\n\n\n\nE03：行变换判断 / Row-Operation Claims\n分清秩、空间集合与列关系；衔接第一阶段：列关系 / First Stage: Column Relations\n\n\n结构化乘积 / Structured Products → 同步求逆 / Simultaneous Inversion\n行列点积、三角零项、缩行/缩列和双侧验算；复用下三角证明练习 / Lower Triangular Proof Practice\n\n\nE05：LU—CR综合例 / LU–CR Worked Example\n用同一矩阵连接消元、坐标、零空间与全部解\n\n\nP04：自主选择方法 / Choose a Method · P06：消去律练习 / Cancellation Practice\n根据目标选择工具，检查可逆条件与反例",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>综合复习 / Part Review</span>"
@@ -2499,7 +2499,7 @@
     "href": "chapter-02-review.html#three-connections",
     "title": "第二部分 · 综合复习",
     "section": "同一次消元回答哪些问题？ What Can One Elimination Tell Us?",
-    "text": "同一次消元回答哪些问题？ What Can One Elimination Tell Us?\n矩阵运算描述线性变换怎样相加、缩放和复合；消元与矩阵分解既用于求解，也揭示列之间的关系。基、维数和四个基本子空间进一步解释这些关系：哪些方程右端目标向量能够达到，哪些输入差别不改变输出，行之间的关系又施加了什么相容性条件。对方阵，可逆矩阵定理将这些认识联系起来。\n先完成矩形矩阵综合题 L2-24 / Rectangular-Matrix Review，再比较本页给定目标与任意目标的判据。它能帮助我们看清方阵可逆性结论所需的前提，而不把矩形情况也合并为同一判断。",
+    "text": "同一次消元回答哪些问题？ What Can One Elimination Tell Us?\n矩阵运算描述线性变换怎样相加、缩放和复合；消元与矩阵分解既用于求解，也揭示列之间的关系。基、维数和四个基本子空间进一步解释这些关系：哪些方程右端目标向量能够达到，哪些输入差别不改变输出，行之间的关系又施加了什么相容性条件。对方阵，可逆矩阵定理将这些认识联系起来。\n\n先完成矩形矩阵综合题 L2-24 / Rectangular-Matrix Review，再比较本页给定目标与任意目标的判据，注意方阵可逆性结论的前提。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>综合复习 / Part Review</span>"
@@ -2521,7 +2521,7 @@
     "href": "chapter-02-review.html#factorizations",
     "title": "第二部分 · 综合复习",
     "section": "RREF、LU与CR怎样组织同一矩阵？ How Do RREF, LU, and CR Organize the Same Matrix?",
-    "text": "RREF、LU与CR怎样组织同一矩阵？ How Do RREF, LU, and CR Organize the Same Matrix?\n\n\n\n\n\n\n\n\n形式 / Form\n表达的结构 / Structure\n主要用途 / Use\n\n\n\n\nGA=FGA=F，FF为完整RREF\n规范的主元位置、变量及列关系；GG可另记录操作\n读全部解，判断相容，证明规范形式唯一\n\n\nA=LUA=LU 或 PA=LUPA=LU\n前向消元乘子和阶梯形 UU\n对不同目标向量反复前代、回代\n\n\nA=CRA=CR\n原独立列与所有列的坐标\n表示、重建矩阵，理解秩及列关系\n\n\n\nRREF不是把原列空间原样留下；LU不要求把主元归一或清上方；CR的 RR 不含完整RREF的零行。在CR中，R𝐱R\\mathbf x 是输出相对于 CC 的列基的坐标；用可达性与输入不唯一练习检查这一区别。三者来自相关的消元知识，却回答不同问题。分块则是组织同一矩阵的行列，不是第四种分解。",
+    "text": "RREF、LU与CR怎样组织同一矩阵？ How Do RREF, LU, and CR Organize the Same Matrix?\n\n\n\n\n\n\n\n\n形式 / Form\n表达的结构 / Structure\n主要用途 / Use\n\n\n\n\nGA=FGA=F，FF为完整RREF\n规范的主元位置、变量及列关系；GG可另记录操作\n读全部解，判断相容，证明规范形式唯一\n\n\nA=LUA=LU 或 PA=LUPA=LU\n前向消元乘子和阶梯形 UU\n对不同目标向量反复前代、回代\n\n\nA=CRA=CR\n原独立列与所有列的坐标\n表示、重建矩阵，理解秩及列关系\n\n\n\nRREF不是把原列空间原样留下；LU不要求把主元归一或清上方；CR的 RR 不含完整RREF的零行。在CR中，R𝐱R\\mathbf x 是输出相对于 CC 的列基的坐标；用L2-20：可达性与输入不唯一 / Reachability and Nonunique Inputs检查这一区别。三者来自相关的消元知识，却回答不同问题。分块则是组织同一矩阵的行列，不是第四种分解。",
     "crumbs": [
       "第二部分：矩阵代数 / Part 2: Matrix Algebra",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>综合复习 / Part Review</span>"
@@ -7526,7 +7526,7 @@
     "href": "practice/index.html",
     "title": "例题与练习汇编：使用说明与索引",
     "section": "",
-    "text": "怎样使用 How to Use This Collection\n首批集中第一、二部分的既有训练；第三至第七部分尚未迁移。先读完整题面并独立作答，再按需要展开“提示 / Hint”和“解答与说明 / Solution and Explanation”。每题的知识链接可回查具体概念、算法或教材定理；浏览器后退可回到原题。\nE01–E05 沿用五组例题标识，P01–P06 沿用六个练习入口标识；L1/L2 为此前训练补充稳定编号，题组中的小问仍属于原题。E01、E02、E04 按阶段阅读；E03 的第一、二阶段分别在两部分。选择方法题的详细链接放在折叠的“知识回顾 / Knowledge Review”中。概念引入所需的示例和随文短检查仍在学习主题。\n来源按课程自编、既有训练或题型改编分别标明。改编题不等同于原卷题目，题目也不代表本课程的考试范围。",
+    "text": "怎样使用 How to Use This Collection\n本汇编目前覆盖第一、二部分的例题与练习。先读完整题面并独立作答，再按需要展开“提示 / Hint”和“解答与说明 / Solution and Explanation”。每题的知识链接可回查具体概念、算法或教材定理；浏览器后退可回到原题。\nE、P、L1/L2 是题组编号。E01、E02、E04 按阶段阅读；E03 的第一、二阶段分别在两部分。选择方法题的详细链接放在折叠的“知识回顾 / Knowledge Review”中。概念引入所需的示例和随文短检查仍在学习主题。\n来源按课程自编、既有训练或题型改编分别标明。改编题不等同于原卷题目，题目也不代表本课程的考试范围。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>102</span>  <span class='chapter-title'>使用说明与索引 / Guide and Index</span>"
@@ -7548,7 +7548,7 @@
     "href": "practice/index.html#index",
     "title": "例题与练习汇编：使用说明与索引",
     "section": "题组索引 Problem-Group Index",
-    "text": "题组索引 Problem-Group Index\n\n\n\n部分 / Part\n题号与目标 / ID and Goal\n\n\n\n\n1\nL1-01：线性系统的表示 / Representing Linear Systems\n\n\n1\nL1-02：操作、标准形与零行 / Operations, Forms and Zero Rows\n\n\n1\nE01：一次消元与解集 / One Elimination and Solution Sets\n\n\n1\nP01：系数与目标都含参数 / Parameters in Coefficients and Target\n\n\n1\nL1-03：增加约束 / Adding a Constraint\n\n\n1\nL1-04：约束与等价方程组 / Constraints and Equivalent Systems\n\n\n1\nL1-05：列图像与同步目标 / Column Pictures and Target Operations\n\n\n1\nL1-06：三种方程语言 / Three Languages for Equations\n\n\n1\nL1-07：两个自由参数 / Two Free Parameters\n\n\n1\nL1-08：三未知数的齐次系统 / A Homogeneous System with Three Unknowns\n\n\n1\nE02：从完整解集反推方程 / Reconstructing Equations from All Solutions\n\n\n1\nP02：构造并验证 / Construct and Verify\n\n\n1\nL1-09：判断子空间 / Identifying Subspaces\n\n\n1\nL1-10：三个三分量向量 / Three Vectors in Three Dimensions\n\n\n1\nL1-11：反射与伸缩的标准矩阵 / Standard Matrices of Reflection and Scaling\n\n\n1\nL1-12：矩形标准矩阵 / A Rectangular Standard Matrix\n\n\n1\nL1-13：从行操作构造矩阵 / Matrices of Row Operations\n\n\n1\nE03：列关系与同步目标 / Column Relations and Target Operations\n\n\n1\nP03：行操作的四个判断 / Four Claims about Row Operations\n\n\n1\nL1-14：从一个目标到所有目标：七问 / Seven Questions from One Target to All Targets\n\n\n1\nL1-15：四个容易混淆的判断 / Four Common Confusions\n\n\n1\nL1-16：转换判据的语言 / Translating Criteria\n\n\n1\nL1-17：两绳承受120 N外力 / Two Ropes Supporting 120 N\n\n\n1\nL1-18：流量与新增测量 / Flows and an Additional Measurement\n\n\n2\nL2-01：矩形乘积与复合 / Rectangular Products and Composition\n\n\n2\nL2-02：乘积的转置 / Transpose of a Product\n\n\n2\nL2-03：对角缩放与交换性 / Diagonal Scaling and Commutativity\n\n\n2\nL2-04：旋转与剪切 / Rotation and Shear\n\n\n2\nE04：特殊矩阵乘法与求逆 / Special Products and Inversion\n\n\n2\nP05：下三角与单位下三角 / Lower and Unit Lower Triangular Matrices\n\n\n2\nL2-05：奇异矩阵与逐元素倒数 / Singular Matrices and Entrywise Reciprocals\n\n\n2\nL2-06：旋转与剪切复合的逆 / Inverting a Rotation–Shear Composition\n\n\n2\nL2-07：同步求解多个目标 / Solving Multiple Targets\n\n\n2\nL2-08：求逆与操作次序 / Inversion and Operation Order\n\n\n2\nL2-09：矩阵方程中的次序 / Order in a Matrix Equation\n\n\n2\nL2-10：非零元素与主元 / Nonzero Entries and Pivots\n\n\n2\nL2-11：不同大小的块 / Unequal Blocks\n\n\n2\nL2-12：列—行展开 / Column–Row Expansion\n\n\n2\nL2-13：分块求逆计算 / Computing a Block Inverse\n\n\n2\nL2-14：单位分块下三角的逆 / Inverting Unit Block Lower Triangular Matrices\n\n\n2\nL2-15：复用LU求新目标 / Reusing LU for a New Target\n\n\n2\nL2-16：换行与目标向量 / Row Interchanges and Targets\n\n\n2\nL2-17：中途换行后的求解 / Solving after an Intermediate Interchange\n\n\n2\nL2-18：选择计算顺序 / Choosing an Evaluation Order\n\n\n2\nL2-19：复用分解的成本 / Cost of Reusing a Factorization\n\n\n2\nE03：行变换保持的六类对象 / Six Objects under Row Operations\n\n\n2\nP06：消去律与零乘积 / Cancellation and Zero Products\n\n\n2\nL2-20：输出坐标与输入 / Output Coordinates and Inputs\n\n\n2\nL2-21：参数解与原列关系 / Parameters and Original Column Relations\n\n\n2\nL2-22：秩不等式的边界 / Limits of Rank Inequalities\n\n\n2\nL2-23：行关系与全部解 / Row Relations and All Solutions\n\n\n2\nL2-24：一个矩阵的解与四空间 / Solutions and Four Spaces\n\n\n2\nE05：从LU到CR与全部解 / From LU to CR and All Solutions\n\n\n2\nP04：自行选择方法 / Choose Your Own Method\n\n\n2\nL2-25：运算、逆与LU复习 / Review of Operations, Inverses and LU\n\n\n2\nL2-26：分块与多个系统复习 / Review of Blocks and Multiple Systems\n\n\n2\nL2-27：投入产出中的新需求 / New Demand in an Input–Output Model\n\n\n2\nL2-28：泡利矩阵的乘积与自逆 / Pauli Products and Self-Inverses\n\n\n2\nL2-29：不交换因子的展开 / Expanding without Reordering\n\n\n2\nL2-30：复数泡利矩阵的循环关系 / Cyclic Relations of Complex Pauli Matrices\n\n\n2\nL2-31：两绳的代数解与物理解 / Algebraic and Physical Rope Solutions\n\n\n2\nL2-32：目标、环流与测量 / Targets, Circulation and Measurements",
+    "text": "题组索引 Problem-Group Index\n\n第一部分：方程组与线性变换 Part 1: Linear Systems and Transformations\n\n消元与解集 Elimination and Solution Sets\n\n\n\n题号与目标 / ID and Goal\n\n\n\n\nL1-01：线性系统的表示 / Representing Linear Systems\n\n\nL1-02：操作、标准形与零行 / Operations, Forms and Zero Rows\n\n\nE01：一次消元与解集 / One Elimination and Solution Sets → 齐次解与特解 / Homogeneous and Particular Solutions\n\n\nP01：系数与目标都含参数 / Parameters in Coefficients and Target\n\n\nL1-03：增加约束 / Adding a Constraint\n\n\nL1-04：约束与等价方程组 / Constraints and Equivalent Systems\n\n\nL1-05：列图像与同步目标 / Column Pictures and Target Operations\n\n\nL1-06：三种方程语言 / Three Languages for Equations\n\n\nL1-07：两个自由参数 / Two Free Parameters\n\n\nL1-08：三未知数的齐次系统 / A Homogeneous System with Three Unknowns\n\n\n\n\n\n逆向构造与表示 Reconstruction and Representation\n\n\n\n题号与目标 / ID and Goal\n\n\n\n\nE02：从完整解集反推方程 / Reconstructing Equations from All Solutions → 指定行操作恢复 / Reversing the Given Operations\n\n\nP02：构造并验证 / Construct and Verify\n\n\nL1-09：判断子空间 / Identifying Subspaces\n\n\nL1-10：三个三分量向量 / Three Vectors in Three Dimensions\n\n\nL1-11：反射与伸缩的标准矩阵 / Standard Matrices of Reflection and Scaling\n\n\nL1-12：矩形标准矩阵 / A Rectangular Standard Matrix\n\n\n\n\n\n行操作与综合复习 Row Operations and Review\n\n\n\n题号与目标 / ID and Goal\n\n\n\n\nL1-13：从行操作构造矩阵 / Matrices of Row Operations\n\n\nE03：列关系与同步目标 / Column Relations and Target Operations → 第二部分：秩与空间 / Part 2: Rank and Spaces\n\n\nP03：行操作的四个判断 / Four Claims about Row Operations\n\n\nL1-14：从一个目标到所有目标：七问 / Seven Questions from One Target to All Targets\n\n\nL1-15：四个容易混淆的判断 / Four Common Confusions\n\n\nL1-16：转换判据的语言 / Translating Criteria\n\n\n\n\n\n应用训练 Application Practice\n\n\n\n题号与目标 / ID and Goal\n\n\n\n\nL1-17：两绳承受120 N外力 / Two Ropes Supporting 120 N\n\n\nL1-18：流量与新增测量 / Flows and an Additional Measurement\n\n\n\n\n\n\n第二部分：矩阵代数 Part 2: Matrix Algebra\n\n矩阵运算与求逆 Matrix Operations and Inversion\n\n\n\n题号与目标 / ID and Goal\n\n\n\n\nL2-01：矩形乘积与复合 / Rectangular Products and Composition\n\n\nL2-02：乘积的转置 / Transpose of a Product\n\n\nL2-03：对角缩放与交换性 / Diagonal Scaling and Commutativity\n\n\nL2-04：旋转与剪切 / Rotation and Shear\n\n\nE04：特殊矩阵乘法与求逆 / Special Products and Inversion → 同步求逆 / Simultaneous Inversion\n\n\nP05：下三角与单位下三角 / Lower and Unit Lower Triangular Matrices\n\n\nL2-05：奇异矩阵与逐元素倒数 / Singular Matrices and Entrywise Reciprocals\n\n\nL2-06：旋转与剪切复合的逆 / Inverting a Rotation–Shear Composition\n\n\nL2-07：同步求解多个目标 / Solving Multiple Targets\n\n\nL2-08：求逆与操作次序 / Inversion and Operation Order\n\n\nL2-09：矩阵方程中的次序 / Order in a Matrix Equation\n\n\nL2-10：非零元素与主元 / Nonzero Entries and Pivots\n\n\n\n\n\n分块、LU与计算量 Blocks, LU and Computational Cost\n\n\n\n题号与目标 / ID and Goal\n\n\n\n\nL2-11：不同大小的块 / Unequal Blocks\n\n\nL2-12：列—行展开 / Column–Row Expansion\n\n\nL2-13：分块求逆计算 / Computing a Block Inverse\n\n\nL2-14：单位分块下三角的逆 / Inverting Unit Block Lower Triangular Matrices\n\n\nL2-15：复用LU求新目标 / Reusing LU for a New Target\n\n\nL2-16：换行与目标向量 / Row Interchanges and Targets\n\n\nL2-17：中途换行后的求解 / Solving after an Intermediate Interchange\n\n\nL2-18：选择计算顺序 / Choosing an Evaluation Order\n\n\nL2-19：复用分解的成本 / Cost of Reusing a Factorization\n\n\n\n\n\n秩、空间与综合复习 Rank, Spaces and Integrated Review\n\n\n\n题号与目标 / ID and Goal\n\n\n\n\nE03：行变换保持的六类对象 / Six Objects under Row Operations；第一阶段：列关系 / First Stage: Column Relations\n\n\nP06：消去律与零乘积 / Cancellation and Zero Products\n\n\nL2-20：输出坐标与输入 / Output Coordinates and Inputs\n\n\nL2-21：参数解与原列关系 / Parameters and Original Column Relations\n\n\nL2-22：秩不等式的边界 / Limits of Rank Inequalities\n\n\nL2-23：行关系与全部解 / Row Relations and All Solutions\n\n\nL2-24：一个矩阵的解与四空间 / Solutions and Four Spaces\n\n\nE05：从LU到CR与全部解 / From LU to CR and All Solutions\n\n\nP04：自行选择方法 / Choose Your Own Method\n\n\nL2-25：运算、逆与LU复习 / Review of Operations, Inverses and LU\n\n\nL2-26：分块与多个系统复习 / Review of Blocks and Multiple Systems\n\n\n\n\n\n应用与选读训练 Applications and Further Practice\n\n\n\n题号与目标 / ID and Goal\n\n\n\n\nL2-27：投入产出中的新需求 / New Demand in an Input–Output Model\n\n\nL2-28：泡利矩阵的乘积与自逆 / Pauli Products and Self-Inverses\n\n\nL2-29：不交换因子的展开 / Expanding without Reordering\n\n\nL2-30：复数泡利矩阵的循环关系 / Cyclic Relations of Complex Pauli Matrices\n\n\nL2-31：两绳的代数解与物理解 / Algebraic and Physical Rope Solutions\n\n\nL2-32：目标、环流与测量 / Targets, Circulation and Measurements",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>102</span>  <span class='chapter-title'>使用说明与索引 / Guide and Index</span>"
@@ -7714,7 +7714,7 @@
     "href": "practice/part-01.html#exam-e03",
     "title": "第一部分：方程组与线性变换 — E03：列关系与同步目标 Column Relations and Target Operations",
     "section": "E03：列关系与同步目标 Column Relations and Target Operations",
-    "text": "E03：列关系与同步目标 Column Relations and Target Operations 典型例题 / Worked Example 参考 Berkeley Math 54，2020 第一次期中考试第1题(v)的判断与反例题型，使用本课程的二维反例： A=[1010]→R2←R2−R1R=[1000]. 比较两矩阵的列空间集合与列关系；对 𝐛=(1,1)𝖳，说明同步变换目标为何必要。 所需知识 / Prerequisites：逐列作用 / Column Action · 同步目标与等价系统 / Transforming the Target。",
+    "text": "E03：列关系与同步目标 Column Relations and Target Operations 典型例题 / Worked Example 参考 Berkeley Math 54，2020 第一次期中考试第1题(v)的判断与反例题型，使用本课程的二维反例： A=[1010]→R2←R2−R1R=[1000]. 比较两矩阵的列空间集合与列关系；对 𝐛=(1,1)𝖳，说明同步变换目标为何必要。 所需知识 / Prerequisites：逐列作用与同步目标 / Column Action and Target Operations · 列关系保持的理由 / Why Column Relations Are Preserved。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>103</span>  <span class='chapter-title'>第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations</span>"
@@ -7736,7 +7736,7 @@
     "href": "practice/part-01.html#exam-p02",
     "title": "第一部分：方程组与线性变换 — P02：构造并验证 Construct and Verify",
     "section": "P02：构造并验证 Construct and Verify",
-    "text": "P02：构造并验证 Construct and Verify 独立练习 / Practice Problem 综合；课程自编 / Integrated; Course-Designed. 给定全部解 𝐱=[102]+r[−210],r∈ℝ. 写出 3×3 的RREF系数矩阵和相应目标向量，说明解集完全相同；再给一个不同的、具有相同解集的三方程系统。 所需知识 / Prerequisites：简化行阶梯形 / RREF · 反推约束 / Reconstructing Constraints。",
+    "text": "P02：构造并验证 Construct and Verify 独立练习 / Practice Problem 综合；课程自编 / Integrated; Course-Designed. 给定全部解 𝐱=[102]+r[−210],r∈ℝ. 写出 3×3 的RREF系数矩阵和相应目标向量，说明解集完全相同；再给一个不同的、具有相同解集的三方程系统。相关例题：E02：反推约束 / E02: Reconstructing Constraints。 所需知识 / Prerequisites：简化行阶梯形 / RREF · 参数式与全部解 / Parametric Form and All Solutions。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>103</span>  <span class='chapter-title'>第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations</span>"
@@ -7769,7 +7769,7 @@
     "href": "practice/part-01.html#l1-02",
     "title": "第一部分：方程组与线性变换 — L1-02：操作、标准形与零行 Operations, Forms and Zero Rows",
     "section": "L1-02：操作、标准形与零行 Operations, Forms and Zero Rows",
-    "text": "L1-02：操作、标准形与零行 Operations, Forms and Zero Rows 独立练习 / Practice Problem R2←R2−3R1 的逆操作是什么？能否只对系数操作、保留原常数列？R1←0R1 呢？ 判断下列矩阵是否为 REF、是否为 RREF，指出不满足的条件： P=[0110],Q=[1201]. 按 x,y 顺序，比较下列两个增广矩阵。先判相容，再说自由变量与全部解： U=[123000],V=[123001]. 所需知识 / Prerequisites：初等行操作 / Row Operations · REF与RREF / REF and RREF。",
+    "text": "L1-02：操作、标准形与零行 Operations, Forms and Zero Rows 独立练习 / Practice Problem R2←R2−3R1 的逆操作是什么？能否只对系数操作、保留原常数列？R1←0R1 呢？ 判断下列矩阵是否为 REF、是否为 RREF，指出不满足的条件： P=[0110],Q=[1201]. 按 x,y 顺序，比较下列两个增广矩阵。先判相容，再说自由变量与全部解： U=[123000],V=[123001]. 所需知识 / Prerequisites：初等行操作 / Row Operations · 阶梯形 / REF · 简化阶梯形 / RREF。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>103</span>  <span class='chapter-title'>第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations</span>"
@@ -7780,7 +7780,7 @@
     "href": "practice/part-01.html#l1-03",
     "title": "第一部分：方程组与线性变换 — L1-03：增加约束 Adding a Constraint",
     "section": "L1-03：增加约束 Adding a Constraint",
-    "text": "L1-03：增加约束 Adding a Constraint 独立练习 / Practice Problem 独立练习。 对下面两个方程消元并写出全部解： {x+y+z=2,2x+3y+z=5. 然后增加 x+2y=4，判断是否仍有解。每个结论都写出计算依据。 所需知识 / Prerequisites：相容与自由变量 / Consistency and Free Variables · 等价系统 / Equivalent Systems。",
+    "text": "L1-03：增加约束 Adding a Constraint 独立练习 / Practice Problem 对下面两个方程消元并写出全部解： {x+y+z=2,2x+3y+z=5. 然后增加 x+2y=4，判断是否仍有解。每个结论都写出计算依据。 所需知识 / Prerequisites：相容与自由变量 / Consistency and Free Variables · 等价系统 / Equivalent Systems。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>103</span>  <span class='chapter-title'>第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations</span>"
@@ -7835,7 +7835,7 @@
     "href": "practice/part-01.html#l1-08",
     "title": "第一部分：方程组与线性变换 — L1-08：三未知数的齐次系统 A Homogeneous System with Three Unknowns",
     "section": "L1-08：三未知数的齐次系统 A Homogeneous System with Three Unknowns",
-    "text": "L1-08：三未知数的齐次系统 A Homogeneous System with Three Unknowns 独立练习 / Practice Problem 对 B=[111231] 独立求 B𝐱=𝟎，指出自由变量、给一个非零解。非齐次 B𝐱=(2,5)𝖳 的参数式见前一主题。 所需知识 / Prerequisites：齐次方程 / Homogeneous Equations · 自由变量 / Free Variables。",
+    "text": "L1-08：三未知数的齐次系统 A Homogeneous System with Three Unknowns 独立练习 / Practice Problem 对 B=[111231] 独立求 B𝐱=𝟎，指出自由变量、给一个非零解。非齐次 B𝐱=(2,5)𝖳 的参数式见相关练习 L1-03 / Related Practice L1-03。 所需知识 / Prerequisites：齐次方程 / Homogeneous Equations · 自由变量 / Free Variables。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>103</span>  <span class='chapter-title'>第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations</span>"
@@ -7868,7 +7868,7 @@
     "href": "practice/part-01.html#l1-11",
     "title": "第一部分：方程组与线性变换 — L1-11：反射与伸缩的标准矩阵 Standard Matrices of Reflection and Scaling",
     "section": "L1-11：反射与伸缩的标准矩阵 Standard Matrices of Reflection and Scaling",
-    "text": "L1-11：反射与伸缩的标准矩阵 Standard Matrices of Reflection and Scaling 独立练习 / Practice Problem 短练习 / Short Practice. 不先套表，求关于 y 轴反射和竖直伸缩 (x,y)↦(x,ky)（k>0）的单位向量像与矩阵。 所需知识 / Prerequisites：标准矩阵 / Standard Matrix · 几何变换 / Geometric Transformations。",
+    "text": "L1-11：反射与伸缩的标准矩阵 Standard Matrices of Reflection and Scaling 独立练习 / Practice Problem 不先套表，求关于 y 轴反射和竖直伸缩 (x,y)↦(x,ky)（k>0）的单位向量像与矩阵。 所需知识 / Prerequisites：标准矩阵 / Standard Matrix · 几何变换 / Geometric Transformations。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>103</span>  <span class='chapter-title'>第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations</span>"
@@ -7879,7 +7879,7 @@
     "href": "practice/part-01.html#l1-12",
     "title": "第一部分：方程组与线性变换 — L1-12：矩形标准矩阵 A Rectangular Standard Matrix",
     "section": "L1-12：矩形标准矩阵 A Rectangular Standard Matrix",
-    "text": "L1-12：矩形标准矩阵 A Rectangular Standard Matrix 独立练习 / Practice Problem 独立练习。 对 T:ℝ2→ℝ3， T(x,y)=(x+2y,2x−y,3y), 求 T(𝐞1)、T(𝐞2) 与标准矩阵。分别用直接代入和矩阵列组合求输入 (2,−1)𝖳 的像，并说明此规则为什么线性。 所需知识 / Prerequisites：标准矩阵 / Standard Matrix · 列组合 / Column Combinations。",
+    "text": "L1-12：矩形标准矩阵 A Rectangular Standard Matrix 独立练习 / Practice Problem 对 T:ℝ2→ℝ3， T(x,y)=(x+2y,2x−y,3y), 求 T(𝐞1)、T(𝐞2) 与标准矩阵。分别用直接代入和矩阵列组合求输入 (2,−1)𝖳 的像，并说明此规则为什么线性。 所需知识 / Prerequisites：标准矩阵 / Standard Matrix · 列组合 / Column Combinations。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>103</span>  <span class='chapter-title'>第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations</span>"
@@ -7912,7 +7912,7 @@
     "href": "practice/part-01.html#l1-15",
     "title": "第一部分：方程组与线性变换 — L1-15：四个容易混淆的判断 Four Common Confusions",
     "section": "L1-15：四个容易混淆的判断 Four Common Confusions",
-    "text": "L1-15：四个容易混淆的判断 Four Common Confusions 独立练习 / Practice Problem C=[100111].这里 TC(𝐱)=C𝐱。 先判断对错，再写一句理由或反例。 “A𝐱=𝟎 有零解，所以列一定无关。” “对应于 C 的 TC:ℝ2→ℝ3 的两列无关，所以对每个三分量目标都有解。” “只要一个映射把零送到零，它就是线性变换。” “任意 A𝐱=𝐛 都可写成一个特解加齐次解，不必先检查相容性。” 所需知识 / Prerequisites：无关性 / Independence · 线性性 / Linearity · 特解的前提 / Particular Solutions。",
+    "text": "L1-15：四个容易混淆的判断 Four Common Confusions 独立练习 / Practice Problem C=[100111]. 这里 TC(𝐱)=C𝐱。 先判断对错，再写一句理由或反例。 “A𝐱=𝟎 有零解，所以列一定无关。” “对应于 C 的 TC:ℝ2→ℝ3 的两列无关，所以对每个三分量目标都有解。” “只要一个映射把零送到零，它就是线性变换。” “任意 A𝐱=𝐛 都可写成一个特解加齐次解，不必先检查相容性。” 所需知识 / Prerequisites：无关性 / Independence · 线性性 / Linearity · 特解的前提 / Particular Solutions。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>103</span>  <span class='chapter-title'>第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations</span>"
@@ -7923,7 +7923,7 @@
     "href": "practice/part-01.html#l1-16",
     "title": "第一部分：方程组与线性变换 — L1-16：转换判据的语言 Translating Criteria",
     "section": "L1-16：转换判据的语言 Translating Criteria",
-    "text": "L1-16：转换判据的语言 Translating Criteria 独立练习 / Practice Problem 已知当前系统没有矛盾行，但有一个自由变量。用“列关系”和“输入／输出”各说明一次。 已知 A 每列有主元。能否断定当前 𝐛 有解？改用零空间和单射语言说明。 已知某个目标可达。若要把这句话加强为满射，还需补上什么量词？ 所需知识 / Prerequisites：量词与判据 / Quantifiers and Criteria · 单射与满射 / Injectivity and Surjectivity。",
+    "text": "L1-16：转换判据的语言 Translating Criteria 独立练习 / Practice Problem 设当前方程组为 A𝐱=𝐛，其中 A∈ℝm×n、𝐛∈ℝm。 已知当前系统没有矛盾行，但有一个自由变量。用“列关系”和“输入／输出”各说明一次。 已知 A 每列有主元。能否断定当前 𝐛 有解？改用零空间和单射语言说明。 已知某个目标可达。若要把这句话加强为满射，还需补上什么量词？ 所需知识 / Prerequisites：量词与判据 / Quantifiers and Criteria · 单射与满射 / Injectivity and Surjectivity。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>103</span>  <span class='chapter-title'>第一部分：方程组与线性变换 / Part 1: Linear Systems and Transformations</span>"
@@ -7989,7 +7989,7 @@
     "href": "practice/part-02.html#exam-e03-spaces",
     "title": "第二部分：矩阵代数 — E03：行变换保持的六类对象 Six Objects under Row Operations",
     "section": "E03：行变换保持的六类对象 Six Objects under Row Operations",
-    "text": "E03：行变换保持的六类对象 Six Objects under Row Operations 典型例题 / Worked Example 综合 / Integrated. 已学过基、秩和行空间后，继续第一部分的二维反例 / The Two-Dimensional Counterexample。参考Berkeley 2020第一次期中考试第1题的判断题型；以下归纳及追问为课程补充。 设 A,F∈ℝm×n，F 由 A 经有限次初等行变换得到。请先判断以下六项是否保持，并各给一句理由或反例，再对照解析。第6项还需说明方程右端目标向量应怎样处理。 秩 / Rank。 零空间这个集合 / Null Space as a Set。 行空间这个集合 / Row Space as a Set。 列空间这个集合 / Column Space as a Set。 列之间的全部线性关系 / All Linear Relations among Columns。 非齐次方程的解集 / Nonhomogeneous Solution Set。 所需知识 / Prerequisites：行空间 / Row Space · 秩 / Rank · 第一阶段 / First Stage。",
+    "text": "E03：行变换保持的六类对象 Six Objects under Row Operations 典型例题 / Worked Example 综合 / Integrated. 已学过基、秩和行空间后，继续第一部分的二维反例 / The Two-Dimensional Counterexample。参考Berkeley 2020第一次期中考试第1题的判断题型；以下归纳及追问为课程补充。 设 A,F∈ℝm×n，F 由 A 经有限次初等行变换得到。请先判断以下六项是否保持，并各给一句理由或反例，再对照解析。第6项还需说明方程右端目标向量应怎样处理。 秩 / Rank。 零空间这个集合 / Null Space as a Set。 行空间这个集合 / Row Space as a Set。 列空间这个集合 / Column Space as a Set。 列之间的全部线性关系 / All Linear Relations among Columns。 非齐次方程的解集 / Nonhomogeneous Solution Set。 所需知识 / Prerequisites：行空间 / Row Space · 秩 / Rank。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8011,7 +8011,7 @@
     "href": "practice/part-02.html#exam-e04-products",
     "title": "第二部分：矩阵代数 — E04：特殊矩阵乘法与求逆 Special Products and Inversion",
     "section": "E04：特殊矩阵乘法与求逆 Special Products and Inversion",
-    "text": "E04：特殊矩阵乘法与求逆 Special Products and Inversion 典型例题 / Worked Example 典型例题 / Worked Example（基础 / Basic）. 取 U=[120013001],V=[20103−1004]. 求 UV，解释它为何仍为上三角；再对 D=diag⁡(2,3,4) 比较 DU 与 UD。本例为课程自编；观察结构再计算的思路也可见 Harvard Math 21b，2017 第二次期中考试，此处只用已经学过的矩阵乘法。 所需知识 / Prerequisites：元素公式 / Entry Formula · 对角缩放 / Diagonal Scaling · 三角结构的证明 / Triangular Structure。",
+    "text": "E04：特殊矩阵乘法与求逆 Special Products and Inversion 典型例题 / Worked Example 基础 / Basic. 取 U=[120013001],V=[20103−1004]. 求 UV，解释它为何仍为上三角；再对 D=diag⁡(2,3,4) 比较 DU 与 UD。本例为课程自编；观察结构再计算的思路也可见 Harvard Math 21b，2017 第二次期中考试，此处只用已经学过的矩阵乘法。 所需知识 / Prerequisites：元素公式 / Entry Formula · 对角缩放 / Diagonal Scaling · 三角结构的证明 / Triangular Structure。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8077,7 +8077,7 @@
     "href": "practice/part-02.html#exam-p04",
     "title": "第二部分：矩阵代数 — P04：自行选择方法 Choose Your Own Method",
     "section": "P04：自行选择方法 Choose Your Own Method",
-    "text": "P04：自行选择方法 Choose Your Own Method 独立练习 / Practice Problem 综合；课程自编 / Integrated; Course-Designed. 使用 T=[120013001] 和 M=[120124141225],分别求 T𝐲=(1,1,1)𝖳、M𝐱=(1,0,1)𝖳 的全部解。说明你为什么选择所用方法，哪些已有结果可以复用，并检查答案。T 是前面求逆例中的三阶矩阵，此处用字母 T 标明三阶方阵。",
+    "text": "P04：自行选择方法 Choose Your Own Method 独立练习 / Practice Problem 综合；课程自编 / Integrated; Course-Designed. 使用 T=[120013001] 和 M=[120124141225]. 分别求 T𝐲=(1,1,1)𝖳、M𝐱=(1,0,1)𝖳 的全部解。说明你为什么选择所用方法，哪些已有结果可以复用，并检查答案。T 是 3×3 方阵，M 是 3×4 矩形矩阵。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8099,7 +8099,7 @@
     "href": "practice/part-02.html#exam-p06",
     "title": "第二部分：矩阵代数 — P06：消去律与零乘积 Cancellation and Zero Products",
     "section": "P06：消去律与零乘积 Cancellation and Zero Products",
-    "text": "P06：消去律与零乘积 Cancellation and Zero Products 独立练习 / Practice Problem 消去律练习（基础） / Cancellation Practice (Basic). 设 A 为 m×n，B,C 为 n×p，均为实矩阵。判断：AB=0 是否推出 A=0 或 B=0；AB=AC 是否推出 B=C？给反例。若另知 A 为可逆方阵，为什么可在左侧消去它？ 所需知识 / Prerequisites：零空间与消去律 / Null Space and Cancellation · 逆矩阵定义 / Inverse Definition。",
+    "text": "P06：消去律与零乘积 Cancellation and Zero Products 独立练习 / Practice Problem 基础 / Basic. 设 A 为 m×n，B,C 为 n×p，均为实矩阵。判断：AB=0 是否推出 A=0 或 B=0；AB=AC 是否推出 B=C？给反例。若另知 A 为可逆方阵，为什么可在左侧消去它？ 所需知识 / Prerequisites：零空间与消去律 / Null Space and Cancellation · 逆矩阵定义 / Inverse Definition。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8110,7 +8110,7 @@
     "href": "practice/part-02.html#l2-01",
     "title": "第二部分：矩阵代数 — L2-01：矩形乘积与复合 Rectangular Products and Composition",
     "section": "L2-01：矩形乘积与复合 Rectangular Products and Composition",
-    "text": "L2-01：矩形乘积与复合 Rectangular Products and Composition 独立练习 / Practice Problem D=[120−103],F=[10210−1]. 独立计算 / Independent Practice. 求 FD；用 𝐱=(1,2)𝖳 分两步与一步核对 (DF)𝐱=D(F𝐱)。 所需知识 / Prerequisites：行列计算 / Entry Formula · 转置与复合 / Transpose and Composition。",
+    "text": "L2-01：矩形乘积与复合 Rectangular Products and Composition 独立练习 / Practice Problem D=[120−103],F=[10210−1]. 求 FD；用 𝐱=(1,2)𝖳 分两步与一步核对 (DF)𝐱=D(F𝐱)。 所需知识 / Prerequisites：元素公式 / Entry Formula · 复合变换 / Composition of Transformations。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8121,7 +8121,7 @@
     "href": "practice/part-02.html#l2-02",
     "title": "第二部分：矩阵代数 — L2-02：乘积的转置 Transpose of a Product",
     "section": "L2-02：乘积的转置 Transpose of a Product",
-    "text": "L2-02：乘积的转置 Transpose of a Product 独立练习 / Practice Problem D=[120−103],F=[10210−1]. 动笔 / Practice. 用 D,F 写出 (DF)𝖳 和 F𝖳D𝖳，注明尺寸。 所需知识 / Prerequisites：行列计算 / Entry Formula · 转置与复合 / Transpose and Composition。",
+    "text": "L2-02：乘积的转置 Transpose of a Product 独立练习 / Practice Problem D=[120−103],F=[10210−1]. 用 D,F 写出 (DF)𝖳 和 F𝖳D𝖳，注明尺寸。 所需知识 / Prerequisites：元素公式 / Entry Formula · 乘积的转置 / Transpose of a Product。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8132,7 +8132,7 @@
     "href": "practice/part-02.html#l2-03",
     "title": "第二部分：矩阵代数 — L2-03：对角缩放与交换性 Diagonal Scaling and Commutativity",
     "section": "L2-03：对角缩放与交换性 Diagonal Scaling and Commutativity",
-    "text": "L2-03：对角缩放与交换性 Diagonal Scaling and Commutativity 独立练习 / Practice Problem 本题 D=diag⁡(2,−1)。 短练习 / Quick Practice. 对上面的 D，将 A 换成 [0110]，比较 DA,AD。若两个因子都是同阶对角矩阵，乘积是什么结构，能否交换次序？ 所需知识 / Prerequisites：行列计算 / Entry Formula · 转置与复合 / Transpose and Composition。",
+    "text": "L2-03：对角缩放与交换性 Diagonal Scaling and Commutativity 独立练习 / Practice Problem 本题 D=diag⁡(2,−1)。 取 A=[0110]，比较 DA,AD。若两个因子都是同阶对角矩阵，乘积是什么结构，能否交换次序？ 所需知识 / Prerequisites：对角矩阵缩放行与列 / Diagonal Row and Column Scaling · 元素公式 / Entry Formula。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8143,7 +8143,7 @@
     "href": "practice/part-02.html#l2-04",
     "title": "第二部分：矩阵代数 — L2-04：旋转与剪切 Rotation and Shear",
     "section": "L2-04：旋转与剪切 Rotation and Shear",
-    "text": "L2-04：旋转与剪切 Rotation and Shear 典型例题与练习 / Worked Example and Practice 复用线性变换主题的逆时针 90∘ 旋转矩阵 M，配一个水平剪切（shear）S： M=[0−110],S=[1101],S(x,y)𝖳=(x+y,y)𝖳. 求 MS,SM，对 𝐯=(2,1)𝖳 比较两条复合路径。再对 𝐞1=(1,0)𝖳 比较；为什么两乘积都有定义不代表相等？ 所需知识 / Prerequisites：行列计算 / Entry Formula · 转置与复合 / Transpose and Composition。",
+    "text": "L2-04：旋转与剪切 Rotation and Shear 典型例题与练习 / Worked Example and Practice 复用线性变换主题的逆时针 90∘ 旋转矩阵 M，配一个水平剪切（shear）S： M=[0−110],S=[1101],S(x,y)𝖳=(x+y,y)𝖳. 求 MS,SM，对 𝐯=(2,1)𝖳 比较两条复合路径。再对 𝐞1=(1,0)𝖳 比较；为什么两乘积都有定义不代表相等？ 所需知识 / Prerequisites：元素公式 / Entry Formula · 复合变换 / Composition of Transformations。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8154,7 +8154,7 @@
     "href": "practice/part-02.html#l2-05",
     "title": "第二部分：矩阵代数 — L2-05：奇异矩阵与逐元素倒数 Singular Matrices and Entrywise Reciprocals",
     "section": "L2-05：奇异矩阵与逐元素倒数 Singular Matrices and Entrywise Reciprocals",
-    "text": "L2-05：奇异矩阵与逐元素倒数 Singular Matrices and Entrywise Reciprocals 独立练习 / Practice Problem 短练习 / Short Practice. 判断 J=[1224] 是否可逆；能否对其四个元素分别取倒数得到逆？ 所需知识 / Prerequisites：逆矩阵定义 / Inverse Definition · 操作次序与求逆 / Operation Order and Inversion。",
+    "text": "L2-05：奇异矩阵与逐元素倒数 Singular Matrices and Entrywise Reciprocals 独立练习 / Practice Problem 判断 J=[1224] 是否可逆；能否对其四个元素分别取倒数得到逆？ 所需知识 / Prerequisites：逆矩阵定义 / Inverse Definition · 不可逆时的主元与目标 / Pivots and Targets in the Singular Case。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8165,7 +8165,7 @@
     "href": "practice/part-02.html#l2-06",
     "title": "第二部分：矩阵代数 — L2-06：旋转与剪切复合的逆 Inverting a Rotation–Shear Composition",
     "section": "L2-06：旋转与剪切复合的逆 Inverting a Rotation–Shear Composition",
-    "text": "L2-06：旋转与剪切复合的逆 Inverting a Rotation–Shear Composition 独立练习 / Practice Problem 练习：旋转与剪切复合的逆 / Practice: Inverting a Rotation–Shear Composition. 沿用 M=[0−110],S=[1101]. 求 (MS)−1 并作双侧验证。 所需知识 / Prerequisites：逆矩阵定义 / Inverse Definition · 操作次序与求逆 / Operation Order and Inversion。",
+    "text": "L2-06：旋转与剪切复合的逆 Inverting a Rotation–Shear Composition 独立练习 / Practice Problem 练习：旋转与剪切复合的逆 / Practice: Inverting a Rotation–Shear Composition. 沿用 M=[0−110],S=[1101]. 求 (MS)−1 并作双侧验证。 所需知识 / Prerequisites：复合变换 / Composition of Transformations · 乘积的逆与次序 / Product Inverses and Order。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8176,7 +8176,7 @@
     "href": "practice/part-02.html#l2-07",
     "title": "第二部分：矩阵代数 — L2-07：同步求解多个目标 Solving Multiple Targets",
     "section": "L2-07：同步求解多个目标 Solving Multiple Targets",
-    "text": "L2-07：同步求解多个目标 Solving Multiple Targets 独立练习 / Practice Problem 独立计算 / Independent Practice. 取 H=[1123],F=[2153]. 用同一组行变换求 HX=F，再逐列回代。 所需知识 / Prerequisites：逆矩阵定义 / Inverse Definition · 操作次序与求逆 / Operation Order and Inversion。",
+    "text": "L2-07：同步求解多个目标 Solving Multiple Targets 独立练习 / Practice Problem 取 H=[1123],F=[2153]. 用同一组行变换求 HX=F，再逐列回代。 所需知识 / Prerequisites：多个目标的同步消元 / Simultaneous Reduction for Multiple Targets · 同步求解各列 / Solving Column Systems Together。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8187,7 +8187,7 @@
     "href": "practice/part-02.html#l2-08",
     "title": "第二部分：矩阵代数 — L2-08：求逆与操作次序 Inversion and Operation Order",
     "section": "L2-08：求逆与操作次序 Inversion and Operation Order",
-    "text": "L2-08：求逆与操作次序 Inversion and Operation Order 独立练习 / Practice Problem 对 Q=[2112] 用 [Q∣I2] 求逆，再解 Q𝐱=(4,5)𝖳。(b) 写出先交换两行、再做 R2←R2−2R1 的总矩阵及其逆。 所需知识 / Prerequisites：逆矩阵定义 / Inverse Definition · 操作次序与求逆 / Operation Order and Inversion。",
+    "text": "L2-08：求逆与操作次序 Inversion and Operation Order 独立练习 / Practice Problem 对 Q=[2112] 用 [Q∣I2] 求逆，再解 Q𝐱=(4,5)𝖳。(b) 写出先交换两行、再做 R2←R2−2R1 的总矩阵及其逆。 所需知识 / Prerequisites：同步消元与双侧逆 / Simultaneous Reduction and Two-Sided Inverses · 记录操作次序 / Recording Operation Order。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8209,7 +8209,7 @@
     "href": "practice/part-02.html#l2-10",
     "title": "第二部分：矩阵代数 — L2-10：非零元素与主元 Nonzero Entries and Pivots",
     "section": "L2-10：非零元素与主元 Nonzero Entries and Pivots",
-    "text": "L2-10：非零元素与主元 Nonzero Entries and Pivots 独立练习 / Practice Problem 独立判断 / Independent Practice. J=[1224] 每行都有非零元素，为何仍不可逆？比较目标 (3,6)𝖳 与 (3,7)𝖳。 所需知识 / Prerequisites：逆矩阵定义 / Inverse Definition · 操作次序与求逆 / Operation Order and Inversion。",
+    "text": "L2-10：非零元素与主元 Nonzero Entries and Pivots 独立练习 / Practice Problem J=[1224] 每行都有非零元素，为何仍不可逆？比较目标 (3,6)𝖳 与 (3,7)𝖳。 所需知识 / Prerequisites：逆矩阵定义 / Inverse Definition · 不可逆时的主元与目标 / Pivots and Targets in the Singular Case。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8220,7 +8220,7 @@
     "href": "practice/part-02.html#l2-11",
     "title": "第二部分：矩阵代数 — L2-11：不同大小的块 Unequal Blocks",
     "section": "L2-11：不同大小的块 Unequal Blocks",
-    "text": "L2-11：不同大小的块 Unequal Blocks 独立练习 / Practice Problem K=[101012002],W=[1000103−11],𝐮=(1,2)𝖳,𝐯=(3,−1)𝖳. 块的行列大小均为 2+1。 独立练习 / Practice. 用相同的分块计算 WK，指出哪里出现标量、哪里出现矩阵。 所需知识 / Prerequisites：分块运算 / Block Operations · 列—行展开 / Column–Row Expansion。",
+    "text": "L2-11：不同大小的块 Unequal Blocks 独立练习 / Practice Problem K=[101012002],W=[1000103−11],𝐮=(1,2)𝖳,𝐯=(3,−1)𝖳. 块的行列大小均为 2+1。 用相同的分块计算 WK，指出哪里出现标量、哪里出现矩阵。 所需知识 / Prerequisites：分块运算 / Block Operations · 列—行展开 / Column–Row Expansion。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8231,7 +8231,7 @@
     "href": "practice/part-02.html#l2-12",
     "title": "第二部分：矩阵代数 — L2-12：列—行展开 Column–Row Expansion",
     "section": "L2-12：列—行展开 Column–Row Expansion",
-    "text": "L2-12：列—行展开 Column–Row Expansion 独立练习 / Practice Problem D=[120−103],F=[10210−1]. 独立练习 / Practice. 将 FD 写成两个 3×3 外积之和，再与原来的逐元素答案核对。 所需知识 / Prerequisites：分块运算 / Block Operations · 列—行展开 / Column–Row Expansion。",
+    "text": "L2-12：列—行展开 Column–Row Expansion 独立练习 / Practice Problem D=[120−103],F=[10210−1]. 将 FD 写成两个 3×3 外积之和，再与 L2-01 的逐元素计算结果 / Entrywise Result in L2-01核对。 所需知识 / Prerequisites：外积与列—行展开 / Outer Products and Column–Row Expansion · 元素公式 / Entry Formula。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8242,7 +8242,7 @@
     "href": "practice/part-02.html#l2-13",
     "title": "第二部分：矩阵代数 — L2-13：分块求逆计算 Computing a Block Inverse",
     "section": "L2-13：分块求逆计算 Computing a Block Inverse",
-    "text": "L2-13：分块求逆计算 Computing a Block Inverse 独立练习 / Practice Problem 独立练习 / Practice. 求 N=[111012002] 的逆。按 2+1 分块，并说明为什么右上块不是简单的 −C/2。 所需知识 / Prerequisites：分块求逆 / Block Inversion · 双侧逆 / Two-Sided Inverses。",
+    "text": "L2-13：分块求逆计算 Computing a Block Inverse 独立练习 / Practice Problem 给定 N=[BC0D]=[111012002], 其中 B=[1101],C=[12],D=[2]. 分块行、列尺寸均为 2+1。按此分块求 N−1，说明为什么右上逆块不能简单写成 −C/2，并核对两个次序的乘积。 所需知识 / Prerequisites：分块求逆 / Block Inversion · 双侧逆 / Two-Sided Inverses。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8253,7 +8253,7 @@
     "href": "practice/part-02.html#l2-14",
     "title": "第二部分：矩阵代数 — L2-14：单位分块下三角的逆 Inverting Unit Block Lower Triangular Matrices",
     "section": "L2-14：单位分块下三角的逆 Inverting Unit Block Lower Triangular Matrices",
-    "text": "L2-14：单位分块下三角的逆 Inverting Unit Block Lower Triangular Matrices 独立练习 / Practice Problem 给任意 D∈ℝq×p，直接证明 K0=[Ip0DIq],G0=[Ip0−DIq] 互为逆。先标出零块尺寸，再检验两个次序。 所需知识 / Prerequisites：分块求逆 / Block Inversion · 双侧逆 / Two-Sided Inverses。",
+    "text": "L2-14：单位分块下三角的逆 Inverting Unit Block Lower Triangular Matrices 独立练习 / Practice Problem 给任意 D∈ℝq×p，直接证明 K0=[Ip0DIq],G0=[Ip0−DIq] 互为逆。先标出零块尺寸，再检验两个次序。 所需知识 / Prerequisites：分块乘法 / Block Multiplication · 双侧逆 / Two-Sided Inverses。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8264,7 +8264,7 @@
     "href": "practice/part-02.html#l2-15",
     "title": "第二部分：矩阵代数 — L2-15：复用LU求新目标 Reusing LU for a New Target",
     "section": "L2-15：复用LU求新目标 Reusing LU for a New Target",
-    "text": "L2-15：复用LU求新目标 Reusing LU for a New Target 独立练习 / Practice Problem A=[123257−13−2],L=[100210−151],U=[12301100−4],A=LU. 独立练习 / Practice. 同一个 A，现在给出目标向量 𝐛2=(5,12,1)𝖳。不再消元 A，写出前代、回代以及原式检验。 所需知识 / Prerequisites：前代与回代 / Forward and Back Substitution · LU与换行 / LU and Row Interchanges。",
+    "text": "L2-15：复用LU求新目标 Reusing LU for a New Target 独立练习 / Practice Problem A=[123257−13−2],L=[100210−151],U=[12301100−4],A=LU. 同一个 A，现在给出目标向量 𝐛2=(5,12,1)𝖳。不再消元 A，写出前代、回代以及原式检验。 所需知识 / Prerequisites：前代与回代 / Forward and Back Substitution · 用LU求解 / Solving with LU。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8275,7 +8275,7 @@
     "href": "practice/part-02.html#l2-16",
     "title": "第二部分：矩阵代数 — L2-16：换行与目标向量 Row Interchanges and Targets",
     "section": "L2-16：换行与目标向量 Row Interchanges and Targets",
-    "text": "L2-16：换行与目标向量 Row Interchanges and Targets 独立练习 / Practice Problem A0=[0213],P=[0110],L=I2,U=[1302],PA0=LU. 独立练习 / Practice. 同一矩阵改用 𝐛=(2,2)𝖳，求解并指出忘记交换目标向量的分量的风险。 所需知识 / Prerequisites：前代与回代 / Forward and Back Substitution · LU与换行 / LU and Row Interchanges。",
+    "text": "L2-16：换行与目标向量 Row Interchanges and Targets 独立练习 / Practice Problem A0=[0213],P=[0110],L=I2,U=[1302],PA0=LU. 对本题矩阵 A0，给定 𝐛=(2,2)𝖳，求解并指出忘记交换目标向量的分量的风险。 所需知识 / Prerequisites：前代与回代 / Forward and Back Substitution · LU与换行 / LU and Row Interchanges。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8286,7 +8286,7 @@
     "href": "practice/part-02.html#l2-17",
     "title": "第二部分：矩阵代数 — L2-17：中途换行后的求解 Solving after an Intermediate Interchange",
     "section": "L2-17：中途换行后的求解 Solving after an Intermediate Interchange",
-    "text": "L2-17：中途换行后的求解 Solving after an Intermediate Interchange 独立练习 / Practice Problem A1=[110221341],P=[100001010],L=[100310201],U=[110011001],PA1=LU. 独立练习 / Practice. 用上述分解解 A1𝐱=(3,9,14)𝖳。 所需知识 / Prerequisites：前代与回代 / Forward and Back Substitution · LU与换行 / LU and Row Interchanges。",
+    "text": "L2-17：中途换行后的求解 Solving after an Intermediate Interchange 独立练习 / Practice Problem A1=[110221341],P=[100001010],L=[100310201],U=[110011001],PA1=LU. 用上述分解解 A1𝐱=𝐛，其中 𝐛=(3,9,14)𝖳。 所需知识 / Prerequisites：前代与回代 / Forward and Back Substitution · LU与换行 / LU and Row Interchanges。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8297,7 +8297,7 @@
     "href": "practice/part-02.html#l2-18",
     "title": "第二部分：矩阵代数 — L2-18：选择计算顺序 Choosing an Evaluation Order",
     "section": "L2-18：选择计算顺序 Choosing an Evaluation Order",
-    "text": "L2-18：选择计算顺序 Choosing an Evaluation Order 独立练习 / Practice Problem 短练习 / Quick Practice. A,B 都是 100×100 稠密矩阵，尚未计算 AB，只需一个 (AB)𝐱。选择哪种顺序？按主要项估计各需多少次运算（数值保留两位有效数字）？",
+    "text": "L2-18：选择计算顺序 Choosing an Evaluation Order 独立练习 / Practice Problem A,B 都是 100×100 稠密矩阵，尚未计算 AB，只需一个 (AB)𝐱。选择哪种顺序？按主要项估计各需多少次运算（数值保留两位有效数字）？",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8308,7 +8308,7 @@
     "href": "practice/part-02.html#l2-19",
     "title": "第二部分：矩阵代数 — L2-19：复用分解的成本 Cost of Reusing a Factorization",
     "section": "L2-19：复用分解的成本 Cost of Reusing a Factorization",
-    "text": "L2-19：复用分解的成本 Cost of Reusing a Factorization 独立练习 / Practice Problem 采用常规稠密非奇异方阵算法的主要项：一次LU分解约 2n3/3 次运算，一次前代加回代约 2n2 次。 短练习 / Quick Practice. 对可按当前算法分解的非奇异稠密 100×100 矩阵依次求解10个目标。用上述主要项估计：分解一次再复用、每个目标重新分解并求解，各需多少？若LU已经给出，新增第11个目标又需多少？数值保留两位有效数字。 所需知识 / Prerequisites：复用成本 / Reuse Cost · LU解方程 / Solving with LU。",
+    "text": "L2-19：复用分解的成本 Cost of Reusing a Factorization 独立练习 / Practice Problem 采用常规稠密非奇异方阵算法的主要项：一次LU分解约 2n3/3 次运算，一次前代加回代约 2n2 次。 对可按当前算法分解的非奇异稠密 100×100 矩阵依次求解10个目标。用上述主要项估计：分解一次再复用、每个目标重新分解并求解，各需多少？若LU已经给出，新增第11个目标又需多少？数值保留两位有效数字。 所需知识 / Prerequisites：复用成本 / Reuse Cost · LU解方程 / Solving with LU。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8319,7 +8319,7 @@
     "href": "practice/part-02.html#l2-20",
     "title": "第二部分：矩阵代数 — L2-20：输出坐标与输入 Output Coordinates and Inputs",
     "section": "L2-20：输出坐标与输入 Output Coordinates and Inputs",
-    "text": "L2-20：输出坐标与输入 Output Coordinates and Inputs 独立练习 / Practice Problem A=[120100111212]=CR,C=[100111],R=[12010011]. 短练习 / Quick Practice. 用上面的 3×4 矩阵及CR分解，判断 𝐛=(3,−1,2)𝖳 是否可达；若可达，输出坐标是否唯一，输入是否唯一？把第三分量改成3会怎样？ 所需知识 / Prerequisites：主元列与CR / Pivot Columns and CR · 秩的运算 / Rank Rules。",
+    "text": "L2-20：输出坐标与输入 Output Coordinates and Inputs 独立练习 / Practice Problem A=[120100111212]=CR,C=[100111],R=[12010011]. 用上面的 3×4 矩阵及CR分解，判断 𝐛=(3,−1,2)𝖳 是否可达；若可达，输出坐标是否唯一，输入是否唯一？把第三分量改成3会怎样？ 所需知识 / Prerequisites：CR怎样表示输出与输入 / Outputs and Inputs in CR · 坐标的唯一性 / Uniqueness of Coordinates。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8330,7 +8330,7 @@
     "href": "practice/part-02.html#l2-21",
     "title": "第二部分：矩阵代数 — L2-21：参数解与原列关系 Parameters and Original Column Relations",
     "section": "L2-21：参数解与原列关系 Parameters and Original Column Relations",
-    "text": "L2-21：参数解与原列关系 Parameters and Original Column Relations 独立练习 / Practice Problem 独立练习 / Practice. 某 4×4 矩阵 A=[𝐚1⋯𝐚4] 行化简为 F=[1c10d1001d200000000]. 写出全部齐次解、非主元列的表示、CR分解和秩。这里 c1,d1,d2 是任意实数。 所需知识 / Prerequisites：主元列与CR / Pivot Columns and CR · 秩的运算 / Rank Rules。",
+    "text": "L2-21：参数解与原列关系 Parameters and Original Column Relations 独立练习 / Practice Problem 某 4×4 矩阵 A=[𝐚1⋯𝐚4] 行化简为 F=[1c10d1001d200000000]. 写出全部齐次解、非主元列的表示、CR分解和秩。这里 c1,d1,d2 是任意实数。 所需知识 / Prerequisites：主元列与CR / Pivot Columns and CR · 参数解与零空间基 / Parametric Solutions and a Null-Space Basis。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8341,7 +8341,7 @@
     "href": "practice/part-02.html#l2-22",
     "title": "第二部分：矩阵代数 — L2-22：秩不等式的边界 Limits of Rank Inequalities",
     "section": "L2-22：秩不等式的边界 Limits of Rank Inequalities",
-    "text": "L2-22：秩不等式的边界 Limits of Rank Inequalities 独立练习 / Practice Problem 辨析练习 / Check the Conditions. 用 N=diag⁡(1,0)、K=diag⁡(0,1) 检查乘积界是否必取等号，以及 rank⁡(N+K) 是否必须不超过两者秩的最大值。 所需知识 / Prerequisites：主元列与CR / Pivot Columns and CR · 秩的运算 / Rank Rules。",
+    "text": "L2-22：秩不等式的边界 Limits of Rank Inequalities 独立练习 / Practice Problem 用 N=diag⁡(1,0)、K=diag⁡(0,1) 检查乘积界是否必取等号，以及 rank⁡(N+K) 是否必须不超过两者秩的最大值。 所需知识 / Prerequisites：秩的运算界 / Rank Inequalities。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8352,7 +8352,7 @@
     "href": "practice/part-02.html#l2-23",
     "title": "第二部分：矩阵代数 — L2-23：行关系与全部解 Row Relations and All Solutions",
     "section": "L2-23：行关系与全部解 Row Relations and All Solutions",
-    "text": "L2-23：行关系与全部解 Row Relations and All Solutions 独立练习 / Practice Problem A=[120100111212] 独立练习 / Practice. 对目标向量 (2,−1,1)𝖳，先只用行关系判断相容性，再写全部解，并回代。把第三分量改为0会怎样？ 所需知识 / Prerequisites：相容性判据 / Consistency Criterion · 秩与零度 / Rank and Nullity。",
+    "text": "L2-23：行关系与全部解 Row Relations and All Solutions 独立练习 / Practice Problem A=[120100111212] 对目标向量 (2,−1,1)𝖳，先只用行关系判断相容性，再写全部解，并回代。把第三分量改为0会怎样？ 所需知识 / Prerequisites：相容性判据 / Consistency Criterion · 秩与零度 / Rank and Nullity。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8363,7 +8363,7 @@
     "href": "practice/part-02.html#l2-24",
     "title": "第二部分：矩阵代数 — L2-24：一个矩阵的解与四空间 Solutions and Four Spaces",
     "section": "L2-24：一个矩阵的解与四空间 Solutions and Four Spaces",
-    "text": "L2-24：一个矩阵的解与四空间 Solutions and Four Spaces 综合练习 / Review Problem 取熟悉的矩形矩阵 A=[120100111212],𝐛=(p,q,s)𝖳. 依次做 R3←R3−R1、R3←R3−R2。请回答： 当前方程组何时有解？有解时是否唯一，有几个自由变量？ 哪些原列构成基？其余列怎样表示？写出CR分解。 写出行空间、列空间、零空间和左零空间的基、环境空间与维数。 哪条行关系限制了 𝐛？换一个目标向量时，哪些结果可复用？",
+    "text": "L2-24：一个矩阵的解与四空间 Solutions and Four Spaces 综合练习 / Review Problem 取矩形矩阵 A=[120100111212],𝐛=(p,q,s)𝖳. 依次做 R3←R3−R1、R3←R3−R2。请回答： 当前方程组何时有解？有解时是否唯一，有几个自由变量？ 哪些原列构成基？其余列怎样表示？写出CR分解。 写出行空间、列空间、零空间和左零空间的基、环境空间与维数。 哪条行关系限制了 𝐛？换一个目标向量时，哪些结果可复用？",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8374,7 +8374,7 @@
     "href": "practice/part-02.html#l2-25",
     "title": "第二部分：矩阵代数 — L2-25：运算、逆与LU复习 Review of Operations, Inverses and LU",
     "section": "L2-25：运算、逆与LU复习 Review of Operations, Inverses and LU",
-    "text": "L2-25：运算、逆与LU复习 Review of Operations, Inverses and LU 综合练习 / Review Problem A=[123257−13−2],L=[100210−151],U=[12301100−4],A=LU. 对 A:m×n、B,C:n×p，若 AB=AC，给出比“A 可逆方阵”更一般的足以推出 B=C 的条件。 为什么求逆可以转化为多个方程组共用同一组行变换？怎样说明结果是双侧逆？ 对LU主题的矩阵 A，复用LU求解方程右端目标向量为 (1,2,−1)𝖳 的方程组，写前代回代。 说明“方阵每行有非零元素”与“每行有主元”的区别，给反例。",
+    "text": "L2-25：运算、逆与LU复习 Review of Operations, Inverses and LU 综合练习 / Review Problem 对一般实矩阵 A∈ℝm×n、B,C∈ℝn×p，若 AB=AC，给出比“A 可逆方阵”更一般的足以推出 B=C 的条件。 对 n×n 方阵，为什么求逆可以转化为多个方程组共用同一组行变换？怎样说明结果是双侧逆？ 本小问单独给定以下 3×3 矩阵及分解（LU构造示例 / LU Construction）： A=[123257−13−2],L=[100210−151],U=[12301100−4],A=LU. 复用此LU求解 A𝐱=(1,2,−1)𝖳，写出前代和回代。 说明“方阵每行有非零元素”与“每行有主元”的区别，给反例。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8385,7 +8385,7 @@
     "href": "practice/part-02.html#l2-26",
     "title": "第二部分：矩阵代数 — L2-26：分块与多个系统复习 Review of Blocks and Multiple Systems",
     "section": "L2-26：分块与多个系统复习 Review of Blocks and Multiple Systems",
-    "text": "L2-26：分块与多个系统复习 Review of Blocks and Multiple Systems 综合练习 / Review Problem 设涉及的矩阵均为实矩阵。 设方阵 A 对某个目标恰有一个解。为什么足以推出它对每个目标恰有一个解？长方形矩阵为何不能照搬？ 6. A 为 2×3，按列 1+2 分块；B 为 3×2，按行 2+1 分块。整体乘积是否存在？能否直接用这两组块计算？ 对 M=[BC0D]，说明方形对角块条件、可逆条件和右上逆块的次序。 已有 PA=LU，新的目标向量给出后，应求解哪两个方程组？中途换行为什么不能只改 U？比较 k 个不同目标向量分别使用已有分解与独立消元的常规稠密方阵计算量。",
+    "text": "L2-26：分块与多个系统复习 Review of Blocks and Multiple Systems 综合练习 / Review Problem 设涉及的矩阵均为实矩阵。 设方阵 A 对某个目标恰有一个解。为什么足以推出它对每个目标恰有一个解？长方形矩阵为何不能照搬？ 2. A 为 2×3，按列 1+2 分块；B 为 3×2，按行 2+1 分块。整体乘积是否存在？能否直接用这两组块计算？ 对 M=[BC0D]，说明方形对角块条件、可逆条件和右上逆块的次序。 已有 PA=LU，新的目标向量给出后，应求解哪两个方程组？中途换行为什么不能只改 U？比较 k 个不同目标向量分别使用已有分解与独立消元的常规稠密方阵计算量。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8394,9 +8394,9 @@
   {
     "objectID": "practice/part-02.html#l2-26-q6",
     "href": "practice/part-02.html#l2-26-q6",
-    "title": "第二部分：矩阵代数 — 6. A 为 2×3，按列 1+2 分块；B 为 3×2，按行 2+1 分块。整体乘积是否存在？能否直接用这两组块计算？",
-    "section": "6. A 为 2×3，按列 1+2 分块；B 为 3×2，按行 2+1 分块。整体乘积是否存在？能否直接用这两组块计算？",
-    "text": "6. A 为 2×3，按列 1+2 分块；B 为 3×2，按行 2+1 分块。整体乘积是否存在？能否直接用这两组块计算？",
+    "title": "第二部分：矩阵代数 — 2. A 为 2×3，按列 1+2 分块；B 为 3×2，按行 2+1 分块。整体乘积是否存在？能否直接用这两组块计算？",
+    "section": "2. A 为 2×3，按列 1+2 分块；B 为 3×2，按行 2+1 分块。整体乘积是否存在？能否直接用这两组块计算？",
+    "text": "2. A 为 2×3，按列 1+2 分块；B 为 3×2，按行 2+1 分块。整体乘积是否存在？能否直接用这两组块计算？",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8407,7 +8407,7 @@
     "href": "practice/part-02.html#l2-27",
     "title": "第二部分：矩阵代数 — L2-27：投入产出中的新需求 New Demand in an Input–Output Model",
     "section": "L2-27：投入产出中的新需求 New Demand in an Input–Output Model",
-    "text": "L2-27：投入产出中的新需求 New Demand in an Input–Output Model 独立练习 / Practice Problem 两部门模型 𝐱=C𝐱+𝐝 中，C=[1/51/102/51/5]，𝐱 为总产出，𝐝 为外部需求。 独立练习 / Practice. 保持相同的 C，若外部需求改为 (60,0)𝖳，求产出并解释为什么第二个部门仍要生产。 所需知识 / Prerequisites：投入产出方程 / Input–Output Equations · 教材§2.6定理11 / Theorem 11。",
+    "text": "L2-27：投入产出中的新需求 New Demand in an Input–Output Model 独立练习 / Practice Problem 两部门模型 𝐱=C𝐱+𝐝 中，C=[1/51/102/51/5]，𝐱 为总产出，𝐝 为外部需求。 保持相同的 C，若外部需求改为 (60,0)𝖳，求产出并解释为什么第二个部门仍要生产。 所需知识 / Prerequisites：投入产出方程 / Input–Output Equations · 教材§2.6定理11 / Theorem 11。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8418,7 +8418,7 @@
     "href": "practice/part-02.html#l2-28",
     "title": "第二部分：矩阵代数 — L2-28：泡利矩阵的乘积与自逆 Pauli Products and Self-Inverses",
     "section": "L2-28：泡利矩阵的乘积与自逆 Pauli Products and Self-Inverses",
-    "text": "L2-28：泡利矩阵的乘积与自逆 Pauli Products and Self-Inverses 独立练习 / Practice Problem σx=[0110],σz=[100−1],[A,B]=AB−BA. 练习：乘积、分量与自逆 / Exercise: Products, Components, and Self-Inverses. 独立计算 σzσx、σxσz 和 [σz,σx]；再验证 σx2=σz2=I2，根据坐标的变化解释为什么各自作用两次都会恢复原向量。 所需知识 / Prerequisites：对易子定义 / Commutator Definition · 乘法规则 / Multiplication Rules。",
+    "text": "L2-28：泡利矩阵的乘积与自逆 Pauli Products and Self-Inverses 独立练习 / Practice Problem σx=[0110],σz=[100−1],[A,B]=AB−BA. 独立计算 σzσx、σxσz 和 [σz,σx]；再验证 σx2=σz2=I2，根据坐标的变化解释为什么各自作用两次都会恢复原向量。 所需知识 / Prerequisites：对易子定义 / Commutator Definition · 乘法规则 / Multiplication Rules。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8429,7 +8429,7 @@
     "href": "practice/part-02.html#l2-29",
     "title": "第二部分：矩阵代数 — L2-29：不交换因子的展开 Expanding without Reordering",
     "section": "L2-29：不交换因子的展开 Expanding without Reordering",
-    "text": "L2-29：不交换因子的展开 Expanding without Reordering 独立练习 / Practice Problem 对易子定义为 [A,B]=AB−BA。 练习：不交换因子的展开 / Exercise: Expanding without Reordering. 对同阶方阵 A,B,C，证明 [A,BC]=[A,B]C+B[A,C]. 所需知识 / Prerequisites：对易子定义 / Commutator Definition · 乘法规则 / Multiplication Rules。",
+    "text": "L2-29：不交换因子的展开 Expanding without Reordering 独立练习 / Practice Problem 对易子定义为 [A,B]=AB−BA。 对同阶方阵 A,B,C，证明 [A,BC]=[A,B]C+B[A,C]. 所需知识 / Prerequisites：对易子定义 / Commutator Definition · 乘法规则 / Multiplication Rules。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8440,7 +8440,7 @@
     "href": "practice/part-02.html#l2-30",
     "title": "第二部分：矩阵代数 — L2-30：复数泡利矩阵的循环关系 Cyclic Relations of Complex Pauli Matrices",
     "section": "L2-30：复数泡利矩阵的循环关系 Cyclic Relations of Complex Pauli Matrices",
-    "text": "L2-30：复数泡利矩阵的循环关系 Cyclic Relations of Complex Pauli Matrices 独立练习 / Practice Problem 进一步选读 / Further Reading；需会复数运算 i2=−1。 σx=[0110],σz=[100−1],[A,B]=AB−BA.σy=[0−ii0]. 练习 / Exercise. 直接相乘，验证以下循环次序的关系，并检查逆序时的负号： [σx,σy]=2iσz,[σy,σz]=2iσx,[σz,σx]=2iσy. 所需知识 / Prerequisites：对易子定义 / Commutator Definition · 乘法规则 / Multiplication Rules。",
+    "text": "L2-30：复数泡利矩阵的循环关系 Cyclic Relations of Complex Pauli Matrices 独立练习 / Practice Problem 进一步选读 / Further Reading；需会复数运算 i2=−1。 σx=[0110],σz=[100−1],[A,B]=AB−BA. σy=[0−ii0]. 直接相乘，验证以下循环次序的关系，并检查逆序时的负号： [σx,σy]=2iσz,[σy,σz]=2iσx,[σz,σx]=2iσy. 所需知识 / Prerequisites：对易子定义 / Commutator Definition · 乘法规则 / Multiplication Rules。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8451,7 +8451,7 @@
     "href": "practice/part-02.html#l2-31",
     "title": "第二部分：矩阵代数 — L2-31：两绳的代数解与物理解 Algebraic and Physical Rope Solutions",
     "section": "L2-31：两绳的代数解与物理解 Algebraic and Physical Rope Solutions",
-    "text": "L2-31：两绳的代数解与物理解 Algebraic and Physical Rope Solutions 独立练习 / Practice Problem 两绳单位方向 𝐝1=(−3/5,4/5)𝖳、𝐝2=(3/5,4/5)𝖳。令 A=[𝐝1𝐝2]，拉力 𝐟=(f1,f2)𝖳 满足 A𝐟=𝐛，且实际拉力需非负。 练习 / Exercise. 比较目标 𝐛=(60,80)𝖳 与 (90,80)𝖳（分量单位均为 N）。求拉力、回代，并解释物理差别。 所需知识 / Prerequisites：两绳模型 / Two-Rope Model · 用逆矩阵求解 / Solving with an Inverse。",
+    "text": "L2-31：两绳的代数解与物理解 Algebraic and Physical Rope Solutions 独立练习 / Practice Problem 两绳单位方向 𝐝1=(−3/5,4/5)𝖳、𝐝2=(3/5,4/5)𝖳。令 A=[𝐝1𝐝2]，拉力 𝐟=(f1,f2)𝖳 满足 A𝐟=𝐛，且实际拉力需非负。 比较目标 𝐛=(60,80)𝖳 与 (90,80)𝖳（分量单位均为 N）。求拉力、回代，并解释物理差别。 所需知识 / Prerequisites：两绳模型 / Two-Rope Model · 用逆矩阵求解 / Solving with an Inverse。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
@@ -8462,7 +8462,7 @@
     "href": "practice/part-02.html#l2-32",
     "title": "第二部分：矩阵代数 — L2-32：目标、环流与测量 Targets, Circulation and Measurements",
     "section": "L2-32：目标、环流与测量 Targets, Circulation and Measurements",
-    "text": "L2-32：目标、环流与测量 Targets, Circulation and Measurements 独立练习 / Practice Problem 内部流量 x,y,z 分别沿 A→B、B→C、C→A，单位相同。节点净注入为 𝐬=(s1,s2,s3)𝖳，稳态方程为 {x−z=s1,−x+y=s2,−y+z=s3. 固定箭头方向的实际流量要求 x,y,z≥0。 𝐬=(2,1,−3)𝖳 能否实现？求全部代数解并解释自由参数。若按原固定流向筛选，参数还需满足什么条件？ 𝐬=(3,0,−2)𝖳 为什么不能有稳态解？分别用行依赖和列空间说明。 回看原目标 (3,0,−3)𝖳 下的测量 x=5。不用从头消元，解释新增约束怎样改变矩阵尺寸、秩、零空间及唯一性；任意四个观测值都相容吗？ 所需知识 / Prerequisites：节点方程 / Node Equations · 行关系与相容性 / Row Relations and Consistency。",
+    "text": "L2-32：目标、环流与测量 Targets, Circulation and Measurements 独立练习 / Practice Problem 内部流量 x,y,z 分别沿 A→B、B→C、C→A，单位相同。节点净注入为 𝐬=(s1,s2,s3)𝖳，稳态方程为 {x−z=s1,−x+y=s2,−y+z=s3. 记流量向量为 𝐪=(x,y,z)𝖳，系数矩阵为 B=[10−1−1100−11],B𝐪=𝐬. 固定箭头方向的实际流量要求 x,y,z≥0。 𝐬=(2,1,−3)𝖳 能否实现？求全部代数解并解释自由参数。若按原固定流向筛选，参数还需满足什么条件？ 𝐬=(3,0,−2)𝖳 为什么不能有稳态解？分别用行依赖和列空间说明。 另取目标 𝐬=(3,0,−3)𝖳，并增加测量 x=5。不用从头消元，解释新增约束怎样改变矩阵尺寸、秩、零空间及唯一性；任意四个观测值都相容吗？ 所需知识 / Prerequisites：节点方程 / Node Equations · 行关系与相容性 / Row Relations and Consistency。",
     "crumbs": [
       "例题与练习汇编 / Examples and Exercises",
       "<span class='chapter-number'>104</span>  <span class='chapter-title'>第二部分：矩阵代数 / Part 2: Matrix Algebra</span>"
