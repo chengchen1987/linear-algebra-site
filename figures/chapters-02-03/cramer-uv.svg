@@ -33,7 +33,7 @@
 <circle cx="240" cy="220" r="3.5" fill="#203744"/>
 <circle cx="110" cy="220" r="3.5" fill="#203744"/>
 <text x="25" y="305" text-anchor="start" fill="#203744">O</text>
-<text x="185" y="275" text-anchor="start" fill="#203744">① u</text>
+<text x="110" y="331" text-anchor="middle" fill="#b15b27">① u</text>
 <text x="95" y="207" text-anchor="end" fill="#216c73">② v</text>
 <text x="249" y="213" text-anchor="start" fill="#203744">u+v</text>
 </g></svg>
