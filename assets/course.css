@@ -91,3 +91,15 @@ main img { max-width:100%; height:auto; }
 .diagram-grid figure,.portrait-grid figure { margin:.6rem 0; min-width:0; }
 .portrait-grid img { display:block; width:100%; max-width:364px; margin-inline:auto; }
 @media(max-width:600px) { .diagram-grid,.portrait-grid { grid-template-columns:1fr; } }
+
+/* HTML determinant panels: each Cartesian plot keeps its aspect ratio and units. */
+.det-panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.25rem;
+  align-items: start;
+  margin-block: 1rem;
+}
+.det-panels > * { min-width: 0; margin: 0; }
+.det-panels img { width: 100%; height: auto; max-width: 100%; }
+.det-panels figcaption { font-size: .9rem; }

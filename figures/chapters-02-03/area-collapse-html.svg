@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 245" width="340" height="245" role="img" aria-labelledby="title">
+<title id="title">塌缩 / Collapse: Ke1 = Ke2 = (1,0)</title>
+<rect width="100%" height="100%" fill="white"/>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="context-stroke"/></marker></defs>
+<g font-family="sans-serif" font-size="15" fill="#203744">
+<path d="M45,220 L45,25" fill="none" stroke="#e5ebef" stroke-width="1"/>
+<path d="M110,220 L110,25" fill="none" stroke="#e5ebef" stroke-width="1"/>
+<path d="M175,220 L175,25" fill="none" stroke="#e5ebef" stroke-width="1"/>
+<path d="M240,220 L240,25" fill="none" stroke="#e5ebef" stroke-width="1"/>
+<path d="M305,220 L305,25" fill="none" stroke="#e5ebef" stroke-width="1"/>
+<path d="M45,220 L305,220" fill="none" stroke="#e5ebef" stroke-width="1"/>
+<path d="M45,155 L305,155" fill="none" stroke="#e5ebef" stroke-width="1"/>
+<path d="M45,90 L305,90" fill="none" stroke="#e5ebef" stroke-width="1"/>
+<path d="M45,25 L305,25" fill="none" stroke="#e5ebef" stroke-width="1"/>
+<path d="M45,155 L316.70000000000005,155" fill="none" stroke="#8b9ca6" stroke-width="1"/>
+<path d="M110,220 L110,13.299999999999983" fill="none" stroke="#8b9ca6" stroke-width="1"/>
+<text x="314.75" y="174" text-anchor="start" fill="#203744">x</text>
+<text x="90" y="17.19999999999999" text-anchor="start" fill="#203744">y</text>
+<text x="45" y="174" text-anchor="middle" fill="#203744">-1</text>
+<text x="175" y="174" text-anchor="middle" fill="#203744">1</text>
+<text x="240" y="174" text-anchor="middle" fill="#203744">2</text>
+<text x="305" y="174" text-anchor="middle" fill="#203744">3</text>
+<text x="98" y="225" text-anchor="end" fill="#203744">-1</text>
+<text x="98" y="95" text-anchor="end" fill="#203744">1</text>
+<text x="98" y="30" text-anchor="end" fill="#203744">2</text>
+<path d="M110,155 L240,155" fill="none" stroke="#b15b27" stroke-width="5"/>
+<circle cx="110" cy="155" r="3.5" fill="#203744"/>
+<text x="110" y="194" text-anchor="middle" fill="#203744">(0,0)</text>
+<circle cx="175" cy="155" r="3.5" fill="#203744"/>
+<text x="175" y="194" text-anchor="middle" fill="#203744">(1,0)</text>
+<circle cx="240" cy="155" r="3.5" fill="#203744"/>
+<text x="240" y="194" text-anchor="middle" fill="#203744">(2,0)</text>
+<text x="175" y="121" text-anchor="middle" fill="#203744">Ke₁ = Ke₂</text>
+<text x="245" y="143" text-anchor="start" fill="#203744">K(e₁+e₂)</text>
+</g></svg>
